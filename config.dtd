@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT configuration (numLines,database,project,algorithm,debug,removeEmpty,buildDatabase,gapSize)>
+
+<!ELEMENT matching (minNumLines,matchAlgorithm,gapSize)>
+    <!ELEMENT minNumLines (#PCDATA)>
+    <!ELEMENT matchAlgorithm (#PCDATA)>
+    <!ELEMENT gapSize (#PCDATA)>
+
+<!ELEMENT projects (database,project,buildDatabase,buildTFIDF,loadTFIDF,loadDatabaseFilePaths,databaseFilePaths)>
+    <!ELEMENT database (#PCDATA)>
+    <!ELEMENT project (#PCDATA)>
+    <!ELEMENT buildDatabase (#PCDATA)>
+    <!ELEMENT buildTFIDF (#PCDATA)>
+    <!ELEMENT loadTFIDF (#PCDATA)>
+    <!ELEMENT loadDatabaseFilePaths (#PCDATA)>
+    <!ELEMENT databaseFilePaths (#PCDATA)>
+
+<!ELEMENT outputSettings (debug,removeEmpty,resultPath)>
+    <!ELEMENT debug (#PCDATA)>
+    <!ELEMENT removeEmpty (#PCDATA)>
+    <!ELEMENT resultPath (#PCDATA)>
+
+<!ELEMENT loadResults (#PCDATA)>
+
+<!ELEMENT heuristics (similarity)>
+    <!ELEMENT loadResults (similarityRange)>
+    <!ELEMENT similarityRange (#PCDATA)>
+    <!ELEMENT enableSimilarity (#PCDATA)>
+
