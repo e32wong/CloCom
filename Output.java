@@ -218,6 +218,7 @@ public class Output {
         System.out.println("InternalMap (with comment only):\n" + freqMapInternalComment);
         System.out.println("ExternalMap (with comment only):\n" + freqMapExternalComment);
         System.out.println(numMatchesWithComment + " comment groups has a comment");
+        System.out.println("Frequency of clone size:\n" + freqMatchSize);
     }
 
     class MutableInt {
