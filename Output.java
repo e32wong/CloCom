@@ -132,6 +132,8 @@ public class Output {
         HashMap<Integer, MutableInt> freqMapInternalComment = new HashMap<Integer, MutableInt>();
         HashMap<Integer, MutableInt> freqMapExternalComment = new HashMap<Integer, MutableInt>();
 
+        HashMap<Integer, MutableInt> freqMatchSize = new HashMap<Integer, MutableInt>();
+
         int sumInternalClonesComment = 0;
         int sumExternalClonesComment = 0;
 
@@ -184,6 +186,14 @@ public class Output {
                 } else {
                     externalCountComment.increment();
                 }
+
+                MutableInt sizeCountClone = freqMatchSize.get(thisMatchGroup.getMatchLength());
+                if (sizeCountClone == null) {
+                    freqMatchSize.put(thisMatchGroup.getMatchLength(), new MutableInt());
+                } else {
+                    sizeCountClone.increment();
+                }
+
 
             }
 

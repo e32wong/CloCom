@@ -38,6 +38,10 @@ public class MatchGroup implements Serializable {
         matchLength = length;
     }
 
+    public int getMatchLength() {
+        return matchLength;
+    }
+
     public int getMasterNumClonesWithComments() {
         int totalMasterWithComment = 0;
         for (MatchInstance thisMatch : masterList) {
