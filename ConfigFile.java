@@ -25,7 +25,6 @@ public class ConfigFile{
     public boolean enableSimilarity = true;
     public boolean buildTFIDF = false;
     public boolean loadDatabaseFilePaths = false;
-    public String databaseFilePaths = null;
 
     private String getTextValue(Element doc, String tag) {
         String value = null;
@@ -176,10 +175,6 @@ public class ConfigFile{
         }
         System.out.println("Load cached database path list: " + loadDatabaseFilePaths);
 
-        nl2 = firstNode.getElementsByTagName("databaseFilePaths");
-        secondNode = (Element) nl2.item(0);
-        databaseFilePaths = secondNode.getFirstChild().getNodeValue();
-        System.out.println("File that contains the file paths: " + databaseFilePaths);
     }
 
     private void loadOutputSettings(Element doc) {

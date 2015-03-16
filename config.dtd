@@ -6,14 +6,13 @@
     <!ELEMENT matchAlgorithm (#PCDATA)>
     <!ELEMENT gapSize (#PCDATA)>
 
-<!ELEMENT projects (database,project,buildDatabase,buildTFIDF,loadTFIDF,loadDatabaseFilePaths,databaseFilePaths)>
+<!ELEMENT projects (database,project,buildDatabase,buildTFIDF,loadTFIDF,loadDatabaseFilePaths)>
     <!ELEMENT database (#PCDATA)>
     <!ELEMENT project (#PCDATA)>
     <!ELEMENT buildDatabase (#PCDATA)>
     <!ELEMENT buildTFIDF (#PCDATA)>
     <!ELEMENT loadTFIDF (#PCDATA)>
     <!ELEMENT loadDatabaseFilePaths (#PCDATA)>
-    <!ELEMENT databaseFilePaths (#PCDATA)>
 
 <!ELEMENT outputSettings (debug,removeEmpty,resultPath)>
     <!ELEMENT debug (#PCDATA)>

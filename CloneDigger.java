@@ -60,7 +60,6 @@ public class CloneDigger {
         boolean enableSimilarity = config.enableSimilarity;
         boolean buildTFIDF = config.buildTFIDF;
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
-        String databaseFilePaths = config.databaseFilePaths;
 
         // done parsing
         System.out.println("Finished parsing XML parameters");
@@ -74,6 +73,7 @@ public class CloneDigger {
         long startTime = System.nanoTime();
 
         // check if we need to load the file list for the database
+        String databaseFilePaths = databaseDir + "cachedList.tmp";
         List<String> databaseFileList;
         if (loadDatabaseFilePaths) {
             databaseFileList = Database.loadFileList(databaseFilePaths);
