@@ -10,8 +10,8 @@ import java.util.HashSet;
 public class Analyze {
 
     public static void tfidf (
-            ArrayList<MatchInstance> masterList,
-            ArrayList<MatchInstance> cloneList) {
+        ArrayList<MatchInstance> masterList,
+        ArrayList<MatchInstance> cloneList) {
 
     }
 

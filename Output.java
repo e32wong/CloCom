@@ -26,8 +26,10 @@ public class Output {
     boolean enableOneMethod;
 
     public Output (int alogrithm, 
-            boolean enableRepetitive, 
-            boolean enableOneMethod) {
+            boolean enableRepetitiveIn, 
+            boolean enableOneMethodIn) {
+        enableRepetitive = enableRepetitiveIn;
+        enableOneMethod = enableOneMethodIn;
         algorithmMode = alogrithm;
     }
 
@@ -49,13 +51,17 @@ public class Output {
             }
 
             // check for repetitive statements
-            if (Analyze.isRepetitive(statementRaw1.subList(statementStart1, statementEnd1)) == true) {
-                return;
+            if (enableRepetitive) {
+                if (Analyze.isRepetitive(statementRaw1.subList(statementStart1, statementEnd1)) == true) {
+                    return;
+                }
             }
 
             // require at least one method call
-            if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), 1) == false) {
-                return;
+            if (enableOneMethod) {
+                if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), 1) == false) {
+                    return;
+                }
             }
 
             // check for valid scope

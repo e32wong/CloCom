@@ -26,5 +26,9 @@
             <similarityRange>extended</similarityRange>
             <enableSimilarity>false</enableSimilarity>
         </similarity>
+        <others>
+            <enableRepetitive>false</enableRepetitive>
+            <enableOneMethod>false</enableOneMethod>
+        </others>
     </heuristics>
 </configuration>

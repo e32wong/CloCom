@@ -59,6 +59,8 @@ public class CloneDigger {
         boolean loadResults = config.loadResults;
         int similarityRange = config.similarityRange;
         boolean enableSimilarity = config.enableSimilarity;
+        boolean enableRepetitive = config.enableRepetitive;
+        boolean enableOneMethod = config.enableOneMethod;
         boolean buildTFIDF = config.buildTFIDF;
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
 
@@ -96,7 +98,7 @@ public class CloneDigger {
         // Start loading main content
         ArrayList<String> errorList = new ArrayList<String>();
 
-        Output output = new Output(matchAlgorithm, true, true);
+        Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod);
         if (projectDir == null) {
             if (loadResults == false) {
                 // full mesh comparison

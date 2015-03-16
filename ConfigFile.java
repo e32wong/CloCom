@@ -24,6 +24,8 @@ public class ConfigFile{
     public boolean loadResults = false;
     public int similarityRange = 0;
     public boolean enableSimilarity = true;
+    public boolean enableRepetitive = false;
+    public boolean enableOneMethod = false;
     public boolean buildTFIDF = false;
     public boolean loadDatabaseFilePaths = false;
 
@@ -39,22 +41,21 @@ public class ConfigFile{
 
     private void loadHeuristic(Element doc) {
 
+        NodeList nl1;
+        Element firstNode;
+
         NodeList nl2;
         Element secondNode;
 
-        NodeList nl3;
-        Element thirdNode;
         String value;
 
-        NodeList nl1 = doc.getElementsByTagName("heuristics");
-        Element firstNode = (Element) nl1.item(0);
+        // process text similarity
+        nl1 = doc.getElementsByTagName("similarity");
+        firstNode = (Element) nl1.item(0);
 
-        nl2 = firstNode.getElementsByTagName("similarity");
+        nl2 = firstNode.getElementsByTagName("similarityRange");
         secondNode = (Element) nl2.item(0);
-
-        nl3 = secondNode.getElementsByTagName("similarityRange");
-        thirdNode = (Element) nl3.item(0);
-        value = thirdNode.getFirstChild().getNodeValue();
+        value = secondNode.getFirstChild().getNodeValue();
         if (value.equals("local")) {
             similarityRange = 0;
         } else if (value.equals("extended")) {
@@ -65,9 +66,9 @@ public class ConfigFile{
         }
         System.out.println("Text similarity range: " + similarityRange);
 
-        nl3 = secondNode.getElementsByTagName("enableSimilarity");
-        thirdNode = (Element) nl3.item(0);
-        value = thirdNode.getFirstChild().getNodeValue();
+        nl2 = firstNode.getElementsByTagName("enableSimilarity");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
         if (value.equals("true")) {
             enableSimilarity = true;
         } else if (value.equals("false")) {
@@ -78,6 +79,33 @@ public class ConfigFile{
         }
         System.out.println("Text similarity status: " + enableSimilarity);
 
+        // process other heuristics
+        nl1 = doc.getElementsByTagName("others");
+        firstNode = (Element) nl1.item(0);
+
+        nl2 = firstNode.getElementsByTagName("enableRepetitive");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        if (value.equals("true")) {
+            enableRepetitive = true;
+        } else if (value.equals("false")) {
+            enableRepetitive = false;
+        } else {
+            System.out.println("Invalid enableRepetitive option, must be true/false");
+            System.exit(0);
+        }
+
+        nl2 = firstNode.getElementsByTagName("enableOneMethod");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        if (value.equals("true")) {
+            enableOneMethod = true;
+        } else if (value.equals("false")) {
+            enableOneMethod = false;
+        } else {
+            System.out.println("Invalid enableOneMethod option, must be true/false");
+            System.exit(0);
+        }
     }
 
     private void loadMatching(Element doc) {

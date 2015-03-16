@@ -22,8 +22,11 @@
 
 <!ELEMENT loadResults (#PCDATA)>
 
-<!ELEMENT heuristics (similarity)>
-    <!ELEMENT loadResults (similarityRange)>
+<!ELEMENT similarity (similarityRange,enableSimilarity)>
     <!ELEMENT similarityRange (#PCDATA)>
     <!ELEMENT enableSimilarity (#PCDATA)>
+
+<!ELEMENT others (enableRepetitive,enableOneMethod)>
+    <!ELEMENT enableRepetitive (#PCDATA)>
+    <!ELEMENT enableOneMethod (#PCDATA)>
 
