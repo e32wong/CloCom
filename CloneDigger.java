@@ -72,15 +72,18 @@ public class CloneDigger {
         // Measure elapsed time
         long startTime = System.nanoTime();
 
-        // check if we need to load the file list for the database
+        // check if a cached list of files exist
         String databaseFilePaths = databaseDir + "cachedList.tmp";
+        File f = new File(databaseFilePaths);
         List<String> databaseFileList;
-        if (loadDatabaseFilePaths) {
+        if(f.exists() && !f.isDirectory() && loadDatabaseFilePaths == false) {
+            // exist, load it
             databaseFileList = Database.loadFileList(databaseFilePaths);
         } else {
+            // doesn't exist or forced to create new one, create it
             databaseFileList = Database.generateFileList(databaseDir, databaseFilePaths);
         }
-
+        
         TermFrequency termFreq = new TermFrequency();
         if (buildTFIDF == true) {
             termFreq.buildFrequencyMap(databaseDir);
