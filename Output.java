@@ -208,18 +208,6 @@ public class Output {
         double medianExternal = statsExternalClones.getPercentile(50);
         double averageInternal = (double)sumInternalClones / numMatchesWithComment;
         double averageExternal = (double)sumExternalClones / numMatchesWithComment;
-        System.out.println("Number of internal clones (with + without comment): " + medianInternal + " median, "
-                + averageInternal + " average, " + sumInternalClones + " total." );
-        System.out.println("Number of external clones (with + without comment): " + medianExternal + " median, "
-                + averageExternal + " average, " + sumExternalClones + " total." );
-        System.out.println("Number of internal clones (with comment only): " + 
-                sumInternalClonesComment + " total.");
-        System.out.println("Number of external clones (with comment only): " + 
-                sumExternalClonesComment + " total.");
-        System.out.println("InternalMap (with + without comment):\n" + freqMapInternalBoth);
-        System.out.println("ExternalMap (with + without comment):\n" + freqMapExternalBoth);
-        System.out.println("InternalMap (with comment only):\n" + freqMapInternalComment);
-        System.out.println("ExternalMap (with comment only):\n" + freqMapExternalComment);
         System.out.println(numMatchesWithComment + " comment groups has a comment");
         System.out.println("Frequency of clone size:\n" + freqMatchSize);
     }
