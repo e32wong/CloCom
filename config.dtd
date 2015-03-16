@@ -14,9 +14,10 @@
     <!ELEMENT loadTFIDF (#PCDATA)>
     <!ELEMENT loadDatabaseFilePaths (#PCDATA)>
 
-<!ELEMENT outputSettings (debug,removeEmpty,resultPath)>
+<!ELEMENT outputSettings (debug,removeEmpty,exportResults,resultPath)>
     <!ELEMENT debug (#PCDATA)>
     <!ELEMENT removeEmpty (#PCDATA)>
+    <!ELEMENT exportResults (#PCDATA)>
     <!ELEMENT resultPath (#PCDATA)>
 
 <!ELEMENT loadResults (#PCDATA)>

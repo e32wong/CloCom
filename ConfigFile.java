@@ -20,6 +20,7 @@ public class ConfigFile{
     public boolean buildDatabase = false;
     public int gapSize = 0;
     public String resultPath = null;
+    public boolean exportResults = false;
     public boolean loadResults = false;
     public int similarityRange = 0;
     public boolean enableSimilarity = true;
@@ -216,7 +217,19 @@ public class ConfigFile{
         secondNode = (Element) nl2.item(0);
         resultPath = secondNode.getFirstChild().getNodeValue();
         System.out.println("Result path: " + resultPath);
-        
+
+        nl2 = firstNode.getElementsByTagName("exportResults");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        if (value.equals("true")) {
+            exportResults = true;
+        } else if (value.equals("false")) {
+            exportResults = false;
+        } else {
+            System.out.println("Invalid exportResults option, must be true/false");
+            System.exit(0);
+        }
+        System.out.println("Export results: " + exportResults);
     }
 
     public void loadConfig(String filePath) {

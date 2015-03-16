@@ -55,6 +55,7 @@ public class CloneDigger {
         boolean removeEmpty = config.removeEmpty;
         boolean buildDatabase = config.buildDatabase;
         String resultPath = config.resultPath;
+        boolean exportResults = config.exportResults;
         boolean loadResults = config.loadResults;
         int similarityRange = config.similarityRange;
         boolean enableSimilarity = config.enableSimilarity;
@@ -120,9 +121,13 @@ public class CloneDigger {
                 comp.installTextFiles(database_TextList);
                 output = new Output(matchAlgorithm);
                 comp.detectClones_Within(output, matchAlgorithm, gapSize);
-                output.saveResults(resultPath);
+                if (exportResults) {
+                    output.saveResults(resultPath);
+                }
             } else {
-                output.loadResults(resultPath);
+                if (exportResults) {
+                    output.loadResults(resultPath);
+                }
             }
             output.printResults(removeEmpty, similarityRange, enableSimilarity);
         } else {
@@ -157,9 +162,13 @@ public class CloneDigger {
                 Compare comp = new Compare(minNumLines);
                 comp.installTextFiles(project_TextList, databaseFileList);
                 comp.detectClones_Between(output, matchAlgorithm, gapSize, databaseDir);
-                output.saveResults(resultPath);
+                if (exportResults) {
+                    output.saveResults(resultPath);
+                }
             } else {
-                output.loadResults(resultPath);
+                if (exportResults) {
+                    output.loadResults(resultPath);
+                }
             }
             output.printResults(removeEmpty, similarityRange, enableSimilarity);
         }
