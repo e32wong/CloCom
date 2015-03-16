@@ -127,14 +127,7 @@ public class Output {
         DescriptiveStatistics statsExternalClones = new DescriptiveStatistics();
         int sumInternalClones = 0;
         int sumExternalClones = 0;
-        HashMap<Integer, MutableInt> freqMapInternalBoth = new HashMap<Integer, MutableInt>();
-        HashMap<Integer, MutableInt> freqMapExternalBoth = new HashMap<Integer, MutableInt>();
-        HashMap<Integer, MutableInt> freqMapInternalComment = new HashMap<Integer, MutableInt>();
-        HashMap<Integer, MutableInt> freqMapExternalComment = new HashMap<Integer, MutableInt>();
 
-        HashMap<Integer, MutableInt> freqMatchSize = new HashMap<Integer, MutableInt>();
-
-        int sumInternalClonesComment = 0;
         int sumExternalClonesComment = 0;
 
         int numMatchesWithComment = 0;
@@ -156,70 +149,15 @@ public class Output {
             if (hasComment == true) {
                 numMatchesWithComment++;
 
-                statsInternalClones.addValue(thisMatchGroup.getNumberInternalClones());
-                statsExternalClones.addValue(thisMatchGroup.getNumberExternalClones());
-                sumInternalClones = sumInternalClones + thisMatchGroup.getNumberInternalClones();
-                sumExternalClones = sumExternalClones + thisMatchGroup.getNumberExternalClones();
-
-                sumInternalClonesComment = sumInternalClonesComment + thisMatchGroup.getMasterNumClonesWithComments();
-                sumExternalClonesComment = sumExternalClonesComment + thisMatchGroup.getCloneNumClonesWithComments();
-
-                MutableInt internalCount = freqMapInternalBoth.get(thisMatchGroup.getNumberInternalClones());
-                if (internalCount == null) {
-                    freqMapInternalBoth.put(thisMatchGroup.getNumberInternalClones(), new MutableInt());
-                } else {
-                    internalCount.increment();
-                }
-                MutableInt externalCount = freqMapExternalBoth.get(thisMatchGroup.getNumberExternalClones());
-                if (externalCount == null) {
-                    freqMapExternalBoth.put(thisMatchGroup.getNumberExternalClones(), new MutableInt());
-                } else {
-                    externalCount.increment();
-                }
-
-                MutableInt internalCountComment = freqMapInternalComment.get(thisMatchGroup.getMasterNumClonesWithComments());
-                if (internalCountComment == null) {
-                    freqMapInternalComment.put(thisMatchGroup.getMasterNumClonesWithComments(), new MutableInt());
-                } else {
-                    internalCountComment.increment();
-                }
-                MutableInt externalCountComment = freqMapExternalComment.get(thisMatchGroup.getCloneNumClonesWithComments());
-                if (externalCountComment == null) {
-                    freqMapExternalComment.put(thisMatchGroup.getCloneNumClonesWithComments(), new MutableInt());
-                } else {
-                    externalCountComment.increment();
-                }
-
-                MutableInt sizeCountClone = freqMatchSize.get(thisMatchGroup.getMatchLength());
-                if (sizeCountClone == null) {
-                    freqMatchSize.put(thisMatchGroup.getMatchLength(), new MutableInt());
-                } else {
-                    sizeCountClone.increment();
-                }
-
-
             }
 
             System.out.println("\n\n");
             matchIndex++;
         }
 
-        double medianInternal = statsInternalClones.getPercentile(50);
-        double medianExternal = statsExternalClones.getPercentile(50);
-        double averageInternal = (double)sumInternalClones / numMatchesWithComment;
-        double averageExternal = (double)sumExternalClones / numMatchesWithComment;
         System.out.println(numMatchesWithComment + " comment groups has a comment");
-        System.out.println("Frequency of clone size:\n" + freqMatchSize);
     }
 
-    class MutableInt {
-      int value = 1; // note that we start at 1 since we're counting
-      public void increment () { ++value;      }
-      public int  get ()       { return value; }
-      @Override public String toString() {
-          return ((Integer)value).toString();
-      }
-    }
 }
 
 

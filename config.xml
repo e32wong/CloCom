@@ -7,24 +7,24 @@
         <gapSize>2</gapSize>
     </matching>
     <projects>
-        <project>/Users/edmund/Documents/research/clocom/dbProjects/test1/</project>        
-        <database>/Users/edmund/Documents/research/clocom/dbProjects/test2/</database>
-        <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
-        <databaseFilePaths>/Users/edmund/Documents/research/clocom/fileList.obj</databaseFilePaths>
-        <buildDatabase>true</buildDatabase>
+        <project>/home/edmund/clocom/evaluate_projects/freemind/</project>
+        <database>/home/edmund/clocom/evaluate_projects/jajuk-src-1.10.6/</database>
+        <loadDatabaseFilePaths>true</loadDatabaseFilePaths>
+        <buildDatabase>false</buildDatabase>
         <buildTFIDF>false</buildTFIDF>
         <loadTFIDF>false</loadTFIDF>
     </projects>
     <outputSettings>
         <debug>false</debug>
         <removeEmpty>true</removeEmpty>
-        <resultPath>/Users/edmund/Documents/research/comment-digger/results.txt</resultPath>
+        <exportResults>false</exportResults>
+        <resultPath></resultPath>
     </outputSettings>
     <loadResults>false</loadResults>
     <heuristics>
         <similarity>
             <similarityRange>extended</similarityRange>
-            <enableSimilarity>true</enableSimilarity>
+            <enableSimilarity>false</enableSimilarity>
         </similarity>
     </heuristics>
 </configuration>

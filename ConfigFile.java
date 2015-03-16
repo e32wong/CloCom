@@ -213,11 +213,6 @@ public class ConfigFile{
         }
         System.out.println("Remove empty: " + removeEmpty);
         
-        nl2 = firstNode.getElementsByTagName("resultPath");
-        secondNode = (Element) nl2.item(0);
-        resultPath = secondNode.getFirstChild().getNodeValue();
-        System.out.println("Result path: " + resultPath);
-
         nl2 = firstNode.getElementsByTagName("exportResults");
         secondNode = (Element) nl2.item(0);
         value = secondNode.getFirstChild().getNodeValue();
@@ -230,6 +225,13 @@ public class ConfigFile{
             System.exit(0);
         }
         System.out.println("Export results: " + exportResults);
+
+        if (exportResults) {
+            nl2 = firstNode.getElementsByTagName("resultPath");
+            secondNode = (Element) nl2.item(0);
+            resultPath = secondNode.getFirstChild().getNodeValue();
+            System.out.println("Result path: " + resultPath);
+        }
     }
 
     public void loadConfig(String filePath) {
