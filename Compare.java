@@ -165,7 +165,7 @@ public class Compare {
                         coorList.remove(thisCoor);
 
                         int matchSize = longestLength + minNumLines;
-                        result.add(text1.getAbsPath(), 
+                        result.addClone(text1.getAbsPath(), 
                                 statementGroup1.get(thisCoor.x).startLine,
                                 statementGroup1.get(thisCoor.x + longestLength).endLine,
                                 text2.getAbsPath(), 
@@ -308,7 +308,7 @@ public class Compare {
                             int file2Start = list.get(0).y1;
                             int file2End = list.get(list.size()-1).y2;
 
-                            result.add(text1.getAbsPath(),
+                            result.addClone(text1.getAbsPath(),
                                     statementRaw1.get(file1Start).startLine,
                                     statementRaw1.get(file1End).startLine,
                                     text2.getAbsPath(),

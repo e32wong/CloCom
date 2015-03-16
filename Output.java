@@ -22,15 +22,19 @@ public class Output {
 
     ArrayList<MatchGroup> matchGroupList = new ArrayList<MatchGroup>();
     int algorithmMode;
+    boolean enableRepetitive;
+    boolean enableOneMethod;
 
-    public Output (int alogrithm) {
+    public Output (int alogrithm, 
+            boolean enableRepetitive, 
+            boolean enableOneMethod) {
         algorithmMode = alogrithm;
     }
 
     // file coverage, start-end line
     // statement hash number, start-end
     // method line coverage, start-end line
-    public void add(String file1, int lineStart1, int lineEnd1, 
+    public void addClone(String file1, int lineStart1, int lineEnd1, 
             String file2, int lineStart2, int lineEnd2, int length,
             ArrayList<Statement> statementRaw1, int statementStart1, int statementEnd1,
             ArrayList<Statement> statementRaw2, int statementStart2, int statementEnd2) {

@@ -85,6 +85,7 @@ public class CloneDigger {
             databaseFileList = Database.generateFileList(databaseDir, databaseFilePaths);
         }
         
+        // td-idf
         TermFrequency termFreq = new TermFrequency();
         if (buildTFIDF == true) {
             termFreq.buildFrequencyMap(databaseDir);
@@ -95,8 +96,8 @@ public class CloneDigger {
         // Start loading main content
         ArrayList<String> errorList = new ArrayList<String>();
 
+        Output output = new Output(matchAlgorithm, true, true);
         if (projectDir == null) {
-            Output output = new Output(matchAlgorithm);
             if (loadResults == false) {
                 // full mesh comparison
                 System.out.println("Mode: full mesh");
@@ -119,7 +120,6 @@ public class CloneDigger {
                 // perform the comparison
                 Compare comp = new Compare(minNumLines);
                 comp.installTextFiles(database_TextList);
-                output = new Output(matchAlgorithm);
                 comp.detectClones_Within(output, matchAlgorithm, gapSize);
                 if (exportResults) {
                     output.saveResults(resultPath);
@@ -131,7 +131,6 @@ public class CloneDigger {
             }
             output.printResults(removeEmpty, similarityRange, enableSimilarity);
         } else {
-            Output output = new Output(matchAlgorithm);
             if (loadResults == false) {
                 // between comparison
                 System.out.println("Mode: between comparison");
