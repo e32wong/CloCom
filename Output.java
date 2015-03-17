@@ -152,7 +152,7 @@ public class Output {
             thisMatchGroup.pruneDuplicateComments();
             // ranking alogrithm requires a list of similarity terms
             if (enableSimilarity) {
-                thisMatchGroup.rankResults();
+                thisMatchGroup.printRankedComments();
             }
 
             boolean hasComment = thisMatchGroup.printAll(removeEmpty);

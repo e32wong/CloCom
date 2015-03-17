@@ -228,7 +228,7 @@ public class MatchGroup implements Serializable {
         return sortedMap;
     }
 
-    public void rankResults() {
+    public void printRankedComments() {
 
         System.out.println("----");
 
