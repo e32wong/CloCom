@@ -89,8 +89,8 @@ class Parser {
         options.put(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_7);
         
         // new String[] {"UTF-8"}
-            String[] sources = {};
-          String[] classPaths = {};
+        String[] sources = {};
+        String[] classPaths = {};
         parser.setEnvironment(classPaths, sources,
             null, true);
         //parser.setBindingsRecovery(true);

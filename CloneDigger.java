@@ -14,6 +14,15 @@ import java.util.concurrent.TimeUnit;
 
 public class CloneDigger {
 
+    private static void displayError(ArrayList<String> errorList) {
+        if (errorList.size() > 0) {
+            System.out.println("Eclipse API error on the following files:");
+        }   
+        for (String str : errorList) {
+            System.out.println(str);
+        }
+    }
+
     public static void main(String args[]) throws IOException {
 
         Options options = new Options();
@@ -175,12 +184,7 @@ public class CloneDigger {
         }
 
         // Display all the errors
-        if (errorList.size() > 0) {
-            System.out.println("Eclipse API error on the following files:");
-        }
-        for (String str : errorList) {
-            System.out.println(str);
-        }
+        displayError(errorList);
 
         // Display elapsed time
         long endTime = System.nanoTime();

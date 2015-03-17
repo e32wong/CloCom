@@ -7,7 +7,7 @@
         <gapSize>2</gapSize>
     </matching>
     <projects>
-        <project>/home/edmund/clocom/evaluate_projects/freemind/</project>
+        <project>/home/edmund/clocom/evaluate_projects/test/</project>
         <database>/home/edmund/clocom/evaluate_projects/jajuk-src-1.10.6/</database>
         <loadDatabaseFilePaths>true</loadDatabaseFilePaths>
         <buildDatabase>false</buildDatabase>
