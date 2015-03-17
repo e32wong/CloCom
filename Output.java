@@ -150,15 +150,19 @@ public class Output {
             thisMatchGroup.pruneComments(similarityRange, enableSimilarity);
 
             thisMatchGroup.pruneDuplicateComments();
-            // ranking alogrithm requires a list of similarity terms
-            if (enableSimilarity) {
-                thisMatchGroup.printRankedComments();
-            }
 
-            boolean hasComment = thisMatchGroup.printAll(removeEmpty);
-            if (hasComment == true) {
+            boolean hasComment = thisMatchGroup.hasComment();
+
+            if (hasComment == false && removeEmpty == true) {
+                // do nothing
+            } else {
+                // ranking alogrithm requires a list of similarity terms
+                if (enableSimilarity) {
+                    thisMatchGroup.printRankedComments();
+                }
+                thisMatchGroup.printAllMappings(removeEmpty);
+
                 numMatchesWithComment++;
-
             }
 
             System.out.println("\n\n");

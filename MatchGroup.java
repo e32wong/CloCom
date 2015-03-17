@@ -432,25 +432,21 @@ public class MatchGroup implements Serializable {
         }
     }
 
-
-    public boolean printAll(boolean removeEmpty) {
-
-        boolean enableSimilarity = true;
-
+    public boolean hasComment() {
         boolean hasComment = false;
         HashSet<String> cloneComments = new HashSet<String>();
         for (MatchInstance thisMatch : cloneList) {
             ArrayList<CommentMap> commentList = thisMatch.commentList;
             if (commentList.size() > 0) {
-                hasComment = true;
-                break;
+                return true;
             }
         }
 
-        // exit if we don't need to display all comments
-        if (hasComment == false && removeEmpty == true) {
-            return false;
-        }
+        return false;
+    }
+
+    public void printAllMappings(boolean removeEmpty) {
+        boolean enableSimilarity = true;
 
         // first print the master list
         for (MatchInstance thisMatch : masterList) {
@@ -493,7 +489,6 @@ public class MatchGroup implements Serializable {
                 int endLine = thisMatch.endLine;
 
                 ArrayList<CommentMap> comments = thisMatch.getComments();
-
                 if (comments.size() > 0 || removeEmpty == false) {
 
                     // print header
@@ -532,7 +527,12 @@ public class MatchGroup implements Serializable {
             }
             i++;
         }
-        System.out.println("Comments (size " + 
+        
+        printAllComments(masterCommentList);
+    }
+
+    private void printAllComments(HashSet<String> masterCommentList) {
+        System.out.println("Comments (size " +
                 masterCommentList.size() + "):");
         int index = 1;
         for (String thisComment : masterCommentList) {
@@ -540,11 +540,6 @@ public class MatchGroup implements Serializable {
             index++;
         }
         System.out.println("----");
-
-        if (hasComment) {
-            return true;
-        } else {
-            return false;
-        }
+        
     }
 }
