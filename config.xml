@@ -4,7 +4,7 @@
     <matching>
         <minNumLines>3</minNumLines>
         <matchAlgorithm>0</matchAlgorithm>
-        <matchMode>0</matchMode>
+        <matchMode>1</matchMode>
         <gapSize>2</gapSize>
     </matching>
     <projects>

@@ -163,7 +163,6 @@ public class Compare {
                         coorList.remove(thisCoor);
 
                         if (longestLength >= minNumLines) {
-                            System.out.println(longestLength + 1);
                             result.addClone(text1.getAbsPath(), 
                                     statementRaw1.get(thisCoor.x).startLine,
                                     statementRaw1.get(thisCoor.x + longestLength - 1).endLine,
