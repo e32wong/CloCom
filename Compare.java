@@ -118,13 +118,11 @@ public class Compare {
 
                 if (mode == 0) {
                     // exact matching
-                    ArrayList<Statement> statementGroup1 = text1.getGroupedStatements(k);
-                    ArrayList<Statement> statementGroup2 = text2.getGroupedStatements(l);
                     ArrayList<Statement> statementRaw1 = text1.getRawStatements(k);
                     ArrayList<Statement> statementRaw2 = text2.getRawStatements(l);
-                    int sizeX = statementGroup1.size();
-                    int sizeY = statementGroup2.size();
-
+                    int sizeX = statementRaw1.size();
+                    int sizeY = statementRaw2.size();
+                    
                     // x - statement1
                     // y - statement2
                     // Build matrix
@@ -133,9 +131,9 @@ public class Compare {
                     //matrix = new boolean[sizeX][sizeY];
                     for (int x = 0; x < sizeX; x++) {
                         for (int y = 0; y < sizeY; y++) {
-                            if (statementGroup1.get(x).hashNumber == statementGroup2.get(y).hashNumber) {
+                            if (statementRaw1.get(x).hashNumber == statementRaw2.get(y).hashNumber) {
                                 Coordinate coor = new Coordinate(x,y);
-                                coorMap.put(coor, statementGroup1.get(x).hashNumber);
+                                coorMap.put(coor, statementRaw1.get(x).hashNumber);
                                 coorList.add(coor);
                             }
                         }
@@ -145,7 +143,7 @@ public class Compare {
                     while (coorList.size() != 0) {
                         Coordinate thisCoor = coorList.get(0);
 
-                        int longestLength = 0; // so we don't have to subtract by 1 later
+                        int longestLength = 1; 
 
                         int x = thisCoor.x + 1;
                         int y = thisCoor.y + 1;
@@ -164,16 +162,17 @@ public class Compare {
                         }
                         coorList.remove(thisCoor);
 
-                        int matchSize = longestLength + minNumLines;
-                        result.addClone(text1.getAbsPath(), 
-                                statementGroup1.get(thisCoor.x).startLine,
-                                statementGroup1.get(thisCoor.x + longestLength).endLine,
-                                text2.getAbsPath(), 
-                                statementGroup2.get(thisCoor.y).startLine,
-                                statementGroup2.get(thisCoor.y + longestLength).endLine,
-                                matchSize,
-                                statementRaw1, thisCoor.x, thisCoor.x + matchSize - 1,
-                                statementRaw2, thisCoor.y, thisCoor.y + matchSize - 1);
+                        if (longestLength >= minNumLines) {
+                            result.addClone(text1.getAbsPath(), 
+                                    statementRaw1.get(thisCoor.x).startLine,
+                                    statementRaw1.get(thisCoor.x + longestLength - 1).endLine,
+                                    text2.getAbsPath(), 
+                                    statementRaw2.get(thisCoor.y).startLine,
+                                    statementRaw2.get(thisCoor.y + longestLength - 1).endLine,
+                                    longestLength + 1,
+                                    statementRaw1, thisCoor.x, thisCoor.x + longestLength - 1,
+                                    statementRaw2, thisCoor.y, thisCoor.y + longestLength - 1);
+                        }
                     } 
                 } else {
                     // gapped matching

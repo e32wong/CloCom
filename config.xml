@@ -2,15 +2,16 @@
 <!DOCTYPE configuration SYSTEM "config.dtd">
 <configuration>
     <matching>
-        <minNumLines>4</minNumLines>
-        <matchAlgorithm>1</matchAlgorithm>
+        <minNumLines>3</minNumLines>
+        <matchAlgorithm>0</matchAlgorithm>
+        <matchMode>1</matchMode>
         <gapSize>2</gapSize>
     </matching>
     <projects>
         <project>/home/edmund/clocom/evaluate_projects/test/</project>
         <database>/home/edmund/clocom/evaluate_projects/jajuk-src-1.10.6/</database>
         <loadDatabaseFilePaths>true</loadDatabaseFilePaths>
-        <buildDatabase>false</buildDatabase>
+        <buildDatabase>true</buildDatabase>
         <buildTFIDF>false</buildTFIDF>
         <loadTFIDF>false</loadTFIDF>
     </projects>

@@ -57,6 +57,7 @@ public class CloneDigger {
 
         int gapSize = config.gapSize;
         int matchAlgorithm = config.matchAlgorithm;
+        int matchMode = config.matchMode;
         int minNumLines = config.minNumLines;
         String databaseDir = config.database;
         String projectDir = config.project;
@@ -108,7 +109,8 @@ public class CloneDigger {
         ArrayList<String> errorList = new ArrayList<String>();
 
         Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod);
-        if (matchAlgorithm == 1) {
+        // mode 0 full mesh, mode 1 between comparison
+        if (matchMode == 0) {
             if (loadResults == false) {
                 // full mesh comparison
                 System.out.println("Mode: full mesh");

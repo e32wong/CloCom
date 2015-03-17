@@ -51,10 +51,6 @@ public class Text implements Serializable {
         return methodList.size();
     }
 
-    public ArrayList<Statement> getGroupedStatements(int index) {
-        return methodList.get(index).getGroupedStatements();
-    }
-
     public ArrayList<Statement> getRawStatements(int index) {
         return methodList.get(index).getMethodStatements();
     }

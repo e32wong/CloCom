@@ -16,6 +16,7 @@ public class Tokenizer {
     Method currentMethodObj;
 
     int startLine;
+    int endLine;
 
     int minNumLines;
 
@@ -56,7 +57,7 @@ public class Tokenizer {
 
             if (currentMethodObj.getNumStatements() >= minNumLines &&
                     methodHasMethodInvocation == true) {
-                currentMethodObj.buildHash(minNumLines);
+                //currentMethodObj.buildHash(minNumLines);
                 currentMethodObj.setEndLine(mEndLine);
                 methodList.add(currentMethodObj);
             } else {
@@ -66,8 +67,9 @@ public class Tokenizer {
         }
     }
 
-    public void statementStart(int sLine) {
+    public void statementStart(int sLine, int eLine) {
         startLine = sLine;
+        endLine = eLine;
         statementHasMethodInvocation = false;
         simpleNameList = new HashSet<String>();
     }
@@ -78,7 +80,7 @@ public class Tokenizer {
             currentTokenList.clear();
 
             if (inMethod == true) {
-                currentMethodObj.addStatement(hash_value, startLine, 
+                currentMethodObj.addStatement(hash_value, startLine, endLine,
                         statementHasMethodInvocation, scopeLevel, simpleNameList);
 
                 // debug

@@ -16,11 +16,6 @@ public class Statement implements Serializable {
 
     public HashSet<String> nameList;
 
-    public Statement(int value, int sLine) {
-        startLine = sLine;
-        hashNumber = value;
-    }
-
     public Statement(int value, int sLine, int eLine) {
         startLine = sLine;
         endLine = eLine;
