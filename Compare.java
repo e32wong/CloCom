@@ -298,7 +298,7 @@ public class Compare {
                             }
                         }
 
-                        if (totalLength >= 5 && isRepetitive == false) {
+                        if (totalLength >= minNumLines && isRepetitive == false) {
 
                             // get first element for the starting point
                             int file1Start = list.get(0).x1;

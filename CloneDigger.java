@@ -108,7 +108,7 @@ public class CloneDigger {
         ArrayList<String> errorList = new ArrayList<String>();
 
         Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod);
-        if (projectDir == null) {
+        if (matchAlgorithm == 1) {
             if (loadResults == false) {
                 // full mesh comparison
                 System.out.println("Mode: full mesh");

@@ -2,8 +2,8 @@
 <!DOCTYPE configuration SYSTEM "config.dtd">
 <configuration>
     <matching>
-        <minNumLines>3</minNumLines>
-        <matchAlgorithm>0</matchAlgorithm>
+        <minNumLines>4</minNumLines>
+        <matchAlgorithm>1</matchAlgorithm>
         <gapSize>2</gapSize>
     </matching>
     <projects>
@@ -16,7 +16,7 @@
     </projects>
     <outputSettings>
         <debug>false</debug>
-        <removeEmpty>true</removeEmpty>
+        <removeEmpty>false</removeEmpty>
         <exportResults>false</exportResults>
         <resultPath></resultPath>
     </outputSettings>
