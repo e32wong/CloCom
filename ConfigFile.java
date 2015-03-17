@@ -15,7 +15,7 @@ public class ConfigFile{
     public String database = null;
     public String project = null;
     public int matchAlgorithm = 0;
-    public int matchMode = 0; // 0 mesh, 1 between
+    public int matchMode = 0;
     public boolean debug = false;
     public boolean removeEmpty = false;
     public boolean buildDatabase = false;
@@ -139,7 +139,7 @@ public class ConfigFile{
         value = secondNode.getFirstChild().getNodeValue();
         matchMode = Integer.parseInt(value);
         if (matchMode != 0 && matchMode != 1) {
-            System.out.println("Invalid matching mode, must be 1 (between) or 0 (full mesh)");
+            System.out.println("Invalid matching mode, must be 1 (mesh) or 0 (between)");
             System.exit(0);
         }
         System.out.println("Match Mode: " + matchMode);
