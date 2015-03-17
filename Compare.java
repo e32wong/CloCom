@@ -32,7 +32,7 @@ public class Compare {
         System.out.println("\nComparing for " + project.size() + " files");
 
         for (int i = 0; i < project.size(); i++) {
-            System.out.print((i+1) + " ");
+            System.out.print((i+1) + "\r");
             for (int j = i + 1; j < project.size(); j++) {
                 Text text1 = project.get(i);
                 Text text2 = project.get(j);
