@@ -32,7 +32,6 @@ import java.io.InputStream;
 public class Database {
 
     public static List<String> generateFileList(String dir_name, String filePath) throws IOException {
-
         List<String> listNames = new ArrayList<String>();
 
         String command = "find " + dir_name + " -name \"*.java\"";
@@ -54,31 +53,42 @@ public class Database {
         while ((line = br.readLine()) != null) {
             listNames.add(line);
         }
+        isr.close();
+        br.close();
         System.out.println("Done obtaining list of files!");
 
         // Serialize file and write to file
         FileOutputStream fout = new FileOutputStream(filePath);
         ObjectOutputStream oos = new ObjectOutputStream(fout);
         oos.writeObject(listNames);
+        fout.close();
         oos.close();       
 
         return listNames;
 
     }
 
-    public static List<String> loadFileList(String filePath) {
+    public static List<String> loadFileList(String filePath) throws IOException {
 
         List<String> listNames = null;
+        FileInputStream fin = null;
+        ObjectInputStream ois = null;
 
         try {
             // Load serialized file
-            FileInputStream fin = new FileInputStream(filePath);
-            ObjectInputStream ois = new ObjectInputStream(fin);
+            fin = new FileInputStream(filePath);
+            ois = new ObjectInputStream(fin);
             listNames = (List<String>) ois.readObject();
-            ois.close();
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Error while loading file list: " + e);
             System.exit(0);
+        } finally {
+            if (ois != null) {
+                ois.close();
+            }
+            if (fin != null) {
+                fin.close();
+            }
         }
 
         return listNames;
@@ -112,15 +122,16 @@ public class Database {
         return fileList;
     }
 
-    public static Text loadSingleFile (String filePath, String databaseDir, int minNumLines, boolean debug) {
+    public static Text loadSingleFile (String filePath, String databaseDir, int minNumLines, boolean debug) throws IOException {
+        FileInputStream fin = null;
+        ObjectInputStream ois = null;
         try {
             String dbPath = Text.getDBpath(filePath);
 
             // Load serialized file
-            FileInputStream fin = new FileInputStream(dbPath);
-            ObjectInputStream ois = new ObjectInputStream(fin);
+            fin = new FileInputStream(dbPath);
+            ois = new ObjectInputStream(fin);
             Text txt = (Text) ois.readObject();
-            ois.close();
 
             // load path dependent info
             txt.setDependentPath(databaseDir);
@@ -130,6 +141,9 @@ public class Database {
             System.out.println("Error while loading single file\n" + filePath + "\n" + e);
             Text txt = repairDatabaseFile(minNumLines, debug, filePath, databaseDir);
             return txt;
+        } finally {
+            ois.close();
+            fin.close();
         }
     }
 

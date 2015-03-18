@@ -89,14 +89,14 @@ public class CloneDigger {
         String databaseFilePaths = databaseDir + "cachedList.tmp";
         File f = new File(databaseFilePaths);
         List<String> databaseFileList;
-        if(f.exists() && !f.isDirectory() && loadDatabaseFilePaths == false) {
+        if(f.exists() && !f.isDirectory() && loadDatabaseFilePaths == true) {
             // exist, load it
             databaseFileList = Database.loadFileList(databaseFilePaths);
         } else {
             // doesn't exist or forced to create new one, create it
             databaseFileList = Database.generateFileList(databaseDir, databaseFilePaths);
         }
-        
+
         // td-idf
         TermFrequency termFreq = new TermFrequency();
         if (buildTFIDF == true) {

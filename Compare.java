@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.io.IOException;
 
 public class Compare {
 
@@ -49,13 +50,17 @@ public class Compare {
 
         for (int i = 0; i < databasePaths.size(); i++) {
             // outer loop is the database
-            Text text1 = Database.loadSingleFile(databasePaths.get(i), databaseDir, minNumLines, false);
+            try {
+                Text text1 = Database.loadSingleFile(databasePaths.get(i), databaseDir, minNumLines, false);
 
-            for (int j = 0; j < project.size(); j++) {
-                // inner loop is the project
-                Text text2 = project.get(j);
-                textCompare(text2, text1, mode, gapSize);
+                for (int j = 0; j < project.size(); j++) {
+                    // inner loop is the project
+                    Text text2 = project.get(j);
+                    textCompare(text2, text1, mode, gapSize);
 
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
             System.out.print((i+1) + "\r");
