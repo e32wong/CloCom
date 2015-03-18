@@ -445,7 +445,7 @@ public class MatchGroup implements Serializable {
         return false;
     }
 
-    public void printAllMappings(boolean removeEmpty) {
+    public void printAllMappings(boolean removeEmpty, int matchMode) {
         boolean enableSimilarity = true;
 
         // first print the master list
@@ -518,7 +518,11 @@ public class MatchGroup implements Serializable {
                     List<String> encoded = Files.readAllLines(Paths.get(filePath), Charset.defaultCharset());
                     for (int lineNum = startLine - 1; lineNum < endLine; lineNum++) {
                         String line = encoded.get(lineNum);
-                        System.out.println("< " + line);
+                        if (matchMode == 0) {
+                            System.out.println("< " + line);
+                        } else {
+                            System.out.println("* " + line);
+                        }
                     }
                     System.out.println("----");
                 }

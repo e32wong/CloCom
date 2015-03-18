@@ -131,7 +131,10 @@ public class Output {
         }
     }
 
-    public void printResults(boolean removeEmpty, int similarityRange, boolean enableSimilarity) {
+    public void printResults(boolean removeEmpty, 
+            int similarityRange, 
+            boolean enableSimilarity,
+            int matchMode) {
 
         DescriptiveStatistics statsInternalClones = new DescriptiveStatistics();
         DescriptiveStatistics statsExternalClones = new DescriptiveStatistics();
@@ -160,7 +163,7 @@ public class Output {
                 if (enableSimilarity) {
                     thisMatchGroup.printRankedComments();
                 }
-                thisMatchGroup.printAllMappings(removeEmpty);
+                thisMatchGroup.printAllMappings(removeEmpty, matchMode);
 
                 numMatchesWithComment++;
             }

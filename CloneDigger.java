@@ -141,7 +141,7 @@ public class CloneDigger {
                     output.loadResults(resultPath);
                 }
             }
-            output.printResults(removeEmpty, similarityRange, enableSimilarity);
+            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
         } else {
             if (loadResults == false) {
                 // between comparison
@@ -181,7 +181,7 @@ public class CloneDigger {
                     output.loadResults(resultPath);
                 }
             }
-            output.printResults(removeEmpty, similarityRange, enableSimilarity);
+            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
         }
 
         // Display all the errors
