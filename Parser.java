@@ -19,7 +19,7 @@ class Parser {
     private static ArrayList<TypeInfo> variableMap = 
         new ArrayList<TypeInfo>();
  
-    private static int currentLevel = 0;
+    private static int scopeLevel = 0;
 
     static class TypeInfo {
         public String varName;
@@ -60,7 +60,7 @@ class Parser {
     private static void clearLocalVariables() {
         for (int i = variableMap.size()-1; i >= 0; i--) {
 
-            if (variableMap.get(i).level == currentLevel) {
+            if (variableMap.get(i).level == scopeLevel) {
                 //variableMap.remove(variableMap.get(i));
                 variableMap.remove(i);
             }
@@ -180,7 +180,7 @@ class Parser {
                     }
 
                     public void endVisit(AssertStatement node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
 
                     public boolean	visit(Assignment node) {
@@ -193,9 +193,9 @@ class Parser {
                     }
                     
                     public boolean	visit(Block node) {
-                        currentLevel = currentLevel + 1;
+                        scopeLevel = scopeLevel + 1;
 
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
 
                         return true;
                     }
@@ -203,7 +203,7 @@ class Parser {
                     public void endVisit(Block node) {
                         clearLocalVariables();
 
-                        currentLevel = currentLevel - 1;
+                        scopeLevel = scopeLevel - 1;
                     }
 
                     public boolean	visit(BooleanLiteral node) {
@@ -228,7 +228,7 @@ class Parser {
                     }
 
                     public void endVisit(BreakStatement node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
 
                     public boolean	visit(CastExpression node) {
@@ -257,7 +257,7 @@ class Parser {
 
                     public boolean	visit(ClassInstanceCreation node) {
 
-                        currentLevel = currentLevel + 1;
+                        scopeLevel = scopeLevel + 1;
 
                         int startLine = unit.getLineNumber(node.getStartPosition());
                         tk.addHash(TokenType.ClassInstanceCreation.ordinal(), startLine);
@@ -265,7 +265,7 @@ class Parser {
                     }
 
                     public void endVisit(ClassInstanceCreation node) {
-                        currentLevel = currentLevel - 1;
+                        scopeLevel = scopeLevel - 1;
                     }
 
                     /*
@@ -294,7 +294,7 @@ class Parser {
                     }
 
                     public void endVisit(ConstructorInvocation node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
 
                     public boolean	visit(ContinueStatement node) {
@@ -308,7 +308,7 @@ class Parser {
                     }
 
                     public void endVisit(ContinueStatement node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
 
                     public boolean	visit(DoStatement node) {
@@ -322,7 +322,7 @@ class Parser {
                     }
 
                     public void endVisit(DoStatement node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
 
                     /*
@@ -331,7 +331,7 @@ class Parser {
                         tk.statementStart(startLine);
 
                         tk.addHash(78, startLine);
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
 
                         return true;
                     }*/
@@ -375,7 +375,7 @@ class Parser {
                     }
 
                     public void endVisit(ExpressionStatement node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
 
                     public boolean	visit(FieldAccess node) {
@@ -402,7 +402,7 @@ class Parser {
                             if (binding != null) {
 
                                 TypeInfo typeInfo = new TypeInfo(
-                                        name, currentLevel, binding.getName());
+                                        name, scopeLevel, binding.getName());
 
                                 variableMap.add(typeInfo);
                                 /*
@@ -416,7 +416,7 @@ class Parser {
 
                                 String varType = node.getType().toString();
                                 TypeInfo typeInfo = new TypeInfo(
-                                        name, currentLevel, varType);
+                                        name, scopeLevel, varType);
 
                                 variableMap.add(typeInfo);
                                 /*
@@ -494,7 +494,7 @@ class Parser {
                                     if (else_statement.equals(node)) {
                                         tk.statementStart(startLine, endLine);
                                         tk.addHash(TokenType.Else.ordinal(), startLine);
-                                        tk.statementEnd(currentLevel);
+                                        tk.statementEnd(scopeLevel);
                                     }
                                 }
                             }
@@ -543,7 +543,7 @@ class Parser {
                         int endLine = unit.getLineNumber(node.getStartPosition() + node.getLength());
                         tk.statementStart(startLine, endLine);
                         tk.addHash(TokenType.LabeledStatement.ordinal(), startLine);
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
 
                         return true;
                     }
@@ -605,7 +605,7 @@ class Parser {
                         int startLine = unit.getLineNumber(node.getStartPosition()+node.getLength());
                         //tk.statementStart(startLine);
                         //tk.addHash(75, startLine);
-                        //tk.statementEnd(currentLevel);
+                        //tk.statementEnd(scopeLevel);
 
                         //IMethodBinding methodBinding = node.resolveBinding();
                         tk.methodEnd(node.getName().toString(), startLine);
@@ -806,7 +806,7 @@ class Parser {
 
                     /*
                     public void endVisit(ReturnStatement node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
                     */
 
@@ -860,13 +860,13 @@ class Parser {
                             String variableType = binding.getType().getName();
                             tk.addHash(TokenType.SingleVariableDeclaration.ordinal(), variableType, startLine);
 
-                            TypeInfo typeInfo = new TypeInfo(varName, currentLevel, variableType);
+                            TypeInfo typeInfo = new TypeInfo(varName, scopeLevel, variableType);
                             variableMap.add(typeInfo);
 
                         } else {
                             tk.addHash(TokenType.SingleVariableDeclaration.ordinal(), startLine);
 
-                            TypeInfo typeInfo = new TypeInfo(varName, currentLevel, node.getType().toString());
+                            TypeInfo typeInfo = new TypeInfo(varName, scopeLevel, node.getType().toString());
                             variableMap.add(typeInfo);
                         }
                         return true;
@@ -898,7 +898,7 @@ class Parser {
                     }
 
                     public void endVisit(SuperConstructorInvocation node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
 
                     public boolean	visit(SuperFieldAccess node) {
@@ -937,7 +937,7 @@ class Parser {
 
                         tk.addHash(55, startLine);
 
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                         */
                         return false;
                     }
@@ -986,7 +986,7 @@ class Parser {
                     }
 
                     public void endVisit(ThrowStatement node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
 
                     public boolean	visit(TryStatement node) {
@@ -995,7 +995,7 @@ class Parser {
                         int endLine = unit.getLineNumber(node.getStartPosition() + node.getLength());
                         tk.statementStart(startLine, endLine);
                         tk.addHash(TokenType.TryStatement.ordinal(), startLine);
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
 
                         return true;
                     }
@@ -1004,7 +1004,7 @@ class Parser {
                         //int startLine = unit.getLineNumber(node.getStartPosition());
                         //tk.statementStart(startLine);
                         //tk.addHash(62, startLine);
-                        currentLevel = currentLevel + 1;
+                        scopeLevel = scopeLevel + 1;
                         return true;
                     }
 
@@ -1012,7 +1012,7 @@ class Parser {
                         
                         clearLocalVariables();
 
-                        currentLevel = currentLevel - 1;       
+                        scopeLevel = scopeLevel - 1;       
                     }
 
                     /*
@@ -1020,7 +1020,7 @@ class Parser {
 
                         int startLine = unit.getLineNumber(node.getStartPosition());
                         tk.statementStart(startLine);
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
 
                         System.out.println("TypeDeclarationStatement at line "+ Integer.toString(startLine));
 
@@ -1058,7 +1058,7 @@ class Parser {
                         List<VariableDeclarationFragment> fragList = node.fragments();
                         for (VariableDeclarationFragment frag : fragList) {
                             TypeInfo typeInfo = new TypeInfo(
-                                    frag.getName().toString(), currentLevel, type.toString());
+                                    frag.getName().toString(), scopeLevel, type.toString());
                             variableMap.add(typeInfo);
                         }
 
@@ -1088,7 +1088,7 @@ class Parser {
                         for (VariableDeclarationFragment fragment : fragments) {
                             String varName = fragment.getName().toString();
                             String unresolvedType = node.getType().toString();   
-                            TypeInfo typeInfo = new TypeInfo(varName, currentLevel, unresolvedType);
+                            TypeInfo typeInfo = new TypeInfo(varName, scopeLevel, unresolvedType);
                             variableMap.add(typeInfo);
                         }
 
@@ -1096,7 +1096,7 @@ class Parser {
                     }
 
                     public void endVisit(VariableDeclarationStatement node) {
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                     }
                     
                     public boolean	visit(WhileStatement node) {
@@ -1114,7 +1114,7 @@ class Parser {
                         int startLine = unit.getLineNumber(node.getStartPosition()+node.getLength());
                         //tk.statementStart(startLine);
                         //tk.addHash(76, startLine);
-                        //tk.statementEnd(currentLevel);
+                        //tk.statementEnd(scopeLevel);
                     }*/
 
                     public boolean	visit(WildcardType node) {
@@ -1123,7 +1123,7 @@ class Parser {
                         int endLine = unit.getLineNumber(node.getStartPosition() + node.getLength());
                         tk.statementStart(startLine, endLine);
                         tk.addHash(TokenType.WildcardType.ordinal(), startLine);
-                        tk.statementEnd(currentLevel);
+                        tk.statementEnd(scopeLevel);
                         return true;
                     }
                     
