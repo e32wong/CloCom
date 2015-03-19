@@ -122,7 +122,7 @@ public class Database {
         return fileList;
     }
 
-    public static Text loadSingleFile (String filePath, String databaseDir, int minNumLines, boolean debug) throws IOException {
+    public static Text loadSingleFile (String filePath, String databaseDir, int minNumLines, boolean debug) {
         FileInputStream fin = null;
         ObjectInputStream ois = null;
         try {
@@ -142,8 +142,13 @@ public class Database {
             Text txt = repairDatabaseFile(minNumLines, debug, filePath, databaseDir);
             return txt;
         } finally {
-            ois.close();
-            fin.close();
+
+            try {
+                ois.close();
+                fin.close();
+            } catch (Exception e) {
+                System.out.println("Error while closing stream\n" + e);
+            }
         }
     }
 

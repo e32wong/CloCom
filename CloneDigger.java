@@ -120,18 +120,13 @@ public class CloneDigger {
                     errorList.addAll(temp);
                 }
 
-                // load everything into memory
-                System.out.println("\nLoading a total of " + databaseFileList.size() + 
-                        " cached database files from \n" + databaseDir);
-                Database.loadCache(database_TextList, debug, databaseFileList, databaseDir);
-
                 // Capture time
                 cal = Calendar.getInstance();
                 System.out.println("Start comparison @ " +  sdf.format(cal.getTime()) );
 
                 // perform the comparison
-                Compare comp = new Compare(minNumLines);
-                comp.installTextFiles(database_TextList);
+                Compare comp = new Compare(minNumLines, databaseDir);
+                comp.installTextFiles(databaseFileList);
                 comp.detectClones_Within(output, matchAlgorithm, gapSize);
                 if (exportResults) {
                     output.saveResults(resultPath);
@@ -170,9 +165,9 @@ public class CloneDigger {
                 System.out.println("Start comparison @ " +  sdf.format(cal.getTime()) );
 
                 // perform the comparison
-                Compare comp = new Compare(minNumLines);
+                Compare comp = new Compare(minNumLines, databaseDir);
                 comp.installTextFiles(project_TextList, databaseFileList);
-                comp.detectClones_Between(output, matchAlgorithm, gapSize, databaseDir);
+                comp.detectClones_Between(output, matchAlgorithm, gapSize);
                 if (exportResults) {
                     output.saveResults(resultPath);
                 }

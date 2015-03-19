@@ -15,12 +15,15 @@ public class Compare {
 
     Output result;
 
-    public Compare(int numLinesMatch) {
+    String databaseDir;
+
+    public Compare(int numLinesMatch, String databaseDirIn) {
+        databaseDir = databaseDirIn;
         minNumLines = numLinesMatch;
     }
 
-    public void installTextFiles(ArrayList<Text> projectList) {
-        project = projectList;
+    public void installTextFiles(List<String> db_PathList) {
+        databasePaths = db_PathList;
     }
     public void installTextFiles(ArrayList<Text> projectList, List<String> db_PathList) {
         project = projectList;
@@ -30,19 +33,21 @@ public class Compare {
     
         result = outputObject;
 
-        System.out.println("\nComparing for " + project.size() + " files");
+        System.out.println("\nComparing for " + databasePaths.size() + " files");
 
-        for (int i = 0; i < project.size(); i++) {
+        for (int i = 0; i < databasePaths.size(); i++) {
             System.out.print((i+1) + "\r");
-            for (int j = i + 1; j < project.size(); j++) {
-                Text text1 = project.get(i);
-                Text text2 = project.get(j);
+            Text text1 = Database.loadSingleFile(databasePaths.get(i), databaseDir, minNumLines, false);
+            for (int j = i + 1; j < databasePaths.size(); j++) {
+
+                Text text2 = Database.loadSingleFile(databasePaths.get(j), databaseDir, minNumLines, false);
+
                 textCompare(text1, text2, mode, gapSize);
             }
         }
         System.out.println("");
     }
-    public void detectClones_Between(Output outputObject, int mode, int gapSize, String databaseDir) {
+    public void detectClones_Between(Output outputObject, int mode, int gapSize) {
 
         result = outputObject;
 
@@ -50,17 +55,13 @@ public class Compare {
 
         for (int i = 0; i < databasePaths.size(); i++) {
             // outer loop is the database
-            try {
-                Text text1 = Database.loadSingleFile(databasePaths.get(i), databaseDir, minNumLines, false);
+            Text text1 = Database.loadSingleFile(databasePaths.get(i), databaseDir, minNumLines, false);
 
-                for (int j = 0; j < project.size(); j++) {
-                    // inner loop is the project
-                    Text text2 = project.get(j);
-                    textCompare(text2, text1, mode, gapSize);
+            for (int j = 0; j < project.size(); j++) {
+                // inner loop is the project
+                Text text2 = project.get(j);
+                textCompare(text2, text1, mode, gapSize);
 
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
             }
 
             System.out.print((i+1) + "\r");
