@@ -149,6 +149,8 @@ public class Database {
 
     public static void loadCache (ArrayList<Text> textList,
             boolean debug, List<String> fileList, String dir_name) {
+        FileInputStream fin = null;
+        ObjectInputStream ois = null;
         try {
             int counter = 1;
             for (String absPath : fileList) {
@@ -160,8 +162,8 @@ public class Database {
                 }
 
                 // Load serialized file
-                FileInputStream fin = new FileInputStream(Text.getDBpath(absPath));
-                ObjectInputStream ois = new ObjectInputStream(fin);
+                fin = new FileInputStream(Text.getDBpath(absPath));
+                ois = new ObjectInputStream(fin);
                 Text txt = (Text) ois.readObject();
                 ois.close();
 
@@ -175,6 +177,19 @@ public class Database {
         } catch (Exception e) {
             System.out.println(e);
             System.exit(0);
+        } finally {
+
+            try {
+                if (fin != null) {
+                    fin.close();
+                }
+                if (ois != null) {
+                    ois.close();
+                }
+            } catch (Exception e) {
+                System.out.println(e);
+                System.exit(0);
+            }
         }
     }
 
