@@ -125,8 +125,6 @@ public class Output {
                     added = true;
                     break;
                 } else if (status1 == true && status2 == true) {
-                    //System.out.println("Exception in output");
-                    //System.exit(0);
                     added = true;
                     break;
                 }
