@@ -9,7 +9,6 @@ import java.io.*;
 
 public class Text implements Serializable {
 
-    private String baseDir;       // /home/xxx/xxx/
     private String databasePath;  // freecol/xx/xx/xx
 	
 	/* A collection of Methods */
@@ -22,8 +21,7 @@ public class Text implements Serializable {
     } 
 
 	/* Constructor */
-	public Text(String fileAbsPath, String baseDirIn) {
-        baseDir = baseDirIn;
+	public Text(String fileAbsPath, String baseDir) {
         databasePath = fileAbsPath.substring(baseDir.length());
     }
 
