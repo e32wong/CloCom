@@ -9,28 +9,26 @@ import java.io.*;
 
 public class Text implements Serializable {
 
-	private String fileAbsPath;
     private String baseName;
     private String baseDir;
 
+    private String databasePath; // freecol/xx/xx/xx
+	
+	/* A collection of Methods */
+	ArrayList<Method> methodList = new ArrayList<Method>();
+	
     public static String getDBpath(String fileAbsPath) {
         String pathNoPrefix = FilenameUtils.getPath(fileAbsPath);
         String baseName = FilenameUtils.getBaseName(fileAbsPath);
         return "/" + pathNoPrefix + baseName + ".db";
-    }
+    } 
 
-    private String databasePath; // freecol/xx/xx/xx
-	
-	  /* A collection of Methods */
-	  ArrayList<Method> methodList = new ArrayList<Method>();
-	
-	  /* Constructor */
-	  public Text(String filePath, String baseDirIn) {
+	/* Constructor */
+	public Text(String fileAbsPath, String baseDirIn) {
         baseDir = baseDirIn;
-        fileAbsPath = filePath;
         baseName = FilenameUtils.getBaseName(fileAbsPath);
 
-        databasePath = filePath.substring(baseDir.length());
+        databasePath = fileAbsPath.substring(baseDir.length());
     }
 
     public Method getMethod(int i) {
@@ -58,38 +56,33 @@ public class Text implements Serializable {
         return totalNumStatements;
     }
 
-    private boolean hasDB() {
-        String baseName = FilenameUtils.getBaseName(fileAbsPath);
-
-        File f = new File(Text.getDBpath(fileAbsPath));
-        if (f.exists()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public ArrayList<String> tokenize(int minNumLines, boolean debug, ArrayList<String> fileProcessError) {
+    public ArrayList<String> tokenize(
+            int minNumLines, 
+            boolean debug, 
+            ArrayList<String> fileProcessError,
+            String basePath) {
         
-        Tokenizer token = Parser.parseAST2Tokens(fileAbsPath, minNumLines, debug);
+        String absolutePath = basePath + databasePath;
+
+        Tokenizer token = Parser.parseAST2Tokens(absolutePath, minNumLines, debug);
         if (token == null) {
             // error at parsing the token list, abort
-            fileProcessError.add(fileAbsPath);
+            fileProcessError.add(absolutePath);
             return fileProcessError;
         }
 
         ArrayList<Method> methodListAll = token.getTokenizedMethods();
         
-        CommentParser cParser = new CommentParser(fileAbsPath);
+        CommentParser cParser = new CommentParser(absolutePath);
 
         // check and see if there is a comment in each method
         for (Method thisMethod : methodListAll) {
             int startLine = thisMethod.getStart();
             int endLine = thisMethod.getEnd();
 
-            //System.out.println(startLine + " " + endLine + " " + fileAbsPath);
+            //System.out.println(startLine + " " + endLine + " " + absolutePath);
             
-            ArrayList<CommentMap> cMapList = cParser.parseComment(fileAbsPath, startLine, endLine, 1);
+            ArrayList<CommentMap> cMapList = cParser.parseComment(absolutePath, startLine, endLine, 1);
             if (cMapList.size() == 0) {
             } else {
                 methodList.add(thisMethod);

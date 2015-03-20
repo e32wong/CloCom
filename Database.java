@@ -208,7 +208,7 @@ public class Database {
 
             System.out.println("Trying to recover file: " + absPath);
             txt = new Text(absPath, dir_name);
-            txt.tokenize(minNumLines, debug, errorList);
+            txt.tokenize(minNumLines, debug, errorList, dir_name);
 
             // Serialize file and write to file
             try {
@@ -241,7 +241,7 @@ public class Database {
                 }
 
                 Text txt = new Text(absPath, dir_name);
-                errorList = txt.tokenize(minNumLines, debug, errorList);
+                errorList = txt.tokenize(minNumLines, debug, errorList, dir_name);
 
                 // Serialize file and write to file
                 FileOutputStream fout = new FileOutputStream(Text.getDBpath(absPath));
