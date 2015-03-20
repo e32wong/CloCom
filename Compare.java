@@ -29,7 +29,7 @@ public class Compare {
         project = projectList;
         databasePaths = db_PathList;
     }
-    public void detectClones_Within(Output outputObject, int mode, int gapSize) {
+    public void compareMeshed (Output outputObject, int mode, int gapSize) {
     
         result = outputObject;
 
@@ -47,7 +47,7 @@ public class Compare {
         }
         System.out.println("");
     }
-    public void detectClones_Between(Output outputObject, int mode, int gapSize) {
+    public void compareBetween (Output outputObject, int mode, int gapSize) {
 
         result = outputObject;
 

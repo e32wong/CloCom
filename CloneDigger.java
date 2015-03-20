@@ -127,7 +127,7 @@ public class CloneDigger {
                 // perform the comparison
                 Compare comp = new Compare(minNumLines, databaseDir);
                 comp.installTextFiles(databaseFileList);
-                comp.detectClones_Within(output, matchAlgorithm, gapSize);
+                comp.compareMeshed(output, matchAlgorithm, gapSize);
                 if (exportResults) {
                     output.saveResults(resultPath);
                 }
@@ -167,7 +167,7 @@ public class CloneDigger {
                 // perform the comparison
                 Compare comp = new Compare(minNumLines, databaseDir);
                 comp.installTextFiles(project_TextList, databaseFileList);
-                comp.detectClones_Between(output, matchAlgorithm, gapSize);
+                comp.compareBetween(output, matchAlgorithm, gapSize);
                 if (exportResults) {
                     output.saveResults(resultPath);
                 }
