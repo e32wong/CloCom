@@ -59,6 +59,7 @@ public class CloneDigger {
         int matchAlgorithm = config.matchAlgorithm;
         int matchMode = config.matchMode;
         int minNumLines = config.minNumLines;
+        int meshBlockSize = config.meshBlockSize;
         String databaseDir = config.database;
         String projectDir = config.project;
         boolean debug = config.debug;
@@ -128,7 +129,7 @@ public class CloneDigger {
                 // perform the comparison
                 Compare comp = new Compare(minNumLines, databaseDir);
                 comp.installTextFiles(databaseFileList);
-                comp.compareMeshed(output, matchAlgorithm, gapSize, 200);
+                comp.compareMeshed(output, matchAlgorithm, gapSize, meshBlockSize);
                 if (exportResults) {
                     output.saveResults(resultPath);
                 }

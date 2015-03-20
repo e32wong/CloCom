@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT configuration (numLines,database,project,algorithm,debug,removeEmpty,buildDatabase,gapSize)>
 
-<!ELEMENT matching (minNumLines,matchAlgorithm,matchMode,gapSize)>
+<!ELEMENT matching (minNumLines,matchAlgorithm,matchMode,gapSize,meshBlockSize)>
     <!ELEMENT minNumLines (#PCDATA)>
     <!ELEMENT matchAlgorithm (#PCDATA)>
     <!ELEMENT matchMode (#PCDATA)>
     <!ELEMENT gapSize (#PCDATA)>
+    <!ELEMENT meshBlockSize (#PCDATA)>
 
 <!ELEMENT projects (database,project,buildDatabase,buildTFIDF,loadTFIDF,loadDatabaseFilePaths)>
     <!ELEMENT database (#PCDATA)>

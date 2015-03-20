@@ -16,6 +16,7 @@ public class ConfigFile{
     public String project = null;
     public int matchAlgorithm = 0;
     public int matchMode = 0;
+    public int meshBlockSize = 0;
     public boolean debug = false;
     public boolean removeEmpty = false;
     public boolean buildDatabase = false;
@@ -143,6 +144,12 @@ public class ConfigFile{
             System.exit(0);
         }
         System.out.println("Match Mode: " + matchMode);
+
+        nl2 = firstNode.getElementsByTagName("meshBlockSize");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        meshBlockSize = Integer.parseInt(value);
+        System.out.println("Mesh matching block size: " + meshBlockSize);
 
         nl2 = firstNode.getElementsByTagName("gapSize");
         secondNode = (Element) nl2.item(0);

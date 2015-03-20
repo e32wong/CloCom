@@ -6,6 +6,7 @@
         <matchAlgorithm>1</matchAlgorithm>
         <matchMode>1</matchMode>
         <gapSize>2</gapSize>
+        <meshBlockSize>200</meshBlockSize>
     </matching>
     <projects>
         <project>/home/edmund/clocom/evaluate_projects/test/</project>

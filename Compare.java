@@ -83,7 +83,7 @@ public class Compare {
             for (int j = 0; j < thisBlock.size(); j++) {
                 Text text1 = thisBlock.get(j);
                 for (int k = nextMark; k < databasePaths.size(); k++) {
-                    Text text2 = Database.loadSingleFile(databasePaths.get(j), databaseDir, minNumLines, false);
+                    Text text2 = Database.loadSingleFile(databasePaths.get(k), databaseDir, minNumLines, false);
                     textCompare(text1, text2, mode, gapSize);
                 }
             }
