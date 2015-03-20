@@ -14,6 +14,10 @@ public class Text implements Serializable {
 	/* A collection of Methods */
 	ArrayList<Method> methodList = new ArrayList<Method>();
 	
+    public String toString() {
+        return "Path: " + databasePath;
+    }
+
     public static String getDBpath(String fileAbsPath) {
         String pathNoPrefix = FilenameUtils.getPath(fileAbsPath);
         String baseName = FilenameUtils.getBaseName(fileAbsPath);
