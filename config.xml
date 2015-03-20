@@ -6,11 +6,11 @@
         <matchAlgorithm>1</matchAlgorithm>
         <matchMode>1</matchMode>
         <gapSize>2</gapSize>
-        <meshBlockSize>350</meshBlockSize>
+        <meshBlockSize>10000</meshBlockSize>
     </matching>
     <projects>
         <project>/home/edmund/clocom/evaluate_projects/test/</project>
-        <database>/home/edmund/clocom/evaluate_projects/jajuk-src-1.10.6/</database>
+        <database>/home/edmund/clocom/evaluate_projects/test/</database>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <buildDatabase>true</buildDatabase>
         <buildTFIDF>false</buildTFIDF>

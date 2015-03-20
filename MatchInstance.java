@@ -58,7 +58,7 @@ public class MatchInstance implements Serializable {
 
     public boolean equals(Object obj) {
         MatchInstance matchInstance = (MatchInstance) obj;
-        if (matchInstance.fileName == fileName &&
+        if (matchInstance.fileName.equals(fileName) &&
                 matchInstance.startLine == startLine &&
                 matchInstance.endLine == endLine) {
             return true;

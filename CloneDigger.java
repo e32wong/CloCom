@@ -109,7 +109,7 @@ public class CloneDigger {
         // Start loading main content
         ArrayList<String> errorList = new ArrayList<String>();
 
-        Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod);
+        Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod, matchMode);
         if (matchMode == 1) {
             if (loadResults == false) {
                 // full mesh comparison

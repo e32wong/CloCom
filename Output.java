@@ -24,13 +24,16 @@ public class Output {
     int algorithmMode;
     boolean enableRepetitive;
     boolean enableOneMethod;
+    int matchMode;
 
     public Output (int alogrithm, 
             boolean enableRepetitiveIn, 
-            boolean enableOneMethodIn) {
+            boolean enableOneMethodIn,
+            int matchModeIn) {
         enableRepetitive = enableRepetitiveIn;
         enableOneMethod = enableOneMethodIn;
         algorithmMode = alogrithm;
+        matchMode = matchModeIn;
     }
 
     // file coverage, start-end line
@@ -71,37 +74,75 @@ public class Output {
         }
 
         boolean added = false;
-        for (MatchGroup matchGroup : matchGroupList) {
-            boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 0);
-            boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 1);
-            if (status1 == true && status2 == false) {
-                // add as a clone
-                matchGroup.addMatch(1, file2, lineStart2, lineEnd2, 
-                        statementRaw2, statementStart2, statementEnd2);
-                added = true;
-                break;
-            } else if (status1 == false && status2 == true) {
-                // add as a master
+        if (matchMode == 0) {
+            for (MatchGroup matchGroup : matchGroupList) {
+                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 0);
+                boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 1);
+                if (status1 == true && status2 == false) {
+                    // add as a clone
+                    matchGroup.addMatch(1, file2, lineStart2, lineEnd2, 
+                            statementRaw2, statementStart2, statementEnd2);
+                    added = true;
+                    break;
+                } else if (status1 == false && status2 == true) {
+                    // add as a master
+                    matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
+                            statementRaw1, statementStart1, statementEnd1);
+                    added = true;
+                    break;
+                } else if (status1 == true && status2 == true) {
+                    added = true;
+                    break;
+                }
+            }
+        
+            // status 1 and 2 are false
+            if (added == false) {
+                MatchGroup matchGroup = new MatchGroup(length);
+
                 matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
                         statementRaw1, statementStart1, statementEnd1);
-                added = true;
-                break;
-            } else if (status1 == true && status2 == true) {
-                added = true;
-                break;
+                matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
+                        statementRaw2, statementStart2, statementEnd2);
+
+                matchGroupList.add(matchGroup);
             }
-        }
-        
-        // status 1 and 2 are false
-        if (added == false) {
-            MatchGroup matchGroup = new MatchGroup(length);
+        } else {
+            // full mesh
+            for (MatchGroup matchGroup : matchGroupList) {
+                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 0);
+                boolean status2 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 1);
+                boolean status3 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 0);
+                boolean status4 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 1);
 
-            matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
-                    statementRaw1, statementStart1, statementEnd1);
-            matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
-                    statementRaw2, statementStart2, statementEnd2);
+                if (status1 == true || status2 == true || status3 == true || status4 == true) {
+                    if (status1 == false && status2 == false) {
+                        // add as a clone
+                        matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
+                                statementRaw2, statementStart2, statementEnd2);
+                        added = true; 
+                        break;
+                    } else {
+                        // add as a clone
+                        matchGroup.addMatch(1, file1, lineStart1, lineEnd1,
+                                statementRaw1, statementStart1, statementEnd1);
+                        added = true;
+                        break;
+                    }
+                }
+            }
 
-            matchGroupList.add(matchGroup);
+            // status 1, 2, 3 and 4 are false
+            if (added == false) {
+                MatchGroup matchGroup = new MatchGroup(length);
+            
+                matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
+                        statementRaw1, statementStart1, statementEnd1);
+                matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
+                        statementRaw2, statementStart2, statementEnd2);
+
+                matchGroupList.add(matchGroup);
+            }
         }
     }
     
