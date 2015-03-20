@@ -41,7 +41,7 @@ public class Tokenizer {
     public void methodStart(String name, int mStartLine) {
         if (currentMethodName == "") {
             currentMethodName = name;
-            currentMethodObj = new Method(name, mStartLine);
+            currentMethodObj = new Method(mStartLine);
             methodHasMethodInvocation = false;
 
             if (debugStatements == true) {

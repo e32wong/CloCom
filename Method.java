@@ -12,15 +12,11 @@ public class Method implements Serializable {
 
     // list of statements with its respective token values
     ArrayList<Statement> bodyStatements = new ArrayList<Statement>();
-    ArrayList<Statement> groupedStatements = new ArrayList<Statement>();
-
-    String methodName;
 
     int methodStartLine;
     int methodEndLine;
 
-    public Method(String m_name, int startLine) {
-    methodName = m_name;
+    public Method(int startLine) {
         methodStartLine = startLine;
     }
 
