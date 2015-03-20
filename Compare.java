@@ -29,12 +29,68 @@ public class Compare {
         project = projectList;
         databasePaths = db_PathList;
     }
-    public void compareMeshed (Output outputObject, int mode, int gapSize) {
+    public void compareMeshed (Output outputObject, int mode, int gapSize, int blockSize) {
     
         result = outputObject;
 
         System.out.println("\nComparing for " + databasePaths.size() + " files");
 
+        // perform comparison within the blocks
+        System.out.println("Processing within blocks");
+        for (int i = 0; i < databasePaths.size(); i = i + blockSize) {
+
+            int nextMark = i + blockSize;
+            if (nextMark > databasePaths.size()) {
+                nextMark = databasePaths.size();
+            }
+
+            System.out.println(nextMark);
+
+            // load up memory first
+            ArrayList<Text> thisBlock = new ArrayList<Text>();
+            for (int j = i; j < nextMark; j++) {
+                thisBlock.add(Database.loadSingleFile(databasePaths.get(j), databaseDir, minNumLines, false));
+            }
+
+            // perform local comparison
+            for (int j = 0; j < thisBlock.size() - 1; j++) {
+                Text text1 = thisBlock.get(j);
+                for (int k = j + 1; k < thisBlock.size(); k++) {
+                    Text text2 = thisBlock.get(k);
+                    textCompare(text1, text2, mode, gapSize);
+                }
+            }
+        }
+        
+        // perform comparison between the blocks
+        System.out.println("Processing between blocks");
+        for (int i = 0; i < databasePaths.size(); i = i + blockSize) {
+            int nextMark = i + blockSize;
+            if (nextMark > databasePaths.size()) {
+                // we are on the last block, terminate
+                break;
+            }
+
+            System.out.println(nextMark);
+
+            // load this block into memory
+            ArrayList<Text> thisBlock = new ArrayList<Text>();
+            for (int j = i; j < nextMark; j++) {
+                thisBlock.add(Database.loadSingleFile(databasePaths.get(j), databaseDir, minNumLines, false));
+            }
+
+            // between comparsion
+            for (int j = 0; j < thisBlock.size(); j++) {
+                Text text1 = thisBlock.get(j);
+                for (int k = nextMark; k < databasePaths.size(); k++) {
+                    Text text2 = Database.loadSingleFile(databasePaths.get(j), databaseDir, minNumLines, false);
+                    textCompare(text1, text2, mode, gapSize);
+                }
+            }
+
+        }
+
+        /*
         for (int i = 0; i < databasePaths.size(); i++) {
             System.out.print((i+1) + "\r");
             Text text1 = Database.loadSingleFile(databasePaths.get(i), databaseDir, minNumLines, false);
@@ -45,6 +101,7 @@ public class Compare {
                 textCompare(text1, text2, mode, gapSize);
             }
         }
+        */
         System.out.println("");
     }
     public void compareBetween (Output outputObject, int mode, int gapSize) {

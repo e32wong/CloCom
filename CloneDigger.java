@@ -115,6 +115,7 @@ public class CloneDigger {
                 System.out.println("Mode: full mesh");
                 ArrayList<Text> database_TextList = new ArrayList<Text>();
 
+                // build the database
                 if (buildDatabase) {
                     ArrayList<String> temp = Database.constructCache(minNumLines, debug, databaseFileList, databaseDir);
                     errorList.addAll(temp);
@@ -127,7 +128,7 @@ public class CloneDigger {
                 // perform the comparison
                 Compare comp = new Compare(minNumLines, databaseDir);
                 comp.installTextFiles(databaseFileList);
-                comp.compareMeshed(output, matchAlgorithm, gapSize);
+                comp.compareMeshed(output, matchAlgorithm, gapSize, 200);
                 if (exportResults) {
                     output.saveResults(resultPath);
                 }
