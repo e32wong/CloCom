@@ -133,9 +133,6 @@ public class Database {
             ois = new ObjectInputStream(fin);
             Text txt = (Text) ois.readObject();
 
-            // load path dependent info
-            txt.setDependentPath(databaseDir);
-
             return txt;
         } catch (Exception e) {
             System.out.println("Error while loading single file\n" + filePath + "\n" + e);
@@ -171,9 +168,6 @@ public class Database {
                 ois = new ObjectInputStream(fin);
                 Text txt = (Text) ois.readObject();
                 ois.close();
-
-                // add path dependent path 
-                txt.setDependentPath(dir_name);
 
                 textList.add(txt);
 
@@ -216,9 +210,6 @@ public class Database {
             txt = new Text(absPath, dir_name);
             txt.tokenize(minNumLines, debug, errorList);
 
-            // clear path dependent values before writing
-            txt.clearDependentPath();
-
             // Serialize file and write to file
             try {
                 FileOutputStream fout = new FileOutputStream(Text.getDBpath(absPath));
@@ -251,9 +242,6 @@ public class Database {
 
                 Text txt = new Text(absPath, dir_name);
                 errorList = txt.tokenize(minNumLines, debug, errorList);
-
-                // clear path dependent values before writing
-                txt.clearDependentPath();
 
                 // Serialize file and write to file
                 FileOutputStream fout = new FileOutputStream(Text.getDBpath(absPath));

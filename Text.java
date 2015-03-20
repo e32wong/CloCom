@@ -9,9 +9,17 @@ import java.io.*;
 
 public class Text implements Serializable {
 
-	  private String fileAbsPath;
+	private String fileAbsPath;
     private String baseName;
     private String baseDir;
+
+    public static String getDBpath(String fileAbsPath) {
+        String pathNoPrefix = FilenameUtils.getPath(fileAbsPath);
+        String baseName = FilenameUtils.getBaseName(fileAbsPath);
+        return "/" + pathNoPrefix + baseName + ".db";
+    }
+
+    private String databasePath; // freecol/xx/xx/xx
 	
 	  /* A collection of Methods */
 	  ArrayList<Method> methodList = new ArrayList<Method>();
@@ -21,30 +29,16 @@ public class Text implements Serializable {
         baseDir = baseDirIn;
         fileAbsPath = filePath;
         baseName = FilenameUtils.getBaseName(fileAbsPath);
-    }
 
-    public void clearDependentPath() {
-        fileAbsPath = fileAbsPath.substring(baseDir.length());
-        baseDir = "";
-    }
-
-    public void setDependentPath(String baseDirIn) {
-        baseDir = baseDirIn;
-        fileAbsPath = baseDir + fileAbsPath;
+        databasePath = filePath.substring(baseDir.length());
     }
 
     public Method getMethod(int i) {
         return methodList.get(i);
     }
 
-    public static String getDBpath(String fileAbsPath) {
-        String pathNoPrefix = FilenameUtils.getPath(fileAbsPath);
-        String baseName = FilenameUtils.getBaseName(fileAbsPath);
-        return "/" + pathNoPrefix + baseName + ".db";
-    }
-
-    public String getAbsPath() {
-        return fileAbsPath;
+    public String getDatabasePath() {
+        return databasePath;
     }
 
     public int getNumMethods() {
