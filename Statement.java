@@ -22,6 +22,10 @@ public class Statement implements Serializable {
         hashNumber = value;
     }
 
+    public HashSet<String> getNameList() {
+        return nameList;
+    }
+
     public void insertNameList (HashSet<String> nameList_in) {
         nameList = nameList_in;
     }

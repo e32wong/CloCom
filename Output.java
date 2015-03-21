@@ -170,6 +170,13 @@ public class Output {
         }
     }
 
+    public void processOutputTerms (FrequencyMap fMap) {
+        for (MatchGroup thisMatchGroup : matchGroupList) {
+            thisMatchGroup.dumpTerms(fMap);
+        }
+    }
+
+
     public void printResults(boolean removeEmpty, 
             int similarityRange, 
             boolean enableSimilarity,

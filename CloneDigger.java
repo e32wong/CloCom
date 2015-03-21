@@ -118,7 +118,8 @@ public class CloneDigger {
 
                 // build the database
                 if (buildDatabase) {
-                    ArrayList<String> temp = Database.constructCache(minNumLines, debug, databaseFileList, databaseDir);
+                    ArrayList<String> temp = Database.constructCache(
+                            minNumLines, debug, databaseFileList, databaseDir);
                     errorList.addAll(temp);
                 }
 
@@ -139,6 +140,12 @@ public class CloneDigger {
                 }
             }
             output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
+
+            // Frequency Map of all terms
+            FrequencyMap fMap = new FrequencyMap();
+            output.processOutputTerms(fMap);
+            fMap.exportTable("table.txt");
+
         } else {
             if (loadResults == false) {
                 // between comparison

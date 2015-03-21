@@ -27,6 +27,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.HashSet;
 
 public class MatchGroup implements Serializable {
 
@@ -36,6 +37,18 @@ public class MatchGroup implements Serializable {
 
     public MatchGroup (int length) {
         matchLength = length;
+    }
+
+    public void dumpTerms (FrequencyMap fMap) {
+        // obtain a list of strings       
+        for (MatchInstance thisMatch : masterList) {
+            ArrayList<Statement> listStatements = thisMatch.getStatements();
+            for (int i = thisMatch.startIndex; i <= thisMatch.endIndex; i++) {
+                Statement s = listStatements.get(i);
+                HashSet<String> setString = s.getNameList();
+                fMap.addInstance(setString);
+            }
+        }
     }
 
     public int getMatchLength() {

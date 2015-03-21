@@ -32,6 +32,10 @@ public class MatchInstance implements Serializable {
         endIndex = endIndex_in;
     }
 
+    public ArrayList<Statement> getStatements() {
+        return statements;
+    }
+
     public void setComments (ArrayList<CommentMap> comments) {
         commentList = comments;
     }
