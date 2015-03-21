@@ -30,6 +30,7 @@ public class ConfigFile{
     public boolean enableOneMethod = false;
     public boolean buildTFIDF = false;
     public boolean loadDatabaseFilePaths = false;
+    public int aprioriMinSupport = 0;
 
     private String getTextValue(Element doc, String tag) {
         String value = null;
@@ -162,6 +163,26 @@ public class ConfigFile{
         }
         System.out.println("Gap size: " + gapSize);
 
+    }
+
+    private void loadFrequencySet(Element doc) {
+
+        NodeList nl1 = doc.getElementsByTagName("frequencySet");
+        Element firstNode = (Element) nl1.item(0);
+
+        NodeList nl2;
+        Element secondNode;
+        String value;
+
+        nl2 = firstNode.getElementsByTagName("aprioriMinSupport");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        aprioriMinSupport = Integer.parseInt(value);
+        if (aprioriMinSupport < 0) {
+            System.out.println("Invalid minimum apriori support, must be larger than 0");
+            System.exit(0);
+        }
+        System.out.println("Apriori Minimum Support: " + aprioriMinSupport);
     }
 
     private void loadProjects(Element doc) {
@@ -304,6 +325,7 @@ public class ConfigFile{
             }
             System.out.println("Load results: " + loadResults);
 
+            loadFrequencySet(doc);
             loadMatching(doc);
             loadHeuristic(doc);
             loadProjects(doc);

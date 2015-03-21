@@ -74,6 +74,7 @@ public class CloneDigger {
         boolean enableOneMethod = config.enableOneMethod;
         boolean buildTFIDF = config.buildTFIDF;
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
+        int aprioriMinSupport = config.aprioriMinSupport;
 
         // done parsing
         System.out.println("Finished parsing XML parameters");
@@ -142,7 +143,7 @@ public class CloneDigger {
             output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
 
             // Frequency Map of all terms
-            FrequencyMap fMap = new FrequencyMap();
+            FrequencyMap fMap = new FrequencyMap(aprioriMinSupport);
             output.processOutputTerms(fMap);
             fMap.exportTable("table.txt");
 

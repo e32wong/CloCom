@@ -9,10 +9,14 @@ import java.io.FileNotFoundException;
 
 class FrequencyMap {
 
+    int aprioriMinSupport = 0;
+
     HashSet<String> masterNameSet = new HashSet<String>();
     ArrayList<HashSet<String>> table = new ArrayList<HashSet<String>>();
 
-    public FrequencyMap () {
+    public FrequencyMap (int aprioriMinSupportIn) {
+
+        aprioriMinSupport = aprioriMinSupportIn;
 
     }
 

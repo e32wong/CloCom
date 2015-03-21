@@ -45,8 +45,16 @@ public class MatchGroup implements Serializable {
             ArrayList<Statement> listStatements = thisMatch.getStatements();
             for (int i = thisMatch.startIndex; i <= thisMatch.endIndex; i++) {
                 Statement s = listStatements.get(i);
-                HashSet<String> setString = s.getNameList();
-                fMap.addInstance(setString);
+                HashSet<String> setWholeString = s.getNameList();
+
+                // break down the strings by camel case
+                HashSet<String> setSplittedString = new HashSet<String>();
+                for (String str : setWholeString) {
+                    Set<String> splitSet = Utilities.splitCamelCaseSet(str);
+                    setSplittedString.addAll(splitSet);
+                }
+                
+                fMap.addInstance(setSplittedString);
             }
         }
     }
