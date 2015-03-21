@@ -583,11 +583,16 @@ class AprioriProcess
             file_in = new FileInputStream(transafile);
             data_in = new BufferedReader(new InputStreamReader(file_in));
 
+            // read the configuration
+            String configNum = data_in.readLine();
+            String[] itemTransaction = configNum.split(",");
+            //N = Integer.parseInt(itemTransaction[0]);
+            //M = Integer.parseInt(itemTransaction[1]);
+            //minsup = Integer.parseInt(itemTransaction[2]);
 
             // read the item names
             String nameString = data_in.readLine();
             nameList = nameString.split(",");
-
 
             while ( true )
             {
@@ -736,7 +741,7 @@ class AprioriProcess
                 String[] items = listStr.split(" ");
                 for (String item : items) {
                     int index = Integer.parseInt(item);
-                    System.out.print(nameList[index] + " ");
+                    System.out.print(nameList[index-1] + " ");
                 }
                 System.out.println("");
             }
