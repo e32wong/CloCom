@@ -53,7 +53,7 @@ public class Query {
             // get its index
             int index = 0;
             for (String label : listLabels) {
-                if (label.equals(queryTerm) || queryTerm.contains(label)) {
+                if (label.equals(queryTerm)) {
                     listIndexes.add(index);
                     //System.out.println(index);
                 }
@@ -76,17 +76,24 @@ public class Query {
             line = br.readLine();
             while (line != null) {
                 String[] listValues = line.split(" ");
+
+                boolean allExist = true;
                 for (int index : listIndexes) {
-                    if (listValues[index].equals("1")) {
-                        writer.println(line);
-                        numInstances++;
+                    if (listValues[index].equals("0")) {
+                        allExist = false;
                         break;
                     } 
                 }
+
+                if (allExist) {
+                    writer.println(line);
+                    numInstances++;
+                }
+
                 line = br.readLine();
             }
 
-            String minSupportStr = "1";
+            String minSupportStr = "20";
             writer2.println(listLabels.length);
             writer2.println(numInstances);
             writer2.println(minSupportStr);
