@@ -47,9 +47,13 @@ public class Utilities {
 
         Set<String> camelTerms = new HashSet<String>();
 
+        Pattern p = Pattern.compile("[a-zA-Z]+");
         for (String w : term.split("(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])")) {
-            //System.out.println(w.toLowerCase());
-            camelTerms.add(w.toLowerCase());
+            w = w.toLowerCase();
+            Matcher m = p.matcher(w);
+            while (m.find()) {
+                camelTerms.add(m.group());
+            }
         }
 
         return camelTerms;
