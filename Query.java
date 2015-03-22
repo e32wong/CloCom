@@ -86,9 +86,13 @@ public class Query {
                 line = br.readLine();
             }
 
+            String minSupportStr = "1";
             writer2.println(listLabels.length);
             writer2.println(numInstances);
-            writer2.println("1");
+            writer2.println(minSupportStr);
+            System.out.println("Number of items: " + listLabels.length);
+            System.out.println("Number of instances: " + numInstances);
+            System.out.println("Minimum support: " + minSupportStr);
 
             if (br != null) {
                 br.close();
