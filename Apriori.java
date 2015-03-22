@@ -27,6 +27,7 @@ import java.util.*;
 //  Class Name : apriori
 //  Purpose    : main program class
 //-------------------------------------------------------------
+/*
 class Apriori
 {
     public static void main(String[] args) throws IOException
@@ -34,7 +35,7 @@ class Apriori
         AprioriProcess process1=new AprioriProcess();
         System.exit(0);
     }
-}
+}*/
 
 //-------------------------------------------------------------
 //  Class Name : aprioriProcess
@@ -50,8 +51,8 @@ class AprioriProcess
     Vector<candidateelement> candidate=new Vector<candidateelement>();
     int minsup; // minimum support to make frequent
     String fullitemset;
-    String configfile="config.txt"; // default configuration file
-    String transafile="table.txt"; // default transaction file
+    String configfile; // default configuration file
+    String transafile; // default transaction file
 
     String[] nameList;
 
@@ -681,8 +682,11 @@ class AprioriProcess
     //  Parameters :
     //  Return     :
     //-------------------------------------------------------------
-    public AprioriProcess()  throws IOException
+    public AprioriProcess(String configfileIn, String transafileIn)  throws IOException
     {
+        configfile = configfileIn;
+        transafile = transafileIn;
+
         candidateelement cande;
         int k=0;
         Vector large=new Vector();

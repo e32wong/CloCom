@@ -6,11 +6,14 @@
         <matchAlgorithm>1</matchAlgorithm>
         <matchMode>1</matchMode>
         <gapSize>2</gapSize>
-        <meshBlockSize>10000</meshBlockSize>
+        <meshBlockSize>100000</meshBlockSize>
     </matching>
+    <frequencySet>
+        <aprioriMinSupport>5</aprioriMinSupport>
+    </frequencySet>
     <projects>
         <project>/home/edmund/clocom/evaluate_projects/test/</project>
-        <database>/home/edmund/clocom/evaluate_projects/test/</database>
+        <database>/home/edmund/clocom/evaluate_projects/</database>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <buildDatabase>true</buildDatabase>
         <buildTFIDF>false</buildTFIDF>

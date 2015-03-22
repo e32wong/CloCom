@@ -44,8 +44,6 @@ public class Compare {
                 nextMark = databasePaths.size();
             }
 
-            System.out.println(nextMark);
-
             // load up memory first
             ArrayList<Text> thisBlock = new ArrayList<Text>();
             for (int j = i; j < nextMark; j++) {
@@ -54,6 +52,7 @@ public class Compare {
 
             // perform local comparison
             for (int j = 0; j < thisBlock.size() - 1; j++) {
+                System.out.print(j + "\r");
                 Text text1 = thisBlock.get(j);
                 for (int k = j + 1; k < thisBlock.size(); k++) {
                     Text text2 = thisBlock.get(k);
