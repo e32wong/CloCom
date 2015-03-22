@@ -732,7 +732,7 @@ class AprioriProcess
 
             createlargeitemset(k);
             System.out.println("Frequent "+k+"-itemsets:");
-            System.out.println((Vector)(largeitemset.elementAt(k-1)));
+            //System.out.println((Vector)(largeitemset.elementAt(k-1)));
             for (Object obj : largeitemset.elementAt(k-1)) {
                 String listStr = (String)obj;
                 String[] items = listStr.split(" ");

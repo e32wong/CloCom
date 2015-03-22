@@ -55,7 +55,7 @@ public class Query {
             for (String label : listLabels) {
                 if (label.equals(queryTerm) || queryTerm.contains(label)) {
                     listIndexes.add(index);
-                    System.out.println(index);
+                    //System.out.println(index);
                 }
                 index++;
             }
