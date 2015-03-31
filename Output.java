@@ -42,7 +42,8 @@ public class Output {
     public void addClone(String file1, int lineStart1, int lineEnd1, 
             String file2, int lineStart2, int lineEnd2, int length,
             ArrayList<Statement> statementRaw1, int statementStart1, int statementEnd1,
-            ArrayList<Statement> statementRaw2, int statementStart2, int statementEnd2) {
+            ArrayList<Statement> statementRaw2, int statementStart2, int statementEnd2,
+            int totalHashValue) {
         if (algorithmMode == 0) {
             // check for hashing error during the group hash process
             boolean status = Analyze.hasHashError(
@@ -75,18 +76,18 @@ public class Output {
         boolean added = false;
         if (matchMode == 0) {
             for (MatchGroup matchGroup : matchGroupList) {
-                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 0);
-                boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 1);
+                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 0, totalHashValue);
+                boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 1, totalHashValue);
                 if (status1 == true && status2 == false) {
                     // add as a clone
                     matchGroup.addMatch(1, file2, lineStart2, lineEnd2, 
-                            statementRaw2, statementStart2, statementEnd2);
+                            statementRaw2, statementStart2, statementEnd2, totalHashValue);
                     added = true;
                     break;
                 } else if (status1 == false && status2 == true) {
                     // add as a master
                     matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
-                            statementRaw1, statementStart1, statementEnd1);
+                            statementRaw1, statementStart1, statementEnd1, totalHashValue);
                     added = true;
                     break;
                 } else if (status1 == true && status2 == true) {
@@ -100,28 +101,28 @@ public class Output {
                 MatchGroup matchGroup = new MatchGroup(length);
 
                 matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
-                        statementRaw1, statementStart1, statementEnd1);
+                        statementRaw1, statementStart1, statementEnd1, totalHashValue);
                 matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
-                        statementRaw2, statementStart2, statementEnd2);
+                        statementRaw2, statementStart2, statementEnd2, totalHashValue);
 
                 matchGroupList.add(matchGroup);
             }
         } else {
             // full mesh
             for (MatchGroup matchGroup : matchGroupList) {
-                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 2);
-                boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 2);
+                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 2, totalHashValue);
+                boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 2, totalHashValue);
 
                 if (status1 == true && status2 == false) {
                     // add as a clone
                     matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
-                            statementRaw2, statementStart2, statementEnd2);
+                            statementRaw2, statementStart2, statementEnd2, totalHashValue);
                     added = true; 
                     break;
                 } else if (status1 == false && status2 == true) {
                     // add as a clone
                     matchGroup.addMatch(1, file1, lineStart1, lineEnd1,
-                            statementRaw1, statementStart1, statementEnd1);
+                            statementRaw1, statementStart1, statementEnd1, totalHashValue);
                     added = true;
                     break;
                 } else if (status1 == true && status2 == true) {
@@ -135,9 +136,9 @@ public class Output {
                 MatchGroup matchGroup = new MatchGroup(length);
             
                 matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
-                        statementRaw1, statementStart1, statementEnd1);
+                        statementRaw1, statementStart1, statementEnd1, totalHashValue);
                 matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
-                        statementRaw2, statementStart2, statementEnd2);
+                        statementRaw2, statementStart2, statementEnd2, totalHashValue);
 
                 matchGroupList.add(matchGroup);
             }

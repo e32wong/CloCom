@@ -34,6 +34,7 @@ public class MatchGroup implements Serializable {
     HashSet<MatchInstance> masterList = new HashSet<MatchInstance>();
     HashSet<MatchInstance> cloneList = new HashSet<MatchInstance>();
     int matchLength;
+    int totalHashValue;
 
     public MatchGroup (int length) {
         matchLength = length;
@@ -103,15 +104,17 @@ public class MatchGroup implements Serializable {
 
     // adds a match into the matchgroup
     public void addMatch(int mode, String fileName, int startLine, int endLine, 
-            ArrayList<Statement> statements, int startIndex, int endIndex) {
+            ArrayList<Statement> statements, int startIndex, int endIndex, int totalHash) {
 
         HashSet<MatchInstance> list;
 
+        totalHashValue = totalHash;
+
         if (mode == 0) {
-            // check the master
+            // add to master
             list = masterList;
         } else {
-            // check the clone
+            // add to clone
             list = cloneList;
         }
 
@@ -123,9 +126,13 @@ public class MatchGroup implements Serializable {
     }
 
     // mode 0 - master, 1 - clone, 2 - both
-    public boolean checkMatchExist(String filePath, int lineStart, int lineEnd, int mode) {
+    public boolean checkMatchExist(String filePath, int lineStart, int lineEnd, int mode, int value) {
 
         HashSet<MatchInstance> list;
+
+        if (value != totalHashValue) {
+            return false;
+        }
 
         if (mode == 2) {
             boolean existMaster = false;
@@ -148,11 +155,11 @@ public class MatchGroup implements Serializable {
             return false;
 
         } else {
-
+            list = masterList;
             if (mode == 0) {
                 // check the master
                 list = masterList;
-            } else {
+            } else if (mode == 1) {
                 // check the clone
                 list = cloneList;
             }

@@ -231,7 +231,8 @@ public class Compare {
                                     statementRaw2.get(thisCoor.y + longestLength - 1).endLine,
                                     longestLength,
                                     statementRaw1, thisCoor.x, thisCoor.x + longestLength - 1,
-                                    statementRaw2, thisCoor.y, thisCoor.y + longestLength - 1);
+                                    statementRaw2, thisCoor.y, thisCoor.y + longestLength - 1,
+                                    0);
                         }
                     } 
                 } else {
@@ -341,6 +342,7 @@ public class Compare {
                         // calculate the total length of the match excluding the gaps
                         // and prune out repetitive matches
                         int totalLength = 0;
+                        int totalHashValue = 0;
                         boolean isRepetitive = true;
                         // assume there is at least one line and one chain
                         int baseline = statementRaw1.get(list.get(0).x1).hashNumber;
@@ -348,12 +350,17 @@ public class Compare {
                             // sum up the length
                             totalLength = totalLength + c.size;
 
-                            // repeitive check on the master side
+                            // check on the master side
                             for (int i = c.x1; i < c.x2; i++) {
-                                if (statementRaw1.get(i).hashNumber != baseline) {
-                                    isRepetitive = false;
-                                    break;
+                                // check repetitiveness
+                                if (isRepetitive == true) {
+                                    if (statementRaw1.get(i).hashNumber != baseline) {
+                                        isRepetitive = false;
+                                    }
                                 }
+
+                                // sum up the value
+                                totalHashValue = totalHashValue + statementRaw1.get(i).hashNumber;
                             }
                         }
 
@@ -375,7 +382,8 @@ public class Compare {
                                     statementRaw2.get(file2End).startLine,
                                     totalLength,
                                     statementRaw1, file1Start, file1End,
-                                    statementRaw2, file2Start, file2End);
+                                    statementRaw2, file2Start, file2End,
+                                    totalHashValue);
                         }
                     }
                 }
