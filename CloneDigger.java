@@ -100,12 +100,13 @@ public class CloneDigger {
         }
 
         // td-idf
+        /*
         TermFrequency termFreq = new TermFrequency();
         if (buildTFIDF == true) {
             termFreq.buildFrequencyMap(databaseDir);
         } else {
             //termFreq.loadFrequencyMap();
-        }
+        }*/
 
         // Start loading main content
         ArrayList<String> errorList = new ArrayList<String>();

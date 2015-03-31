@@ -566,8 +566,8 @@ class AprioriProcess
     //-------------------------------------------------------------
     public void transatraverse(int n)
     {
-        FileInputStream file_in;
-        BufferedReader data_in;
+        FileInputStream file_in = null;
+        BufferedReader data_in = null;
         String oneline=new String();
         int i=0,j=0;
         String transa;
@@ -621,6 +621,17 @@ class AprioriProcess
         catch (IOException e)
         {
             System.out.println(e);
+        } finally {
+            try {
+                if (file_in != null) {
+                    file_in.close();
+                }
+                if (data_in != null) {
+                    data_in.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error at closing file: " + e);
+            }
         }
     }
 

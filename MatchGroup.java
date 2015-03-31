@@ -216,9 +216,10 @@ public class MatchGroup implements Serializable {
             int endLine = cMap.endLine;
 
             if (startLine == endLine && cMap.commentType == 1) {
+                BufferedReader reader = null;
                 try {
                     File file = new File(filePath);
-                    BufferedReader reader = new BufferedReader(new FileReader(file));
+                    reader = new BufferedReader(new FileReader(file));
                     int currentLine = 1;
                     String line = reader.readLine();
                     while (line != null) {
@@ -234,6 +235,14 @@ public class MatchGroup implements Serializable {
                 } catch (Exception e) {
                     System.out.println("Error inside remove inline\n" + e);
                     System.exit(0);
+                } finally {
+                    try {
+                        if (reader != null) {
+                            reader.close();
+                        }
+                    } catch (IOException e) {
+                        System.out.println("Error in removeInline()");
+                    }
                 }
             } else {
                 newList.add(cMap);

@@ -30,7 +30,7 @@ class FrequencyMap {
         List<String> orderedList = new ArrayList<String>();
         orderedList.addAll(masterNameSet);
 
-        PrintWriter writer;
+        PrintWriter writer = null;
         try {
             writer = new PrintWriter("config.txt", "UTF-8");
 
@@ -57,9 +57,12 @@ class FrequencyMap {
                 writer.println("");
             }
 
-            writer.close();
         } catch (Exception e) {
             System.out.println("Error while exporting: " + e);
+        } finally {
+            if (writer != null) {
+                writer.close();
+            }
         }
 
         System.out.println("Config:");
