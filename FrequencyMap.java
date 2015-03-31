@@ -69,11 +69,12 @@ class FrequencyMap {
         System.out.println("number of items - " + orderedList.size());
         System.out.println("number of transactions - " + table.size());
 
+        /*
         try {
             AprioriProcess process = new AprioriProcess("config.txt", "table.txt");
         } catch (Exception e) {
             System.out.println("Exception in Apriori: " + e);
-        }
+        }*/
 
     }
 
