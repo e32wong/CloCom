@@ -133,13 +133,15 @@ public class CloneDigger {
                 Compare comp = new Compare(minNumLines, databaseDir);
                 comp.installTextFiles(databaseFileList);
                 comp.compareMeshed(output, matchAlgorithm, gapSize, meshBlockSize);
+                /*
                 if (exportResults) {
                     output.saveResults(resultPath);
-                }
+                }*/
             } else {
+                /*
                 if (exportResults) {
                     output.loadResults(resultPath);
-                }
+                }*/
             }
             output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
 
@@ -179,13 +181,15 @@ public class CloneDigger {
                 Compare comp = new Compare(minNumLines, databaseDir);
                 comp.installTextFiles(project_TextList, databaseFileList);
                 comp.compareBetween(output, matchAlgorithm, gapSize);
+                /*
                 if (exportResults) {
                     output.saveResults(resultPath);
-                }
+                }*/
             } else {
+                /*
                 if (exportResults) {
                     output.loadResults(resultPath);
-                }
+                }*/
             }
             output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
         }

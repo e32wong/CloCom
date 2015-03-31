@@ -13,6 +13,7 @@ import java.io.ObjectInputStream;
 import java.io.Serializable;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 import org.apache.commons.math3.stat.descriptive.rank.Median;
@@ -20,7 +21,7 @@ import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 public class Output {
 
-    ArrayList<MatchGroup> matchGroupList = new ArrayList<MatchGroup>();
+    //ArrayList<MatchGroup> matchGroupList = new ArrayList<MatchGroup>();
     int algorithmMode;
     boolean enableRepetitive;
     boolean enableOneMethod;
@@ -35,6 +36,8 @@ public class Output {
         algorithmMode = alogrithm;
         matchMode = matchModeIn;
     }
+
+    HashMap<Integer,MatchGroup> matchGroupList = new HashMap<Integer,MatchGroup>();
 
     // file coverage, start-end line
     // statement hash number, start-end
@@ -75,76 +78,72 @@ public class Output {
 
         boolean added = false;
         if (matchMode == 0) {
-            for (MatchGroup matchGroup : matchGroupList) {
-                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 0, totalHashValue);
-                boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 1, totalHashValue);
+            MatchGroup matchGroup = matchGroupList.get(totalHashValue);
+            if (matchGroup != null) {
+                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 0);
+                boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 1);
                 if (status1 == true && status2 == false) {
                     // add as a clone
                     matchGroup.addMatch(1, file2, lineStart2, lineEnd2, 
                             statementRaw2, statementStart2, statementEnd2, totalHashValue);
                     added = true;
-                    break;
                 } else if (status1 == false && status2 == true) {
                     // add as a master
                     matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
                             statementRaw1, statementStart1, statementEnd1, totalHashValue);
                     added = true;
-                    break;
                 } else if (status1 == true && status2 == true) {
                     added = true;
-                    break;
                 }
-            }
-        
-            // status 1 and 2 are false
-            if (added == false) {
-                MatchGroup matchGroup = new MatchGroup(length);
+            } else {
+                // status 1 and 2 are false
+                if (added == false) {
+                    MatchGroup newGroup = new MatchGroup(length);
 
-                matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
-                        statementRaw1, statementStart1, statementEnd1, totalHashValue);
-                matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
-                        statementRaw2, statementStart2, statementEnd2, totalHashValue);
+                    newGroup.addMatch(0, file1, lineStart1, lineEnd1,
+                            statementRaw1, statementStart1, statementEnd1, totalHashValue);
+                    newGroup.addMatch(1, file2, lineStart2, lineEnd2,
+                            statementRaw2, statementStart2, statementEnd2, totalHashValue);
 
-                matchGroupList.add(matchGroup);
+                    matchGroupList.put(totalHashValue, newGroup);
+                }
             }
         } else {
             // full mesh
-            for (MatchGroup matchGroup : matchGroupList) {
-                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 2, totalHashValue);
-                boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 2, totalHashValue);
+            MatchGroup matchGroup = matchGroupList.get(totalHashValue);
+            if (matchGroup != null) {
+                boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 2);
+                boolean status2 = matchGroup.checkMatchExist(file2, lineStart2, lineEnd2, 2);
 
                 if (status1 == true && status2 == false) {
                     // add as a clone
                     matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
                             statementRaw2, statementStart2, statementEnd2, totalHashValue);
                     added = true; 
-                    break;
                 } else if (status1 == false && status2 == true) {
                     // add as a clone
                     matchGroup.addMatch(1, file1, lineStart1, lineEnd1,
                             statementRaw1, statementStart1, statementEnd1, totalHashValue);
                     added = true;
-                    break;
                 } else if (status1 == true && status2 == true) {
                     added = true;
-                    break;
                 }
-            }
+            } else {
+                // status 1 and 2 are false
+                if (added == false) {
+                    MatchGroup newGroup = new MatchGroup(length);
+                
+                    newGroup.addMatch(0, file1, lineStart1, lineEnd1,
+                            statementRaw1, statementStart1, statementEnd1, totalHashValue);
+                    newGroup.addMatch(1, file2, lineStart2, lineEnd2,
+                            statementRaw2, statementStart2, statementEnd2, totalHashValue);
 
-            // status 1 and 2 are false
-            if (added == false) {
-                MatchGroup matchGroup = new MatchGroup(length);
-            
-                matchGroup.addMatch(0, file1, lineStart1, lineEnd1,
-                        statementRaw1, statementStart1, statementEnd1, totalHashValue);
-                matchGroup.addMatch(1, file2, lineStart2, lineEnd2,
-                        statementRaw2, statementStart2, statementEnd2, totalHashValue);
-
-                matchGroupList.add(matchGroup);
+                    matchGroupList.put(totalHashValue, newGroup);
+                }
             }
         }
     }
-    
+    /*
     public void saveResults(String path) {
         try {
             // Serialize file and write to file
@@ -169,12 +168,15 @@ public class Output {
             System.out.println("Error while loading results\n" + e);
             System.exit(0);
         }
-    }
+    }*/
 
     public void processOutputTerms (FrequencyMap fMap) {
-        for (MatchGroup thisMatchGroup : matchGroupList) {
+
+        for (Integer key : matchGroupList.keySet()) {
+            MatchGroup thisMatchGroup = matchGroupList.get(key);
             thisMatchGroup.dumpTerms(fMap);
         }
+
     }
 
 
@@ -192,7 +194,8 @@ public class Output {
 
         int numMatchesWithComment = 0;
         int matchIndex = 0;
-        for (MatchGroup thisMatchGroup : matchGroupList) {
+        for (Integer key : matchGroupList.keySet()) {
+            MatchGroup thisMatchGroup = matchGroupList.get(key);
             System.out.println("Match Group " + matchIndex + " of size " + 
                     thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
             

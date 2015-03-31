@@ -126,13 +126,9 @@ public class MatchGroup implements Serializable {
     }
 
     // mode 0 - master, 1 - clone, 2 - both
-    public boolean checkMatchExist(String filePath, int lineStart, int lineEnd, int mode, int value) {
+    public boolean checkMatchExist(String filePath, int lineStart, int lineEnd, int mode) {
 
         HashSet<MatchInstance> list;
-
-        if (value != totalHashValue) {
-            return false;
-        }
 
         if (mode == 2) {
             boolean existMaster = false;
@@ -606,4 +602,9 @@ public class MatchGroup implements Serializable {
         System.out.println("----");
         
     }
+
+    public int getHashValue() {
+        return totalHashValue;
+    }
+
 }
