@@ -53,18 +53,30 @@ public class Database {
         while ((line = br.readLine()) != null) {
             listNames.add(line);
         }
+        is.close();
         isr.close();
         br.close();
         System.out.println("Done obtaining list of files!");
 
         // Serialize file and write to file
-        FileOutputStream fout = new FileOutputStream(filePath);
-        ObjectOutputStream oos = new ObjectOutputStream(fout);
-        oos.writeObject(listNames);
-        fout.close();
-        oos.close();       
+        serializeToFile(filePath,listNames);
 
         return listNames;
+
+    }
+
+    private static void serializeToFile(String filePath, Object obj) {
+
+        try {
+            FileOutputStream fout = new FileOutputStream(filePath);
+            ObjectOutputStream oos = new ObjectOutputStream(fout);
+            oos.writeObject(obj);
+            fout.close();
+            oos.close();
+        } catch (Exception e) {
+            System.out.println("Error in serializeToFile");
+            System.exit(0);
+        }
 
     }
 
@@ -198,10 +210,12 @@ public class Database {
         ArrayList<String> errorList = new ArrayList<String>();
         int counter = 0;
         Text txt;
+        FileInputStream fin = null;
+        ObjectInputStream ois = null;
         try {
             // Load serialized file
-            FileInputStream fin = new FileInputStream(Text.getDBpath(absPath));
-            ObjectInputStream ois = new ObjectInputStream(fin);
+            fin = new FileInputStream(Text.getDBpath(absPath));
+            ois = new ObjectInputStream(fin);
             txt = (Text) ois.readObject();
             ois.close();
         } catch (Exception e) {
@@ -211,52 +225,47 @@ public class Database {
             txt.tokenize(minNumLines, debug, errorList, dir_name);
 
             // Serialize file and write to file
+            serializeToFile(Text.getDBpath(absPath), txt);
+            System.out.println("Recovery successful");
+        } finally {
             try {
-                FileOutputStream fout = new FileOutputStream(Text.getDBpath(absPath));
-                ObjectOutputStream oos = new ObjectOutputStream(fout);
-                oos.writeObject(txt);
-                oos.close();
-            } catch (Exception e2) {
-                System.out.println("Failed to recover database\n" + e2);
+                if (fin != null) {
+                    fin.close();
+                }
+                if (ois != null) {
+                    ois.close();
+                }
+            } catch (Exception e) {
+                System.out.println(e);
                 System.exit(0);
             }
-            System.out.println("Recovery successful");
         }
         return txt;
     }
 
     public static ArrayList<String> constructCache(int minNumLines,
             boolean debug, List<String> fileList, String dir_name) {
+
         ArrayList<String> errorList = new ArrayList<String>();
-        try {
-            System.out.println("\nTokenizing a total of " + fileList.size() + " files");
-            int counter = 1;
-            for (String absPath : fileList) {
-                // debug message
-                if (debug == true) {
-                    System.out.println("\n>> Tokenizing file #" + counter + "\n" + absPath);
-                    System.out.println();
-                } else {
-                    System.out.print(counter + "\r");
-                }
 
-                Text txt = new Text(absPath, dir_name);
-                errorList = txt.tokenize(minNumLines, debug, errorList, dir_name);
-
-                // Serialize file and write to file
-                FileOutputStream fout = new FileOutputStream(Text.getDBpath(absPath));
-                ObjectOutputStream oos = new ObjectOutputStream(fout);
-                oos.writeObject(txt);
-                oos.close();
-
-                counter++;
+        System.out.println("\nTokenizing a total of " + fileList.size() + " files");
+        int counter = 1;
+        for (String absPath : fileList) {
+            // debug message
+            if (debug == true) {
+                System.out.println("\n>> Tokenizing file #" + counter + "\n" + absPath);
+                System.out.println();
+            } else {
+                System.out.print(counter + "\r");
             }
 
-            return errorList;
+            Text txt = new Text(absPath, dir_name);
+            errorList = txt.tokenize(minNumLines, debug, errorList, dir_name);
 
-        } catch (IOException e) {
-            System.out.println(e);
-            System.exit(0);
+            // Serialize file and write to file
+            serializeToFile(Text.getDBpath(absPath), txt);
+
+            counter++;
         }
 
         return errorList;
