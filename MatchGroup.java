@@ -611,8 +611,7 @@ public class MatchGroup implements Serializable {
 
     public void findClones(HashSet<String> inputTerms) {
 
-        HashSet<String> matchGroupTerms = new HashSet<String>();
-
+        HashSet<String> matchGroupTerms = dumpTerms();
         boolean allExist = true;
         for (String term : inputTerms) {
             if (matchGroupTerms.contains(term) == false) {
@@ -622,6 +621,7 @@ public class MatchGroup implements Serializable {
         }
 
         if (allExist) {
+            mapCode2Comment();
             printAllMappings(true, 1);
         }
     }
