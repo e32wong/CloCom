@@ -137,12 +137,6 @@ public class CloneDigger {
                     output.saveResults(resultPath);
                 }
             } else {
-                if (exportResults) {
-                    output.loadResults(resultPath);
-                }
-            }
-
-            if (loadResults) {
                 output.loadResults(resultPath);
             }
 
@@ -191,9 +185,7 @@ public class CloneDigger {
                     output.saveResults(resultPath);
                 }
             } else {
-                if (exportResults) {
-                    output.loadResults(resultPath);
-                }
+                output.loadResults(resultPath);
             }
 
             output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);

@@ -249,6 +249,10 @@ public class Output {
                 setSplittedString.addAll(splitSet);
             }
 
+            for (String str : setSplittedString) {
+                System.out.println(str);
+            }
+
             // search for a clone that contains all the terms
             for (Integer key : matchGroupList.keySet()) {
                 MatchGroup thisMatchGroup = matchGroupList.get(key);
