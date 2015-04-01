@@ -503,7 +503,7 @@ public class MatchGroup implements Serializable {
         return false;
     }
 
-    public void printAllMappings(boolean removeEmpty, int matchMode) {
+    public void printAllMappings(boolean removeEmpty, int matchMode, int printMode) {
         boolean enableSimilarity = true;
 
         // first print the master list
@@ -536,61 +536,63 @@ public class MatchGroup implements Serializable {
             }           
         }
 
-        // then print the clone list
-        int i = 0;
-        HashSet<String> masterCommentList = new HashSet<String>();
-        for (MatchInstance thisMatch : cloneList) {
-            try {
+        if (printMode == 1) {
+            // then print the clone list
+            int i = 0;
+            HashSet<String> masterCommentList = new HashSet<String>();
+            for (MatchInstance thisMatch : cloneList) {
+                try {
 
-                String filePath = thisMatch.fileName;
-                int startLine = thisMatch.startLine;
-                int endLine = thisMatch.endLine;
+                    String filePath = thisMatch.fileName;
+                    int startLine = thisMatch.startLine;
+                    int endLine = thisMatch.endLine;
 
-                ArrayList<CommentMap> comments = thisMatch.getComments();
-                if (comments.size() > 0 || removeEmpty == false) {
+                    ArrayList<CommentMap> comments = thisMatch.getComments();
+                    if (comments.size() > 0 || removeEmpty == false) {
 
-                    // print header
-                    System.out.println(filePath + ": " + startLine + "-" + endLine);
-                    System.out.format("Length: %d \n", matchLength);
+                        // print header
+                        System.out.println(filePath + ": " + startLine + "-" + endLine);
+                        System.out.format("Length: %d \n", matchLength);
 
-                    // print text similarity terms
-                    if (enableSimilarity) {
-                        ArrayList<HashSet<String>> similarityTermsLocal = thisMatch.getSimilarityLocal();
-                        System.out.println("local sim: " + similarityTermsLocal);
+                        // print text similarity terms
+                        if (enableSimilarity) {
+                            ArrayList<HashSet<String>> similarityTermsLocal = thisMatch.getSimilarityLocal();
+                            System.out.println("local sim: " + similarityTermsLocal);
 
-                        ArrayList<HashSet<String>> similarityTermsGlobal = thisMatch.getSimilarityGlobal();
-                        System.out.println("global sim: " + similarityTermsGlobal);
-                    }
-
-                    // print the comment 
-                    for (CommentMap cMap : comments) {
-                        // print the artifacts
-                        if (cMap.artifactSet != null) {
-                            System.out.print(cMap.artifactSet + " ");
+                            ArrayList<HashSet<String>> similarityTermsGlobal = thisMatch.getSimilarityGlobal();
+                            System.out.println("global sim: " + similarityTermsGlobal);
                         }
-                        cMap.print();
-                        masterCommentList.add(cMap.comment);
-                    }
-                    
-                    // Print the code segment
-                    List<String> encoded = Files.readAllLines(Paths.get(filePath), Charset.defaultCharset());
-                    for (int lineNum = startLine - 1; lineNum < endLine; lineNum++) {
-                        String line = encoded.get(lineNum);
-                        if (matchMode == 0) {
-                            System.out.println("< " + line);
-                        } else {
-                            System.out.println("* " + line);
+
+                        // print the comment 
+                        for (CommentMap cMap : comments) {
+                            // print the artifacts
+                            if (cMap.artifactSet != null) {
+                                System.out.print(cMap.artifactSet + " ");
+                            }
+                            cMap.print();
+                            masterCommentList.add(cMap.comment);
                         }
+                        
+                        // Print the code segment
+                        List<String> encoded = Files.readAllLines(Paths.get(filePath), Charset.defaultCharset());
+                        for (int lineNum = startLine - 1; lineNum < endLine; lineNum++) {
+                            String line = encoded.get(lineNum);
+                            if (matchMode == 0) {
+                                System.out.println("< " + line);
+                            } else {
+                                System.out.println("* " + line);
+                            }
+                        }
+                        System.out.println("----");
                     }
-                    System.out.println("----");
+                } catch (IOException e) {
+                    System.out.println(e);
                 }
-            } catch (IOException e) {
-                System.out.println(e);
+                i++;
             }
-            i++;
+            
+            printAllComments(masterCommentList);
         }
-        
-        printAllComments(masterCommentList);
     }
 
     private void printAllComments(HashSet<String> masterCommentList) {
@@ -622,7 +624,7 @@ public class MatchGroup implements Serializable {
 
         if (allExist) {
             mapCode2Comment();
-            printAllMappings(true, 1);
+            printAllMappings(true, 1, 1);
         }
     }
 

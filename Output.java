@@ -220,7 +220,7 @@ public class Output {
                 if (enableSimilarity) {
                     thisMatchGroup.printRankedComments();
                 }
-                thisMatchGroup.printAllMappings(removeEmpty, matchMode);
+                thisMatchGroup.printAllMappings(removeEmpty, matchMode, 0);
 
                 numMatchesWithComment++;
             }
@@ -240,6 +240,10 @@ public class Output {
 
             Scanner in = new Scanner(System.in);
             userInput = in.nextLine();
+
+            if (userInput.equals("")) {
+                continue;
+            }
 
             // break down the terms by camel case
             String[] stringList = userInput.split("\\s");
