@@ -40,8 +40,9 @@ public class MatchGroup implements Serializable {
         matchLength = length;
     }
 
-    public void dumpTerms (FrequencyMap fMap) {
+    public HashSet<String> dumpTerms () {
         // obtain a list of strings       
+        HashSet<String> masterNameSet = new HashSet<String>();
         for (MatchInstance thisMatch : masterList) {
             ArrayList<Statement> listStatements = thisMatch.getStatements();
             for (int i = thisMatch.startIndex; i <= thisMatch.endIndex; i++) {
@@ -55,9 +56,10 @@ public class MatchGroup implements Serializable {
                     setSplittedString.addAll(splitSet);
                 }
                 
-                fMap.addInstance(setSplittedString);
+                masterNameSet.addAll(setSplittedString);
             }
         }
+        return masterNameSet;
     }
 
     public int getMatchLength() {
@@ -605,6 +607,23 @@ public class MatchGroup implements Serializable {
 
     public int getHashValue() {
         return totalHashValue;
+    }
+
+    public void findClones(HashSet<String> inputTerms) {
+
+        HashSet<String> matchGroupTerms = new HashSet<String>();
+
+        boolean allExist = true;
+        for (String term : inputTerms) {
+            if (matchGroupTerms.contains(term) == false) {
+                allExist = false;
+                break;
+            }
+        }
+
+        if (allExist) {
+            printAllMappings(true, 1);
+        }
     }
 
 }

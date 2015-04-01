@@ -12,12 +12,15 @@ import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
 
+import java.util.Set;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
 import org.apache.commons.math3.stat.descriptive.rank.Median;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
+
+import java.util.Scanner;
 
 public class Output {
 
@@ -143,16 +146,17 @@ public class Output {
             }
         }
     }
-    /*
+
     public void saveResults(String path) {
         try {
             // Serialize file and write to file
             FileOutputStream fout = new FileOutputStream(path);
             ObjectOutputStream oos = new ObjectOutputStream(fout);
             oos.writeObject(matchGroupList);
+            fout.close();
             oos.close();
         } catch (Exception e) {
-            System.out.println("Error while writing results\n" + e);
+            System.out.println("Error while writing results\n" + e.getStackTrace());
             System.exit(0);
         }
     }
@@ -162,19 +166,22 @@ public class Output {
             // Load serialized file
             FileInputStream fin = new FileInputStream(path);
             ObjectInputStream ois = new ObjectInputStream(fin);
-            matchGroupList = (ArrayList<MatchGroup>) ois.readObject();
+            matchGroupList = (HashMap<Integer,MatchGroup>) ois.readObject();
+            fin.close();
             ois.close();
         } catch (Exception e) {
-            System.out.println("Error while loading results\n" + e);
+            System.out.println("Error while loading results\n" + e.getStackTrace());
             System.exit(0);
         }
-    }*/
+    }
 
     public void processOutputTerms (FrequencyMap fMap) {
 
         for (Integer key : matchGroupList.keySet()) {
             MatchGroup thisMatchGroup = matchGroupList.get(key);
-            thisMatchGroup.dumpTerms(fMap);
+            HashSet<String> listTerms = thisMatchGroup.dumpTerms();
+
+            fMap.addInstance(listTerms);
         }
 
     }
@@ -224,6 +231,38 @@ public class Output {
 
         System.out.println(numMatchesWithComment + " comment groups has a comment");
     }
+
+    public void search () {
+
+        String userInput;
+        while (true) {
+            System.out.print("Enter a list of terms seperated by space: ");
+
+            Scanner in = new Scanner(System.in);
+            userInput = in.nextLine();
+
+            // break down the terms by camel case
+            String[] stringList = userInput.split("\\s");
+            HashSet<String> setSplittedString = new HashSet<String>();
+            for (String str : stringList) {
+                Set<String> splitSet = Utilities.splitCamelCaseSet(str);
+                setSplittedString.addAll(splitSet);
+            }
+
+            // search for a clone that contains all the terms
+            for (Integer key : matchGroupList.keySet()) {
+                MatchGroup thisMatchGroup = matchGroupList.get(key);
+
+                thisMatchGroup.findClones(setSplittedString);
+
+            }
+
+        }
+
+
+    }
+
+
 
 }
 
