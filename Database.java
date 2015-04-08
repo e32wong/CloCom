@@ -66,7 +66,6 @@ public class Database {
     }
 
     private static void serializeToFile(String filePath, Object obj) {
-
         try {
             FileOutputStream fout = new FileOutputStream(filePath);
             ObjectOutputStream oos = new ObjectOutputStream(fout);
@@ -74,7 +73,7 @@ public class Database {
             fout.close();
             oos.close();
         } catch (Exception e) {
-            System.out.println("Error in serializeToFile");
+            System.out.println("Error in serializeToFile for: " + filePath);
             System.exit(0);
         }
 
