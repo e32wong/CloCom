@@ -12,8 +12,8 @@
         <aprioriMinSupport>5</aprioriMinSupport>
     </frequencySet>
     <projects>
-        <project>/home/edmund/clocom/evaluate_projects/test/</project>
-        <database>/home/edmund/clocom/evaluate_projects/</database>
+        <project>/Users/edmund/Desktop/asdf/</project>
+        <database>/Users/edmund/Desktop/dddd/</database>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <buildDatabase>true</buildDatabase>
         <buildTFIDF>false</buildTFIDF>
@@ -21,7 +21,7 @@
     </projects>
     <outputSettings>
         <debug>false</debug>
-        <removeEmpty>false</removeEmpty>
+        <removeEmpty>true</removeEmpty>
         <exportResults>false</exportResults>
         <resultPath></resultPath>
     </outputSettings>

@@ -9,16 +9,19 @@ to describe the other similar code segments.
 HOW TO RUN:
 
 1.
-Configure "config.xml"'s <project> and <database> tag
+Configure "config.xml"'s <database> tag
 with the appropriate folder path.
 The folders should contain Java source code files.
-
-Code inside the <project> tag represents the target project.
-CloCom will generate code comments for the code inside this folder.
 
 Code inside the <database> tag represents the database.
 CloCom will extract code comments from this folder for
 the code inside the <project> folder.
+
+Leave the matchMode to 1 for fullmesh matching.
+
+2. 
+
+'make' to compile.
 
 2. 
 Run the shell script with the config file as the first input argument.

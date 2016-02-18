@@ -220,7 +220,7 @@ public class Output {
                 if (enableSimilarity) {
                     thisMatchGroup.printRankedComments();
                 }
-                thisMatchGroup.printAllMappings(removeEmpty, matchMode, 0);
+                thisMatchGroup.printAllMappings(removeEmpty, matchMode, 1);
 
                 numMatchesWithComment++;
             }
