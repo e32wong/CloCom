@@ -181,7 +181,7 @@ public class CloneDigger {
                 System.out.println("Start comparison @ " +  sdf.format(cal.getTime()) );
 
                 // perform the comparison
-                Compare comp = new Compare(minNumLines, databaseDir);
+                Compare comp = new Compare(minNumLines, databaseDir, projectDir);
                 comp.installTextFiles(project_TextList, databaseFileList);
                 comp.compareBetween(output, matchAlgorithm, gapSize);
                 if (exportResults) {

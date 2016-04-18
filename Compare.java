@@ -16,11 +16,18 @@ public class Compare {
     Output result;
 
     String databaseDir;
+    String projectDir;
 
     public Compare(int numLinesMatch, String databaseDirIn) {
         databaseDir = databaseDirIn;
         minNumLines = numLinesMatch;
     }
+
+    public Compare(int numLinesMatch, String databaseDirIn, String projectDirIn) {
+        databaseDir = databaseDirIn;
+        projectDir = projectDirIn;
+        minNumLines = numLinesMatch;
+    }   
 
     public void installTextFiles(List<String> db_PathList) {
         databasePaths = db_PathList;
@@ -222,7 +229,7 @@ public class Compare {
                         coorList.remove(thisCoor);
 
                         if (longestLength >= minNumLines) {
-                            result.addClone(databaseDir + text1.getDatabasePath(), 
+                            result.addClone(projectDir + text1.getDatabasePath(), 
                                     statementRaw1.get(thisCoor.x).startLine,
                                     statementRaw1.get(thisCoor.x + longestLength - 1).endLine,
                                     databaseDir + text2.getDatabasePath(), 

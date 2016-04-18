@@ -107,7 +107,6 @@ public class MatchGroup implements Serializable {
     // adds a match into the matchgroup
     public void addMatch(int mode, String fileName, int startLine, int endLine, 
             ArrayList<Statement> statements, int startIndex, int endIndex, int totalHash) {
-
         HashSet<MatchInstance> list;
 
         totalHashValue = totalHash;
@@ -119,7 +118,6 @@ public class MatchGroup implements Serializable {
             // add to clone
             list = cloneList;
         }
-
         MatchInstance matchInst = 
             new MatchInstance(fileName, startLine, endLine,
                     statements, startIndex, endIndex);

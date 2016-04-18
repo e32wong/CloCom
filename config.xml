@@ -3,7 +3,7 @@
 <configuration>
     <matching>
         <minNumLines>0</minNumLines>
-        <matchAlgorithm>1</matchAlgorithm>
+        <matchAlgorithm>0</matchAlgorithm>
         <matchMode>0</matchMode>
         <gapSize>2</gapSize>
         <meshBlockSize>100000</meshBlockSize>
@@ -13,7 +13,7 @@
     </frequencySet>
     <projects>
         <project>/Users/edmund/Desktop/submissions2/</project>
-        <database>/Users/edmund/Desktop/submissions2/</database>
+        <database>/Users/edmund/Downloads/sub3/sub/</database>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <buildDatabase>true</buildDatabase>
         <buildTFIDF>false</buildTFIDF>
@@ -21,7 +21,7 @@
     </projects>
     <outputSettings>
         <debug>false</debug>
-        <removeEmpty>true</removeEmpty>
+        <removeEmpty>false</removeEmpty>
         <exportResults>false</exportResults>
         <resultPath></resultPath>
         <enableQuery>false</enableQuery>

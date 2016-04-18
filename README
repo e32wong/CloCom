@@ -32,3 +32,10 @@ Run the shell script with the config file as the first input argument.
 
 The output is a list of clones from the database path and 
 the respective generated comment.
+
+NOTES.
+
+removeEmpty - remove clones that doesn't have a comment
+
+
+

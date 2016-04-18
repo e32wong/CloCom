@@ -20,7 +20,6 @@ public class CommentParser {
 
     /* Convert a file into a String */
     private static String fileToString(String path) throws IOException {
-
         byte[] encoded = Files.readAllBytes(Paths.get(path));
         return new String(encoded, StandardCharsets.UTF_8);
     }
@@ -30,6 +29,7 @@ public class CommentParser {
         try {
             source = fileToString(absPath);
         } catch (IOException e) {
+            System.out.println("Error at loading file for comment extraction");
             e.printStackTrace();
         }
 

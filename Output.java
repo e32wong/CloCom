@@ -81,6 +81,7 @@ public class Output {
 
         boolean added = false;
         if (matchMode == 0) {
+            // between comparison
             MatchGroup matchGroup = matchGroupList.get(totalHashValue);
             if (matchGroup != null) {
                 boolean status1 = matchGroup.checkMatchExist(file1, lineStart1, lineEnd1, 0);
@@ -205,10 +206,8 @@ public class Output {
             MatchGroup thisMatchGroup = matchGroupList.get(key);
             System.out.println("Match Group " + matchIndex + " of size " + 
                     thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
-            
             thisMatchGroup.mapCode2Comment();
             thisMatchGroup.pruneComments(similarityRange, enableSimilarity);
-
             thisMatchGroup.pruneDuplicateComments();
 
             boolean hasComment = thisMatchGroup.hasComment();
@@ -221,7 +220,6 @@ public class Output {
                     thisMatchGroup.printRankedComments();
                 }
                 thisMatchGroup.printAllMappings(removeEmpty, matchMode, 1);
-
                 numMatchesWithComment++;
             }
 

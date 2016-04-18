@@ -51,7 +51,6 @@ class Parser {
 
     /* Convert a file into a String */
     private static String fileToString(String path) throws IOException {
-               
         byte[] encoded = Files.readAllBytes(Paths.get(path));
         return new String(encoded, StandardCharsets.UTF_8);
     }
