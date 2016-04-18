@@ -31,6 +31,7 @@ public class ConfigFile{
     public boolean buildTFIDF = false;
     public boolean loadDatabaseFilePaths = false;
     public int aprioriMinSupport = 0;
+    public boolean enableQuery = false;
 
     private String getTextValue(Element doc, String tag) {
         String value = null;
@@ -299,6 +300,20 @@ public class ConfigFile{
             resultPath = secondNode.getFirstChild().getNodeValue();
             System.out.println("Result path: " + resultPath);
         }
+
+        nl2 = firstNode.getElementsByTagName("enableQuery");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        if (value.equals("true")) {
+            enableQuery = true;
+        } else if (value.equals("false")) {
+            enableQuery = false;
+        } else {
+            System.out.println("Invalid enableQuery option, must be true/false");
+            System.exit(0);
+        }
+        System.out.println("Query mode: " + enableQuery);
+
     }
 
     public void loadConfig(String filePath) {

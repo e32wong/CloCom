@@ -75,6 +75,7 @@ public class CloneDigger {
         boolean buildTFIDF = config.buildTFIDF;
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
         int aprioriMinSupport = config.aprioriMinSupport;
+        boolean enableQuery = config.enableQuery;
 
         // done parsing
         System.out.println("Finished parsing XML parameters");
@@ -141,7 +142,9 @@ public class CloneDigger {
             }
 
             // enable the query engine
-            output.search();
+            if (enableQuery) {
+                output.search();
+            }
 
             output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
 
