@@ -9,19 +9,26 @@ to describe the other similar code segments.
 HOW TO RUN:
 
 1.
-Configure "config.xml"'s <project> and <database> tag
+Configure "config.xml"'s <database> and <project> tag
 with the appropriate folder path.
 The folders should contain Java source code files.
 
 Code inside the <project> tag represents the target project.
-CloCom will generate code comments for the code inside this folder.
 
 Code inside the <database> tag represents the database.
 CloCom will extract code comments from this folder for
 the code inside the <project> folder.
 
 2. 
+
+'make' to compile.
+
+3. 
 Run the shell script with the config file as the first input argument.
 
 ./cloneDigger.sh config.xml
 
+4.
+
+The output is a list of clones from the database path and 
+the respective generated comment.

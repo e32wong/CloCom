@@ -38,7 +38,6 @@ public class Compare {
         // perform comparison within the blocks
         System.out.println("Processing within blocks");
         for (int i = 0; i < databasePaths.size(); i = i + blockSize) {
-
             int nextMark = i + blockSize;
             if (nextMark > databasePaths.size()) {
                 nextMark = databasePaths.size();

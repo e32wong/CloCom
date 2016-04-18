@@ -4,7 +4,7 @@
     <matching>
         <minNumLines>0</minNumLines>
         <matchAlgorithm>1</matchAlgorithm>
-        <matchMode>1</matchMode>
+        <matchMode>0</matchMode>
         <gapSize>2</gapSize>
         <meshBlockSize>100000</meshBlockSize>
     </matching>

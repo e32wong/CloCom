@@ -147,12 +147,12 @@ public class CloneDigger {
             }
 
             output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
-
+            /*
             // Frequency Map of all terms
             FrequencyMap fMap = new FrequencyMap(aprioriMinSupport);
             output.processOutputTerms(fMap);
             fMap.exportTable("table.txt");
-
+            */
         } else {
             if (loadResults == false) {
                 // between comparison
