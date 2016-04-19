@@ -114,8 +114,8 @@ public class CloneDigger {
 
         Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod, matchMode);
         if (matchMode == 1) {
+            // full mesh comparison
             if (loadResults == false) {
-                // full mesh comparison
                 System.out.println("Mode: full mesh");
                 ArrayList<Text> database_TextList = new ArrayList<Text>();
 
@@ -131,7 +131,8 @@ public class CloneDigger {
                 System.out.println("Start comparison @ " +  sdf.format(cal.getTime()) );
 
                 // perform the comparison
-                Compare comp = new Compare(minNumLines, databaseDir);
+                // full mesh requires both dir paths to be the same
+                Compare comp = new Compare(minNumLines, databaseDir, databaseDir);
                 comp.installTextFiles(databaseFileList);
                 comp.compareMeshed(output, matchAlgorithm, gapSize, meshBlockSize);
                 if (exportResults) {

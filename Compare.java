@@ -18,11 +18,6 @@ public class Compare {
     String databaseDir;
     String projectDir;
 
-    public Compare(int numLinesMatch, String databaseDirIn) {
-        databaseDir = databaseDirIn;
-        minNumLines = numLinesMatch;
-    }
-
     public Compare(int numLinesMatch, String databaseDirIn, String projectDirIn) {
         databaseDir = databaseDirIn;
         projectDir = projectDirIn;
