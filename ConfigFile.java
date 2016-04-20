@@ -136,7 +136,11 @@ public class ConfigFile{
             System.out.println("Invalid alogrithm choice, must be 1 or 0");
             System.exit(0);
         }
-        System.out.println("Algorithm: " + matchAlgorithm);
+        if (matchAlgorithm == 1) {
+            System.out.println("Algorithm: Gapped - " + matchAlgorithm);
+        } else {
+            System.out.println("Algorithm: Non-gapped - " + matchAlgorithm);
+        }
 
         nl2 = firstNode.getElementsByTagName("matchMode");
         secondNode = (Element) nl2.item(0);
@@ -146,7 +150,11 @@ public class ConfigFile{
             System.out.println("Invalid matching mode, must be 1 (mesh) or 0 (between)");
             System.exit(0);
         }
-        System.out.println("Match Mode: " + matchMode);
+        if (matchMode == 1) {
+            System.out.println("Match Mode: Between Comparison -" + matchMode);
+        } else {
+            System.out.println("Match Mode: Full Mesh Comparison -" + matchMode);
+        }
 
         nl2 = firstNode.getElementsByTagName("meshBlockSize");
         secondNode = (Element) nl2.item(0);

@@ -162,7 +162,7 @@ public class CloneDigger {
                 ArrayList<Text> db_TextList = new ArrayList<Text>();
                 ArrayList<Text> project_TextList = new ArrayList<Text>();
 
-                List<String> projectFilePaths = Database.getFileList(projectDir, enableMapExt);
+                List<String> projectFilePaths = Database.getFileList(projectDir, false);
 
                 ArrayList<String> temp;
                 temp = Database.constructCache(minNumLines, debug, projectFilePaths, projectDir);

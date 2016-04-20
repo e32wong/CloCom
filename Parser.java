@@ -1150,6 +1150,7 @@ class Parser {
 
         } catch (Exception e) {
             System.out.println("\nError while executing compilation unit : " + e.toString());
+            System.out.println(absPath);
             return null;
         }
     }

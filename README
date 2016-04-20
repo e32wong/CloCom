@@ -43,5 +43,6 @@ meshBlockSize - number of source code files to load into memory for full mesh
 
 debug - turn on debug statements
 removeEmpty - remove the display of clones that doesn't have a comment
+buildDatabase - choose if we want to retokenize the database directory
 
 

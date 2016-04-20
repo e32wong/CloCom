@@ -112,7 +112,6 @@ public class Database {
 
     public static List<String> getFileList(String dir_name, boolean wrapCode) throws IOException {
         List<String> fileList = new ArrayList<String>();
-
         Path dir = FileSystems.getDefault().getPath( dir_name );
         DirectoryStream<Path> stream = Files.newDirectoryStream( dir);
         for (Path path : stream) {
