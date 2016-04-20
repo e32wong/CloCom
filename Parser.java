@@ -106,7 +106,6 @@ class Parser {
         try {
             final CompilationUnit unit = (CompilationUnit) parser.createAST(null);
             final AST ast = unit.getAST();
-            System.out.println("asdf");
             Message[] listMessages = unit.getMessages();
             if (debug == true) {
                 for (Message msg : listMessages) {
