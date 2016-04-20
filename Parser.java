@@ -67,10 +67,15 @@ class Parser {
     }
 
 	/* Convert files that are in String format to AST */
-    public static Tokenizer parseAST2Tokens(String absPath, int minNumLines, boolean debug) {
+    public static Tokenizer parseAST2Tokens(String absPath, int minNumLines, boolean debug, boolean retry) {
         String source = "";
         try {
             source = fileToString(absPath);
+            if (retry == true) {
+                source = "public class A {public static void main(String[] args) {" + source + "}}";
+            } else {
+                source = fileToString(absPath);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -98,11 +103,20 @@ class Parser {
         parser.setStatementsRecovery(true);
 
         //System.out.println(absPath);
-
         try {
             final CompilationUnit unit = (CompilationUnit) parser.createAST(null);
             final AST ast = unit.getAST();
-
+            System.out.println("asdf");
+            Message[] listMessages = unit.getMessages();
+            if (debug == true) {
+                for (Message msg : listMessages) {
+                    System.out.println(msg.getMessage());
+                }
+            }
+            if (listMessages.length > 0 && retry != true) {
+                Tokenizer tk = parseAST2Tokens(absPath, minNumLines, debug, true);
+                return tk;
+            }
             // Process the main body
             final Tokenizer tk = new Tokenizer(minNumLines, debug);
             try {

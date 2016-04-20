@@ -29,6 +29,7 @@ public class ConfigFile{
     public boolean enableRepetitive = false;
     public boolean enableOneMethod = false;
     public boolean buildTFIDF = false;
+    public boolean enableMapExt = false;
     public boolean loadDatabaseFilePaths = false;
     public int aprioriMinSupport = 0;
     public boolean enableQuery = false;
@@ -230,6 +231,19 @@ public class ConfigFile{
             System.exit(0);
         }
         System.out.println("Build tf-idf: " + buildTFIDF);
+
+        nl2 = firstNode.getElementsByTagName("enableMapExt");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        if (value.equals("true")) {
+            enableMapExt = true;
+        } else if (value.equals("false")) {
+            enableMapExt = false;
+        } else {
+            System.out.println("Invalid enableMapExt option, must be true/false");
+            System.exit(0);
+        }
+        System.out.println("Search for files with map extension: " + enableMapExt);
 
         nl2 = firstNode.getElementsByTagName("loadDatabaseFilePaths");
         secondNode = (Element) nl2.item(0);

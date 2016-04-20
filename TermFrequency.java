@@ -31,14 +31,14 @@ class TermFrequency {
     HashMap<String, Integer> termMapList = new HashMap<String, Integer>();
     LinkedHashMap<String, Integer> linkedTermMap;
 
-    public void buildFrequencyMap(String path) {
+    public void buildFrequencyMap(String path, boolean wrapCode) {
 
         NLP nlp = new NLP();
 
         Set<String> nameSet = new HashSet<String>();
 
         try {
-            List<String> listFiles = Database.getFileList(path);
+            List<String> listFiles = Database.getFileList(path, wrapCode);
             System.out.println("Parsing " + listFiles.size() 
                     + " files in the DB for simple names, this is usually fast.");
 

@@ -2,9 +2,9 @@
 <!DOCTYPE configuration SYSTEM "config.dtd">
 <configuration>
     <matching>
-        <minNumLines>0</minNumLines>
-        <matchAlgorithm>0</matchAlgorithm>
-        <matchMode>0</matchMode>
+        <minNumLines>4</minNumLines>
+        <matchAlgorithm>1</matchAlgorithm>
+        <matchMode>1</matchMode>
         <gapSize>2</gapSize>
         <meshBlockSize>100000</meshBlockSize>
     </matching>
@@ -13,14 +13,14 @@
     </frequencySet>
     <projects>
         <project>/Users/edmund/Desktop/submissions2/</project>
-        <database>/Users/edmund/Downloads/sub3/sub/</database>
+        <database>/Users/edmund/Desktop/test1/</database>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <buildDatabase>true</buildDatabase>
         <buildTFIDF>false</buildTFIDF>
-        <loadTFIDF>false</loadTFIDF>
+        <enableMapExt>true</enableMapExt>
     </projects>
     <outputSettings>
-        <debug>false</debug>
+        <debug>true</debug>
         <removeEmpty>false</removeEmpty>
         <exportResults>false</exportResults>
         <resultPath></resultPath>

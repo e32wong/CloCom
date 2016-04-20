@@ -31,18 +31,22 @@ import java.io.InputStream;
 
 public class Database {
 
-    public static List<String> generateFileList(String dir_name, String filePath) throws IOException {
+    public static List<String> generateFileList(String dir_name, String filePath, boolean wrapCode) throws IOException {
         List<String> listNames = new ArrayList<String>();
-
-        String command = "find " + dir_name + " -name \"*.java\"";
 
         System.out.println("Obtaining a list of files");
 
         // find . -not -path "*/\.*" -type f -name "*.java"
+        String fileType;
+        if (wrapCode == true) {
+            fileType = "*.map";
+        } else {
+            fileType = "*.java";
+        }
         ProcessBuilder builder = new ProcessBuilder("find", 
                 dir_name.substring(0, dir_name.length()-1), 
                 "-not", "-path", "*/\\.*",
-                "-type", "f", "-name", "*.java");
+                "-type", "f", "-name", fileType);
         builder.redirectErrorStream(true);
         Process process = builder.start();
 
@@ -106,7 +110,7 @@ public class Database {
 
     }
 
-    public static List<String> getFileList(String dir_name) throws IOException {
+    public static List<String> getFileList(String dir_name, boolean wrapCode) throws IOException {
         List<String> fileList = new ArrayList<String>();
 
         Path dir = FileSystems.getDefault().getPath( dir_name );
@@ -116,15 +120,22 @@ public class Database {
             String absPath = path.toString();
             if (Files.isDirectory(path)) {
                 // directory
-                List<String> new_file_list = getFileList(absPath);
+                List<String> new_file_list = getFileList(absPath, wrapCode);
                 fileList.addAll(new_file_list);
             } else {
                 // file, check for the extension
-                String extension = FilenameUtils.getExtension(absPath);
-                String java_ext = "java";
-                if (extension.equals(java_ext)) {
-                    fileList.add(absPath);
-                    //System.out.println(absPath);
+                if (wrapCode == true) {
+                    String extension = FilenameUtils.getExtension(absPath);
+                    String java_ext = "map";
+                    if (extension.equals(java_ext)) {
+                        fileList.add(absPath);
+                    }
+                } else {
+                    String extension = FilenameUtils.getExtension(absPath);
+                    String java_ext = "java";
+                    if (extension.equals(java_ext)) {
+                        fileList.add(absPath);
+                    }
                 }
             }
         }

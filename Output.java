@@ -50,8 +50,10 @@ public class Output {
             ArrayList<Statement> statementRaw1, int statementStart1, int statementEnd1,
             ArrayList<Statement> statementRaw2, int statementStart2, int statementEnd2,
             int totalHashValue) {
+
         if (algorithmMode == 0) {
             // check for hashing error during the group hash process
+            // only for non-gapped clones
             boolean status = Analyze.hasHashError(
                     statementRaw1.subList(statementStart1, statementEnd1), 
                     statementRaw2.subList(statementStart2, statementEnd2));

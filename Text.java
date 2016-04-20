@@ -62,7 +62,7 @@ public class Text implements Serializable {
         
         String absolutePath = basePath + databasePath;
 
-        Tokenizer token = Parser.parseAST2Tokens(absolutePath, minNumLines, debug);
+        Tokenizer token = Parser.parseAST2Tokens(absolutePath, minNumLines, debug, false);
         if (token == null) {
             // error at parsing the token list, abort
             fileProcessError.add(absolutePath);
