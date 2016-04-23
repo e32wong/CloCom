@@ -2,6 +2,9 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.dom.*;
 import org.eclipse.jdt.core.dom.Statement;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
@@ -72,7 +75,28 @@ class Parser {
         try {
             source = fileToString(absPath);
             if (retry == true) {
-                source = "public class A {public static void main(String[] args) {" + source + "}}";
+                String identifier = "[a-zA-Z\\_\\$][a-zA-Z\\_\\$0-9]*";
+                String dotLine = identifier + "(\\." + identifier + ")*";
+                Pattern pattern1 = Pattern.compile("import\\s" + dotLine + ";");
+                Pattern pattern2 = Pattern.compile("package\\s" + dotLine + ";");
+                Pattern pattern3 = Pattern.compile("\\s*(public|private)\\s+(\\w+\\s)?class\\s+(\\w+)\\s+((extends\\s+\\w+)|(implements\\s+\\w+( ,\\w+)*))?\\s*\\{", Pattern.DOTALL); // class
+                Pattern pattern4 = Pattern.compile("(public|protected|private|static|\\s) +[\\w\\<\\>\\[\\]]+\\s+(\\w+) *\\([^\\)]*\\) *(\\{?|[^;])");
+                Matcher matcher1 = pattern1.matcher(source);
+                Matcher matcher2 = pattern2.matcher(source);
+                Matcher matcher3 = pattern3.matcher(source);
+                Matcher matcher4 = pattern4.matcher(source);
+                if (!matcher1.find() && !matcher2.find()) {
+                    if (!matcher4.find()) {
+                        System.out.println("cannot find method!");
+                        source = "public class A {public static void main(String[] args) {" + source + "}}";
+                        System.out.println(source);
+                    } else if (!matcher3.find()) {
+                        source = "public class A {"  + source + "}";
+                        System.out.println(source);
+                    }
+                }
+                if (matcher4.find()) {
+                }
             } else {
                 source = fileToString(absPath);
             }
@@ -113,6 +137,11 @@ class Parser {
                 }
             }
             if (listMessages.length > 0 && retry != true) {
+                // do not attempt repair on complete java files
+                if (absPath.contains(".java")) {
+                    final Tokenizer tk = new Tokenizer(minNumLines, debug);
+                    return tk;
+                }
                 Tokenizer tk = parseAST2Tokens(absPath, minNumLines, debug, true);
                 return tk;
             }
