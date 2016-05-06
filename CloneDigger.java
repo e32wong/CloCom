@@ -62,6 +62,7 @@ public class CloneDigger {
         int meshBlockSize = config.meshBlockSize;
         String databaseDir = config.database;
         String projectDir = config.project;
+        String outputDir = config.outputDir;
         boolean debug = config.debug;
         boolean removeEmpty = config.removeEmpty;
         boolean buildDatabase = config.buildDatabase;
@@ -113,7 +114,7 @@ public class CloneDigger {
         // Start loading main content
         ArrayList<String> errorList = new ArrayList<String>();
 
-        Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod, matchMode);
+        Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod, matchMode, outputDir);
         if (matchMode == 1) {
             // full mesh comparison
             if (loadResults == false) {
@@ -145,7 +146,7 @@ public class CloneDigger {
 
             // enable the query engine
             if (enableQuery) {
-                output.search();
+                output.search(outputDir);
             }
 
             output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);

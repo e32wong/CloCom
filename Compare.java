@@ -175,6 +175,7 @@ public class Compare {
     }
 
     public void textCompare(Text text1, Text text2, int mode, int gapSize) {
+
         for (int k = 0; k < text1.getNumMethods(); k++) {
             for (int l = 0; l < text2.getNumMethods(); l++) {
                 if (mode == 0) {

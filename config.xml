@@ -4,7 +4,7 @@
     <matching>
         <minNumLines>4</minNumLines>
         <matchAlgorithm>1</matchAlgorithm>
-        <matchMode>1</matchMode>
+        <matchMode>0</matchMode>
         <gapSize>2</gapSize>
         <meshBlockSize>100000</meshBlockSize>
     </matching>
@@ -12,8 +12,9 @@
         <aprioriMinSupport>5</aprioriMinSupport>
     </frequencySet>
     <projects>
-        <project>/Users/edmund/Desktop/submissions2/</project>
-        <database>/Users/edmund/Desktop/test1/</database>
+        <project>/home/edmund/research/autocomment/posts/stage4-nlpProcessed/test2/</project>
+        <database>/home/edmund/research/autocomment/posts/stage4-nlpProcessed/testDB/</database>
+        <outputDir>/home/edmund/research/autocomment/posts/stage4-nlpProcessed/testDB/output/</outputDir>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <buildDatabase>true</buildDatabase>
         <buildTFIDF>false</buildTFIDF>

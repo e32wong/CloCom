@@ -2,9 +2,11 @@ import java.util.Iterator;
 
 import java.io.Serializable;
 
+import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.PrintWriter;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -12,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.nio.file.Paths;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.charset.*;
 import java.io.IOException;
 
@@ -55,7 +58,7 @@ public class MatchGroup implements Serializable {
                     Set<String> splitSet = Utilities.splitCamelCaseSet(str);
                     setSplittedString.addAll(splitSet);
                 }
-                
+
                 masterNameSet.addAll(setSplittedString);
             }
         }
@@ -147,7 +150,7 @@ public class MatchGroup implements Serializable {
             if (list.contains(matchInstance)) {
                 return true;
             } 
-    
+
             return false;
 
         } else {
@@ -185,8 +188,8 @@ public class MatchGroup implements Serializable {
                     // by replacing the list with an empty one
                     commentMapList.remove(cMap);
                     /*ArrayList<CommentMap> emptyCommentList =
-                        new ArrayList<CommentMap>();
-                    thisMatch.setComments(emptyCommentList);*/
+                      new ArrayList<CommentMap>();
+                      thisMatch.setComments(emptyCommentList);*/
                     break;
                 }
             }
@@ -214,7 +217,7 @@ public class MatchGroup implements Serializable {
 
         for (int i = 0; i < commentList.size(); i++) {
             CommentMap cMap = commentList.get(i);
-            
+
             int startLine = cMap.startLine;
             int endLine = cMap.endLine;
 
@@ -262,17 +265,17 @@ public class MatchGroup implements Serializable {
 
         // Sorting the list based on values
         Collections.sort(list, new Comparator<Entry<String, Integer>>()
-        {
-            public int compare(Entry<String, Integer> o1,
-                    Entry<String, Integer> o2)
-            {
-                if (mode == 0){ 
-                    return o2.getValue().compareTo(o1.getValue());
-                } else {
-                    return o1.getValue().compareTo(o2.getValue());
-                }
-            }
-        });
+                {
+                    public int compare(Entry<String, Integer> o1,
+                        Entry<String, Integer> o2)
+                    {
+                        if (mode == 0){ 
+                            return o2.getValue().compareTo(o1.getValue());
+                        } else {
+                            return o1.getValue().compareTo(o2.getValue());
+                        }
+                    }
+                });
 
         // Maintaining insertion order with the help of LinkedList
         HashMap<String, Integer> sortedMap = new LinkedHashMap<String, Integer>();
@@ -292,9 +295,9 @@ public class MatchGroup implements Serializable {
         HashMap<String, Integer> listComments = new HashMap<String, Integer>();
 
         for (MatchInstance thisMatch : cloneList) {
-            
+
             ArrayList<CommentMap> commentList = thisMatch.getComments();
-            
+
             for (int index = 0; index < commentList.size(); index++) {
                 CommentMap cMap = commentList.get(index);
                 HashSet<String> termsLocal = thisMatch.getSimilarityLocal().get(index);
@@ -330,7 +333,7 @@ public class MatchGroup implements Serializable {
             }
 
             it.remove();
-         
+
             if (displayedNum == 3) {
                 break;
             }
@@ -345,7 +348,7 @@ public class MatchGroup implements Serializable {
 
             System.out.println(displayedNum + ". (size " + pairs.getValue() + ")");
             System.out.println(pairs.getKey());
-            
+
             it.remove();
             displayedNum++;
         }
@@ -366,7 +369,7 @@ public class MatchGroup implements Serializable {
 
                 // do not group line comments because it is used to break
                 // multiple sentences
-                
+
                 String comment = cMap1.comment.substring(2);
 
                 // try extend it
@@ -501,8 +504,15 @@ public class MatchGroup implements Serializable {
         return false;
     }
 
-    public void printAllMappings(boolean removeEmpty, int matchMode, int printMode) {
+    public void printAllMappings(boolean removeEmpty, int matchMode, int printMode,
+            String outputDir, PrintWriter writer) {
         boolean enableSimilarity = true;
+
+        File dir = new File(outputDir);
+        if (!dir.exists()) {
+            dir = new File(outputDir);
+            dir.mkdir();
+        }
 
         // first print the master list
         for (MatchInstance thisMatch : masterList) {
@@ -514,24 +524,24 @@ public class MatchGroup implements Serializable {
                 ArrayList<CommentMap> comments = thisMatch.getComments();
 
                 // print header
-                System.out.println(filePath + ": " + startLine + "-" + endLine);
-                System.out.format("Length: %d \n", matchLength);
+                writer.println(filePath + ": " + startLine + "-" + endLine);
+                writer.println("Length: " + matchLength + "\n");
 
                 // print the comment 
                 for (CommentMap cMap : comments) {
-                    cMap.print();
+                    cMap.print(writer);
                 }
-                
+
                 // Print the code segment
                 List<String> encoded = Files.readAllLines(Paths.get(filePath), Charset.defaultCharset());
                 for (int lineNum = startLine - 1; lineNum < endLine; lineNum++) {
                     String line = encoded.get(lineNum);
-                    System.out.println("* " + line);
+                    writer.println("* " + line);
                 }
-                System.out.println("----");
+                writer.println("----");
             } catch (IOException e) {
-                System.out.println(e);
-            }           
+                writer.println(e);
+            }
         }
 
         if (printMode == 1) {
@@ -549,67 +559,67 @@ public class MatchGroup implements Serializable {
                     if (comments.size() > 0 || removeEmpty == false) {
 
                         // print header
-                        System.out.println(filePath + ": " + startLine + "-" + endLine);
-                        System.out.format("Length: %d \n", matchLength);
+                        writer.println(filePath + ": " + startLine + "-" + endLine);
+                        writer.format("Length: %d \n", matchLength);
 
                         // print text similarity terms
                         if (enableSimilarity) {
                             ArrayList<HashSet<String>> similarityTermsLocal = thisMatch.getSimilarityLocal();
-                            System.out.println("local sim: " + similarityTermsLocal);
+                            writer.println("local sim: " + similarityTermsLocal);
 
                             ArrayList<HashSet<String>> similarityTermsGlobal = thisMatch.getSimilarityGlobal();
-                            System.out.println("global sim: " + similarityTermsGlobal);
+                            writer.println("global sim: " + similarityTermsGlobal);
                         }
 
                         // print the comment 
                         for (CommentMap cMap : comments) {
                             // print the artifacts
                             if (cMap.artifactSet != null) {
-                                System.out.print(cMap.artifactSet + " ");
+                                writer.print(cMap.artifactSet + " ");
                             }
-                            cMap.print();
+                            cMap.print(writer);
                             masterCommentList.add(cMap.comment);
                         }
-                        
+
                         // Print the code segment
                         List<String> encoded = Files.readAllLines(Paths.get(filePath), Charset.defaultCharset());
                         for (int lineNum = startLine - 1; lineNum < endLine; lineNum++) {
                             String line = encoded.get(lineNum);
                             if (matchMode == 0) {
-                                System.out.println("< " + line);
+                                writer.println("< " + line);
                             } else {
-                                System.out.println("* " + line);
+                                writer.println("* " + line);
                             }
                         }
-                        System.out.println("----");
+                        writer.println("----");
                     }
                 } catch (IOException e) {
-                    System.out.println(e);
+                    writer.println(e);
                 }
                 i++;
             }
-            
-            printAllComments(masterCommentList);
+
+            printAllComments(masterCommentList, writer);
         }
     }
 
-    private void printAllComments(HashSet<String> masterCommentList) {
-        System.out.println("Comments (size " +
+    private void printAllComments(HashSet<String> masterCommentList, PrintWriter writer) {
+        writer.println("Comments (size " +
                 masterCommentList.size() + "):");
         int index = 1;
         for (String thisComment : masterCommentList) {
-            System.out.println(index + ".\n" + thisComment);
+            writer.println(index + ".\n" + thisComment);
             index++;
         }
-        System.out.println("----");
-        
+        writer.println("----");
+
     }
 
     public int getHashValue() {
         return totalHashValue;
     }
 
-    public void findClones(HashSet<String> inputTerms) {
+    public void findClones(HashSet<String> inputTerms, String outputDir) {
 
         HashSet<String> matchGroupTerms = dumpTerms();
         boolean allExist = true;
@@ -622,7 +632,13 @@ public class MatchGroup implements Serializable {
 
         if (allExist) {
             mapCode2Comment();
-            printAllMappings(true, 1, 1);
+            try {
+                PrintWriter writer = new PrintWriter(outputDir + Integer.toString(1) + "-source", "UTF-8");
+                printAllMappings(true, 1, 1, outputDir, writer);
+                writer.close();
+            } catch (Exception e) {
+                System.out.println("Error in MatchGroup.java");
+            }
         }
     }
 

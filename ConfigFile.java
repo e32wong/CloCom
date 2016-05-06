@@ -14,6 +14,7 @@ public class ConfigFile{
     public int minNumLines = 3;
     public String database = null;
     public String project = null;
+    public String outputDir = null;
     public int matchAlgorithm = 0;
     public int matchMode = 0;
     public int meshBlockSize = 0;
@@ -213,6 +214,11 @@ public class ConfigFile{
         secondNode = (Element) nl2.item(0);
         project = secondNode.getFirstChild().getNodeValue();
         System.out.println("Project path: " + project);
+
+        nl2 = firstNode.getElementsByTagName("outputDir");
+        secondNode = (Element) nl2.item(0);
+        outputDir = secondNode.getFirstChild().getNodeValue();
+        System.out.println("Output path: " + outputDir);
 
         nl2 = firstNode.getElementsByTagName("buildDatabase");
         secondNode = (Element) nl2.item(0);

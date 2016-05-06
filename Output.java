@@ -2,6 +2,7 @@ import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.nio.charset.Charset;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -29,15 +30,18 @@ public class Output {
     boolean enableRepetitive;
     boolean enableOneMethod;
     int matchMode;
+    String outputDir;
 
     public Output (int alogrithm, 
             boolean enableRepetitiveIn, 
             boolean enableOneMethodIn,
-            int matchModeIn) {
+            int matchModeIn,
+            String outputDirIn) {
         enableRepetitive = enableRepetitiveIn;
         enableOneMethod = enableOneMethodIn;
         algorithmMode = alogrithm;
         matchMode = matchModeIn;
+        outputDir = outputDirIn;
     }
 
     HashMap<Integer,MatchGroup> matchGroupList = new HashMap<Integer,MatchGroup>();
@@ -138,7 +142,7 @@ public class Output {
                 // status 1 and 2 are false
                 if (added == false) {
                     MatchGroup newGroup = new MatchGroup(length);
-                
+
                     newGroup.addMatch(0, file1, lineStart1, lineEnd1,
                             statementRaw1, statementStart1, statementEnd1, totalHashValue);
                     newGroup.addMatch(1, file2, lineStart2, lineEnd2,
@@ -204,6 +208,7 @@ public class Output {
 
         int numMatchesWithComment = 0;
         int matchIndex = 0;
+        int outputIndex = 1;
         for (Integer key : matchGroupList.keySet()) {
             MatchGroup thisMatchGroup = matchGroupList.get(key);
             System.out.println("Match Group " + matchIndex + " of size " + 
@@ -221,8 +226,15 @@ public class Output {
                 if (enableSimilarity) {
                     thisMatchGroup.printRankedComments();
                 }
-                thisMatchGroup.printAllMappings(removeEmpty, matchMode, 1);
-                numMatchesWithComment++;
+                try {
+                    PrintWriter writer = new PrintWriter(outputDir + Integer.toString(outputIndex) + "-source", "UTF-8");
+                    thisMatchGroup.printAllMappings(removeEmpty, matchMode, 1, outputDir, writer);
+                    outputIndex = outputIndex + 1;
+                    writer.close();
+                    numMatchesWithComment++;
+                } catch (Exception e) {
+                    System.out.println("Error in Output.java");
+                }
             }
 
             System.out.println("\n\n");
@@ -232,7 +244,7 @@ public class Output {
         System.out.println(numMatchesWithComment + " comment groups has a comment");
     }
 
-    public void search () {
+    public void search (String outputDir) {
 
         String userInput;
         while (true) {
@@ -257,7 +269,7 @@ public class Output {
             for (Integer key : matchGroupList.keySet()) {
                 MatchGroup thisMatchGroup = matchGroupList.get(key);
 
-                thisMatchGroup.findClones(setSplittedString);
+                thisMatchGroup.findClones(setSplittedString, outputDir);
 
             }
 

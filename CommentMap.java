@@ -5,6 +5,8 @@ import java.util.regex.Pattern;
 
 import java.util.Set;
 
+import java.io.PrintWriter;
+
 public class CommentMap implements Serializable {
 
     public String comment;
@@ -25,7 +27,7 @@ public class CommentMap implements Serializable {
         commentType = cType;
     }
 
-    public void print() {
-    	System.out.println(comment);
+    public void print(PrintWriter writer) {
+    	writer.println(comment);
     }
 }
