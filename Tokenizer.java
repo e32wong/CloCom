@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class Tokenizer {
-	
+
     public boolean inMethod = false;
 
     List<Integer> currentTokenList = new ArrayList<Integer>();
@@ -26,7 +26,7 @@ public class Tokenizer {
     boolean debugStatements;
 
     ArrayList<Method> methodList = new ArrayList<Method>();
-    
+
     HashSet<String> simpleNameList = new HashSet<String>();
 
     public Tokenizer(int numLines, boolean debug) {
@@ -49,10 +49,10 @@ public class Tokenizer {
             }
         }
     }
-    
+
     public void methodEnd(String name, int mEndLine) {
         // prevent methods within a method
-    	if (currentMethodName.equals(name)) {
+        if (currentMethodName.equals(name)) {
             currentMethodName = "";
 
             if (currentMethodObj.getNumStatements() >= minNumLines &&
@@ -95,7 +95,7 @@ public class Tokenizer {
             }
         }
     }
-    
+
     public void getHash(int nodeType, String str) {
         final int prime = 31;
         int result = 1;
@@ -103,21 +103,21 @@ public class Tokenizer {
         result = prime * result + nodeType;
         currentTokenList.add(result);
     }
-    
+
     public int hashLine(List<Integer> statementTokens) {
-    	
-		    final int prime = 31;
-		    int result = 1;   	
-    	
-		    for (Integer tkn : statementTokens) {
-    		    result = prime * result + tkn;
-    	  }
-		
+
+        final int prime = 31;
+        int result = 1;   	
+
+        for (Integer tkn : statementTokens) {
+            result = prime * result + tkn;
+        }
+
         if (debugStatements == true) {
             System.out.printf("\t>> Hashed statement: %d\n", result);
         }
 
-		    return result;
+        return result;
     }
 
     public void hasMethodInvocation() {
@@ -142,15 +142,15 @@ public class Tokenizer {
     }
 
     private void debug(int type, String str, int lineNum) {
-    
-    	if (str == null) {
-    		System.out.printf("	>> \"%s\" at line \"%d\"\n", TokenType.values()[type].toString(), lineNum);
-    	}
-    	else {
+
+        if (str == null) {
+            System.out.printf("	>> \"%s\" at line \"%d\"\n", TokenType.values()[type].toString(), lineNum);
+        }
+        else {
             str = str.replaceAll("\\n","");
-    		System.out.printf("	>> \"%s\" with value \"%s\" at line \"%d\"\n", TokenType.values()[type].toString(), str, lineNum);
-    	}
-    	
+            System.out.printf("	>> \"%s\" with value \"%s\" at line \"%d\"\n", TokenType.values()[type].toString(), str, lineNum);
+        }
+
     }
 
     public ArrayList<Method> getTokenizedMethods() {

@@ -21,7 +21,7 @@ class Parser {
 
     private static ArrayList<TypeInfo> variableMap = 
         new ArrayList<TypeInfo>();
- 
+
     private static int scopeLevel = 0;
 
     static class TypeInfo {
@@ -36,10 +36,10 @@ class Parser {
         }
 
         public static String getMappedType(String variableName, ArrayList<TypeInfo> mapList) {
-            
+
             //for (TypeInfo map : mapList) {
             //    System.out.println(map.varName +  " " + map.varType);
-           // }
+            // }
 
             for (int i = mapList.size() - 1; i >= 0; i--) {
                 TypeInfo map = mapList.get(i);
@@ -58,7 +58,7 @@ class Parser {
         return new String(encoded, StandardCharsets.UTF_8);
     }
 
-    
+
     private static void clearLocalVariables() {
         for (int i = variableMap.size()-1; i >= 0; i--) {
 
@@ -69,7 +69,7 @@ class Parser {
         }
     }
 
-	/* Convert files that are in String format to AST */
+    /* Convert files that are in String format to AST */
     public static Tokenizer parseAST2Tokens(String absPath, int minNumLines, boolean debug, boolean retry) {
         String source = "";
         try {
@@ -113,14 +113,14 @@ class Parser {
         Map<String, String> options = JavaCore.getOptions();
         options.put(JavaCore.COMPILER_COMPLIANCE, JavaCore.VERSION_1_7);
         options.put(JavaCore.COMPILER_CODEGEN_TARGET_PLATFORM,
-            JavaCore.VERSION_1_7);
+                JavaCore.VERSION_1_7);
         options.put(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_7);
-        
+
         // new String[] {"UTF-8"}
         String[] sources = {};
         String[] classPaths = {};
         parser.setEnvironment(classPaths, sources,
-            null, true);
+                null, true);
         //parser.setBindingsRecovery(true);
         parser.setResolveBindings(false);
         parser.setCompilerOptions(options);
@@ -149,20 +149,20 @@ class Parser {
             final Tokenizer tk = new Tokenizer(minNumLines, debug);
             try {
                 unit.accept(new ASTVisitor() {
-                
+
                     /*
                     // JavaDoc comment that starts with "/** for type declarations"
                     public boolean	visit(AnnotationTypeDeclaration node) {
-                        
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        return true;
+
+                    int startLine = unit.getLineNumber(node.getStartPosition());
+                    return true;
                     }
-                    
+
                     // JavaDoc comment that starts with "/** for type member declarations"
                     public boolean	visit(AnnotationTypeMemberDeclaration node) {
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        return true;
+                    int startLine = unit.getLineNumber(node.getStartPosition());
+                    return true;
                     }
                     */
 
@@ -173,7 +173,7 @@ class Parser {
 
                         return true;
                     }
-                    
+
                     public boolean	visit(ArrayAccess node) {
 
                         int startLine = unit.getLineNumber(node.getStartPosition());
@@ -232,7 +232,7 @@ class Parser {
 
                         return true;
                     }
-                    
+
                     public boolean	visit(Block node) {
                         scopeLevel = scopeLevel + 1;
 
@@ -310,11 +310,11 @@ class Parser {
                     }
 
                     /*
-                    public boolean	visit(CompilationUnit node) {
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        return true;
-                    }
-                    */
+                       public boolean	visit(CompilationUnit node) {
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       return true;
+                       }
+                       */
 
                     public boolean	visit(ConditionalExpression node) {
 
@@ -367,15 +367,15 @@ class Parser {
                     }
 
                     /*
-                    public boolean	visit(EmptyStatement node) {
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        tk.statementStart(startLine);
+                       public boolean	visit(EmptyStatement node) {
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       tk.statementStart(startLine);
 
-                        tk.addHash(78, startLine);
-                        tk.statementEnd(scopeLevel);
+                       tk.addHash(78, startLine);
+                       tk.statementEnd(scopeLevel);
 
-                        return true;
-                    }*/
+                       return true;
+                       }*/
 
                     public boolean	visit(EnhancedForStatement node) {
 
@@ -388,21 +388,21 @@ class Parser {
                     }
 
                     /*
-                    public boolean	visit(EnumConstantDeclaration node) {
-                        System.out.println("EnumConstantDeclaration");
+                       public boolean	visit(EnumConstantDeclaration node) {
+                       System.out.println("EnumConstantDeclaration");
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        System.out.println("EnumConstantDeclaration at line "+ Integer.toString(startLine));
-                        return true;
-                    }*/
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       System.out.println("EnumConstantDeclaration at line "+ Integer.toString(startLine));
+                       return true;
+                       }*/
 
                     /*
-                    public boolean	visit(EnumDeclaration node) {
+                       public boolean	visit(EnumDeclaration node) {
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        return true;
-                    }
-                    */
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       return true;
+                       }
+                       */
 
                     public boolean	visit(ExpressionStatement node) {
 
@@ -447,12 +447,12 @@ class Parser {
 
                                 variableMap.add(typeInfo);
                                 /*
-                                if (!within_method.isEmpty()) {
-                                    // In a method
-                                    tk.statementStart(startLine);
-                                    tk.addHash(85, binding.getName(), startLine);
-                                }
-                                */
+                                   if (!within_method.isEmpty()) {
+                                // In a method
+                                tk.statementStart(startLine);
+                                tk.addHash(85, binding.getName(), startLine);
+                                   }
+                                   */
                             } else {
 
                                 String varType = node.getType().toString();
@@ -461,11 +461,11 @@ class Parser {
 
                                 variableMap.add(typeInfo);
                                 /*
-                                if (!within_method.isEmpty()) {
-                                    // In a method
-                                    tk.addHash(85, varType, startLine);
-                                }
-                                */
+                                   if (!within_method.isEmpty()) {
+                                // In a method
+                                tk.addHash(85, varType, startLine);
+                                   }
+                                   */
                             }
                         }
                         return true;
@@ -507,7 +507,7 @@ class Parser {
 
                         return true;
                     }
-                    
+
                     public void	endVisit(IfStatement node) {
                         int startLine = unit.getLineNumber(node.getStartPosition()+node.getLength());
                         ASTNode parent = node.getParent();
@@ -522,12 +522,12 @@ class Parser {
                             }
                         }
                     }
-                    
+
                     public void	preVisit(ASTNode node) {
                         ASTNode parent = node.getParent();
                         int startLine = unit.getLineNumber(node.getStartPosition());
                         int endLine = unit.getLineNumber(node.getStartPosition() + node.getLength());
-                        
+
                         if (parent != null) {
                             if (parent.getNodeType() == 25 && node.getNodeType() != 25) {
                                 Statement else_statement = ((IfStatement) parent).getElseStatement();
@@ -541,7 +541,7 @@ class Parser {
                             }
                         }
                     }
-                    
+
                     public boolean	visit(InfixExpression node) {
 
                         int startLine = unit.getLineNumber(node.getStartPosition());
@@ -552,14 +552,14 @@ class Parser {
                     }
 
                     /*
-                    public boolean	visit(Initializer node) {
-                        System.out.println("Initializer");
+                       public boolean	visit(Initializer node) {
+                       System.out.println("Initializer");
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        tk.addHash(28,startLine);
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       tk.addHash(28,startLine);
 
-                        return true;
-                    }*/
+                       return true;
+                       }*/
 
                     public boolean	visit(InstanceofExpression node) {
 
@@ -569,14 +569,14 @@ class Parser {
                     }
 
                     /* Comments */
-        //			public boolean	visit(Javadoc node) {
-        //
-        //				int startLine = unit.getLineNumber(node.getStartPosition());
-        //
-        //				System.out.println("Javadoc at line "+ Integer.toString(startLine));
-        //
-        //				return true;
-        //			}
+                    //			public boolean	visit(Javadoc node) {
+                    //
+                    //				int startLine = unit.getLineNumber(node.getStartPosition());
+                    //
+                    //				System.out.println("Javadoc at line "+ Integer.toString(startLine));
+                    //
+                    //				return true;
+                    //			}
 
                     public boolean	visit(LabeledStatement node) {
 
@@ -588,25 +588,25 @@ class Parser {
 
                         return true;
                     }
-                    
+
                     /*
-                    public boolean visit(Annotation node) {
+                       public boolean visit(Annotation node) {
 
-                        System.out.println("annotation node");
+                       System.out.println("annotation node");
 
-                        return true;
+                       return true;
 
-                    }
+                       }
 
-                    public boolean	visit(MarkerAnnotation node) {
+                       public boolean	visit(MarkerAnnotation node) {
 
-                        return false;
-                        //int startLine = unit.getLineNumber(node.getStartPosition());
-                        //tk.addHash(31, node.getTypeName().getFullyQualifiedName(),startLine);
+                       return false;
+                    //int startLine = unit.getLineNumber(node.getStartPosition());
+                    //tk.addHash(31, node.getTypeName().getFullyQualifiedName(),startLine);
 
-                        //return true;
-                    }
-                    */
+                    //return true;
+                       }
+                       */
 
                     public boolean	visit(MemberRef node) {
 
@@ -630,7 +630,7 @@ class Parser {
                         // Get Line number
                         int startLine = unit.getLineNumber(node.getStartPosition());
                         int endLine = unit.getLineNumber(node.getStartPosition() + node.getLength());
-                        
+
                         tk.methodStart(node.getName().toString(), startLine);
 
                         tk.statementStart(startLine, endLine);
@@ -639,7 +639,7 @@ class Parser {
 
                         return true;
                     }
-                    
+
                     public void endVisit(MethodDeclaration node) {
                         tk.inMethod = false;
 
@@ -663,44 +663,44 @@ class Parser {
                     }
 
                     /*
-                    public boolean	visit(MethodRef node) {
+                       public boolean	visit(MethodRef node) {
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
+                       int startLine = unit.getLineNumber(node.getStartPosition());
 
-                        System.out.println("MethodRef at line "+ Integer.toString(startLine));
+                       System.out.println("MethodRef at line "+ Integer.toString(startLine));
 
-                        return true;
-                    }
+                       return true;
+                       }
 
-                    public boolean	visit(MethodRefParameter node) {
+                       public boolean	visit(MethodRefParameter node) {
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
+                       int startLine = unit.getLineNumber(node.getStartPosition());
 
-                        System.out.println("MethodRefParameter at line "+ Integer.toString(startLine));
+                       System.out.println("MethodRefParameter at line "+ Integer.toString(startLine));
 
-                        return true;
-                    }*/
+                       return true;
+                       }*/
 
 
                     /*	public, protected, private, static, abstract, final, native, synchronized, transient
                      *  volatile, strictfp
                      */
                     /*
-                    public boolean	visit(Modifier node) {
-                        System.out.println("modifier node");
-                        return true;
-                    }
-                    */
-                 
+                       public boolean	visit(Modifier node) {
+                       System.out.println("modifier node");
+                       return true;
+                       }
+                       */
+
 
                     /*
-                    public boolean	visit(NormalAnnotation node) {
+                       public boolean	visit(NormalAnnotation node) {
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        System.out.println("Initializer at line "+ Integer.toString(startLine));
-                        return true;
-                    }
-                    */
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       System.out.println("Initializer at line "+ Integer.toString(startLine));
+                       return true;
+                       }
+                       */
 
                     public boolean	visit(NullLiteral node) {
 
@@ -725,24 +725,24 @@ class Parser {
 
                     public boolean	visit(PackageDeclaration node) {
                         return false;
-        //
-        //				//int startLine = unit.getLineNumber(node.getStartPosition());
-        //
-        ////				SimpleName name = (SimpleName) node.getName();
-        ////				System.out.println("PackageDeclaration with name of "+name+" at line "+ unit.getLineNumber(name.getStartPosition()));
-        //				System.out.println("PackageDeclaration with name of ");
-        //
-        //				return true;
+                        //
+                        //				//int startLine = unit.getLineNumber(node.getStartPosition());
+                        //
+                        ////				SimpleName name = (SimpleName) node.getName();
+                        ////				System.out.println("PackageDeclaration with name of "+name+" at line "+ unit.getLineNumber(name.getStartPosition()));
+                        //				System.out.println("PackageDeclaration with name of ");
+                        //
+                        //				return true;
                     }
 
                     /*
-                    public boolean	visit(ParameterizedType node) {
+                       public boolean	visit(ParameterizedType node) {
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        tk.addHash(43, startLine);
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       tk.addHash(43, startLine);
 
-                        return true;
-                    }*/
+                       return true;
+                       }*/
 
                     public boolean	visit(ParenthesizedExpression node) {
 
@@ -779,21 +779,21 @@ class Parser {
                     }
 
                     /*
-                    public boolean visit(Name node) {
+                       public boolean visit(Name node) {
 
-                        System.out.println("ddd");
-                        return true;
-                    }*/
+                       System.out.println("ddd");
+                       return true;
+                       }*/
 
                     /*
                      * always together with VariableDeclarationFragment
                      */
-        //			public boolean	visit(PrimitiveType node) {
-        //
-        //				int startLine = unit.getLineNumber(node.getStartPosition());
-        //				tk.addHash(47, node.toString(), startLine);
-        //				return true;
-        //			}
+                    //			public boolean	visit(PrimitiveType node) {
+                    //
+                    //				int startLine = unit.getLineNumber(node.getStartPosition());
+                    //				tk.addHash(47, node.toString(), startLine);
+                    //				return true;
+                    //			}
 
                     public boolean	visit(QualifiedName node) {
                         int startLine = unit.getLineNumber(node.getStartPosition());
@@ -802,54 +802,54 @@ class Parser {
 
                         return true;
                     }
-/*
-                    public boolean visit(AbstractTypeDeclaration node) {
-                        System.out.println("AbstractTypeDeclaration");
-                        return true;
-                    }
+                    /*
+                       public boolean visit(AbstractTypeDeclaration node) {
+                       System.out.println("AbstractTypeDeclaration");
+                       return true;
+                       }
 
-                    public boolean visit(BodyDeclaration node) {
-                        System.out.println("BodyDeclaration node");
-                        return true;
-                    }
+                       public boolean visit(BodyDeclaration node) {
+                       System.out.println("BodyDeclaration node");
+                       return true;
+                       }
 
-                    public boolean	visit(QualifiedType node) {
-                        System.out.println("QualifiedType");
+                       public boolean	visit(QualifiedType node) {
+                       System.out.println("QualifiedType");
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
+                       int startLine = unit.getLineNumber(node.getStartPosition());
 
-                        System.out.println("QualifiedType at line "+ Integer.toString(startLine));
+                       System.out.println("QualifiedType at line "+ Integer.toString(startLine));
 
-                        return true;
-                    }
-*/
+                       return true;
+                       }
+                       */
                     public boolean	visit(ReturnStatement node) {
                         /*
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        tk.statementStart(startLine);
+                           int startLine = unit.getLineNumber(node.getStartPosition());
+                           tk.statementStart(startLine);
 
-                        Expression exp = node.getExpression();
-                        if (exp == null) {
-                            tk.addHash(48, startLine);
-                            return true;
-                        }
-                        ITypeBinding bind = exp.resolveTypeBinding();
-                        if (bind != null) {
-                            String s = bind.getQualifiedName();
-                            tk.addHash(48,s,startLine);
-                        }
-                        else {
-                            tk.addHash(48, startLine);
-                        }
-                        */
+                           Expression exp = node.getExpression();
+                           if (exp == null) {
+                           tk.addHash(48, startLine);
+                           return true;
+                           }
+                           ITypeBinding bind = exp.resolveTypeBinding();
+                           if (bind != null) {
+                           String s = bind.getQualifiedName();
+                           tk.addHash(48,s,startLine);
+                           }
+                           else {
+                           tk.addHash(48, startLine);
+                           }
+                           */
                         return false;
                     }
 
                     /*
-                    public void endVisit(ReturnStatement node) {
-                        tk.statementEnd(scopeLevel);
-                    }
-                    */
+                       public void endVisit(ReturnStatement node) {
+                       tk.statementEnd(scopeLevel);
+                       }
+                       */
 
                     public boolean visit(SimpleName node) {
 
@@ -869,25 +869,25 @@ class Parser {
                     }
 
                     /*
-                    public boolean	visit(SimpleType node) {
-                        System.out.println("ddd  " + node.toString());
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        ITypeBinding typeBinding = node.resolveBinding();
+                       public boolean	visit(SimpleType node) {
+                       System.out.println("ddd  " + node.toString());
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       ITypeBinding typeBinding = node.resolveBinding();
 
-                        if (typeBinding != null) {
-                            tk.addHash(49, typeBinding.getQualifiedName(), startLine);
-                        }
-                        else {
-                            tk.addHash(49, node.getName().getFullyQualifiedName(), startLine);
-                        }
+                       if (typeBinding != null) {
+                       tk.addHash(49, typeBinding.getQualifiedName(), startLine);
+                       }
+                       else {
+                       tk.addHash(49, node.getName().getFullyQualifiedName(), startLine);
+                       }
 
-                        return true;
-                    }*/
-                    
+                       return true;
+                       }*/
+
                     public boolean	visit(SingleMemberAnnotation node) {
                         int startLine = unit.getLineNumber(node.getStartPosition());
                         tk.addHash(TokenType.SingleMemberAnnotation.ordinal(), node.getTypeName().toString(), startLine);				
-                        
+
                         return true;
                     }
 
@@ -955,31 +955,31 @@ class Parser {
                         tk.addHash(TokenType.SuperMethodInvocation.ordinal(), node.getName().toString(), startLine);
 
                         /*
-                        if (node.getExpression() != null) {
-                            tk.addHash(86, node.getExpression().toString(), startLine);
-                        }*/
+                           if (node.getExpression() != null) {
+                           tk.addHash(86, node.getExpression().toString(), startLine);
+                           }*/
 
                         return true;
                     }
 
                     /*
-                    public boolean	visit(SwitchCase node) {
+                       public boolean	visit(SwitchCase node) {
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        tk.addHash(54, startLine);
-                        return true;
-                    }*/
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       tk.addHash(54, startLine);
+                       return true;
+                       }*/
 
                     public boolean	visit(SwitchStatement node) {
                         /*
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        tk.statementStart(startLine);
+                           int startLine = unit.getLineNumber(node.getStartPosition());
+                           tk.statementStart(startLine);
 
-                        tk.addHash(55, startLine);
+                           tk.addHash(55, startLine);
 
-                        tk.statementEnd(scopeLevel);
-                        */
+                           tk.statementEnd(scopeLevel);
+                           */
                         return false;
                     }
 
@@ -1040,7 +1040,7 @@ class Parser {
 
                         return true;
                     }
-                    
+
                     public boolean	visit(TypeDeclaration node) {
                         //int startLine = unit.getLineNumber(node.getStartPosition());
                         //tk.statementStart(startLine);
@@ -1050,44 +1050,44 @@ class Parser {
                     }
 
                     public void endVisit(TypeDeclaration node) {
-                        
+
                         clearLocalVariables();
 
                         scopeLevel = scopeLevel - 1;       
                     }
 
                     /*
-                    public boolean	visit(TypeDeclarationStatement node) {
+                       public boolean	visit(TypeDeclarationStatement node) {
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
-                        tk.statementStart(startLine);
-                        tk.statementEnd(scopeLevel);
+                       int startLine = unit.getLineNumber(node.getStartPosition());
+                       tk.statementStart(startLine);
+                       tk.statementEnd(scopeLevel);
 
-                        System.out.println("TypeDeclarationStatement at line "+ Integer.toString(startLine));
+                       System.out.println("TypeDeclarationStatement at line "+ Integer.toString(startLine));
 
-                        return true;
-                    }*/
+                       return true;
+                       }*/
 
                     /*
-                    public boolean	visit(TypeLiteral node) {
+                       public boolean	visit(TypeLiteral node) {
 
-                        return true;
-                    }
+                       return true;
+                       }
 
-                    public boolean	visit(TypeParameter node) {
+                       public boolean	visit(TypeParameter node) {
 
-                        int startLine = unit.getLineNumber(node.getStartPosition());
+                       int startLine = unit.getLineNumber(node.getStartPosition());
 
-                        //System.out.println("TypeParameter at line "+ Integer.toString(startLine));
+                    //System.out.println("TypeParameter at line "+ Integer.toString(startLine));
 
-                        return true;
-                    }
+                    return true;
+                       }
 
-                    public boolean	visit(UnionType node) {
-                        System.out.println("uniontype");
-                        return true;
-                    }
-                    */
+                       public boolean	visit(UnionType node) {
+                       System.out.println("uniontype");
+                       return true;
+                       }
+                       */
 
                     public boolean visit(VariableDeclarationExpression node) {
                         //System.out.println("VariableDeclarationExpression");
@@ -1117,7 +1117,7 @@ class Parser {
 
                         return true;
                     }
-                    
+
                     public boolean	visit(VariableDeclarationStatement node) {
 
                         int startLine = unit.getLineNumber(node.getStartPosition());
@@ -1139,7 +1139,7 @@ class Parser {
                     public void endVisit(VariableDeclarationStatement node) {
                         tk.statementEnd(scopeLevel);
                     }
-                    
+
                     public boolean	visit(WhileStatement node) {
 
                         int startLine = unit.getLineNumber(node.getStartPosition());
@@ -1151,11 +1151,11 @@ class Parser {
                     }
 
                     /*
-                    public void endVisit(WhileStatement node) {
-                        int startLine = unit.getLineNumber(node.getStartPosition()+node.getLength());
-                        //tk.statementStart(startLine);
-                        //tk.addHash(76, startLine);
-                        //tk.statementEnd(scopeLevel);
+                       public void endVisit(WhileStatement node) {
+                       int startLine = unit.getLineNumber(node.getStartPosition()+node.getLength());
+                    //tk.statementStart(startLine);
+                    //tk.addHash(76, startLine);
+                    //tk.statementEnd(scopeLevel);
                     }*/
 
                     public boolean	visit(WildcardType node) {
@@ -1167,7 +1167,7 @@ class Parser {
                         tk.statementEnd(scopeLevel);
                         return true;
                     }
-                    
+
                 });
             } catch (Exception e) {
                 System.out.println("Crashed while processing : " + absPath);
