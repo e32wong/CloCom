@@ -525,7 +525,7 @@ public class MatchGroup implements Serializable {
 
                 // print header
                 writer.println(filePath + ": " + startLine + "-" + endLine);
-                writer.println("Length: " + matchLength + "\n");
+                writer.println("Length: " + matchLength);
 
                 // print the comment 
                 for (CommentMap cMap : comments) {
@@ -633,7 +633,7 @@ public class MatchGroup implements Serializable {
         if (allExist) {
             mapCode2Comment();
             try {
-                PrintWriter writer = new PrintWriter(outputDir + Integer.toString(1) + "-source", "UTF-8");
+                PrintWriter writer = new PrintWriter(outputDir + Integer.toString(1) + "-full", "UTF-8");
                 printAllMappings(true, 1, 1, outputDir, writer);
                 writer.close();
             } catch (Exception e) {

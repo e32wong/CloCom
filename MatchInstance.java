@@ -10,7 +10,7 @@ public class MatchInstance implements Serializable {
     public String fileName;
     public int startLine;
     public int endLine;
-    
+
     public ArrayList<Statement> statements;
     public int startIndex;
     public int endIndex;
@@ -22,7 +22,7 @@ public class MatchInstance implements Serializable {
 
     public MatchInstance (String name, int lineStart, int lineEnd,
             ArrayList<Statement> statements_in, int startIndex_in, int endIndex_in) {
-        
+
         fileName = name;
         startLine = lineStart;
         endLine = lineEnd;

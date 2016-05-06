@@ -211,13 +211,14 @@ public class Output {
         int outputIndex = 1;
         for (Integer key : matchGroupList.keySet()) {
             MatchGroup thisMatchGroup = matchGroupList.get(key);
-            System.out.println("Match Group " + matchIndex + " of size " + 
-                    thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
             thisMatchGroup.mapCode2Comment();
             thisMatchGroup.pruneComments(similarityRange, enableSimilarity);
             thisMatchGroup.pruneDuplicateComments();
 
             boolean hasComment = thisMatchGroup.hasComment();
+
+            System.out.println("Match Group " + matchIndex + " of size " +
+                    thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
 
             if (hasComment == false && removeEmpty == true) {
                 // do nothing
@@ -227,7 +228,9 @@ public class Output {
                     thisMatchGroup.printRankedComments();
                 }
                 try {
-                    PrintWriter writer = new PrintWriter(outputDir + Integer.toString(outputIndex) + "-source", "UTF-8");
+                    PrintWriter writer = new PrintWriter(outputDir + Integer.toString(outputIndex) + "-full", "UTF-8");
+                    writer.println("Match Group " + matchIndex + " of size " +
+                            thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
                     thisMatchGroup.printAllMappings(removeEmpty, matchMode, 1, outputDir, writer);
                     outputIndex = outputIndex + 1;
                     writer.close();
@@ -237,7 +240,6 @@ public class Output {
                 }
             }
 
-            System.out.println("\n\n");
             matchIndex++;
         }
 
