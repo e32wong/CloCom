@@ -856,14 +856,14 @@ class Parser {
                         int startLine = unit.getLineNumber(node.getStartPosition());
 
                         String varType = TypeInfo.getMappedType(node.toString(), variableMap);
+
                         if (varType != null) {
-                            //System.out.println(node);
-                            tk.addHash(TokenType.SimpleName.ordinal(), varType, startLine);
+                            tk.insertSimpleName(node.toString(), true);
+                            tk.addHash(TokenType.SimpleName.ordinal(), varType, node.toString(), startLine);
                         } else {
+                            tk.insertSimpleName(node.toString(), false);
                             tk.addHash(TokenType.SimpleName.ordinal(), node.toString(), startLine);
                         }
-
-                        tk.insertSimpleName(node.toString());
 
                         return true;
                     }
@@ -922,7 +922,7 @@ class Parser {
 
                         Set<String> termSet = Utilities.extractTermsFromSentence(strValue);
                         for (String word : termSet) {
-                            tk.insertSimpleName(word);
+                            tk.insertSimpleName(word, true);
                         }
 
                         return true;

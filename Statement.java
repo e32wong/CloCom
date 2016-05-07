@@ -15,6 +15,7 @@ public class Statement implements Serializable {
     public boolean hasMethodInvocation = false;
 
     public HashSet<String> nameList;
+    public HashSet<String> varList;
 
     public Statement(int value, int sLine, int eLine) {
         startLine = sLine;
@@ -26,8 +27,12 @@ public class Statement implements Serializable {
         return nameList;
     }
 
-    public void insertNameList (HashSet<String> nameList_in) {
+    public void insertNameList(HashSet<String> nameList_in) {
         nameList = nameList_in;
+    }
+
+    public void insertVarList(HashSet<String> varList_in) {
+        varList = varList_in;
     }
 
     public void insertScope(int level) {

@@ -34,11 +34,13 @@ public class Method implements Serializable {
 
     public void addStatement(int value, int startLine, int endLine,
             boolean hasMethodInvocation, int scopeLevel,
-            HashSet<String> simpleNameList) {
+            HashSet<String> simpleNameList,
+            HashSet<String> varNameList) {
 
         Statement statement = new Statement(value, startLine, endLine);
         statement.insertScope(scopeLevel);
         statement.insertNameList(simpleNameList);
+        statement.insertVarList(varNameList);
         if (hasMethodInvocation) {
             statement.enableMethodInvocation();
         }
