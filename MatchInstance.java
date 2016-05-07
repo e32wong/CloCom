@@ -19,6 +19,7 @@ public class MatchInstance implements Serializable {
     ArrayList<CommentMap> commentList;
     ArrayList<HashSet<String>> similarityTermsLocal = new ArrayList<HashSet<String>>();
     ArrayList<HashSet<String>> similarityTermsGlobal = new ArrayList<HashSet<String>>();
+    ArrayList<HashSet<String>> similarityTermsVariable = new ArrayList<HashSet<String>>();
 
     public MatchInstance (String name, int lineStart, int lineEnd,
             ArrayList<Statement> statements_in, int startIndex_in, int endIndex_in) {
@@ -58,6 +59,14 @@ public class MatchInstance implements Serializable {
 
     public ArrayList<HashSet<String>> getSimilarityGlobal() {
         return similarityTermsGlobal;
+    }
+
+    public void addSimilarityVariable (HashSet<String> terms) {
+        similarityTermsVariable.add(terms);
+    }
+
+    public ArrayList<HashSet<String>> getSimilarityVariable() {
+        return similarityTermsVariable;
     }
 
     public boolean equals(Object obj) {

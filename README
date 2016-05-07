@@ -45,4 +45,8 @@ debug - turn on debug statements
 removeEmpty - remove the display of clones that doesn't have a comment
 buildDatabase - choose if we want to retokenize the database directory
 
+Please use commit
+f89b780bac5ea7322633550c29fffd3c199e1f2e
+for the conference paper.
+
 

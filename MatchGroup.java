@@ -569,6 +569,9 @@ public class MatchGroup implements Serializable {
 
                             ArrayList<HashSet<String>> similarityTermsGlobal = thisMatch.getSimilarityGlobal();
                             writer.println("global sim: " + similarityTermsGlobal);
+
+                            ArrayList<HashSet<String>> similarityTermsVariable = thisMatch.getSimilarityVariable();
+                            writer.println("variable sim: " + similarityTermsVariable);
                         }
 
                         // print the comment 

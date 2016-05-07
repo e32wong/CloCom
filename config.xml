@@ -31,7 +31,7 @@
     <heuristics>
         <similarity>
             <similarityRange>extended</similarityRange>
-            <enableSimilarity>false</enableSimilarity>
+            <enableSimilarity>true</enableSimilarity>
         </similarity>
         <others>
             <enableRepetitive>false</enableRepetitive>

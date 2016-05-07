@@ -153,11 +153,11 @@ public class Analyze {
         ArrayList<Set<String>> nameListMasterGlobal = new ArrayList<Set<String>>();
         ArrayList<Set<String>> nameListMasterLocal = new ArrayList<Set<String>>();
         for (MatchInstance thisMatch : masterList) {
-
             int startRange, endRange;
             ArrayList<Statement> statementList = thisMatch.statements;
 
             // variable to capture the list of unique simple names
+            // full range analysis
             Set<String> simpleNameSetMasterGlobal = new HashSet<String>();
             // gather terms from the master
             startRange = 0;
@@ -175,6 +175,7 @@ public class Analyze {
             nameListMasterGlobal.add(simpleNameSetMasterGlobal);
 
             // variable to capture the list of unique simple names
+            // clone range analysis
             Set<String> simpleNameSetMasterLocal = new HashSet<String>();
             // gather terms from the master
             startRange = thisMatch.startIndex;
@@ -195,6 +196,7 @@ public class Analyze {
         // gather simple names from clones (local + global), intersection (local + global)
         ArrayList<Set<String>> nameListCloneLocal = new ArrayList<Set<String>>();
         ArrayList<Set<String>> nameListCloneGlobal = new ArrayList<Set<String>>();
+        ArrayList<Set<String>> nameListCloneVar = new ArrayList<Set<String>>();
         for (MatchInstance thisMatch : cloneList) {
 
             ArrayList<Statement> statementList = thisMatch.statements;
@@ -217,6 +219,22 @@ public class Analyze {
             }
             nameListCloneLocal.add(simpleNameSetCloneLocal);
 
+            // variable to capture the list of unique simple names
+            Set<String> simpleNameSetCloneVar = new HashSet<String>();
+            // gather terms from the clone
+            startRange = 0;
+            endRange = statementList.size() - 1;
+            for (int i = startRange; i <= endRange; i++) {
+                Statement thisStatement = statementList.get(i);
+                HashSet<String> varList= thisStatement.varList;
+                for (String str : varList) {
+                    Set<String> camelTerms = Utilities.splitCamelCaseSet(str);
+                    for (String splittedTerm : camelTerms) {
+                        simpleNameSetCloneVar.add(splittedTerm);
+                    }
+                }       
+            }       
+            nameListCloneVar.add(simpleNameSetCloneVar);
 
             // variable to capture the list of unique simple names
             Set<String> simpleNameSetCloneGlobal = new HashSet<String>();
@@ -237,11 +255,14 @@ public class Analyze {
 
         }
 
+        // look for intersections between the lists of terms
+        // between code and sentence
         int index = 0;
         for (MatchInstance thisMatch : cloneList) {
 
             Set<String> simpleNameSetCloneLocal = nameListCloneLocal.get(index);
             Set<String> simpleNameSetCloneGlobal = nameListCloneGlobal.get(index);
+            Set<String> simpleNameSetCloneVar = nameListCloneVar.get(index);
 
             ArrayList<CommentMap> filteredCommentMap = new ArrayList<CommentMap>();
 
@@ -253,12 +274,15 @@ public class Analyze {
                 // get common terms between comment and the simple names (for the clone)
                 Set<String> cTermsCloneLocal = new HashSet<String>(commentTermList);
                 Set<String> cTermsCloneGlobal = new HashSet<String>(commentTermList);
+                Set<String> cTermsVariables = new HashSet<String>(commentTermList);
                 cTermsCloneLocal.retainAll(simpleNameSetCloneLocal);
                 cTermsCloneGlobal.retainAll(simpleNameSetCloneGlobal);
+                cTermsVariables.retainAll(simpleNameSetCloneVar);
 
                 // similarity terms for this match
                 Set<String> globalTerms = new HashSet<String>();
                 HashSet<String> localTerms = new HashSet<String>();
+                HashSet<String> varTerms = new HashSet<String>();
 
                 // make sure the common term exist on all masters
                 boolean existAllMaster = true;
@@ -275,21 +299,29 @@ public class Analyze {
                     Set<String> intersectionGlobal = new HashSet<String>(cTermsCloneGlobal);
                     intersectionGlobal.retainAll(simpleNameSetMasterGlobal);
 
+                    // obtain the intersection variables
+                    // use global master list because it is super set of variable list
+                    Set<String> intersectionVariable = new HashSet<String>(cTermsVariables);
+                    intersectionVariable.retainAll(simpleNameSetMasterGlobal);
+
                     // check how many overlaps
                     // all globals and local terms must match
                     // there must be at least one local match
                     if (!intersectionGlobal.equals(cTermsCloneGlobal) ||
                             !intersectionLocal.equals(cTermsCloneLocal) ||
-                            intersectionLocal.size() == 0) {
+                            intersectionLocal.size() == 0 ||
+                            intersectionVariable.size() != cTermsVariables.size()) {
                         existAllMaster = false;
                         break;
                     } else {
                         // save the result
                         localTerms.addAll(intersectionLocal);
+                        varTerms.addAll(intersectionVariable);
                     }
                     index2++;
                 }
-
+                
+                /*
                 // make sure the common term exist on all clones
                 boolean existAllClone = true;
                 for (Set<String> simpleNameSetMaster : nameListCloneGlobal) {
@@ -314,16 +346,19 @@ public class Analyze {
                         localTerms.addAll(intersectionLocal);
                     }
                 }
+                */
 
-                if (existAllMaster == true && existAllClone == true) {
+                if (existAllMaster == true) {
                     filteredCommentMap.add(cMap);
 
+                    // remove local terms from globa list
                     HashSet<String> globalWithoutLocalTerms = new HashSet<String>(globalTerms);
                     globalWithoutLocalTerms.removeAll(localTerms);
 
                     // save the result
                     thisMatch.addSimilarityGlobal(globalWithoutLocalTerms);
                     thisMatch.addSimilarityLocal(localTerms);
+                    thisMatch.addSimilarityVariable(varTerms);
                 }
             }
             thisMatch.commentList = filteredCommentMap;
