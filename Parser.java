@@ -87,12 +87,17 @@ class Parser {
                 Matcher matcher4 = pattern4.matcher(source);
                 if (!matcher1.find() && !matcher2.find()) {
                     if (!matcher4.find()) {
-                        System.out.println("cannot find method!");
                         source = "public class A {public static void main(String[] args) {" + source + "}}";
-                        System.out.println(source);
+                        if (debug) {
+                            System.out.println("Parser error: cannot find method!");
+                            System.out.println(source);
+                        }
                     } else if (!matcher3.find()) {
                         source = "public class A {"  + source + "}";
-                        System.out.println(source);
+                        if (debug) {
+                            System.out.println("Parsing error");
+                            System.out.println(source);
+                        }
                     }
                 }
                 if (matcher4.find()) {
