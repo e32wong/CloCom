@@ -13,6 +13,7 @@ import java.io.IOException;
 public class ConfigFile{
     public int minNumLines = 3;
     public String database = null;
+    public int databaseFormat = 0;
     public String project = null;
     public String outputDir = null;
     public int matchAlgorithm = 0;
@@ -209,6 +210,16 @@ public class ConfigFile{
         secondNode = (Element) nl2.item(0);
         database = secondNode.getFirstChild().getNodeValue();
         System.out.println("Database path: " + database);
+
+        nl2 = firstNode.getElementsByTagName("databaseFormat");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        databaseFormat = Integer.parseInt(value);
+        if (databaseFormat != 0 && databaseFormat != 1) {
+            System.out.println("Invalid database format, must be 0 (source) or 1 (autocomment)");
+            System.exit(0);
+        }
+        System.out.println("Apriori Minimum Support: " + aprioriMinSupport);
 
         nl2 = firstNode.getElementsByTagName("project");
         secondNode = (Element) nl2.item(0);

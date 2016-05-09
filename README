@@ -35,6 +35,8 @@ the respective generated comment.
 
 NOTES.
 
+databaseFormat - 0 for standard source, 1 for autocomment format
+
 minNumLines - number of statements a clone should have
 matchAlgorithm - 1 for gapped, 0 for non-gapped
 matchMode - 1 for between comparison (loads db into memory), 0 for full mesh

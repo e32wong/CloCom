@@ -197,7 +197,7 @@ public class Output {
     public void printResults(boolean removeEmpty, 
             int similarityRange, 
             boolean enableSimilarity,
-            int matchMode) {
+            int matchMode, int format) {
 
         DescriptiveStatistics statsInternalClones = new DescriptiveStatistics();
         DescriptiveStatistics statsExternalClones = new DescriptiveStatistics();
@@ -211,7 +211,7 @@ public class Output {
         int outputIndex = 1;
         for (Integer key : matchGroupList.keySet()) {
             MatchGroup thisMatchGroup = matchGroupList.get(key);
-            thisMatchGroup.mapCode2Comment();
+            thisMatchGroup.mapCode2Comment(format);
             thisMatchGroup.pruneComments(similarityRange, enableSimilarity);
             thisMatchGroup.pruneDuplicateComments();
 
@@ -271,7 +271,7 @@ public class Output {
             for (Integer key : matchGroupList.keySet()) {
                 MatchGroup thisMatchGroup = matchGroupList.get(key);
 
-                thisMatchGroup.findClones(setSplittedString, outputDir);
+                thisMatchGroup.findClones(setSplittedString, outputDir, 0);
 
             }
 

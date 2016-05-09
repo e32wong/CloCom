@@ -425,7 +425,7 @@ public class MatchGroup implements Serializable {
 
     }
 
-    public void mapCode2Comment() {
+    public void mapCode2Comment(int format) {
         for (MatchInstance thisMatch : masterList) {
             String filePath = thisMatch.fileName;
             int startLine = thisMatch.startLine;
@@ -433,7 +433,7 @@ public class MatchGroup implements Serializable {
 
             // get the list of comments associated
             CommentParser cParser = new CommentParser(filePath);
-            ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0);
+            ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0, format);
 
             // remove in-line comments
             commentList = removeInline(commentList, filePath);
@@ -451,7 +451,7 @@ public class MatchGroup implements Serializable {
 
             // get the list of comments associated
             CommentParser cParser = new CommentParser(filePath);
-            ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0);
+            ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0, format);
 
             // remove in-line comments
             commentList = removeInline(commentList, filePath);
@@ -622,7 +622,7 @@ public class MatchGroup implements Serializable {
         return totalHashValue;
     }
 
-    public void findClones(HashSet<String> inputTerms, String outputDir) {
+    public void findClones(HashSet<String> inputTerms, String outputDir, int format) {
 
         HashSet<String> matchGroupTerms = dumpTerms();
         boolean allExist = true;
@@ -634,7 +634,7 @@ public class MatchGroup implements Serializable {
         }
 
         if (allExist) {
-            mapCode2Comment();
+            mapCode2Comment(format);
             try {
                 PrintWriter writer = new PrintWriter(outputDir + Integer.toString(1) + "-full", "UTF-8");
                 printAllMappings(true, 1, 1, outputDir, writer);

@@ -78,7 +78,7 @@ public class Text implements Serializable {
 
             //System.out.println(startLine + " " + endLine + " " + absolutePath);
             
-            ArrayList<CommentMap> cMapList = cParser.parseComment(absolutePath, startLine, endLine, 1);
+            ArrayList<CommentMap> cMapList = cParser.parseComment(absolutePath, startLine, endLine, 1, 0);
 
             // TODO: fix this optimization later
             //if (cMapList.size() == 0) {

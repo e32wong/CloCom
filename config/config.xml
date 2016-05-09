@@ -2,7 +2,7 @@
 <!DOCTYPE configuration SYSTEM "config.dtd">
 <configuration>
     <matching>
-        <minNumLines>4</minNumLines>
+        <minNumLines>5</minNumLines>
         <matchAlgorithm>1</matchAlgorithm>
         <matchMode>0</matchMode>
         <gapSize>2</gapSize>
@@ -12,8 +12,9 @@
         <aprioriMinSupport>5</aprioriMinSupport>
     </frequencySet>
     <projects>
-        <project>/home/edmund/research/autocomment/projects/freecol/</project>
-        <database>/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java/</database>
+        <project>/home/edmund/research/autocomment/projects/java/test/</project>
+        <database>/home/edmund/research/autocomment/posts/stage4-nlpProcessed/test2/</database>
+        <databaseFormat>1</databaseFormat>
         <outputDir>/home/edmund/research/autocomment/results/java/freecol/</outputDir>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <buildDatabase>true</buildDatabase>
@@ -31,7 +32,7 @@
     <heuristics>
         <similarity>
             <similarityRange>extended</similarityRange>
-            <enableSimilarity>true</enableSimilarity>
+            <enableSimilarity>false</enableSimilarity>
         </similarity>
         <others>
             <enableRepetitive>false</enableRepetitive>

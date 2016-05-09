@@ -78,6 +78,7 @@ public class CloneDigger {
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
         int aprioriMinSupport = config.aprioriMinSupport;
         boolean enableQuery = config.enableQuery;
+        int format = config.databaseFormat;
 
         // done parsing
         System.out.println("Finished parsing XML parameters");
@@ -149,7 +150,7 @@ public class CloneDigger {
                 output.search(outputDir);
             }
 
-            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
+            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, format);
             /*
             // Frequency Map of all terms
             FrequencyMap fMap = new FrequencyMap(aprioriMinSupport);
@@ -194,7 +195,7 @@ public class CloneDigger {
                 output.loadResults(resultPath);
             }
 
-            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode);
+            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, format);
         }
 
         // Display all the errors
