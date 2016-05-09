@@ -4,6 +4,9 @@ import java.nio.charset.Charset;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -86,10 +89,35 @@ public class Output {
         } else {
             // require at least one method call
             if (enableOneMethod) {
-                if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), 1) == false) {
+                if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), 2) == false) {
                     return;
                 }
-                if (Analyze.checkNumMethods(statementRaw2.subList(statementStart2, statementEnd2), 1) == false) {
+                if (Analyze.checkNumMethods(statementRaw2.subList(statementStart2, statementEnd2), 2) == false) {
+                    return;
+                }
+            }
+            // ensure majority of the file is matched
+            if (true) {
+                int size = -2;
+                try {
+                    BufferedReader br = new BufferedReader(new FileReader(file2));
+                    String line = br.readLine();
+                    while (line != null) {
+                        line = br.readLine();
+                        size = size + 1;
+                    }
+                    br.close();
+                } catch (Exception e) {
+                    System.out.println("Error on % matching");
+                    System.exit(0);
+                }
+                int sizeMatched = lineEnd2 - lineStart2 + 1;
+                float percentage = ((float)sizeMatched * 100 / (float)size);
+                //System.out.println(percentage + "%");
+                //System.out.println(file1);
+                //System.out.println(file2);
+                //System.out.println(lineEnd2 + " "  + lineStart2 + "= " + sizeMatched + " X " + size);
+                if (percentage < 60) {
                     return;
                 }
             }
