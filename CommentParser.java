@@ -74,11 +74,15 @@ public class CommentParser {
 
                 try (BufferedReader br = new BufferedReader(new FileReader(absPath))) {
                     String line = br.readLine();
-                    CommentMap c1 = new CommentMap(line, 0, 0, 1);
+                    if (!line.equals("//")) {
+                        CommentMap c1 = new CommentMap(line, 0, 0, 1);
+                        commentMap.add(c1);
+                    }
                     line = br.readLine();
-                    CommentMap c2 = new CommentMap(line, 1, 1, 1);
-                    commentMap.add(c1);
-                    commentMap.add(c2);
+                    if (!line.equals("//")) {
+                        CommentMap c2 = new CommentMap(line, 1, 1, 1);
+                        commentMap.add(c2);
+                    }
                 } catch (Exception e) {
                     System.out.println("Exception in CommentParser format 1");
                 }
