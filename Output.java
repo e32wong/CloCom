@@ -83,6 +83,16 @@ public class Output {
             //if (Analyze.hasValidScope(statementRaw1.subList(statementStart1, statementEnd1)) == false) {
             //    return;
             //}
+        } else {
+            // require at least one method call
+            if (enableOneMethod) {
+                if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), 1) == false) {
+                    return;
+                }
+                if (Analyze.checkNumMethods(statementRaw2.subList(statementStart2, statementEnd2), 1) == false) {
+                    return;
+                }
+            }
         }
 
         boolean added = false;
