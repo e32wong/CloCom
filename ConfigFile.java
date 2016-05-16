@@ -379,11 +379,17 @@ public class ConfigFile{
             }
             System.out.println("Load results: " + loadResults);
 
-            loadFrequencySet(doc);
-            loadMatching(doc);
-            loadHeuristic(doc);
-            loadProjects(doc);
-            loadOutputSettings(doc);
+            try {
+                loadFrequencySet(doc);
+                loadMatching(doc);
+                loadHeuristic(doc);
+                loadProjects(doc);
+                loadOutputSettings(doc);
+            } catch (Exception e) {
+                System.out.println(e);
+                System.out.println("Error while parsing the xml config, maybe missing entry");
+                System.exit(0);
+            }
 
         } catch (ParserConfigurationException pce) {
             System.out.println(pce.getMessage());

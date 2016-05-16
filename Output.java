@@ -89,10 +89,10 @@ public class Output {
         } else {
             // require at least one method call
             if (enableOneMethod) {
-                if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), 2) == false) {
+                if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), 1) == false) {
                     return;
                 }
-                if (Analyze.checkNumMethods(statementRaw2.subList(statementStart2, statementEnd2), 2) == false) {
+                if (Analyze.checkNumMethods(statementRaw2.subList(statementStart2, statementEnd2), 1) == false) {
                     return;
                 }
             }
@@ -259,7 +259,19 @@ public class Output {
                     thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
 
             if (hasComment == false && removeEmpty == true) {
-                // do nothing
+                // no comment and remove empty is true
+                // simply export the ones without comment to a different filename
+                try {
+                    PrintWriter writer = new PrintWriter(outputDir + Integer.toString(outputIndex) + "-empty", "UTF-8");
+                    writer.println("Match Group " + matchIndex + " of size " +
+                            thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
+                    thisMatchGroup.printAllMappings(removeEmpty, matchMode, 1, outputDir, writer);
+                    outputIndex = outputIndex + 1;
+                    writer.close();
+                    numMatchesWithComment++;
+                } catch (Exception e) {
+                    System.out.println("Error in Output.java");
+                }
             } else {
                 // ranking alogrithm requires a list of similarity terms
                 if (enableSimilarity) {
