@@ -459,10 +459,8 @@ public class MatchGroup implements Serializable {
             // remove in-line comments
             if (format == 0) {
                 commentList = removeInline(commentList, filePath);
+                commentList = groupNormalizeComment(commentList);
             }
-
-            // group the comments
-            commentList = groupNormalizeComment(commentList);
 
             thisMatch.setComments(commentList);
         }

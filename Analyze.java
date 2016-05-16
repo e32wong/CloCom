@@ -17,6 +17,20 @@ public class Analyze {
 
     }
 
+    public static ArrayList<String> splitParagraph(String comment) {
+
+        ArrayList<String> listSentences = new ArrayList<String>();
+
+        Pattern re = Pattern.compile("[^.!?\\s][^.!?]*(?:[.!?](?!['\"]?\\s|$)[^.!?]*)*[.!?]?['\"]?(?=\\s|$)", Pattern.MULTILINE | Pattern.COMMENTS);
+        Matcher reMatcher = re.matcher(comment);
+        while (reMatcher.find()) {
+            listSentences.add(reMatcher.group());
+        }
+
+        return listSentences;
+
+    }
+
     private static Set<String> getArtifacts(String comment) {
 
         Set<String> artifactSet = new HashSet<String>();

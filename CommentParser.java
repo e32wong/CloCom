@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 public class CommentParser {
 
     final CompilationUnit unit;
@@ -76,13 +79,19 @@ public class CommentParser {
                 try (BufferedReader br = new BufferedReader(new FileReader(absPath))) {
                     String line = br.readLine();
                     if (!line.equals("//")) {
-                        CommentMap c1 = new CommentMap(line, 0, 0, 1);
-                        commentMap.add(c1);
+                        ArrayList<String> listSentences = Analyze.splitParagraph(line.substring(2));
+                        for (String s : listSentences) {
+                            CommentMap c1 = new CommentMap(s, 0, 0, 1);
+                            commentMap.add(c1);
+                        }
                     }
                     line = br.readLine();
                     if (!line.equals("//")) {
-                        CommentMap c2 = new CommentMap(line, 1, 1, 1);
-                        commentMap.add(c2);
+                        ArrayList<String> listSentences = Analyze.splitParagraph(line.substring(2));
+                        for (String s : listSentences) {
+                            CommentMap c2 = new CommentMap(s, 1, 1, 1);
+                            commentMap.add(c2);
+                        }
                     }
                 } catch (Exception e) {
                     System.out.println("Exception in CommentParser format 1");
