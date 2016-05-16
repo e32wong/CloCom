@@ -347,8 +347,6 @@ public class Analyze {
                     */
 
                     if (intersectionLocal.size() > 0 &&
-                            intersectionGlobal.equals(cTermsCloneGlobal) &&
-                            intersectionLocal.equals(cTermsCloneLocal) && 
                             intersectionVariable.equals(cTermsVariables)) {
                         // save the terms for debug
                         localTerms.addAll(intersectionLocal);

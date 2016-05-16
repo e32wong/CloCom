@@ -258,6 +258,7 @@ public class MatchGroup implements Serializable {
         return newList;
     }
 
+    // mode is ascending vs desending
     private static HashMap<String, Integer> sortByComparator(HashMap<String, Integer> unsortMap, int mode)
     {
 
@@ -337,6 +338,7 @@ public class MatchGroup implements Serializable {
             }
         }
 
+        // display the results
         HashMap<String, Integer> sortedString = sortByComparator(listString, 1);
         it = sortedString.entrySet().iterator();
         displayedNum = 1;
