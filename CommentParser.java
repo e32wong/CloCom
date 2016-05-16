@@ -65,6 +65,7 @@ public class CommentParser {
 
     // mode 0 - default where it grabs all comments
     // mode 1 - stops upon finding a comment
+    // format 1 = autocomment, 0 = standard
     public ArrayList<CommentMap> parseComment
         (String absPath, int startLine, int endLine, int mode, int format) {
 

@@ -22,7 +22,7 @@
         <enableMapExt>true</enableMapExt>
     </projects>
     <outputSettings>
-        <debug>true</debug>
+        <debug>false</debug>
         <removeEmpty>false</removeEmpty>
         <exportResults>false</exportResults>
         <resultPath></resultPath>

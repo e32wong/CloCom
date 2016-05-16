@@ -433,7 +433,10 @@ public class MatchGroup implements Serializable {
 
             // get the list of comments associated
             CommentParser cParser = new CommentParser(filePath);
-            ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0, format);
+            ArrayList<CommentMap> commentList = new ArrayList<CommentMap>();
+            if (format == 0) {
+                cParser.parseComment(filePath, startLine, endLine, 0, 0);
+            }
 
             // remove in-line comments
             commentList = removeInline(commentList, filePath);
@@ -454,7 +457,9 @@ public class MatchGroup implements Serializable {
             ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0, format);
 
             // remove in-line comments
-            commentList = removeInline(commentList, filePath);
+            if (format == 0) {
+                commentList = removeInline(commentList, filePath);
+            }
 
             // group the comments
             commentList = groupNormalizeComment(commentList);
