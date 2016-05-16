@@ -10,6 +10,7 @@ import java.io.IOException;
 
 import org.apache.commons.cli.*;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.FileUtils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,19 +25,17 @@ public class CloneDigger {
         }
     }
 
-    private static void saveConfig(String inputPath, String outputDir) {
+    private static void clearAndSaveConfig(String inputPath, String outputDir) {
 
-        outputDir = outputDir + "config.xml";
+        String outputFile = outputDir + "config.xml";
 
         File from = new File(inputPath);
-        File to = new File(outputDir);
+        File toDir = new File(outputDir);
+        File toFile = new File(outputFile);
 
         try {
-            if (to.exists()) {
-                System.out.println("config.xml already exist, deleting...");
-                to.delete();
-            }
-            Files.copy(from.toPath(), to.toPath());
+            FileUtils.cleanDirectory(toDir); 
+            Files.copy(from.toPath(), toFile.toPath());
         } catch (Exception e) {
             System.out.println(e);
             System.out.println("Error while copying config to output dir");
@@ -108,7 +107,8 @@ public class CloneDigger {
         // done parsing
         System.out.println("Finished parsing XML parameters");
 
-        saveConfig(configPath, outputDir);
+        // clear existing output and save the config to output dir
+        clearAndSaveConfig(configPath, outputDir);
 
         // Get current time
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
