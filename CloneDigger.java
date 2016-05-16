@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
 import java.nio.file.Files;
+import java.io.PrintWriter;
 
 import java.io.IOException;
 
@@ -228,17 +229,21 @@ public class CloneDigger {
         // Display all the errors
         displayError(errorList);
 
-        // Display elapsed time
+        // Display and save elapsed time
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
-        System.out.println("Elapsed for " + 
-                TimeUnit.MINUTES.convert(elapsedTime, TimeUnit.NANOSECONDS) + 
+        String msg = ("Elapsed for " +
+                TimeUnit.MINUTES.convert(elapsedTime, TimeUnit.NANOSECONDS) +
                 " minutes");
+        System.out.println(msg);
+        // save elapsed time
+        PrintWriter writer = new PrintWriter(outputDir + "log", "UTF-8");
+        writer.println(msg);
+        writer.close();
 
         // Display finish time
         Calendar cal2 = Calendar.getInstance();
         System.out.println("Finish @ " +  sdf.format(cal2.getTime()) );
-
 
         System.out.println("graceful exit...");
 
