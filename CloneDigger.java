@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
+import java.nio.file.Files;
 
 import java.io.IOException;
 
@@ -23,18 +24,42 @@ public class CloneDigger {
         }
     }
 
+    private static void saveConfig(String inputPath, String outputDir) {
+
+        outputDir = outputDir + "config.xml";
+
+        File from = new File(inputPath);
+        File to = new File(outputDir);
+
+        try {
+            if (to.exists()) {
+                System.out.println("config.xml already exist, deleting...");
+                to.delete();
+            }
+            Files.copy(from.toPath(), to.toPath());
+        } catch (Exception e) {
+            System.out.println(e);
+            System.out.println("Error while copying config to output dir");
+            System.exit(0);
+        }
+
+        System.out.println("Saved config to output dir:");
+        System.out.println(outputDir);
+
+    }
+
     public static void main(String args[]) throws IOException {
 
         Options options = new Options();
         options.addOption("generateBaseline", true, "generate baseline config file to the provided path");
-        options.addOption("loadConfig", true, "configuration xml file path");
+        options.addOption("configPath", true, "configuration xml file path");
         CommandLineParser parser = new DefaultParser();
         String baseLineOutputPath = null;
-        String loadConfig = null;
+        String configPath = null;
         try {
             CommandLine cmd = parser.parse(options, args);
-            if (cmd.hasOption("loadConfig")) {
-                loadConfig = cmd.getOptionValue("loadConfig");
+            if (cmd.hasOption("configPath")) {
+                configPath = cmd.getOptionValue("configPath");
             }
             if (cmd.hasOption("generateBaseline")) {
                 baseLineOutputPath = cmd.getOptionValue("generateBaseline");
@@ -53,7 +78,7 @@ public class CloneDigger {
 
         // load config file
         ConfigFile config = new ConfigFile();
-        config.loadConfig(loadConfig);
+        config.loadConfig(configPath);
 
         int gapSize = config.gapSize;
         int matchAlgorithm = config.matchAlgorithm;
@@ -82,6 +107,8 @@ public class CloneDigger {
 
         // done parsing
         System.out.println("Finished parsing XML parameters");
+
+        saveConfig(configPath, outputDir);
 
         // Get current time
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
