@@ -235,7 +235,8 @@ public class Output {
     public void printResults(boolean removeEmpty, 
             int similarityRange, 
             boolean enableSimilarity,
-            int matchMode, int format) {
+            int matchMode, int format,
+            boolean debug) {
 
         DescriptiveStatistics statsInternalClones = new DescriptiveStatistics();
         DescriptiveStatistics statsExternalClones = new DescriptiveStatistics();
@@ -250,7 +251,7 @@ public class Output {
         for (Integer key : matchGroupList.keySet()) {
             MatchGroup thisMatchGroup = matchGroupList.get(key);
             thisMatchGroup.mapCode2Comment(format);
-            thisMatchGroup.pruneComments(similarityRange, enableSimilarity);
+            thisMatchGroup.pruneComments(similarityRange, enableSimilarity, debug);
             thisMatchGroup.pruneDuplicateComments();
 
             boolean hasComment = thisMatchGroup.hasComment();
@@ -273,18 +274,21 @@ public class Output {
                     System.out.println("Error in Output.java");
                 }
             } else {
-                // ranking alogrithm requires a list of similarity terms
-                if (enableSimilarity) {
-                    thisMatchGroup.printRankedComments();
-                }
                 try {
                     PrintWriter writer = new PrintWriter(outputDir + Integer.toString(outputIndex) + "-full", "UTF-8");
                     writer.println("Match Group " + matchIndex + " of size " +
                             thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
                     thisMatchGroup.printAllMappings(removeEmpty, matchMode, 1, outputDir, writer);
                     outputIndex = outputIndex + 1;
+
+                    // ranking alogrithm requires a list of similarity terms
+                    if (enableSimilarity) {
+                        thisMatchGroup.printRankedComments(writer);
+                    }   
+
                     writer.close();
                     numMatchesWithComment++;
+
                 } catch (Exception e) {
                     System.out.println("Error in Output.java");
                 }

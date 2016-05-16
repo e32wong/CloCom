@@ -178,7 +178,7 @@ public class CloneDigger {
                 output.search(outputDir);
             }
 
-            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, format);
+            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, format, debug);
             /*
             // Frequency Map of all terms
             FrequencyMap fMap = new FrequencyMap(aprioriMinSupport);
@@ -223,7 +223,7 @@ public class CloneDigger {
                 output.loadResults(resultPath);
             }
 
-            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, format);
+            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, format, debug);
         }
 
         // Display all the errors

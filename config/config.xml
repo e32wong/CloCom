@@ -22,7 +22,7 @@
         <enableMapExt>true</enableMapExt>
     </projects>
     <outputSettings>
-        <debug>false</debug>
+        <debug>true</debug>
         <removeEmpty>false</removeEmpty>
         <exportResults>false</exportResults>
         <resultPath></resultPath>
@@ -32,7 +32,7 @@
     <heuristics>
         <similarity>
             <similarityRange>extended</similarityRange>
-            <enableSimilarity>false</enableSimilarity>
+            <enableSimilarity>true</enableSimilarity>
         </similarity>
         <others>
             <enableRepetitive>false</enableRepetitive>

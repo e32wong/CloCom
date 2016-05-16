@@ -173,7 +173,7 @@ public class MatchGroup implements Serializable {
         }
     }
 
-    public void pruneComments(int similarityRange, boolean enableSimilarity) {
+    public void pruneComments(int similarityRange, boolean enableSimilarity, boolean debug) {
 
         // clone pruning
         for (MatchInstance thisMatch : cloneList) {
@@ -203,7 +203,7 @@ public class MatchGroup implements Serializable {
 
         // text similarity
         if (enableSimilarity) {
-            Analyze.textSimilarity(masterList, cloneList, similarityRange);
+            Analyze.textSimilarity(masterList, cloneList, similarityRange, debug);
         }
 
     }
@@ -287,9 +287,7 @@ public class MatchGroup implements Serializable {
         return sortedMap;
     }
 
-    public void printRankedComments() {
-
-        System.out.println("----");
+    public void printRankedComments(PrintWriter writer) {
 
         // obtain a list of all the possible code comments from each clone
         HashMap<String, Integer> listComments = new HashMap<String, Integer>();
@@ -342,17 +340,17 @@ public class MatchGroup implements Serializable {
         HashMap<String, Integer> sortedString = sortByComparator(listString, 1);
         it = sortedString.entrySet().iterator();
         displayedNum = 1;
-        System.out.println("Ranked Result:");
+        writer.println("Ranked Result:");
         while (it.hasNext()) {
             HashMap.Entry pairs = (HashMap.Entry) it.next();
 
-            System.out.println(displayedNum + ". (size " + pairs.getValue() + ")");
-            System.out.println(pairs.getKey());
+            writer.println(displayedNum + ". (size " + pairs.getValue() + ")");
+            writer.println(pairs.getKey());
 
             it.remove();
             displayedNum++;
         }
-        System.out.println("----");
+        writer.println("----");
     }
 
     private ArrayList<CommentMap> groupNormalizeComment(ArrayList<CommentMap> commentList) {

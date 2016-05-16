@@ -7,6 +7,8 @@ import java.util.regex.Pattern;
 import java.util.Set;
 import java.util.HashSet;
 
+import java.util.Arrays;
+
 public class Analyze {
 
     public static void tfidf (
@@ -147,7 +149,8 @@ public class Analyze {
     public static void textSimilarity (
             HashSet<MatchInstance> masterList, 
             HashSet<MatchInstance> cloneList,
-            int similarityRange) {
+            int similarityRange,
+            boolean debug) {
 
         // gather simple names from master
         ArrayList<Set<String>> nameListMasterGlobal = new ArrayList<Set<String>>();
@@ -192,6 +195,19 @@ public class Analyze {
             }
             nameListMasterLocal.add(simpleNameSetMasterLocal);
         }
+
+        /*
+        if (debug) {
+            System.out.println("Master name list global:");
+            for (Set<String> list : nameListMasterGlobal) {
+                System.out.println(Arrays.toString(list.toArray()));
+            }
+
+            System.out.println("Master name list local:");
+            for (Set<String> list : nameListMasterLocal) {
+                System.out.println(Arrays.toString(list.toArray()));
+            }
+        }*/
 
         // gather simple names from clones (local + global), intersection (local + global)
         ArrayList<Set<String>> nameListCloneLocal = new ArrayList<Set<String>>();
@@ -304,6 +320,16 @@ public class Analyze {
                     Set<String> intersectionVariable = new HashSet<String>(cTermsVariables);
                     intersectionVariable.retainAll(simpleNameSetMasterGlobal);
 
+                    if (debug) {
+                        System.out.println("Cross local:");
+                        System.out.println(Arrays.toString(intersectionLocal.toArray()));
+                        System.out.println("Cross global:");
+                        System.out.println(Arrays.toString(intersectionGlobal.toArray()));
+                        System.out.println("Cross variables:");
+                        System.out.println(Arrays.toString(intersectionVariable.toArray()));
+                    }
+
+                    /*
                     // check how many overlaps
                     // all globals and local terms must match
                     // there must be at least one local match
@@ -318,36 +344,20 @@ public class Analyze {
                         localTerms.addAll(intersectionLocal);
                         varTerms.addAll(intersectionVariable);
                     }
+                    */
+
+                    if (intersectionLocal.size() > 0 &&
+                            intersectionGlobal.equals(cTermsCloneGlobal) &&
+                            intersectionLocal.equals(cTermsCloneLocal) && 
+                            intersectionVariable.equals(cTermsVariables)) {
+                        // save the terms for debug
+                        localTerms.addAll(intersectionLocal);
+                        varTerms.addAll(intersectionVariable);
+                    }
+
                     index2++;
                 }
                 
-                /*
-                // make sure the common term exist on all clones
-                boolean existAllClone = true;
-                for (Set<String> simpleNameSetMaster : nameListCloneGlobal) {
-                    // obtain the intersection global
-                    Set<String> intersectionGlobal = new HashSet<String>(cTermsCloneGlobal);
-                    intersectionGlobal.retainAll(simpleNameSetMaster);
-
-                    // obtain the intersection local
-                    Set<String> intersectionLocal = new HashSet<String>(cTermsCloneLocal);
-                    intersectionLocal.retainAll(simpleNameSetMaster);
-            
-                    // check how many overlaps
-                    // all globals must match 
-                    // there must be at least one local match
-                    if (!intersectionGlobal.equals(cTermsCloneGlobal) ||
-                            intersectionLocal.size() == 0) {
-                        existAllClone = false; 
-                        break;
-                    } else {
-                        // save the result
-                        globalTerms.addAll(intersectionGlobal);
-                        localTerms.addAll(intersectionLocal);
-                    }
-                }
-                */
-
                 if (existAllMaster == true) {
                     filteredCommentMap.add(cMap);
 
