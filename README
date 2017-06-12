@@ -6,6 +6,10 @@ It applies code clone detection techniques to discover
 similar code segments and use the comments from some code segments 
 to describe the other similar code segments. 
 
+INSTALLATION:
+
+sudo apt-get install openjdk-8-jdk
+
 HOW TO RUN:
 
 1.
@@ -18,6 +22,9 @@ Code inside the <project> tag represents the target project.
 Code inside the <database> tag represents the database.
 CloCom will extract code comments from this folder for
 the code inside the <project> folder.
+
+See the "config" folder for xml examples and 
+modify the parameters.
 
 2. 
 
