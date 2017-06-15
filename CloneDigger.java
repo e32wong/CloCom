@@ -128,7 +128,7 @@ public class CloneDigger {
             databaseFileList = Database.loadFileList(databaseFilePaths);
         } else {
             // doesn't exist or forced to create new one, create it
-            databaseFileList = Database.generateFileList(databaseDir, databaseFilePaths, enableMapExt);
+            databaseFileList = Database.generateFileList(databaseDir, "cachedList.tmp", enableMapExt);
         }
 
         // td-idf
@@ -145,6 +145,7 @@ public class CloneDigger {
 
         Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod, matchMode, outputDir);
         if (matchMode == 1) {
+            System.out.println("Begin full mesh comparison");
             // full mesh comparison
             if (loadResults == false) {
                 System.out.println("Mode: full mesh");
@@ -186,6 +187,8 @@ public class CloneDigger {
             fMap.exportTable("table.txt");
             */
         } else {
+            // Between comparison
+            System.out.println("Begin between comparison");
             if (loadResults == false) {
                 // between comparison
                 System.out.println("Mode: between comparison");

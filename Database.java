@@ -13,6 +13,8 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.RegexFileFilter;
+import org.apache.commons.io.filefilter.DirectoryFileFilter;
 import java.util.Collection;
 
 import java.nio.file.DirectoryStream;
@@ -29,41 +31,33 @@ import java.io.InputStreamReader;
 import java.lang.ProcessBuilder;
 import java.io.InputStream;
 
+import java.io.FilenameFilter;
+
 public class Database {
 
-    public static List<String> generateFileList(String dir_name, String filePath, boolean wrapCode) throws IOException {
+    public static void listf(String directoryName, List<String> files) {
+        File directory = new File(directoryName);
+
+        // get all the files from a directory
+        File[] fList = directory.listFiles();
+        for (File file : fList) {
+            if (file.isFile()) {
+                //System.out.println(file);
+                files.add(file.toString());
+            } else if (file.isDirectory()) {
+                listf(file.getAbsolutePath(), files);
+            }
+        }
+    }
+
+    public static List<String> generateFileList(String dir_name, String targetDBName, boolean wrapCode) throws IOException {
         List<String> listNames = new ArrayList<String>();
 
-        System.out.println("Obtaining a list of files");
-
-        // find . -not -path "*/\.*" -type f -name "*.java"
-        String fileType;
-        if (wrapCode == true) {
-            fileType = "*.map";
-        } else {
-            fileType = "*.java";
-        }
-        ProcessBuilder builder = new ProcessBuilder("find", 
-                dir_name.substring(0, dir_name.length()-1), 
-                "-not", "-path", "*/\\.*",
-                "-type", "f", "-name", fileType);
-        builder.redirectErrorStream(true);
-        Process process = builder.start();
-
-        InputStream is = process.getInputStream();
-        InputStreamReader isr = new InputStreamReader(is);
-        BufferedReader br = new BufferedReader(isr);
-        String line;
-        while ((line = br.readLine()) != null) {
-            listNames.add(line);
-        }
-        is.close();
-        isr.close();
-        br.close();
+        listf(dir_name, listNames);
         System.out.println("Done obtaining list of files!");
 
         // Serialize file and write to file
-        serializeToFile(filePath,listNames);
+        serializeToFile(dir_name + targetDBName,listNames);
 
         return listNames;
 
@@ -112,14 +106,15 @@ public class Database {
 
     public static List<String> getFileList(String dir_name, boolean wrapCode) throws IOException {
         List<String> fileList = new ArrayList<String>();
-        Path dir = FileSystems.getDefault().getPath( dir_name );
-        DirectoryStream<Path> stream = Files.newDirectoryStream( dir);
+        Path dir = FileSystems.getDefault().getPath(dir_name);
+        DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
         for (Path path : stream) {
 
             String absPath = path.toString();
             if (Files.isDirectory(path)) {
-                // directory
+                // directory, callback this function to do it recursively
                 List<String> new_file_list = getFileList(absPath, wrapCode);
+                System.out.println(new_file_list);
                 fileList.addAll(new_file_list);
             } else {
                 // file, check for the extension
@@ -257,7 +252,8 @@ public class Database {
 
         ArrayList<String> errorList = new ArrayList<String>();
 
-        System.out.println("\nTokenizing a total of " + fileList.size() + " files");
+        System.out.println("\nTokenizing a total of " + fileList.size() + " files from:");
+        System.out.println(dir_name);
         int counter = 1;
         for (String absPath : fileList) {
             // debug message
