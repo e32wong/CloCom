@@ -28,6 +28,7 @@ class RunnableDemo implements Callable<ArrayList<Result>> {
 
     @Override
     public ArrayList<Result> call() throws Exception {
+        run();
         return result;
     }
 
@@ -59,7 +60,6 @@ class RunnableDemo implements Callable<ArrayList<Result>> {
         //    t = new Thread (this, threadName);
         //    t.start ();
         //}
-        run();
     }
 
 
