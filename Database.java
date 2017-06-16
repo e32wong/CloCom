@@ -37,13 +37,16 @@ public class Database {
 
     public static void listf(String directoryName, List<String> files) {
         File directory = new File(directoryName);
-
+        String extName = ".java";
         // get all the files from a directory
         File[] fList = directory.listFiles();
         for (File file : fList) {
             if (file.isFile()) {
                 //System.out.println(file);
-                files.add(file.toString());
+                String strFileName = file.toString();
+                if (strFileName.endsWith(extName)) {
+                    files.add(strFileName);
+                }
             } else if (file.isDirectory()) {
                 listf(file.getAbsolutePath(), files);
             }

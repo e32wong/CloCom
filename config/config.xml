@@ -12,10 +12,10 @@
         <aprioriMinSupport>5</aprioriMinSupport>
     </frequencySet>
     <projects>
-        <project>/home/edmund/research/autocomment/projects/java/test/</project>
-        <database>/home/edmund/research/autocomment/posts/stage4-nlpProcessed/test2/</database>
-        <databaseFormat>1</databaseFormat>
-        <outputDir>/home/edmund/research/autocomment/results/java/freecol/</outputDir>
+        <project>/home/edmund/research/clocom/cloneCode/test1/</project>
+        <database>/home/edmund/research/clocom/cloneCode/test2/</database>
+        <databaseFormat>0</databaseFormat>
+        <outputDir>/home/edmund/research/clocom/output/</outputDir>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <buildDatabase>true</buildDatabase>
         <buildTFIDF>false</buildTFIDF>

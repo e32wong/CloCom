@@ -79,11 +79,16 @@ public class CommentParser {
                 try (BufferedReader br = new BufferedReader(new FileReader(absPath))) {
                     String line = br.readLine();
                     if (!line.equals("//")) {
-                        ArrayList<String> listSentences = Analyze.splitParagraph(line.substring(2));
-                        for (String s : listSentences) {
-                            CommentMap c1 = new CommentMap(s, 0, 0, 1);
-                            commentMap.add(c1);
+                        try {
+                            ArrayList<String> listSentences = Analyze.splitParagraph(line.substring(2));
+                            for (String s : listSentences) {
+                                CommentMap c1 = new CommentMap(s, 0, 0, 1);
+                                commentMap.add(c1);
+                            }
+                        } catch (Exception e) {
+                            System.out.println("Exception on first line parsing, expecting // format for the db");
                         }
+
                     }
                     line = br.readLine();
                     if (!line.equals("//")) {
@@ -95,6 +100,7 @@ public class CommentParser {
                     }
                 } catch (Exception e) {
                     System.out.println("Exception in CommentParser format 1");
+                    System.out.println(e);
                 }
 
             } else if (format == 0) {
