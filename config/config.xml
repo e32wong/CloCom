@@ -7,6 +7,7 @@
         <matchMode>0</matchMode>
         <gapSize>2</gapSize>
         <meshBlockSize>100000</meshBlockSize>
+        <numberThreads>0</numberThreads>
     </matching>
     <frequencySet>
         <aprioriMinSupport>5</aprioriMinSupport>
@@ -19,7 +20,6 @@
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <buildDatabase>true</buildDatabase>
         <buildTFIDF>false</buildTFIDF>
-        <enableMapExt>true</enableMapExt>
     </projects>
     <outputSettings>
         <debug>false</debug>

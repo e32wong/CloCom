@@ -53,7 +53,7 @@ public class Database {
         }
     }
 
-    public static List<String> generateFileList(String dir_name, String targetDBName, boolean wrapCode) throws IOException {
+    public static List<String> generateFileList(String dir_name, String targetDBName) throws IOException {
         List<String> listNames = new ArrayList<String>();
 
         listf(dir_name, listNames);

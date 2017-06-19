@@ -99,7 +99,7 @@ public class CloneDigger {
         boolean enableRepetitive = config.enableRepetitive;
         boolean enableOneMethod = config.enableOneMethod;
         boolean buildTFIDF = config.buildTFIDF;
-        boolean enableMapExt = config.enableMapExt;
+        int numberThreads = config.numberThreads;
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
         int aprioriMinSupport = config.aprioriMinSupport;
         boolean enableQuery = config.enableQuery;
@@ -128,7 +128,7 @@ public class CloneDigger {
             databaseFileList = Database.loadFileList(databaseFilePaths);
         } else {
             // doesn't exist or forced to create new one, create it
-            databaseFileList = Database.generateFileList(databaseDir, "cachedList.tmp", enableMapExt);
+            databaseFileList = Database.generateFileList(databaseDir, "cachedList.tmp");
         }
 
         // td-idf
@@ -218,7 +218,7 @@ public class CloneDigger {
                 // perform the comparison
                 Compare comp = new Compare(minNumLines, databaseDir, projectDir);
                 comp.installTextFiles(project_TextList, databaseFileList);
-                comp.compareBetween(output, matchAlgorithm, gapSize);
+                comp.compareBetween(output, matchAlgorithm, gapSize, numberThreads);
                 if (exportResults) {
                     output.saveResults(resultPath);
                 }

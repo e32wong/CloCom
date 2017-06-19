@@ -33,20 +33,20 @@ class RunnableDemo implements Callable<ArrayList<Result>> {
     }
 
     public void run() {
-        System.out.println("Running " +  threadName );
+        //System.out.println("Running " +  threadName );
 		for (int j = 0; j < projectTextList.size(); j++) {
 			// inner loop is the project
 			Text text2 = projectTextList.get(j);
 			ArrayList<Result> resultInner = TextCompare.textCompare(text2, text1, mode, gapSize, minNumLines, projectDir, databaseDir);
             result.addAll(resultInner);
 		}
-        System.out.println("Thread " +  threadName + " exiting.");
+        //System.out.println("Thread " +  threadName + " exiting.");
     }
 
     public RunnableDemo( String name, ArrayList<Text> projectTextListIn, Text text1In,
                 int modeIn, int gapSizeIn, int minNumLinesIn, String projectDirIn, String databaseDirIn) {
         threadName = name;
-        System.out.println("Creating " +  threadName );
+        //System.out.println("Creating " +  threadName );
 
 		projectTextList = projectTextListIn;
 		text1 = text1In;
@@ -56,7 +56,7 @@ class RunnableDemo implements Callable<ArrayList<Result>> {
         projectDir = projectDirIn;
         databaseDir = databaseDirIn;
         result = new ArrayList<Result>();
-        System.out.println("Starting " +  threadName );
+        //System.out.println("Starting " +  threadName );
         //if (t == null) {
         //    t = new Thread (this, threadName);
         //    t.start ();

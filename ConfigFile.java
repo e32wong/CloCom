@@ -31,7 +31,7 @@ public class ConfigFile{
     public boolean enableRepetitive = false;
     public boolean enableOneMethod = false;
     public boolean buildTFIDF = false;
-    public boolean enableMapExt = false;
+    public int numberThreads = 0;
     public boolean loadDatabaseFilePaths = false;
     public int aprioriMinSupport = 0;
     public boolean enableQuery = false;
@@ -164,6 +164,16 @@ public class ConfigFile{
         meshBlockSize = Integer.parseInt(value);
         System.out.println("Mesh matching block size: " + meshBlockSize);
 
+        nl2 = firstNode.getElementsByTagName("numberThreads");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        numberThreads = Integer.parseInt(value);
+        if (numberThreads < 0) {
+            System.out.println("Invalid number of threads, must be 0 or larger");
+            System.exit(0);
+        }
+        System.out.println("Number of threads: " + value);
+
         nl2 = firstNode.getElementsByTagName("gapSize");
         secondNode = (Element) nl2.item(0);
         value = secondNode.getFirstChild().getNodeValue();
@@ -256,19 +266,6 @@ public class ConfigFile{
             System.exit(0);
         }
         System.out.println("Build tf-idf: " + buildTFIDF);
-
-        nl2 = firstNode.getElementsByTagName("enableMapExt");
-        secondNode = (Element) nl2.item(0);
-        value = secondNode.getFirstChild().getNodeValue();
-        if (value.equals("true")) {
-            enableMapExt = true;
-        } else if (value.equals("false")) {
-            enableMapExt = false;
-        } else {
-            System.out.println("Invalid enableMapExt option, must be true/false");
-            System.exit(0);
-        }
-        System.out.println("Search for files with map extension: " + enableMapExt);
 
         nl2 = firstNode.getElementsByTagName("loadDatabaseFilePaths");
         secondNode = (Element) nl2.item(0);

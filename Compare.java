@@ -116,15 +116,14 @@ public class Compare {
 
         System.out.println("");
     }
-    public void compareBetween (Output outputObject, int mode, int gapSize) {
+    public void compareBetween (Output outputObject, int mode, int gapSize, int numberThreads) {
 
         result = outputObject;
 
         System.out.println("\nComparing against " + databasePaths.size() + " database files");
 
-        boolean enableThread = true;
-        if (enableThread) {
-            // fill up the initial cpu
+        if (numberThreads > 0) {
+            System.out.println("Number of threads depends on the total number of database files");
             int numberCPU = 4;
             int processedNumber = 0;
             while (processedNumber < databasePaths.size()) {
@@ -160,6 +159,7 @@ public class Compare {
                 System.out.print((processedNumber+1) + "\r");
             }
         } else {
+            System.out.println("Disabled therading");
 			for (int i = 0; i < databasePaths.size(); i++) {
 				// outer loop is the database
 				Text text1 = Database.loadSingleFile(databasePaths.get(i), databaseDir, minNumLines, false);
