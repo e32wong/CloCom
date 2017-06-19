@@ -54,7 +54,7 @@ numberThreads - 0 to disable multithreading, else specify the number of cores
 debug - turn on debug statements
 removeEmpty - remove the display of clones that doesn't have a comment
 buildDatabase - choose if we want to retokenize the database directory
-loadDatabaseFilePaths - this allows loading of the database files' paths from a cached file
+loadDatabaseFilePaths - this allows loading of the database files' paths from a cached file, if the cache is outdated it will automatically update it
 
 Please use commit
 f89b780bac5ea7322633550c29fffd3c199e1f2e
