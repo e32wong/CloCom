@@ -117,7 +117,7 @@ public class Database {
             if (Files.isDirectory(path)) {
                 // directory, callback this function to do it recursively
                 List<String> new_file_list = getFileList(absPath, wrapCode);
-                System.out.println(new_file_list);
+                //System.out.println(new_file_list);
                 fileList.addAll(new_file_list);
             } else {
                 // file, check for the extension

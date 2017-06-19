@@ -37,7 +37,8 @@ class RunnableDemo implements Callable<ArrayList<Result>> {
 		for (int j = 0; j < projectTextList.size(); j++) {
 			// inner loop is the project
 			Text text2 = projectTextList.get(j);
-			result = TextCompare.textCompare(text2, text1, mode, gapSize, minNumLines, projectDir, databaseDir);
+			ArrayList<Result> resultInner = TextCompare.textCompare(text2, text1, mode, gapSize, minNumLines, projectDir, databaseDir);
+            result.addAll(resultInner);
 		}
         System.out.println("Thread " +  threadName + " exiting.");
     }
@@ -54,7 +55,7 @@ class RunnableDemo implements Callable<ArrayList<Result>> {
         minNumLines = minNumLinesIn;
         projectDir = projectDirIn;
         databaseDir = databaseDirIn;
-
+        result = new ArrayList<Result>();
         System.out.println("Starting " +  threadName );
         //if (t == null) {
         //    t = new Thread (this, threadName);

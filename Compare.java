@@ -122,44 +122,59 @@ public class Compare {
 
         System.out.println("\nComparing against " + databasePaths.size() + " database files");
 
-        for (int i = 0; i < databasePaths.size(); i++) {
-            // outer loop is the database
-            Text text1 = Database.loadSingleFile(databasePaths.get(i), databaseDir, minNumLines, false);
+        boolean enableThread = true;
+        if (enableThread) {
+            // fill up the initial cpu
+            int numberCPU = 4;
+            int processedNumber = 0;
+            while (processedNumber < databasePaths.size()) {
+                // try load four cpu
+                ExecutorService executor = Executors.newWorkStealingPool();
+                Set<Callable<ArrayList<Result>>> callables = new HashSet<Callable<ArrayList<Result>>>();
+                
+                for (int i = 0; i < numberCPU && processedNumber < databasePaths.size(); i++) {
+                    Text text1 = Database.loadSingleFile(databasePaths.get(processedNumber), databaseDir, minNumLines, false);
+                    callables.add(new RunnableDemo("Thread-" + Integer.toString(processedNumber), projectTextList,
+                                        text1, mode, gapSize, minNumLines, projectDir, databaseDir));
+                    processedNumber = processedNumber + 1;
+                }
 
-            //ExecutorService es = Executors.newSingleThreadExecutor();
-            ExecutorService executor = Executors.newWorkStealingPool();
-            Set<Callable<ArrayList<Result>>> callables = new HashSet<Callable<ArrayList<Result>>>();
-
-            callables.add(new RunnableDemo("Thread-1", projectTextList,
-                                text1, mode, gapSize, minNumLines, projectDir, databaseDir));
-            try {
-                ArrayList<Result> threadResult = executor.invokeAny(callables);
-				result = importResults(result, threadResult);
-				executor.shutdown();
-            } catch (InterruptedException e) {
-                System.out.println("Interrupted thread exception");
-            } catch (ExecutionException e) {
-                System.out.println("Execution exception in thread");
-            } finally {
-                executor.shutdownNow();
+                // invoke and close everything
+                try {
+                    List<Future<ArrayList<Result>>> futures = executor.invokeAll(callables);
+                    for (Future<ArrayList<Result>> future : futures) {
+                        ArrayList<Result> threadResult = future.get();
+                        result = importResults(result, threadResult);
+                    }
+                } catch (InterruptedException e) {
+                    System.out.println("Interrupted thread exception");
+                    System.out.println(e.getMessage());
+                } catch (ExecutionException e) {
+                    System.out.println("Execution exception in thread");
+                    System.out.println(e.getMessage());
+                    e.printStackTrace(System.out);
+                } finally {
+                    executor.shutdownNow();
+                }
+                executor.shutdown();
+                System.out.print((processedNumber+1) + "\r");
             }
+        } else {
+			for (int i = 0; i < databasePaths.size(); i++) {
+				// outer loop is the database
+				Text text1 = Database.loadSingleFile(databasePaths.get(i), databaseDir, minNumLines, false);
 
-            //Future futureResult = es.submit(new RunnableDemo("Thread-1", projectTextList, 
-            //        text1, mode, gapSize, minNumLines, projectDir, databaseDir));
-            /*try {
-                ArrayList<Result> threadResult = (ArrayList<Result>)futureResult.get();
-                result = importResults(result, threadResult);
-            } catch (InterruptedException e) {
-                System.out.println("Interrupted thread exception");
-            } catch (ExecutionException e) {
-                System.out.println("Execution exception in thread");
-            } finally {
-                es.shutdownNow();
-            }*/
-
-            System.out.print((i+1) + "\r");
+				for (int j = 0; j < projectTextList.size(); j++) {
+					// inner loop is the project
+                    
+                    Text text2 = projectTextList.get(j);
+                    ArrayList<Result> threadResult =
+                            TextCompare.textCompare(text2, text1, mode, gapSize, minNumLines, projectDir, databaseDir);
+					result = importResults(result, threadResult);
+				}
+				System.out.print((i+1) + "\r");
+			}
         }
-        System.out.println("");
     }
 }
 
