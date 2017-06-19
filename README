@@ -42,7 +42,7 @@ the respective generated comment.
 
 NOTES.
 
-databaseFormat - 0 for standard source, 1 for autocomment format
+databaseFormat - 0 for standard Java source code, 1 for autocomment format
 
 minNumLines - number of statements a clone should have
 matchAlgorithm - 1 for gapped, 0 for non-gapped
@@ -53,6 +53,7 @@ meshBlockSize - number of source code files to load into memory for full mesh
 debug - turn on debug statements
 removeEmpty - remove the display of clones that doesn't have a comment
 buildDatabase - choose if we want to retokenize the database directory
+loadDatabaseFilePaths - this allows loading of the database files' paths from a cached file
 
 Please use commit
 f89b780bac5ea7322633550c29fffd3c199e1f2e
