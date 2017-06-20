@@ -249,7 +249,8 @@ public class Database {
         }
         return txt;
     }
-
+    
+    // tokenizes files
     public static ArrayList<String> constructCache(int minNumLines,
             boolean debug, List<String> fileList, String dir_name) {
 

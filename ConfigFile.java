@@ -21,7 +21,7 @@ public class ConfigFile{
     public int meshBlockSize = 0;
     public boolean debug = false;
     public boolean removeEmpty = false;
-    public boolean buildDatabase = false;
+    public boolean forceRetokenization = true;
     public int gapSize = 0;
     public String resultPath = null;
     public boolean exportResults = false;
@@ -241,18 +241,18 @@ public class ConfigFile{
         outputDir = secondNode.getFirstChild().getNodeValue();
         System.out.println("Output path: " + outputDir);
 
-        nl2 = firstNode.getElementsByTagName("buildDatabase");
+        nl2 = firstNode.getElementsByTagName("forceRetokenization");
         secondNode = (Element) nl2.item(0);
         value = secondNode.getFirstChild().getNodeValue();
         if (value.equals("true")) { 
-            buildDatabase = true; 
+            forceRetokenization = true; 
         } else if (value.equals("false")) { 
-            buildDatabase = false; 
+            forceRetokenization = false; 
         } else { 
-            System.out.println("Invalid buildDatabase option, must be true/false"); 
+            System.out.println("Invalid forceRetokenization option, must be true/false"); 
             System.exit(0); 
         }
-        System.out.println("Build database: " + buildDatabase);
+        System.out.println("Build database: " + forceRetokenization);
 
         nl2 = firstNode.getElementsByTagName("buildTFIDF");
         secondNode = (Element) nl2.item(0);

@@ -18,7 +18,7 @@
         <databaseFormat>0</databaseFormat>
         <outputDir>/home/edmund/research/clocom/output/</outputDir>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
-        <buildDatabase>true</buildDatabase>
+        <forceRetokenization>true</forceRetokenization>
         <buildTFIDF>false</buildTFIDF>
     </projects>
     <outputSettings>

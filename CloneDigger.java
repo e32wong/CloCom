@@ -90,7 +90,6 @@ public class CloneDigger {
         String outputDir = config.outputDir;
         boolean debug = config.debug;
         boolean removeEmpty = config.removeEmpty;
-        boolean buildDatabase = config.buildDatabase;
         String resultPath = config.resultPath;
         boolean exportResults = config.exportResults;
         boolean loadResults = config.loadResults;
@@ -100,6 +99,7 @@ public class CloneDigger {
         boolean enableOneMethod = config.enableOneMethod;
         boolean buildTFIDF = config.buildTFIDF;
         int numberThreads = config.numberThreads;
+        boolean forceRetokenization = config.forceRetokenization;
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
         int aprioriMinSupport = config.aprioriMinSupport;
         boolean enableQuery = config.enableQuery;
@@ -119,15 +119,16 @@ public class CloneDigger {
         // Measure elapsed time
         long startTime = System.nanoTime();
 
-        // check if a cached list of files exist
+        // Cached list of files from the database
         String databaseFilePaths = databaseDir + "cachedList.tmp";
         File f = new File(databaseFilePaths);
         List<String> databaseFileList;
+        // Check if an existing cache file exists
         if(f.exists() && !f.isDirectory() && loadDatabaseFilePaths == true) {
             // exist, load it
             databaseFileList = Database.loadFileList(databaseFilePaths);
         } else {
-            // doesn't exist or forced to create new one, create it
+            // doesn't exist or forced to create new path file, create it
             databaseFileList = Database.generateFileList(databaseDir, "cachedList.tmp");
         }
 
@@ -152,7 +153,7 @@ public class CloneDigger {
                 ArrayList<Text> database_TextList = new ArrayList<Text>();
 
                 // build the database
-                if (buildDatabase) {
+                if (forceRetokenization) {
                     ArrayList<String> temp = Database.constructCache(
                             minNumLines, debug, databaseFileList, databaseDir);
                     errorList.addAll(temp);
@@ -201,7 +202,7 @@ public class CloneDigger {
                 temp = Database.constructCache(minNumLines, debug, projectFilePaths, projectDir);
                 errorList.addAll(temp);
 
-                if (buildDatabase) {
+                if (forceRetokenization) {
                     temp = Database.constructCache(minNumLines, debug, databaseFileList, databaseDir);
                     errorList.addAll(temp);
                 }
