@@ -250,6 +250,16 @@ public class Database {
         return txt;
     }
     
+    public static boolean checkTokenized(String fileAbsPath) {
+        String fileDbPath = Text.getDBpath(fileAbsPath);
+        File f = new File(fileDbPath);
+        if (f.exists() && !f.isDirectory()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     // tokenizes files
     public static ArrayList<String> constructCache(int minNumLines,
             boolean debug, List<String> fileList, String dir_name) {
@@ -260,20 +270,30 @@ public class Database {
         System.out.println(dir_name);
         int counter = 1;
         for (String absPath : fileList) {
-            // debug message
-            if (debug == true) {
-                System.out.println("\n>> Tokenizing file #" + counter + "\n" + absPath);
-                System.out.println();
+
+            // check if it exists
+            boolean exist = checkTokenized(absPath);
+            if (exist == false) {
+
+                // debug message
+                if (debug == true) {
+                    System.out.println("\n>> Tokenizing file #" + counter + "\n" + absPath);
+                    System.out.println();
+                } else {
+                    System.out.print(counter + "\r");
+                }
+
+                Text txt = new Text(absPath, dir_name);
+                errorList = txt.tokenize(minNumLines, debug, errorList, dir_name);
+
+                // Serialize file and write to file
+                serializeToFile(Text.getDBpath(absPath), txt);
             } else {
-                System.out.print(counter + "\r");
+                if (debug == true) {
+                    System.out.println("Already tokenized, skipping:");
+                    System.out.println(absPath);
+                }
             }
-
-            Text txt = new Text(absPath, dir_name);
-            errorList = txt.tokenize(minNumLines, debug, errorList, dir_name);
-
-            // Serialize file and write to file
-            serializeToFile(Text.getDBpath(absPath), txt);
-
             counter++;
         }
 

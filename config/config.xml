@@ -22,7 +22,7 @@
         <buildTFIDF>false</buildTFIDF>
     </projects>
     <outputSettings>
-        <debug>false</debug>
+        <debug>true</debug>
         <removeEmpty>false</removeEmpty>
         <exportResults>false</exportResults>
         <resultPath></resultPath>
