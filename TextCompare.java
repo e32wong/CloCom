@@ -217,6 +217,7 @@ public class TextCompare {
                                     statementRaw1, file1Start, file1End,
                                     statementRaw2, file2Start, file2End,
                                     totalHashValue));
+
                         }
                     }
                 }

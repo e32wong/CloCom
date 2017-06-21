@@ -132,9 +132,11 @@ public class Compare {
                 Set<Callable<ArrayList<Result>>> callables = new HashSet<Callable<ArrayList<Result>>>();
                 
                 for (int i = 0; i < numberCPU && processedNumber < databasePaths.size(); i++) {
+
                     Text text1 = Database.loadSingleFile(databasePaths.get(processedNumber), databaseDir, minNumLines, false);
                     callables.add(new RunnableDemo("Thread-" + Integer.toString(processedNumber), projectTextList,
                                         text1, mode, gapSize, minNumLines, projectDir, databaseDir));
+
                     processedNumber = processedNumber + 1;
                 }
 
@@ -170,6 +172,7 @@ public class Compare {
                     Text text2 = projectTextList.get(j);
                     ArrayList<Result> threadResult =
                             TextCompare.textCompare(text2, text1, mode, gapSize, minNumLines, projectDir, databaseDir);
+
 					result = importResults(result, threadResult);
 				}
 				System.out.print((i+1) + "\r");

@@ -271,7 +271,9 @@ public class Output {
                     writer.close();
                     numMatchesWithComment++;
                 } catch (Exception e) {
-                    System.out.println("Error in Output.java");
+                    System.out.println("Error in Output.java case 1");
+                    System.out.println(e.getMessage());
+                    e.printStackTrace();
                 }
             } else {
                 try {
@@ -290,7 +292,9 @@ public class Output {
                     numMatchesWithComment++;
 
                 } catch (Exception e) {
-                    System.out.println("Error in Output.java");
+                    System.out.println("Error in Output.java case 2");
+                    System.out.println(e.getMessage());
+                    e.printStackTrace();
                 }
             }
 

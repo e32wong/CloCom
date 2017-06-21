@@ -35,6 +35,7 @@ public class CloneDigger {
         File toFile = new File(outputFile);
 
         try {
+            // cleans the directory without deleting it
             FileUtils.cleanDirectory(toDir); 
             Files.copy(from.toPath(), toFile.toPath());
         } catch (Exception e) {
@@ -153,11 +154,9 @@ public class CloneDigger {
                 ArrayList<Text> database_TextList = new ArrayList<Text>();
 
                 // build the database
-                if (forceRetokenization) {
-                    ArrayList<String> temp = Database.constructCache(
-                            minNumLines, debug, databaseFileList, databaseDir);
-                    errorList.addAll(temp);
-                }
+                ArrayList<String> temp = Database.constructCache(
+                        minNumLines, debug, databaseFileList, databaseDir, forceRetokenization);
+                errorList.addAll(temp);
 
                 // Capture time
                 cal = Calendar.getInstance();
@@ -199,13 +198,11 @@ public class CloneDigger {
                 List<String> projectFilePaths = Database.getFileList(projectDir, false);
 
                 ArrayList<String> temp;
-                temp = Database.constructCache(minNumLines, debug, projectFilePaths, projectDir);
+                temp = Database.constructCache(minNumLines, debug, projectFilePaths, projectDir, forceRetokenization);
                 errorList.addAll(temp);
 
-                if (forceRetokenization) {
-                    temp = Database.constructCache(minNumLines, debug, databaseFileList, databaseDir);
-                    errorList.addAll(temp);
-                }
+                temp = Database.constructCache(minNumLines, debug, databaseFileList, databaseDir, forceRetokenization);
+                errorList.addAll(temp);
 
                 // only load the projects into memory
                 System.out.println("\nLoading a total of " + projectFilePaths.size() + 

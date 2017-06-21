@@ -262,7 +262,7 @@ public class Database {
 
     // tokenizes files
     public static ArrayList<String> constructCache(int minNumLines,
-            boolean debug, List<String> fileList, String dir_name) {
+            boolean debug, List<String> fileList, String dir_name, boolean forceToken) {
 
         ArrayList<String> errorList = new ArrayList<String>();
 
@@ -273,7 +273,7 @@ public class Database {
 
             // check if it exists
             boolean exist = checkTokenized(absPath);
-            if (exist == false) {
+            if (exist == false || forceToken == true) {
 
                 // debug message
                 if (debug == true) {
