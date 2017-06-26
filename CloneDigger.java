@@ -104,7 +104,7 @@ public class CloneDigger {
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
         int aprioriMinSupport = config.aprioriMinSupport;
         boolean enableQuery = config.enableQuery;
-        int format = config.databaseFormat;
+        //int databaseFormat = config.databaseFormat;
 
         // done parsing
         System.out.println("Finished parsing XML parameters");
@@ -147,7 +147,6 @@ public class CloneDigger {
 
         Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod, matchMode, outputDir);
         if (matchMode == 1) {
-            System.out.println("Begin full mesh comparison");
             // full mesh comparison
             if (loadResults == false) {
                 System.out.println("Mode: full mesh");
@@ -179,7 +178,7 @@ public class CloneDigger {
                 output.search(outputDir);
             }
 
-            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, format, debug);
+            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, debug);
             /*
             // Frequency Map of all terms
             FrequencyMap fMap = new FrequencyMap(aprioriMinSupport);
@@ -188,7 +187,6 @@ public class CloneDigger {
             */
         } else {
             // Between comparison
-            System.out.println("Begin between comparison");
             if (loadResults == false) {
                 // between comparison
                 System.out.println("Mode: between comparison");
@@ -224,7 +222,7 @@ public class CloneDigger {
                 output.loadResults(resultPath);
             }
 
-            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, format, debug);
+            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, debug);
         }
 
         // Display all the errors

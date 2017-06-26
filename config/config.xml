@@ -15,6 +15,7 @@
     <projects>
         <project>/home/edmund/research/clocom/cloneCode/test1/</project>
         <database>/home/edmund/research/clocom/cloneCode/test2/</database>
+        <autocommentDB>/home/edmund/research/clocom/cloneCode/test3/</autocommentDB>
         <databaseFormat>0</databaseFormat>
         <outputDir>/home/edmund/research/clocom/output/</outputDir>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>

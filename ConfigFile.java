@@ -152,10 +152,10 @@ public class ConfigFile{
             System.out.println("Invalid matching mode, must be 1 (mesh) or 0 (between)");
             System.exit(0);
         }
-        if (matchMode == 1) {
-            System.out.println("Match Mode: Between Comparison -" + matchMode);
+        if (matchMode == 0) {
+            System.out.println("Match Mode: Between Comparison - " + matchMode);
         } else {
-            System.out.println("Match Mode: Full Mesh Comparison -" + matchMode);
+            System.out.println("Match Mode: Full Mesh Comparison - " + matchMode);
         }
 
         nl2 = firstNode.getElementsByTagName("meshBlockSize");
@@ -221,6 +221,7 @@ public class ConfigFile{
         database = secondNode.getFirstChild().getNodeValue();
         System.out.println("Database path: " + database);
 
+        /*
         nl2 = firstNode.getElementsByTagName("databaseFormat");
         secondNode = (Element) nl2.item(0);
         value = secondNode.getFirstChild().getNodeValue();
@@ -229,7 +230,13 @@ public class ConfigFile{
             System.out.println("Invalid database format, must be 0 (source) or 1 (autocomment)");
             System.exit(0);
         }
-        System.out.println("Apriori Minimum Support: " + aprioriMinSupport);
+        if (databaseFormat == 0) {
+            System.out.println("Database format: source code");
+        } else if (databaseFormat == 1) {
+            System.out.println("Database format: autocomment");
+        } else if (databaseFormat == 2) {
+            System.out.println("Database format: source code + autocomment");
+        }*/
 
         nl2 = firstNode.getElementsByTagName("project");
         secondNode = (Element) nl2.item(0);

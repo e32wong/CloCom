@@ -425,9 +425,20 @@ public class MatchGroup implements Serializable {
 
     }
 
-    public void mapCode2Comment(int format) {
+    private int checkIsJava(String filePath) {
+        String extension = filePath.substring(filePath.length()-5);
+        if (extension.equals(".java")) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+
+    public void mapCode2Comment() {
+        
         for (MatchInstance thisMatch : masterList) {
             String filePath = thisMatch.fileName;
+            int format = checkIsJava(filePath);
             int startLine = thisMatch.startLine;
             int endLine = thisMatch.endLine;
 
@@ -435,6 +446,7 @@ public class MatchGroup implements Serializable {
             CommentParser cParser = new CommentParser(filePath);
             ArrayList<CommentMap> commentList = new ArrayList<CommentMap>();
             if (format == 0) {
+                // source code format
                 cParser.parseComment(filePath, startLine, endLine, 0, 0);
             }
 
@@ -449,6 +461,7 @@ public class MatchGroup implements Serializable {
 
         for (MatchInstance thisMatch : cloneList) {
             String filePath = thisMatch.fileName;
+            int format = checkIsJava(filePath);
             int startLine = thisMatch.startLine;
             int endLine = thisMatch.endLine;
 
@@ -458,6 +471,7 @@ public class MatchGroup implements Serializable {
 
             // remove in-line comments
             if (format == 0) {
+                // source code format
                 commentList = removeInline(commentList, filePath);
                 commentList = groupNormalizeComment(commentList);
             }
@@ -625,7 +639,7 @@ public class MatchGroup implements Serializable {
         return totalHashValue;
     }
 
-    public void findClones(HashSet<String> inputTerms, String outputDir, int format) {
+    public void findClones(HashSet<String> inputTerms, String outputDir) {
 
         HashSet<String> matchGroupTerms = dumpTerms();
         boolean allExist = true;
@@ -637,7 +651,7 @@ public class MatchGroup implements Serializable {
         }
 
         if (allExist) {
-            mapCode2Comment(format);
+            mapCode2Comment();
             try {
                 PrintWriter writer = new PrintWriter(outputDir + Integer.toString(1) + "-full", "UTF-8");
                 printAllMappings(true, 1, 1, outputDir, writer);
