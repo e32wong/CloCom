@@ -3,7 +3,7 @@
 <configuration>
     <matching>
         <minNumLines>5</minNumLines>
-        <matchAlgorithm>0</matchAlgorithm>
+        <matchAlgorithm>1</matchAlgorithm>
         <matchMode>0</matchMode>
         <gapSize>2</gapSize>
         <meshBlockSize>100000</meshBlockSize>

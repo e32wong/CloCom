@@ -34,6 +34,7 @@ public class Output {
     boolean enableOneMethod;
     int matchMode;
     String outputDir;
+    boolean debug = false;
 
     public Output (int alogrithm, 
             boolean enableRepetitiveIn, 
@@ -90,9 +91,15 @@ public class Output {
             // require at least one method call
             if (enableOneMethod) {
                 if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), 1) == false) {
+                    if (debug) {
+                	    System.out.println("Revmoed from lack of method call");
+                    }
                     return;
                 }
                 if (Analyze.checkNumMethods(statementRaw2.subList(statementStart2, statementEnd2), 1) == false) {
+                    if (debug) {
+					    System.out.println("Revmoed from lack of method call");
+                    }
                     return;
                 }
             }
@@ -118,6 +125,9 @@ public class Output {
                 //System.out.println(file2);
                 //System.out.println(lineEnd2 + " "  + lineStart2 + "= " + sizeMatched + " X " + size);
                 if (percentage < 60) {
+                    if (debug) {
+					    System.out.println("Revmoed from lack of % matching");
+                    }
                     return;
                 }
             }
@@ -237,7 +247,9 @@ public class Output {
             boolean enableSimilarity,
             int matchMode,
             boolean debug) {
-
+        if (debug) {
+            System.out.println("Inside printResults()");
+        }
         DescriptiveStatistics statsInternalClones = new DescriptiveStatistics();
         DescriptiveStatistics statsExternalClones = new DescriptiveStatistics();
         int sumInternalClones = 0;
@@ -249,6 +261,9 @@ public class Output {
         int matchIndex = 0;
         int outputIndex = 1;
         for (Integer key : matchGroupList.keySet()) {
+            if (debug) {
+                System.out.println("Printing one result");
+            }
             MatchGroup thisMatchGroup = matchGroupList.get(key);
             thisMatchGroup.mapCode2Comment();
             thisMatchGroup.pruneComments(similarityRange, enableSimilarity, debug);

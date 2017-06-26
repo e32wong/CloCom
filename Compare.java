@@ -116,7 +116,7 @@ public class Compare {
 
         System.out.println("");
     }
-    public void compareBetween (Output outputObject, int mode, int gapSize, int numberThreads) {
+    public Output compareBetween (Output outputObject, int mode, int gapSize, int numberThreads) {
 
         result = outputObject;
 
@@ -178,6 +178,7 @@ public class Compare {
 				System.out.print((i+1) + "\r");
 			}
         }
+        return result;
     }
 }
 

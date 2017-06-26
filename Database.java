@@ -37,14 +37,15 @@ public class Database {
 
     public static void listf(String directoryName, List<String> files) {
         File directory = new File(directoryName);
-        String extName = ".java";
+        String extName1 = ".java";
+        String extName2 = ".autocom";
         // get all the files from a directory
         File[] fList = directory.listFiles();
         for (File file : fList) {
             if (file.isFile()) {
                 //System.out.println(file);
                 String strFileName = file.toString();
-                if (strFileName.endsWith(extName)) {
+                if (strFileName.endsWith(extName1) || strFileName.endsWith(extName2)) {
                     files.add(strFileName);
                 }
             } else if (file.isDirectory()) {

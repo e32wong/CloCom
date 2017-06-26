@@ -214,7 +214,7 @@ public class CloneDigger {
                 // perform the comparison
                 Compare comp = new Compare(minNumLines, databaseDir, projectDir);
                 comp.installTextFiles(project_TextList, databaseFileList);
-                comp.compareBetween(output, matchAlgorithm, gapSize, numberThreads);
+                output = comp.compareBetween(output, matchAlgorithm, gapSize, numberThreads);
                 if (exportResults) {
                     output.saveResults(resultPath);
                 }

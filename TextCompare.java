@@ -7,7 +7,6 @@ public class TextCompare {
     public static ArrayList<Result> textCompare(Text text1, Text text2, 
             int mode, int gapSize, int minNumLines, String projectDir, String databaseDir) {
         ArrayList<Result> resultMaster = new ArrayList<Result>();
-
         for (int k = 0; k < text1.getNumMethods(); k++) {
             for (int l = 0; l < text2.getNumMethods(); l++) {
                 if (mode == 0) {
@@ -217,7 +216,6 @@ public class TextCompare {
                                     statementRaw1, file1Start, file1End,
                                     statementRaw2, file2Start, file2End,
                                     totalHashValue));
-
                         }
                     }
                 }
