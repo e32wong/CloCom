@@ -32,6 +32,8 @@ public class ConfigFile{
     public boolean enableOneMethod = false;
     public boolean buildTFIDF = false;
     public int numberThreads = 0;
+    public int minNumberStatements = 0;
+    public boolean enablePercentageMatching = false;
     public boolean loadDatabaseFilePaths = false;
     public int aprioriMinSupport = 0;
     public boolean enableQuery = false;
@@ -102,17 +104,24 @@ public class ConfigFile{
             System.exit(0);
         }
 
-        nl2 = firstNode.getElementsByTagName("enableOneMethod");
+        nl2 = firstNode.getElementsByTagName("minNumberStatements");
+        secondNode = (Element) nl2.item(0);
+        value = secondNode.getFirstChild().getNodeValue();
+        minNumberStatements = Integer.parseInt(value);
+        System.out.println("Min num statements: " + minNumberStatements);
+
+        nl2 = firstNode.getElementsByTagName("enablePercentageMatchingAuto");
         secondNode = (Element) nl2.item(0);
         value = secondNode.getFirstChild().getNodeValue();
         if (value.equals("true")) {
-            enableOneMethod = true;
+            enablePercentageMatching = true;
         } else if (value.equals("false")) {
-            enableOneMethod = false;
+            enablePercentageMatching = false;
         } else {
-            System.out.println("Invalid enableOneMethod option, must be true/false");
+            System.out.println("Invalid enablePercentageMatching option, must be true/false");
             System.exit(0);
         }
+
     }
 
     private void loadMatching(Element doc) {

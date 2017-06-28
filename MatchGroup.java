@@ -425,29 +425,20 @@ public class MatchGroup implements Serializable {
 
     }
 
-    private int checkIsJava(String filePath) {
-        String extension = filePath.substring(filePath.length()-5);
-        if (extension.equals(".java")) {
-            return 0;
-        } else {
-            return 1;
-        }
-    }
-
     public void mapCode2Comment() {
         
         for (MatchInstance thisMatch : masterList) {
             String filePath = thisMatch.fileName;
-            int format = checkIsJava(filePath);
+            boolean format = Utilities.checkIsJava(filePath);
             int startLine = thisMatch.startLine;
             int endLine = thisMatch.endLine;
 
             // get the list of comments associated
             CommentParser cParser = new CommentParser(filePath);
             ArrayList<CommentMap> commentList = new ArrayList<CommentMap>();
-            if (format == 0) {
+            if (format == true) {
                 // source code format
-                cParser.parseComment(filePath, startLine, endLine, 0, 0);
+                cParser.parseComment(filePath, startLine, endLine, 0, true);
             }
 
             // remove in-line comments
@@ -461,16 +452,16 @@ public class MatchGroup implements Serializable {
 
         for (MatchInstance thisMatch : cloneList) {
             String filePath = thisMatch.fileName;
-            int format = checkIsJava(filePath);
+            boolean isJavaFile = Utilities.checkIsJava(filePath);
             int startLine = thisMatch.startLine;
             int endLine = thisMatch.endLine;
 
             // get the list of comments associated
             CommentParser cParser = new CommentParser(filePath);
-            ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0, format);
+            ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0, isJavaFile);
 
             // remove in-line comments
-            if (format == 0) {
+            if (isJavaFile == true) {
                 // source code format
                 commentList = removeInline(commentList, filePath);
                 commentList = groupNormalizeComment(commentList);

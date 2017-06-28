@@ -100,6 +100,8 @@ public class CloneDigger {
         boolean enableOneMethod = config.enableOneMethod;
         boolean buildTFIDF = config.buildTFIDF;
         int numberThreads = config.numberThreads;
+        int minNumberStatements = config.minNumberStatements;
+        boolean enablePercentageMatching = config.enablePercentageMatching;
         boolean forceRetokenization = config.forceRetokenization;
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
         int aprioriMinSupport = config.aprioriMinSupport;
@@ -127,9 +129,11 @@ public class CloneDigger {
         // Check if an existing cache file exists
         if(f.exists() && !f.isDirectory() && loadDatabaseFilePaths == true) {
             // exist, load it
+            System.out.println("Path file exists");
             databaseFileList = Database.loadFileList(databaseFilePaths);
         } else {
             // doesn't exist or forced to create new path file, create it
+            System.out.println("Path file doesn't exist or specified to regen path file");
             databaseFileList = Database.generateFileList(databaseDir, "cachedList.tmp");
         }
 
@@ -145,7 +149,8 @@ public class CloneDigger {
         // Start loading main content
         ArrayList<String> errorList = new ArrayList<String>();
 
-        Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod, matchMode, outputDir);
+        Output output = new Output(matchAlgorithm, enableRepetitive, enableOneMethod, 
+                matchMode, outputDir, minNumberStatements, debug, enablePercentageMatching);
         if (matchMode == 1) {
             // full mesh comparison
             if (loadResults == false) {

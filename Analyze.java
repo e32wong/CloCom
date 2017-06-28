@@ -444,7 +444,7 @@ public class Analyze {
     }
 
     public static boolean checkNumMethods(List<Statement> statementList, int minThreshold) {
-
+        
         int numMethodStatements = 0;
         for (int i = 0; i < statementList.size(); i++) {
             if (statementList.get(i).hasMethodInvocation() == true) {

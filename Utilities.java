@@ -6,6 +6,15 @@ import java.util.regex.Pattern;
 
 public class Utilities {
 
+    public static boolean checkIsJava(String filePath) {
+        String extension = filePath.substring(filePath.length()-5);
+        if (extension.equals(".java")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static Set<String> extractTermsFromSentence(String sentence) {
 
         Set<String> listTerms = new HashSet<String>();

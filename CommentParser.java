@@ -70,11 +70,11 @@ public class CommentParser {
     // mode 1 - stops upon finding a comment
     // format 1 = autocomment, 0 = standard
     public ArrayList<CommentMap> parseComment
-        (String absPath, int startLine, int endLine, int mode, int format) {
+        (String absPath, int startLine, int endLine, int mode, boolean isJavaCode) {
 
             final ArrayList<CommentMap> commentMap = new ArrayList<CommentMap>();
 
-            if (format == 1) {
+            if (isJavaCode == false) {
 
                 try (BufferedReader br = new BufferedReader(new FileReader(absPath))) {
                     String line = br.readLine();
@@ -103,7 +103,7 @@ public class CommentParser {
                     System.out.println(e);
                 }
 
-            } else if (format == 0) {
+            } else if (isJavaCode == true) {
                 // call accept on each comment to retrieve the content of the comment
                 for (int i = 0; i < commentList.size(); i++) {
 

@@ -13,8 +13,8 @@
         <aprioriMinSupport>5</aprioriMinSupport>
     </frequencySet>
     <projects>
-        <project>/home/edmund/research/clocom/cloneCode/test1/</project>
-        <database>/home/edmund/research/clocom/cloneCode/test2/</database>
+        <project>/home/edmund/research/clocom/cloneCode/database/</project>
+        <database>/home/edmund/research/clocom/cloneCode/project/</database>
         <autocommentDB>/home/edmund/research/clocom/cloneCode/test3/</autocommentDB>
         <databaseFormat>0</databaseFormat>
         <outputDir>/home/edmund/research/clocom/output/</outputDir>
@@ -37,7 +37,8 @@
         </similarity>
         <others>
             <enableRepetitive>false</enableRepetitive>
-            <enableOneMethod>true</enableOneMethod>
+            <minNumberStatements>1</minNumberStatements>
+            <enablePercentageMatchingAuto>true</enablePercentageMatchingAuto>
         </others>
     </heuristics>
 </configuration>

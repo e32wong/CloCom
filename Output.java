@@ -34,18 +34,26 @@ public class Output {
     boolean enableOneMethod;
     int matchMode;
     String outputDir;
-    boolean debug = false;
+    int minNumberStatements;
+    boolean debug;
+    boolean enablePercentageMatching;
 
     public Output (int alogrithm, 
             boolean enableRepetitiveIn, 
             boolean enableOneMethodIn,
             int matchModeIn,
-            String outputDirIn) {
+            String outputDirIn,
+            int minNumberStatementsIn,
+            boolean debugIn,
+            boolean enablePercentageMatchingIn) {
         enableRepetitive = enableRepetitiveIn;
         enableOneMethod = enableOneMethodIn;
         algorithmMode = alogrithm;
         matchMode = matchModeIn;
         outputDir = outputDirIn;
+        minNumberStatements = minNumberStatementsIn;
+        debug = debugIn;
+        enablePercentageMatching = enablePercentageMatchingIn;
     }
 
     HashMap<Integer,MatchGroup> matchGroupList = new HashMap<Integer,MatchGroup>();
@@ -89,22 +97,27 @@ public class Output {
             //}
         } else {
             // require at least one method call
-            if (enableOneMethod) {
-                if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), 1) == false) {
+            if (minNumberStatements > 0) {
+                if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), minNumberStatements) == false) {
                     if (debug) {
-                	    System.out.println("Revmoed from lack of method call");
+                	    System.out.println("Removed from lack of method call");
                     }
                     return;
                 }
-                if (Analyze.checkNumMethods(statementRaw2.subList(statementStart2, statementEnd2), 1) == false) {
+                if (Analyze.checkNumMethods(statementRaw2.subList(statementStart2, statementEnd2), minNumberStatements) == false) {
                     if (debug) {
-					    System.out.println("Revmoed from lack of method call");
+					    System.out.println("Removed from lack of method call");
                     }
                     return;
+                }
+
+                if (debug) {
+                    System.out.println("Satisfied minimum method call threashold: " + minNumberStatements);
                 }
             }
-            // ensure majority of the file is matched
-            if (true) {
+            // ensure majority of the file is matched (only for SO snippets)
+            boolean isJavaCode = Utilities.checkIsJava(file2);
+            if (enablePercentageMatching && isJavaCode == false) {
                 int size = -2;
                 try {
                     BufferedReader br = new BufferedReader(new FileReader(file2));
@@ -126,7 +139,7 @@ public class Output {
                 //System.out.println(lineEnd2 + " "  + lineStart2 + "= " + sizeMatched + " X " + size);
                 if (percentage < 60) {
                     if (debug) {
-					    System.out.println("Revmoed from lack of % matching");
+					    System.out.println("Removed from lack of % matching");
                     }
                     return;
                 }
