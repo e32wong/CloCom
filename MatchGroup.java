@@ -512,7 +512,7 @@ public class MatchGroup implements Serializable {
         return false;
     }
 
-    public void printAllMappings(boolean removeEmpty, int matchMode, int printMode,
+    public void printAllMappings(boolean saveEmpty, int matchMode, int printMode,
             String outputDir, PrintWriter writer) {
         boolean enableSimilarity = true;
 
@@ -564,7 +564,7 @@ public class MatchGroup implements Serializable {
                     int endLine = thisMatch.endLine;
 
                     ArrayList<CommentMap> comments = thisMatch.getComments();
-                    if (comments.size() > 0 || removeEmpty == false) {
+                    if (comments.size() > 0 || saveEmpty == false) {
 
                         // print header
                         writer.println(filePath + ": " + startLine + "-" + endLine);

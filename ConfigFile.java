@@ -20,7 +20,7 @@ public class ConfigFile{
     public int matchMode = 0;
     public int meshBlockSize = 0;
     public boolean debug = false;
-    public boolean removeEmpty = false;
+    public boolean saveEmpty = false;
     public boolean forceRetokenization = true;
     public int gapSize = 0;
     public String resultPath = null;
@@ -230,23 +230,6 @@ public class ConfigFile{
         database = secondNode.getFirstChild().getNodeValue();
         System.out.println("Database path: " + database);
 
-        /*
-        nl2 = firstNode.getElementsByTagName("databaseFormat");
-        secondNode = (Element) nl2.item(0);
-        value = secondNode.getFirstChild().getNodeValue();
-        databaseFormat = Integer.parseInt(value);
-        if (databaseFormat != 0 && databaseFormat != 1) {
-            System.out.println("Invalid database format, must be 0 (source) or 1 (autocomment)");
-            System.exit(0);
-        }
-        if (databaseFormat == 0) {
-            System.out.println("Database format: source code");
-        } else if (databaseFormat == 1) {
-            System.out.println("Database format: autocomment");
-        } else if (databaseFormat == 2) {
-            System.out.println("Database format: source code + autocomment");
-        }*/
-
         nl2 = firstNode.getElementsByTagName("project");
         secondNode = (Element) nl2.item(0);
         project = secondNode.getFirstChild().getNodeValue();
@@ -320,18 +303,18 @@ public class ConfigFile{
         }
         System.out.println("Debug: " + debug);
         
-        nl2 = firstNode.getElementsByTagName("removeEmpty");
+        nl2 = firstNode.getElementsByTagName("saveEmpty");
         secondNode = (Element) nl2.item(0);
         value = secondNode.getFirstChild().getNodeValue();
         if (value.equals("true")) {
-            removeEmpty = true;
+            saveEmpty = true;
         } else if (value.equals("false")) {
-            removeEmpty = false;
+            saveEmpty = false;
         } else {
-            System.out.println("Invalid removeEmpty option, must be true/false");
+            System.out.println("Invalid saveEmpty option, must be true/false");
             System.exit(0);
         }
-        System.out.println("Remove empty: " + removeEmpty);
+        System.out.println("Remove empty: " + saveEmpty);
         
         nl2 = firstNode.getElementsByTagName("exportResults");
         secondNode = (Element) nl2.item(0);

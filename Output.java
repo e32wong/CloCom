@@ -255,7 +255,7 @@ public class Output {
     }
 
 
-    public void printResults(boolean removeEmpty, 
+    public void printResults(boolean saveEmpty, 
             int similarityRange, 
             boolean enableSimilarity,
             int matchMode,
@@ -287,14 +287,14 @@ public class Output {
             System.out.println("Match Group " + matchIndex + " of size " +
                     thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
 
-            if (hasComment == false && removeEmpty == true) {
+            if (hasComment == false && saveEmpty == true) {
                 // no comment and remove empty is true
                 // simply export the ones without comment to a different filename
                 try {
                     PrintWriter writer = new PrintWriter(outputDir + Integer.toString(outputIndex) + "-empty", "UTF-8");
                     writer.println("Match Group " + matchIndex + " of size " +
                             thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
-                    thisMatchGroup.printAllMappings(removeEmpty, matchMode, 1, outputDir, writer);
+                    thisMatchGroup.printAllMappings(saveEmpty, matchMode, 1, outputDir, writer);
                     outputIndex = outputIndex + 1;
                     writer.close();
                     numMatchesWithComment++;
@@ -304,11 +304,12 @@ public class Output {
                     e.printStackTrace();
                 }
             } else {
+                // has a comment
                 try {
                     PrintWriter writer = new PrintWriter(outputDir + Integer.toString(outputIndex) + "-full", "UTF-8");
                     writer.println("Match Group " + matchIndex + " of size " +
                             thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
-                    thisMatchGroup.printAllMappings(removeEmpty, matchMode, 1, outputDir, writer);
+                    thisMatchGroup.printAllMappings(saveEmpty, matchMode, 1, outputDir, writer);
                     outputIndex = outputIndex + 1;
 
                     // ranking alogrithm requires a list of similarity terms

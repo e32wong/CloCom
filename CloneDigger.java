@@ -90,7 +90,7 @@ public class CloneDigger {
         String projectDir = config.project;
         String outputDir = config.outputDir;
         boolean debug = config.debug;
-        boolean removeEmpty = config.removeEmpty;
+        boolean saveEmpty = config.saveEmpty;
         String resultPath = config.resultPath;
         boolean exportResults = config.exportResults;
         boolean loadResults = config.loadResults;
@@ -106,7 +106,6 @@ public class CloneDigger {
         boolean loadDatabaseFilePaths = config.loadDatabaseFilePaths;
         int aprioriMinSupport = config.aprioriMinSupport;
         boolean enableQuery = config.enableQuery;
-        //int databaseFormat = config.databaseFormat;
 
         // done parsing
         System.out.println("Finished parsing XML parameters");
@@ -183,7 +182,7 @@ public class CloneDigger {
                 output.search(outputDir);
             }
 
-            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, debug);
+            output.printResults(saveEmpty, similarityRange, enableSimilarity, matchMode, debug);
             /*
             // Frequency Map of all terms
             FrequencyMap fMap = new FrequencyMap(aprioriMinSupport);
@@ -227,7 +226,7 @@ public class CloneDigger {
                 output.loadResults(resultPath);
             }
 
-            output.printResults(removeEmpty, similarityRange, enableSimilarity, matchMode, debug);
+            output.printResults(saveEmpty, similarityRange, enableSimilarity, matchMode, debug);
         }
 
         // Display all the errors
