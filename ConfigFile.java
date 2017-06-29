@@ -382,8 +382,9 @@ public class ConfigFile{
                 loadProjects(doc);
                 loadOutputSettings(doc);
             } catch (Exception e) {
+                System.out.println("Error while parsing the xml config, maybe missing entry:");
                 System.out.println(e);
-                System.out.println("Error while parsing the xml config, maybe missing entry");
+                e.printStackTrace();
                 System.exit(0);
             }
 

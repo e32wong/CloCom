@@ -22,7 +22,7 @@
     </projects>
     <outputSettings>
         <debug>true</debug>
-        <removeEmpty>false</removeEmpty>
+        <saveEmpty>false</saveEmpty>
         <exportResults>false</exportResults>
         <resultPath></resultPath>
         <enableQuery>false</enableQuery>
