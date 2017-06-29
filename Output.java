@@ -3,6 +3,8 @@ import java.nio.file.Files;
 import java.nio.charset.Charset;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -273,6 +275,16 @@ public class Output {
         int matchIndex = 0;
         int outputIndex = 0;
         int emptyIndex = 0;
+        
+        PrintWriter writerMaster;
+        try {
+            writerMaster = new PrintWriter(outputDir + "allComments.txt", "UTF-8");
+        } catch (FileNotFoundException e) {
+            System.out.println("Error while creating an output file");
+        } catch (UnsupportedEncodingException e) {
+            System.out.println("UnsupportedEncodingException error ni print writer");
+        }
+
         System.out.println("\n\n");
         for (Integer key : matchGroupList.keySet()) {
             if (debug) {
@@ -288,20 +300,18 @@ public class Output {
 
             System.out.println("Match Group " + matchIndex + " of size " +
                     thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
-
-            //PrintWriter writerMaster = new PrintWriter(outputDir + "master", "UTF-8");
-
+    
             // no comment and remove empty is true
             // simply export the ones without comment to a different filename
             try {
                 String outputFileName = "";
                 if (hasComment == false) {
                     System.out.println("No comments");
-                    outputFileName = outputDir + Integer.toString(emptyIndex) + "-empty";
+                    outputFileName = outputDir + Integer.toString(emptyIndex) + "-empty.txt";
                     emptyIndex = emptyIndex + 1;
                 } else {
                     System.out.println("Has comment(s)");
-                    outputFileName = outputDir + Integer.toString(outputIndex) + "-full";
+                    outputFileName = outputDir + Integer.toString(outputIndex) + "-full.txt";
                     numMatchesWithComment++;
                     outputIndex = outputIndex + 1;
                 }

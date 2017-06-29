@@ -564,46 +564,44 @@ public class MatchGroup implements Serializable {
                     int endLine = thisMatch.endLine;
 
                     ArrayList<CommentMap> comments = thisMatch.getComments();
-                    if (comments.size() > 0 || saveEmpty == false) {
 
-                        // print header
-                        writer.println(filePath + ": " + startLine + "-" + endLine);
-                        writer.format("Length: %d \n", matchLength);
+                    // print header
+                    writer.println(filePath + ": " + startLine + "-" + endLine);
+                    writer.format("Length: %d \n", matchLength);
 
-                        // print text similarity terms
-                        if (enableSimilarity) {
-                            ArrayList<HashSet<String>> similarityTermsLocal = thisMatch.getSimilarityLocal();
-                            writer.println("local sim: " + similarityTermsLocal);
+                    // print text similarity terms
+                    if (enableSimilarity) {
+                        ArrayList<HashSet<String>> similarityTermsLocal = thisMatch.getSimilarityLocal();
+                        writer.println("local sim: " + similarityTermsLocal);
 
-                            ArrayList<HashSet<String>> similarityTermsGlobal = thisMatch.getSimilarityGlobal();
-                            writer.println("global sim: " + similarityTermsGlobal);
+                        ArrayList<HashSet<String>> similarityTermsGlobal = thisMatch.getSimilarityGlobal();
+                        writer.println("global sim: " + similarityTermsGlobal);
 
-                            ArrayList<HashSet<String>> similarityTermsVariable = thisMatch.getSimilarityVariable();
-                            writer.println("variable sim: " + similarityTermsVariable);
-                        }
-
-                        // print the comment 
-                        for (CommentMap cMap : comments) {
-                            // print the artifacts
-                            if (cMap.artifactSet != null) {
-                                writer.print(cMap.artifactSet + " ");
-                            }
-                            cMap.print(writer);
-                            masterCommentList.add(cMap.comment);
-                        }
-
-                        // Print the code segment
-                        List<String> encoded = Files.readAllLines(Paths.get(filePath), Charset.defaultCharset());
-                        for (int lineNum = startLine - 1; lineNum < endLine; lineNum++) {
-                            String line = encoded.get(lineNum);
-                            if (matchMode == 0) {
-                                writer.println("< " + line);
-                            } else {
-                                writer.println("* " + line);
-                            }
-                        }
-                        writer.println("----");
+                        ArrayList<HashSet<String>> similarityTermsVariable = thisMatch.getSimilarityVariable();
+                        writer.println("variable sim: " + similarityTermsVariable);
                     }
+
+                    // print the comment 
+                    for (CommentMap cMap : comments) {
+                        // print the artifacts
+                        if (cMap.artifactSet != null) {
+                            writer.print(cMap.artifactSet + " ");
+                        }
+                        cMap.print(writer);
+                        masterCommentList.add(cMap.comment);
+                    }
+
+                    // Print the code segment
+                    List<String> encoded = Files.readAllLines(Paths.get(filePath), Charset.defaultCharset());
+                    for (int lineNum = startLine - 1; lineNum < endLine; lineNum++) {
+                        String line = encoded.get(lineNum);
+                        if (matchMode == 0) {
+                            writer.println("< " + line);
+                        } else {
+                            writer.println("* " + line);
+                        }
+                    }
+                    writer.println("----");
                 } catch (IOException e) {
                     writer.println(e);
                 }
