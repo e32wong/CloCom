@@ -254,7 +254,6 @@ public class Output {
 
     }
 
-
     public void printResults(boolean saveEmpty, 
             int similarityRange, 
             boolean enableSimilarity,
@@ -272,9 +271,12 @@ public class Output {
 
         int numMatchesWithComment = 0;
         int matchIndex = 0;
-        int outputIndex = 1;
+        int outputIndex = 0;
+        int emptyIndex = 0;
+        System.out.println("\n\n");
         for (Integer key : matchGroupList.keySet()) {
             if (debug) {
+                System.out.println("#####");
                 System.out.println("Printing one result");
             }
             MatchGroup thisMatchGroup = matchGroupList.get(key);
@@ -287,49 +289,43 @@ public class Output {
             System.out.println("Match Group " + matchIndex + " of size " +
                     thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
 
-            if (hasComment == false && saveEmpty == true) {
-                // no comment and remove empty is true
-                // simply export the ones without comment to a different filename
-                try {
-                    PrintWriter writer = new PrintWriter(outputDir + Integer.toString(outputIndex) + "-empty", "UTF-8");
-                    writer.println("Match Group " + matchIndex + " of size " +
-                            thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
-                    thisMatchGroup.printAllMappings(saveEmpty, matchMode, 1, outputDir, writer);
-                    outputIndex = outputIndex + 1;
-                    writer.close();
+            //PrintWriter writerMaster = new PrintWriter(outputDir + "master", "UTF-8");
+
+            // no comment and remove empty is true
+            // simply export the ones without comment to a different filename
+            try {
+                String outputFileName = "";
+                if (hasComment == false) {
+                    System.out.println("No comments");
+                    outputFileName = outputDir + Integer.toString(emptyIndex) + "-empty";
+                    emptyIndex = emptyIndex + 1;
+                } else {
+                    System.out.println("Has comment(s)");
+                    outputFileName = outputDir + Integer.toString(outputIndex) + "-full";
                     numMatchesWithComment++;
-                } catch (Exception e) {
-                    System.out.println("Error in Output.java case 1");
-                    System.out.println(e.getMessage());
-                    e.printStackTrace();
-                }
-            } else {
-                // has a comment
-                try {
-                    PrintWriter writer = new PrintWriter(outputDir + Integer.toString(outputIndex) + "-full", "UTF-8");
-                    writer.println("Match Group " + matchIndex + " of size " +
-                            thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
-                    thisMatchGroup.printAllMappings(saveEmpty, matchMode, 1, outputDir, writer);
                     outputIndex = outputIndex + 1;
-
-                    // ranking alogrithm requires a list of similarity terms
-                    if (enableSimilarity) {
-                        thisMatchGroup.printRankedComments(writer);
-                    }   
-
-                    writer.close();
-                    numMatchesWithComment++;
-
-                } catch (Exception e) {
-                    System.out.println("Error in Output.java case 2");
-                    System.out.println(e.getMessage());
-                    e.printStackTrace();
                 }
+                PrintWriter writer = new PrintWriter(outputFileName, "UTF-8");
+                writer.println("Match Group " + matchIndex + " of size " +
+                        thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
+                thisMatchGroup.printAllMappings(saveEmpty, matchMode, 1, outputDir, writer);
+
+                // make sure similarity terms are already been gathered
+                // only can rank comment if there is a comment
+                if (enableSimilarity && hasComment == true) {
+                    thisMatchGroup.printRankedComments(writer);
+                }
+
+                writer.close();
+            } catch (Exception e) {
+                System.out.println("Error in Output.java case 1");
+                System.out.println(e.getMessage());
+                e.printStackTrace();
             }
 
             matchIndex++;
         }
-
+        System.out.println("#####\n\n\n");
         System.out.println(numMatchesWithComment + " comment groups has a comment");
     }
 
