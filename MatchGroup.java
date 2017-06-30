@@ -513,7 +513,7 @@ public class MatchGroup implements Serializable {
     }
 
     public void printAllMappings(boolean saveEmpty, int matchMode, int printMode,
-            String outputDir, PrintWriter writer) {
+            String outputDir, PrintWriter writerComment, PrintWriter writerMaster) {
         boolean enableSimilarity = true;
 
         File dir = new File(outputDir);
@@ -532,23 +532,33 @@ public class MatchGroup implements Serializable {
                 ArrayList<CommentMap> comments = thisMatch.getComments();
 
                 // print header
-                writer.println(filePath + ": " + startLine + "-" + endLine);
-                writer.println("Length: " + matchLength);
+                String header = filePath + ": " + startLine + "-" + endLine;
+                writerComment.println(header);
+                writerMaster.println(header);
+                header = "Length: " + matchLength;
+                writerComment.println(header);
+                writerMaster.println(header);
 
                 // print the comment 
                 for (CommentMap cMap : comments) {
-                    cMap.print(writer);
+                    cMap.print(writerComment);
+                    cMap.print(writerMaster);
                 }
 
                 // Print the code segment
                 List<String> encoded = Files.readAllLines(Paths.get(filePath), Charset.defaultCharset());
                 for (int lineNum = startLine - 1; lineNum < endLine; lineNum++) {
                     String line = encoded.get(lineNum);
-                    writer.println("* " + line);
+                    String codeStr = "* " + line;
+                    writerComment.println(codeStr);
+                    writerMaster.println(codeStr);
                 }
-                writer.println("----");
+                String seperator = "----";
+                writerComment.println(seperator);
+                writerMaster.println(seperator);
             } catch (IOException e) {
-                writer.println(e);
+                writerComment.println(e);
+                writerMaster.println(e);
             }
         }
 
@@ -566,28 +576,41 @@ public class MatchGroup implements Serializable {
                     ArrayList<CommentMap> comments = thisMatch.getComments();
 
                     // print header
-                    writer.println(filePath + ": " + startLine + "-" + endLine);
-                    writer.format("Length: %d \n", matchLength);
+                    String headerStr = filePath + ": " + startLine + "-" + endLine;
+                    writerComment.println(headerStr);
+                    writerMaster.println(headerStr);
+                    headerStr = "Length: " + matchLength;
+                    writerComment.println(headerStr);
+                    writerMaster.println(headerStr);
 
                     // print text similarity terms
                     if (enableSimilarity) {
                         ArrayList<HashSet<String>> similarityTermsLocal = thisMatch.getSimilarityLocal();
-                        writer.println("local sim: " + similarityTermsLocal);
+                        String simStr = "local sim: " + similarityTermsLocal;
+                        writerComment.println(simStr);
+                        writerMaster.println(simStr);
 
                         ArrayList<HashSet<String>> similarityTermsGlobal = thisMatch.getSimilarityGlobal();
-                        writer.println("global sim: " + similarityTermsGlobal);
+                        simStr = "global sim: " + similarityTermsGlobal;
+                        writerComment.println(simStr);
+                        writerMaster.println(simStr);
 
                         ArrayList<HashSet<String>> similarityTermsVariable = thisMatch.getSimilarityVariable();
-                        writer.println("variable sim: " + similarityTermsVariable);
+                        simStr = "variable sim: " + similarityTermsVariable;
+                        writerComment.println(simStr);
+                        writerMaster.println(simStr);
                     }
 
                     // print the comment 
                     for (CommentMap cMap : comments) {
                         // print the artifacts
                         if (cMap.artifactSet != null) {
-                            writer.print(cMap.artifactSet + " ");
+                            String commentStr = cMap.artifactSet + " ";
+                            writerComment.print(commentStr);
+                            writerMaster.print(commentStr);
                         }
-                        cMap.print(writer);
+                        cMap.print(writerComment);
+                        cMap.print(writerMaster);
                         masterCommentList.add(cMap.comment);
                     }
 
@@ -596,31 +619,43 @@ public class MatchGroup implements Serializable {
                     for (int lineNum = startLine - 1; lineNum < endLine; lineNum++) {
                         String line = encoded.get(lineNum);
                         if (matchMode == 0) {
-                            writer.println("< " + line);
+                            String str = "< " + line;
+                            writerComment.println(str);
+                            writerMaster.println(str);
                         } else {
-                            writer.println("* " + line);
+                            String str = "* " + line;
+                            writerComment.println(str);
+                            writerMaster.println(str);
                         }
                     }
-                    writer.println("----");
+                    String str = "----";
+                    writerComment.println(str);
+                    writerMaster.println(str);
                 } catch (IOException e) {
-                    writer.println(e);
+                    writerComment.println(e);
+                    writerMaster.println(e);
                 }
                 i++;
             }
 
-            printAllComments(masterCommentList, writer);
+            printAllComments(masterCommentList, writerComment, writerMaster);
         }
     }
 
-    private void printAllComments(HashSet<String> masterCommentList, PrintWriter writer) {
-        writer.println("Comments (size " +
-                masterCommentList.size() + "):");
+    private void printAllComments(HashSet<String> masterCommentList, PrintWriter writerComment, PrintWriter writerMaster) {
+        String str = "Comments (size " + masterCommentList.size() + "):";
+        writerComment.println(str);
+        writerMaster.println(str);
         int index = 1;
         for (String thisComment : masterCommentList) {
-            writer.println(index + ".\n" + thisComment);
+            str = index + ".\n" + thisComment;
+            writerComment.println(str);
+            writerMaster.println(str);
             index++;
         }
-        writer.println("----");
+        str = "----";
+        writerComment.println(str);
+        writerMaster.println(str);
 
     }
 
@@ -642,9 +677,11 @@ public class MatchGroup implements Serializable {
         if (allExist) {
             mapCode2Comment();
             try {
-                PrintWriter writer = new PrintWriter(outputDir + Integer.toString(1) + "-full", "UTF-8");
-                printAllMappings(true, 1, 1, outputDir, writer);
-                writer.close();
+                PrintWriter writerComment = new PrintWriter(outputDir + Integer.toString(1) + "-full", "UTF-8");
+                PrintWriter writerMaster = new PrintWriter("master.txt", "UTF-8");
+                printAllMappings(true, 1, 1, outputDir, writerComment, writerMaster);
+                writerComment.close();
+                writerMaster.close();
             } catch (Exception e) {
                 System.out.println("Error in MatchGroup.java");
             }

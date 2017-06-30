@@ -276,67 +276,75 @@ public class Output {
         int outputIndex = 0;
         int emptyIndex = 0;
         
-        PrintWriter writerMaster;
+        PrintWriter writerMaster = null;
         try {
             writerMaster = new PrintWriter(outputDir + "allComments.txt", "UTF-8");
+           
+            System.out.println("\n\n");
+            for (Integer key : matchGroupList.keySet()) {
+                if (debug) {
+                    System.out.println("#####");
+                    System.out.println("Printing one result");
+                }
+                MatchGroup thisMatchGroup = matchGroupList.get(key);
+                thisMatchGroup.mapCode2Comment();
+                thisMatchGroup.pruneComments(similarityRange, enableSimilarity, debug);
+                thisMatchGroup.pruneDuplicateComments();
+
+                boolean hasComment = thisMatchGroup.hasComment();
+
+                System.out.println("Match Group " + matchIndex + " of size " +
+                        thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
+        
+                // no comment and remove empty is true
+                // simply export the ones without comment to a different filename
+                try {
+                    String outputFileName = "";
+                    if (hasComment == false) {
+                        System.out.println("No comments");
+                        outputFileName = outputDir + Integer.toString(emptyIndex) + "-empty.txt";
+                        emptyIndex = emptyIndex + 1;
+                    } else {
+                        System.out.println("Has comment(s)");
+                        outputFileName = outputDir + Integer.toString(outputIndex) + "-full.txt";
+                        numMatchesWithComment++;
+                        outputIndex = outputIndex + 1;
+                    }
+                    PrintWriter writerComment = new PrintWriter(outputFileName, "UTF-8");
+                    writerComment.println("Match Group " + matchIndex + " of size " +
+                            thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
+                    thisMatchGroup.printAllMappings(saveEmpty, matchMode, 1, outputDir, writerComment, writerMaster);
+
+                    // make sure similarity terms are already been gathered
+                    // only can rank comment if there is a comment
+                    if (enableSimilarity && hasComment == true) {
+                        thisMatchGroup.printRankedComments(writerComment);
+                    }
+
+                    writerComment.close();
+                } catch (Exception e) {
+                    System.out.println("Error in Output.java case 1");
+                    System.out.println(e.getMessage());
+                    e.printStackTrace();
+                }
+
+                writerMaster.println();
+
+                matchIndex++;
+            }
+            System.out.println("#####\n\n\n");
+            System.out.println(numMatchesWithComment + " comment groups has a comment");
+
         } catch (FileNotFoundException e) {
             System.out.println("Error while creating an output file");
         } catch (UnsupportedEncodingException e) {
-            System.out.println("UnsupportedEncodingException error ni print writer");
+            System.out.println("UnsupportedEncodingException error in print writer");
+        } finally {
+            if (writerMaster != null) {
+                writerMaster.close();
+            }
         }
 
-        System.out.println("\n\n");
-        for (Integer key : matchGroupList.keySet()) {
-            if (debug) {
-                System.out.println("#####");
-                System.out.println("Printing one result");
-            }
-            MatchGroup thisMatchGroup = matchGroupList.get(key);
-            thisMatchGroup.mapCode2Comment();
-            thisMatchGroup.pruneComments(similarityRange, enableSimilarity, debug);
-            thisMatchGroup.pruneDuplicateComments();
-
-            boolean hasComment = thisMatchGroup.hasComment();
-
-            System.out.println("Match Group " + matchIndex + " of size " +
-                    thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
-    
-            // no comment and remove empty is true
-            // simply export the ones without comment to a different filename
-            try {
-                String outputFileName = "";
-                if (hasComment == false) {
-                    System.out.println("No comments");
-                    outputFileName = outputDir + Integer.toString(emptyIndex) + "-empty.txt";
-                    emptyIndex = emptyIndex + 1;
-                } else {
-                    System.out.println("Has comment(s)");
-                    outputFileName = outputDir + Integer.toString(outputIndex) + "-full.txt";
-                    numMatchesWithComment++;
-                    outputIndex = outputIndex + 1;
-                }
-                PrintWriter writer = new PrintWriter(outputFileName, "UTF-8");
-                writer.println("Match Group " + matchIndex + " of size " +
-                        thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
-                thisMatchGroup.printAllMappings(saveEmpty, matchMode, 1, outputDir, writer);
-
-                // make sure similarity terms are already been gathered
-                // only can rank comment if there is a comment
-                if (enableSimilarity && hasComment == true) {
-                    thisMatchGroup.printRankedComments(writer);
-                }
-
-                writer.close();
-            } catch (Exception e) {
-                System.out.println("Error in Output.java case 1");
-                System.out.println(e.getMessage());
-                e.printStackTrace();
-            }
-
-            matchIndex++;
-        }
-        System.out.println("#####\n\n\n");
-        System.out.println(numMatchesWithComment + " comment groups has a comment");
     }
 
     public void search (String outputDir) {
