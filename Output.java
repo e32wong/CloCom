@@ -293,9 +293,6 @@ public class Output {
 
                 boolean hasComment = thisMatchGroup.hasComment();
 
-                System.out.println("Match Group " + matchIndex + " of size " +
-                        thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
-        
                 // no comment and remove empty is true
                 // simply export the ones without comment to a different filename
                 try {
@@ -311,8 +308,11 @@ public class Output {
                         outputIndex = outputIndex + 1;
                     }
                     PrintWriter writerComment = new PrintWriter(outputFileName, "UTF-8");
-                    writerComment.println("Match Group " + matchIndex + " of size " +
-                            thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize());
+                    String groupStr = "Match Group " + matchIndex + " of size " +
+                            thisMatchGroup.getMasterSize() + "+" + thisMatchGroup.getCloneSize();
+                    System.out.println(groupStr);
+                    writerComment.println(groupStr);
+                    writerMaster.println(groupStr);
                     thisMatchGroup.printAllMappings(saveEmpty, matchMode, 1, outputDir, writerComment, writerMaster);
 
                     // make sure similarity terms are already been gathered
