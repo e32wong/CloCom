@@ -24,16 +24,10 @@ public class Utilities {
         while (matcher.find()) {
             //System.out.println(matcher.group());
             String term = matcher.group();
-            Set<String> camelTerms = Utilities.splitCamelCaseSet(term);
-            for (String splittedTerm : camelTerms) {
-                listTerms.add(splittedTerm);
-            }
+            listTerms.add(term.toLowerCase());
         }
 
-        //System.out.println(sentence);
-
         return listTerms;
-
     }
 
 

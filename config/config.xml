@@ -2,7 +2,7 @@
 <!DOCTYPE configuration SYSTEM "config.dtd">
 <configuration>
     <matching>
-        <minNumLines>5</minNumLines>
+        <minNumLines>4</minNumLines>
         <matchAlgorithm>1</matchAlgorithm>
         <matchMode>0</matchMode>
         <gapSize>2</gapSize>
@@ -13,8 +13,8 @@
         <aprioriMinSupport>5</aprioriMinSupport>
     </frequencySet>
     <projects>
-        <project>/home/edmund/research/clocom/cloneCode/project/</project>
-        <database>/home/edmund/research/clocom/cloneCode/database/</database>
+        <project>/home/edmund/crawledFiles/autocommentProjects/jabref/</project>
+        <database>/home/edmund/crawledFiles/clocomProjects/</database>
         <outputDir>/home/edmund/research/clocom/output/</outputDir>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
         <forceRetokenization>true</forceRetokenization>
@@ -34,8 +34,8 @@
             <enableSimilarity>true</enableSimilarity>
         </similarity>
         <others>
-            <enableRepetitive>false</enableRepetitive>
-            <minNumberStatements>1</minNumberStatements>
+            <enableRepetitive>true</enableRepetitive>
+            <minNumberStatements>2</minNumberStatements>
             <enablePercentageMatchingAuto>true</enablePercentageMatchingAuto>
         </others>
     </heuristics>

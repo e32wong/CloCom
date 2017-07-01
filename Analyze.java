@@ -166,6 +166,134 @@ public class Analyze {
             int similarityRange,
             boolean debug) {
 
+        // get a list of global terms from all clones (master and clones)
+        
+        // master
+        ArrayList<Set<String>> nameListMasterGlobal = new ArrayList<Set<String>>();
+        for (MatchInstance thisMatch : masterList) {
+            int startRange, endRange;
+            ArrayList<Statement> statementList = thisMatch.statements;
+
+            // variable to capture the list of unique simple names
+            // full range analysis
+            Set<String> simpleNameSetMasterGlobal = new HashSet<String>();
+            // gather terms from the master
+            startRange = 0;
+            endRange = statementList.size() - 1;
+            for (int i = startRange; i <= endRange; i++) {
+                Statement thisStatement = statementList.get(i);
+                HashSet<String> nameList = thisStatement.nameList;
+                for (String str : nameList) {
+                	simpleNameSetMasterGlobal.add(str);
+                }
+            }
+            nameListMasterGlobal.add(simpleNameSetMasterGlobal);
+            if (debug) {
+                System.out.println("Master name set:");
+                System.out.println(simpleNameSetMasterGlobal);
+            }
+        }
+
+        // check if the comment from each clone list is valid
+        ArrayList<CommentMap> filteredCommentMap = new ArrayList<CommentMap>();
+        for (MatchInstance thisMatch : cloneList) {
+
+			// first get name list for this clone's code
+			Set<String> nameListClone = new HashSet<String>();
+            int startRange, endRange;
+            ArrayList<Statement> statementList = thisMatch.statements;
+            // variable to capture the list of unique simple names
+            // full range analysis
+            // gather terms from the master
+            startRange = 0;
+            endRange = statementList.size() - 1;
+            for (int i = startRange; i <= endRange; i++) {
+                Statement thisStatement = statementList.get(i);
+                HashSet<String> nameList = thisStatement.nameList;
+                for (String str : nameList) {
+                    nameListClone.add(str);
+                }
+            }
+            if (debug) {
+                System.out.println("Clone list terms:");
+                System.out.println(nameListClone);
+            }
+			
+			// second get name list for each comment
+            ArrayList<Set<String>> nameListComment = new ArrayList<Set<String>>();
+            ArrayList<CommentMap> commentList = thisMatch.commentList;
+            for (CommentMap cMap : commentList) {
+                // get a list of terms from sentence
+                String thisComment = cMap.comment;
+                Set<String> sentenceTermList = Utilities.extractTermsFromSentence(thisComment);
+                if (debug) {
+                    System.out.println("Comment: \"" + thisComment + "\"");
+                    System.out.println("List of terms from comment:");
+                    System.out.println(sentenceTermList);
+                }
+                nameListComment.add(sentenceTermList);
+            }
+            
+			// find list of terms between this clone and comment,
+            // which will have to exist in master or else discard
+            ArrayList<Set<String>> setMustExistMaster = new ArrayList<Set<String>>();
+			// loop over each comment
+			for (Set<String> comment : nameListComment) {
+				Set<String> commentSetMustExist = new HashSet<String>();
+                // loop over each term in comment
+                for (String commentL : comment) {
+                    // loop on clone terms
+                    for (String cloneL : nameListClone) {
+                        if (cloneL.toLowerCase().contains(commentL)) {
+                            commentSetMustExist.add(commentL);
+                        }
+                    }
+                }
+				setMustExistMaster.add(commentSetMustExist);
+			}
+            if (debug) {
+                System.out.println("Must exist in master:");
+                System.out.println(setMustExistMaster);
+            }
+
+            // check if it exist in every master
+            Set<String> failedTerms = new HashSet<String>();
+			// loop each master
+            for (Set<String> masterSet : nameListMasterGlobal) {
+				// loop each master term
+				int index = 0;
+				boolean failed = false;
+				for (Set<String> eachCommentSet : setMustExistMaster) {
+					for (String str1 : eachCommentSet) {
+						// loop 
+						for (String str2 : masterSet) {
+							if (!str2.toLowerCase().contains(str1)) {
+								failed = true;
+								failedTerms.add(str1);
+							}
+						}
+					}
+					index = index + 1;
+
+					if (!failed) {
+						CommentMap thisMap = thisMatch.commentList.get(index);
+						filteredCommentMap.add(thisMap);
+					}
+				}
+				if (debug) {
+					if (failed) {
+						System.out.println("Failed to locate all the needed terms in master:");
+						System.out.println(failedTerms);
+					} else {
+						System.out.println("Found all the needed terms in master");
+					}
+				}
+            }
+            thisMatch.commentList = filteredCommentMap;
+        }
+
+
+        /*
         // gather simple names from master
         ArrayList<Set<String>> nameListMasterGlobal = new ArrayList<Set<String>>();
         ArrayList<Set<String>> nameListMasterLocal = new ArrayList<Set<String>>();
@@ -210,18 +338,17 @@ public class Analyze {
             nameListMasterLocal.add(simpleNameSetMasterLocal);
         }
 
-        /*
-        if (debug) {
-            System.out.println("Master name list global:");
-            for (Set<String> list : nameListMasterGlobal) {
-                System.out.println(Arrays.toString(list.toArray()));
-            }
+        //if (debug) {
+        //    System.out.println("Master name list global:");
+        //    for (Set<String> list : nameListMasterGlobal) {
+        //        System.out.println(Arrays.toString(list.toArray()));
+        //    }
 
-            System.out.println("Master name list local:");
-            for (Set<String> list : nameListMasterLocal) {
-                System.out.println(Arrays.toString(list.toArray()));
-            }
-        }*/
+        //    System.out.println("Master name list local:");
+        //    for (Set<String> list : nameListMasterLocal) {
+        //        System.out.println(Arrays.toString(list.toArray()));
+        //    }
+        //}
 
         // gather simple names from clones (local + global), intersection (local + global)
         ArrayList<Set<String>> nameListCloneLocal = new ArrayList<Set<String>>();
@@ -335,6 +462,8 @@ public class Analyze {
                     intersectionVariable.retainAll(simpleNameSetMasterGlobal);
 
                     if (debug) {
+                        System.out.println("Terms from sentence:");
+                        System.out.println(commentTermList);
                         System.out.println("Cross local:");
                         System.out.println(Arrays.toString(intersectionLocal.toArray()));
                         System.out.println("Cross global:");
@@ -343,22 +472,20 @@ public class Analyze {
                         System.out.println(Arrays.toString(intersectionVariable.toArray()));
                     }
 
-                    /*
                     // check how many overlaps
                     // all globals and local terms must match
                     // there must be at least one local match
-                    if (!intersectionGlobal.equals(cTermsCloneGlobal) ||
-                            !intersectionLocal.equals(cTermsCloneLocal) ||
-                            intersectionLocal.size() == 0 ||
-                            intersectionVariable.size() != cTermsVariables.size()) {
-                        existAllMaster = false;
-                        break;
-                    } else {
-                        // save the result
-                        localTerms.addAll(intersectionLocal);
-                        varTerms.addAll(intersectionVariable);
-                    }
-                    */
+                    //if (!intersectionGlobal.equals(cTermsCloneGlobal) ||
+                    //        !intersectionLocal.equals(cTermsCloneLocal) ||
+                    //        intersectionLocal.size() == 0 ||
+                    //        intersectionVariable.size() != cTermsVariables.size()) {
+                    //    existAllMaster = false;
+                    //    break;
+                    //} else {
+                    //    // save the result
+                    //    localTerms.addAll(intersectionLocal);
+                    //    varTerms.addAll(intersectionVariable);
+                    //}
 
                     if (intersectionLocal.size() > 0 &&
                             intersectionVariable.equals(cTermsVariables)) {
@@ -386,6 +513,7 @@ public class Analyze {
             thisMatch.commentList = filteredCommentMap;
             index++;
         }
+        */
     }
 
     public static boolean containInvalidTerms(String comment) {

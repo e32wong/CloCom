@@ -203,8 +203,14 @@ public class MatchGroup implements Serializable {
 
         // text similarity
         if (enableSimilarity) {
+            if (debug) {
+                System.out.println("Similarity enabled");
+            }
             Analyze.textSimilarity(masterList, cloneList, similarityRange, debug);
+        } else {
+			System.out.println("Similarity disabled");
         }
+
 
     }
 
