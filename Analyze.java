@@ -196,6 +196,7 @@ public class Analyze {
 
         // check if the comment from each clone list is valid
         ArrayList<CommentMap> filteredCommentMap = new ArrayList<CommentMap>();
+        ArrayList<Integer> scoreList = new ArrayList<Integer>();
         for (MatchInstance thisMatch : cloneList) {
 
 			// first get name list for this clone's code
@@ -262,6 +263,7 @@ public class Analyze {
             for (Set<String> masterSet : nameListMasterGlobal) {
 				// loop each master term
 				int index = 0;
+                int score = 0;
 				boolean failed = false;
 				for (Set<String> eachCommentSet : setMustExistMaster) {
 					for (String str1 : eachCommentSet) {
@@ -270,14 +272,17 @@ public class Analyze {
 							if (!str2.toLowerCase().contains(str1)) {
 								failed = true;
 								failedTerms.add(str1);
-							}
+							} else {
+                                score = score + 1;
+                            }
 						}
 					}
 					index = index + 1;
 
-					if (!failed) {
+					if (!failed && score > 0) {
 						CommentMap thisMap = thisMatch.commentList.get(index);
 						filteredCommentMap.add(thisMap);
+                        scoreList.add(new Integer(score));
 					}
 				}
 				if (debug) {
@@ -290,6 +295,7 @@ public class Analyze {
 				}
             }
             thisMatch.commentList = filteredCommentMap;
+            thisMatch.scoreList = scoreList;
         }
 
 

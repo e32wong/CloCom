@@ -17,6 +17,7 @@ public class MatchInstance implements Serializable {
 
     // comment related
     ArrayList<CommentMap> commentList;
+    ArrayList<Integer> scoreList;
     ArrayList<HashSet<String>> similarityTermsLocal = new ArrayList<HashSet<String>>();
     ArrayList<HashSet<String>> similarityTermsGlobal = new ArrayList<HashSet<String>>();
     ArrayList<HashSet<String>> similarityTermsVariable = new ArrayList<HashSet<String>>();
@@ -43,6 +44,10 @@ public class MatchInstance implements Serializable {
 
     public ArrayList<CommentMap> getComments () {
         return commentList;
+    }
+
+    public ArrayList<Integer> getScores () {
+        return scoreList;
     }
 
     public void addSimilarityLocal (HashSet<String> terms) {

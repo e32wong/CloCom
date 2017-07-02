@@ -302,13 +302,12 @@ public class MatchGroup implements Serializable {
         for (MatchInstance thisMatch : cloneList) {
 
             ArrayList<CommentMap> commentList = thisMatch.getComments();
+            ArrayList<Integer> scoreList = thisMatch.getScores();
 
             for (int index = 0; index < commentList.size(); index++) {
                 CommentMap cMap = commentList.get(index);
-                HashSet<String> termsLocal = thisMatch.getSimilarityLocal().get(index);
-                HashSet<String> termsGlobal = thisMatch.getSimilarityGlobal().get(index);
-
-                listComments.put(cMap.comment, termsGlobal.size() + termsLocal.size());
+                Integer thisScore = scoreList.get(index);
+                listComments.put(cMap.comment, thisScore.intValue());
             }
         }
 
