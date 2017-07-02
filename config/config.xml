@@ -16,12 +16,12 @@
         <project>/home/edmund/crawledFiles/autocommentProjects/jabref/</project>
         <database>/home/edmund/crawledFiles/clocomProjects/</database>
         <outputDir>/home/edmund/research/clocom/output/</outputDir>
-        <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
-        <forceRetokenization>true</forceRetokenization>
+        <loadDatabaseFilePaths>true</loadDatabaseFilePaths>
+        <forceRetokenization>false</forceRetokenization>
         <buildTFIDF>false</buildTFIDF>
     </projects>
     <outputSettings>
-        <debug>true</debug>
+        <debug>false</debug>
         <saveEmpty>false</saveEmpty>
         <exportResults>false</exportResults>
         <resultPath></resultPath>
@@ -35,7 +35,7 @@
         </similarity>
         <others>
             <enableRepetitive>true</enableRepetitive>
-            <minNumberStatements>2</minNumberStatements>
+            <minNumberStatements>1</minNumberStatements>
             <enablePercentageMatchingAuto>true</enablePercentageMatchingAuto>
         </others>
     </heuristics>

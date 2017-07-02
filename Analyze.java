@@ -564,12 +564,15 @@ public class Analyze {
     }
 
     public static boolean isRepetitive(List<Statement> statementList) {
-        boolean isRepetitive = true;
+        boolean isRepetitive = false;
         int baseline = statementList.get(0).hashNumber;
         for (int i = 1; i < statementList.size(); i++) {
-            if (statementList.get(i).hashNumber != baseline) {
-                isRepetitive = false;
+            int currentHashNumber = statementList.get(i).hashNumber;
+            if (currentHashNumber == baseline) {
+                isRepetitive = true;
                 break;
+            } else {
+                baseline = currentHashNumber;
             }
         }
 
