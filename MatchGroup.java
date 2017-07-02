@@ -190,16 +190,23 @@ public class MatchGroup implements Serializable {
                     /*ArrayList<CommentMap> emptyCommentList =
                       new ArrayList<CommentMap>();
                       thisMatch.setComments(emptyCommentList);*/
+                    if (debug) {
+                        System.out.println("revmoed due to invalid term");
+                    }
                     break;
+                } else {
+                    if (debug) {
+                        System.out.println("not removed from invalid term");
+                    }
                 }
             }
         }
 
         // code artifact detection
-        boolean enableArtifactDetection = true;
-        if (enableArtifactDetection) {
-            Analyze.codeArtifactDetection(masterList, cloneList);
-        }
+        //boolean enableArtifactDetection = true;
+        //if (enableArtifactDetection) {
+        //    Analyze.codeArtifactDetection(masterList, cloneList);
+        //}
 
         // text similarity
         if (enableSimilarity) {
@@ -208,7 +215,7 @@ public class MatchGroup implements Serializable {
             }
             Analyze.textSimilarity(masterList, cloneList, similarityRange, debug);
         } else {
-			System.out.println("Similarity disabled");
+            System.out.println("Similarity disabled");
         }
 
 
@@ -273,15 +280,15 @@ public class MatchGroup implements Serializable {
         // Sorting the list based on values
         Collections.sort(list, new Comparator<Entry<String, Integer>>()
                 {
-                    public int compare(Entry<String, Integer> o1,
+                public int compare(Entry<String, Integer> o1,
                         Entry<String, Integer> o2)
-                    {
-                        if (mode == 0){ 
-                            return o2.getValue().compareTo(o1.getValue());
-                        } else {
-                            return o1.getValue().compareTo(o2.getValue());
-                        }
-                    }
+                {
+                if (mode == 0){ 
+                return o2.getValue().compareTo(o1.getValue());
+                } else {
+                return o1.getValue().compareTo(o2.getValue());
+                }
+                }
                 });
 
         // Maintaining insertion order with the help of LinkedList
@@ -431,28 +438,32 @@ public class MatchGroup implements Serializable {
     }
 
     public void mapCode2Comment() {
-        
+
         for (MatchInstance thisMatch : masterList) {
             String filePath = thisMatch.fileName;
-            boolean format = Utilities.checkIsJava(filePath);
+            boolean isJavaFile = Utilities.checkIsJava(filePath);
             int startLine = thisMatch.startLine;
             int endLine = thisMatch.endLine;
 
             // get the list of comments associated
             CommentParser cParser = new CommentParser(filePath);
-            ArrayList<CommentMap> commentList = new ArrayList<CommentMap>();
-            if (format == true) {
+            //ArrayList<CommentMap> commentList = new ArrayList<CommentMap>();
+            ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0, isJavaFile);
+            if (isJavaFile == true) {
                 // source code format
-                cParser.parseComment(filePath, startLine, endLine, 0, true);
+                //cParser.parseComment(filePath, startLine, endLine, 0, true);
+                commentList = removeInline(commentList, filePath);
+                commentList = groupNormalizeComment(commentList);
             }
 
             // remove in-line comments
-            commentList = removeInline(commentList, filePath);
+            //commentList = removeInline(commentList, filePath);
 
             // group the comments
-            commentList = groupNormalizeComment(commentList);
+            //commentList = groupNormalizeComment(commentList);
 
-            thisMatch.setComments(commentList);
+            //thisMatch.setComments(commentList);
+			thisMatch.setComments(commentList);
         }
 
         for (MatchInstance thisMatch : cloneList) {
@@ -464,7 +475,9 @@ public class MatchGroup implements Serializable {
             // get the list of comments associated
             CommentParser cParser = new CommentParser(filePath);
             ArrayList<CommentMap> commentList = cParser.parseComment(filePath, startLine, endLine, 0, isJavaFile);
-
+            //for (CommentMap c : commentList) {
+            //    String v = c.comment;
+            //}
             // remove in-line comments
             if (isJavaFile == true) {
                 // source code format
@@ -477,7 +490,7 @@ public class MatchGroup implements Serializable {
 
     }
 
-    public void pruneDuplicateComments() {
+    public void pruneDuplicateComments(boolean debug) {
 
         // get unique list of comments from master and clones
         HashSet<String> masterComments = new HashSet<String>();
@@ -494,9 +507,14 @@ public class MatchGroup implements Serializable {
 
             ArrayList<CommentMap> commentList = thisMatch.commentList;
             for (CommentMap thisCMap : commentList) {
+
                 String thisComment = thisCMap.comment;
                 if (!masterComments.contains(thisComment)) {
                     filteredCommentList.add(thisCMap);
+                } else {
+                    if (debug) {
+                        System.out.println("Removed dup comment");
+                    }
                 }
             }
 

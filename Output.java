@@ -289,7 +289,7 @@ public class Output {
                 MatchGroup thisMatchGroup = matchGroupList.get(key);
                 thisMatchGroup.mapCode2Comment();
                 thisMatchGroup.pruneComments(similarityRange, enableSimilarity, debug);
-                thisMatchGroup.pruneDuplicateComments();
+                thisMatchGroup.pruneDuplicateComments(debug);
 
                 boolean hasComment = thisMatchGroup.hasComment();
 
@@ -306,6 +306,9 @@ public class Output {
                         outputFileName = outputDir + Integer.toString(outputIndex) + "-full.txt";
                         numMatchesWithComment++;
                         outputIndex = outputIndex + 1;
+                    }
+                    if (debug) {
+                        System.out.println(outputFileName);
                     }
                     PrintWriter writerComment = new PrintWriter(outputFileName, "UTF-8");
                     String groupStr = "Match Group " + matchIndex + " of size " +

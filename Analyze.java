@@ -258,42 +258,45 @@ public class Analyze {
             }
 
             // check if it exist in every master
-            Set<String> failedTerms = new HashSet<String>();
-			// loop each master
-            for (Set<String> masterSet : nameListMasterGlobal) {
-				// loop each master term
-				int index = 0;
-                int score = 0;
-				boolean failed = false;
-				for (Set<String> eachCommentSet : setMustExistMaster) {
-					for (String str1 : eachCommentSet) {
-						// loop 
+            int commentIndex = 0;
+			for (Set<String> commentTermSet : setMustExistMaster) {
+                Set<String> failedTerms = new HashSet<String>();
+                boolean failed = false;
+				for (Set<String> masterSet : nameListMasterGlobal) {
+					for (String str1 : commentTermSet) {
+                        boolean thisMasterStatus = false;
 						for (String str2 : masterSet) {
 							if (!str2.toLowerCase().contains(str1)) {
-								failed = true;
 								failedTerms.add(str1);
 							} else {
-                                score = score + 1;
+                                thisMasterStatus = true;
+                                break;
                             }
 						}
+                        if (thisMasterStatus == false) {
+                            failed = true;
+                        }
 					}
-					index = index + 1;
+				}
+				
+				int score = commentTermSet.size();
+                if (!failed && score > 0) {
+                    CommentMap thisMap = thisMatch.commentList.get(commentIndex);
+                    filteredCommentMap.add(thisMap);
+                    scoreList.add(new Integer(score));
+                }
+                if (debug) {
+                    if (failed) {
+                        System.out.println("Failed to locate all the needed terms in master:");
+                        System.out.println(failedTerms);
+                    } else {
+                        System.out.println("Found all the needed terms in master");
+                    }
+                }
 
-					if (!failed && score > 0) {
-						CommentMap thisMap = thisMatch.commentList.get(index);
-						filteredCommentMap.add(thisMap);
-                        scoreList.add(new Integer(score));
-					}
-				}
-				if (debug) {
-					if (failed) {
-						System.out.println("Failed to locate all the needed terms in master:");
-						System.out.println(failedTerms);
-					} else {
-						System.out.println("Found all the needed terms in master");
-					}
-				}
+                commentIndex = commentIndex + 1;
             }
+
             thisMatch.commentList = filteredCommentMap;
             thisMatch.scoreList = scoreList;
         }

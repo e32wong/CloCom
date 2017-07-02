@@ -87,7 +87,6 @@ public class CommentVisitor extends ASTVisitor {
     }
 
     public boolean visit(BlockComment node) {
-
         int startLineNumber = compilationUnit.getLineNumber(node.getStartPosition());
         int endLineNumber = compilationUnit.getLineNumber(node.getStartPosition() + node.getLength());
 
@@ -96,13 +95,12 @@ public class CommentVisitor extends ASTVisitor {
 
         if ((startLineNumber >= startLine && endLineNumber <= endLine) || 
                 startLine - 1 == endLineNumber) {
-
             // Build the comment char by char
             StringBuilder comment = new StringBuilder();
             for (int i = node.getStartPosition(); i < node.getStartPosition() + node.getLength(); i++) {
                 comment.append(source[i]);
             }
-
+            
             if (comment.capacity() > 0) {
                 String str = comment.toString().replaceAll("\\n\\s+", "\n ");
 

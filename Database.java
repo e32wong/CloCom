@@ -45,6 +45,7 @@ public class Database {
             if (file.isFile()) {
                 //System.out.println(file);
                 String strFileName = file.toString();
+                System.out.println(strFileName);
                 if (strFileName.endsWith(extName1) || strFileName.endsWith(extName2)) {
                     files.add(strFileName);
                 }

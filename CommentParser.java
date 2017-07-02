@@ -70,98 +70,107 @@ public class CommentParser {
     // mode 1 - stops upon finding a comment
     // format 1 = autocomment, 0 = standard
     public ArrayList<CommentMap> parseComment
-        (String absPath, int startLine, int endLine, int mode, boolean isJavaCode) {
+            (String absPath, int startLine, int endLine, int mode, boolean isJavaCode) {
+        final ArrayList<CommentMap> commentMap = new ArrayList<CommentMap>();
 
-            final ArrayList<CommentMap> commentMap = new ArrayList<CommentMap>();
+        if (isJavaCode == false) {
 
-            if (isJavaCode == false) {
-
-                try (BufferedReader br = new BufferedReader(new FileReader(absPath))) {
-                    String line = br.readLine();
-                    if (!line.equals("//")) {
-                        try {
-                            ArrayList<String> listSentences = Analyze.splitParagraph(line.substring(2));
-                            for (String s : listSentences) {
-                                CommentMap c1 = new CommentMap(s, 0, 0, 1);
-                                commentMap.add(c1);
-                            }
-                        } catch (Exception e) {
-                            System.out.println("Exception on first line parsing, expecting // format for the db");
-                        }
-
-                    }
-                    line = br.readLine();
-                    if (!line.equals("//")) {
+            try (BufferedReader br = new BufferedReader(new FileReader(absPath))) {
+                String line = br.readLine();
+                if (!line.equals("//")) {
+                    try {
                         ArrayList<String> listSentences = Analyze.splitParagraph(line.substring(2));
                         for (String s : listSentences) {
-                            CommentMap c2 = new CommentMap(s, 1, 1, 1);
-                            commentMap.add(c2);
+                            CommentMap c1 = new CommentMap(s, 0, 0, 1);
+                            commentMap.add(c1);
                         }
+                    } catch (Exception e) {
+                        System.out.println("Exception on first line parsing, expecting // format for the db");
                     }
-                } catch (Exception e) {
-                    System.out.println("Exception in CommentParser format 1");
-                    System.out.println(e);
+
+                }
+                line = br.readLine();
+                if (!line.equals("//")) {
+                    ArrayList<String> listSentences = Analyze.splitParagraph(line.substring(2));
+                    for (String s : listSentences) {
+                        CommentMap c2 = new CommentMap(s, 1, 1, 1);
+                        commentMap.add(c2);
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println("Exception in CommentParser format 1");
+                System.out.println(e);
+            }
+
+        } else if (isJavaCode == true) {
+            // call accept on each comment to retrieve the content of the comment
+            for (int i = 0; i < commentList.size(); i++) {
+
+                Comment comment = commentList.get(i);
+                //System.out.println(comment);
+                int startLineNumber = unit.getLineNumber(comment.getStartPosition());
+                int endLineNumber = unit.getLineNumber(comment.getStartPosition() + comment.getLength());
+                //System.out.println(startLineNumber);
+                //System.out.println(endLineNumber);
+                // search for line line comment, and javadoc comment within the range
+                if (startLineNumber >= startLine && endLineNumber <= endLine) {
+                    // within the matched code
+                    comment.accept(new CommentVisitor(unit, content, commentMap, startLineNumber, endLineNumber));
+                    continue;
                 }
 
-            } else if (isJavaCode == true) {
-                // call accept on each comment to retrieve the content of the comment
-                for (int i = 0; i < commentList.size(); i++) {
+                // search for line comment before the range
+                if (startLineNumber >= startLine - 3 && startLineNumber < startLine &&
+                        startLineNumber == endLineNumber) {
+                //if (endLineNumber == startLine - 1) {
+                    int currentLine = startLineNumber;
+                    final ArrayList<CommentMap> dummyMap = new ArrayList<CommentMap>();
 
-                    Comment comment = commentList.get(i);
-                    int startLineNumber = unit.getLineNumber(comment.getStartPosition());
-                    int endLineNumber = unit.getLineNumber(comment.getStartPosition() + comment.getLength());
+                    // keep searching forward one line at a time
+                    while (currentLine < startLine && i < commentList.size()) {
+                        comment = commentList.get(i);
+                        startLineNumber = unit.getLineNumber(comment.getStartPosition());
+                        endLineNumber = unit.getLineNumber(comment.getStartPosition() + comment.getLength());
 
-                    // search for line line comment, block comment, javadoc comment within the range
-                    if (startLineNumber >= startLine && endLineNumber <= endLine) {
-                        comment.accept(new CommentVisitor(unit, content, commentMap, startLineNumber, endLineNumber));
-                        continue;
-                    }
-
-                    // search for line comment before the range
-                    if (startLineNumber >= startLine - 3 && startLineNumber < startLine &&
-                            startLineNumber == endLineNumber) {
-                        int currentLine = startLineNumber;
-
-                        final ArrayList<CommentMap> dummyMap = new ArrayList<CommentMap>();
-
-                        // keep searching forward one line at a time
-                        while (currentLine < startLine && i < commentList.size()) {
-                            comment = commentList.get(i);
-
-                            startLineNumber = unit.getLineNumber(comment.getStartPosition());
-                            endLineNumber = unit.getLineNumber(comment.getStartPosition() + comment.getLength());
-
-                            if (startLineNumber == endLineNumber && startLineNumber == currentLine) {
-                                comment.accept(new CommentVisitor(unit, content,
-                                            dummyMap, startLineNumber, endLineNumber));
-                                currentLine++;
-                                i++;
-                            } else {
-                                break;
-                            }
-                        }
-
-                        if (currentLine != startLine) {
-                            dummyMap.clear();
+                        if (startLineNumber == endLineNumber && startLineNumber == currentLine) {
+                            // start = end means it is a line
+                            comment.accept(new CommentVisitor(unit, content,
+                                        dummyMap, startLineNumber, endLineNumber));
+                            currentLine++;
+                            i++;
                         } else {
-                            i = i - 1;
-                        }
-
-                        commentMap.addAll(dummyMap);
-
-                        continue;
-                            }
-
-                    // stop execution if in mode 1 once we found a comment
-                    if (mode == 1) {
-                        if (commentMap.size() > 0) {
                             break;
                         }
                     }
-                }
-            } 
 
-            return commentMap;
-        }               
+                    if (currentLine != startLine) {
+                        dummyMap.clear();
+                    } else {
+                        i = i - 1;
+                    }
+
+                    commentMap.addAll(dummyMap);
+
+                    continue;
+                }
+                    
+                // uncatched by the previous two, block comment, must be at the end
+                if (endLineNumber == startLine - 1) {
+                    comment.accept(new CommentVisitor(unit, content, commentMap, startLineNumber, endLineNumber));
+                    continue;
+                }
+
+
+                // stop execution if in mode 1 once we found a comment
+                if (mode == 1) {
+                    if (commentMap.size() > 0) {
+                        break;
+                    }
+                }
+            }
+        } 
+
+        return commentMap;
+    }               
 
 }
