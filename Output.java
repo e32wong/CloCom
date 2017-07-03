@@ -276,9 +276,11 @@ public class Output {
         int outputIndex = 0;
         int emptyIndex = 0;
         
-        PrintWriter writerMaster = null;
+        PrintWriter writerMasterHasComment = null;
+        PrintWriter writerMasterNoComment = null;
         try {
-            writerMaster = new PrintWriter(outputDir + "allComments.txt", "UTF-8");
+            writerMasterHasComment = new PrintWriter(outputDir + "allComments.txt", "UTF-8");
+            writerMasterNoComment = new PrintWriter(outputDir + "noComments.txt", "UTF-8");
            
             System.out.println("\n\n");
             for (Integer key : matchGroupList.keySet()) {
@@ -292,18 +294,23 @@ public class Output {
                 thisMatchGroup.pruneDuplicateComments(debug);
 
                 boolean hasComment = thisMatchGroup.hasComment();
-
+                PrintWriter writerMaster;
+                if (hasComment) {
+                    writerMaster = writerMasterHasComment;
+                } else {
+                    writerMaster = writerMasterNoComment;
+                }
                 // no comment and remove empty is true
                 // simply export the ones without comment to a different filename
                 try {
                     String outputFileName = "";
                     if (hasComment == false) {
                         System.out.println("No comments");
-                        outputFileName = outputDir + Integer.toString(emptyIndex) + "-empty.txt";
+                        outputFileName = outputDir + "empty-" + Integer.toString(emptyIndex) + ".txt";
                         emptyIndex = emptyIndex + 1;
                     } else {
                         System.out.println("Has comment(s)");
-                        outputFileName = outputDir + Integer.toString(outputIndex) + "-full.txt";
+                        outputFileName = outputDir + "full-" + Integer.toString(outputIndex) + ".txt";
                         numMatchesWithComment++;
                         outputIndex = outputIndex + 1;
                     }
@@ -343,8 +350,11 @@ public class Output {
         } catch (UnsupportedEncodingException e) {
             System.out.println("UnsupportedEncodingException error in print writer");
         } finally {
-            if (writerMaster != null) {
-                writerMaster.close();
+            if (writerMasterHasComment != null) {
+                writerMasterHasComment.close();
+            }
+            if (writerMasterNoComment != null) {
+                writerMasterNoComment.close();
             }
         }
 
