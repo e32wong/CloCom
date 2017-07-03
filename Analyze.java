@@ -197,9 +197,9 @@ public class Analyze {
         }
 
         // check if the comment from each clone list is valid
-        ArrayList<CommentMap> filteredCommentMap = new ArrayList<CommentMap>();
         ArrayList<Integer> scoreList = new ArrayList<Integer>();
         for (MatchInstance thisMatch : cloneList) {
+            ArrayList<CommentMap> filteredCommentMap = new ArrayList<CommentMap>();
 
 			// first get name list for this clone's code
 			Set<String> nameListClone = new HashSet<String>();

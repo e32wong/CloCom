@@ -555,8 +555,8 @@ public class MatchGroup implements Serializable {
 
                 // print the comment 
                 for (CommentMap cMap : comments) {
-                    cMap.print(writerComment);
-                    cMap.print(writerMaster);
+                    writerComment.println("C - " + cMap.comment);
+                    writerMaster.println("C - " + cMap.comment);
                 }
 
                 // Print the code segment
@@ -608,13 +608,8 @@ public class MatchGroup implements Serializable {
                     // print the comment 
                     for (CommentMap cMap : comments) {
                         // print the artifacts
-                        if (cMap.artifactSet != null) {
-                            String commentStr = cMap.artifactSet + " ";
-                            writerComment.print(commentStr);
-                            writerMaster.print(commentStr);
-                        }
-                        cMap.print(writerComment);
-                        cMap.print(writerMaster);
+                        writerComment.println("C - " + cMap.comment);
+                        writerMaster.println("C - " + cMap.comment);
                         masterCommentList.add(cMap.comment);
                     }
 

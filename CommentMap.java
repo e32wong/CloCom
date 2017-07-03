@@ -27,10 +27,6 @@ public class CommentMap implements Serializable {
         commentType = cType;
     }
 
-    public void print(PrintWriter writer) {
-        writer.println(comment);
-    }
-
     @Override public String toString() {
         return comment;
     }
