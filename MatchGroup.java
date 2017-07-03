@@ -599,18 +599,8 @@ public class MatchGroup implements Serializable {
 
                     // print text similarity terms
                     if (enableSimilarity) {
-                        ArrayList<HashSet<String>> similarityTermsLocal = thisMatch.getSimilarityLocal();
-                        String simStr = "local sim: " + similarityTermsLocal;
-                        writerComment.println(simStr);
-                        writerMaster.println(simStr);
-
-                        ArrayList<HashSet<String>> similarityTermsGlobal = thisMatch.getSimilarityGlobal();
-                        simStr = "global sim: " + similarityTermsGlobal;
-                        writerComment.println(simStr);
-                        writerMaster.println(simStr);
-
-                        ArrayList<HashSet<String>> similarityTermsVariable = thisMatch.getSimilarityVariable();
-                        simStr = "variable sim: " + similarityTermsVariable;
+                        ArrayList<HashSet<String>> setMustExistMaster = thisMatch.setMustExistMaster;
+                        String simStr = "Sim terms: " + setMustExistMaster;
                         writerComment.println(simStr);
                         writerMaster.println(simStr);
                     }

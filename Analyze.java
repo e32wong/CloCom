@@ -239,10 +239,10 @@ public class Analyze {
             
 			// find list of terms between this clone and comment,
             // which will have to exist in master or else discard
-            ArrayList<Set<String>> setMustExistMaster = new ArrayList<Set<String>>();
+            ArrayList<HashSet<String>> setMustExistMaster = new ArrayList<HashSet<String>>();
 			// loop over each comment
 			for (Set<String> comment : nameListComment) {
-				Set<String> commentSetMustExist = new HashSet<String>();
+				HashSet<String> commentSetMustExist = new HashSet<String>();
                 // loop over each term in comment
                 for (String commentL : comment) {
                     // loop on clone terms
@@ -301,6 +301,7 @@ public class Analyze {
 
             thisMatch.commentList = filteredCommentMap;
             thisMatch.scoreList = scoreList;
+            thisMatch.setMustExistMaster = setMustExistMaster;
         }
 
     }

@@ -35,7 +35,7 @@
         </similarity>
         <others>
             <enableRepetitive>true</enableRepetitive>
-            <minNumberStatements>1</minNumberStatements>
+            <minNumberStatements>2</minNumberStatements>
             <enablePercentageMatchingAuto>true</enablePercentageMatchingAuto>
         </others>
     </heuristics>
