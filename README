@@ -10,6 +10,10 @@ INSTALLATION:
 
 sudo apt-get install openjdk-8-jdk
 
+Place the following tars under lib2..
+stanford-corenlp-3.8.0.jar  
+stanford-corenlp-3.8.0-models.jar
+
 HOW TO RUN:
 
 1.
