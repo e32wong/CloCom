@@ -525,16 +525,23 @@ public class Analyze {
         */
     }
 
-    public static boolean containInvalidTerms(String comment) {
+    public static boolean containInvalidTerms(String comment, boolean debug) {
         if (comment.contains("?") || comment.contains("http") || comment.contains("https") ||
                 comment.contains(";") || comment.contains("$NON-NLS-1$") || 
                 comment.contains("{@inheritDoc}")) {
+            if (debug) {
+                System.out.println("Removed due to invalid term");
+            }
             return true;
         }
 
-        Pattern pattern = Pattern.compile("\\b(bug|fix|error|issue|crash|problem|fail|defect|patch)\\b");
+        Pattern pattern = Pattern.compile("\\b(bug|fix|error|issue|crash|problem|fail|" + 
+				"defect|patch|maybe|may|how|just|we)\\b");
         Matcher matcher = pattern.matcher(comment);
         if (matcher.find()) {
+            if (debug) {
+                System.out.println("Removed due to invalid term");
+            }
             return true;
         }
 
@@ -579,6 +586,40 @@ public class Analyze {
         if (isRepetitive) {
             return true;
         } else {
+            return false;
+        }
+    }
+
+    public static boolean checkExistNumbers (String comment, boolean debug) {
+        String pattern = "[0-9]+";
+        Pattern r = Pattern.compile(pattern);
+        Matcher m = r.matcher(comment);
+        if (m.find()) {
+            if (debug) {
+                System.out.println("Removed from having a number");
+            }
+            return false;
+        } else {
+            if (debug) {
+                System.out.println("No removed from number check");
+            }
+            return true;
+        }
+    }
+    
+    // return true if satisfied
+    public static boolean checkNumberTerms (String comment, int minNumTerms, boolean debug) {
+
+        String[] words = comment.split("\\s+");
+        if (words.length >= minNumTerms) {
+            if (debug) {
+                System.out.println("Satisfied number of minimum terms in comment");
+            }
+            return true;
+        } else {
+            if (debug) {
+                System.out.println("Not satisfied number of minimum terms in comment");
+            }
             return false;
         }
     }

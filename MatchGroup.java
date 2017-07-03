@@ -175,29 +175,20 @@ public class MatchGroup implements Serializable {
 
     public void pruneComments(int similarityRange, boolean enableSimilarity, boolean debug) {
 
-        // clone pruning
+        // clone pruning on comments with invalid terms
         for (MatchInstance thisMatch : cloneList) {
 
-            // analyze for invalid terms
+            // analyze for invalid terms or too short
             ArrayList<CommentMap> commentMapList = thisMatch.getComments();
             for (CommentMap cMap : commentMapList) {
                 String comment = cMap.comment;
-                boolean result = Analyze.containInvalidTerms(comment);
-                if (result == true) {
+                boolean result1 = Analyze.containInvalidTerms(comment, debug);
+				boolean result2 = Analyze.checkNumberTerms(comment, 3, debug);
+                boolean result3 = Analyze.checkExistNumbers(comment, debug);
+                if (result1 == true && result2 == true && result3 == true) {
                     // discard the whole comment list if any is bad
                     // by replacing the list with an empty one
                     commentMapList.remove(cMap);
-                    /*ArrayList<CommentMap> emptyCommentList =
-                      new ArrayList<CommentMap>();
-                      thisMatch.setComments(emptyCommentList);*/
-                    if (debug) {
-                        System.out.println("revmoed due to invalid term");
-                    }
-                    break;
-                } else {
-                    if (debug) {
-                        System.out.println("not removed from invalid term");
-                    }
                 }
             }
         }

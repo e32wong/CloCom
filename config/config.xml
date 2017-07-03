@@ -2,7 +2,7 @@
 <!DOCTYPE configuration SYSTEM "config.dtd">
 <configuration>
     <matching>
-        <minNumLines>4</minNumLines>
+        <minNumLines>3</minNumLines>
         <matchAlgorithm>1</matchAlgorithm>
         <matchMode>0</matchMode>
         <gapSize>2</gapSize>
