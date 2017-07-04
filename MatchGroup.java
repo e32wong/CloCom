@@ -180,6 +180,7 @@ public class MatchGroup implements Serializable {
 
             // analyze for invalid terms or too short
             ArrayList<CommentMap> commentMapList = thisMatch.getComments();
+            ArrayList<CommentMap> cmapNewList = new ArrayList<CommentMap>();
             for (CommentMap cMap : commentMapList) {
                 String comment = cMap.comment;
                 boolean result1 = Analyze.containInvalidTerms(comment, debug);
@@ -188,9 +189,12 @@ public class MatchGroup implements Serializable {
                 if (result1 == true && result2 == true && result3 == true) {
                     // discard the whole comment list if any is bad
                     // by replacing the list with an empty one
-                    commentMapList.remove(cMap);
+                    continue;
+                } else {
+                    cmapNewList.add(cMap);
                 }
             }
+            thisMatch.setComments(cmapNewList);
         }
 
         // code artifact detection
