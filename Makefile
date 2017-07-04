@@ -2,7 +2,8 @@
 
 JAVAC = javac
 JAVAFLAGS = -cp "./lib/*:./lib2/stanford-corenlp-3.8.0.jar:."
-JAVAFLAGS2 = -J-agentlib:hprof=heap=sites -cp "./lib/*:./lib2/stanford-corenlp-3.8.0.jar:."
+# writes to java.hprof.txt
+JAVAFLAGS2 = -J-agentlib:hprof=heap=sites,depth=10 -cp "./lib/*:./lib2/stanford-corenlp-3.8.0.jar:."
 
 
 # Builds the classes' jar file
