@@ -2,6 +2,7 @@ import re
 from HTMLParser import HTMLParser
 import time
 from xml.etree import ElementTree
+from sets import Set
 
 # Clean sentence
 def cleanSentence(sentences):
@@ -58,29 +59,21 @@ tagNeed = ["java", "android"]
 outputFolder = "./output/"
 inputFileName = "Posts.xml"
 
-questionList = []
+# set
+questionListID = Set([])
+# dictionary
+questionListTitle = {}
 start_time = time.time()
-print "Processing stage 1:"
+print "Processing:"
 context = ElementTree.iterparse(inputFileName, events=('start', 'end', 'start-ns', 'end-ns'))
 context = iter(context)
 event, root = context.next()
+totalNumMappings = 0
 for event, node in context:
     if event == "end" and node.tag == "row":
         postType = node.attrib.get('PostTypeId')
 
         if postType == "1":
-	    id = node.attrib.get('Id')
-	    bodyContent = node.attrib.get('Body')
-	    score = node.attrib.get('Score')
-            score = int(score)
-
-            #print "ID: " + id
-            #print "PostType: " + postType
-            #print "Score: " + score
-
-            # this is a question
-            title = node.attrib.get('Title')
-            #print "Title: " + title
 
             # analyze the tag
             tagList = node.attrib.get('Tags')
@@ -94,101 +87,101 @@ for event, node in context:
                         break
                 if foundTag == True:
                     break
-
+    
             if foundTag:
-                print id + "\r",
-                questionList.append(int(id))
+
+		score = node.attrib.get('Score')
+		score = int(score)
+
+                if score > 0:
+
+		    answerCount = node.attrib.get('AnswerCount')
+		    answerCount = int(answerCount)
+
+		    if answerCount > 0:
+
+			id = node.attrib.get('Id')
+			title = node.attrib.get('Title')
+
+			intID = int(id)
+			questionListID.add(intID)
+			questionListTitle[intID] = title
+
+			print id + "\r",
+
+        elif postType == '2':
+
+            parentID = node.attrib.get('ParentId')
+            parentID = int(parentID)
+
+            if parentID in questionListID:
+
+		score = node.attrib.get('Score')
+		score = int(score)
+
+                if score > 0:
+                    id = node.attrib.get('Id')
+                    bodyContent = node.attrib.get('Body')
+
+                    # an answer
+                    # get all the code snippets
+                    h = HTMLParser()
+                    bodyContent = h.unescape(bodyContent)
+                    #print bodyContent
+
+
+                    # remove code tag
+                    rex = re.compile(r'(<code>([^\s]*?)</code>)')
+                    listArtifacts = rex.findall(bodyContent)
+                    for artifact in listArtifacts:
+                        #print "ffff"
+                        #print artifact
+                        bodyContent = bodyContent.replace(artifact[0], artifact[1])
+
+                    # remove href tag
+                    rex = re.compile(r'(<a href=".+?>(.*?)</a>)')
+                    listArtifacts = rex.findall(bodyContent)
+                    for artifact in listArtifacts:
+                        #print artifact
+                        bodyContent = bodyContent.replace(artifact[0], artifact[1])
+
+                    # locate comment code pairs
+                    rex = re.compile(r'<p>([^\n]*?)</p>\s\s<pre><code>(.*?)</code></pre>',re.S|re.M)
+                    listMapping = rex.findall(bodyContent)
+                    counter = 0
+                    for mapping in listMapping:
+                        mappingSentence = mapping[0]
+                        mappingCode = mapping[1]
+                        numLines = mappingCode.count("\n")
+                        numStatements = mappingCode.count(";")
+                        if numLines >= 3 and numLines <= 10 and numStatements >= 3 and "(" in mappingCode:
+                            # remove tags
+                            rex2 = re.compile("</?[a-z]+?>")
+                            listTags = rex2.findall(mappingSentence)
+                            for tag in listTags:
+                                #print artifact
+                                mappingSentence = mappingSentence.replace(tag, "")
+
+                            # get the title of post
+                            mappingTitle = questionListTitle[parentID]
+
+                            # clean sentence
+                            mappingTitle = cleanSentence(mappingTitle)
+                            mappingSentence = cleanSentence(mappingSentence)
+
+                            f = open(outputFolder + str(parentID) + "-" + id + "-" + str(counter) + ".autocom", 'w')
+                            f.write('//' + mappingTitle.encode('utf-8') + '\n')
+                            f.write('//' + mappingSentence.encode('utf-8') + "\n")
+                            f.write(mappingCode.encode('utf-8'))
+                            f.close()
+
+                            counter = counter + 1
+                            totalNumMappings = totalNumMappings + 1
 
         root.clear()
 
 print "Largest question number"
 print max(questionList)
-elapsed_time = time.time() - start_time
-print "Execution time: " + str(elapsed_time / 60) + "min"
-
-# second round
-print "Stage 2 analysis:"
-totalNumMappings = 0
-start_time = time.time()
-context = ElementTree.iterparse(inputFileName, events=('start', 'end', 'start-ns', 'end-ns'))
-context = iter(context)
-event, root = context.next()
-for event, node in context:
-    if event == "end" and node.tag == "row":
-        postType = node.attrib.get('PostTypeId')
-
-        if postType == '2':
-            id = node.attrib.get('Id')
-            bodyContent = node.attrib.get('Body')
-            score = node.attrib.get('Score')
-            score = int(score)
-
-            print id + "\r",
-            #print "PostType: " + postType
-            #print "Score: " + str(score)
-
-            parentID = node.attrib.get('ParentId')
-            parentID = int(parentID)
-
-            if score > 0 and parentID in questionList:
-                # an answer
-                # get all the code snippets
-                h = HTMLParser()
-                bodyContent = h.unescape(bodyContent)
-                #print bodyContent
-
-                # remove code tag
-                rex = re.compile(r'(<code>([^\s]*?)</code>)')
-                listArtifacts = rex.findall(bodyContent)
-                for artifact in listArtifacts:
-                    #print "ffff"
-                    #print artifact
-                    bodyContent = bodyContent.replace(artifact[0], artifact[1])
-
-                # remove href tag
-                rex = re.compile(r'(<a href=".+?>(.*?)</a>)')
-                listArtifacts = rex.findall(bodyContent)
-                for artifact in listArtifacts:
-                    #print artifact
-                    bodyContent = bodyContent.replace(artifact[0], artifact[1])
-
-                # locate comment code pairs
-                rex = re.compile(r'<p>([^\n]*?)</p>\s\s<pre><code>(.*?)</code></pre>',re.S|re.M)
-                listMapping = rex.findall(bodyContent)
-                counter = 0
-                for mapping in listMapping:
-                    mappingSentence = mapping[0]
-                    mappingCode = mapping[1]
-                    numLines = mappingCode.count("\n")
-                    if numLines >= 3:
-                        # remove tags
-                        rex2 = re.compile("</?[a-z]+?>")
-                        listTags = rex2.findall(mappingSentence)
-                        for tag in listTags:
-                            #print artifact
-                            mappingSentence = mappingSentence.replace(tag, "")
-
-                        # clean english sentence
-                        mappingSentence = cleanSentence(mappingSentence)
-
-                        #print "- start -"
-                        #print "Text:\n" + mappingSentence
-                        #print "Code:\n" + mappingCode
-                        #print "- end -"
-                        #print "\n\n\n"
-
-                        f = open(outputFolder + str(parentID) + "-" + id + "-" + str(counter) + ".autocom", 'w')
-                        f.write('//\n')
-                        f.write('//' + mappingSentence + "\n")
-                        f.write(mappingCode)
-                        f.close()
-
-                        counter = counter + 1
-                        totalNumMappings = totalNumMappings + 1
-
-            #print "\n\n\n######"
-        root.clear()
-
 elapsed_time = time.time() - start_time
 print "Execution time: " + str(elapsed_time / 60) + "min"
 
