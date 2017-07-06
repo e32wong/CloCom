@@ -179,10 +179,13 @@ public class MatchGroup implements Serializable {
         for (MatchInstance thisMatch : cloneList) {
 
             // analyze for invalid terms or too short
+            boolean isAutocomment = thisMatch.isAutocomment;
             ArrayList<CommentMap> commentMapList = thisMatch.getComments();
             ArrayList<CommentMap> cmapNewList = new ArrayList<CommentMap>();
             for (CommentMap cMap : commentMapList) {
                 String comment = cMap.comment;
+
+                // removal
                 boolean result1 = Analyze.containInvalidTerms(comment, debug);
 				boolean result2 = Analyze.checkNumberTerms(comment, 3, debug);
                 boolean result3 = Analyze.checkExistNumbers(comment, debug);
@@ -191,17 +194,21 @@ public class MatchGroup implements Serializable {
                     // by replacing the list with an empty one
                     continue;
                 } else {
+
+					// only do stanford parser if it is from autocomment
+					if (isAutocomment == true) {
+                        String processedString = NLP.processString(comment);
+                        cMap.comment = processedString;
+                        //System.out.println("asdf");
+                        //System.out.println(cMap.comment);
+					}
+
                     cmapNewList.add(cMap);
                 }
+
             }
             thisMatch.setComments(cmapNewList);
         }
-
-        // code artifact detection
-        //boolean enableArtifactDetection = true;
-        //if (enableArtifactDetection) {
-        //    Analyze.codeArtifactDetection(masterList, cloneList);
-        //}
 
         // text similarity
         if (enableSimilarity) {

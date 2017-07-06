@@ -9,7 +9,24 @@ import java.util.HashSet;
 
 import java.util.Arrays;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.apache.commons.io.FilenameUtils;
+
 public class Analyze {
+
+	public static boolean checkExtension(String fileName, String extension) {
+		boolean isAutocomment;
+        String ext1 = FilenameUtils.getExtension(fileName);
+        if (ext1.equals(extension)) {
+            isAutocomment = true;
+        } else {
+            isAutocomment = false;
+        }
+		return isAutocomment;
+	}
 
     public static void tfidf (
         ArrayList<MatchInstance> masterList,
@@ -316,18 +333,43 @@ public class Analyze {
             return true;
         }
 
-        Pattern pattern = Pattern.compile("\\b(bug|fix|error|issue|crash|problem|fail|" + 
-				"defect|patch|maybe|may|how|just|we)\\b");
-        Matcher matcher = pattern.matcher(comment);
-        if (matcher.find()) {
+		boolean isBad = containsBadTerm(comment);
+		if (isBad) {
             if (debug) {
-                System.out.println("Removed due to invalid term");
+                System.out.println("Removed due to banned term");
             }
-            return true;
-        }
+		    return true;
+		}
 
         return false;
     }
+
+	static boolean containsBadTerm(String comment) {
+
+		String stopWordPattern = "";
+		String line;
+		try {
+			BufferedReader br = new BufferedReader (
+					new FileReader("./negative.txt"));
+			while ((line = br.readLine()) != null) {
+				stopWordPattern += "\\b" + line + "\\b|";
+			}
+			stopWordPattern = stopWordPattern.substring(0,stopWordPattern.length()-1);
+		} catch (IOException e) {
+			System.out.println("Error while reading stopword file" + e);
+			System.exit(0);
+		}
+
+		// Compile the pattern
+		Pattern p = Pattern.compile("(" + stopWordPattern + ")");
+		Matcher m = p.matcher(comment.toLowerCase());
+
+		if (m.find()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
     public static boolean hasValidScope (List<Statement> statementList) {
         int baseLineScope = statementList.get(0).scopeLevel;

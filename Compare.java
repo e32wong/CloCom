@@ -131,7 +131,6 @@ public class Compare {
                 Set<Callable<ArrayList<Result>>> callables = new HashSet<Callable<ArrayList<Result>>>();
                 
                 for (int i = 0; i < numberThreads && processedNumber < databasePaths.size(); i++) {
-
                     Text text1 = Database.loadSingleFile(databasePaths.get(processedNumber), databaseDir, minNumLines, false);
                     callables.add(new RunnableDemo("Thread-" + Integer.toString(processedNumber), projectTextList,
                                         text1, mode, gapSize, minNumLines, projectDir, databaseDir));

@@ -109,7 +109,7 @@ public class Database {
 
     }
 
-    public static List<String> getFileList(String dir_name, boolean wrapCode) throws IOException {
+    public static List<String> getFileList(String dir_name) throws IOException {
         List<String> fileList = new ArrayList<String>();
         Path dir = FileSystems.getDefault().getPath(dir_name);
         DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
@@ -118,23 +118,16 @@ public class Database {
             String absPath = path.toString();
             if (Files.isDirectory(path)) {
                 // directory, callback this function to do it recursively
-                List<String> new_file_list = getFileList(absPath, wrapCode);
+                List<String> new_file_list = getFileList(absPath);
                 //System.out.println(new_file_list);
                 fileList.addAll(new_file_list);
             } else {
                 // file, check for the extension
-                if (wrapCode == true) {
-                    String extension = FilenameUtils.getExtension(absPath);
-                    String java_ext = "map";
-                    if (extension.equals(java_ext)) {
-                        fileList.add(absPath);
-                    }
-                } else {
-                    String extension = FilenameUtils.getExtension(absPath);
-                    String java_ext = "java";
-                    if (extension.equals(java_ext)) {
-                        fileList.add(absPath);
-                    }
+                String extension = FilenameUtils.getExtension(absPath);
+                String java_ext1 = "autocom";
+                String java_ext2 = "java";
+                if (extension.equals(java_ext1) || extension.equals(java_ext2)) {
+                    fileList.add(absPath);
                 }
             }
         }
@@ -287,6 +280,12 @@ public class Database {
 
                 Text txt = new Text(absPath, dir_name);
                 errorList = txt.tokenize(minNumLines, debug, errorList, dir_name);
+
+				// delete old file first if needed
+                if (exist == true) {
+                    File f = new File(Text.getDBpath(absPath));
+                    f.delete();
+                }
 
                 // Serialize file and write to file
                 serializeToFile(Text.getDBpath(absPath), txt);

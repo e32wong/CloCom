@@ -15,6 +15,8 @@ public class MatchInstance implements Serializable {
     public int startIndex;
     public int endIndex;
 
+    public boolean isAutocomment;
+
     // comment related
     ArrayList<CommentMap> commentList;
     ArrayList<Integer> scoreList;
@@ -30,6 +32,8 @@ public class MatchInstance implements Serializable {
         statements = statements_in;
         startIndex = startIndex_in;
         endIndex = endIndex_in;
+
+        isAutocomment = Analyze.checkExtension(fileName, "autocom");
     }
 
     public ArrayList<Statement> getStatements() {

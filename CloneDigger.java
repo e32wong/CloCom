@@ -202,13 +202,15 @@ public class CloneDigger {
                 ArrayList<Text> db_TextList = new ArrayList<Text>();
                 ArrayList<Text> project_TextList = new ArrayList<Text>();
 
-                List<String> projectFilePaths = Database.getFileList(projectDir, false);
+                List<String> projectFilePaths = Database.getFileList(projectDir);
 
                 ArrayList<String> temp;
                 temp = Database.constructCache(minNumLines, debug, projectFilePaths, projectDir, forceRetokenization);
                 errorList.addAll(temp);
 
-                temp = Database.constructCache(minNumLines, debug, databaseFileList, databaseDir, forceRetokenization);
+                if (loadDatabaseFilePaths == false) {
+                    temp = Database.constructCache(minNumLines, debug, databaseFileList, databaseDir, forceRetokenization);
+                }
                 errorList.addAll(temp);
 
                 // only load the projects into memory
