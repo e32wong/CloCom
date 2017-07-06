@@ -45,7 +45,7 @@ public class Database {
             if (file.isFile()) {
                 //System.out.println(file);
                 String strFileName = file.toString();
-                System.out.println(strFileName);
+                //System.out.println(strFileName);
                 if (strFileName.endsWith(extName1) || strFileName.endsWith(extName2)) {
                     files.add(strFileName);
                 }
@@ -57,7 +57,7 @@ public class Database {
 
     public static List<String> generateFileList(String dir_name, String targetDBName) throws IOException {
         List<String> listNames = new ArrayList<String>();
-
+        System.out.println("Generating a list of files from the DB");
         listf(dir_name, listNames);
         System.out.println("Done obtaining list of files!");
 
@@ -282,7 +282,7 @@ public class Database {
                 errorList = txt.tokenize(minNumLines, debug, errorList, dir_name);
 
 				// delete old file first if needed
-                if (exist == true) {
+                if (exist == true && forceToken == true) {
                     File f = new File(Text.getDBpath(absPath));
                     f.delete();
                 }
