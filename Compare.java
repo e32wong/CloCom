@@ -123,15 +123,14 @@ public class Compare {
         System.out.println("\nComparing against " + databasePaths.size() + " database files");
 
         if (numberThreads > 0) {
-            System.out.println("Number of threads depends on the total number of database files");
-            int numberCPU = 4;
+			System.out.println("Using multithreading");
             int processedNumber = 0;
             while (processedNumber < databasePaths.size()) {
                 // try load four cpu
                 ExecutorService executor = Executors.newWorkStealingPool();
                 Set<Callable<ArrayList<Result>>> callables = new HashSet<Callable<ArrayList<Result>>>();
                 
-                for (int i = 0; i < numberCPU && processedNumber < databasePaths.size(); i++) {
+                for (int i = 0; i < numberThreads && processedNumber < databasePaths.size(); i++) {
 
                     Text text1 = Database.loadSingleFile(databasePaths.get(processedNumber), databaseDir, minNumLines, false);
                     callables.add(new RunnableDemo("Thread-" + Integer.toString(processedNumber), projectTextList,
