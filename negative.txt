@@ -2,7 +2,6 @@ no
 not
 cannot
 but
-or
 bad
 fail
 error
@@ -13,8 +12,6 @@ missing
 help
 wrong
 problem
-efficient
-expensive
 slow
 incorrect
 instead

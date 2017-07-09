@@ -419,19 +419,19 @@ public class Analyze {
         Matcher m = r.matcher(comment);
         if (m.find()) {
             if (debug) {
-                System.out.println("Removed from having a number");
-            }
-            return false;
-        } else {
-            if (debug) {
-                System.out.println("No removed from number check");
+                System.out.println("Removed because it has a number");
             }
             return true;
+        } else {
+            if (debug) {
+                System.out.println("Not removed from number check");
+            }
+            return false;
         }
     }
     
     // return true if satisfied
-    public static boolean checkNumberTerms (String comment, int minNumTerms, boolean debug) {
+    public static boolean checkNumberTermsIsGood (String comment, int minNumTerms, boolean debug) {
 
         String[] words = comment.split("\\s+");
         if (words.length >= minNumTerms) {

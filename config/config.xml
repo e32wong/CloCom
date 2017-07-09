@@ -17,7 +17,7 @@
         <database>/home/edmund/crawledFiles/clocomProjects/</database>
         <outputDir>/home/edmund/research/clocom/output/</outputDir>
         <loadDatabaseFilePaths>false</loadDatabaseFilePaths>
-        <forceRetokenization>false</forceRetokenization>
+        <forceRetokenization>true</forceRetokenization>
         <buildTFIDF>false</buildTFIDF>
     </projects>
     <outputSettings>

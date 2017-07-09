@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import java.util.Iterator;
 
 import java.io.Serializable;
@@ -182,28 +184,40 @@ public class MatchGroup implements Serializable {
             boolean isAutocomment = thisMatch.isAutocomment;
             ArrayList<CommentMap> commentMapList = thisMatch.getComments();
             ArrayList<CommentMap> cmapNewList = new ArrayList<CommentMap>();
+            System.out.println("tttt");
             for (CommentMap cMap : commentMapList) {
                 String comment = cMap.comment;
 
                 // removal
                 boolean result1 = Analyze.containInvalidTerms(comment, debug);
-				boolean result2 = Analyze.checkNumberTerms(comment, 3, debug);
+                boolean result2 = Analyze.checkNumberTermsIsGood(comment, 3, debug);
                 boolean result3 = Analyze.checkExistNumbers(comment, debug);
-                if (result1 == true && result2 == true && result3 == true) {
+                if (result1 == true || result2 == false || result3 == true) {
                     // discard the whole comment list if any is bad
                     // by replacing the list with an empty one
+                    if (debug) {
+                        System.out.println("Removed from pruning method:");
+                        System.out.println(comment);
+                    }
                     continue;
                 } else {
 
-					// only do stanford parser if it is from autocomment
-					if (isAutocomment == true) {
-                        String processedString = NLP.processString(comment);
-                        cMap.comment = processedString;
+                    // only do stanford parser if it is from autocomment
+                    if (isAutocomment == true) {
+                        ArrayList<String> processedStringList = NLP.processString(comment);
+                        int startLine = cMap.startLine;
+                        int endLine = cMap.endLine;
+                        for (String commentSingle : processedStringList) {
+                            //System.out.println("ffff");
+                            //System.out.println(commentSingle);
+                            CommentMap cMap2 = new CommentMap(commentSingle, startLine, endLine, 1);
+                            cmapNewList.add(cMap2);
+                        }
                         //System.out.println("asdf");
                         //System.out.println(cMap.comment);
-					}
-
-                    cmapNewList.add(cMap);
+                    } else {
+                        cmapNewList.add(cMap);
+                    }
                 }
 
             }
@@ -303,8 +317,8 @@ public class MatchGroup implements Serializable {
         return sortedMap;
     }
 
-    public void printRankedComments(PrintWriter writer) {
-
+    public void printRankedComments(PrintWriter writer, PrintWriter writerMaster) {
+        System.out.println("ttttt");
         // obtain a list of all the possible code comments from each clone
         HashMap<String, Integer> listComments = new HashMap<String, Integer>();
 
@@ -317,56 +331,43 @@ public class MatchGroup implements Serializable {
                 CommentMap cMap = commentList.get(index);
                 Integer thisScore = scoreList.get(index);
                 listComments.put(cMap.comment, thisScore.intValue());
+                System.out.println("yyyy");
+                System.out.println(cMap.comment);
+                System.out.println(thisScore);
             }
         }
 
         // rank it based on the size
-        HashMap<String, Integer> sortedList = sortByComparator(listComments, 0);
-        Iterator it  = sortedList.entrySet().iterator();
-        int displayedNum = 0;
-        int lastScore = -1;
-        HashMap<String, Integer> listString = new HashMap<String, Integer>();
-        while (it.hasNext()) {
-            HashMap.Entry pairs = (HashMap.Entry) it.next();
+        //HashMap<String, Integer> sortedString = sortByComparator(listComments, 1);
 
-            if (lastScore != (Integer)pairs.getValue()) {
-                String str = (String) pairs.getKey();
+		Object[] a = listComments.entrySet().toArray();
+		Arrays.sort(a, new Comparator() {
+			public int compare(Object o1, Object o2) {
+				return ((Map.Entry<String, Integer>) o2).getValue()
+						.compareTo(((Map.Entry<String, Integer>) o1).getValue());
+			}
+		});
+		writer.println("Ranked result (sim terms):");
+        writerMaster.println("Ranked result (sim terms):");
+        int counter = 1;
+		for (Object e : a) {
+            writer.println(counter + ".");
+            writerMaster.println(counter + ".");
+			System.out.println(((Map.Entry<String, Integer>) e).getKey() + " : "
+					+ ((Map.Entry<String, Integer>) e).getValue());
+            
+			//writer.println(displayedNum + ". (size " + pairs.getValue() + ")");
+            writer.println(((Map.Entry<String, Integer>) e).getKey());
 
-                // count the number of words inside the string
-                Pattern pattern = Pattern.compile("\\w+");
-                Matcher matcher = pattern.matcher(str);
-                int count = 0;
-                while (matcher.find()) {
-                    count++;
-                }
+            //writerMaster.println(displayedNum + ". (size " + pairs.getValue() + ")");
+            writerMaster.println(((Map.Entry<String, Integer>) e).getKey());
 
-                listString.put((String)pairs.getKey(), (Integer) count);
-                //System.out.println(pairs.getKey() + " = " + pairs.getValue());
-                displayedNum++;
-            }
-
-            it.remove();
-
-            if (displayedNum == 3) {
-                break;
-            }
-        }
-
-        // display the results
-        HashMap<String, Integer> sortedString = sortByComparator(listString, 1);
-        it = sortedString.entrySet().iterator();
-        displayedNum = 1;
-        writer.println("Ranked Result:");
-        while (it.hasNext()) {
-            HashMap.Entry pairs = (HashMap.Entry) it.next();
-
-            writer.println(displayedNum + ". (size " + pairs.getValue() + ")");
-            writer.println(pairs.getKey());
-
-            it.remove();
-            displayedNum++;
+            //it.remove();
+            //displayedNum++;
+            counter = counter + 1;
         }
         writer.println("----");
+        writerMaster.println("----");
     }
 
     private ArrayList<CommentMap> groupNormalizeComment(ArrayList<CommentMap> commentList) {
@@ -465,7 +466,7 @@ public class MatchGroup implements Serializable {
             //commentList = groupNormalizeComment(commentList);
 
             //thisMatch.setComments(commentList);
-			thisMatch.setComments(commentList);
+            thisMatch.setComments(commentList);
         }
 
         for (MatchInstance thisMatch : cloneList) {

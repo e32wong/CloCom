@@ -103,12 +103,18 @@ public class Output {
                 if (Analyze.checkNumMethods(statementRaw1.subList(statementStart1, statementEnd1), minNumberStatements) == false) {
                     if (debug) {
                 	    System.out.println("Removed from lack of method call");
+                        System.out.println(file1);
+                        System.out.println(file2);
+                        System.out.println();
                     }
                     return;
                 }
                 if (Analyze.checkNumMethods(statementRaw2.subList(statementStart2, statementEnd2), minNumberStatements) == false) {
                     if (debug) {
 					    System.out.println("Removed from lack of method call");
+                        System.out.println(file1);
+                        System.out.println(file2);
+                        System.out.println();
                     }
                     return;
                 }
@@ -141,7 +147,10 @@ public class Output {
                 //System.out.println(lineEnd2 + " "  + lineStart2 + "= " + sizeMatched + " X " + size);
                 if (percentage < 60) {
                     if (debug) {
-					    System.out.println("Removed from lack of % matching");
+					    System.out.println("Removed from lack of % matching: " + String.valueOf(percentage));
+                        System.out.println(file1);
+                        System.out.println(file2);
+                        System.out.println();
                     }
                     return;
                 }
@@ -328,7 +337,7 @@ public class Output {
                     // make sure similarity terms are already been gathered
                     // only can rank comment if there is a comment
                     if (enableSimilarity && hasComment == true) {
-                        thisMatchGroup.printRankedComments(writerComment);
+                        thisMatchGroup.printRankedComments(writerComment, writerMaster);
                     }
 
                     writerComment.close();

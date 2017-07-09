@@ -81,6 +81,7 @@ class Parser {
                 Pattern pattern2 = Pattern.compile("package\\s" + dotLine + ";");
                 Pattern pattern3 = Pattern.compile("\\s*(public|private)\\s+(\\w+\\s)?class\\s+(\\w+)\\s+((extends\\s+\\w+)|(implements\\s+\\w+( ,\\w+)*))?\\s*\\{", Pattern.DOTALL); // class
                 Pattern pattern4 = Pattern.compile("(public|protected|private|static|\\s) +[\\w\\<\\>\\[\\]]+\\s+(\\w+) *\\([^\\)]*\\) *(\\{?|[^;])");
+
                 Matcher matcher1 = pattern1.matcher(source);
                 Matcher matcher2 = pattern2.matcher(source);
                 Matcher matcher3 = pattern3.matcher(source);
