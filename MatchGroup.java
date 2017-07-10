@@ -191,7 +191,10 @@ public class MatchGroup implements Serializable {
                 boolean result1 = Analyze.containInvalidTerms(comment, debug);
                 boolean result2 = Analyze.checkNumberTermsIsGood(comment, 2, debug);
                 boolean result3 = Analyze.checkExistNumbers(comment, debug);
-                if (result1 == true || result2 == false || result3 == true) {
+                boolean result4 = Analyze.isUpperCase2(comment);
+                boolean result5 = Analyze.containArtifacts(comment);
+                if (result1 == true || result2 == false || result3 == true || 
+                        result4 == true || result5 == true) {
                     // discard the whole comment list if any is bad
                     // by replacing the list with an empty one
                     if (debug) {
