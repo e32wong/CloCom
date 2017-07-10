@@ -188,7 +188,7 @@ public class Analyze {
         
         // master
         ArrayList<Set<String>> nameListMasterGlobal = new ArrayList<Set<String>>();
-        StanfordLemmatizer lemmatizer = new StanfordLemmatizer();
+        //StanfordLemmatizer lemmatizer = new StanfordLemmatizer();
         for (MatchInstance thisMatch : masterList) {
             int startRange, endRange;
             ArrayList<Statement> statementList = thisMatch.statements;
@@ -203,7 +203,17 @@ public class Analyze {
                 Statement thisStatement = statementList.get(i);
                 HashSet<String> nameList = thisStatement.nameList;
                 for (String str : nameList) {
-                    str = lemmatizer.lemmatize(str);
+                    Stemmer stemmer = new Stemmer();
+                    for (int strIndex = 0; strIndex < str.length(); strIndex++) {
+                        stemmer.add(str.charAt(strIndex));
+                    }
+                    stemmer.stem();
+                    String stemmedStr = stemmer.toString();
+                    //System.out.println("dddd");
+                    //System.out.println(str);
+                    //System.out.println(stemmedStr);
+                    str = stemmedStr;
+                    //str = lemmatizer.lemmatize(str);
                 	simpleNameSetMasterGlobal.add(str);
                 }
             }
