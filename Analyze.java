@@ -181,7 +181,8 @@ public class Analyze {
             HashSet<MatchInstance> masterList, 
             HashSet<MatchInstance> cloneList,
             int similarityRange,
-            boolean debug) {
+            boolean debug,
+            ArrayList<String> banListSim) {
 
         // get a list of global terms from all clones (master and clones)
         
@@ -245,7 +246,7 @@ public class Analyze {
             for (CommentMap cMap : commentList) {
                 // get a list of terms from sentence
                 String thisComment = cMap.comment;
-                Set<String> sentenceTermList = Utilities.extractTermsFromSentence(thisComment);
+                Set<String> sentenceTermList = Utilities.extractTermsFromSentence(thisComment, banListSim, debug);
                 if (debug) {
                     System.out.println("Comment: \"" + thisComment + "\"");
                     System.out.println("List of terms from comment:");
@@ -441,7 +442,9 @@ public class Analyze {
             return true;
         } else {
             if (debug) {
-                System.out.println("Not satisfied number of minimum terms in comment");
+                System.out.println("Not satisfied number of minimum terms in comment:");
+                System.out.println("only found " + words.length + " terms");
+                System.out.println(comment);
             }
             return false;
         }

@@ -926,7 +926,7 @@ class Parser {
                         strValue = strValue.substring(1,strValue.length() - 1);
                         tk.addHash(TokenType.StringLiteral.ordinal(), strValue, startLine);
 
-                        Set<String> termSet = Utilities.extractTermsFromSentence(strValue);
+                        Set<String> termSet = Utilities.extractTermsFromSentence2(strValue);
                         for (String word : termSet) {
                             tk.insertSimpleName(word, true);
                         }

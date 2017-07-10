@@ -269,7 +269,8 @@ public class Output {
             int similarityRange, 
             boolean enableSimilarity,
             int matchMode,
-            boolean debug) {
+            boolean debug,
+            ArrayList<String> banListSim) {
         if (debug) {
             System.out.println("Inside printResults()");
         }
@@ -299,7 +300,7 @@ public class Output {
                 }
                 MatchGroup thisMatchGroup = matchGroupList.get(key);
                 thisMatchGroup.mapCode2Comment();
-                thisMatchGroup.pruneComments(similarityRange, enableSimilarity, debug);
+                thisMatchGroup.pruneComments(similarityRange, enableSimilarity, debug, banListSim);
                 thisMatchGroup.pruneDuplicateComments(debug);
 
                 boolean hasComment = thisMatchGroup.hasComment();

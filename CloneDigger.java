@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -54,6 +58,24 @@ public class CloneDigger {
 
     }
 
+    private static ArrayList<String> loadSimilarityBanList() {
+		ArrayList<String> banList = new ArrayList<String>();
+        try {
+            BufferedReader br = new BufferedReader (
+                    new FileReader("./similarityBanList.txt"));
+            String line;
+            while ((line = br.readLine()) != null) {
+				System.out.println(line);
+                banList.add(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Error while reading similarity ban file\n" + e);
+            System.exit(0);
+        }
+        
+		return banList;
+    }
+
     public static void main(String args[]) throws IOException {
 
         Options options = new Options();
@@ -85,6 +107,8 @@ public class CloneDigger {
         // load config file
         ConfigFile config = new ConfigFile();
         config.loadConfig(configPath);
+
+        ArrayList<String> banListSim = loadSimilarityBanList();
 
         int gapSize = config.gapSize;
         int matchAlgorithm = config.matchAlgorithm;
@@ -187,7 +211,7 @@ public class CloneDigger {
                 output.search(outputDir);
             }
 
-            output.printResults(saveEmpty, similarityRange, enableSimilarity, matchMode, debug);
+            output.printResults(saveEmpty, similarityRange, enableSimilarity, matchMode, debug, banListSim);
             /*
             // Frequency Map of all terms
             FrequencyMap fMap = new FrequencyMap(aprioriMinSupport);
@@ -233,7 +257,7 @@ public class CloneDigger {
                 output.loadResults(resultPath);
             }
 
-            output.printResults(saveEmpty, similarityRange, enableSimilarity, matchMode, debug);
+            output.printResults(saveEmpty, similarityRange, enableSimilarity, matchMode, debug, banListSim);
         }
 
         // Display all the errors

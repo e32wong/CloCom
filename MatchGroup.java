@@ -175,7 +175,7 @@ public class MatchGroup implements Serializable {
         }
     }
 
-    public void pruneComments(int similarityRange, boolean enableSimilarity, boolean debug) {
+    public void pruneComments(int similarityRange, boolean enableSimilarity, boolean debug, ArrayList<String> banListSim) {
 
         // clone pruning on comments with invalid terms
         for (MatchInstance thisMatch : cloneList) {
@@ -184,13 +184,12 @@ public class MatchGroup implements Serializable {
             boolean isAutocomment = thisMatch.isAutocomment;
             ArrayList<CommentMap> commentMapList = thisMatch.getComments();
             ArrayList<CommentMap> cmapNewList = new ArrayList<CommentMap>();
-            System.out.println("tttt");
             for (CommentMap cMap : commentMapList) {
                 String comment = cMap.comment;
 
                 // removal
                 boolean result1 = Analyze.containInvalidTerms(comment, debug);
-                boolean result2 = Analyze.checkNumberTermsIsGood(comment, 3, debug);
+                boolean result2 = Analyze.checkNumberTermsIsGood(comment, 2, debug);
                 boolean result3 = Analyze.checkExistNumbers(comment, debug);
                 if (result1 == true || result2 == false || result3 == true) {
                     // discard the whole comment list if any is bad
@@ -229,7 +228,7 @@ public class MatchGroup implements Serializable {
             if (debug) {
                 System.out.println("Similarity enabled");
             }
-            Analyze.textSimilarity(masterList, cloneList, similarityRange, debug);
+            Analyze.textSimilarity(masterList, cloneList, similarityRange, debug, banListSim);
         } else {
             System.out.println("Similarity disabled");
         }
@@ -318,7 +317,6 @@ public class MatchGroup implements Serializable {
     }
 
     public void printRankedComments(PrintWriter writer, PrintWriter writerMaster) {
-        System.out.println("ttttt");
         // obtain a list of all the possible code comments from each clone
         HashMap<String, Integer> listComments = new HashMap<String, Integer>();
 

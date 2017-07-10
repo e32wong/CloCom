@@ -94,7 +94,7 @@ public class Database {
             ois = new ObjectInputStream(fin);
             listNames = (List<String>) ois.readObject();
         } catch (Exception e) {
-            System.out.println("Error while loading file list: " + e);
+            System.out.println("Error while loading the old file list: " + e);
             System.exit(0);
         } finally {
             if (ois != null) {

@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import java.util.ArrayList;
+
 public class Utilities {
 
     public static boolean checkIsJava(String filePath) {
@@ -15,7 +17,7 @@ public class Utilities {
         }
     }
 
-    public static Set<String> extractTermsFromSentence(String sentence) {
+    public static Set<String> extractTermsFromSentence2(String sentence) {
 
         Set<String> listTerms = new HashSet<String>();
 
@@ -25,6 +27,29 @@ public class Utilities {
             //System.out.println(matcher.group());
             String term = matcher.group();
             listTerms.add(term.toLowerCase());
+        }
+
+        return listTerms;
+    }
+
+    public static Set<String> extractTermsFromSentence(String sentence, ArrayList<String> banList, boolean debug) {
+
+        Set<String> listTerms = new HashSet<String>();
+
+        Pattern pattern = Pattern.compile("[a-zA-Z_0-9]{3,}");
+        Matcher matcher = pattern.matcher(sentence);
+        while (matcher.find()) {
+            //System.out.println(matcher.group());
+            String term = matcher.group();
+            if (!banList.contains(term)) {
+                listTerms.add(term.toLowerCase());
+            } else {
+                if (debug) {
+                    System.out.println("Removed a similarity term due to ban list:");
+                    System.out.println(term);
+                }
+
+            }
         }
 
         return listTerms;
