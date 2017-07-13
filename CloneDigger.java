@@ -59,21 +59,21 @@ public class CloneDigger {
     }
 
     private static ArrayList<String> loadSimilarityBanList() {
-		ArrayList<String> banList = new ArrayList<String>();
+        ArrayList<String> banList = new ArrayList<String>();
         try {
             BufferedReader br = new BufferedReader (
                     new FileReader("./similarityBanList.txt"));
             String line;
             while ((line = br.readLine()) != null) {
-				System.out.println(line);
+                System.out.println(line);
                 banList.add(line);
             }
         } catch (IOException e) {
             System.out.println("Error while reading similarity ban file\n" + e);
             System.exit(0);
         }
-        
-		return banList;
+
+        return banList;
     }
 
     public static void main(String args[]) throws IOException {
@@ -167,11 +167,11 @@ public class CloneDigger {
 
         // td-idf
         /*
-        TermFrequency termFreq = new TermFrequency();
-        if (buildTFIDF == true) {
-            termFreq.buildFrequencyMap(databaseDir);
-        } else {
-            //termFreq.loadFrequencyMap();
+           TermFrequency termFreq = new TermFrequency();
+           if (buildTFIDF == true) {
+           termFreq.buildFrequencyMap(databaseDir);
+           } else {
+        //termFreq.loadFrequencyMap();
         }*/
 
         // Start loading main content
@@ -239,7 +239,7 @@ public class CloneDigger {
 
                 // only load the projects into memory
                 System.out.println("\nLoading a total of " + projectFilePaths.size() + 
-                                                " cached project files from \n" + projectDir);
+                        " cached project files from \n" + projectDir);
                 Database.loadCache(project_TextList, debug, projectFilePaths, projectDir);
 
                 // Capture time

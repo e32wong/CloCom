@@ -206,6 +206,9 @@ public class TextCompare {
                             // get last element for the ending point
                             int file2Start = list.get(0).y1;
                             int file2End = list.get(list.size()-1).y2;
+                            //System.out.println("ffff");
+                            //System.out.println(projectDir);
+                            //System.out.println(databaseDir);
                             resultMaster.add(new Result(projectDir + text1.getDatabasePath(),
                                     statementRaw1.get(file1Start).startLine,
                                     statementRaw1.get(file1End).startLine,
