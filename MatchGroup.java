@@ -332,9 +332,9 @@ public class MatchGroup implements Serializable {
                 CommentMap cMap = commentList.get(index);
                 Integer thisScore = scoreList.get(index);
                 listComments.put(cMap.comment, thisScore.intValue());
-                System.out.println("yyyy");
-                System.out.println(cMap.comment);
-                System.out.println(thisScore);
+                //System.out.println("yyyy");
+                //System.out.println(cMap.comment);
+                //System.out.println(thisScore);
             }
         }
 

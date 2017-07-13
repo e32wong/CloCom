@@ -235,16 +235,6 @@ public class Analyze {
 				Statement thisStatement = statementList.get(i);
 				HashSet<String> nameList = thisStatement.nameList;
 				for (String str : nameList) {
-					Stemmer stemmer = new Stemmer();
-					for (int strIndex = 0; strIndex < str.length(); strIndex++) {
-						stemmer.add(str.charAt(strIndex));
-					}
-					stemmer.stem();
-					String stemmedStr = stemmer.toString();
-					//System.out.println("dddd");
-					//System.out.println(str);
-					//System.out.println(stemmedStr);
-					str = stemmedStr;
 					//str = lemmatizer.lemmatize(str);
 					simpleNameSetMasterGlobal.add(str);
 				}
@@ -288,7 +278,17 @@ public class Analyze {
 			for (CommentMap cMap : commentList) {
 				// get a list of terms from sentence
 				String thisComment = cMap.comment;
-				Set<String> sentenceTermList = Utilities.extractTermsFromSentence(thisComment, banListSim, debug);
+				Set<String> sentenceTermListRaw = Utilities.extractTermsFromSentence(thisComment, banListSim, debug);
+                Set<String> sentenceTermList = new HashSet<String>();
+                for (String extractedTerm : sentenceTermListRaw) {
+                    Stemmer stemmer = new Stemmer();
+                    for (int strIndex = 0; strIndex < extractedTerm.length(); strIndex++) {
+                        stemmer.add(extractedTerm.charAt(strIndex));
+                    }
+                    stemmer.stem();
+                    String stemmedStr = stemmer.toString();
+					sentenceTermList.add(stemmedStr);
+                }
 				if (debug) {
 					System.out.println("Comment: \"" + thisComment + "\"");
 					System.out.println("List of terms from comment:");
