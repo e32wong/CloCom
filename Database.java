@@ -277,7 +277,7 @@ public class Database {
                 } else {
                     System.out.print(counter + "\r");
                 }
-
+                
                 Text txt = new Text(absPath, dir_name);
                 errorList = txt.tokenize(minNumLines, debug, errorList, dir_name);
 

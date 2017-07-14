@@ -58,14 +58,16 @@ public class CloneDigger {
 
     }
 
-    private static ArrayList<String> loadSimilarityBanList() {
+    private static ArrayList<String> loadSimilarityBanList(boolean debug) {
         ArrayList<String> banList = new ArrayList<String>();
         try {
             BufferedReader br = new BufferedReader (
                     new FileReader("./similarityBanList.txt"));
             String line;
             while ((line = br.readLine()) != null) {
-                System.out.println(line);
+                if (debug == true) {
+                    System.out.println(line);
+                }
                 banList.add(line);
             }
         } catch (IOException e) {
@@ -108,8 +110,6 @@ public class CloneDigger {
         ConfigFile config = new ConfigFile();
         config.loadConfig(configPath);
 
-        ArrayList<String> banListSim = loadSimilarityBanList();
-
         int gapSize = config.gapSize;
         int matchAlgorithm = config.matchAlgorithm;
         int matchMode = config.matchMode;
@@ -136,6 +136,8 @@ public class CloneDigger {
         int aprioriMinSupport = config.aprioriMinSupport;
         boolean enableQuery = config.enableQuery;
 
+        ArrayList<String> banListSim = loadSimilarityBanList(debug);
+
         // done parsing
         System.out.println("Finished parsing XML parameters");
 
@@ -155,7 +157,7 @@ public class CloneDigger {
         File f = new File(databaseFilePaths);
         List<String> databaseFileList;
         // Check if an existing cache file exists
-        if(f.exists() && !f.isDirectory() && loadDatabaseFilePaths == true) {
+        if (f.exists() && !f.isDirectory() && loadDatabaseFilePaths == true) {
             // exist, load it
             System.out.println("Path file exists");
             databaseFileList = Database.loadFileList(databaseFilePaths);
@@ -229,7 +231,7 @@ public class CloneDigger {
                 List<String> projectFilePaths = Database.getFileList(projectDir);
 
                 ArrayList<String> temp;
-                temp = Database.constructCache(minNumLines, debug, projectFilePaths, projectDir, forceRetokenization);
+                temp = Database.constructCache(minNumLines, debug, projectFilePaths, projectDir, true);
                 errorList.addAll(temp);
 
                 if (loadDatabaseFilePaths == false) {

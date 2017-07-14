@@ -209,6 +209,8 @@ public class TextCompare {
                             //System.out.println("ffff");
                             //System.out.println(projectDir);
                             //System.out.println(databaseDir);
+                            //System.out.println(text1.getDatabasePath());
+                            //System.out.println(text2.getDatabasePath());
                             resultMaster.add(new Result(projectDir + text1.getDatabasePath(),
                                     statementRaw1.get(file1Start).startLine,
                                     statementRaw1.get(file1End).startLine,
