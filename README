@@ -6,11 +6,17 @@ It applies code clone detection techniques to discover
 similar code segments and use the comments from some code segments 
 to describe the other similar code segments. 
 
+It is a hybrid technique that can generate code comments
+by mining (1) StackOverflow and (2) open source projects.
+
 INSTALLATION:
 
 sudo apt-get install openjdk-8-jdk
 
-Place the following tars under lib2..
+Place the following tars under the folder, lib2,
+which can be obtained from Stanford's website
+(https://stanfordnlp.github.io/CoreNLP/): 
+
 stanford-corenlp-3.8.0.jar  
 stanford-corenlp-3.8.0-models.jar
 
@@ -20,18 +26,20 @@ HOW TO RUN:
 Configure "config.xml"'s <database> and <project> tag
 with the appropriate folder path.
 The folders should contain Java source code files.
+The 'database' can be a StackOverflow database
+and the 'project' can be any Java project's source code.
 
-Code inside the <project> tag represents the target project.
+Code inside the <project> tag represents the target project
+that you want to generate comments for.
 
 Code inside the <database> tag represents the database.
 CloCom will extract code comments from this folder for
 the code inside the <project> folder.
 
 See the "config" folder for xml examples and 
-modify the parameters.
+modify the parameters to suit your needs.
 
 2. 
-
 'make' to compile.
 
 3. 
@@ -44,7 +52,7 @@ Run the shell script with the config file as the first input argument.
 The output is a list of clones from the database path and 
 the respective generated comment.
 
-NOTES.
+NOTES on the XML parameters:
 
 databaseFormat - 0 for standard Java source code, 1 for autocomment format
 
@@ -62,6 +70,7 @@ loadDatabaseFilePaths - use the existing cached list of files
 
 Please use commit
 f89b780bac5ea7322633550c29fffd3c199e1f2e
-for the conference paper.
+if you would like to reproduce the results of
+CloCom's SANER conference paper.
 
 
