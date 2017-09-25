@@ -73,4 +73,5 @@ f89b780bac5ea7322633550c29fffd3c199e1f2e
 if you would like to reproduce the results of
 CloCom's SANER conference paper.
 
-
+PUBLICATION:
+- Edmund Wong, Taiyue Liu, Lin Tan, CloCom: Mining Existing Source Code for Automatic Comment Generation", International Conference on Software Analysis, Evolution, and Reengineering (SANER) 2015
