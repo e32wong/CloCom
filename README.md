@@ -117,12 +117,12 @@ We provide a code-comment mapping
 
 It was generated using the newer Match 2017 StackOverflow database with the following criteria:
 
-- must have a least 3 lines in the code segment
-- must have the ```java``` tag
-- code mappings are only extracted from the answer of the post
-- question and answer must have a score larger than 0
-- no NLP parse tree editing other than basic sentence refinements (see reason below as to why it isn't being applied in this tar file)
-- each mapping is named as "[questionID]-[answerID]-[codeSegmentNumber].autocom"
+- Must have a least 3 lines in the code segment
+- Must have the ```java``` tag
+- Code mappings are only extracted from the answer of the post
+- Question and answer must have a score larger than 0
+- No NLP parse tree editing other than basic sentence refinements. The reason that the NLP is not processed in this database is because we recently moved the NLP component into the code clone detection tool. You can run it yourself using the Java class (NLP.java).
+- Each mapping is named as "[questionID]-[answerID]-[codeSegmentNumber].autocom"
 
 ## User Study
 
