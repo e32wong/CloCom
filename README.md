@@ -57,10 +57,10 @@ Type 'make' to compile.
 The output is a list of clones from the database path and 
 the respective generated comment.
 
-Please note the XML parameters for ```config.xml```:
+Please note the XML parameter settings for ```config.xml```:
 
-databaseFormat - 0 for standard Java source code, 1 for autocomment format
-
+- databaseFormat 
+  - 0 for standard Java source code, 1 for autocomment format
 - minNumLines
   - number of statements a clone should have
 - matchAlgorithm 
