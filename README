@@ -1,6 +1,8 @@
-INTRODUCTION:
+# Introduction
 
-This tool generates code comments automatically by 
+This research project proposes a new automatic comment generation approach,
+which mines comments from a large programming Question and Answer (Q&A) site.
+The tool generates code comments automatically by 
 analyzing existing software repositories. 
 It applies code clone detection techniques to discover 
 similar code segments and use the comments from some code segments 
@@ -9,7 +11,9 @@ to describe the other similar code segments.
 It is a hybrid technique that can generate code comments
 by mining (1) StackOverflow and (2) open source projects.
 
-INSTALLATION:
+# Installation
+
+## Basic Toolchain
 
 sudo apt-get install openjdk-8-jdk
 
@@ -20,7 +24,7 @@ which can be obtained from Stanford's website
 stanford-corenlp-3.8.0.jar  
 stanford-corenlp-3.8.0-models.jar
 
-HOW TO RUN:
+## How to Run
 
 1.
 Configure "config.xml"'s <database> and <project> tag
@@ -73,5 +77,19 @@ f89b780bac5ea7322633550c29fffd3c199e1f2e
 if you would like to reproduce the results of
 CloCom's SANER conference paper.
 
-PUBLICATION:
+# Publication
 - Edmund Wong, Taiyue Liu, Lin Tan, CloCom: Mining Existing Source Code for Automatic Comment Generation", International Conference on Software Analysis, Evolution, and Reengineering (SANER) 2015
+
+# Data Source
+
+We are thankful to StackOverflow for providing a data dump of 
+their website's public data.
+Please refer to the Stack Overflow Creative Commons Data Dump for 
+further details on how to obtain the data.
+We utilized the data dump that was published on Match 2017.
+You will have to download "stackoverflow.com-Posts.7z" to obtain "Posts.xml".
+
+# Mapping Database
+
+We provided a mapping data for the Java and Android tag under the ```database``` folder ```javaAndroidDB.tar.gz```.
+
