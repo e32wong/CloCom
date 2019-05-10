@@ -1,0 +1,37 @@
+/** 
+ * Screen Header
+ * <p>
+ * Contains a wizard title, a subtitle used to display the name of the current
+ * screen and an optional background image
+ * </p>.
+ * @author Bertrand Florat
+ * @created 1 may 2006
+ */
+
+/** 
+ * Generated serialVersionUID. 
+ */
+
+/** 
+ * The Constructor.
+ */
+
+/** 
+ * Set the header title text.
+ * @param sText 
+ */
+
+/** 
+ * Set the header subtitle text.
+ * @param sText 
+ */
+
+/** 
+ * Set the header Image.
+ * @param img 
+ */
+
+/** 
+ * Set the header right-side icon.
+ * @param icon 
+ */

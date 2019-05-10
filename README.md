@@ -176,6 +176,28 @@ are placed under the ```research/output``` folder.
 - PageRank (ND_PageRankFormatter.txt)
 - XML SumGen (nd_xmlsumgen.xml)
 
+### Study of Developer Written Comments
+
+We also provide the list of the extracted comments for the study of developer comments
+under the ```research/output/developer``` folder.
+The original source code files are located on [Jajuk's website](https://sourceforge.net/projects/jajuk/)
+under: ```/jajuk-src-1.10.3/src/main/java/org/qdwizard/```
+
+We studied the following randomly selected Java files.
+
+- ActionsPanel
+- ClearPoint
+- Header
+- Langpack
+- Screen
+- ScreenState
+- Wizard
+
+The classification of the comments
+(type one and type two) are under
+```type1-comment.txt``` and ```type2-comment.txt```
+in the same folder.
+
 
 
 

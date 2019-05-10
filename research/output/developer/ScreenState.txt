@@ -1,0 +1,89 @@
+/** 
+ * A screen state:
+ * <ul>
+ * <li>can cancel ?</li>
+ * <li>can finish ?</li>
+ * <li>can go next ?</li>
+ * <li>can go previous ?</li>
+ * </ul>.
+ */
+
+/** 
+ * Can Go Next. 
+ */
+
+/** 
+ * Can Go Previous. 
+ */
+
+/** 
+ * Can Cancel. 
+ */
+
+/** 
+ * Problem. 
+ */
+
+/** 
+ * Construct a ScreenState.
+ */
+
+/** 
+ * Construct a ScreenState.
+ * @param bCanGoNext next button is enabled
+ * @param bCanGoPrevious previous button is enabled
+ * @param bCanCancel cancel button is enabled
+ * @param bCanFinish cancel button is enabled
+ * @param sProblem problem text
+ */
+
+/** 
+ * Gets the can finish.
+ * @return Finish button enabled
+ */
+
+/** 
+ * Set whether the finish button should be enabled.
+ * @param bCanFinish 
+ */
+
+/** 
+ * Gets the can go next.
+ * @return Next button enabled
+ */
+
+/** 
+ * Set whether the next button should be enabled.
+ * @param bCanGoNext 
+ */
+
+/** 
+ * Gets the can go previous.
+ * @return Previous button enabled
+ */
+
+/** 
+ * Set whether the previous button should be enabled.
+ * @param bCanGoPrevious 
+ */
+
+/** 
+ * Gets the can cancel.
+ * @return Cancel button enabled
+ */
+
+/** 
+ * Set whether the cancel (or System menu close) button should be enabled.
+ * @param bCanCancel 
+ */
+
+/** 
+ * Gets the problem.
+ * @return Problem button enabled
+ */
+
+/** 
+ * Set a problem (set to null if problem is fixed).
+ * @param sProblem Problem string or null if no more problem
+ */
+

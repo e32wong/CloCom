@@ -1,0 +1,135 @@
+/** 
+ * A wizard screen
+ * <ul>
+ * <li>For each wizard page, create a public Screen class. You have to
+ * implement initUI(), getDescription() and getName() abstract methods.</li>
+ * <li>getName() method should return the step name and getDescription() the
+ * step description (return null if no description needed).</li>
+ * <li>initUI() method contains graphical code for your screen. This method is
+ * automatically called from screen constructor so don't call it.</li>
+ * </ul>
+ * @author Bertrand Florat
+ * @created 1 may 2006
+ */
+
+/** 
+ * Generated serialVersionUID. 
+ */
+
+/** 
+ * Construct a screen.
+ */
+
+/** 
+ * Give here the step name.
+ * @return screen name
+ */
+
+/** 
+ * Screen description (optional).
+ * @return screen description
+ */
+
+/** 
+ * Can finish.
+ * @return true if...
+ */
+
+// Can finish only if none problem
+
+/** 
+ * Set whether the finish button should be enabled.
+ * @param b 
+ */
+
+/** 
+ * Can go next.
+ * @return true if...
+ */
+
+// if screen is last one, cannot go further
+
+/** 
+ * Can cancel.
+ * @return true if...
+ */
+
+/** 
+ * Can go previous.
+ * @return true if...
+ */
+
+/** 
+ * Set whether the next button should be enabled.
+ * @param b 
+ */
+
+/** 
+ * Set whether the previous button should be enabled.
+ * @param b 
+ */
+
+/** 
+ * Set whether the cancel (or System menu close) button should be enabled.
+ * @param b 
+ */
+
+/** 
+ * Set a problem (set to null if problem is fixed).
+ * @param sProblem Problem string or null if no more problem
+ */
+
+/** 
+ * Get current problem.
+ * @return the current problem
+ */
+
+/** 
+ * UI creation.
+ */
+
+/** 
+ * Called by wizard before the screen is displayed. This happens only in
+ * forward mode, which means onEnter won't be called when you return to a
+ * screen via the previous button.
+ */
+
+// required by interface, but nothing to do here...
+
+/** 
+ * Called by wizard before the screen is left. This happens only in forward
+ * mode, which means onLeave won't be called when you leave the screen via the
+ * previous button.
+ * <p>
+ * @return return true if the Wizard should display the next screen
+ * return false if the Wizard should stay on the current screen
+ */
+
+/** 
+ * Called by wizard when the wizard is being canceled. Use this function to
+ * clean up (like stop any threads that this Screen might have created)
+ */
+
+// required by interface, but nothing to do here...
+
+/** 
+ * Called by wizard when the wizard is closing because the Finish button was
+ * pressed. Use this function to clean up (like stop any threads that this
+ * Screen might have created)
+ */
+
+// required by interface, but nothing to do here...
+
+/** 
+ * access to wizard instance.
+ * @return the wizard
+ */
+
+/** 
+ * Sets the wizard.
+ * @param wizard the new wizard
+ */
+
+/** 
+ * Notify gui.
+ */

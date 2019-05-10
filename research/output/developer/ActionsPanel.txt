@@ -1,0 +1,59 @@
+/** 
+ * Action panel
+ * <p>
+ * contains a problem area where problems are displayed and a buttons area
+ * (Previous, Next, Finish, Cancel).
+ * @author Bertrand Florat
+ * @created 1 may 2006
+ */
+
+/** 
+ * Generated serialVersionUID. 
+ */
+
+/** 
+ * Problem text area. 
+ */
+
+/** 
+ * Associated action listener. 
+ */
+
+/** 
+ * The Constructor.
+ * @param al associated action listener
+ */
+
+// Problem panel
+
+// Action buttons
+
+// Main panel
+
+/** 
+ * Set buttons states.
+ * @param bPrevious 
+ * @param bNext 
+ * @param bFinish 
+ * @param bCancel 
+ */
+
+/** 
+ * Sets the problem.
+ * @param problem the new problem
+ */
+
+/** 
+ * Set the background color of the ActionPanel.
+ * @param color 
+ */
+
+/** 
+ * Set the background color of the ActionPanel's Problem notification area.
+ * @param color 
+ */
+
+/** 
+ * Set the background color of the ActionPanel's Problem notification area.
+ * @param color 
+ */

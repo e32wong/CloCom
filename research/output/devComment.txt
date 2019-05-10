@@ -1,0 +1,3972 @@
+Match Group 14 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/android/barcodeScanner/zxing-2.1/androidtest/src/com/google/zxing/client/androidtest/BenchmarkThread.java: 67-74
+Length: 5
+*     File file = new File(currentPath);
+*     if (file.isDirectory()) {
+*       String[] files = file.list();
+*       Arrays.sort(files);
+*       for (String fileName : files) {
+*         walkTree(file.getAbsolutePath() + '/' + fileName, items);
+*       }
+*     } else {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/13628301-0.map: 5-11
+Length: 5 
+local sim: [[files, directory], [], []]
+global sim: [[], [], []]
+variable sim: [[files, directory], [], []]
+Get the files of an directory in the web.
+Use a Servlet.
+your resources directory is in your web app's root directory.
+< File directory = new File(path);
+< if(directory.isDirectory()){
+<    String[] files = directory.list();
+<    for (String file : files) {
+<         writer.write(file + "<br/>");
+<    }
+< } else writer.write(directory.getAbsolutePath() + "could not be found");
+----
+Comments (size 3):
+1.
+your resources directory is in your web app's root directory.
+2.
+Get the files of an directory in the web.
+3.
+Use a Servlet.
+----
+Ranked Result:
+1. (size 2)
+Get the files of an directory in the web.
+----
+
+Match Group 5 of size 1+
+<2> 
+/home/edmund/research/autocomment/projects/android/barcodeScanner/zxing-2.1/android/src/com/google/zxing/client/android/CaptureActivity.java: 454-471
+Length: 15
+*     ResultPoint[] points = rawResult.getResultPoints();
+*     if (points != null && points.length > 0) {
+*       Canvas canvas = new Canvas(barcode);
+*       Paint paint = new Paint();
+*       paint.setColor(getResources().getColor(R.color.result_points));
+*       if (points.length == 2) {
+*         paint.setStrokeWidth(4.0f);
+*         drawLine(canvas, paint, points[0], points[1]);
+*       } else if (points.length == 4 &&
+*                  (rawResult.getBarcodeFormat() == BarcodeFormat.UPC_A ||
+*                   rawResult.getBarcodeFormat() == BarcodeFormat.EAN_13)) {
+*         // Hacky special case -- draw two lines, for the barcode and metadata
+*         drawLine(canvas, paint, points[0], points[1]);
+*         drawLine(canvas, paint, points[2], points[3]);
+*       } else {
+*         paint.setStrokeWidth(10.0f);
+*         for (ResultPoint point : points) {
+*           canvas.drawPoint(point.getX(), point.getY(), paint);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/15541106-0.map: 4-20
+Length: 15 
+local sim: [[barcode]]
+global sim: [[]]
+variable sim: [[barcode]]
+Use this for barcode scan.
+<     ResultPoint[] points = rawResult.getResultPoints();
+<     if (points != null && points.length > 0) {
+<         Canvas canvas = new Canvas(barcode);
+<         Paint paint = new Paint();
+<         paint.setColor(getResources().getColor(R.color.result_points));
+<         if (points.length == 2) {
+<             paint.setStrokeWidth(4.0f);
+<             drawLine(canvas, paint, points[0], points[1]);
+<         } else if (points.length == 4
+<                 && (rawResult.getBarcodeFormat() == BarcodeFormat.UPC_A || rawResult
+<                         .getBarcodeFormat() == BarcodeFormat.EAN_13)) {
+<                                     drawLine(canvas, paint, points[0], points[1]);
+<             drawLine(canvas, paint, points[2], points[3]);
+<         } else {
+<             paint.setStrokeWidth(10.0f);
+<             for (ResultPoint point : points) {
+<                 canvas.drawPoint(point.getX(), point.getY(), paint);
+----
+Comments (size 1):
+1.
+Use this for barcode scan.
+----
+Ranked Result:
+1. (size 1)
+Use this for barcode scan.
+----
+
+Match Group 6 of size 1+2
+<5> 
+/home/edmund/research/autocomment/projects/android/barcodeScanner/zxing-2.1/android/src/com/google/zxing/client/android/camera/CameraConfigurationManager.java: 63-66
+Length: 4
+*     WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+*     Display display = manager.getDefaultDisplay();
+*     int width = display.getWidth();
+*     int height = display.getHeight();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/27020276-1.map: 3-8
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Make application run portrait in phone and landscape on tablets.
+< WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+< Display display = wm.getDefaultDisplay();
+< 
+< 
+< Display display = getWindowManager().getDefaultDisplay(); 
+< int width = display.getWidth();  int height = display.getHeight();  
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/17619754-0.map: 3-6
+Length: 4 
+local sim: [[height]]
+global sim: [[]]
+variable sim: [[height]]
+Define layout element height as screen height.
+< WindowManager wm = (WindowManager) ctx.getSystemService(Context.WINDOW_SERVICE);
+< Display display = wm.getDefaultDisplay();
+< Display display = getWindowManager().getDefaultDisplay(); 
+< int width = display.getWidth();  int height = display.getHeight();  
+----
+Comments (size 2):
+1.
+Define layout element height as screen height.
+2.
+Make application run portrait in phone and landscape on tablets.
+----
+Ranked Result:
+1. (size 1)
+Define layout element height as screen height.
+----
+
+Match Group 6 of size 1+9
+<5> 
+/home/edmund/research/autocomment/projects/android/chrome/src/content/public/android/java/src/org/chromium/content/browser/AndroidBrowserProcess.java: 138-142
+Length: 4
+*         WindowManager windowManager = (WindowManager)
+*                 appContext.getSystemService(Context.WINDOW_SERVICE);
+*         Display display = windowManager.getDefaultDisplay();
+*         Point displaySize = new Point();
+*         display.getSize(displaySize);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/27374049-0.map: 3-7
+Length: 4 
+local sim: [[get]]
+global sim: [[]]
+variable sim: [[width, height]]
+Android get device screen height and width for all resolutions.
+<     WindowManager wm = (WindowManager) context
+<             .getSystemService(Context.WINDOW_SERVICE);
+<     Display display = wm.getDefaultDisplay();
+<     Point size = new Point();
+<     display.getSize(size);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/23779781-0.map: 3-6
+Length: 4 
+local sim: [[size], []]
+global sim: [[], []]
+variable sim: [[size, height], []]
+Adjust height of listview with respect to screen size when it is used with adapter.
+add after you have set up the view.
+< WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+< Display display = wm.getDefaultDisplay();
+< Point size = new Point();
+< display.getSize(size);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/33660754-0.map: 3-6
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Ended up calculating the height at runtime and setting it to my view dinamically.
+<             WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+<             Display display = wm.getDefaultDisplay();
+<             Point size = new Point();
+<             display.getSize(size);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/22032019-0.map: 3-7
+Length: 4 
+local sim: [[], [manager, get, window]]
+global sim: [[], []]
+variable sim: [[], []]
+Calculate swipe area in touchevent.
+[WindowManager] Get the screen height via WindowManager.
+<     WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+<     Display display = wm.getDefaultDisplay();
+<     Point size = new Point();
+< 
+<     display.getSize(size);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/27707457-0.map: 3-6
+Length: 4 
+local sim: [[], []]
+global sim: [[], []]
+variable sim: [[], []]
+Sliding tabs - set width of tabs programmatically.
+Add this in your method.
+< WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+< Display display = wm.getDefaultDisplay();
+< Point size = new Point();
+< display.getSize(size);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/26803835-0.map: 3-6
+Length: 4 
+local sim: [[], []]
+global sim: [[], []]
+variable sim: [[], []]
+Fit the screen.
+Add these lines to that method.
+< WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+< Display display = wm.getDefaultDisplay();
+< Point size = new Point();
+< display.getSize(size);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/9436481-0.map: 3-6
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Use the following code for getting screen dimension.
+< WindowManager wm = (WindowManager) ctx.getSystemService(Context.WINDOW_SERVICE);
+< Display display = wm.getDefaultDisplay();
+< Point size = new Point();
+< display.getSize(size);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/21699538-0.map: 3-6
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Grab the device dimensions using.
+< WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+< Display display = wm.getDefaultDisplay();
+< Point size = new Point();
+< display.getSize(size);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/30246229-1.map: 3-6
+Length: 4 
+local sim: [[get], [default, manager, get, display, window]]
+global sim: [[], []]
+variable sim: [[height], [display, height]]
+Get the height of a screen in android.
+Get the height in pixels by getting the default display from the window manager.
+< WindowManager wm = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+< Display display = wm.getDefaultDisplay();
+< Point size = new Point();
+< display.getSize(size);
+----
+Comments (size 14):
+1.
+Android get device screen height and width for all resolutions.
+2.
+Sliding tabs - set width of tabs programmatically.
+3.
+Use the following code for getting screen dimension.
+4.
+Add these lines to that method.
+5.
+Add this in your method.
+6.
+Get the screen height via WindowManager.
+7.
+Calculate swipe area in touchevent.
+8.
+Get the height of a screen in android.
+9.
+add after you have set up the view.
+10.
+Grab the device dimensions using.
+11.
+Ended up calculating the height at runtime and setting it to my view dinamically.
+12.
+Fit the screen.
+13.
+Get the height in pixels by getting the default display from the window manager.
+14.
+Adjust height of listview with respect to screen size when it is used with adapter.
+----
+Ranked Result:
+1. (size 5)
+Get the height in pixels by getting the default display from the window manager.
+2. (size 3)
+Get the screen height via WindowManager.
+3. (size 1)
+Android get device screen height and width for all resolutions.
+4. (size 1)
+Get the height of a screen in android.
+5. (size 1)
+Adjust height of listview with respect to screen size when it is used with adapter.
+----
+
+Match Group 3 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/android/fbreader/FBReaderJ-master/src/org/amse/ys/zip/ZipFile.java: 101-107
+Length: 5
+* 		int uncompressedSize = 0;
+* 		while (true) {
+* 			int blockSize = decompressor.read(null, 0, 2048);
+* 			if (blockSize <= 0) {
+* 				break;
+* 			}
+* 			uncompressedSize += blockSize;
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/11091954-0.map: 3-9
+Length: 5 
+local sim: [[read]]
+global sim: [[]]
+variable sim: [[]]
+[read] Need to put read() into a loop similar to this.
+< int pos = 0;
+< while (true) {
+<   int count = is.read(buf, pos, buf.length - pos);
+<   if (count <= 0) {
+<     break;
+<   }
+<   pos += count;
+----
+Comments (size 1):
+1.
+Need to put read() into a loop similar to this.
+----
+Ranked Result:
+1. (size 1)
+Need to put read() into a loop similar to this.
+----
+
+Match Group 9 of size 2+2
+<5> 
+/home/edmund/research/autocomment/projects/android/firefox/src/embedding/android/GeckoApp.java: 180-187
+Length: 5
+*                 boolean permissionOk = false;
+*                 for (String permit : permissions) {
+*                     if (PLUGIN_PERMISSION.equals(permit)) {
+*                         permissionOk = true;
+*                         break;
+*                     }
+*                 }
+*                 if (!permissionOk) {
+----
+/home/edmund/research/autocomment/projects/android/firefox/src/mobile/android/base/GeckoApp.java: 363-370
+Length: 5
+*                 boolean permissionOk = false;
+*                 for (String permit : permissions) {
+*                     if (PLUGIN_PERMISSION.equals(permit)) {
+*                         permissionOk = true;
+*                         break;
+*                     }
+*                 }
+*                 if (!permissionOk) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/7776725-0.map: 3-10
+Length: 5 
+local sim: [[string], [], []]
+global sim: [[], [], []]
+variable sim: [[], [], []]
+Comparing a string to an array of strings java.
+Iterate without taking the length of the array in consideration.
+Here's the code you might want.
+< boolean found = false;
+< for (String element : array) {
+<     if (str.equals(element)) {
+<         found = true;
+<         break;
+<     }
+< }
+< if (!found) {
+----
+Comments (size 3):
+1.
+Here's the code you might want.
+2.
+Iterate without taking the length of the array in consideration.
+3.
+Comparing a string to an array of strings java.
+----
+Ranked Result:
+1. (size 1)
+Comparing a string to an array of strings java.
+----
+
+Match Group 25 of size 1+3
+<2> 
+/home/edmund/research/autocomment/projects/android/firefox/src/mobile/android/base/httpclientandroidlib/entity/BasicHttpEntity.java: 110-114
+Length: 4
+*         try {
+*             int l;
+*             byte[] tmp = new byte[2048];
+*             while ((l = instream.read(tmp)) != -1) {
+*                 outstream.write(tmp, 0, l);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/1131116-5.map: 3-7
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Byte array and vice versa.
+< try(InputStream pdfin = new FileInputStream("input.pdf");OutputStream pdfout = new FileOutputStream("output.pdf")){
+<     byte[] buffer = new byte[1024];
+<     int bytesRead;
+<     while((bytesRead = pdfin.read(buffer))!=-1){
+<         pdfout.write(buffer,0,bytesRead);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/32447629-1.map: 3-7
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Recommend that you have a look at The try-with-resources Statement and handle your resources better, for example.
+< try (InputStream is = url.openStream(); OutputStream os = new FileOutputStream(destinationFile)) {
+<     byte[] b = new byte[2048];
+<     int length;
+<     while ((length = is.read(b)) != -1) {
+<         os.write(b, 0, length);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/31647062-0.map: 3-8
+Length: 4 
+local sim: [[], [read], []]
+global sim: [[], [], []]
+variable sim: [[], [], []]
+Data size difference when copying with bufferedstream in java.
+The read method returns the number of bytes which has been read to the buffer.
+Here is a possible solution.
+< try (InputStream is = new FileInputStream("guitar_sim.mp3");
+<      OutputStream os = new FileOutputStream("test_song1.mp3")) {
+<   byte[] data = new byte[2048];
+<   int size;
+<   while ((size = is.read(data)) != -1) {
+<     os.write(data, 0, size);
+----
+Comments (size 5):
+1.
+Data size difference when copying with bufferedstream in java.
+2.
+The read method returns the number of bytes which has been read to the buffer.
+3.
+Recommend that you have a look at The try-with-resources Statement and handle your resources better, for example.
+4.
+Here is a possible solution.
+5.
+Byte array and vice versa.
+----
+Ranked Result:
+1. (size 1)
+The read method returns the number of bytes which has been read to the buffer.
+----
+
+Match Group 30 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/android/firefox/src/mobile/android/base/widget/DateTimePicker.java: 237-240
+Length: 4
+*         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+*         Display display = wm.getDefaultDisplay();
+*         DisplayMetrics dm = new DisplayMetrics();
+*         display.getMetrics(dm);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/7123923-0.map: 3-7
+Length: 4 
+local sim: [[display, metrics]]
+global sim: [[]]
+variable sim: [[]]
+[DisplayMetrics] DisplayMetrics returning all zero.
+< final WindowManager w = (WindowManager) context
+<             .getSystemService(Context.WINDOW_SERVICE);
+< final Display d = w.getDefaultDisplay();
+< final DisplayMetrics m = new DisplayMetrics();
+< d.getMetrics(m);
+----
+Comments (size 1):
+1.
+DisplayMetrics returning all zero.
+----
+Ranked Result:
+1. (size 2)
+DisplayMetrics returning all zero.
+----
+
+Match Group 8 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/android/firefox/src/mobile/android/base/httpclientandroidlib/entity/BasicHttpEntity.java: 110-117
+Length: 5
+*         try {
+*             int l;
+*             byte[] tmp = new byte[2048];
+*             while ((l = instream.read(tmp)) != -1) {
+*                 outstream.write(tmp, 0, l);
+*             }
+*         } finally {
+*             instream.close();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/1477269-0.map: 8-17
+Length: 5 
+local sim: [[write]]
+global sim: [[]]
+variable sim: [[]]
+Write a binary downloaded file to disk in Java.
+<   try {
+<     int bytesRead;
+<     while ((bytesRead = input.read(buffer)) != -1) {
+<       output.write(buffer, 0, bytesRead);
+<     }
+<   } finally {
+<     output.close();
+<   }
+< } finally {
+<   input.close();
+----
+Comments (size 1):
+1.
+Write a binary downloaded file to disk in Java.
+----
+Ranked Result:
+1. (size 1)
+Write a binary downloaded file to disk in Java.
+----
+
+Match Group 1 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/android/mytracks/mytracks/MyTracks/src/com/google/android/apps/mytracks/io/gdata/QueryParamsImpl.java: 70-75
+Length: 4
+*       if (first) {
+*         first = false;
+*       } else {
+*         sb.append('&');
+*       }
+*       sb.append(param);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/3397327-0.map: 6-11
+Length: 4 
+local sim: [[first]]
+global sim: [[]]
+variable sim: [[first]]
+Now one alternative which addresses the first point would be this change.
+<   if (first) {
+<     first = false;
+<   } else {
+<     builder.append(",");
+<   }
+<   builder.append(value);
+----
+Comments (size 1):
+1.
+Now one alternative which addresses the first point would be this change.
+----
+Ranked Result:
+1. (size 1)
+Now one alternative which addresses the first point would be this change.
+----
+
+Match Group 5 of size 1+2
+<5> 
+/home/edmund/research/autocomment/projects/android/mytracks/mytracks/MyTracks/src/com/google/android/apps/mytracks/io/docs/SendDocsUtils.java: 173-179
+Length: 4
+*     try {
+*       bufferedReader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+*       String line;
+*       while ((line = bufferedReader.readLine()) != null) {
+*         resultBuilder.append(line);
+*       }
+*     } catch (FileNotFoundException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/33892453-1.map: 3-10
+Length: 4 
+local sim: [[read, file]]
+global sim: [[]]
+variable sim: [[]]
+Read a file using following code.
+<     try {
+<         BufferedReader bufferreader = new BufferedReader(new FileReader("./users/Ender/Desktop/GetUser/submit.txt"));
+<         String line;
+< 
+<         while ((line = bufferreader.readLine()) != null) {
+<                                 }
+< 
+<     } catch (FileNotFoundException ex) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/7411069-0.map: 3-10
+Length: 4 
+local sim: [[read, file]]
+global sim: [[]]
+variable sim: [[]]
+Read it like any other file.
+< try {
+<     BufferedReader mounts = new BufferedReader(new FileReader("/proc/stat"));
+<     String line;
+< 
+<     while ((line = mounts.readLine()) != null) {
+<             }
+< }
+< catch (FileNotFoundException e) {
+----
+Comments (size 2):
+1.
+Read it like any other file.
+2.
+Read a file using following code.
+----
+Ranked Result:
+1. (size 2)
+Read it like any other file.
+2. (size 2)
+Read a file using following code.
+----
+
+Match Group 6 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/android/mytracks/mytracks/MyTracks/src/com/google/android/apps/mytracks/io/file/GpxImporter.java: 335-339
+Length: 4
+*     double longitudeValue;
+*     try {
+*       latitudeValue = Double.parseDouble(latitude);
+*       longitudeValue = Double.parseDouble(longitude);
+*     } catch (NumberFormatException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/35109636-0.map: 4-9
+Length: 4 
+local sim: [[number], []]
+global sim: [[], []]
+variable sim: [[string], []]
+Check if a string is a floating point number.
+The easiest way to test if a String can represent a float.
+< double result;
+< try {
+<   result = Double.parseDouble(testString);
+<   System.out.println("Success!")
+<   }
+< catch (NumberFormatException nfe) {
+----
+Comments (size 2):
+1.
+The easiest way to test if a String can represent a float.
+2.
+Check if a string is a floating point number.
+----
+Ranked Result:
+1. (size 1)
+Check if a string is a floating point number.
+----
+
+Match Group 16 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/android/osmAnd/osmand/build-scripts/net.osmand.translator/test/src/com/google/devtools/j2cpp/GenerationTest.java: 207-213
+Length: 4
+*         if (f.isDirectory()) {
+*           deleteTempDir(f);
+*         } else {
+*           f.delete();
+*         }
+*       }
+*       dir.delete();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/22434945-0.map: 7-15
+Length: 4 
+local sim: [[delete], [delete]]
+global sim: [[], []]
+variable sim: [[file], []]
+Delete selected file / folder.
+Delete a folder.
+<             if (file.isDirectory()) {
+<                 deleteFolderRecursive(file);
+<             } else {
+<                 file.delete();
+<             }
+<         }
+<     }
+< 
+<     dir.delete();
+----
+Comments (size 2):
+1.
+Delete a folder.
+2.
+Delete selected file / folder.
+----
+Ranked Result:
+1. (size 1)
+Delete a folder.
+2. (size 1)
+Delete selected file / folder.
+----
+
+Match Group 31 of size 2+3
+<2> 
+/home/edmund/research/autocomment/projects/android/osmAnd/osmand/build-scripts/net.osmand.translator/test/resources/net_osmand_osm/MapRenderingTypes.java: 613-616
+Length: 4
+* 			int kmh = 0;
+* 			try {
+* 				kmh = Integer.parseInt(maxspeed);
+* 			} catch (NumberFormatException es) {
+----
+/home/edmund/research/autocomment/projects/android/osmAnd/osmand/OsmAnd-java/src/net/osmand/osm/MapRenderingTypes.java: 613-616
+Length: 4
+* 			int kmh = 0;
+* 			try {
+* 				kmh = Integer.parseInt(maxspeed);
+* 			} catch (NumberFormatException es) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/11113238-3.map: 5-8
+Length: 4 
+local sim: [[exception, number, format]]
+global sim: [[]]
+variable sim: [[]]
+[NumberFormatException] Getting a NumberFormatException from a numerical NumberFormatException field.
+< int i = 0; try {
+<     i = Integer.parseInt(change);
+< }
+< catch (NumberFormatException e){}
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/combined2/9917486-0.map: 4-8
+Length: 4 
+local sim: [[exception, number, format]]
+global sim: [[]]
+variable sim: [[]]
+[NumberFormatException] Have to catch "NumberFormatException".
+< int i=0;
+< try{
+< i=Integer.parseInt(s);
+< 
+< }catch(NumberFormatException ex){
+----
+Comments (size 2):
+1.
+Have to catch "NumberFormatException".
+2.
+Getting a NumberFormatException from a numerical NumberFormatException field.
+----
+Ranked Result:
+1. (size 3)
+Have to catch "NumberFormatException".
+2. (size 3)
+Getting a NumberFormatException from a numerical NumberFormatException field.
+----
+
+Match Group 9 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/lib/ant/org/apache/tools/ant/taskdefs/compilers/Javac13.java: 51-63
+Length: 8
+*         try {
+*             Class c = Class.forName ("com.sun.tools.javac.Main");
+*             Object compiler = c.newInstance ();
+*             Method compile = c.getMethod ("compile",
+*                 new Class [] {(new String [] {}).getClass ()});
+*             int result = ((Integer) compile.invoke
+*                           (compiler, new Object[] {cmd.getArguments()}))
+*                 .intValue ();
+*             return (result == MODERN_COMPILER_SUCCESS);
+*         } catch (Exception ex) {
+*             if (ex instanceof BuildException) {
+*                 throw (BuildException) ex;
+*             } else {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/10543336-0.map: 3-16
+Length: 8 
+local sim: [[javac]]
+global sim: [[]]
+variable sim: [[javac]]
+Used by ant javac task.
+< try {
+<         Class c = Class.forName ("com.sun.tools.javac.Main");
+<         Object compiler = c.newInstance ();
+<         Method compile = c.getMethod ("compile",
+<             new Class [] {(new String [] {}).getClass ()});
+<         int result = ((Integer) compile.invoke
+<                       (compiler, new Object[] {cmd.getArguments()}))
+<             .intValue ();
+<         return (result == MODERN_COMPILER_SUCCESS);
+< 
+<     } catch (Exception ex) {
+<         if (ex instanceof BuildException) {
+<             throw (BuildException) ex;
+<         } else {
+----
+Comments (size 1):
+1.
+Used by ant javac task.
+----
+Ranked Result:
+1. (size 1)
+Used by ant javac task.
+----
+
+Match Group 109 of size 3+5
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/apache/lucene/store/FSDirectory.java: 672-678
+Length: 4
+*         try {
+*           // Pause 5 msec
+*           Thread.sleep(5);
+*         } catch (InterruptedException ie) {
+*           // In 3.0 we will change this to throw
+*           // InterruptedException instead
+*           Thread.currentThread().interrupt();
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/apache/lucene/index/IndexWriter.java: 5331-5336
+Length: 4
+*         try {
+*           Thread.sleep(100);
+*         } catch (InterruptedException ie) {
+*           // In 3.0 we will change this to throw
+*           // InterruptedException instead
+*           Thread.currentThread().interrupt();
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/apache/lucene/index/ConcurrentMergeScheduler.java: 338-347
+Length: 4
+*     try {
+*       // When an exception is hit during merge, IndexWriter
+*       // removes any partial files and then allows another
+*       // merge to run.  If whatever caused the error is not
+*       // transient then the exception will keep happening,
+*       // so, we sleep here to avoid saturating CPU in such
+*       // cases:
+*       Thread.sleep(250);
+*     } catch (InterruptedException ie) {
+*       Thread.currentThread().interrupt();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/13093223-0.map: 3-6
+Length: 4 
+local sim: [[exception, interrupted]]
+global sim: [[]]
+variable sim: [[]]
+[InterruptedException] Want to handle "InterruptedException" correctly.
+<  try {
+<      Thread.sleep(1000);
+<  } catch (InterruptedException e) {
+<           Thread.currentThread().interrupt();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/11755512-5.map: 3-6
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+The proper way to deal with this.
+< try {
+<    Thread.sleep(1000);
+< } catch (InterruptedException e) {
+<          Thread.currentThread().interrupt();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/9439110-0.map: 3-6
+Length: 4 
+local sim: [[sleep], []]
+global sim: [[], []]
+variable sim: [[], []]
+Make a java program sleep without threading.
+Something like the following is a typical pattern.
+< try {
+<         Thread.sleep(10000);
+< } catch (InterruptedException e) {
+<         Thread.currentThread().interrupt();
+----
+Comments (size 4):
+1.
+The proper way to deal with this.
+2.
+Want to handle "InterruptedException" correctly.
+3.
+Make a java program sleep without threading.
+4.
+Something like the following is a typical pattern.
+----
+Ranked Result:
+1. (size 2)
+Want to handle "InterruptedException" correctly.
+2. (size 1)
+Make a java program sleep without threading.
+----
+
+Match Group 18 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/lib/ant/org/apache/tools/ant/taskdefs/cvslib/CvsTagDiff.java: 528-532
+Length: 4
+*         if (mypackage != null) {
+*             // support multiple packages
+*             StringTokenizer myTokenizer = new StringTokenizer(mypackage);
+*             while (myTokenizer.hasMoreTokens()) {
+*                 String pack = myTokenizer.nextToken();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/15778587-0.map: 3-7
+Length: 4 
+local sim: [[string], []]
+global sim: [[], []]
+variable sim: [[], []]
+Be a safe way to split a string into multiple parts in Java.
+See the sample code below.
+<  if(line!=null)
+<     {
+<      StringTokenizer st=new StringTokenizer(line);     while(st.hasMoreTokens())
+<      {
+<       String token1=st.nextToken();
+----
+Comments (size 2):
+1.
+Be a safe way to split a string into multiple parts in Java.
+2.
+See the sample code below.
+----
+Ranked Result:
+1. (size 1)
+Be a safe way to split a string into multiple parts in Java.
+----
+
+Match Group 25 of size 6+3
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/apache/lucene/queryParser/QueryParser.java: 777-780
+Length: 4
+*         cal.set(Calendar.HOUR_OF_DAY, 23);
+*         cal.set(Calendar.MINUTE, 59);
+*         cal.set(Calendar.SECOND, 59);
+*         cal.set(Calendar.MILLISECOND, 999);
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/apache/lucene/document/DateTools.java: 203-206
+Length: 4
+*       calInstance.set(Calendar.HOUR_OF_DAY, 0);
+*       calInstance.set(Calendar.MINUTE, 0);
+*       calInstance.set(Calendar.SECOND, 0);
+*       calInstance.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/apache/lucene/document/DateTools.java: 208-211
+Length: 4
+*       calInstance.set(Calendar.HOUR_OF_DAY, 0);
+*       calInstance.set(Calendar.MINUTE, 0);
+*       calInstance.set(Calendar.SECOND, 0);
+*       calInstance.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/apache/lucene/document/DateTools.java: 197-200
+Length: 4
+*       calInstance.set(Calendar.HOUR_OF_DAY, 0);
+*       calInstance.set(Calendar.MINUTE, 0);
+*       calInstance.set(Calendar.SECOND, 0);
+*       calInstance.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/ltk/ui/refactoring/history/RefactoringHistoryContentProvider.java: 449-452
+Length: 4
+* 			calendar.set(Calendar.HOUR_OF_DAY, 0);
+* 			calendar.set(Calendar.MINUTE, 0);
+* 			calendar.set(Calendar.SECOND, 0);
+* 			calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/ltk/ui/refactoring/history/RefactoringHistoryContentProvider.java: 420-423
+Length: 4
+* 			calendar.set(Calendar.HOUR_OF_DAY, 0);
+* 			calendar.set(Calendar.MINUTE, 0);
+* 			calendar.set(Calendar.SECOND, 0);
+* 			calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/1908387-0.map: 4-7
+Length: 4 
+local sim: [[], [calendar]]
+global sim: [[], []]
+variable sim: [[], [time]]
+Java Date cut off time information.
+[Calendar] The recommended way to do date/time manipulation is to use a "Calendar" object.
+< cal.set(Calendar.HOUR_OF_DAY, 0);
+< cal.set(Calendar.MINUTE, 0);
+< cal.set(Calendar.SECOND, 0);
+< cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/13343524-0.map: 5-8
+Length: 4 
+local sim: [[set, hour]]
+global sim: [[]]
+variable sim: [[]]
+The correct way to set and get hour, minutes, sec.
+< c.set(Calendar.HOUR_OF_DAY, 1);
+< c.set(Calendar.MINUTE, 0);
+< c.set(Calendar.SECOND, 0);
+< c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/11857640-1.map: 5-8
+Length: 4 
+local sim: [[], []]
+global sim: [[], []]
+variable sim: [[], []]
+Timestamp to date in java and get the count value.
+Get midnight date.
+< cal.set(Calendar.HOUR_OF_DAY, 0);
+< cal.set(Calendar.MINUTE, 0);
+< cal.set(Calendar.SECOND, 0);
+< cal.set(Calendar.MILLISECOND, 0);
+----
+Comments (size 5):
+1.
+Timestamp to date in java and get the count value.
+2.
+Java Date cut off time information.
+3.
+The recommended way to do date/time manipulation is to use a "Calendar" object.
+4.
+The correct way to set and get hour, minutes, sec.
+5.
+Get midnight date.
+----
+Ranked Result:
+1. (size 2)
+The correct way to set and get hour, minutes, sec.
+2. (size 1)
+The recommended way to do date/time manipulation is to use a "Calendar" object.
+----
+
+Match Group 26 of size 1+1
+<2> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/apache/jasper/compiler/JspRuntimeContext.java: 473-479
+Length: 4
+*         try {
+*             thread.join();
+*         } catch (InterruptedException e) {
+*             ;
+*         }
+*         
+*         thread = null;
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/8918922-0.map: 5-10
+Length: 4 
+local sim: [[thread]]
+global sim: [[]]
+variable sim: [[thread]]
+By the way when you stop the thread are you doing it like this.
+<         try {
+<             myThread.join();
+<         } catch (InterruptedException e) {
+<                         e.printStackTrace();
+<         }
+<         myThread = null;
+----
+Comments (size 1):
+1.
+By the way when you stop the thread are you doing it like this.
+----
+Ranked Result:
+1. (size 1)
+By the way when you stop the thread are you doing it like this.
+----
+
+Match Group 33 of size 1+4
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/lib/ant/org/apache/tools/ant/taskdefs/optional/ejb/IPlanetEjbc.java: 1476-1482
+Length: 5
+*             String text;
+*             try {
+*                 while ((text = reader.readLine()) != null) {
+*                     System.out.println(text);
+*                 }
+*             } catch (IOException e) {
+*                 e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/23344725-0.map: 6-13
+Length: 5 
+local sim: [[read]]
+global sim: [[]]
+variable sim: [[]]
+Partial read of xml.
+<     String sCurrentLine;
+< 
+<     while ((sCurrentLine = br.readLine()) != null) {
+<         System.out.println(sCurrentLine);
+<     }
+< 
+< } catch (IOException e) {
+<     e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/7224658-1.map: 4-9
+Length: 5 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Java try finally block to close stream.
+<     String inLine;
+<     while ((inLine = r.readLine()) != null) {
+<         System.out.println(inLine);
+<     }
+< } catch(IOException readException) {
+<     readException.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/26383865-1.map: 4-12
+Length: 5 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Use Try-With-Resources to make it a lot cleaner.
+<     String line;  
+<     while ((line = reader.readLine()) != null)
+<     {
+<         System.out.println(line);
+<     }
+< }
+< catch (IOException e)
+< {
+<     e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/31245565-0.map: 6-12
+Length: 5 
+local sim: [[system], [read, reader]]
+global sim: [[], []]
+variable sim: [[], []]
+Open a file with login system.
+[BufferedReader] Use BufferedReader along with BufferedReader to read text file.
+<         String line; 
+<         br = new BufferedReader(new FileReader("C:\\testing.txt"));
+<         while ((line= br.readLine()) != null) {
+<             System.out.println(line);
+<         }
+<     } catch (IOException e) {
+<         e.printStackTrace();
+----
+Comments (size 5):
+1.
+Java try finally block to close stream.
+2.
+Use Try-With-Resources to make it a lot cleaner.
+3.
+Open a file with login system.
+4.
+Partial read of xml.
+5.
+Use BufferedReader along with BufferedReader to read text file.
+----
+Ranked Result:
+1. (size 2)
+Use BufferedReader along with BufferedReader to read text file.
+2. (size 1)
+Open a file with login system.
+3. (size 1)
+Partial read of xml.
+----
+
+Match Group 42 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/lib/ant/org/apache/tools/ant/types/AbstractFileSet.java: 512-529
+Length: 8
+*     /**
+*      * Set up the specified directory scanner against the specified project.
+*      * @param ds a <code>FileScanner</code> instance.
+*      * @param p an Ant <code>Project</code> instance.
+*      */
+*     public synchronized void setupDirectoryScanner(FileScanner ds, Project p) {
+*         if (isReference()) {
+*             getRef(p).setupDirectoryScanner(ds, p);
+*             return;
+*         }
+*         dieOnCircularReference(p);
+*         if (ds == null) {
+*             throw new IllegalArgumentException("ds cannot be null");
+*         }
+*         ds.setBasedir(dir);
+* 
+*         PatternSet ps = mergePatterns(p);
+*         p.log(getDataTypeName() + ": Setup scanner in dir " + dir
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/11102794-0.map: 3-14
+Length: 8 
+local sim: [[null, project]]
+global sim: [[]]
+variable sim: [[null]]
+See find that the Project is null.
+< public synchronized void setupDirectoryScanner(FileScanner ds, Project p) {
+<     if (isReference()) {
+<         getRef(p).setupDirectoryScanner(ds, p);
+<         return;
+<     }
+<     if (ds == null) {
+<         throw new IllegalArgumentException("ds cannot be null");
+<     }
+<     ds.setBasedir(dir);
+< 
+<     PatternSet ps = mergePatterns(p);
+<     p.log(getDataTypeName() + ": Setup scanner in dir " + dir
+----
+Comments (size 1):
+1.
+See find that the Project is null.
+----
+Ranked Result:
+1. (size 2)
+See find that the Project is null.
+----
+
+Match Group 45 of size 1+6
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/lib/ant/org/apache/tools/ant/taskdefs/optional/ejb/IPlanetEjbc.java: 1476-1482
+Length: 4
+*             String text;
+*             try {
+*                 while ((text = reader.readLine()) != null) {
+*                     System.out.println(text);
+*                 }
+*             } catch (IOException e) {
+*                 e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/5868369-1.map: 6-12
+Length: 4 
+local sim: [[read, line]]
+global sim: [[]]
+variable sim: [[line]]
+Read a large text file line by line using Java.
+<         String line;
+<         while ((line = br.readLine()) != null) {
+<                     }
+<         br.close();
+< 
+<     } catch (IOException e) {
+<         e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/20920360-1.map: 5-9
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Something fairly simple would just be something like this.
+<     String line;
+<     while ((line = in.readLine()) != null){
+<         textArea.append(line + "\n");
+< } catch(IOException ex){
+<     ex.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/31687813-1.map: 5-13
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+[BufferedReader] Use BufferedReader to read lines from a txt file into an array.
+<         String line;
+<         Vector<String> fileRead = new Vector<String>();
+< 
+<         while ((line = bufferedReader.readLine()) != null) {
+<             fileRead.add(line);
+<         }
+< 
+<     } catch (IOException exception) {
+<         exception.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/15582202-0.map: 6-11
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Lines being split while decrypting file into a list.
+<     String line;
+<     while ((line = reader.readLine()) != null) {
+<         list.add(line);
+<     }
+< } catch (IOException e) {
+<     e.printStackTrace();
+----
+Comments (size 4):
+1.
+Read a large text file line by line using Java.
+2.
+Use BufferedReader to read lines from a txt file into an array.
+3.
+Something fairly simple would just be something like this.
+4.
+Lines being split while decrypting file into a list.
+----
+Ranked Result:
+1. (size 2)
+Read a large text file line by line using Java.
+----
+
+Match Group 46 of size 1+2
+<3> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/team/internal/ccvs/core/util/SyncFileWriter.java: 553-564
+Length: 5
+* 				try {
+* 					String line;
+* 					while ((line = reader.readLine()) != null) {
+* 						fileContentStore.add(line);
+* 					}
+* 					return (String[]) fileContentStore.toArray(new String[fileContentStore.size()]);
+* 				} finally {
+* 					reader.close();
+* 				}
+* 			}
+* 			return null;
+* 		} catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/2935634-1.map: 6-13
+Length: 5 
+local sim: [[file]]
+global sim: [[]]
+variable sim: [[file]]
+Related to java file handling.
+<         try { 
+<             BufferedReader in = new BufferedReader(new FileReader("youFile.txt")); 
+<             String str; 
+<             while ((str = in.readLine()) != null) { 
+<                 System.out.println( str ); 
+<             } 
+<             in.close(); 
+<         } catch (IOException e) {}     
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/22548936-0.map: 3-10
+Length: 5 
+local sim: [[file]]
+global sim: [[]]
+variable sim: [[file]]
+Java-using a class and reading a file.
+< try {
+<   BufferedReader br = new BufferedReader(new FileReader(new File("yourFile.txt")));
+<   String line;
+<   while ((line = br.readLine()) != null) {
+<     System.out.println(line);
+<   }
+<   br.close();
+< } catch (IOException e) {
+----
+Comments (size 2):
+1.
+Related to java file handling.
+2.
+Java-using a class and reading a file.
+----
+Ranked Result:
+1. (size 1)
+Related to java file handling.
+2. (size 1)
+Java-using a class and reading a file.
+----
+
+Match Group 48 of size 1+1
+<1> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/osgi/framework/Version.java: 280-284
+Length: 5
+* 		result.append(major);
+* 		result.append(SEPARATOR);
+* 		result.append(minor);
+* 		result.append(SEPARATOR);
+* 		result.append(micro);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/35217197-0.map: 5-9
+Length: 5 
+local sim: [[append]]
+global sim: [[]]
+variable sim: [[]]
+How to append Three String and again Seprate Three String.
+< buffer.append(a);
+< buffer.append(delimitter);
+< buffer.append(b);
+< buffer.append(delimitter);
+< buffer.append(b);
+----
+Comments (size 1):
+1.
+How to append Three String and again Seprate Three String.
+----
+Ranked Result:
+1. (size 1)
+How to append Three String and again Seprate Three String.
+----
+
+Match Group 55 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/pde/api/tools/internal/util/Util.java: 938-942
+Length: 4
+* 			try {
+* 				Properties profile = new Properties();
+* 				profile.load(stream);
+* 				return profile;
+* 			} catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/19641962-0.map: 3-9
+Length: 4 
+local sim: [[properties]]
+global sim: [[]]
+variable sim: [[properties]]
+Properties file in Eclipse Java Dynamic Web Project.
+< try{
+<      Properties p = new Properties();
+<      InputStream in = MyPropertyHandler.getClass()
+<            .getClassLoader()
+<            .getResourceAsStream("com/package/props/database.properties");
+<      p.load(in);
+< catch(IOException e){
+----
+Comments (size 1):
+1.
+Properties file in Eclipse Java Dynamic Web Project.
+----
+Ranked Result:
+1. (size 1)
+Properties file in Eclipse Java Dynamic Web Project.
+----
+
+Match Group 56 of size 2+2
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/swt/browser/Mozilla.java: 832-838
+Length: 4
+* 		boolean factoriesRegistered = false;
+* 		String propertyString = System.getProperty (FACTORIES_REGISTERED);
+* 		if (TRUE.equals (propertyString)) {
+* 			factoriesRegistered = true;
+* 		}
+* 
+* 		if (!factoriesRegistered) {
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/swt/browser/Mozilla.java: 738-745
+Length: 4
+* 		boolean factoriesRegistered = false;
+* 		String propertyString = System.getProperty (FACTORIES_REGISTERED);
+* 		if (TRUE.equals (propertyString)) {
+* 			factoriesRegistered = true;
+* 		}
+* 
+* 		/* init our WindowCreator, which mozilla uses for the creation of child browsers in external Shells */
+* 		if (!factoriesRegistered) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/7776725-0.map: 3-10
+Length: 4 
+local sim: [[string], [], []]
+global sim: [[], [], []]
+variable sim: [[], [], []]
+Comparing a string to an array of strings java.
+Iterate without taking the length of the array in consideration.
+Here's the code you might want.
+< boolean found = false;
+< for (String element : array) {
+<     if (str.equals(element)) {
+<         found = true;
+<         break;
+<     }
+< }
+< if (!found) {
+----
+Comments (size 3):
+1.
+Here's the code you might want.
+2.
+Iterate without taking the length of the array in consideration.
+3.
+Comparing a string to an array of strings java.
+----
+Ranked Result:
+1. (size 1)
+Comparing a string to an array of strings java.
+----
+
+Match Group 58 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/core/internal/preferences/InstancePreferences.java: 120-134
+Length: 9
+* 		InputStream input = null;
+* 		Properties values = new Properties();
+* 		try {
+* 			input = new BufferedInputStream(new FileInputStream(prefFile));
+* 			values.load(input);
+* 		} catch (IOException e) {
+* 			// problems loading preference store - quietly ignore
+* 			if (EclipsePreferences.DEBUG_PREFERENCE_GENERAL)
+* 				PrefsMessages.message("IOException encountered loading legacy preference file " + prefFile); //$NON-NLS-1$
+* 			return;
+* 		} finally {
+* 			if (input != null) {
+* 				try {
+* 					input.close();
+* 				} catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/3022975-0.map: 4-15
+Length: 9 
+local sim: [[close]]
+global sim: [[]]
+variable sim: [[]]
+Close inputstreams after using.
+<     InputStream str = null;
+<     Properties reqProperties = new Properties();
+<     try {
+<         str = this.getClass().getResourceAsStream("/someFile.properties");
+<         reqProperties.load(str);
+<     } catch (IOException e) {
+<         e.printStackTrace();
+<     } finally {
+<         if (str != null) {
+<             try {
+<                 str.close();
+<             } catch (IOException e) {
+----
+Comments (size 1):
+1.
+Close inputstreams after using.
+----
+Ranked Result:
+1. (size 1)
+Close inputstreams after using.
+----
+
+Match Group 5 of size 4+1
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/equinox/http/servlet/internal/ServletRegistration.java: 57-63
+Length: 4
+* 		ClassLoader original = Thread.currentThread().getContextClassLoader();
+* 		try {
+* 			Thread.currentThread().setContextClassLoader(registeredContextClassLoader);
+* 			if (httpContext.handleSecurity(req, resp))
+* 				servlet.service(req, resp);
+* 		} finally {
+* 			Thread.currentThread().setContextClassLoader(original);
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/equinox/http/servlet/internal/FilterRegistration.java: 77-83
+Length: 4
+* 		ClassLoader original = Thread.currentThread().getContextClassLoader();
+* 		try {
+* 			Thread.currentThread().setContextClassLoader(registeredContextClassLoader);
+* 			if (httpContext.handleSecurity(request, response))
+* 				filter.doFilter(request, response, chain);
+* 		} finally {
+* 			Thread.currentThread().setContextClassLoader(original);
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/equinox/http/servlet/internal/FilterRegistration.java: 66-71
+Length: 4
+* 		ClassLoader original = Thread.currentThread().getContextClassLoader();
+* 		try {
+* 			Thread.currentThread().setContextClassLoader(registeredContextClassLoader);
+* 			filter.init(filterConfig);
+* 		} finally {
+* 			Thread.currentThread().setContextClassLoader(original);
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/equinox/http/servlet/internal/ServletRegistration.java: 46-51
+Length: 4
+* 		ClassLoader original = Thread.currentThread().getContextClassLoader();
+* 		try {
+* 			Thread.currentThread().setContextClassLoader(registeredContextClassLoader);
+* 			servlet.init(servletConfig);
+* 		} finally {
+* 			Thread.currentThread().setContextClassLoader(original);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/13414695-0.map: 4-10
+Length: 4 
+local sim: [[], [set, loader, context, class]]
+global sim: [[], []]
+variable sim: [[], []]
+Be used in this case.
+If you know the class loader in question, you can set the context class loader before making the call into axis.
+< ClassLoader oldCtx = Thread.currentThread().getContextClassLoader();
+< try {
+<   Thread.currentThread().setContextClassLoader(key);
+< 
+<   }
+< finally {
+<   Thread.currentThread().setContextClassLoader(oldCtx);
+----
+Comments (size 2):
+1.
+If you know the class loader in question, you can set the context class loader before making the call into axis.
+2.
+Be used in this case.
+----
+Ranked Result:
+1. (size 4)
+If you know the class loader in question, you can set the context class loader before making the call into axis.
+----
+
+Match Group 77 of size 2+1
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/lib/antsupportlibsrc/org/eclipse/ant/internal/core/ant/InternalProject.java: 85-91
+Length: 4
+* 			boolean noArg = false;
+* 			// DataType can have a "no arg" constructor or take a single
+* 			// Project argument.
+* 			try {
+* 				ctor = typeClass.getConstructor(new Class[0]);
+* 				noArg = true;
+* 			} catch (NoSuchMethodException nse) {
+----
+/home/edmund/research/autocomment/projects/java/eclipse/lib/ant/org/apache/tools/ant/AntTypeDefinition.java: 316-322
+Length: 4
+*         boolean noArg = false;
+*         // DataType can have a "no arg" constructor or take a single
+*         // Project argument.
+*         try {
+*             ctor = newclass.getConstructor(new Class[0]);
+*             noArg = true;
+*         } catch (NoSuchMethodException nse) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/28069121-0.map: 3-8
+Length: 4 
+local sim: [[method]]
+global sim: [[]]
+variable sim: [[method]]
+Know if a given method exists.
+< boolean hasMethod = false;
+< try { 
+<   Method m = value.getClass().getDeclaredMethod("byteCount", null); 
+<   hasMethod = true;
+< }
+< catch (NoSuchMethodException e) {
+----
+Comments (size 1):
+1.
+Know if a given method exists.
+----
+Ranked Result:
+1. (size 1)
+Know if a given method exists.
+----
+
+Match Group 7 of size 2+2
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/equinox/log/internal/BasicReadWriteLock.java: 50-56
+Length: 4
+* 				try {
+* 					if (writing == Thread.currentThread() || currentReaders.contains(Thread.currentThread()))
+* 						throw new IllegalStateException("Attempted to nest write lock inside a read or write lock"); //$NON-NLS-1$
+* 					wait();
+* 				} catch (InterruptedException e) {
+* 					// reset interrupted state but keep waiting
+* 					Thread.currentThread().interrupt();
+----
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/equinox/log/internal/BasicReadWriteLock.java: 20-26
+Length: 4
+* 			try {
+* 				if (writing == Thread.currentThread())
+* 					throw new IllegalStateException("Attempted to nest read lock inside a write lock"); //$NON-NLS-1$
+* 				wait();
+* 			} catch (InterruptedException e) {
+* 				// reset interrupted state but keep waiting
+* 				Thread.currentThread().interrupt();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/19433356-0.map: 3-6
+Length: 4 
+local sim: [[wait, thread], [exception, interrupted]]
+global sim: [[], []]
+variable sim: [[], []]
+Kill a running thread in wait.
+[InterruptedException] call, this will immediately throw "InterruptedException".
+< try {
+<     ...wait();
+< } catch (InterruptedException ie) {
+<     Thread.currentThread().interrupt();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/18521674-0.map: 3-5
+Length: 4 
+local sim: [[exception, interrupted], []]
+global sim: [[], []]
+variable sim: [[], []]
+[InterruptedException] Is always a good pattern to properly handle "InterruptedException".
+do something like.
+< try {
+<     wait(); } catch (InterruptedException e) {
+<         Thread.currentThread().interrupt();
+----
+Comments (size 4):
+1.
+Is always a good pattern to properly handle "InterruptedException".
+2.
+do something like.
+3.
+Kill a running thread in wait.
+4.
+call, this will immediately throw "InterruptedException".
+----
+Ranked Result:
+1. (size 2)
+Is always a good pattern to properly handle "InterruptedException".
+2. (size 2)
+Kill a running thread in wait.
+3. (size 2)
+call, this will immediately throw "InterruptedException".
+----
+
+Match Group 90 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/team/internal/ccvs/core/util/SyncFileWriter.java: 553-564
+Length: 5
+* 				try {
+* 					String line;
+* 					while ((line = reader.readLine()) != null) {
+* 						fileContentStore.add(line);
+* 					}
+* 					return (String[]) fileContentStore.toArray(new String[fileContentStore.size()]);
+* 				} finally {
+* 					reader.close();
+* 				}
+* 			}
+* 			return null;
+* 		} catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/7224658-0.map: 5-14
+Length: 5 
+local sim: [[close]]
+global sim: [[]]
+variable sim: [[]]
+Java try finally block to close stream.
+<     try{
+< 
+<         String inLine;
+<         while ((inLine = r.readLine()) != null) {
+<             System.out.println(inLine);
+<         }
+<     }finally{
+<         r.close();
+<     }
+< }catch(IOException e){
+----
+Comments (size 1):
+1.
+Java try finally block to close stream.
+----
+Ranked Result:
+1. (size 1)
+Java try finally block to close stream.
+----
+
+Match Group 98 of size 1+11
+/home/edmund/research/autocomment/projects/java/eclipse/org/eclipse/core/runtime/internal/adaptor/EclipseStorageHook.java: 307-325
+Length: 4
+* 		try {
+* 			br = new BufferedReader(new InputStreamReader(url.openStream()));
+* 			String line;
+* 			while ((line = br.readLine()) != null) {
+* 				if (line.length() < 20)
+* 					continue;
+* 				switch (line.charAt(0)) {
+* 					case 'S' :
+* 						if (line.charAt(1) == 'p')
+* 							if (line.startsWith("Specification-Title: ") || line.startsWith("Specification-Version: ") || line.startsWith("Specification-Vendor: ")) //$NON-NLS-1$ //$NON-NLS-2$//$NON-NLS-3$
+* 								return true;
+* 						break;
+* 					case 'I' :
+* 						if (line.startsWith("Implementation-Title: ") || line.startsWith("Implementation-Version: ") || line.startsWith("Implementation-Vendor: ")) //$NON-NLS-1$ //$NON-NLS-2$//$NON-NLS-3$ 
+* 							return true;
+* 						break;
+* 				}
+* 			}
+* 		} catch (IOException ioe) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/27083700-0.map: 4-9
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Reading file passed in cmd.
+< try {
+<     in = new BufferedReader(new InputStreamReader(System.in));
+<     String line;
+<     while ((line = in.readLine()) != null) {          System.out.println(line);
+<     }
+< } catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/20920360-1.map: 3-8
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Something fairly simple would just be something like this.
+< try {
+<     BufferedReader in = new BufferedReader(new FileReader(file));
+<     String line;
+<     while ((line = in.readLine()) != null){
+<         textArea.append(line + "\n");
+< } catch(IOException ex){
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/10159003-1.map: 6-15
+Length: 4 
+local sim: [[string], []]
+global sim: [[], []]
+variable sim: [[string], []]
+Reading hex string blocks from a file and putting them into an array in java.
+All you need is to store all your packets in an array list and then process them as you wish at the end of the loop.
+< try{
+<         br = new BufferedReader(new FileReader(cmd));
+< 
+<         String line;
+<         while((line = br.readLine())!= null)
+<         {
+<             pkts.add(line.trim().toString().split(" "));
+<         }
+< 
+< }catch(IOException ie) {ie.printStackTrace();}
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/23344725-0.map: 3-12
+Length: 4 
+local sim: [[read]]
+global sim: [[]]
+variable sim: [[]]
+Partial read of xml.
+< try (BufferedReader br = new BufferedReader(new FileReader("C:\\testing.txt")))
+< {
+< 
+<     String sCurrentLine;
+< 
+<     while ((sCurrentLine = br.readLine()) != null) {
+<         System.out.println(sCurrentLine);
+<     }
+< 
+< } catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/5868369-1.map: 3-11
+Length: 4 
+local sim: [[read, line]]
+global sim: [[]]
+variable sim: [[line]]
+Read a large text file line by line using Java.
+<     try {
+<         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), "Cp1252"));         
+< 
+<         String line;
+<         while ((line = br.readLine()) != null) {
+<                     }
+<         br.close();
+< 
+<     } catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/7224658-1.map: 3-8
+Length: 4 
+local sim: [[stream]]
+global sim: [[]]
+variable sim: [[]]
+Java try finally block to close stream.
+< try(BufferedReader r = new BufferedReader(new InputStreamReader(address.openStream()))) {
+<     String inLine;
+<     while ((inLine = r.readLine()) != null) {
+<         System.out.println(inLine);
+<     }
+< } catch(IOException readException) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/15582202-0.map: 4-10
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Lines being split while decrypting file into a list.
+< try {
+<     final BufferedReader reader = new BufferedReader(new InputStreamReader(new CipherInputStream(new FileInputStream(file), dcipher)));
+<     String line;
+<     while ((line = reader.readLine()) != null) {
+<         list.add(line);
+<     }
+< } catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/26383865-1.map: 3-10
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Use Try-With-Resources to make it a lot cleaner.
+< try (BufferedReader reader = new BufferedReader(new FileReader("sample-file.dat"))) {
+<     String line;  
+<     while ((line = reader.readLine()) != null)
+<     {
+<         System.out.println(line);
+<     }
+< }
+< catch (IOException e)
+----
+Comments (size 9):
+1.
+Reading hex string blocks from a file and putting them into an array in java.
+2.
+Read a large text file line by line using Java.
+3.
+Java try finally block to close stream.
+4.
+Use Try-With-Resources to make it a lot cleaner.
+5.
+Partial read of xml.
+6.
+All you need is to store all your packets in an array list and then process them as you wish at the end of the loop.
+7.
+Reading file passed in cmd.
+8.
+Something fairly simple would just be something like this.
+9.
+Lines being split while decrypting file into a list.
+----
+Ranked Result:
+1. (size 2)
+Read a large text file line by line using Java.
+2. (size 1)
+Reading hex string blocks from a file and putting them into an array in java.
+3. (size 1)
+Java try finally block to close stream.
+4. (size 1)
+Partial read of xml.
+----
+
+Match Group 0 of size 1+1
+/home/edmund/research/autocomment/projects/java/freecol/src/net/sf/freecol/common/resources/ImageResource.java: 156-163
+Length: 5
+*             BufferedImage halved = new BufferedImage(w, h,
+*                 BufferedImage.TYPE_INT_ARGB);
+*             Graphics2D g = halved.createGraphics();
+*             // For halving bilinear should most correctly average 2x2 pixels.
+*             g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
+*                 RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+*             g.drawImage(im, 0, 0, w, h, null);
+*             g.dispose();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/22737062-1.map: 6-13
+Length: 5 
+local sim: [[image], [image]]
+global sim: [[], []]
+variable sim: [[image], [image, scaled]]
+Scaling Image with Java produces black space.
+Creating a scaled version of an image.
+<     BufferedImage scaledImage =
+<         new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+<     Graphics2D g = scaledImage.createGraphics();
+<     g.setRenderingHint(
+<         RenderingHints.KEY_INTERPOLATION, 
+<         RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+<     g.drawImage(image, 0, 0, width, height, null);
+<     g.dispose();
+----
+Comments (size 2):
+1.
+Creating a scaled version of an image.
+2.
+Scaling Image with Java produces black space.
+----
+Ranked Result:
+1. (size 1)
+Creating a scaled version of an image.
+2. (size 1)
+Scaling Image with Java produces black space.
+----
+
+Match Group 11 of size 1+4
+<5> 
+/home/edmund/research/autocomment/projects/java/freecol/src/net/sf/freecol/common/networking/RearrangeColonyMessage.java: 176-180
+Length: 4
+*         int n;
+*         try {
+*             n = Integer.parseInt(element.getAttribute(FreeColObject.ARRAY_SIZE_TAG));
+*         } catch (NumberFormatException nfe) {
+*             n = 0;
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/28621725-0.map: 3-7
+Length: 4 
+local sim: [[int]]
+global sim: [[]]
+variable sim: [[]]
+Converting strings into int.
+< int number;
+< try {
+<     number = Integer.parseInt(jTextField.getText());
+< } catch(NumberFormatException e) {
+<     number = 0; }
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/12564428-0.map: 4-9
+Length: 4 
+local sim: [[exception, number, format, integer]]
+global sim: [[]]
+variable sim: [[]]
+[NumberFormatException] For example when parsing a String as an Integer you could catch the NumberFormatException and return a default value.
+<     int amount;
+<     try {
+<         amount = Integer.parseInt(amountValue);
+<     }
+<     catch(NumberFormatException e) {
+<                 amount = 0;
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/13395444-0.map: 3-8
+Length: 4 
+local sim: [[exception, number, format]]
+global sim: [[]]
+variable sim: [[]]
+[NumberFormatException] Wrap the number parsing in a try\catch block, catching the NumberFormatException.
+< int value;
+< try{
+<     value = Integer.parseInt(valueString);
+< }
+< catch(NumberFormatException e){
+<     value = 0;
+----
+Comments (size 3):
+1.
+For example when parsing a String as an Integer you could catch the NumberFormatException and return a default value.
+2.
+Wrap the number parsing in a try\catch block, catching the NumberFormatException.
+3.
+Converting strings into int.
+----
+Ranked Result:
+1. (size 4)
+For example when parsing a String as an Integer you could catch the NumberFormatException and return a default value.
+2. (size 3)
+Wrap the number parsing in a try\catch block, catching the NumberFormatException.
+3. (size 1)
+Converting strings into int.
+----
+
+Match Group 2 of size 1+1
+<3> 
+/home/edmund/research/autocomment/projects/java/freecol/src/net/sf/freecol/common/resources/ImageResource.java: 168-175
+Length: 4
+*             BufferedImage scaled = new BufferedImage(wNew, hNew,
+*                 BufferedImage.TYPE_INT_ARGB);
+*             Graphics2D g = scaled.createGraphics();
+*             // Bicubic should give best quality for odd scaling factors.
+*             g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
+*                 RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+*             g.drawImage(im, 0, 0, wNew, hNew, null);
+*             g.dispose();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/22737062-1.map: 6-13
+Length: 4 
+local sim: [[image], [image, scaled]]
+global sim: [[], []]
+variable sim: [[image], [image, scaled]]
+Scaling Image with Java produces black space.
+Creating a scaled version of an image.
+<     BufferedImage scaledImage =
+<         new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+<     Graphics2D g = scaledImage.createGraphics();
+<     g.setRenderingHint(
+<         RenderingHints.KEY_INTERPOLATION, 
+<         RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+<     g.drawImage(image, 0, 0, width, height, null);
+<     g.dispose();
+----
+Comments (size 2):
+1.
+Creating a scaled version of an image.
+2.
+Scaling Image with Java produces black space.
+----
+Ranked Result:
+1. (size 2)
+Creating a scaled version of an image.
+2. (size 1)
+Scaling Image with Java produces black space.
+----
+
+Match Group 4 of size 1+3
+<5> 
+/home/edmund/research/autocomment/projects/java/freecol/test/src/net/sf/freecol/server/ServerTestHelper.java: 144-148
+Length: 4
+*         File file = new File(TEST_FILE);
+*         try {
+*             serv.saveGame(file, null);
+*         } catch (IOException e) {
+*             e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/24656755-0.map: 4-9
+Length: 4 
+local sim: [[file]]
+global sim: [[]]
+variable sim: [[file]]
+Change file name to uppercase in same directory using java.
+<   File newFile = new File(newFilePath);
+< 
+<   try {
+<     FileUtils.moveFile(oldFile, newFile);
+<   } catch (IOException e) {
+<     e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/1158777-1.map: 4-9
+Length: 4 
+local sim: [[file], []]
+global sim: [[], []]
+variable sim: [[file], []]
+Rename a file using Java.
+Renaming the file by moving it to a new name.
+<   File newFile = new File(newFilePath);
+< 
+<   try {
+<     FileUtils.moveFile(oldFile, newFile);
+<   } catch (IOException e) {
+<     e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/24450510-0.map: 4-8
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Open a directory on a networked computer with Java.
+< File userHome = new File(userHomePath);
+< try {
+<     Desktop.getDesktop().open(userHome);
+< } catch (IOException e) {
+<         e.printStackTrace();
+----
+Comments (size 4):
+1.
+Renaming the file by moving it to a new name.
+2.
+Change file name to uppercase in same directory using java.
+3.
+Open a directory on a networked computer with Java.
+4.
+Rename a file using Java.
+----
+Ranked Result:
+1. (size 1)
+Change file name to uppercase in same directory using java.
+2. (size 1)
+Rename a file using Java.
+----
+
+Match Group 6 of size 1+2
+<4> 
+/home/edmund/research/autocomment/projects/java/freecol/src/net/sf/freecol/common/resources/ImageResource.java: 156-163
+Length: 4
+*             BufferedImage halved = new BufferedImage(w, h,
+*                 BufferedImage.TYPE_INT_ARGB);
+*             Graphics2D g = halved.createGraphics();
+*             // For halving bilinear should most correctly average 2x2 pixels.
+*             g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
+*                 RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+*             g.drawImage(im, 0, 0, w, h, null);
+*             g.dispose();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/16122260-0.map: 5-11
+Length: 4 
+local sim: [[image], [image]]
+global sim: [[], []]
+variable sim: [[], []]
+Scaling an image quickly, and making sure it actually scales.
+Try this method to get a resized image.
+<     BufferedImage scaledBI = new BufferedImage(width, height,
+<             BufferedImage.TYPE_INT_ARGB);
+<     Graphics2D g = scaledBI.createGraphics();
+<     g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
+<             RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+<     g.drawImage(original, 0, 0, width, height, null);
+<     g.dispose();
+----
+Comments (size 2):
+1.
+Try this method to get a resized image.
+2.
+Scaling an image quickly, and making sure it actually scales.
+----
+Ranked Result:
+1. (size 1)
+Try this method to get a resized image.
+2. (size 1)
+Scaling an image quickly, and making sure it actually scales.
+----
+
+Match Group 16 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/freemind/accessories/plugins/time/JCalendar.java: 598-601
+Length: 4
+* 		calendar.setTime(date);
+* 		int year = calendar.get(Calendar.YEAR);
+* 		int month = calendar.get(Calendar.MONTH);
+* 		int day = calendar.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/9474121-0.map: 4-7
+Length: 4 
+local sim: [[date, calendar, month, year, get, day]]
+global sim: [[]]
+variable sim: [[date, month, year, day]]
+Want to get Year,Month, Day etc from Java Date to compare with Gregorian Calendar date in Java.
+<     cal.setTime(date);
+<     int year = cal.get(Calendar.YEAR);
+<     int month = cal.get(Calendar.MONTH);
+<     int day = cal.get(Calendar.DAY_OF_MONTH);
+----
+Comments (size 1):
+1.
+Want to get Year,Month, Day etc from Java Date to compare with Gregorian Calendar date in Java.
+----
+Ranked Result:
+1. (size 6)
+Want to get Year,Month, Day etc from Java Date to compare with Gregorian Calendar date in Java.
+----
+
+Match Group 3 of size 1+1
+<3> 
+/home/edmund/research/autocomment/projects/java/freemind/freemind/main/FreeMind.java: 689-695
+Length: 4
+* 				focusLog.setLevel(Level.ALL);
+* 				// Create a new handler
+* 				ConsoleHandler handler = new ConsoleHandler();
+* 				// The handler must handle all messages
+* 				handler.setLevel(Level.ALL);
+* 				// Add the handler to the logger
+* 				focusLog.addHandler(handler);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/35025062-0.map: 5-9
+Length: 4 
+local sim: [[handler]]
+global sim: [[]]
+variable sim: [[handler]]
+want to install one handler.
+<     log.setLevel(Level.ALL);
+<     ConsoleHandler handler = new ConsoleHandler();
+<     handler.setFormatter(new MyFormatter());
+<     handler.setLevel(Level.ALL);
+<     log.addHandler(handler);
+----
+Comments (size 1):
+1.
+want to install one handler.
+----
+Ranked Result:
+1. (size 1)
+want to install one handler.
+----
+
+Match Group 5 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/freemind/freemind/main/Tools.java: 834-851
+Length: 7
+* 		Deflater compressor = new Deflater();
+* 		compressor.setLevel(Deflater.BEST_COMPRESSION);
+* 
+* 		// Give the compressor the data to compress
+* 		compressor.setInput(input);
+* 		compressor.finish();
+* 
+* 		// Create an expandable byte array to hold the compressed data.
+* 		// You cannot use an array that's the same size as the orginal because
+* 		// there is no guarantee that the compressed data will be smaller than
+* 		// the uncompressed data.
+* 		ByteArrayOutputStream bos = new ByteArrayOutputStream(input.length);
+* 
+* 		// Compress the data
+* 		byte[] buf = new byte[1024];
+* 		while (!compressor.finished()) {
+* 			int count = compressor.deflate(buf);
+* 			bos.write(buf, 0, count);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/28148696-0.map: 5-13
+Length: 7 
+local sim: [[deflater]]
+global sim: [[]]
+variable sim: [[deflater]]
+If you want to compress the video file you can use Android's zlib compression with Deflater.
+<      Deflater deflater = new Deflater();
+<      deflater.setInput(originalBytes);
+<      deflater.finish();
+< 
+<      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+<      byte[] buf = new byte[8192];
+<      while (!deflater.finished()) {
+<          int byteCount = deflater.deflate(buf);
+<          baos.write(buf, 0, byteCount);
+----
+Comments (size 1):
+1.
+If you want to compress the video file you can use Android's zlib compression with Deflater.
+----
+Ranked Result:
+1. (size 1)
+If you want to compress the video file you can use Android's zlib compression with Deflater.
+----
+
+Match Group 7 of size 3+3
+<2> 
+/home/edmund/research/autocomment/projects/java/freemind/accessories/plugins/time/JDayChooser.java: 417-420
+Length: 4
+* 		tmpCalendar.set(Calendar.HOUR_OF_DAY, 0);
+* 		tmpCalendar.set(Calendar.MINUTE, 0);
+* 		tmpCalendar.set(Calendar.SECOND, 0);
+* 		tmpCalendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/projects/java/freemind/accessories/plugins/time/JDayChooser.java: 424-427
+Length: 4
+* 		minCal.set(Calendar.HOUR_OF_DAY, 0);
+* 		minCal.set(Calendar.MINUTE, 0);
+* 		minCal.set(Calendar.SECOND, 0);
+* 		minCal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/projects/java/freemind/accessories/plugins/time/JDayChooser.java: 431-434
+Length: 4
+* 		maxCal.set(Calendar.HOUR_OF_DAY, 0);
+* 		maxCal.set(Calendar.MINUTE, 0);
+* 		maxCal.set(Calendar.SECOND, 0);
+* 		maxCal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/1908387-0.map: 4-7
+Length: 4 
+local sim: [[], [calendar]]
+global sim: [[], []]
+variable sim: [[], [time]]
+Java Date cut off time information.
+[Calendar] The recommended way to do date/time manipulation is to use a "Calendar" object.
+< cal.set(Calendar.HOUR_OF_DAY, 0);
+< cal.set(Calendar.MINUTE, 0);
+< cal.set(Calendar.SECOND, 0);
+< cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/13343524-0.map: 5-8
+Length: 4 
+local sim: [[set, hour]]
+global sim: [[]]
+variable sim: [[]]
+The correct way to set and get hour, minutes, sec.
+< c.set(Calendar.HOUR_OF_DAY, 1);
+< c.set(Calendar.MINUTE, 0);
+< c.set(Calendar.SECOND, 0);
+< c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/11857640-1.map: 5-8
+Length: 4 
+local sim: [[], []]
+global sim: [[], []]
+variable sim: [[], []]
+Timestamp to date in java and get the count value.
+Get midnight date.
+< cal.set(Calendar.HOUR_OF_DAY, 0);
+< cal.set(Calendar.MINUTE, 0);
+< cal.set(Calendar.SECOND, 0);
+< cal.set(Calendar.MILLISECOND, 0);
+----
+Comments (size 5):
+1.
+Timestamp to date in java and get the count value.
+2.
+Java Date cut off time information.
+3.
+The recommended way to do date/time manipulation is to use a "Calendar" object.
+4.
+The correct way to set and get hour, minutes, sec.
+5.
+Get midnight date.
+----
+Ranked Result:
+1. (size 2)
+The correct way to set and get hour, minutes, sec.
+2. (size 1)
+The recommended way to do date/time manipulation is to use a "Calendar" object.
+----
+
+Match Group 10 of size 1+6
+<5> 
+/home/edmund/research/autocomment/projects/java/ganttproject/org.ganttproject.impex.htmlpdf/src/org/ganttproject/impex/htmlpdf/itext/ITextEngine.java: 139-148
+Length: 4
+*         try {
+*           // Random waiting seems silly, depending on the available
+*           // resources (CPU speed, number of processes running etc)
+*           // this might take longer or shorter...
+*           // FIXME Add some better way of determining whether the fonts can be
+*           // read already
+*           Thread.sleep(10000);
+*         } catch (InterruptedException e) {
+*           // TODO Auto-generated catch block
+*           e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/15747277-0.map: 4-10
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Make Java program exit after a couple of seconds.
+< try 
+< {
+<    Thread.sleep(5000);
+< } 
+< catch (InterruptedException e) 
+< {
+<    e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/13214238-0.map: 4-7
+Length: 4 
+local sim: [[sleep]]
+global sim: [[]]
+variable sim: [[]]
+[sleep] Need insert a "sleep" call after setting a new image so that your eyes will have the chance to see the images.
+< try {                             
+<     Thread.sleep(5000);           
+< } catch (InterruptedException e) {
+<     e.printStackTrace();          
+----
+Comments (size 2):
+1.
+Need insert a "sleep" call after setting a new image so that your eyes will have the chance to see the images.
+2.
+Make Java program exit after a couple of seconds.
+----
+Ranked Result:
+1. (size 1)
+Need insert a "sleep" call after setting a new image so that your eyes will have the chance to see the images.
+----
+
+Match Group 2 of size 1+3
+<2> 
+/home/edmund/research/autocomment/projects/java/ganttproject/biz.ganttproject.core/src/org/w3c/util/DateParser.java: 69-72
+Length: 4
+*                 calendar.set(Calendar.HOUR_OF_DAY, 0);
+*                 calendar.set(Calendar.MINUTE, 0);
+*                 calendar.set(Calendar.SECOND, 0);
+*                 calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/1908387-0.map: 4-7
+Length: 4 
+local sim: [[], []]
+global sim: [[], []]
+variable sim: [[], []]
+Java Date cut off time information.
+[Calendar] The recommended way to do date/time manipulation is to use a "Calendar" object.
+< cal.set(Calendar.HOUR_OF_DAY, 0);
+< cal.set(Calendar.MINUTE, 0);
+< cal.set(Calendar.SECOND, 0);
+< cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/13343524-0.map: 5-8
+Length: 4 
+local sim: [[set, hour]]
+global sim: [[]]
+variable sim: [[]]
+The correct way to set and get hour, minutes, sec.
+< c.set(Calendar.HOUR_OF_DAY, 1);
+< c.set(Calendar.MINUTE, 0);
+< c.set(Calendar.SECOND, 0);
+< c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/11857640-1.map: 5-8
+Length: 4 
+local sim: [[], []]
+global sim: [[], []]
+variable sim: [[], []]
+Timestamp to date in java and get the count value.
+Get midnight date.
+< cal.set(Calendar.HOUR_OF_DAY, 0);
+< cal.set(Calendar.MINUTE, 0);
+< cal.set(Calendar.SECOND, 0);
+< cal.set(Calendar.MILLISECOND, 0);
+----
+Comments (size 5):
+1.
+Timestamp to date in java and get the count value.
+2.
+Java Date cut off time information.
+3.
+The recommended way to do date/time manipulation is to use a "Calendar" object.
+4.
+The correct way to set and get hour, minutes, sec.
+5.
+Get midnight date.
+----
+Ranked Result:
+1. (size 2)
+The correct way to set and get hour, minutes, sec.
+----
+
+Match Group 10 of size 1+3
+<5> 
+/home/edmund/research/autocomment/projects/java/hibernate/tooling/metamodel-generator/src/test/java/org/hibernate/jpamodelgen/test/util/TestUtil.java: 195-208
+Length: 4
+* 				String line;
+* 				/*
+* 						* readLine is a bit quirky :
+* 						* it returns the content of a line MINUS the newline.
+* 						* it returns null only for the END of the stream.
+* 						* it returns an empty String if two newlines appear in a row.
+* 						*/
+* 				while ( ( line = input.readLine() ) != null ) {
+* 					contents.append( line );
+* 					contents.append( System.getProperty( "line.separator" ) );
+* 				}
+* 			}
+* 			finally {
+* 				input.close();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/22673917-0.map: 6-10
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Code and do it in similar way.
+<         String line;
+<         while ((line = reader.readLine()) != null) {
+<             out.append(line);
+<         }
+<         System.out.println(out.toString());           reader.close();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/16848880-0.map: 5-9
+Length: 4 
+local sim: [[read, string], []]
+global sim: [[], []]
+variable sim: [[], []]
+Are creating many String objects, one per each character read.
+If you are reading text from stream, you'd better use something like.
+< String line;
+< while ((line = br.readLine()) != null) {
+<     sb.append(line);
+< }
+< br.close(); 
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/25720258-1.map: 6-10
+Length: 4 
+local sim: [[string]]
+global sim: [[]]
+variable sim: [[]]
+Getting the content of an xml file and storing the content to a string in order to parse the content.
+< String line;
+< while ((line = reader.readLine()) != null) {
+<     sb.append(line);
+< }
+< reader.close();
+----
+Comments (size 4):
+1.
+If you are reading text from stream, you'd better use something like.
+2.
+Are creating many String objects, one per each character read.
+3.
+Getting the content of an xml file and storing the content to a string in order to parse the content.
+4.
+Code and do it in similar way.
+----
+Ranked Result:
+1. (size 2)
+Are creating many String objects, one per each character read.
+2. (size 1)
+Getting the content of an xml file and storing the content to a string in order to parse the content.
+----
+
+Match Group 1 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/hibernate/tooling/metamodel-generator/src/test/java/org/hibernate/jpamodelgen/test/util/TestUtil.java: 194-208
+Length: 4
+* 			try {
+* 				String line;
+* 				/*
+* 						* readLine is a bit quirky :
+* 						* it returns the content of a line MINUS the newline.
+* 						* it returns null only for the END of the stream.
+* 						* it returns an empty String if two newlines appear in a row.
+* 						*/
+* 				while ( ( line = input.readLine() ) != null ) {
+* 					contents.append( line );
+* 					contents.append( System.getProperty( "line.separator" ) );
+* 				}
+* 			}
+* 			finally {
+* 				input.close();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/18703105-1.map: 7-17
+Length: 4 
+local sim: [[read]]
+global sim: [[]]
+variable sim: [[]]
+Here is a function to read the file.
+<     try
+<     {
+<         String line = null;
+<         while ((line = br.readLine())!=null)
+<         {
+<             sb.append(line);
+<         }
+<     }
+<     finally
+<     {
+<         br.close();
+----
+Comments (size 1):
+1.
+Here is a function to read the file.
+----
+Ranked Result:
+1. (size 1)
+Here is a function to read the file.
+----
+
+Match Group 20 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/hibernate/hibernate-core/src/test/java/org/hibernate/test/annotations/onetoone/OneToOneTest.java: 441-446
+Length: 4
+* 	         int count = 0;
+* 	         int idx = 0;
+* 
+* 	         while ((idx = string.indexOf(substring, idx)) != -1)
+* 	         {
+* 	            idx++;
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/11238184-1.map: 5-13
+Length: 4 
+local sim: [[string], [string]]
+global sim: [[], []]
+variable sim: [[string], [string]]
+Count delimiter in string line.
+[String] Method to count occurance of particular "String".
+<     int fromIndex = 0;
+<     int result = 0;
+< 
+<     if (inputString == null || key == null) {
+<         return 0;
+<     }
+< 
+<     while ((index = inputString.indexOf(key, fromIndex)) != -1) {
+<         result++;
+----
+Comments (size 2):
+1.
+Count delimiter in string line.
+2.
+Method to count occurance of particular "String".
+----
+Ranked Result:
+1. (size 1)
+Count delimiter in string line.
+2. (size 1)
+Method to count occurance of particular "String".
+----
+
+Match Group 15 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/hsqldb/hsqldb/src/org/hsqldb/test/TestKarl.java: 109-113
+Length: 4
+*             Statement st = c.createStatement();
+* 
+*             st.execute(shutdown);
+*             st.close();
+*             c.close();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/18546223-0.map: 7-14
+Length: 4 
+local sim: [[execute], []]
+global sim: [[], []]
+variable sim: [[sql], []]
+Play framework execute raw sql at start of request.
+Have the standard java api at your disposal.
+<     Statement stmt = conn.createStatement();
+<     try {
+<         stmt.execute(sql)
+<     } finally {
+<         stmt.close();
+<     }
+< } finally {
+<     conn.close();
+----
+Comments (size 2):
+1.
+Play framework execute raw sql at start of request.
+2.
+Have the standard java api at your disposal.
+----
+Ranked Result:
+1. (size 1)
+Play framework execute raw sql at start of request.
+----
+
+Match Group 33 of size 1+1
+<3> 
+/home/edmund/research/autocomment/projects/java/jabref/src/test/java/net/sf/jabref/FileBasedTestHelper.java: 63-71
+Length: 4
+*             File[] fileArray = file.listFiles();
+* 
+*             if (fileArray != null) {
+*                 for (File aFileArray : fileArray) {
+*                     deleteRecursive(aFileArray);
+*                 }
+*             }
+*         }
+*         file.delete();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/20281835-4.map: 4-10
+Length: 4 
+local sim: [[files, delete]]
+global sim: [[]]
+variable sim: [[delete]]
+Delete a folder with files using Java.
+<     File[] contents = file.listFiles();
+<     if (contents != null) {
+<         for (File f : contents) {
+<             deleteDir(f);
+<         }
+<     }
+<     file.delete();
+----
+Comments (size 1):
+1.
+Delete a folder with files using Java.
+----
+Ranked Result:
+1. (size 2)
+Delete a folder with files using Java.
+----
+
+Match Group 5 of size 1+11
+<3> 
+/home/edmund/research/autocomment/projects/java/jabref/src/main/java/net/sf/jabref/logic/journals/AbbreviationParser.java: 63-69
+Length: 4
+*         try(BufferedReader reader = new BufferedReader(in)){
+*             String line;
+*             while ((line = reader.readLine()) != null) {
+*                 addLine(line);
+*             }
+* 
+*         } catch (IOException ex) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/27083700-0.map: 4-9
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Reading file passed in cmd.
+< try {
+<     in = new BufferedReader(new InputStreamReader(System.in));
+<     String line;
+<     while ((line = in.readLine()) != null) {          System.out.println(line);
+<     }
+< } catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/20920360-1.map: 3-8
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Something fairly simple would just be something like this.
+< try {
+<     BufferedReader in = new BufferedReader(new FileReader(file));
+<     String line;
+<     while ((line = in.readLine()) != null){
+<         textArea.append(line + "\n");
+< } catch(IOException ex){
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/10159003-1.map: 6-15
+Length: 4 
+local sim: [[string], []]
+global sim: [[], []]
+variable sim: [[string], []]
+Reading hex string blocks from a file and putting them into an array in java.
+All you need is to store all your packets in an array list and then process them as you wish at the end of the loop.
+< try{
+<         br = new BufferedReader(new FileReader(cmd));
+< 
+<         String line;
+<         while((line = br.readLine())!= null)
+<         {
+<             pkts.add(line.trim().toString().split(" "));
+<         }
+< 
+< }catch(IOException ie) {ie.printStackTrace();}
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/23344725-0.map: 3-12
+Length: 4 
+local sim: [[read]]
+global sim: [[]]
+variable sim: [[]]
+Partial read of xml.
+< try (BufferedReader br = new BufferedReader(new FileReader("C:\\testing.txt")))
+< {
+< 
+<     String sCurrentLine;
+< 
+<     while ((sCurrentLine = br.readLine()) != null) {
+<         System.out.println(sCurrentLine);
+<     }
+< 
+< } catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/5868369-1.map: 3-11
+Length: 4 
+local sim: [[read, line]]
+global sim: [[]]
+variable sim: [[line]]
+Read a large text file line by line using Java.
+<     try {
+<         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), "Cp1252"));         
+< 
+<         String line;
+<         while ((line = br.readLine()) != null) {
+<                     }
+<         br.close();
+< 
+<     } catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/7224658-1.map: 3-8
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Java try finally block to close stream.
+< try(BufferedReader r = new BufferedReader(new InputStreamReader(address.openStream()))) {
+<     String inLine;
+<     while ((inLine = r.readLine()) != null) {
+<         System.out.println(inLine);
+<     }
+< } catch(IOException readException) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/15582202-0.map: 4-10
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Lines being split while decrypting file into a list.
+< try {
+<     final BufferedReader reader = new BufferedReader(new InputStreamReader(new CipherInputStream(new FileInputStream(file), dcipher)));
+<     String line;
+<     while ((line = reader.readLine()) != null) {
+<         list.add(line);
+<     }
+< } catch (IOException e) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/26383865-1.map: 3-10
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Use Try-With-Resources to make it a lot cleaner.
+< try (BufferedReader reader = new BufferedReader(new FileReader("sample-file.dat"))) {
+<     String line;  
+<     while ((line = reader.readLine()) != null)
+<     {
+<         System.out.println(line);
+<     }
+< }
+< catch (IOException e)
+----
+Comments (size 9):
+1.
+Reading hex string blocks from a file and putting them into an array in java.
+2.
+Read a large text file line by line using Java.
+3.
+Java try finally block to close stream.
+4.
+Use Try-With-Resources to make it a lot cleaner.
+5.
+Partial read of xml.
+6.
+All you need is to store all your packets in an array list and then process them as you wish at the end of the loop.
+7.
+Reading file passed in cmd.
+8.
+Something fairly simple would just be something like this.
+9.
+Lines being split while decrypting file into a list.
+----
+Ranked Result:
+1. (size 2)
+Read a large text file line by line using Java.
+2. (size 1)
+Reading hex string blocks from a file and putting them into an array in java.
+3. (size 1)
+Partial read of xml.
+----
+
+Match Group 0 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/jajuk/src/main/java/org/jajuk/util/UtilSystem.java: 990-998
+Length: 4
+*         final StringBuilder strColl = new StringBuilder();
+*         String line = null;
+*         while ((line = input.readLine()) != null) {
+*           strColl.append(line);
+*         }
+*         return strColl;
+*       } finally {
+*         // Close the bufferedReader
+*         input.close();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/9877394-0.map: 4-11
+Length: 4 
+local sim: [[string]]
+global sim: [[]]
+variable sim: [[string]]
+Used this to encode the inputstream to a string.
+<             StringBuilder stringBuilder = new StringBuilder();
+<             String line = null;
+< 
+<             while ((line = bufferedReader.readLine()) != null) {
+<                 stringBuilder.append(line + "\n");
+<             }
+< 
+<             bufferedReader.close();
+----
+Comments (size 1):
+1.
+Used this to encode the inputstream to a string.
+----
+Ranked Result:
+1. (size 1)
+Used this to encode the inputstream to a string.
+----
+
+Match Group 9 of size 1+1
+<3> 
+/home/edmund/research/autocomment/projects/java/jajuk/src/test/java/org/jajuk/TestHelpers.java: 864-873
+Length: 8
+*     Map<Thread, StackTraceElement[]> traces = Thread.getAllStackTraces();
+*     Iterator<Thread> i = traces.keySet().iterator();
+*     while (i.hasNext()) {
+*       Thread thd = i.next();
+*       System.out.println("*** Thread id" + thd.getId() + ":" + thd.getName() + " ***");
+*       StackTraceElement[] trace = traces.get(thd);
+*       for (int j = 0; j < trace.length; ++j) {
+*         System.out.println(trace[j]);
+*       }
+*       System.out.println();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/2124672-0.map: 3-12
+Length: 8 
+local sim: [[stack]]
+global sim: [[]]
+variable sim: [[]]
+Java stack dump on windows.
+< Map<Thread,StackTraceElement[]> traces = Thread.getAllStackTraces();
+< Iterator<Thread> i = traces.keySet().iterator();
+< while (i.hasNext()) {
+<    Thread thd = i.next();
+<    System.out.println("*** Thread id"+thd.getId()+":"+thd.getName()+" ***");
+<    StackTraceElement[] trace = traces.get(thd);
+<    for (int j=0; j < trace.length; ++j) {
+<       System.out.println(trace[j]);
+<    }
+<    System.out.println();
+----
+Comments (size 1):
+1.
+Java stack dump on windows.
+----
+Ranked Result:
+1. (size 1)
+Java stack dump on windows.
+----
+
+Match Group 11 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/jajuk/src/main/java/org/jajuk/util/UtilSystem.java: 988-998
+Length: 5
+*       try {
+*         // Read
+*         final StringBuilder strColl = new StringBuilder();
+*         String line = null;
+*         while ((line = input.readLine()) != null) {
+*           strColl.append(line);
+*         }
+*         return strColl;
+*       } finally {
+*         // Close the bufferedReader
+*         input.close();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/18703105-1.map: 7-17
+Length: 5 
+local sim: [[read]]
+global sim: [[]]
+variable sim: [[]]
+Here is a function to read the file.
+<     try
+<     {
+<         String line = null;
+<         while ((line = br.readLine())!=null)
+<         {
+<             sb.append(line);
+<         }
+<     }
+<     finally
+<     {
+<         br.close();
+----
+Comments (size 1):
+1.
+Here is a function to read the file.
+----
+Ranked Result:
+1. (size 1)
+Here is a function to read the file.
+----
+
+Match Group 12 of size 1+3
+<5> 
+/home/edmund/research/autocomment/projects/java/jajuk/src/main/java/org/jajuk/util/UtilSystem.java: 990-998
+Length: 4
+*         final StringBuilder strColl = new StringBuilder();
+*         String line = null;
+*         while ((line = input.readLine()) != null) {
+*           strColl.append(line);
+*         }
+*         return strColl;
+*       } finally {
+*         // Close the bufferedReader
+*         input.close();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/16848880-0.map: 4-9
+Length: 4 
+local sim: [[read, string], []]
+global sim: [[], []]
+variable sim: [[], []]
+Are creating many String objects, one per each character read.
+If you are reading text from stream, you'd better use something like.
+< StringBuilder sb = new StringBuilder();
+< String line;
+< while ((line = br.readLine()) != null) {
+<     sb.append(line);
+< }
+< br.close(); 
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/25720258-1.map: 5-10
+Length: 4 
+local sim: [[string]]
+global sim: [[]]
+variable sim: [[]]
+Getting the content of an xml file and storing the content to a string in order to parse the content.
+< StringBuilder sb = new StringBuilder();
+< String line;
+< while ((line = reader.readLine()) != null) {
+<     sb.append(line);
+< }
+< reader.close();
+----
+Comments (size 3):
+1.
+If you are reading text from stream, you'd better use something like.
+2.
+Are creating many String objects, one per each character read.
+3.
+Getting the content of an xml file and storing the content to a string in order to parse the content.
+----
+Ranked Result:
+1. (size 2)
+Are creating many String objects, one per each character read.
+2. (size 1)
+Getting the content of an xml file and storing the content to a string in order to parse the content.
+----
+
+Match Group 13 of size 3+1
+/home/edmund/research/autocomment/projects/java/jajuk/src/main/java/ext/services/network/NetworkUtils.java: 145-152
+Length: 5
+*     try {
+*       byte[] array = new byte[1024];
+*       int read;
+*       while ((read = input.read(array)) > 0) {
+*         builder.append(new String(array, 0, read, charset));
+*       }
+*     } finally {
+*       input.close();
+----
+/home/edmund/research/autocomment/projects/java/jajuk/src/main/java/ext/services/network/NetworkUtils.java: 202-209
+Length: 5
+*     try {
+*       byte[] array = new byte[1024];
+*       int read;
+*       while ((read = input.read(array)) > 0) {
+*         builder.append(new String(array, 0, read, "UTF-8"));
+*       }
+*     } finally {
+*       input.close();
+----
+/home/edmund/research/autocomment/projects/java/jajuk/src/main/java/org/jajuk/util/DownloadManager.java: 230-237
+Length: 5
+*     try {
+*       byte[] array = new byte[1024];
+*       int read;
+*       while ((read = input.read(array)) > 0) {
+*         builder.append(new String(array, 0, read, encoding));
+*       }
+*     } finally {
+*       input.close();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/25756920-0.map: 4-12
+Length: 5 
+local sim: [[input, read]]
+global sim: [[]]
+variable sim: [[read]]
+[InputStream] Need to obtain the Connections InputStream and read it like this.
+< try {
+<     in = connection.getInputStream();
+<     byte[] buffer = new byte[1024];
+<     int read;
+<     while ((read = in.read(buffer)) > 0) {
+<         System.out.println(new String(buffer, 0, read, "utf-8"));
+<     }
+< } finally {
+<     in.close();
+----
+Comments (size 1):
+1.
+Need to obtain the Connections InputStream and read it like this.
+----
+Ranked Result:
+1. (size 2)
+Need to obtain the Connections InputStream and read it like this.
+----
+
+Match Group 6 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/jajuk/src/main/java/org/jajuk/services/dj/DigitalDJ.java: 120-125
+Length: 4
+*       Iterator<File> it = files.iterator();
+*       while (it.hasNext()) {
+*         File file = it.next();
+*         if (StarsHelper.getStarsNumber(file.getTrack()) < iRatingLevel
+*             || selectedTracks.contains(file.getTrack())) {
+*           it.remove();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/626671-0.map: 5-10
+Length: 4 
+local sim: [[remove]]
+global sim: [[]]
+variable sim: [[]]
+Remove elements from a list while iterating over/adding to it.
+< Iterator<File> i = files.iterator();
+< 
+< while (i.hasNext()) {
+<     File file = i.next();
+<     if (!file.getName().endsWith(".xml")) {
+<         i.remove();
+----
+Comments (size 1):
+1.
+Remove elements from a list while iterating over/adding to it.
+----
+Ranked Result:
+1. (size 1)
+Remove elements from a list while iterating over/adding to it.
+----
+
+Match Group 7 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/jajuk/src/main/java/org/jajuk/util/UtilString.java: 651-661
+Length: 4
+*     final StringBuilder sbOut = new StringBuilder(sOut.length());
+*     /*
+*      * Transform String to XML-valid characters. XML 1.0 specs ; Character Range
+*      * [2] Char ::= #x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD] |
+*      * [#x10000-#x10FFFF] any Unicode character, excluding the surrogate blocks,
+*      * FFFE, and FFFF.
+*      */
+*     for (int i = 0; i < sOut.length(); i++) {
+*       final char c = sOut.charAt(i);
+*       if (UtilString.isChar(c)) {
+*         sbOut.append(c);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/3292952-0.map: 4-9
+Length: 4 
+local sim: [[], [char]]
+global sim: [[], []]
+variable sim: [[], []]
+The solution depends on the probabilistic model you choose.
+If for example you decide on binomial distribution, then you can traverse the chars, and switch every char to uppercase with a fixed probability p.
+<     StringBuilder sb = new StringBuilder(str.length());
+<     for (int i = 0; i < str.length(); i++) {
+<         char c = str.charAt(i);
+<         if (Character.isLetter(c) && Math.random() < p)
+<             c = Character.toUpperCase(c);
+<         sb.append(c);
+----
+Comments (size 2):
+1.
+If for example you decide on binomial distribution, then you can traverse the chars, and switch every char to uppercase with a fixed probability p.
+2.
+The solution depends on the probabilistic model you choose.
+----
+Ranked Result:
+1. (size 1)
+If for example you decide on binomial distribution, then you can traverse the chars, and switch every char to uppercase with a fixed probability p.
+----
+
+Match Group 13 of size 7+9
+<5> 
+/home/edmund/research/autocomment/projects/java/jbidwatcher/src/com/jbidwatcher/auction/server/ebay/ebayItemParser.java: 56-57
+Length: 4
+*     try { parse.put("paypal", Boolean.toString(supportsPaypal())); } catch (Exception e) { /* Ignored */ }
+*     try { insertChild(parse, "feedback", deprecated.parseFeedback(mDocument)); } catch(Exception e){ /* Ignored */ }
+----
+/home/edmund/research/autocomment/projects/java/jbidwatcher/src/com/jbidwatcher/auction/server/ebay/ebayItemParser.java: 57-58
+Length: 4
+*     try { insertChild(parse, "feedback", deprecated.parseFeedback(mDocument)); } catch(Exception e){ /* Ignored */ }
+*     try { insertChild(parse, "shipping", deprecated.parseShippingInsurance(mDocument)); } catch (Exception e) { /* Ignored */ }
+----
+/home/edmund/research/autocomment/projects/java/jbidwatcher/src/com/cyberfox/util/config/Base64.java: 561-562
+Length: 4
+*             try{ if(bais != null) bais.close(); } catch( Exception ignored ){ /* Ignore close errors */ }
+*             try{ if(ois != null) ois.close();  } catch( Exception ignored ){ /* Ignore close errors */ }
+----
+/home/edmund/research/autocomment/projects/java/jbidwatcher/src/com/jbidwatcher/auction/server/ebay/ebayItemParser.java: 58-59
+Length: 4
+*     try { insertChild(parse, "shipping", deprecated.parseShippingInsurance(mDocument)); } catch (Exception e) { /* Ignored */ }
+*     try { parse.put("seller", deprecated.parseSeller(mDocument)); } catch (Exception e) { /* Ignored */ }
+----
+/home/edmund/research/autocomment/projects/java/jbidwatcher/src/com/cyberfox/util/config/Base64.java: 252-253
+Length: 4
+*             try{ oos.close();   } catch( Exception ignored ){ /* Ignore close errors */ }
+*             try{ b64os.close(); } catch( Exception ignored ){ /* Ignore close errors */ }
+----
+/home/edmund/research/autocomment/projects/java/jbidwatcher/src/com/cyberfox/util/config/Base64.java: 253-254
+Length: 4
+*             try{ b64os.close(); } catch( Exception ignored ){ /* Ignore close errors */ }
+*             try{ baos.close();  } catch( Exception ignored ){ /* Ignore close errors */ }
+----
+/home/edmund/research/autocomment/projects/java/jbidwatcher/src/com/jbidwatcher/auction/server/ebay/ebayItemParser.java: 55-56
+Length: 4
+*     try { parse.put("location", parseLocation()); } catch (Exception e) { /* Ignored */ }
+*     try { parse.put("paypal", Boolean.toString(supportsPaypal())); } catch (Exception e) { /* Ignored */ }
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/8505133-0.map: 3-8
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Using that method.
+< try{
+<    load(fname);
+< }catch(Exception e){
+<    try{
+<       load(alternativeFName);
+<    }catch(Exception e){
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/12077325-2.map: 6-11
+Length: 4 
+local sim: [[close], []]
+global sim: [[], []]
+variable sim: [[close], []]
+Is finally block really reliable to close the resource.
+Updated with code snippet.
+< try {      
+<     stmt1.close();
+< } catch (Exception exp) {}
+< try {      
+<     dbCon.close;                
+< }catch(Exception ex){}
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/1654487-0.map: 3-13
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Log both exceptions.
+< try
+< {
+<     transaction.Commit();
+< }
+< catch(Exception initialException)
+< {
+<     try
+<     {
+<         transaction.Rollback();
+<     }
+<     catch(Exception rollbackException)
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/18259800-0.map: 4-10
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Put it in a finally method like so.
+< try {
+<     br = new BufferedReader(new FileReader(new File("Assets/Setup/Buildings.txt")));
+<     } catch (Exception e){
+<    } finally {
+<     try {
+<         br.close();
+<     } catch (Exception e){}
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/12077325-2.map: 3-8
+Length: 4 
+local sim: [[close], []]
+global sim: [[], []]
+variable sim: [[close], []]
+Is finally block really reliable to close the resource.
+Updated with code snippet.
+< try {      
+<     rs1.close();
+< } catch (Exception exp) {}
+< try {      
+<     stmt1.close();
+< } catch (Exception exp) {}
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/25210317-1.map: 3-7
+Length: 4 
+local sim: [[], []]
+global sim: [[], []]
+variable sim: [[], []]
+There are two approaches you could take.
+The first option is to ignore the exceptions completely.
+< try {
+<   c1.eatFish();
+< } catch(Exception e) {try {
+<   c2.eatBacon();
+< } catch(Exception e) {try {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/12297947-0.map: 3-12
+Length: 4 
+local sim: [[], []]
+global sim: [[], []]
+variable sim: [[], []]
+Is that the best way to release SQLite connection in Java.
+If you want to make sure a command is executed you have to put it alone into a try catch block.
+<     try { 
+<         stmt.close();
+<     } 
+<     catch (Exception ex) {
+<     }
+< 
+<     try { 
+<         conn.close();
+<     } 
+<     catch (Exception ex) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/25210317-1.map: 5-9
+Length: 4 
+local sim: [[], []]
+global sim: [[], []]
+variable sim: [[], []]
+There are two approaches you could take.
+The first option is to ignore the exceptions completely.
+< } catch(Exception e) {try {
+<   c2.eatBacon();
+< } catch(Exception e) {try {
+<   c3.eatFruit();
+< } catch(Exception e) {
+----
+Comments (size 9):
+1.
+Put it in a finally method like so.
+2.
+Is that the best way to release SQLite connection in Java.
+3.
+The first option is to ignore the exceptions completely.
+4.
+There are two approaches you could take.
+5.
+Is finally block really reliable to close the resource.
+6.
+Updated with code snippet.
+7.
+Log both exceptions.
+8.
+Using that method.
+9.
+If you want to make sure a command is executed you have to put it alone into a try catch block.
+----
+Ranked Result:
+1. (size 1)
+Is finally block really reliable to close the resource.
+----
+
+Match Group 0 of size 1+6
+<5> 
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/client/bot/TestBot.java: 188-193
+Length: 4
+*                     try {
+*                         Thread.sleep(5000);
+*                     } catch (InterruptedException e1) {
+*                         System.out
+*                                 .println("Interrupted waiting for Bot to move.");
+*                         e1.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/15747277-0.map: 4-10
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Make Java program exit after a couple of seconds.
+< try 
+< {
+<    Thread.sleep(5000);
+< } 
+< catch (InterruptedException e) 
+< {
+<    e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/13214238-0.map: 4-7
+Length: 4 
+local sim: [[sleep]]
+global sim: [[]]
+variable sim: [[]]
+[sleep] Need insert a "sleep" call after setting a new image so that your eyes will have the chance to see the images.
+< try {                             
+<     Thread.sleep(5000);           
+< } catch (InterruptedException e) {
+<     e.printStackTrace();          
+----
+Comments (size 2):
+1.
+Need insert a "sleep" call after setting a new image so that your eyes will have the chance to see the images.
+2.
+Make Java program exit after a couple of seconds.
+----
+Ranked Result:
+1. (size 1)
+Need insert a "sleep" call after setting a new image so that your eyes will have the chance to see the images.
+----
+
+Match Group 14 of size 1+1
+<2> 
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/client/ui/swing/MiniMap.java: 571-579
+Length: 8
+*         Rectangle virtualBounds = new Rectangle();
+*         GraphicsEnvironment ge = GraphicsEnvironment
+*                 .getLocalGraphicsEnvironment();
+*         GraphicsDevice[] gs = ge.getScreenDevices();
+*         for (int j = 0; j < gs.length; j++) {
+*             GraphicsDevice gd = gs[j];
+*             GraphicsConfiguration[] gc = gd.getConfigurations();
+*             for (int i = 0; i < gc.length; i++) {
+*                 virtualBounds = virtualBounds.union(gc[i].getBounds());
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/1936566-1.map: 3-13
+Length: 8 
+local sim: [[get, screen]]
+global sim: [[]]
+variable sim: [[]]
+Get the screen width in java.
+<   Rectangle virtualBounds = new Rectangle();
+<   GraphicsEnvironment ge = GraphicsEnvironment.
+<           getLocalGraphicsEnvironment();
+<   GraphicsDevice[] gs =
+<           ge.getScreenDevices();
+<   for (int j = 0; j < gs.length; j++) { 
+<       GraphicsDevice gd = gs[j];
+<       GraphicsConfiguration[] gc =
+<           gd.getConfigurations();
+<       for (int i=0; i < gc.length; i++) {
+<           virtualBounds =
+----
+Comments (size 1):
+1.
+Get the screen width in java.
+----
+Ranked Result:
+1. (size 2)
+Get the screen width in java.
+----
+
+
+Match Group 21 of size 2+2
+<5> 
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/client/ui/swing/boardview/BoardView1.java: 4316-4320
+Length: 5
+*         Polygon facingPoly_tmp = new Polygon();
+*         facingPoly_tmp.addPoint(41, 3);
+*         facingPoly_tmp.addPoint(35, 9);
+*         facingPoly_tmp.addPoint(41, 7);
+*         facingPoly_tmp.addPoint(42, 7);
+----
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/client/ui/swing/boardview/BoardView1.java: 4333-4337
+Length: 5
+*         Polygon movementPoly_tmp = new Polygon();
+*         movementPoly_tmp.addPoint(47, 67);
+*         movementPoly_tmp.addPoint(48, 66);
+*         movementPoly_tmp.addPoint(42, 62);
+*         movementPoly_tmp.addPoint(41, 62);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/6462192-0.map: 3-7
+Length: 5 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Graphics2D draw image inside of defined quadrilateral.
+< Polygon polygon = new Polygon();
+< polygon.addPoint(250, 50);
+< polygon.addPoint(350, 50);
+< polygon.addPoint(450, 150);
+< polygon.addPoint(350, 150);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/17765485-0.map: 3-7
+Length: 5 
+local sim: [[], [], [polygon]]
+global sim: [[], [], []]
+variable sim: [[], [], [polygon]]
+Take a custom shaped screenshot.
+Do this with any shape.
+create your own Polygon by doing something like.
+< Polygon polygon = new Polygon();
+< polygon.addPoint(250, 50);
+< polygon.addPoint(350, 50);
+< polygon.addPoint(450, 150);
+< polygon.addPoint(350, 150);
+----
+Comments (size 4):
+1.
+Graphics2D draw image inside of defined quadrilateral.
+2.
+create your own Polygon by doing something like.
+3.
+Do this with any shape.
+4.
+Take a custom shaped screenshot.
+----
+Ranked Result:
+1. (size 1)
+create your own Polygon by doing something like.
+----
+
+Match Group 27 of size 2+4
+<5> 
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/client/ui/swing/boardview/BoardView1.java: 4333-4336
+Length: 4
+*         Polygon movementPoly_tmp = new Polygon();
+*         movementPoly_tmp.addPoint(47, 67);
+*         movementPoly_tmp.addPoint(48, 66);
+*         movementPoly_tmp.addPoint(42, 62);
+----
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/client/ui/swing/boardview/BoardView1.java: 4316-4319
+Length: 4
+*         Polygon facingPoly_tmp = new Polygon();
+*         facingPoly_tmp.addPoint(41, 3);
+*         facingPoly_tmp.addPoint(35, 9);
+*         facingPoly_tmp.addPoint(41, 7);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/28906062-0.map: 3-6
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Shows you how to create a Triangle using the Polygon class.
+< Polygon triangle = new Polygon();
+< triangle.addPoint(0, 0);
+< triangle.addPoint(15, 30);
+< triangle.addPoint(30, 0);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/33356940-1.map: 3-6
+Length: 4 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Create a House using java.
+< Polygon poly = new Polygon();
+< poly.addPoint(100, 200);
+< poly.addPoint(200, 100);
+< poly.addPoint(300, 200);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/27717816-3.map: 3-6
+Length: 4 
+local sim: [[add]]
+global sim: [[]]
+variable sim: [[]]
+For instance, to add a new shape to the ones on screen.
+< Polygon triangle = new Polygon();
+< triangle.addPoint(200, 300);
+< triangle.addPoint(200, 200);
+< triangle.addPoint(300, 200);
+----
+Comments (size 3):
+1.
+Shows you how to create a Triangle using the Polygon class.
+2.
+Create a House using java.
+3.
+For instance, to add a new shape to the ones on screen.
+----
+Ranked Result:
+1. (size 1)
+For instance, to add a new shape to the ones on screen.
+----
+
+Match Group 30 of size 1+2
+<2> 
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/client/ui/swing/MiniMap.java: 571-579
+Length: 6
+*         Rectangle virtualBounds = new Rectangle();
+*         GraphicsEnvironment ge = GraphicsEnvironment
+*                 .getLocalGraphicsEnvironment();
+*         GraphicsDevice[] gs = ge.getScreenDevices();
+*         for (int j = 0; j < gs.length; j++) {
+*             GraphicsDevice gd = gs[j];
+*             GraphicsConfiguration[] gc = gd.getConfigurations();
+*             for (int i = 0; i < gc.length; i++) {
+*                 virtualBounds = virtualBounds.union(gc[i].getBounds());
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/28478366-1.map: 3-13
+Length: 6 
+local sim: [[get, bounds], [configuration, graphics]]
+global sim: [[], []]
+variable sim: [[bounds], []]
+Here is how you can get the list of your displays (and their bounds).
+[GraphicsConfiguration] Code taken from the Javadoc of "GraphicsConfiguration").
+< Rectangle virtualBounds = new Rectangle();
+< GraphicsEnvironment ge = GraphicsEnvironment.
+<         getLocalGraphicsEnvironment();
+< GraphicsDevice[] gs =
+<         ge.getScreenDevices();
+< for (int j = 0; j < gs.length; j++) {
+<     GraphicsDevice gd = gs[j];
+<     GraphicsConfiguration[] gc =
+<         gd.getConfigurations();
+<     for (int i=0; i < gc.length; i++) {
+<         virtualBounds =
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/2997812-0.map: 3-13
+Length: 6 
+local sim: [[screen], [configuration, graphics]]
+global sim: [[], []]
+variable sim: [[], []]
+Make a swing app aware of screen size change.
+[GraphicsConfiguration] To compute the display size, you can use (taken from GraphicsConfiguration javadoc).
+<   Rectangle virtualBounds = new Rectangle();
+<   GraphicsEnvironment ge = GraphicsEnvironment.
+<           getLocalGraphicsEnvironment();
+<   GraphicsDevice[] gs =
+<           ge.getScreenDevices();
+<   for (int j = 0; j < gs.length; j++) { 
+<       GraphicsDevice gd = gs[j];
+<       GraphicsConfiguration[] gc =
+<           gd.getConfigurations();
+<       for (int i=0; i < gc.length; i++) {
+<           virtualBounds =
+----
+Comments (size 4):
+1.
+Here is how you can get the list of your displays (and their bounds).
+2.
+Code taken from the Javadoc of "GraphicsConfiguration").
+3.
+Make a swing app aware of screen size change.
+4.
+To compute the display size, you can use (taken from GraphicsConfiguration javadoc).
+----
+Ranked Result:
+1. (size 2)
+Here is how you can get the list of your displays (and their bounds).
+2. (size 2)
+Code taken from the Javadoc of "GraphicsConfiguration").
+3. (size 2)
+To compute the display size, you can use (taken from GraphicsConfiguration javadoc).
+4. (size 1)
+Make a swing app aware of screen size change.
+----
+
+Match Group 33 of size 3+3
+<5> 
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/common/MULParser.java: 716-720
+Length: 4
+*             int initBVal = 0;
+*             if ((null != initB) && (initB.length() > 0)) {
+*                 try {
+*                     initBVal = Integer.parseInt(initB);
+*                 } catch (NumberFormatException excep) {
+----
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/common/MULParser.java: 706-710
+Length: 4
+*             int toughVal = 0;
+*             if ((null != tough) && (tough.length() > 0)) {
+*                 try {
+*                     toughVal = Integer.parseInt(tough);
+*                 } catch (NumberFormatException excep) {
+----
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/common/MULParser.java: 724-728
+Length: 4
+*             int commandBVal = 0;
+*             if ((null != commandB) && (commandB.length() > 0)) {
+*                 try {
+*                     commandBVal = Integer.parseInt(commandB);
+*                 } catch (NumberFormatException excep) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/11113238-3.map: 5-8
+Length: 4 
+local sim: [[exception, number, format]]
+global sim: [[]]
+variable sim: [[]]
+[NumberFormatException] Getting a NumberFormatException from a numerical NumberFormatException field.
+< int i = 0; try {
+<     i = Integer.parseInt(change);
+< }
+< catch (NumberFormatException e){}
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/9917486-0.map: 4-8
+Length: 4 
+local sim: [[exception, number, format]]
+global sim: [[]]
+variable sim: [[]]
+[NumberFormatException] Have to catch "NumberFormatException".
+< int i=0;
+< try{
+< i=Integer.parseInt(s);
+< 
+< }catch(NumberFormatException ex){
+----
+Comments (size 2):
+1.
+Have to catch "NumberFormatException".
+2.
+Getting a NumberFormatException from a numerical NumberFormatException field.
+----
+Ranked Result:
+1. (size 3)
+Have to catch "NumberFormatException".
+2. (size 3)
+Getting a NumberFormatException from a numerical NumberFormatException field.
+----
+
+Match Group 6 of size 1+1
+<5> 
+/home/edmund/research/autocomment/projects/java/megamek/src/megamek/client/ui/swing/boardview/BoardView1.java: 5830-5836
+Length: 5
+*             MediaTracker tracker = new MediaTracker(this);
+*             if ((base.getWidth(null) == -1) || (base.getHeight(null) == -1)) {
+*                 tracker.addImage(base, 0);
+*                 try {
+*                     tracker.waitForID(0);
+*                 } catch (InterruptedException e) {
+*                     e.printStackTrace();
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/16501838-0.map: 3-9
+Length: 5 
+local sim: [[image]]
+global sim: [[]]
+variable sim: [[image]]
+Handle image loading like this.
+< MediaTracker mediaTracker = new MediaTracker(this);
+< Image image = getImage(getDocumentBase(), "image-filename.png");
+< mediaTracker.addImage(image, 0);
+< try {
+<     mediaTracker.waitForAll();
+< } catch (InterruptedException interuptedException) {
+<     interuptedException.printStackTrace();
+----
+Comments (size 1):
+1.
+Handle image loading like this.
+----
+Ranked Result:
+1. (size 1)
+Handle image loading like this.
+----
+
+Match Group 9 of size 1+1
+<2> 
+/home/edmund/research/autocomment/projects/java/SweetHome3D/src/com/eteks/sweethome3d/io/FileUserPreferences.java: 1105-1111
+Length: 5
+*       byte [] buffer = new byte [8192];
+*       int size; 
+*       while ((size = tempIn.read(buffer)) != -1) {
+*         tempOut.write(buffer, 0, size);
+*       }
+*       return new URLContent(preferencesFile.toURI().toURL());
+*     } catch (IOException ex) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/31647062-0.map: 5-10
+Length: 5 
+local sim: [[], [read], []]
+global sim: [[], [], []]
+variable sim: [[], [], []]
+Data size difference when copying with bufferedstream in java.
+The read method returns the number of bytes which has been read to the buffer.
+Here is a possible solution.
+<   byte[] data = new byte[2048];
+<   int size;
+<   while ((size = is.read(data)) != -1) {
+<     os.write(data, 0, size);
+<   }
+< } catch (IOException e) {
+----
+Comments (size 3):
+1.
+Data size difference when copying with bufferedstream in java.
+2.
+The read method returns the number of bytes which has been read to the buffer.
+3.
+Here is a possible solution.
+----
+Ranked Result:
+1. (size 1)
+The read method returns the number of bytes which has been read to the buffer.
+----
+
+Match Group 10 of size 1+1
+<2> 
+/home/edmund/research/autocomment/projects/java/SweetHome3D/src/com/eteks/sweethome3d/swing/VideoPanel.java: 1500-1510
+Length: 5
+*             try {
+*               // Copy temporary file to home file
+*               // Overwriting home file will ensure that its rights are kept
+*               out = new FileOutputStream(movFileName);
+*               byte [] buffer = new byte [8192];
+*               in = new FileInputStream(videoFile);          
+*               int size; 
+*               while ((size = in.read(buffer)) != -1 && isDisplayable()) {
+*                 out.write(buffer, 0, size);
+*               }
+*             } catch (IOException ex) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/31647062-0.map: 3-10
+Length: 5 
+local sim: [[], [read], []]
+global sim: [[], [], []]
+variable sim: [[], [], []]
+Data size difference when copying with bufferedstream in java.
+The read method returns the number of bytes which has been read to the buffer.
+Here is a possible solution.
+< try (InputStream is = new FileInputStream("guitar_sim.mp3");
+<      OutputStream os = new FileOutputStream("test_song1.mp3")) {
+<   byte[] data = new byte[2048];
+<   int size;
+<   while ((size = is.read(data)) != -1) {
+<     os.write(data, 0, size);
+<   }
+< } catch (IOException e) {
+----
+Comments (size 3):
+1.
+Data size difference when copying with bufferedstream in java.
+2.
+The read method returns the number of bytes which has been read to the buffer.
+3.
+Here is a possible solution.
+----
+Ranked Result:
+1. (size 1)
+The read method returns the number of bytes which has been read to the buffer.
+----
+
+Match Group 2 of size 1+3
+<2> 
+/home/edmund/research/autocomment/projects/java/SweetHome3D/src/com/eteks/sweethome3d/tools/ExtensionsClassLoader.java: 248-253
+Length: 5
+*     try {
+*       output = new BufferedOutputStream(new FileOutputStream(file));
+*       byte [] buffer = new byte [8192];
+*       int size; 
+*       while ((size = input.read(buffer)) != -1) {
+*         output.write(buffer, 0, size);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/1131116-5.map: 3-7
+Length: 5 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Byte array and vice versa.
+< try(InputStream pdfin = new FileInputStream("input.pdf");OutputStream pdfout = new FileOutputStream("output.pdf")){
+<     byte[] buffer = new byte[1024];
+<     int bytesRead;
+<     while((bytesRead = pdfin.read(buffer))!=-1){
+<         pdfout.write(buffer,0,bytesRead);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/32447629-1.map: 3-7
+Length: 5 
+local sim: [[]]
+global sim: [[]]
+variable sim: [[]]
+Recommend that you have a look at The try-with-resources Statement and handle your resources better, for example.
+< try (InputStream is = url.openStream(); OutputStream os = new FileOutputStream(destinationFile)) {
+<     byte[] b = new byte[2048];
+<     int length;
+<     while ((length = is.read(b)) != -1) {
+<         os.write(b, 0, length);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/31647062-0.map: 3-8
+Length: 5 
+local sim: [[], [read], []]
+global sim: [[], [], []]
+variable sim: [[], [], []]
+Data size difference when copying with bufferedstream in java.
+The read method returns the number of bytes which has been read to the buffer.
+Here is a possible solution.
+< try (InputStream is = new FileInputStream("guitar_sim.mp3");
+<      OutputStream os = new FileOutputStream("test_song1.mp3")) {
+<   byte[] data = new byte[2048];
+<   int size;
+<   while ((size = is.read(data)) != -1) {
+<     os.write(data, 0, size);
+----
+Comments (size 5):
+1.
+Data size difference when copying with bufferedstream in java.
+2.
+The read method returns the number of bytes which has been read to the buffer.
+3.
+Recommend that you have a look at The try-with-resources Statement and handle your resources better, for example.
+4.
+Here is a possible solution.
+5.
+Byte array and vice versa.
+----
+Ranked Result:
+1. (size 1)
+The read method returns the number of bytes which has been read to the buffer.
+----
+
+Match Group 7 of size 1+1
+<3> 
+/home/edmund/research/autocomment/projects/java/SweetHome3D/src/com/eteks/sweethome3d/io/AutoRecoveryManager.java: 188-200
+Length: 7
+*     FileOutputStream out = null;
+*     try {
+*       // Check file lock is free
+*       out = new FileOutputStream(file, true); 
+*       return out.getChannel().tryLock() == null;
+*     } catch (IOException ex) {
+*       // Forget this file
+*       return true;
+*     } finally {
+*       if (out != null) {
+*         try {
+*           out.close();
+*         } catch (IOException ex) {
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/9341505-2.map: 3-11
+Length: 7 
+local sim: [[file], []]
+global sim: [[], []]
+variable sim: [[file], []]
+Check if a file is open by another process (Java/Linux).
+Have one small upgrade that is somewhat important to that method.
+< FileOutputStream fos = null;
+< try {
+<             fos = new FileOutputStream(file, true);
+<     } catch(IOException e) {
+<     } finally {
+<     if(fos != null) {
+<     try {
+<         fos.close();
+<     } catch (IOException e) {
+----
+Comments (size 2):
+1.
+Have one small upgrade that is somewhat important to that method.
+2.
+Check if a file is open by another process (Java/Linux).
+----
+Ranked Result:
+1. (size 1)
+Check if a file is open by another process (Java/Linux).
+----
+
+Match Group 1 of size 1+2
+<5> 
+/home/edmund/research/autocomment/projects/java/vuze/com/aelitis/azureus/core/networkmanager/admin/impl/NetworkAdminSpeedTesterBTImpl.java: 498-503
+Length: 4
+* 	                    try{ Thread.sleep(1000); }
+* 	                    catch(InterruptedException ie){
+* 	                        //someone interrupted this thread for a reason. "test is now over"
+*                             abort( MessageText.getString("SpeedTestWizard.abort.message.interrupted") );
+* 	 
+* 	                        break;
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/6410721-1.map: 4-9
+Length: 4 
+local sim: [[thread], [thread]]
+global sim: [[], []]
+variable sim: [[], []]
+How to stop a thread that is running forever without any use.
+However, setting this flag alone does nothing, you have to handle this in your running thread.
+<     try{        
+<         Thread.sleep(10);
+<     }
+<     catch(InterruptedException e){
+<         Thread.currentThread().interrupt();
+<         break;     }
+----
+Comments (size 2):
+1.
+However, setting this flag alone does nothing, you have to handle this in your running thread.
+2.
+How to stop a thread that is running forever without any use.
+----
+Ranked Result:
+1. (size 1)
+However, setting this flag alone does nothing, you have to handle this in your running thread.
+2. (size 1)
+How to stop a thread that is running forever without any use.
+----
+
+Match Group 32 of size 1+1
+<1> 
+/home/edmund/research/autocomment/projects/java/vuze/com/aelitis/azureus/core/metasearch/impl/DateParserRegex.java: 287-292
+Length: 4
+* 			if(matcher.find()) {
+* 				try {
+* 				
+* 					String g1 = matcher.group(1);
+* 					String g2 = matcher.group(2);
+* 					String g3 = matcher.group(3);
+----
+/home/edmund/research/autocomment/posts/stage4-nlpProcessed/java2/25010175-0.map: 5-9
+Length: 4 
+local sim: [[string], []]
+global sim: [[], []]
+variable sim: [[regex], []]
+Java regex to parse a string with special chars and numbers.
+Match into capture groups.
+< if (regexMatcher.find()) {
+<     String firstGroup  = regexMatcher.group(1);
+<         String secondGroup = regexMatcher.group(2);
+<         String thirdGroup  = regexMatcher.group(3);
+<         String fourthGroup = regexMatcher.group(4);
+----
+Comments (size 2):
+1.
+Java regex to parse a string with special chars and numbers.
+2.
+Match into capture groups.
+----
+Ranked Result:
+1. (size 1)
+Java regex to parse a string with special chars and numbers.
+----
+

@@ -1,0 +1,92 @@
+/** 
+ * Generated serialVersionUID. 
+ */
+
+/** 
+ * The Constructor.
+ * @param al associated action listener
+ */
+
+// Problem panel
+
+// Action buttons
+
+// Main panel
+
+/** 
+ * Generated serialVersionUID. 
+ */
+
+/** 
+ * The Constructor.
+ */
+
+// Strings content : "Finish", "Cancel", "Previous", "Next"
+
+/** 
+ * static set of strings, can contain non-ISO8859 chars * 
+ */
+
+/** 
+ * Generated serialVersionUID. 
+ */
+
+/** 
+ * Screen description (optional).
+ * @return screen description
+ */
+
+/** 
+ * Can finish.
+ * @return true if...
+ */
+
+/** 
+ * Can go next.
+ * @return true if...
+ */
+
+/** 
+ * Can cancel.
+ * @return true if...
+ */
+
+/** 
+ * Can go previous.
+ * @return true if...
+ */
+
+/** 
+ * UI creation.
+ */
+
+/** 
+ * Notify gui.
+ */
+
+/** 
+ * A screen state:
+ * <ul>
+ * <li>can cancel ?</li>
+ * <li>can finish ?</li>
+ * <li>can go next ?</li>
+ * <li>can go previous ?</li>
+ * </ul>.
+ */
+
+/** 
+ * Can Go Next. 
+ */
+
+/** 
+ * Can Go Previous. 
+ */
+
+/** 
+ * Can Cancel. 
+ */
+
+/** 
+ * Problem. 
+ */
+

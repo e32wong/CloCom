@@ -1,0 +1,270 @@
+/** 
+ * Action panel
+ * <p>
+ * contains a problem area where problems are displayed and a buttons area
+ * (Previous, Next, Finish, Cancel).
+ * @author Bertrand Florat
+ * @created 1 may 2006
+ */
+
+/** 
+ * Problem text area. 
+ */
+
+/** 
+ * Associated action listener. 
+ */
+
+/** 
+ * Set buttons states.
+ * @param bPrevious 
+ * @param bNext 
+ * @param bFinish 
+ * @param bCancel 
+ */
+
+/** 
+ * Sets the problem.
+ * @param problem the new problem
+ */
+
+/** 
+ * Set the background color of the ActionPanel.
+ * @param color 
+ */
+
+/** 
+ * Set the background color of the ActionPanel's Problem notification area.
+ * @param color 
+ */
+
+/** 
+ * Set the background color of the ActionPanel's Problem notification area.
+ * @param color 
+ */
+
+/** 
+ * Screens needing to clear wizard cache (values filled up in different screens)
+ * should implement this interface.
+ * @author Bertrand Florat
+ */
+
+/** 
+ * Screen Header
+ * <p>
+ * Contains a wizard title, a subtitle used to display the name of the current
+ * screen and an optional background image
+ * </p>.
+ * @author Bertrand Florat
+ * @created 1 may 2006
+ */
+
+/** 
+ * Set the header title text.
+ * @param sText 
+ */
+
+/** 
+ * Set the header subtitle text.
+ * @param sText 
+ */
+
+/** 
+ * Set the header Image.
+ * @param img 
+ */
+
+/** 
+ * Set the header right-side icon.
+ * @param icon 
+ */
+
+/** 
+ * This class includes all langpacks strings. Note that we don't use
+ * ResourceBundle here to ease translation tasks (properties doesn't support
+ * non-latin1 characters) and because QDwizard comes with very few strings
+ */
+
+/** 
+ * Used locale for the wizard buttons, use English as a default *. 
+ */
+
+/** 
+ * private constructor for utility class with only static methods.
+ */
+
+/** 
+ * Set the QDwizard locale.
+ * @param locale 
+ */
+
+/** 
+ * Return label for given key or null if not matching key is found.
+ * @param key the key as a string using the default locale
+ * @return label for given key or null if not matching key is found
+ */
+
+// If the local is unknown, use default one
+
+/** 
+ * A wizard screen
+ * <ul>
+ * <li>For each wizard page, create a public Screen class. You have to
+ * implement initUI(), getDescription() and getName() abstract methods.</li>
+ * <li>getName() method should return the step name and getDescription() the
+ * step description (return null if no description needed).</li>
+ * <li>initUI() method contains graphical code for your screen. This method is
+ * automatically called from screen constructor so don't call it.</li>
+ * </ul>
+ * @author Bertrand Florat
+ * @created 1 may 2006
+ */
+
+/** 
+ * Construct a screen.
+ */
+
+/** 
+ * Give here the step name.
+ * @return screen name
+ */
+
+// Can finish only if none problem
+
+/** 
+ * Set whether the finish button should be enabled.
+ * @param b 
+ */
+
+// if screen is last one, cannot go further
+
+/** 
+ * Set whether the next button should be enabled.
+ * @param b 
+ */
+
+/** 
+ * Set whether the previous button should be enabled.
+ * @param b 
+ */
+
+/** 
+ * Set whether the cancel (or System menu close) button should be enabled.
+ * @param b 
+ */
+
+/** 
+ * Set a problem (set to null if problem is fixed).
+ * @param sProblem Problem string or null if no more problem
+ */
+
+/** 
+ * Get current problem.
+ * @return the current problem
+ */
+
+/** 
+ * Called by wizard before the screen is displayed. This happens only in
+ * forward mode, which means onEnter won't be called when you return to a
+ * screen via the previous button.
+ */
+
+// required by interface, but nothing to do here...
+
+/** 
+ * Called by wizard before the screen is left. This happens only in forward
+ * mode, which means onLeave won't be called when you leave the screen via the
+ * previous button.
+ * <p>
+ * @return return true if the Wizard should display the next screen
+ * return false if the Wizard should stay on the current screen
+ */
+
+/** 
+ * Called by wizard when the wizard is being canceled. Use this function to
+ * clean up (like stop any threads that this Screen might have created)
+ */
+
+// required by interface, but nothing to do here...
+
+/** 
+ * Called by wizard when the wizard is closing because the Finish button was
+ * pressed. Use this function to clean up (like stop any threads that this
+ * Screen might have created)
+ */
+
+// required by interface, but nothing to do here...
+
+/** 
+ * access to wizard instance.
+ * @return the wizard
+ */
+
+/** 
+ * Sets the wizard.
+ * @param wizard the new wizard
+ */
+
+/** 
+ * Construct a ScreenState.
+ */
+
+/** 
+ * Construct a ScreenState.
+ * @param bCanGoNext next button is enabled
+ * @param bCanGoPrevious previous button is enabled
+ * @param bCanCancel cancel button is enabled
+ * @param bCanFinish cancel button is enabled
+ * @param sProblem problem text
+ */
+
+/** 
+ * Gets the can finish.
+ * @return Finish button enabled
+ */
+
+/** 
+ * Set whether the finish button should be enabled.
+ * @param bCanFinish 
+ */
+
+/** 
+ * Gets the can go next.
+ * @return Next button enabled
+ */
+
+/** 
+ * Set whether the next button should be enabled.
+ * @param bCanGoNext 
+ */
+
+/** 
+ * Gets the can go previous.
+ * @return Previous button enabled
+ */
+
+/** 
+ * Set whether the previous button should be enabled.
+ * @param bCanGoPrevious 
+ */
+
+/** 
+ * Gets the can cancel.
+ * @return Cancel button enabled
+ */
+
+/** 
+ * Set whether the cancel (or System menu close) button should be enabled.
+ * @param bCanCancel 
+ */
+
+/** 
+ * Gets the problem.
+ * @return Problem button enabled
+ */
+
+/** 
+ * Set a problem (set to null if problem is fixed).
+ * @param sProblem Problem string or null if no more problem
+ */
+
