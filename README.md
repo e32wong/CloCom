@@ -96,8 +96,7 @@ f89b780bac5ea7322633550c29fffd3c199e1f2e
 if you would like to reproduce the results of
 CloCom's SANER conference paper.
 
-We no longer support the ASE codebase because it had evolved greatly since 2013.
-CloCom is the successer of AutoComment.
+We no longer support the old SANER codebase because it had evolved greatly since 2013.
 
 ## Data
 
@@ -125,6 +124,13 @@ It was generated using the newer Match 2017 StackOverflow database with the foll
 - Each mapping is named as "[questionID]-[answerID]-[codeSegmentNumber].autocom"
 
 ## User Study
+
+We had modified the source code 
+and fixed many bugs since the SANER publication.
+We performed a new user study with 20 participants
+to evaluate technique on the codebase.
+The following results reflects on commit
+cf530f047afb227adbdf8c76d9994db4c3f4c1b8.
 
 ### Automatically Generated Comments
 
