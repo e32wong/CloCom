@@ -13,7 +13,7 @@ by mining (1) StackOverflow and (2) open source projects.
 
 # Installation
 
-## Basic Toolchain
+## Requirements
 
 sudo apt-get install openjdk-8-jdk
 
@@ -24,10 +24,12 @@ which can be obtained from Stanford's website
 stanford-corenlp-3.8.0.jar  
 stanford-corenlp-3.8.0-models.jar
 
+```lib``` and ```lib2``` contains all the library dependencies that
+are required to run the tool.
+
 ## How to Run
 
-1.
-Configure "config.xml"'s <database> and <project> tag
+- Configure "config.xml"'s <database> and <project> tag
 with the appropriate folder path.
 The folders should contain Java source code files.
 The 'database' can be a StackOverflow database
@@ -43,17 +45,13 @@ the code inside the <project> folder.
 See the "config" folder for xml examples and 
 modify the parameters to suit your needs.
 
-2. 
-'make' to compile.
+- 'make' to compile.
 
-3. 
-Run the shell script with the config file as the first input argument.
+- Run the shell script with the config file as the first input argument.
 
 ./cloneDigger.sh config.xml
 
-4.
-
-The output is a list of clones from the database path and 
+- The output is a list of clones from the database path and 
 the respective generated comment.
 
 NOTES on the XML parameters:
