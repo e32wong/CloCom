@@ -61,17 +61,27 @@ Please note the XML parameters for ```config.xml```:
 
 databaseFormat - 0 for standard Java source code, 1 for autocomment format
 
-- minNumLines - number of statements a clone should have
-- matchAlgorithm - 1 for gapped, 0 for non-gapped
-- matchMode - 1 for between comparison (loads files in the project path into memory), 0 for full mesh
-- gapSize - set this for gapped comparision
-- meshBlockSize - number of source code files to load into memory for full mesh
-- numberThreads - 0 to disable multithreading, else specify the number of cores
+- minNumLines
+  - number of statements a clone should have
+- matchAlgorithm 
+  - 1 for gapped, 0 for non-gapped
+- matchMode 
+  - 1 for between comparison (loads files in the project path into memory), 0 for full mesh
+- gapSize 
+  - set this for gapped comparision
+- meshBlockSize 
+  - number of source code files to load into memory for full mesh
+- numberThreads 
+  - 0 to disable multithreading, else specify the number of cores
 
-- debug - turn on debug statements
-- removeEmpty - remove the display of clones that doesn't have a comment
-- forceRetokenization - set true if we want to retokenize the database directory, else it will only tokenize as needed
-- loadDatabaseFilePaths - use the existing cached list of files
+- debug 
+  - turn on debug statements
+- removeEmpty 
+  - remove the display of clones that doesn't have a comment
+- forceRetokenization 
+  - set true if we want to retokenize the database directory, else it will only tokenize as needed
+- loadDatabaseFilePaths 
+  - use the existing cached list of files
 
 # Publication
 
