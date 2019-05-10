@@ -1,0 +1,568 @@
+SPECIAL::main (V)  | [ string (NI) - args (N) ]	++ :: dump (NM) XML (N) ::DumpXML_static_void_main__String[]__
+SPECIAL::main (V)  | [ string (NI) - args (N) ]	++ :: dump (NM) XML (N) ::DumpXML_static_void_main__String[]__
+SPECIAL::start (V)  | building (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: my (PR) builder (N) ::MyBuilder_void_startBuilding__String-int__
+VOID_NP::handle (V) | new (NM) processing (NM) instruction (N) 	++ :: [ string (NI) - target (N) ] :: [ reader (N) - reader (N) ] :: my (PR) builder (N)  :: void (N) ::MyBuilder_void_newProcessingInstruction__String-Reader__
+SPECIAL::start (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) ID (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: my (PR) builder (N) ::MyBuilder_void_startElement__String-String-String-String-int__
+SPECIAL::end (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) ID (NI) ] :: my (PR) builder (N) ::MyBuilder_void_endElement__String-String-String__
+SPECIAL::add (V)  | attribute (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) ID (NI) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - type (N) ] :: my (PR) builder (N) ::MyBuilder_void_addAttribute__String-String-String-String-String__
+ENDS_WITH_ED::handle (V) | element (NM) attributes (NM) processed (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) ID (NI) ] :: my (PR) builder (N)  :: void (N) ::MyBuilder_void_elementAttributesProcessed__String-String-String__
+SPECIAL::add (V)  | PC (NM) data (NI) 	++ :: [ reader (N) - reader (N) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: my (PR) builder (N) ::MyBuilder_void_addPCData__Reader-String-int__
+SPECIAL::get (V)  | result (N) 	++ :: object (NI)  :: my (PR) builder (N) ::MyBuilder_Object_getResult____
+ENDS_WITH_ED::handle (V) | attribute (NM) added (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) ID (NI) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: my (PR) validator (N)  :: void (N) ::MyValidator_void_attributeAdded__String-String-String-String-String-int__
+SPECIAL::main (V)  | [ string (NI) - args (N) ]	++ :: demo (N) ::Demo_static_void_main__String[]__
+SPECIAL::main (V)  | [ string (NI) - args (N) ]	++ :: demo (N) ::Demo_static_void_main__String[]__
+SPECIAL::get (V)  | entity (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ string (NI) - name (NI) ] :: reader (N)  :: my (PR) resolver (N) ::MyResolver_Reader_getEntity__IXMLReader-String__
+SPECIAL::get (V)  | entity (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ string (NI) - name (NI) ] :: reader (N)  :: my (PR) resolver (N) ::MyResolver_Reader_getEntity__IXMLReader-String__
+SPECIAL::main (V)  | [ string (NI) - args (N) ]	++ :: demo (N) ::Demo_static_void_main__String[]__
+CONSTRUCTOR:: | document (NM) element (NI) 	++::DocumentElement_DocumentElement_DocumentElement____
+SPECIAL::set (V)  | attribute (N) 	++ :: [ string (NI) - attr (NM) name (NI) ] :: [ string (NI) - value (NI) ] :: document (NM) element (NI) ::DocumentElement_void_setAttribute__String-String__
+SPECIAL::add (V)  | child (N) 	++ :: [ document (NM) element (NI) - elt (NI) ] :: document (NM) element (NI) ::DocumentElement_void_addChild__DocumentElement__
+FIELD::[ properties (N) - attrs (N) ]::DocumentElement_Properties_attrs
+FIELD::[ vector (N) - children (N) ]::DocumentElement_Vector_children
+SPECIAL::get (V)  | title (N) 	++ :: string (NI)  :: chapter (N) ::Chapter_String_getTitle____
+SPECIAL::get (V)  | ID (NI) 	++ :: string (NI)  :: chapter (N) ::Chapter_String_getID____
+SPECIAL::get (V)  | paragraphs (N) 	++ :: enumeration (N)  :: chapter (N) ::Chapter_Enumeration_getParagraphs____
+SPECIAL::main (V)  | [ string (NI) - param (N) ]	++ :: XML (NM) 2 (NM) HTML (N) ::XML2HTML_static_void_main__String[]__
+SPECIAL::get (V)  | content (N) 	++ :: string (NI)  :: paragraph (N) ::Paragraph_String_getContent____
+SPECIAL::get (V)  | alignment (N) 	++ :: int (N)  :: paragraph (N) ::Paragraph_int_getAlignment____
+FIELD::[ int (N) - LEFT (N) ]::Paragraph_static_final_int_LEFT
+FIELD::[ int (N) - CENTER (N) ]::Paragraph_static_final_int_CENTER
+FIELD::[ int (N) - RIGHT (N) ]::Paragraph_static_final_int_RIGHT
+FIELD::[ hashtable (N) - alignments (N) ]::Paragraph_static_final_Hashtable_alignments
+SPECIAL::start (V)  | building (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: document (NM) builder (N) ::DocumentBuilder_void_startBuilding__String-int__
+VOID_NP::handle (V) | new (NM) processing (NM) instruction (N) 	++ :: [ string (NI) - target (N) ] :: [ reader (N) - reader (N) ] :: document (NM) builder (N)  :: void (N) ::DocumentBuilder_void_newProcessingInstruction__String-Reader__
+SPECIAL::start (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) ID (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: document (NM) builder (N) ::DocumentBuilder_void_startElement__String-String-String-String-int__
+SPECIAL::end (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) ID (NI) ] :: document (NM) builder (N) ::DocumentBuilder_void_endElement__String-String-String__
+SPECIAL::add (V)  | attribute (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) ID (NI) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - type (N) ] :: document (NM) builder (N) ::DocumentBuilder_void_addAttribute__String-String-String-String-String__
+ENDS_WITH_ED::handle (V) | element (NM) attributes (NM) processed (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) ID (NI) ] :: document (NM) builder (N)  :: void (N) ::DocumentBuilder_void_elementAttributesProcessed__String-String-String__
+SPECIAL::add (V)  | PC (NM) data (NI) 	++ :: [ reader (N) - reader (N) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: document (NM) builder (N) ::DocumentBuilder_void_addPCData__Reader-String-int__
+SPECIAL::get (V)  | result (N) 	++ :: object (NI)  :: document (NM) builder (N) ::DocumentBuilder_Object_getResult____
+FIELD::[ hashtable (N) - classes (N) ]::DocumentBuilder_static_Hashtable_classes
+FIELD::[ stack (N) - elements (N) ]::DocumentBuilder_Stack_elements
+FIELD::[ document (NM) element (NI) - top (NM) element (NI) ]::DocumentBuilder_DocumentElement_topElement
+CONSTRUCTOR:: | CDATA (NM) reader (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ]::CDATAReader_CDATAReader_CDATAReader__IXMLReader__
+BASE_VERB::finalize (VI)  | CDATA (NM) reader (N) 	++::CDATAReader_void_finalize____
+SPECIAL::read (V)  | [ char (N) - buffer (NI) ]	++ :: [ int (N) - offset (N) ] :: [ int (N) - size (N) ] :: CDATA (NM) reader (N)  :: int (N) ::CDATAReader_int_read__char[]-int-int__
+BASE_VERB::close (V)  | CDATA (NM) reader (N) 	++::CDATAReader_void_close____
+FIELD::[ IXML (NM) reader (N) - reader (N) ]::CDATAReader_IXMLReader_reader
+FIELD::[ char (N) - saved (NM) char (N) ]::CDATAReader_char_savedChar
+FIELD::[ boolean (N) - at (NM) end (NM) of (NM) data (NI) ]::CDATAReader_boolean_atEndOfData
+SPECIAL::create (V)  | PC (NM) data (NM) element (NI) 	++ :: IXML (NM) element (NI)  :: IXML (NM) element (NI) ::IXMLElement_IXMLElement_createPCDataElement____
+SPECIAL::create (V)  | element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: IXML (NM) element (NI)  :: IXML (NM) element (NI) ::IXMLElement_IXMLElement_createElement__String__
+SPECIAL::create (V)  | element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) element (NI)  :: IXML (NM) element (NI) ::IXMLElement_IXMLElement_createElement__String-String-int__
+SPECIAL::create (V)  | element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ] :: IXML (NM) element (NI)  :: IXML (NM) element (NI) ::IXMLElement_IXMLElement_createElement__String-String__
+SPECIAL::create (V)  | element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) element (NI)  :: IXML (NM) element (NI) ::IXMLElement_IXMLElement_createElement__String-String-String-int__
+SPECIAL::get (V)  | parent (N) 	++ :: IXML (NM) element (NI)  :: IXML (NM) element (NI) ::IXMLElement_IXMLElement_getParent____
+SPECIAL::get (V)  | full (NM) name (NI) 	++ :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getFullName____
+SPECIAL::get (V)  | name (NI) 	++ :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getName____
+SPECIAL::get (V)  | namespace (N) 	++ :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getNamespace____
+SPECIAL::set (V)  | name (NI) 	++ :: [ string (NI) - name (NI) ] :: IXML (NM) element (NI) ::IXMLElement_void_setName__String__
+SPECIAL::set (V)  | name (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ] :: IXML (NM) element (NI) ::IXMLElement_void_setName__String-String__
+SPECIAL::add (V)  | EQUIV[child (N) , [ IXML (NM) element (NI) - child (N) ]]	++ :: IXML (NM) element (NI) ::IXMLElement_void_addChild__IXMLElement__
+SPECIAL::remove (V)  | EQUIV[child (N) , [ IXML (NM) element (NI) - child (N) ]]	++ :: IXML (NM) element (NI) ::IXMLElement_void_removeChild__IXMLElement__
+SPECIAL::remove (V)  | child (N) -- at (P) EQUIV[index (NI) , [ int (N) - index (NI) ]]	++ :: IXML (NM) element (NI) ::IXMLElement_void_removeChildAtIndex__int__
+BASE_VERB::enumerate (V)  | children (N) 	++ :: enumeration (N)  :: IXML (NM) element (NI) ::IXMLElement_Enumeration_enumerateChildren____
+V_3P_IRR::is (V)  | leaf (N) 	++ :: boolean (N)  :: IXML (NM) element (NI) ::IXMLElement_boolean_isLeaf____
+V_3P_IRR::has (V)  | children (N) 	++ :: boolean (N)  :: IXML (NM) element (NI) ::IXMLElement_boolean_hasChildren____
+SPECIAL::get (V)  | children (NM) count (N) 	++ :: int (N)  :: IXML (NM) element (NI) ::IXMLElement_int_getChildrenCount____
+SPECIAL::get (V)  | children (N) 	++ :: vector (N)  :: IXML (NM) element (NI) ::IXMLElement_Vector_getChildren____
+SPECIAL::get (V)  | child (N) -- at (P) EQUIV[index (NI) , [ int (N) - index (NI) ]]	++ :: IXML (NM) element (NI)  :: IXML (NM) element (NI) ::IXMLElement_IXMLElement_getChildAtIndex__int__
+SPECIAL::get (V)  | first (NM) child (NM) named (N) 	++ :: [ string (NI) - name (NI) ] :: IXML (NM) element (NI)  :: IXML (NM) element (NI) ::IXMLElement_IXMLElement_getFirstChildNamed__String__
+SPECIAL::get (V)  | first (NM) child (NM) named (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: IXML (NM) element (NI)  :: IXML (NM) element (NI) ::IXMLElement_IXMLElement_getFirstChildNamed__String-String__
+SPECIAL::get (V)  | children (NM) named (N) 	++ :: [ string (NI) - name (NI) ] :: vector (N)  :: IXML (NM) element (NI) ::IXMLElement_Vector_getChildrenNamed__String__
+SPECIAL::get (V)  | children (NM) named (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: vector (N)  :: IXML (NM) element (NI) ::IXMLElement_Vector_getChildrenNamed__String-String__
+SPECIAL::get (V)  | attribute (NM) count (N) 	++ :: int (N)  :: IXML (NM) element (NI) ::IXMLElement_int_getAttributeCount____
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getAttribute__String__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - default (NM) value (NI) ] :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getAttribute__String-String__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: [ string (NI) - default (NM) value (NI) ] :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getAttribute__String-String-String__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ int (N) - default (NM) value (NI) ] :: int (N)  :: IXML (NM) element (NI) ::IXMLElement_int_getAttribute__String-int__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: [ int (N) - default (NM) value (NI) ] :: int (N)  :: IXML (NM) element (NI) ::IXMLElement_int_getAttribute__String-String-int__
+SPECIAL::get (V)  | attribute (NM) type (N) 	++ :: [ string (NI) - name (NI) ] :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getAttributeType__String__
+SPECIAL::get (V)  | attribute (NM) namespace (N) 	++ :: [ string (NI) - name (NI) ] :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getAttributeNamespace__String__
+SPECIAL::get (V)  | attribute (NM) type (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getAttributeType__String-String__
+SPECIAL::set (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - value (NI) ] :: IXML (NM) element (NI) ::IXMLElement_void_setAttribute__String-String__
+SPECIAL::set (V)  | attribute (N) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ] :: [ string (NI) - value (NI) ] :: IXML (NM) element (NI) ::IXMLElement_void_setAttribute__String-String-String__
+SPECIAL::remove (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: IXML (NM) element (NI) ::IXMLElement_void_removeAttribute__String__
+SPECIAL::remove (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: IXML (NM) element (NI) ::IXMLElement_void_removeAttribute__String-String__
+BASE_VERB::enumerate (V)  | attribute (NM) names (N) 	++ :: enumeration (N)  :: IXML (NM) element (NI) ::IXMLElement_Enumeration_enumerateAttributeNames____
+V_3P_IRR::has (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: boolean (N)  :: IXML (NM) element (NI) ::IXMLElement_boolean_hasAttribute__String__
+V_3P_IRR::has (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: boolean (N)  :: IXML (NM) element (NI) ::IXMLElement_boolean_hasAttribute__String-String__
+SPECIAL::get (V)  | attributes (N) 	++ :: properties (N)  :: IXML (NM) element (NI) ::IXMLElement_Properties_getAttributes____
+SPECIAL::get (V)  | attributes (N) -- in (P) EQUIV[namespace (N) , [ string (NI) - namespace (N) ]]	++ :: properties (N)  :: IXML (NM) element (NI) ::IXMLElement_Properties_getAttributesInNamespace__String__
+SPECIAL::get (V)  | system (NM) ID (NI) 	++ :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getSystemID____
+SPECIAL::get (V)  | line (NM) nr (N) 	++ :: int (N)  :: IXML (NM) element (NI) ::IXMLElement_int_getLineNr____
+SPECIAL::get (V)  | content (N) 	++ :: string (NI)  :: IXML (NM) element (NI) ::IXMLElement_String_getContent____
+SPECIAL::set (V)  | content (N) 	++ :: [ string (NI) - content (N) ] :: IXML (NM) element (NI) ::IXMLElement_void_setContent__String__
+V_3PS::equals (V)  | [ object (NI) - raw (NM) element (NI) ]	++ :: IXML (NM) element (NI)  :: boolean (N) ::IXMLElement_boolean_equals__Object__
+V_3PS::equals (V)  | EQUIV[XML (NM) element (NI) , [ IXML (NM) element (NI) - elt (NI) ]]	++ :: boolean (N)  :: IXML (NM) element (NI) ::IXMLElement_boolean_equalsXMLElement__IXMLElement__
+FIELD::[ int (N) - NO (DT) LINE (N) ]::IXMLElement_static_final_int_NO_LINE
+SPECIAL::start (V)  | building (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) builder (N) ::IXMLBuilder_void_startBuilding__String-int__
+VOID_NP::handle (V) | new (NM) processing (NM) instruction (N) 	++ :: [ string (NI) - target (N) ] :: [ reader (N) - reader (N) ] :: IXML (NM) builder (N)  :: void (N) ::IXMLBuilder_void_newProcessingInstruction__String-Reader__
+SPECIAL::start (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) URI (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) builder (N) ::IXMLBuilder_void_startElement__String-String-String-String-int__
+SPECIAL::add (V)  | attribute (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) URI (NI) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - type (N) ] :: IXML (NM) builder (N) ::IXMLBuilder_void_addAttribute__String-String-String-String-String__
+ENDS_WITH_ED::handle (V) | element (NM) attributes (NM) processed (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) URI (NI) ] :: IXML (NM) builder (N)  :: void (N) ::IXMLBuilder_void_elementAttributesProcessed__String-String-String__
+SPECIAL::end (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) URI (NI) ] :: IXML (NM) builder (N) ::IXMLBuilder_void_endElement__String-String-String__
+SPECIAL::add (V)  | PC (NM) data (NI) 	++ :: [ reader (N) - reader (N) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) builder (N) ::IXMLBuilder_void_addPCData__Reader-String-int__
+SPECIAL::get (V)  | result (N) 	++ :: object (NI)  :: IXML (NM) builder (N) ::IXMLBuilder_Object_getResult____
+CONSTRUCTOR:: | std (NM) XML (NM) builder (N) 	++::StdXMLBuilder_StdXMLBuilder_StdXMLBuilder____
+CONSTRUCTOR:: | std (NM) XML (NM) builder (N) 	++ :: [ IXML (NM) element (NI) - prototype (N) ]::StdXMLBuilder_StdXMLBuilder_StdXMLBuilder__IXMLElement__
+BASE_VERB::finalize (VI)  | std (NM) XML (NM) builder (N) 	++::StdXMLBuilder_void_finalize____
+SPECIAL::start (V)  | building (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: std (NM) XML (NM) builder (N) ::StdXMLBuilder_void_startBuilding__String-int__
+VOID_NP::handle (V) | new (NM) processing (NM) instruction (N) 	++ :: [ string (NI) - target (N) ] :: [ reader (N) - reader (N) ] :: std (NM) XML (NM) builder (N)  :: void (N) ::StdXMLBuilder_void_newProcessingInstruction__String-Reader__
+SPECIAL::start (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) URI (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: std (NM) XML (NM) builder (N) ::StdXMLBuilder_void_startElement__String-String-String-String-int__
+ENDS_WITH_ED::handle (V) | element (NM) attributes (NM) processed (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) URI (NI) ] :: std (NM) XML (NM) builder (N)  :: void (N) ::StdXMLBuilder_void_elementAttributesProcessed__String-String-String__
+SPECIAL::end (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) URI (NI) ] :: std (NM) XML (NM) builder (N) ::StdXMLBuilder_void_endElement__String-String-String__
+SPECIAL::add (V)  | attribute (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) URI (NI) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - type (N) ] :: std (NM) XML (NM) builder (N) ::StdXMLBuilder_void_addAttribute__String-String-String-String-String__
+SPECIAL::add (V)  | PC (NM) data (NI) 	++ :: [ reader (N) - reader (N) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: std (NM) XML (NM) builder (N) ::StdXMLBuilder_void_addPCData__Reader-String-int__
+SPECIAL::get (V)  | result (N) 	++ :: object (NI)  :: std (NM) XML (NM) builder (N) ::StdXMLBuilder_Object_getResult____
+FIELD::[ stack (N) - stack (N) ]::StdXMLBuilder_Stack_stack
+FIELD::[ IXML (NM) element (NI) - root (N) ]::StdXMLBuilder_IXMLElement_root
+FIELD::[ IXML (NM) element (NI) - prototype (N) ]::StdXMLBuilder_IXMLElement_prototype
+CONSTRUCTOR:: | XML (NM) parse (NM) exception (N) 	++ :: [ string (NI) - msg (NI) ]::XMLParseException_XMLParseException_XMLParseException__String__
+CONSTRUCTOR:: | XML (NM) parse (NM) exception (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - msg (NI) ]::XMLParseException_XMLParseException_XMLParseException__String-int-String__
+CONSTRUCTOR:: | validator (NM) plugin (N) 	++::ValidatorPlugin_ValidatorPlugin_ValidatorPlugin____
+BASE_VERB::finalize (VI)  | validator (NM) plugin (N) 	++::ValidatorPlugin_void_finalize____
+SPECIAL::get (V)  | delegate (N) 	++ :: IXML (NM) validator (N)  :: validator (NM) plugin (N) ::ValidatorPlugin_IXMLValidator_getDelegate____
+SPECIAL::set (V)  | delegate (N) 	++ :: [ IXML (NM) validator (N) - delegate (N) ] :: validator (NM) plugin (N) ::ValidatorPlugin_void_setDelegate__IXMLValidator__
+SPECIAL::set (V)  | parameter (NM) entity (NM) resolver (N) 	++ :: [ IXML (NM) entity (NM) resolver (N) - resolver (N) ] :: validator (NM) plugin (N) ::ValidatorPlugin_void_setParameterEntityResolver__IXMLEntityResolver__
+SPECIAL::get (V)  | parameter (NM) entity (NM) resolver (N) 	++ :: IXML (NM) entity (NM) resolver (N)  :: validator (NM) plugin (N) ::ValidatorPlugin_IXMLEntityResolver_getParameterEntityResolver____
+BASE_VERB::parse (V)  | DTD (N) 	++ :: [ string (NI) - public (NM) ID (NI) ] :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: [ boolean (N) - external (N) ] :: validator (NM) plugin (N) ::ValidatorPlugin_void_parseDTD__String-IXMLReader-IXMLEntityResolver-boolean__
+ENDS_WITH_ED::handle (V) | element (NM) started (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_elementStarted__String-String-int__
+ENDS_WITH_ED::handle (V) | element (NM) ended (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_elementEnded__String-String-int__
+ENDS_WITH_ED::handle (V) | element (NM) attributes (NM) processed (N) 	++ :: [ string (NI) - name (NI) ] :: [ properties (N) - extra (NM) attributes (N) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_elementAttributesProcessed__String-Properties-String-int__
+ENDS_WITH_ED::handle (V) | attribute (NM) added (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_attributeAdded__String-String-String-int__
+ENDS_WITH_ED::handle (V) | PC (PRE) data (NM) added (N) 	++ :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_PCDataAdded__String-int__
+BASE_VERB::missing (V)  | EQUIV[element (NI) , [ string (NI) - parent (NM) element (NM) name (NI) ], [ string (NI) - missing (NM) element (NM) name (NI) ]]	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: validator (NM) plugin (N) ::ValidatorPlugin_void_missingElement__String-int-String-String__
+VOID_NP::handle (V) | unexpected (NM) element (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - parent (NM) element (NM) name (NI) ] :: [ string (NI) - unexpected (NM) element (NM) name (NI) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_unexpectedElement__String-int-String-String__
+BASE_VERB::missing (V)  | EQUIV[attribute (N) , [ string (NI) - attribute (NM) name (NI) ]]	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - element (NM) name (NI) ] :: validator (NM) plugin (N) ::ValidatorPlugin_void_missingAttribute__String-int-String-String__
+VOID_NP::handle (V) | unexpected (NM) attribute (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - element (NM) name (NI) ] :: [ string (NI) - attribute (NM) name (NI) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_unexpectedAttribute__String-int-String-String__
+VOID_NP::handle (V) | invalid (NM) attribute (NM) value (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - element (NM) name (NI) ] :: [ string (NI) - attribute (NM) name (NI) ] :: [ string (NI) - attribute (NM) value (NI) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_invalidAttributeValue__String-int-String-String-String__
+BASE_VERB::missing (V)  | PC (NM) data (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - parent (NM) element (NM) name (NI) ] :: validator (NM) plugin (N) ::ValidatorPlugin_void_missingPCData__String-int-String__
+VOID_NP::handle (V) | unexpected (NM) PC (NM) data (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - parent (NM) element (NM) name (NI) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_unexpectedPCData__String-int-String__
+VOID_NP::handle (V) | validation (NM) error (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - message (NI) ] :: [ string (NI) - element (NM) name (NI) ] :: [ string (NI) - attribute (NM) name (NI) ] :: [ string (NI) - attribute (NM) value (NI) ] :: validator (NM) plugin (N)  :: void (N) ::ValidatorPlugin_void_validationError__String-int-String-String-String-String__
+FIELD::[ IXML (NM) validator (N) - delegate (N) ]::ValidatorPlugin_IXMLValidator_delegate
+FIELD::[ pushback (NM) reader (N) - pb (NM) reader (N) ]::StdXMLReader$StackedReader_PushbackReader_pbReader
+FIELD::[ line (NM) number (NM) reader (N) - line (NM) reader (N) ]::StdXMLReader$StackedReader_LineNumberReader_lineReader
+FIELD::[ URL (NI) - system (NM) id (NI) ]::StdXMLReader$StackedReader_URL_systemId
+FIELD::[ string (NI) - public (NM) id (NI) ]::StdXMLReader$StackedReader_String_publicId
+BASE_VERB::string (V)  | reader (N) 	++ :: [ string (NI) - str (NI) ] :: IXML (NM) reader (N)  :: std (NM) XML (NM) reader (N) ::StdXMLReader_static_IXMLReader_stringReader__String__
+BASE_VERB::file (V)  | reader (N) 	++ :: [ string (NI) - filename (N) ] :: IXML (NM) reader (N)  :: std (NM) XML (NM) reader (N) ::StdXMLReader_static_IXMLReader_fileReader__String__
+CONSTRUCTOR:: | std (NM) XML (NM) reader (N) 	++ :: [ string (NI) - public (NM) ID (NI) ] :: [ string (NI) - system (NM) ID (NI) ]::StdXMLReader_StdXMLReader_StdXMLReader__String-String__
+CONSTRUCTOR:: | std (NM) XML (NM) reader (N) 	++ :: [ reader (N) - reader (N) ]::StdXMLReader_StdXMLReader_StdXMLReader__Reader__
+BASE_VERB::finalize (VI)  | std (NM) XML (NM) reader (N) 	++::StdXMLReader_void_finalize____
+SPECIAL::get (V)  | encoding (N) 	++ :: [ string (NI) - str (NI) ] :: string (NI)  :: std (NM) XML (NM) reader (N) ::StdXMLReader_String_getEncoding__String__
+BASE_VERB::stream (V)  | 2 (D) reader (N) 	++ :: [ input (NM) stream (NI) - stream (NI) ] :: [ string (NM) buffer (NI) - chars (NM) read (N) ] :: reader (N)  :: std (NM) XML (NM) reader (N) ::StdXMLReader_Reader_stream2reader__InputStream-StringBuffer__
+CONSTRUCTOR:: | std (NM) XML (NM) reader (N) 	++ :: [ input (NM) stream (NI) - stream (NI) ]::StdXMLReader_StdXMLReader_StdXMLReader__InputStream__
+SPECIAL::read (V)  | std (NM) XML (NM) reader (N) 	++ :: char (N) ::StdXMLReader_char_read____
+PREP:: | at (P) EOF (NM) of (NM) current (NM) stream (NI) 	++ :: std (NM) XML (NM) reader (N)  :: boolean (N) ::StdXMLReader_boolean_atEOFOfCurrentStream____
+PREP:: | at (P) EOF (N) 	++ :: std (NM) XML (NM) reader (N)  :: boolean (N) ::StdXMLReader_boolean_atEOF____
+VOID_NP::handle (V) | unread (N) 	++ :: [ char (N) - ch (N) ] :: std (NM) XML (NM) reader (N)  :: void (N) ::StdXMLReader_void_unread__char__
+BASE_VERB::open (V)  | stream (NI) 	++ :: [ string (NI) - public (NM) ID (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: reader (N)  :: std (NM) XML (NM) reader (N) ::StdXMLReader_Reader_openStream__String-String__
+SPECIAL::start (V)  | new (NM) stream (NI) 	++ :: [ reader (N) - reader (N) ] :: std (NM) XML (NM) reader (N) ::StdXMLReader_void_startNewStream__Reader__
+SPECIAL::start (V)  | new (NM) stream (NI) 	++ :: [ reader (N) - reader (N) ] :: [ boolean (N) - is (NM) internal (NM) entity (N) ] :: std (NM) XML (NM) reader (N) ::StdXMLReader_void_startNewStream__Reader-boolean__
+SPECIAL::get (V)  | stream (NM) level (N) 	++ :: int (N)  :: std (NM) XML (NM) reader (N) ::StdXMLReader_int_getStreamLevel____
+SPECIAL::get (V)  | line (NM) nr (N) 	++ :: int (N)  :: std (NM) XML (NM) reader (N) ::StdXMLReader_int_getLineNr____
+SPECIAL::set (V)  | system (NM) ID (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: std (NM) XML (NM) reader (N) ::StdXMLReader_void_setSystemID__String__
+SPECIAL::set (V)  | public (NM) ID (NI) 	++ :: [ string (NI) - public (NM) ID (NI) ] :: std (NM) XML (NM) reader (N) ::StdXMLReader_void_setPublicID__String__
+SPECIAL::get (V)  | system (NM) ID (NI) 	++ :: string (NI)  :: std (NM) XML (NM) reader (N) ::StdXMLReader_String_getSystemID____
+SPECIAL::get (V)  | public (NM) ID (NI) 	++ :: string (NI)  :: std (NM) XML (NM) reader (N) ::StdXMLReader_String_getPublicID____
+FIELD::[ stack (N) - readers (N) ]::StdXMLReader_Stack_readers
+FIELD::[ stacked (NM) reader (N) - current (NM) reader (N) ]::StdXMLReader_StackedReader_currentReader
+FIELD::[ pushback (NM) reader (N) - pb (NM) reader (N) ]::StdXMLReader$StackedReader_PushbackReader_pbReader
+FIELD::[ line (NM) number (NM) reader (N) - line (NM) reader (N) ]::StdXMLReader$StackedReader_LineNumberReader_lineReader
+FIELD::[ URL (NI) - system (NM) id (NI) ]::StdXMLReader$StackedReader_URL_systemId
+FIELD::[ string (NI) - public (NM) id (NI) ]::StdXMLReader$StackedReader_String_publicId
+CONSTRUCTOR:: | XML (NM) validation (NM) exception (N) 	++ :: [ int (N) - error (NM) type (N) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - element (NM) name (NI) ] :: [ string (NI) - attribute (NM) name (NI) ] :: [ string (NI) - attribute (NM) value (NI) ] :: [ string (NI) - msg (NI) ]::XMLValidationException_XMLValidationException_XMLValidationException__int-String-int-String-String-String-String__
+BASE_VERB::finalize (VI)  | XML (NM) validation (NM) exception (N) 	++::XMLValidationException_void_finalize____
+SPECIAL::get (V)  | element (NM) name (NI) 	++ :: string (NI)  :: XML (NM) validation (NM) exception (N) ::XMLValidationException_String_getElementName____
+SPECIAL::get (V)  | attribute (NM) name (NI) 	++ :: string (NI)  :: XML (NM) validation (NM) exception (N) ::XMLValidationException_String_getAttributeName____
+SPECIAL::get (V)  | attribute (NM) value (NI) 	++ :: string (NI)  :: XML (NM) validation (NM) exception (N) ::XMLValidationException_String_getAttributeValue____
+FIELD::[ int (N) - MISSING (NM) ELEMENT (NI) ]::XMLValidationException_static_final_int_MISSING_ELEMENT
+FIELD::[ int (N) - UNEXPECTED (NM) ELEMENT (NI) ]::XMLValidationException_static_final_int_UNEXPECTED_ELEMENT
+FIELD::[ int (N) - MISSING (NM) ATTRIBUTE (N) ]::XMLValidationException_static_final_int_MISSING_ATTRIBUTE
+FIELD::[ int (N) - UNEXPECTED (NM) ATTRIBUTE (N) ]::XMLValidationException_static_final_int_UNEXPECTED_ATTRIBUTE
+FIELD::[ int (N) - ATTRIBUTE (NM) WITH (NM) INVALID (NM) VALUE (NI) ]::XMLValidationException_static_final_int_ATTRIBUTE_WITH_INVALID_VALUE
+FIELD::[ int (N) - MISSING (NM) PCDATA (N) ]::XMLValidationException_static_final_int_MISSING_PCDATA
+FIELD::[ int (N) - UNEXPECTED (NM) PCDATA (N) ]::XMLValidationException_static_final_int_UNEXPECTED_PCDATA
+FIELD::[ int (N) - MISC (NM) ERROR (N) ]::XMLValidationException_static_final_int_MISC_ERROR
+FIELD::[ int (N) - error (NM) type (N) ]::XMLValidationException_int_errorType
+FIELD::[ string (NI) - element (NM) name (NI) ]::XMLValidationException_String_elementName
+FIELD::[ string (NI) - attribute (NM) name (NI) ]::XMLValidationException_String_attributeName
+FIELD::[ string (NI) - attribute (NM) value (NI) ]::XMLValidationException_String_attributeValue
+SPECIAL::set (V)  | reader (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: IXML (NM) parser (N) ::IXMLParser_void_setReader__IXMLReader__
+SPECIAL::get (V)  | reader (N) 	++ :: IXML (NM) reader (N)  :: IXML (NM) parser (N) ::IXMLParser_IXMLReader_getReader____
+SPECIAL::set (V)  | builder (N) 	++ :: [ IXML (NM) builder (N) - builder (N) ] :: IXML (NM) parser (N) ::IXMLParser_void_setBuilder__IXMLBuilder__
+SPECIAL::get (V)  | builder (N) 	++ :: IXML (NM) builder (N)  :: IXML (NM) parser (N) ::IXMLParser_IXMLBuilder_getBuilder____
+SPECIAL::set (V)  | validator (N) 	++ :: [ IXML (NM) validator (N) - validator (N) ] :: IXML (NM) parser (N) ::IXMLParser_void_setValidator__IXMLValidator__
+SPECIAL::get (V)  | validator (N) 	++ :: IXML (NM) validator (N)  :: IXML (NM) parser (N) ::IXMLParser_IXMLValidator_getValidator____
+SPECIAL::set (V)  | resolver (N) 	++ :: [ IXML (NM) entity (NM) resolver (N) - resolver (N) ] :: IXML (NM) parser (N) ::IXMLParser_void_setResolver__IXMLEntityResolver__
+SPECIAL::get (V)  | resolver (N) 	++ :: IXML (NM) entity (NM) resolver (N)  :: IXML (NM) parser (N) ::IXMLParser_IXMLEntityResolver_getResolver____
+BASE_VERB::parse (V)  | IXML (NM) parser (N) 	++ :: object (NI) ::IXMLParser_Object_parse____
+CONSTRUCTOR:: | XML (NM) entity (NM) resolver (N) 	++::XMLEntityResolver_XMLEntityResolver_XMLEntityResolver____
+BASE_VERB::finalize (VI)  | XML (NM) entity (NM) resolver (N) 	++::XMLEntityResolver_void_finalize____
+SPECIAL::add (V)  | internal (NM) entity (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - value (NI) ] :: XML (NM) entity (NM) resolver (N) ::XMLEntityResolver_void_addInternalEntity__String-String__
+SPECIAL::add (V)  | external (NM) entity (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - public (NM) ID (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: XML (NM) entity (NM) resolver (N) ::XMLEntityResolver_void_addExternalEntity__String-String-String__
+SPECIAL::get (V)  | entity (N) 	++ :: [ IXML (NM) reader (N) - xml (NM) reader (N) ] :: [ string (NI) - name (NI) ] :: reader (N)  :: XML (NM) entity (NM) resolver (N) ::XMLEntityResolver_Reader_getEntity__IXMLReader-String__
+V_3P_IRR::is (V)  | external (NM) entity (N) 	++ :: [ string (NI) - name (NI) ] :: boolean (N)  :: XML (NM) entity (NM) resolver (N) ::XMLEntityResolver_boolean_isExternalEntity__String__
+BASE_VERB::open (V)  | external (NM) entity (N) 	++ :: [ IXML (NM) reader (N) - xml (NM) reader (N) ] :: [ string (NI) - public (NM) ID (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: reader (N)  :: XML (NM) entity (NM) resolver (N) ::XMLEntityResolver_Reader_openExternalEntity__IXMLReader-String-String__
+FIELD::[ hashtable (N) - entities (N) ]::XMLEntityResolver_Hashtable_entities
+SPECIAL::add (V)  | internal (NM) entity (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - value (NI) ] :: IXML (NM) entity (NM) resolver (N) ::IXMLEntityResolver_void_addInternalEntity__String-String__
+SPECIAL::add (V)  | external (NM) entity (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - public (NM) ID (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: IXML (NM) entity (NM) resolver (N) ::IXMLEntityResolver_void_addExternalEntity__String-String-String__
+SPECIAL::get (V)  | entity (N) 	++ :: [ IXML (NM) reader (N) - xml (NM) reader (N) ] :: [ string (NI) - name (NI) ] :: reader (N)  :: IXML (NM) entity (NM) resolver (N) ::IXMLEntityResolver_Reader_getEntity__IXMLReader-String__
+V_3P_IRR::is (V)  | external (NM) entity (N) 	++ :: [ string (NI) - name (NI) ] :: boolean (N)  :: IXML (NM) entity (NM) resolver (N) ::IXMLEntityResolver_boolean_isExternalEntity__String__
+CONSTRUCTOR:: | XML (NM) attribute (N) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - type (N) ]::XMLAttribute_XMLAttribute_XMLAttribute__String-String-String-String-String__
+SPECIAL::get (V)  | full (NM) name (NI) 	++ :: string (NI)  :: XML (NM) attribute (N) ::XMLAttribute_String_getFullName____
+SPECIAL::get (V)  | name (NI) 	++ :: string (NI)  :: XML (NM) attribute (N) ::XMLAttribute_String_getName____
+SPECIAL::get (V)  | namespace (N) 	++ :: string (NI)  :: XML (NM) attribute (N) ::XMLAttribute_String_getNamespace____
+SPECIAL::get (V)  | value (NI) 	++ :: string (NI)  :: XML (NM) attribute (N) ::XMLAttribute_String_getValue____
+SPECIAL::set (V)  | value (NI) 	++ :: [ string (NI) - value (NI) ] :: XML (NM) attribute (N) ::XMLAttribute_void_setValue__String__
+SPECIAL::get (V)  | type (N) 	++ :: string (NI)  :: XML (NM) attribute (N) ::XMLAttribute_String_getType____
+FIELD::[ string (NI) - full (NM) name (NI) ]::XMLAttribute_String_fullName
+FIELD::[ string (NI) - name (NI) ]::XMLAttribute_String_name
+FIELD::[ string (NI) - namespace (N) ]::XMLAttribute_String_namespace
+FIELD::[ string (NI) - value (NI) ]::XMLAttribute_String_value
+FIELD::[ string (NI) - type (N) ]::XMLAttribute_String_type
+SPECIAL::set (V)  | parameter (NM) entity (NM) resolver (N) 	++ :: [ IXML (NM) entity (NM) resolver (N) - resolver (N) ] :: IXML (NM) validator (N) ::IXMLValidator_void_setParameterEntityResolver__IXMLEntityResolver__
+SPECIAL::get (V)  | parameter (NM) entity (NM) resolver (N) 	++ :: IXML (NM) entity (NM) resolver (N)  :: IXML (NM) validator (N) ::IXMLValidator_IXMLEntityResolver_getParameterEntityResolver____
+BASE_VERB::parse (V)  | DTD (N) 	++ :: [ string (NI) - public (NM) ID (NI) ] :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: [ boolean (N) - external (N) ] :: IXML (NM) validator (N) ::IXMLValidator_void_parseDTD__String-IXMLReader-IXMLEntityResolver-boolean__
+ENDS_WITH_ED::handle (V) | element (NM) started (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) validator (N)  :: void (N) ::IXMLValidator_void_elementStarted__String-String-int__
+ENDS_WITH_ED::handle (V) | element (NM) ended (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) validator (N)  :: void (N) ::IXMLValidator_void_elementEnded__String-String-int__
+ENDS_WITH_ED::handle (V) | attribute (NM) added (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) validator (N)  :: void (N) ::IXMLValidator_void_attributeAdded__String-String-String-int__
+ENDS_WITH_ED::handle (V) | element (NM) attributes (NM) processed (N) 	++ :: [ string (NI) - name (NI) ] :: [ properties (N) - extra (NM) attributes (N) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) validator (N)  :: void (N) ::IXMLValidator_void_elementAttributesProcessed__String-Properties-String-int__
+ENDS_WITH_ED::handle (V) | PC (PRE) data (NM) added (N) 	++ :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) validator (N)  :: void (N) ::IXMLValidator_void_PCDataAdded__String-int__
+CONSTRUCTOR:: | XML (NM) element (NI) 	++::XMLElement_XMLElement_XMLElement____
+CONSTRUCTOR:: | XML (NM) element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ]::XMLElement_XMLElement_XMLElement__String__
+CONSTRUCTOR:: | XML (NM) element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ]::XMLElement_XMLElement_XMLElement__String-String-int__
+CONSTRUCTOR:: | XML (NM) element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ]::XMLElement_XMLElement_XMLElement__String-String__
+CONSTRUCTOR:: | XML (NM) element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ]::XMLElement_XMLElement_XMLElement__String-String-String-int__
+SPECIAL::create (V)  | PC (NM) data (NM) element (NI) 	++ :: IXML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_IXMLElement_createPCDataElement____
+SPECIAL::create (V)  | element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: IXML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_IXMLElement_createElement__String__
+SPECIAL::create (V)  | element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_IXMLElement_createElement__String-String-int__
+SPECIAL::create (V)  | element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ] :: IXML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_IXMLElement_createElement__String-String__
+SPECIAL::create (V)  | element (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: IXML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_IXMLElement_createElement__String-String-String-int__
+BASE_VERB::finalize (VI)  | XML (NM) element (NI) 	++::XMLElement_void_finalize____
+SPECIAL::get (V)  | parent (N) 	++ :: IXML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_IXMLElement_getParent____
+SPECIAL::get (V)  | full (NM) name (NI) 	++ :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getFullName____
+SPECIAL::get (V)  | name (NI) 	++ :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getName____
+SPECIAL::get (V)  | namespace (N) 	++ :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getNamespace____
+SPECIAL::set (V)  | name (NI) 	++ :: [ string (NI) - name (NI) ] :: XML (NM) element (NI) ::XMLElement_void_setName__String__
+SPECIAL::set (V)  | name (NI) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ] :: XML (NM) element (NI) ::XMLElement_void_setName__String-String__
+SPECIAL::add (V)  | EQUIV[child (N) , [ IXML (NM) element (NI) - child (N) ]]	++ :: XML (NM) element (NI) ::XMLElement_void_addChild__IXMLElement__
+BASE_VERB::insert (V)  | EQUIV[child (N) , [ IXML (NM) element (NI) - child (N) ]]	++ :: [ int (N) - index (NI) ] :: XML (NM) element (NI) ::XMLElement_void_insertChild__IXMLElement-int__
+SPECIAL::remove (V)  | EQUIV[child (N) , [ IXML (NM) element (NI) - child (N) ]]	++ :: XML (NM) element (NI) ::XMLElement_void_removeChild__IXMLElement__
+SPECIAL::remove (V)  | child (N) -- at (P) EQUIV[index (NI) , [ int (N) - index (NI) ]]	++ :: XML (NM) element (NI) ::XMLElement_void_removeChildAtIndex__int__
+BASE_VERB::enumerate (V)  | children (N) 	++ :: enumeration (N)  :: XML (NM) element (NI) ::XMLElement_Enumeration_enumerateChildren____
+V_3P_IRR::is (V)  | leaf (N) 	++ :: boolean (N)  :: XML (NM) element (NI) ::XMLElement_boolean_isLeaf____
+V_3P_IRR::has (V)  | children (N) 	++ :: boolean (N)  :: XML (NM) element (NI) ::XMLElement_boolean_hasChildren____
+SPECIAL::get (V)  | children (NM) count (N) 	++ :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getChildrenCount____
+SPECIAL::get (V)  | children (N) 	++ :: vector (N)  :: XML (NM) element (NI) ::XMLElement_Vector_getChildren____
+SPECIAL::get (V)  | child (N) -- at (P) EQUIV[index (NI) , [ int (N) - index (NI) ]]	++ :: IXML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_IXMLElement_getChildAtIndex__int__
+SPECIAL::get (V)  | first (NM) child (NM) named (N) 	++ :: [ string (NI) - name (NI) ] :: IXML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_IXMLElement_getFirstChildNamed__String__
+SPECIAL::get (V)  | first (NM) child (NM) named (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: IXML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_IXMLElement_getFirstChildNamed__String-String__
+SPECIAL::get (V)  | children (NM) named (N) 	++ :: [ string (NI) - name (NI) ] :: vector (N)  :: XML (NM) element (NI) ::XMLElement_Vector_getChildrenNamed__String__
+SPECIAL::get (V)  | children (NM) named (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: vector (N)  :: XML (NM) element (NI) ::XMLElement_Vector_getChildrenNamed__String-String__
+SPECIAL::find (V)  | attribute (N) 	++ :: [ string (NI) - full (NM) name (NI) ] :: XML (NM) attribute (N)  :: XML (NM) element (NI) ::XMLElement_XMLAttribute_findAttribute__String__
+SPECIAL::find (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: XML (NM) attribute (N)  :: XML (NM) element (NI) ::XMLElement_XMLAttribute_findAttribute__String-String__
+SPECIAL::get (V)  | attribute (NM) count (N) 	++ :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getAttributeCount____
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getAttribute__String__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - default (NM) value (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getAttribute__String-String__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: [ string (NI) - default (NM) value (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getAttribute__String-String-String__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ int (N) - default (NM) value (NI) ] :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getAttribute__String-int__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: [ int (N) - default (NM) value (NI) ] :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getAttribute__String-String-int__
+SPECIAL::get (V)  | attribute (NM) type (N) 	++ :: [ string (NI) - name (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getAttributeType__String__
+SPECIAL::get (V)  | attribute (NM) namespace (N) 	++ :: [ string (NI) - name (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getAttributeNamespace__String__
+SPECIAL::get (V)  | attribute (NM) type (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getAttributeType__String-String__
+SPECIAL::set (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - value (NI) ] :: XML (NM) element (NI) ::XMLElement_void_setAttribute__String-String__
+SPECIAL::set (V)  | attribute (N) 	++ :: [ string (NI) - full (NM) name (NI) ] :: [ string (NI) - namespace (N) ] :: [ string (NI) - value (NI) ] :: XML (NM) element (NI) ::XMLElement_void_setAttribute__String-String-String__
+SPECIAL::remove (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: XML (NM) element (NI) ::XMLElement_void_removeAttribute__String__
+SPECIAL::remove (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: XML (NM) element (NI) ::XMLElement_void_removeAttribute__String-String__
+BASE_VERB::enumerate (V)  | attribute (NM) names (N) 	++ :: enumeration (N)  :: XML (NM) element (NI) ::XMLElement_Enumeration_enumerateAttributeNames____
+V_3P_IRR::has (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: boolean (N)  :: XML (NM) element (NI) ::XMLElement_boolean_hasAttribute__String__
+V_3P_IRR::has (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - namespace (N) ] :: boolean (N)  :: XML (NM) element (NI) ::XMLElement_boolean_hasAttribute__String-String__
+SPECIAL::get (V)  | attributes (N) 	++ :: properties (N)  :: XML (NM) element (NI) ::XMLElement_Properties_getAttributes____
+SPECIAL::get (V)  | attributes (N) -- in (P) EQUIV[namespace (N) , [ string (NI) - namespace (N) ]]	++ :: properties (N)  :: XML (NM) element (NI) ::XMLElement_Properties_getAttributesInNamespace__String__
+SPECIAL::get (V)  | system (NM) ID (NI) 	++ :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getSystemID____
+SPECIAL::get (V)  | line (NM) nr (N) 	++ :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getLineNr____
+SPECIAL::get (V)  | content (N) 	++ :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getContent____
+SPECIAL::set (V)  | content (N) 	++ :: [ string (NI) - content (N) ] :: XML (NM) element (NI) ::XMLElement_void_setContent__String__
+V_3PS::equals (V)  | [ object (NI) - raw (NM) element (NI) ]	++ :: XML (NM) element (NI)  :: boolean (N) ::XMLElement_boolean_equals__Object__
+V_3PS::equals (V)  | EQUIV[XML (NM) element (NI) , [ IXML (NM) element (NI) - elt (NI) ]]	++ :: boolean (N)  :: XML (NM) element (NI) ::XMLElement_boolean_equalsXMLElement__IXMLElement__
+FIELD::[ long (N) - serial (NM) version (NM) UID (N) ]::XMLElement_static_final_long_serialVersionUID
+FIELD::[ int (N) - NO (DT) LINE (N) ]::XMLElement_static_final_int_NO_LINE
+FIELD::[ IXML (NM) element (NI) - parent (N) ]::XMLElement_IXMLElement_parent
+FIELD::[ vector (N) - attributes (N) ]::XMLElement_Vector_attributes
+FIELD::[ vector (N) - children (N) ]::XMLElement_Vector_children
+FIELD::[ string (NI) - name (NI) ]::XMLElement_String_name
+FIELD::[ string (NI) - full (NM) name (NI) ]::XMLElement_String_fullName
+FIELD::[ string (NI) - namespace (N) ]::XMLElement_String_namespace
+FIELD::[ string (NI) - content (N) ]::XMLElement_String_content
+FIELD::[ string (NI) - system (NM) ID (NI) ]::XMLElement_String_systemID
+FIELD::[ int (N) - line (NM) nr (N) ]::XMLElement_int_lineNr
+CONSTRUCTOR:: | non (NM) validator (N) 	++::NonValidator_NonValidator_NonValidator____
+BASE_VERB::finalize (VI)  | non (NM) validator (N) 	++::NonValidator_void_finalize____
+SPECIAL::set (V)  | parameter (NM) entity (NM) resolver (N) 	++ :: [ IXML (NM) entity (NM) resolver (N) - resolver (N) ] :: non (NM) validator (N) ::NonValidator_void_setParameterEntityResolver__IXMLEntityResolver__
+SPECIAL::get (V)  | parameter (NM) entity (NM) resolver (N) 	++ :: IXML (NM) entity (NM) resolver (N)  :: non (NM) validator (N) ::NonValidator_IXMLEntityResolver_getParameterEntityResolver____
+BASE_VERB::parse (V)  | DTD (N) 	++ :: [ string (NI) - public (NM) ID (NI) ] :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: [ boolean (N) - external (N) ] :: non (NM) validator (N) ::NonValidator_void_parseDTD__String-IXMLReader-IXMLEntityResolver-boolean__
+SPECIAL::process (VI)  | element (NI) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: non (NM) validator (N) ::NonValidator_void_processElement__IXMLReader-IXMLEntityResolver__
+SPECIAL::process (VI)  | conditional (NM) section (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: non (NM) validator (N) ::NonValidator_void_processConditionalSection__IXMLReader-IXMLEntityResolver__
+SPECIAL::process (VI)  | ignore (NM) section (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: non (NM) validator (N) ::NonValidator_void_processIgnoreSection__IXMLReader-IXMLEntityResolver__
+SPECIAL::process (VI)  | att (NM) list (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: non (NM) validator (N) ::NonValidator_void_processAttList__IXMLReader-IXMLEntityResolver__
+SPECIAL::process (VI)  | entity (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: non (NM) validator (N) ::NonValidator_void_processEntity__IXMLReader-IXMLEntityResolver__
+ENDS_WITH_ED::handle (V) | element (NM) started (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: non (NM) validator (N)  :: void (N) ::NonValidator_void_elementStarted__String-String-int__
+ENDS_WITH_ED::handle (V) | element (NM) ended (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: non (NM) validator (N)  :: void (N) ::NonValidator_void_elementEnded__String-String-int__
+ENDS_WITH_ED::handle (V) | element (NM) attributes (NM) processed (N) 	++ :: [ string (NI) - name (NI) ] :: [ properties (N) - extra (NM) attributes (N) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: non (NM) validator (N)  :: void (N) ::NonValidator_void_elementAttributesProcessed__String-Properties-String-int__
+ENDS_WITH_ED::handle (V) | attribute (NM) added (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: non (NM) validator (N)  :: void (N) ::NonValidator_void_attributeAdded__String-String-String-int__
+ENDS_WITH_ED::handle (V) | PC (PRE) data (NM) added (N) 	++ :: [ string (NI) - system (NM) id (NI) ] :: [ int (N) - line (NM) nr (N) ] :: non (NM) validator (N)  :: void (N) ::NonValidator_void_PCDataAdded__String-int__
+FIELD::[ IXML (NM) entity (NM) resolver (N) - parameter (NM) entity (NM) resolver (N) ]::NonValidator_IXMLEntityResolver_parameterEntityResolver
+FIELD::[ hashtable (N) - attribute (NM) default (NM) values (N) ]::NonValidator_Hashtable_attributeDefaultValues
+FIELD::[ stack (N) - current (NM) elements (N) ]::NonValidator_Stack_currentElements
+CONSTRUCTOR:: | PI (NM) reader (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ]::PIReader_PIReader_PIReader__IXMLReader__
+BASE_VERB::finalize (VI)  | PI (NM) reader (N) 	++::PIReader_void_finalize____
+SPECIAL::read (V)  | [ char (N) - buffer (NI) ]	++ :: [ int (N) - offset (N) ] :: [ int (N) - size (N) ] :: PI (NM) reader (N)  :: int (N) ::PIReader_int_read__char[]-int-int__
+BASE_VERB::close (V)  | PI (NM) reader (N) 	++::PIReader_void_close____
+FIELD::[ IXML (NM) reader (N) - reader (N) ]::PIReader_IXMLReader_reader
+FIELD::[ boolean (N) - at (NM) end (NM) of (NM) data (NI) ]::PIReader_boolean_atEndOfData
+CONSTRUCTOR:: | XML (NM) writer (N) 	++ :: [ writer (N) - writer (N) ]::XMLWriter_XMLWriter_XMLWriter__Writer__
+CONSTRUCTOR:: | XML (NM) writer (N) 	++ :: [ output (NM) stream (NI) - stream (NI) ]::XMLWriter_XMLWriter_XMLWriter__OutputStream__
+BASE_VERB::finalize (VI)  | XML (NM) writer (N) 	++::XMLWriter_void_finalize____
+SPECIAL::write (V)  | [ IXML (NM) element (NI) - xml (N) ]	++ :: XML (NM) writer (N) ::XMLWriter_void_write__IXMLElement__
+SPECIAL::write (V)  | [ IXML (NM) element (NI) - xml (N) ]	++ :: XML (NM) writer (N)  :: [ boolean (N) - pretty (NM) print (N) ]::XMLWriter_void_write__IXMLElement-boolean__
+SPECIAL::write (V)  | [ IXML (NM) element (NI) - xml (N) ]	++ :: [ int (N) - indent (N) ] :: XML (NM) writer (N)  :: [ boolean (N) - pretty (NM) print (N) ]::XMLWriter_void_write__IXMLElement-boolean-int__
+SPECIAL::write (V)  | [ IXML (NM) element (NI) - xml (N) ]	++ :: [ int (N) - indent (N) ] :: XML (NM) writer (N)  :: [ boolean (N) - pretty (NM) print (N) ] :: [ boolean (N) - collapse (NM) empty (NM) elements (N) ]::XMLWriter_void_write__IXMLElement-boolean-int-boolean__
+SPECIAL::write (V)  | encoded (N) 	++ :: [ string (NI) - str (NI) ] :: XML (NM) writer (N) ::XMLWriter_void_writeEncoded__String__
+FIELD::[ print (NM) writer (N) - writer (N) ]::XMLWriter_PrintWriter_writer
+BASE_VERB::skip (V)  | comment (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: XML (NM) util (N) ::XMLUtil_static_void_skipComment__IXMLReader__
+BASE_VERB::skip (V)  | tag (NI) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: XML (NM) util (N) ::XMLUtil_static_void_skipTag__IXMLReader__
+BASE_VERB::scan (V)  | EQUIV[public (NM) ID (NI) , [ string (NM) buffer (NI) - public (NM) ID (NI) ]]	++ :: [ IXML (NM) reader (N) - reader (N) ] :: string (NI)  :: XML (NM) util (N) ::XMLUtil_static_String_scanPublicID__StringBuffer-IXMLReader__
+BASE_VERB::scan (V)  | system (NM) ID (NI) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: string (NI)  :: XML (NM) util (N) ::XMLUtil_static_String_scanSystemID__IXMLReader__
+BASE_VERB::scan (V)  | identifier (NI) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: string (NI)  :: XML (NM) util (N) ::XMLUtil_static_String_scanIdentifier__IXMLReader__
+BASE_VERB::scan (V)  | string (NI) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ char (N) - entity (NM) char (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: string (NI)  :: XML (NM) util (N) ::XMLUtil_static_String_scanString__IXMLReader-char-IXMLEntityResolver__
+SPECIAL::process (VI)  | EQUIV[entity (N) , [ string (NI) - entity (N) ]]	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ] :: XML (NM) util (N) ::XMLUtil_static_void_processEntity__String-IXMLReader-IXMLEntityResolver__
+SPECIAL::process (VI)  | char (NM) literal (N) 	++ :: [ string (NI) - entity (N) ] :: char (N)  :: XML (NM) util (N) ::XMLUtil_static_char_processCharLiteral__String__
+BASE_VERB::skip (V)  | whitespace (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ string (NM) buffer (NI) - buffer (NI) ] :: XML (NM) util (N) ::XMLUtil_static_void_skipWhitespace__IXMLReader-StringBuffer__
+SPECIAL::read (V)  | [ IXML (NM) reader (N) - reader (N) ]	++ :: [ char (N) - entity (NM) char (N) ] :: XML (NM) util (N)  :: string (NI) ::XMLUtil_static_String_read__IXMLReader-char__
+SPECIAL::read (V)  | EQUIV[char (N) , [ char (N) - entity (NM) char (N) ]]	++ :: [ IXML (NM) reader (N) - reader (N) ] :: char (N)  :: XML (NM) util (N) ::XMLUtil_static_char_readChar__IXMLReader-char__
+SPECIAL::check (VI)  | EQUIV[literal (N) , [ string (NI) - literal (N) ]]	++ :: [ IXML (NM) reader (N) - reader (N) ] :: boolean (N)  :: XML (NM) util (N) ::XMLUtil_static_boolean_checkLiteral__IXMLReader-String__
+VOID_NP::handle (V) | error (NM) expected (NM) input (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - expected (NM) string (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorExpectedInput__String-int-String__
+VOID_NP::handle (V) | error (NM) invalid (NM) entity (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - entity (N) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorInvalidEntity__String-int-String__
+VOID_NP::handle (V) | error (NM) unexpected (NM) entity (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - entity (N) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorUnexpectedEntity__String-int-String__
+VOID_NP::handle (V) | error (NM) unexpected (NM) CDATA (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorUnexpectedCDATA__String-int__
+VOID_NP::handle (V) | error (NM) invalid (NM) input (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - unexpected (NM) string (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorInvalidInput__String-int-String__
+VOID_NP::handle (V) | error (NM) wrong (NM) closing (NM) tag (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - expected (NM) name (NI) ] :: [ string (NI) - wrong (NM) name (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorWrongClosingTag__String-int-String-String__
+VOID_NP::handle (V) | error (NM) closing (NM) tag (NM) not (DT) empty (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorClosingTagNotEmpty__String-int__
+VOID_NP::handle (V) | error (NM) missing (NM) element (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - parent (NM) element (NM) name (NI) ] :: [ string (NI) - missing (NM) element (NM) name (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorMissingElement__String-int-String-String__
+VOID_NP::handle (V) | error (NM) unexpected (NM) element (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - parent (NM) element (NM) name (NI) ] :: [ string (NI) - unexpected (NM) element (NM) name (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorUnexpectedElement__String-int-String-String__
+VOID_NP::handle (V) | error (NM) missing (NM) attribute (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - element (NM) name (NI) ] :: [ string (NI) - attribute (NM) name (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorMissingAttribute__String-int-String-String__
+VOID_NP::handle (V) | error (NM) unexpected (NM) attribute (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - element (NM) name (NI) ] :: [ string (NI) - attribute (NM) name (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorUnexpectedAttribute__String-int-String-String__
+VOID_NP::handle (V) | error (NM) invalid (NM) attribute (NM) value (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - element (NM) name (NI) ] :: [ string (NI) - attribute (NM) name (NI) ] :: [ string (NI) - attribute (NM) value (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorInvalidAttributeValue__String-int-String-String-String__
+VOID_NP::handle (V) | error (NM) missing (NM) PC (NM) data (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - parent (NM) element (NM) name (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorMissingPCData__String-int-String__
+VOID_NP::handle (V) | error (NM) unexpected (NM) PC (NM) data (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - parent (NM) element (NM) name (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_errorUnexpectedPCData__String-int-String__
+VOID_NP::handle (V) | validation (NM) error (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - message (NI) ] :: [ string (NI) - element (NM) name (NI) ] :: [ string (NI) - attribute (NM) name (NI) ] :: [ string (NI) - attribute (NM) value (NI) ] :: XML (NM) util (N)  :: void (N) ::XMLUtil_static_void_validationError__String-int-String-String-String-String__
+CONSTRUCTOR:: | content (NM) reader (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: [ IXML (NM) entity (NM) resolver (N) - resolver (N) ] :: [ string (NI) - buffer (NI) ]::ContentReader_ContentReader_ContentReader__IXMLReader-IXMLEntityResolver-String__
+BASE_VERB::finalize (VI)  | content (NM) reader (N) 	++::ContentReader_void_finalize____
+SPECIAL::read (V)  | [ char (N) - output (NM) buffer (NI) ]	++ :: [ int (N) - offset (N) ] :: [ int (N) - size (N) ] :: content (NM) reader (N)  :: int (N) ::ContentReader_int_read__char[]-int-int__
+BASE_VERB::close (V)  | content (NM) reader (N) 	++::ContentReader_void_close____
+FIELD::[ IXML (NM) reader (N) - reader (N) ]::ContentReader_IXMLReader_reader
+FIELD::[ string (NI) - buffer (NI) ]::ContentReader_String_buffer
+FIELD::[ int (N) - buffer (NM) index (NI) ]::ContentReader_int_bufferIndex
+FIELD::[ IXML (NM) entity (NM) resolver (N) - resolver (N) ]::ContentReader_IXMLEntityResolver_resolver
+CONSTRUCTOR:: | std (NM) XML (NM) parser (N) 	++::StdXMLParser_StdXMLParser_StdXMLParser____
+BASE_VERB::finalize (VI)  | std (NM) XML (NM) parser (N) 	++::StdXMLParser_void_finalize____
+SPECIAL::set (V)  | builder (N) 	++ :: [ IXML (NM) builder (N) - builder (N) ] :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_setBuilder__IXMLBuilder__
+SPECIAL::get (V)  | builder (N) 	++ :: IXML (NM) builder (N)  :: std (NM) XML (NM) parser (N) ::StdXMLParser_IXMLBuilder_getBuilder____
+SPECIAL::set (V)  | validator (N) 	++ :: [ IXML (NM) validator (N) - validator (N) ] :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_setValidator__IXMLValidator__
+SPECIAL::get (V)  | validator (N) 	++ :: IXML (NM) validator (N)  :: std (NM) XML (NM) parser (N) ::StdXMLParser_IXMLValidator_getValidator____
+SPECIAL::set (V)  | resolver (N) 	++ :: [ IXML (NM) entity (NM) resolver (N) - resolver (N) ] :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_setResolver__IXMLEntityResolver__
+SPECIAL::get (V)  | resolver (N) 	++ :: IXML (NM) entity (NM) resolver (N)  :: std (NM) XML (NM) parser (N) ::StdXMLParser_IXMLEntityResolver_getResolver____
+SPECIAL::set (V)  | reader (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_setReader__IXMLReader__
+SPECIAL::get (V)  | reader (N) 	++ :: IXML (NM) reader (N)  :: std (NM) XML (NM) parser (N) ::StdXMLParser_IXMLReader_getReader____
+BASE_VERB::parse (V)  | std (NM) XML (NM) parser (N) 	++ :: object (NI) ::StdXMLParser_Object_parse____
+BASE_VERB::scan (V)  | data (NI) 	++ :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_scanData____
+BASE_VERB::scan (V)  | some (DT) tag (NI) 	++ :: [ string (NI) - default (NM) namespace (N) ] :: [ properties (N) - namespaces (N) ] :: [ boolean (N) - allow (NM) CDATA (N) ] :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_scanSomeTag__boolean-String-Properties__
+SPECIAL::process (VI)  | PI (N) 	++ :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_processPI____
+SPECIAL::process (VI)  | special (NM) tag (NI) 	++ :: [ boolean (N) - allow (NM) CDATA (N) ] :: [ boolean (N) - allow (NM) CDATA (N) ] :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_processSpecialTag__boolean__
+SPECIAL::process (VI)  | CDATA (N) 	++ :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_processCDATA____
+SPECIAL::process (VI)  | doc (NM) type (N) 	++ :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_processDocType____
+SPECIAL::process (VI)  | element (NI) 	++ :: [ string (NI) - default (NM) namespace (N) ] :: [ properties (N) - namespaces (N) ] :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_processElement__String-Properties__
+SPECIAL::process (VI)  | attribute (N) 	++ :: [ vector (N) - attr (NM) names (N) ] :: [ vector (N) - attr (NM) values (N) ] :: [ vector (N) - attr (NM) types (N) ] :: std (NM) XML (NM) parser (N) ::StdXMLParser_void_processAttribute__Vector-Vector-Vector__
+FIELD::[ IXML (NM) builder (N) - builder (N) ]::StdXMLParser_IXMLBuilder_builder
+FIELD::[ IXML (NM) reader (N) - reader (N) ]::StdXMLParser_IXMLReader_reader
+FIELD::[ IXML (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ]::StdXMLParser_IXMLEntityResolver_entityResolver
+FIELD::[ IXML (NM) validator (N) - validator (N) ]::StdXMLParser_IXMLValidator_validator
+SPECIAL::create (V)  | default (NM) XML (NM) parser (N) 	++ :: IXML (NM) parser (N)  :: XML (NM) parser (NM) factory (N) ::XMLParserFactory_static_IXMLParser_createDefaultXMLParser____
+SPECIAL::create (V)  | default (NM) XML (NM) parser (N) 	++ :: [ IXML (NM) builder (N) - builder (N) ] :: IXML (NM) parser (N)  :: XML (NM) parser (NM) factory (N) ::XMLParserFactory_static_IXMLParser_createDefaultXMLParser__IXMLBuilder__
+SPECIAL::create (V)  | XML (NM) parser (N) 	++ :: [ string (NI) - class (NM) name (NI) ] :: [ IXML (NM) builder (N) - builder (N) ] :: IXML (NM) parser (N)  :: XML (NM) parser (NM) factory (N) ::XMLParserFactory_static_IXMLParser_createXMLParser__String-IXMLBuilder__
+FIELD::[ string (NI) - DEFAULT (NM) CLASS (NI) ]::XMLParserFactory_static_final_String_DEFAULT_CLASS
+FIELD::[ string (NI) - CLASS (NM) KEY (NI) ]::XMLParserFactory_static_final_String_CLASS_KEY
+CONSTRUCTOR:: | XML (NM) exception (N) 	++ :: [ string (NI) - msg (NI) ]::XMLException_XMLException_XMLException__String__
+CONSTRUCTOR:: | XML (NM) exception (N) 	++ :: [ exception (N) - e (N) ]::XMLException_XMLException_XMLException__Exception__
+CONSTRUCTOR:: | XML (NM) exception (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ exception (N) - e (N) ]::XMLException_XMLException_XMLException__String-int-Exception__
+CONSTRUCTOR:: | XML (NM) exception (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - msg (NI) ]::XMLException_XMLException_XMLException__String-int-String__
+CONSTRUCTOR:: | XML (NM) exception (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ exception (N) - e (N) ] :: [ string (NI) - msg (NI) ] :: [ boolean (N) - report (NM) params (N) ]::XMLException_XMLException_XMLException__String-int-Exception-String-boolean__
+BASE_VERB::build (V)  | message (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ exception (N) - e (N) ] :: [ string (NI) - msg (NI) ] :: [ boolean (N) - report (NM) params (N) ] :: string (NI)  :: XML (NM) exception (N) ::XMLException_static_String_buildMessage__String-int-Exception-String-boolean__
+BASE_VERB::finalize (VI)  | XML (NM) exception (N) 	++::XMLException_void_finalize____
+SPECIAL::get (V)  | system (NM) ID (NI) 	++ :: string (NI)  :: XML (NM) exception (N) ::XMLException_String_getSystemID____
+SPECIAL::get (V)  | line (NM) nr (N) 	++ :: int (N)  :: XML (NM) exception (N) ::XMLException_int_getLineNr____
+SPECIAL::get (V)  | exception (N) 	++ :: exception (N)  :: XML (NM) exception (N) ::XMLException_Exception_getException____
+SPECIAL::print (V)  | stack (NM) trace (N) 	++ :: [ print (NM) writer (N) - writer (N) ] :: XML (NM) exception (N) ::XMLException_void_printStackTrace__PrintWriter__
+SPECIAL::print (V)  | stack (NM) trace (N) 	++ :: [ print (NM) stream (NI) - stream (NI) ] :: XML (NM) exception (N) ::XMLException_void_printStackTrace__PrintStream__
+SPECIAL::print (V)  | stack (NM) trace (N) 	++ :: XML (NM) exception (N) ::XMLException_void_printStackTrace____
+PREP::convert (V) | to (P) string (NI) 	++ :: XML (NM) exception (N)  :: string (NI) ::XMLException_String_toString____
+FIELD::[ string (NI) - msg (NI) ]::XMLException_String_msg
+FIELD::[ string (NI) - system (NM) ID (NI) ]::XMLException_String_systemID
+FIELD::[ int (N) - line (NM) nr (N) ]::XMLException_int_lineNr
+FIELD::[ exception (N) - encapsulated (NM) exception (N) ]::XMLException_Exception_encapsulatedException
+SPECIAL::read (V)  | IXML (NM) reader (N) 	++ :: char (N) ::IXMLReader_char_read____
+PREP:: | at (P) EOF (NM) of (NM) current (NM) stream (NI) 	++ :: IXML (NM) reader (N)  :: boolean (N) ::IXMLReader_boolean_atEOFOfCurrentStream____
+PREP:: | at (P) EOF (N) 	++ :: IXML (NM) reader (N)  :: boolean (N) ::IXMLReader_boolean_atEOF____
+VOID_NP::handle (V) | unread (N) 	++ :: [ char (N) - ch (N) ] :: IXML (NM) reader (N)  :: void (N) ::IXMLReader_void_unread__char__
+SPECIAL::get (V)  | line (NM) nr (N) 	++ :: int (N)  :: IXML (NM) reader (N) ::IXMLReader_int_getLineNr____
+BASE_VERB::open (V)  | stream (NI) 	++ :: [ string (NI) - public (NM) ID (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: reader (N)  :: IXML (NM) reader (N) ::IXMLReader_Reader_openStream__String-String__
+SPECIAL::start (V)  | new (NM) stream (NI) 	++ :: [ reader (N) - reader (N) ] :: IXML (NM) reader (N) ::IXMLReader_void_startNewStream__Reader__
+SPECIAL::start (V)  | new (NM) stream (NI) 	++ :: [ reader (N) - reader (N) ] :: [ boolean (N) - is (NM) internal (NM) entity (N) ] :: IXML (NM) reader (N) ::IXMLReader_void_startNewStream__Reader-boolean__
+SPECIAL::get (V)  | stream (NM) level (N) 	++ :: int (N)  :: IXML (NM) reader (N) ::IXMLReader_int_getStreamLevel____
+SPECIAL::set (V)  | system (NM) ID (NI) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: IXML (NM) reader (N) ::IXMLReader_void_setSystemID__String__
+SPECIAL::set (V)  | public (NM) ID (NI) 	++ :: [ string (NI) - public (NM) ID (NI) ] :: IXML (NM) reader (N) ::IXMLReader_void_setPublicID__String__
+SPECIAL::get (V)  | system (NM) ID (NI) 	++ :: string (NI)  :: IXML (NM) reader (N) ::IXMLReader_String_getSystemID____
+SPECIAL::get (V)  | public (NM) ID (NI) 	++ :: string (NI)  :: IXML (NM) reader (N) ::IXMLReader_String_getPublicID____
+CONSTRUCTOR:: | XML (NM) element (NI) 	++::XMLElement_XMLElement_XMLElement____
+CONSTRUCTOR:: | XML (NM) element (NI) 	++ :: [ hashtable (N) - entities (N) ]::XMLElement_XMLElement_XMLElement__Hashtable__
+CONSTRUCTOR:: | XML (NM) element (NI) 	++ :: [ boolean (N) - skip (NM) leading (NM) whitespace (N) ]::XMLElement_XMLElement_XMLElement__boolean__
+CONSTRUCTOR:: | XML (NM) element (NI) 	++ :: [ hashtable (N) - entities (N) ] :: [ boolean (N) - skip (NM) leading (NM) whitespace (N) ]::XMLElement_XMLElement_XMLElement__Hashtable-boolean__
+CONSTRUCTOR:: | XML (NM) element (NI) 	++ :: [ hashtable (N) - entities (N) ] :: [ boolean (N) - skip (NM) leading (NM) whitespace (N) ] :: [ boolean (N) - ignore (NM) case (N) ]::XMLElement_XMLElement_XMLElement__Hashtable-boolean-boolean__
+CONSTRUCTOR:: | XML (NM) element (NI) 	++ :: [ hashtable (N) - entities (N) ] :: [ boolean (N) - skip (NM) leading (NM) whitespace (N) ] :: [ boolean (N) - fill (NM) basic (NM) conversion (NM) table (N) ] :: [ boolean (N) - ignore (NM) case (N) ]::XMLElement_XMLElement_XMLElement__Hashtable-boolean-boolean-boolean__
+SPECIAL::add (V)  | EQUIV[child (N) , [ XML (NM) element (NI) - child (N) ]]	++ :: XML (NM) element (NI) ::XMLElement_void_addChild__XMLElement__
+SPECIAL::set (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ object (NI) - value (NI) ] :: XML (NM) element (NI) ::XMLElement_void_setAttribute__String-Object__
+SPECIAL::add (V)  | property (N) 	++ :: [ string (NI) - name (NI) ] :: [ object (NI) - value (NI) ] :: XML (NM) element (NI) ::XMLElement_void_addProperty__String-Object__
+SPECIAL::set (V)  | int (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ int (N) - value (NI) ] :: XML (NM) element (NI) ::XMLElement_void_setIntAttribute__String-int__
+SPECIAL::add (V)  | property (N) 	++ :: [ string (NI) - key (NI) ] :: [ int (N) - value (NI) ] :: XML (NM) element (NI) ::XMLElement_void_addProperty__String-int__
+SPECIAL::set (V)  | double (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ double (N) - value (NI) ] :: XML (NM) element (NI) ::XMLElement_void_setDoubleAttribute__String-double__
+SPECIAL::add (V)  | property (N) 	++ :: [ string (NI) - name (NI) ] :: [ double (N) - value (NI) ] :: XML (NM) element (NI) ::XMLElement_void_addProperty__String-double__
+BASE_VERB::count (V)  | children (N) 	++ :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_countChildren____
+BASE_VERB::enumerate (V)  | attribute (NM) names (N) 	++ :: enumeration (N)  :: XML (NM) element (NI) ::XMLElement_Enumeration_enumerateAttributeNames____
+BASE_VERB::enumerate (V)  | property (NM) names (N) 	++ :: enumeration (N)  :: XML (NM) element (NI) ::XMLElement_Enumeration_enumeratePropertyNames____
+BASE_VERB::enumerate (V)  | children (N) 	++ :: enumeration (N)  :: XML (NM) element (NI) ::XMLElement_Enumeration_enumerateChildren____
+SPECIAL::get (V)  | children (N) 	++ :: vector (N)  :: XML (NM) element (NI) ::XMLElement_Vector_getChildren____
+SPECIAL::get (V)  | contents (N) 	++ :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getContents____
+SPECIAL::get (V)  | content (N) 	++ :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getContent____
+SPECIAL::get (V)  | line (NM) nr (N) 	++ :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getLineNr____
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: object (NI)  :: XML (NM) element (NI) ::XMLElement_Object_getAttribute__String__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ object (NI) - default (NM) value (NI) ] :: object (NI)  :: XML (NM) element (NI) ::XMLElement_Object_getAttribute__String-Object__
+SPECIAL::get (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ hashtable (N) - value (NM) set (N) ] :: [ string (NI) - default (NM) key (NI) ] :: [ boolean (N) - allow (NM) literals (N) ] :: object (NI)  :: XML (NM) element (NI) ::XMLElement_Object_getAttribute__String-Hashtable-String-boolean__
+SPECIAL::get (V)  | string (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getStringAttribute__String__
+SPECIAL::get (V)  | string (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - default (NM) value (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getStringAttribute__String-String__
+SPECIAL::get (V)  | string (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ hashtable (N) - value (NM) set (N) ] :: [ string (NI) - default (NM) key (NI) ] :: [ boolean (N) - allow (NM) literals (N) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getStringAttribute__String-Hashtable-String-boolean__
+SPECIAL::get (V)  | int (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getIntAttribute__String__
+SPECIAL::get (V)  | int (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ int (N) - default (NM) value (NI) ] :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getIntAttribute__String-int__
+SPECIAL::get (V)  | int (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ hashtable (N) - value (NM) set (N) ] :: [ string (NI) - default (NM) key (NI) ] :: [ boolean (N) - allow (NM) literal (NM) numbers (N) ] :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getIntAttribute__String-Hashtable-String-boolean__
+SPECIAL::get (V)  | double (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: double (N)  :: XML (NM) element (NI) ::XMLElement_double_getDoubleAttribute__String__
+SPECIAL::get (V)  | double (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ double (N) - default (NM) value (NI) ] :: double (N)  :: XML (NM) element (NI) ::XMLElement_double_getDoubleAttribute__String-double__
+SPECIAL::get (V)  | double (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ hashtable (N) - value (NM) set (N) ] :: [ string (NI) - default (NM) key (NI) ] :: [ boolean (N) - allow (NM) literal (NM) numbers (N) ] :: double (N)  :: XML (NM) element (NI) ::XMLElement_double_getDoubleAttribute__String-Hashtable-String-boolean__
+SPECIAL::get (V)  | boolean (NM) attribute (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - true (NM) value (NI) ] :: [ string (NI) - false (NM) value (NI) ] :: [ boolean (N) - default (NM) value (NI) ] :: boolean (N)  :: XML (NM) element (NI) ::XMLElement_boolean_getBooleanAttribute__String-String-String-boolean__
+SPECIAL::get (V)  | int (NM) property (N) 	++ :: [ string (NI) - name (NI) ] :: [ hashtable (N) - value (NM) set (N) ] :: [ string (NI) - default (NM) key (NI) ] :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getIntProperty__String-Hashtable-String__
+SPECIAL::get (V)  | property (N) 	++ :: [ string (NI) - name (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getProperty__String__
+SPECIAL::get (V)  | property (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - default (NM) value (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getProperty__String-String__
+SPECIAL::get (V)  | property (N) 	++ :: [ string (NI) - name (NI) ] :: [ int (N) - default (NM) value (NI) ] :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getProperty__String-int__
+SPECIAL::get (V)  | property (N) 	++ :: [ string (NI) - name (NI) ] :: [ double (N) - default (NM) value (NI) ] :: double (N)  :: XML (NM) element (NI) ::XMLElement_double_getProperty__String-double__
+SPECIAL::get (V)  | property (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - true (NM) value (NI) ] :: [ string (NI) - false (NM) value (NI) ] :: [ boolean (N) - default (NM) value (NI) ] :: boolean (N)  :: XML (NM) element (NI) ::XMLElement_boolean_getProperty__String-String-String-boolean__
+SPECIAL::get (V)  | property (N) 	++ :: [ string (NI) - name (NI) ] :: [ hashtable (N) - value (NM) set (N) ] :: [ string (NI) - default (NM) key (NI) ] :: object (NI)  :: XML (NM) element (NI) ::XMLElement_Object_getProperty__String-Hashtable-String__
+SPECIAL::get (V)  | string (NM) property (N) 	++ :: [ string (NI) - name (NI) ] :: [ hashtable (N) - value (NM) set (N) ] :: [ string (NI) - default (NM) key (NI) ] :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getStringProperty__String-Hashtable-String__
+SPECIAL::get (V)  | special (NM) int (NM) property (N) 	++ :: [ string (NI) - name (NI) ] :: [ hashtable (N) - value (NM) set (N) ] :: [ string (NI) - default (NM) key (NI) ] :: int (N)  :: XML (NM) element (NI) ::XMLElement_int_getSpecialIntProperty__String-Hashtable-String__
+SPECIAL::get (V)  | special (NM) double (NM) property (N) 	++ :: [ string (NI) - name (NI) ] :: [ hashtable (N) - value (NM) set (N) ] :: [ string (NI) - default (NM) key (NI) ] :: double (N)  :: XML (NM) element (NI) ::XMLElement_double_getSpecialDoubleProperty__String-Hashtable-String__
+SPECIAL::get (V)  | name (NI) 	++ :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getName____
+SPECIAL::get (V)  | tag (NM) name (NI) 	++ :: string (NI)  :: XML (NM) element (NI) ::XMLElement_String_getTagName____
+BASE_VERB::parse (V)  | XML (NM) element (NI) -- from (P) EQUIV[reader (N) , [ reader (N) - reader (N) ]]	++::XMLElement_void_parseFromReader__Reader__
+BASE_VERB::parse (V)  | XML (NM) element (NI) -- from (P) EQUIV[reader (N) , [ reader (N) - reader (N) ]]	++ :: [ int (N) - starting (NM) line (NM) nr (N) ]::XMLElement_void_parseFromReader__Reader-int__
+BASE_VERB::parse (V)  | EQUIV[string (NI) , [ string (NI) - string (NI) ]]	++ :: XML (NM) element (NI) ::XMLElement_void_parseString__String__
+BASE_VERB::parse (V)  | EQUIV[string (NI) , [ string (NI) - string (NI) ]]	++ :: [ int (N) - offset (N) ] :: XML (NM) element (NI) ::XMLElement_void_parseString__String-int__
+BASE_VERB::parse (V)  | EQUIV[string (NI) , [ string (NI) - string (NI) ]]	++ :: [ int (N) - offset (N) ] :: [ int (N) - end (N) ] :: XML (NM) element (NI) ::XMLElement_void_parseString__String-int-int__
+BASE_VERB::parse (V)  | EQUIV[string (NI) , [ string (NI) - string (NI) ]]	++ :: [ int (N) - offset (N) ] :: [ int (N) - end (N) ] :: [ int (N) - starting (NM) line (NM) nr (N) ] :: XML (NM) element (NI) ::XMLElement_void_parseString__String-int-int-int__
+BASE_VERB::parse (V)  | char (NM) array (N) 	++ :: [ char (N) - input (NI) ] :: [ int (N) - offset (N) ] :: [ int (N) - end (N) ] :: XML (NM) element (NI) ::XMLElement_void_parseCharArray__char[]-int-int__
+BASE_VERB::parse (V)  | char (NM) array (N) 	++ :: [ char (N) - input (NI) ] :: [ int (N) - offset (N) ] :: [ int (N) - end (N) ] :: [ int (N) - starting (NM) line (NM) nr (N) ] :: XML (NM) element (NI) ::XMLElement_void_parseCharArray__char[]-int-int-int__
+SPECIAL::remove (V)  | EQUIV[child (N) , [ XML (NM) element (NI) - child (N) ]]	++ :: XML (NM) element (NI) ::XMLElement_void_removeChild__XMLElement__
+SPECIAL::remove (V)  | attribute (N) 	++ :: [ string (NI) - name (NI) ] :: XML (NM) element (NI) ::XMLElement_void_removeAttribute__String__
+SPECIAL::remove (V)  | property (N) 	++ :: [ string (NI) - name (NI) ] :: XML (NM) element (NI) ::XMLElement_void_removeProperty__String__
+SPECIAL::remove (V)  | child (N) 	++ :: [ string (NI) - name (NI) ] :: XML (NM) element (NI) ::XMLElement_void_removeChild__String__
+SPECIAL::create (V)  | another (DT) element (NI) 	++ :: XML (NM) element (NI)  :: XML (NM) element (NI) ::XMLElement_XMLElement_createAnotherElement____
+SPECIAL::set (V)  | content (N) 	++ :: [ string (NI) - content (N) ] :: XML (NM) element (NI) ::XMLElement_void_setContent__String__
+SPECIAL::set (V)  | tag (NM) name (NI) 	++ :: [ string (NI) - name (NI) ] :: XML (NM) element (NI) ::XMLElement_void_setTagName__String__
+SPECIAL::set (V)  | name (NI) 	++ :: [ string (NI) - name (NI) ] :: XML (NM) element (NI) ::XMLElement_void_setName__String__
+PREP::convert (V) | to (P) string (NI) 	++ :: XML (NM) element (NI)  :: string (NI) ::XMLElement_String_toString____
+SPECIAL::write (V)  | [ writer (N) - writer (N) ]	++ :: XML (NM) element (NI) ::XMLElement_void_write__Writer__
+SPECIAL::write (V)  | encoded (N) 	++ :: [ writer (N) - writer (N) ] :: [ string (NI) - str (NI) ] :: XML (NM) element (NI) ::XMLElement_void_writeEncoded__Writer-String__
+BASE_VERB::scan (V)  | identifier (NI) 	++ :: [ string (NM) buffer (NI) - result (N) ] :: XML (NM) element (NI) ::XMLElement_void_scanIdentifier__StringBuffer__
+BASE_VERB::scan (V)  | whitespace (N) 	++ :: char (N)  :: XML (NM) element (NI) ::XMLElement_char_scanWhitespace____
+BASE_VERB::scan (V)  | whitespace (N) 	++ :: [ string (NM) buffer (NI) - result (N) ] :: char (N)  :: XML (NM) element (NI) ::XMLElement_char_scanWhitespace__StringBuffer__
+BASE_VERB::scan (V)  | EQUIV[string (NI) , [ string (NM) buffer (NI) - string (NI) ]]	++ :: XML (NM) element (NI) ::XMLElement_void_scanString__StringBuffer__
+BASE_VERB::scan (V)  | EQUIV[PC (NM) data (NI) , [ string (NM) buffer (NI) - data (NI) ]]	++ :: XML (NM) element (NI) ::XMLElement_void_scanPCData__StringBuffer__
+SPECIAL::check (VI)  | CDATA (N) 	++ :: [ string (NM) buffer (NI) - buf (N) ] :: boolean (N)  :: XML (NM) element (NI) ::XMLElement_boolean_checkCDATA__StringBuffer__
+BASE_VERB::skip (V)  | comment (N) 	++ :: XML (NM) element (NI) ::XMLElement_void_skipComment____
+BASE_VERB::skip (V)  | special (NM) tag (NI) 	++ :: [ int (N) - bracket (NM) level (N) ] :: XML (NM) element (NI) ::XMLElement_void_skipSpecialTag__int__
+SPECIAL::check (VI)  | EQUIV[literal (N) , [ string (NI) - literal (N) ]]	++ :: boolean (N)  :: XML (NM) element (NI) ::XMLElement_boolean_checkLiteral__String__
+SPECIAL::read (V)  | char (N) 	++ :: char (N)  :: XML (NM) element (NI) ::XMLElement_char_readChar____
+BASE_VERB::scan (V)  | EQUIV[element (NI) , [ XML (NM) element (NI) - elt (NI) ]]	++ :: XML (NM) element (NI) ::XMLElement_void_scanElement__XMLElement__
+BASE_VERB::resolve (V)  | entity (N) 	++ :: [ string (NM) buffer (NI) - buf (N) ] :: XML (NM) element (NI) ::XMLElement_void_resolveEntity__StringBuffer__
+VOID_NP::handle (V) | unread (NM) char (N) 	++ :: [ char (N) - ch (N) ] :: XML (NM) element (NI)  :: void (N) ::XMLElement_void_unreadChar__char__
+NOUN_PHRASE::get (V) | invalid (NM) value (NM) set (N) 	++ :: [ string (NI) - name (NI) ] :: XML (NM) element (NI)  :: XML (NM) parse (NM) exception (N) ::XMLElement_XMLParseException_invalidValueSet__String__
+NOUN_PHRASE::get (V) | invalid (NM) value (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - value (NI) ] :: XML (NM) element (NI)  :: XML (NM) parse (NM) exception (N) ::XMLElement_XMLParseException_invalidValue__String-String__
+NOUN_PHRASE::get (V) | unexpected (NM) end (NM) of (NM) data (NI) 	++ :: XML (NM) element (NI)  :: XML (NM) parse (NM) exception (N) ::XMLElement_XMLParseException_unexpectedEndOfData____
+NOUN_PHRASE::get (V) | syntax (NM) error (N) 	++ :: [ string (NI) - context (N) ] :: XML (NM) element (NI)  :: XML (NM) parse (NM) exception (N) ::XMLElement_XMLParseException_syntaxError__String__
+ED_VERB::expected (V)  | input (NI) 	++ :: [ string (NI) - char (NM) set (N) ] :: XML (NM) parse (NM) exception (N)  :: XML (NM) element (NI) ::XMLElement_XMLParseException_expectedInput__String__
+NOUN_PHRASE::get (V) | unknown (NM) entity (N) 	++ :: [ string (NI) - name (NI) ] :: XML (NM) element (NI)  :: XML (NM) parse (NM) exception (N) ::XMLElement_XMLParseException_unknownEntity__String__
+FIELD::[ long (N) - serial (NM) version (NM) UID (N) ]::XMLElement_static_final_long_serialVersionUID
+FIELD::[ int (N) - NANOXML (NM) MAJOR (NM) VERSION (N) ]::XMLElement_static_final_int_NANOXML_MAJOR_VERSION
+FIELD::[ int (N) - NANOXML (NM) MINOR (NM) VERSION (N) ]::XMLElement_static_final_int_NANOXML_MINOR_VERSION
+FIELD::[ hashtable (N) - attributes (N) ]::XMLElement_Hashtable_attributes
+FIELD::[ vector (N) - children (N) ]::XMLElement_Vector_children
+FIELD::[ string (NI) - name (NI) ]::XMLElement_String_name
+FIELD::[ string (NI) - contents (N) ]::XMLElement_String_contents
+FIELD::[ hashtable (N) - entities (N) ]::XMLElement_Hashtable_entities
+FIELD::[ int (N) - line (NM) nr (N) ]::XMLElement_int_lineNr
+FIELD::[ boolean (N) - ignore (NM) case (N) ]::XMLElement_boolean_ignoreCase
+FIELD::[ boolean (N) - ignore (NM) whitespace (N) ]::XMLElement_boolean_ignoreWhitespace
+FIELD::[ char (N) - char (NM) read (NM) too (NM) much (DT) ]::XMLElement_char_charReadTooMuch
+FIELD::[ reader (N) - reader (N) ]::XMLElement_Reader_reader
+FIELD::[ int (N) - parser (NM) line (NM) nr (N) ]::XMLElement_int_parserLineNr
+CONSTRUCTOR:: | XML (NM) parse (NM) exception (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - message (NI) ]::XMLParseException_XMLParseException_XMLParseException__String-String__
+CONSTRUCTOR:: | XML (NM) parse (NM) exception (N) 	++ :: [ string (NI) - name (NI) ] :: [ int (N) - line (NM) nr (N) ] :: [ string (NI) - message (NI) ]::XMLParseException_XMLParseException_XMLParseException__String-int-String__
+SPECIAL::get (V)  | line (NM) nr (N) 	++ :: int (N)  :: XML (NM) parse (NM) exception (N) ::XMLParseException_int_getLineNr____
+FIELD::[ int (N) - NO (DT) LINE (N) ]::XMLParseException_static_final_int_NO_LINE
+FIELD::[ int (N) - line (NM) nr (N) ]::XMLParseException_int_lineNr
+CONSTRUCTOR:: | SAX (NM) entity (NM) resolver (N) 	++::sax.SAXEntityResolver_SAXEntityResolver_SAXEntityResolver____
+BASE_VERB::finalize (VI)  | SAX (NM) entity (NM) resolver (N) 	++::sax.SAXEntityResolver_void_finalize____
+SPECIAL::set (V)  | entity (NM) resolver (N) 	++ :: [ entity (NM) resolver (N) - resolver (N) ] :: SAX (NM) entity (NM) resolver (N) ::sax.SAXEntityResolver_void_setEntityResolver__EntityResolver__
+BASE_VERB::open (V)  | external (NM) entity (N) 	++ :: [ IXML (NM) reader (N) - xml (NM) reader (N) ] :: [ string (NI) - public (NM) ID (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: reader (N)  :: SAX (NM) entity (NM) resolver (N) ::sax.SAXEntityResolver_Reader_openExternalEntity__IXMLReader-String-String__
+FIELD::[ entity (NM) resolver (N) - sax (NM) entity (NM) resolver (N) ]::sax.SAXEntityResolver_EntityResolver_saxEntityResolver
+CONSTRUCTOR:: | SAX (NM) parser (N) 	++::sax.SAXParser_SAXParser_SAXParser____
+BASE_VERB::finalize (VI)  | SAX (NM) parser (N) 	++::sax.SAXParser_void_finalize____
+SPECIAL::set (V)  | locale (N) 	++ :: [ locale (N) - locale (N) ] :: SAX (NM) parser (N) ::sax.SAXParser_void_setLocale__Locale__
+SPECIAL::set (V)  | entity (NM) resolver (N) 	++ :: [ entity (NM) resolver (N) - resolver (N) ] :: SAX (NM) parser (N) ::sax.SAXParser_void_setEntityResolver__EntityResolver__
+SPECIAL::set (V)  | DTD (NM) handler (N) 	++ :: [ DTD (NM) handler (N) - handler (N) ] :: SAX (NM) parser (N) ::sax.SAXParser_void_setDTDHandler__DTDHandler__
+SPECIAL::set (V)  | document (NM) handler (N) 	++ :: [ document (NM) handler (N) - handler (N) ] :: SAX (NM) parser (N) ::sax.SAXParser_void_setDocumentHandler__DocumentHandler__
+SPECIAL::set (V)  | error (NM) handler (N) 	++ :: [ error (NM) handler (N) - handler (N) ] :: SAX (NM) parser (N) ::sax.SAXParser_void_setErrorHandler__ErrorHandler__
+SPECIAL::create (V)  | parser (N) 	++ :: IXML (NM) parser (N)  :: SAX (NM) parser (N) ::sax.SAXParser_IXMLParser_createParser____
+BASE_VERB::parse (V)  | [ input (NM) source (NI) - source (NI) ]	++ :: SAX (NM) parser (N) ::sax.SAXParser_void_parse__InputSource__
+BASE_VERB::parse (V)  | [ string (NI) - system (NM) id (NI) ]	++ :: SAX (NM) parser (N) ::sax.SAXParser_void_parse__String__
+FIELD::[ SAX (NM) adapter (NI) - adapter (NI) ]::sax.SAXParser_SAXAdapter_adapter
+FIELD::[ error (NM) handler (N) - error (NM) handler (N) ]::sax.SAXParser_ErrorHandler_errorHandler
+FIELD::[ SAX (NM) entity (NM) resolver (N) - entity (NM) resolver (N) ]::sax.SAXParser_SAXEntityResolver_entityResolver
+CONSTRUCTOR:: | SAX (NM) adapter (NI) 	++::sax.SAXAdapter_SAXAdapter_SAXAdapter____
+BASE_VERB::finalize (VI)  | SAX (NM) adapter (NI) 	++::sax.SAXAdapter_void_finalize____
+SPECIAL::set (V)  | document (NM) handler (N) 	++ :: [ document (NM) handler (N) - handler (N) ] :: SAX (NM) adapter (NI) ::sax.SAXAdapter_void_setDocumentHandler__DocumentHandler__
+SPECIAL::set (V)  | reader (N) 	++ :: [ IXML (NM) reader (N) - reader (N) ] :: SAX (NM) adapter (NI) ::sax.SAXAdapter_void_setReader__IXMLReader__
+SPECIAL::start (V)  | building (N) 	++ :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: SAX (NM) adapter (NI) ::sax.SAXAdapter_void_startBuilding__String-int__
+VOID_NP::handle (V) | new (NM) processing (NM) instruction (N) 	++ :: [ string (NI) - target (N) ] :: [ reader (N) - reader (N) ] :: SAX (NM) adapter (NI)  :: void (N) ::sax.SAXAdapter_void_newProcessingInstruction__String-Reader__
+SPECIAL::start (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) id (NI) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: SAX (NM) adapter (NI) ::sax.SAXAdapter_void_startElement__String-String-String-String-int__
+ENDS_WITH_ED::handle (V) | element (NM) attributes (NM) processed (N) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) id (NI) ] :: SAX (NM) adapter (NI)  :: void (N) ::sax.SAXAdapter_void_elementAttributesProcessed__String-String-String__
+SPECIAL::end (V)  | element (NI) 	++ :: [ string (NI) - name (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) id (NI) ] :: SAX (NM) adapter (NI) ::sax.SAXAdapter_void_endElement__String-String-String__
+SPECIAL::add (V)  | attribute (N) 	++ :: [ string (NI) - key (NI) ] :: [ string (NI) - ns (NM) prefix (N) ] :: [ string (NI) - ns (NM) system (NM) id (NI) ] :: [ string (NI) - value (NI) ] :: [ string (NI) - type (N) ] :: SAX (NM) adapter (NI) ::sax.SAXAdapter_void_addAttribute__String-String-String-String-String__
+SPECIAL::add (V)  | PC (NM) data (NI) 	++ :: [ reader (N) - reader (N) ] :: [ string (NI) - system (NM) ID (NI) ] :: [ int (N) - line (NM) nr (N) ] :: SAX (NM) adapter (NI) ::sax.SAXAdapter_void_addPCData__Reader-String-int__
+SPECIAL::get (V)  | result (N) 	++ :: object (NI)  :: SAX (NM) adapter (NI) ::sax.SAXAdapter_Object_getResult____
+SPECIAL::end (V)  | document (NI) 	++ :: SAX (NM) adapter (NI) ::sax.SAXAdapter_void_endDocument____
+FIELD::[ IXML (NM) reader (N) - nanoxml (NM) reader (N) ]::sax.SAXAdapter_IXMLReader_nanoxmlReader
+FIELD::[ document (NM) handler (N) - sax (NM) document (NM) handler (N) ]::sax.SAXAdapter_DocumentHandler_saxDocumentHandler
+FIELD::[ error (NM) handler (N) - sax (NM) error (NM) handler (N) ]::sax.SAXAdapter_ErrorHandler_saxErrorHandler
+FIELD::[ locator (NM) impl (NI) - sax (NM) locator (N) ]::sax.SAXAdapter_LocatorImpl_saxLocator
+FIELD::[ attribute (NM) list (NM) impl (NI) - sax (NM) attributes (N) ]::sax.SAXAdapter_AttributeListImpl_saxAttributes
+SPECIAL::main (V)  | [ string (NI) - args (N) ]	++ :: dump (NM) XML (N) ::DumpXML_static_void_main__String[]__
+SPECIAL::main (V)  | [ string (NI) - args (N) ]	++ :: dump (NM) XML (NM) lite (N) ::DumpXML_Lite_static_void_main__String[]__

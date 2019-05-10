@@ -13,7 +13,7 @@ by mining (1) StackOverflow and (2) open source projects.
 
 # Installation
 
-## Requirements
+## Dependencies
 
 sudo apt-get install openjdk-8-jdk
 
@@ -27,7 +27,7 @@ stanford-corenlp-3.8.0-models.jar
 ```lib``` and ```lib2``` contains all the library dependencies that
 are required to run the tool.
 
-## How to Run
+## Running the Tool
 
 - Configure "config.xml"'s <database> and <project> tag
 with the appropriate folder path.
@@ -49,7 +49,7 @@ modify the parameters to suit your needs.
 
 Type 'make' to compile.
 
-### Execute with the provided shell script
+### Execute
 
 ```./cloneDigger.sh config.xml```
 
@@ -89,7 +89,7 @@ CloCom's SANER conference paper.
 We no longer support the ASE codebase because it had evolved greatly since 2013.
 CloCom is the successer of AutoComment.
 
-# Data
+## Data
 
 We are thankful to [StackOverflow](https://stackoverflow.com/)
 for providing a data dump of 
@@ -102,7 +102,8 @@ if you would like to build a mapping database.
 
 ## Mapping Database
 
-We provide a mapping data for the Java and Android tag under the ```database``` folder ```javaAndroidDB.tar.gz```.
+We provide a code-comment mapping
+ data for the Java and Android tag under the ```database``` folder ```javaAndroidDB.tar.gz```.
 
 It was generated using the newer Match 2017 StackOverflow database with the following criteria:
 
@@ -115,24 +116,7 @@ It was generated using the newer Match 2017 StackOverflow database with the foll
 
 ## User Study
 
-Below are two links that contains the full digital questionnaire that we presented to the users:
-
-[Google Form - Group 1](https://docs.google.com/forms/d/e/1FAIpQLSf4pBKisdtIcbgW3MxDpH4XLeiCUmNYc9N64srnW__MH0_8uQ/viewform?usp=sf_link)
-
-[Google Form - Group 2](https://docs.google.com/forms/d/e/1FAIpQLSddELKFj0yzc88VeY__O6G08yyTHdhF_NR50Vnpe-Wtjj-g8w/viewform?usp=sf_link)
-
-Raw CSV Dump of the results are located under the ```research``` folder.
-
-There are two files ```group1.csv``` and ```group2.csv``` which
-corresponds to the two sets of questions.
-Evaulation was performed on
-20 participants where each
-person received 15 questions (12 from AutoComment 
-and 3 from previous work SumSlice).
-
-Summarized Results: [Google Sheet Link](https://docs.google.com/spreadsheets/d/1G59FQ8CtKJJAmN6ApZiw5pGDoqGAOKfrvSycSwoA_7I/edit?usp=sharing)
-
-## Generated Comments
+### Automatically Generated Comments
 
 Here is the format of the results from the CloCom tool:
 
@@ -158,6 +142,40 @@ Here is the format of the results from the CloCom tool:
 5. Ranked output from all sources
    - Ranking is based on the text similarity score
 
-The output of AutoComment for the 16 evaluated Java projects are under the ```research``` folder.
+The output of AutoComment for the 16 evaluated Java projects are under the ```research``` folder,
+which are then used for the user study questionnaire.
+
+### Questionnaire
+
+Below are two links that contains the full digital questionnaire that we presented to the users:
+
+[Google Form - Group 1](https://docs.google.com/forms/d/e/1FAIpQLSf4pBKisdtIcbgW3MxDpH4XLeiCUmNYc9N64srnW__MH0_8uQ/viewform?usp=sf_link)
+
+[Google Form - Group 2](https://docs.google.com/forms/d/e/1FAIpQLSddELKFj0yzc88VeY__O6G08yyTHdhF_NR50Vnpe-Wtjj-g8w/viewform?usp=sf_link)
+
+Raw CSV Dump of the results are located under the ```research/output``` folder.
+
+There are two files ```group1.csv``` and ```group2.csv``` which
+corresponds to the two sets of questions.
+Evaulation was performed on
+20 participants where each
+person received 15 questions (12 from AutoComment
+and 3 from previous work SumSlice).
+
+Summarized Results: [Google Sheet Link](https://docs.google.com/spreadsheets/d/1G59FQ8CtKJJAmN6ApZiw5pGDoqGAOKfrvSycSwoA_7I/edit?usp=sharing)
+
+### Comparison Against Previous Work
+
+AutoComment is compared against the work (SumSlice) 
+from Breno Dantas Cruz, Paul "Will" McBurney, and Collin McMillan from TSE 2015.
+SumSlice's output and intermediate files on the evaluated Java project, NanoXML,
+are placed under the ```research/output``` folder.
+
+- Comments (nanoXML.txt)
+- SWUM (NanoXML.out)
+- PageRank (ND_PageRankFormatter.txt)
+- XML SumGen (nd_xmlsumgen.xml)
+
+
 
 

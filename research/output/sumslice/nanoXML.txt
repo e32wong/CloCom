@@ -1,0 +1,576 @@
+Messages:	2082
+Method Name:	getFirstChildNamed
+-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> ReturnMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage-> QuickSummaryMessage-> OutputUsedMessage-> OutputUsedMessage-> CalledMessage-> ImportanceMessage-> UseMessage
+This method nulls the null and returns an IXMLParser. ErrorMissingElement() seems less important than average because it is not called by any methods. 
+
+This method creates the CDATA reader and returns a cdatareader. CDATAReader() seems less important than average because it is not called by any methods. 
+
+This method finalizes the CDATA reader. Finalize() seems less important than average because it is not called by any methods. 
+
+This method creates the XML parse exception and returns a xmlparseexception. XMLParseException() seems less important than average because it is not called by any methods. 
+
+This method reads the char and returns an int. Read() seems less important than average because it is not called by any methods. 
+
+This method closes the CDATA reader. Close() seems less important than average because it is not called by any methods. 
+
+This method creates the element and returns an IXMLElement. CreateElement() seems less important than average because it is not called by any methods. 
+
+This method creates the element and returns an IXMLElement. CreateElement() seems less important than average because it is not called by any methods. 
+
+This method creates the PC data element and returns an IXMLElement. CreatePCDataElement() seems less important than average because it is not called by any methods. 
+
+This method gets the full name and returns a String. GetFullName() seems less important than average because it is not called by any methods. 
+
+This method gets the parent and returns an IXMLElement. GetParent() seems less important than average because it is not called by any methods. 
+
+This method creates the element and returns an IXMLElement. CreateElement() seems less important than average because it is not called by any methods. 
+
+This method creates the element and returns an IXMLElement. CreateElement() seems less important than average because it is not called by any methods. 
+
+This method sets the name. SetName() seems less important than average because it is not called by any methods. 
+
+This method sets the name. SetName() seems less important than average because it is not called by any methods. 
+
+This method gets the namespace and returns a String. GetNamespace() seems less important than average because it is not called by any methods. 
+
+This method gets the name and returns a String. GetName() seems less important than average because it is not called by any methods. 
+
+This method enumerates the children and returns an Enumeration. EnumerateChildren() seems less important than average because it is not called by any methods. 
+
+This method removes (P) the child [ index. RemoveChildAtIndex() seems less important than average because it is not called by any methods. 
+
+This method removes the EQUIV[child IXML element. RemoveChild() seems less important than average because it is not called by any methods. 
+
+This method adds the EQUIV[child IXML element. AddChild() seems less important than average because it is not called by any methods. 
+
+This method gets (P) the child [ index and returns an IXMLElement. GetChildAtIndex() seems less important than average because it is not called by any methods. 
+
+This method gets the first child named and returns an IXMLElement. GetFirstChildNamed() seems less important than average because it is not called by any methods. 
+
+This method gets the first child named and returns an IXMLElement. GetFirstChildNamed() seems less important than average because it is not called by any methods. 
+
+This method gets the children named and returns a Vector. GetChildrenNamed() seems less important than average because it is not called by any methods. 
+
+This method is the leaf and returns a boolean. IsLeaf() seems less important than average because it is not called by any methods. 
+
+This method has the children and returns a boolean. HasChildren() seems less important than average because it is not called by any methods. 
+
+This method gets the children count and returns an int. GetChildrenCount() seems less important than average because it is not called by any methods. 
+
+This method gets the children and returns a Vector. GetChildren() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute and returns a String. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute and returns an int. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute and returns an int. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute type and returns a String. GetAttributeType() seems less important than average because it is not called by any methods. 
+
+This method gets the children named and returns a Vector. GetChildrenNamed() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute count and returns an int. GetAttributeCount() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute and returns a String. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute and returns a String. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method removes the attribute. RemoveAttribute() seems less important than average because it is not called by any methods. 
+
+This method removes the attribute. RemoveAttribute() seems less important than average because it is not called by any methods. 
+
+This method has the attribute and returns a boolean. HasAttribute() seems less important than average because it is not called by any methods. 
+
+This method enumerates the attribute names and returns an Enumeration. EnumerateAttributeNames() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute type and returns a String. GetAttributeType() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute namespace and returns a String. GetAttributeNamespace() seems less important than average because it is not called by any methods. 
+
+This method sets the attribute. SetAttribute() seems less important than average because it is not called by any methods. 
+
+This method sets the attribute. SetAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the content and returns a String. GetContent() seems less important than average because it is not called by any methods. 
+
+This method gets the line nr and returns an int. GetLineNr() seems less important than average because it is not called by any methods. 
+
+This method equals the object and returns a boolean. Equals() seems less important than average because it is not called by any methods. 
+
+This method sets the content. SetContent() seems less important than average because it is not called by any methods. 
+
+This method gets the attributes and returns a Properties. GetAttributes() seems less important than average because it is not called by any methods. 
+
+This method has the attribute and returns a boolean. HasAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the system ID and returns a String. GetSystemID() seems less important than average because it is not called by any methods. 
+
+This method gets (P) the attributes -- [ namespace and returns a Properties. GetAttributesInNamespace() seems less important than average because it is not called by any methods. 
+
+This method handles the element attributes processed. ElementAttributesProcessed() seems less important than average because it is not called by any methods. 
+
+This method ends the element. EndElement() seems less important than average because it is not called by any methods. 
+
+This method starts the element. StartElement() seems less important than average because it is not called by any methods. 
+
+This method adds the attribute. AddAttribute() seems less important than average because it is not called by any methods. 
+
+This method starts the building. StartBuilding() seems less important than average because it is not called by any methods. 
+
+This method handles the new processing instruction. NewProcessingInstruction() seems less important than average because it is not called by any methods. 
+
+This method equals the EQUIV[XML element IXML element and returns a boolean. EqualsXMLElement() seems less important than average because it is not called by any methods. 
+
+This method handles the new processing instruction. NewProcessingInstruction() seems less important than average because it is not called by any methods. 
+
+This method starts the element. StartElement() seems less important than average because it is not called by any methods. 
+
+This method finalizes the std XML builder. Finalize() seems less important than average because it is not called by any methods. 
+
+This method starts the building. StartBuilding() seems far more important than average because it is not called by any methods. 
+
+This method creates the std XML builder and returns a stdxmlbuilder. StdXMLBuilder() seems less important than average because it is not called by any methods. 
+
+This method creates the std XML builder and returns a stdxmlbuilder. StdXMLBuilder() seems less important than average because it is not called by any methods. 
+
+This method adds the PC data. AddPCData() seems less important than average because it is not called by any methods. 
+
+This method gets the result and returns an Object. GetResult() seems less important than average because it is not called by any methods. 
+
+This method gets the result and returns an Object. GetResult() seems less important than average because it is not called by any methods. 
+
+This method adds the PC data. AddPCData() seems far more important than average because it is not called by any methods. 
+
+This method adds the attribute. AddAttribute() seems less important than average because it is not called by any methods. 
+
+This method ends the element. EndElement() seems less important than average because it is not called by any methods. 
+
+This method handles the element attributes processed. ElementAttributesProcessed() seems less important than average because it is not called by any methods. 
+
+This method gets the parameter entity resolver and returns an IXMLEntityResolver. GetParameterEntityResolver() seems less important than average because it is not called by any methods. 
+
+This method sets the parameter entity resolver. SetParameterEntityResolver() seems less important than average because it is not called by any methods. 
+
+This method sets the delegate. SetDelegate() seems less important than average because it is not called by any methods. 
+
+This method gets the delegate and returns an IXMLValidator. GetDelegate() seems less important than average because it is not called by any methods. 
+
+This method finalizes the validator plugin. Finalize() seems less important than average because it is not called by any methods. 
+
+This method creates the validator plugin and returns a validatorplugin. ValidatorPlugin() seems less important than average because it is not called by any methods. 
+
+This method creates the XML parse exception and returns a xmlparseexception. XMLParseException() seems less important than average because it is not called by any methods. 
+
+This method handles the unexpected attribute. UnexpectedAttribute() seems less important than average because it is not called by any methods. 
+
+This method misses the EQUIV[attribute string (NM). MissingAttribute() seems less important than average because it is not called by any methods. 
+
+This method misses the PC data. MissingPCData() seems less important than average because it is not called by any methods. 
+
+This method handles the invalid attribute value. InvalidAttributeValue() seems less important than average because it is not called by any methods. 
+
+This method handles the validation error. ValidationError() seems less important than average because it is not called by any methods. 
+
+This method handles the unexpected PC data. UnexpectedPCData() seems less important than average because it is not called by any methods. 
+
+This method handles the element started. ElementStarted() seems less important than average because it is not called by any methods. 
+
+This method parses the DTD. ParseDTD() seems less important than average because it is not called by any methods. 
+
+This method handles the element attributes processed. ElementAttributesProcessed() seems less important than average because it is not called by any methods. 
+
+This method handles the element ended. ElementEnded() seems less important than average because it is not called by any methods. 
+
+This method handles the data added. PCDataAdded() seems less important than average because it is not called by any methods. 
+
+This method handles the attribute added. AttributeAdded() seems less important than average because it is not called by any methods. 
+
+This method handles the unexpected element. UnexpectedElement() seems less important than average because it is not called by any methods. 
+
+This method misses the EQUIV[element string - (NM) (NM) [ missing element name. MissingElement() seems less important than average because it is not called by any methods. 
+
+This method gets the encoding and returns a String. GetEncoding() seems less important than average because it is not called by any methods. 
+
+This method streams the reader and returns a Reader. Stream2reader() seems far more important than average because it is not called by any methods. 
+
+This method creates the std XML reader and returns a stdxmlreader. StdXMLReader() seems less important than average because it is not called by any methods. 
+
+This method reads the std XML reader and returns a char. Read() seems far more important than average because it is not called by any methods. 
+
+This method nulls the (NM) and returns a boolean. AtEOFOfCurrentStream() seems less important than average because it is not called by any methods. 
+
+This method nulls the null and returns a boolean. AtEOF() seems less important than average because it is not called by any methods. 
+
+This method handles the unread. Unread() seems less important than average because it is not called by any methods. 
+
+This method opens the stream and returns a Reader. OpenStream() seems far more important than average because it is not called by any methods. 
+
+This method creates the std XML reader and returns a stdxmlreader. StdXMLReader() seems less important than average because it is not called by any methods. 
+
+This method creates the std XML reader and returns a stdxmlreader. StdXMLReader() seems less important than average because it is not called by any methods. 
+
+This method finalizes the std XML reader. Finalize() seems less important than average because it is not called by any methods. 
+
+This method finalizes the XML validation exception. Finalize() seems less important than average because it is not called by any methods. 
+
+This method creates the XML validation exception and returns a xmlvalidationexception. XMLValidationException() seems less important than average because it is not called by any methods. 
+
+This method gets the line nr and returns an int. GetLineNr() seems less important than average because it is not called by any methods. 
+
+This method gets the stream level and returns an int. GetStreamLevel() seems less important than average because it is not called by any methods. 
+
+This method starts the new stream. StartNewStream() seems far more important than average because it is not called by any methods. 
+
+This method starts the new stream. StartNewStream() seems far more important than average because it is not called by any methods. 
+
+This method gets the public ID and returns a String. GetPublicID() seems less important than average because it is not called by any methods. 
+
+This method gets the system ID and returns a String. GetSystemID() seems less important than average because it is not called by any methods. 
+
+This method sets the public ID. SetPublicID() seems less important than average because it is not called by any methods. 
+
+This method sets the system ID. SetSystemID() seems far more important than average because it is not called by any methods. 
+
+This method sets the reader. SetReader() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute value and returns a String. GetAttributeValue() seems less important than average because it is not called by any methods. 
+
+This method gets the element name and returns a String. GetElementName() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute name and returns a String. GetAttributeName() seems less important than average because it is not called by any methods. 
+
+This method is the external entity and returns a boolean. IsExternalEntity() seems less important than average because it is not called by any methods. 
+
+This method gets the entity and returns a Reader. GetEntity() seems far more important than average because it is not called by any methods. 
+
+This method opens the external entity and returns a Reader. OpenExternalEntity() seems less important than average because it is not called by any methods. 
+
+This method finalizes the XML entity resolver. Finalize() seems less important than average because it is not called by any methods. 
+
+This method creates the XML entity resolver and returns a xmlentityresolver. XMLEntityResolver() seems less important than average because it is not called by any methods. 
+
+This method adds the external entity. AddExternalEntity() seems less important than average because it is not called by any methods. 
+
+This method adds the internal entity. AddInternalEntity() seems less important than average because it is not called by any methods. 
+
+This method sets the resolver. SetResolver() seems less important than average because it is not called by any methods. 
+
+This method gets the validator and returns an IXMLValidator. GetValidator() seems less important than average because it is not called by any methods. 
+
+This method parses the IXML parser and returns an Object. Parse() seems less important than average because it is not called by any methods. 
+
+This method gets the resolver and returns an IXMLEntityResolver. GetResolver() seems less important than average because it is not called by any methods. 
+
+This method sets the builder. SetBuilder() seems less important than average because it is not called by any methods. 
+
+This method gets the reader and returns an IXMLReader. GetReader() seems less important than average because it is not called by any methods. 
+
+This method sets the validator. SetValidator() seems less important than average because it is not called by any methods. 
+
+This method gets the builder and returns an IXMLBuilder. GetBuilder() seems less important than average because it is not called by any methods. 
+
+This method gets the value and returns a String. GetValue() seems less important than average because it is not called by any methods. 
+
+This method sets the value. SetValue() seems less important than average because it is not called by any methods. 
+
+This method gets the type and returns a String. GetType() seems less important than average because it is not called by any methods. 
+
+This method creates the XML attribute and returns a xmlattribute. XMLAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the full name and returns a String. GetFullName() seems less important than average because it is not called by any methods. 
+
+This method gets the name and returns a String. GetName() seems less important than average because it is not called by any methods. 
+
+This method gets the namespace and returns a String. GetNamespace() seems less important than average because it is not called by any methods. 
+
+This method adds the internal entity. AddInternalEntity() seems less important than average because it is not called by any methods. 
+
+This method adds the external entity. AddExternalEntity() seems less important than average because it is not called by any methods. 
+
+This method gets the entity and returns a Reader. GetEntity() seems less important than average because it is not called by any methods. 
+
+This method is the external entity and returns a boolean. IsExternalEntity() seems less important than average because it is not called by any methods. 
+
+This method creates the element and returns an IXMLElement. CreateElement() seems far more important than average because it is not called by any methods. 
+
+This method creates the element and returns an IXMLElement. CreateElement() seems far more important than average because it is not called by any methods. 
+
+This method creates the PC data element and returns an IXMLElement. CreatePCDataElement() seems far more important than average because it is not called by any methods. 
+
+This method creates the XML element and returns a xmlelement. XMLElement() seems less important than average because it is not called by any methods. 
+
+This method creates the XML element and returns a xmlelement. XMLElement() seems less important than average because it is not called by any methods. 
+
+This method creates the XML element and returns a xmlelement. XMLElement() seems less important than average because it is not called by any methods. 
+
+This method creates the XML element and returns a xmlelement. XMLElement() seems less important than average because it is not called by any methods. 
+
+This method handles the data added. PCDataAdded() seems less important than average because it is not called by any methods. 
+
+This method handles the element attributes processed. ElementAttributesProcessed() seems less important than average because it is not called by any methods. 
+
+This method handles the attribute added. AttributeAdded() seems less important than average because it is not called by any methods. 
+
+This method handles the element ended. ElementEnded() seems less important than average because it is not called by any methods. 
+
+This method handles the element started. ElementStarted() seems less important than average because it is not called by any methods. 
+
+This method parses the DTD. ParseDTD() seems less important than average because it is not called by any methods. 
+
+This method gets the parameter entity resolver and returns an IXMLEntityResolver. GetParameterEntityResolver() seems less important than average because it is not called by any methods. 
+
+This method sets the parameter entity resolver. SetParameterEntityResolver() seems less important than average because it is not called by any methods. 
+
+This method is the leaf and returns a boolean. IsLeaf() seems less important than average because it is not called by any methods. 
+
+This method has the children and returns a boolean. HasChildren() seems less important than average because it is not called by any methods. 
+
+This method removes (P) the child [ index. RemoveChildAtIndex() seems less important than average because it is not called by any methods. 
+
+This method inserts the EQUIV[child IXML element. InsertChild() seems less important than average because it is not called by any methods. 
+
+This method removes the EQUIV[child IXML element. RemoveChild() seems less important than average because it is not called by any methods. 
+
+This method sets the name. SetName() seems less important than average because it is not called by any methods. 
+
+This method adds the EQUIV[child IXML element. AddChild() seems less important than average because it is not called by any methods. 
+
+This method gets the namespace and returns a String. GetNamespace() seems less important than average because it is not called by any methods. 
+
+This method gets the full name and returns a String. GetFullName() seems less important than average because it is not called by any methods. 
+
+This method finalizes the XML element. Finalize() seems less important than average because it is not called by any methods. 
+
+This method gets the parent and returns an IXMLElement. GetParent() seems less important than average because it is not called by any methods. 
+
+This method creates the element and returns an IXMLElement. CreateElement() seems far more important than average because it is not called by any methods. 
+
+This method creates the element and returns an IXMLElement. CreateElement() seems far more important than average because it is not called by any methods. 
+
+This method sets the attribute. SetAttribute() seems less important than average because it is not called by any methods. 
+
+This method sets the attribute. SetAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute type and returns a String. GetAttributeType() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute namespace and returns a String. GetAttributeNamespace() seems less important than average because it is not called by any methods. 
+
+This method has the attribute and returns a boolean. HasAttribute() seems less important than average because it is not called by any methods. 
+
+This method removes the attribute. RemoveAttribute() seems far more important than average because it is not called by any methods. 
+
+This method gets the system ID and returns a String. GetSystemID() seems less important than average because it is not called by any methods. 
+
+This method gets (P) the attributes -- [ namespace and returns a Properties. GetAttributesInNamespace() seems far more important than average because it is not called by any methods. 
+
+This method gets the attributes and returns a Properties. GetAttributes() seems far more important than average because it is not called by any methods. 
+
+This method has the attribute and returns a boolean. HasAttribute() seems less important than average because it is not called by any methods. 
+
+This method equals the object and returns a boolean. Equals() seems far more important than average because it is not called by any methods. 
+
+This method gets (P) the child [ index and returns an IXMLElement. GetChildAtIndex() seems less important than average because it is not called by any methods. 
+
+This method gets the first child named and returns an IXMLElement. GetFirstChildNamed() seems less important than average because it is not called by any methods. 
+
+This method gets the children count and returns an int. GetChildrenCount() seems less important than average because it is not called by any methods. 
+
+This method gets the children named and returns a Vector. GetChildrenNamed() seems far more important than average because it is not called by any methods. 
+
+This method finds the attribute and returns a XMLAttribute. FindAttribute() seems far more important than average because it is not called by any methods. 
+
+This method gets the first child named and returns an IXMLElement. GetFirstChildNamed() seems less important than average because it is not called by any methods. 
+
+This method gets the children named and returns a Vector. GetChildrenNamed() seems far more important than average because it is not called by any methods. 
+
+This method gets the attribute and returns a String. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute and returns a String. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method finds the attribute and returns a XMLAttribute. FindAttribute() seems far more important than average because it is not called by any methods. 
+
+This method gets the attribute count and returns an int. GetAttributeCount() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute and returns an int. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute type and returns a String. GetAttributeType() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute and returns a String. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method gets the attribute and returns an int. GetAttribute() seems less important than average because it is not called by any methods. 
+
+This method processes the element. ProcessElement() seems less important than average because it is not called by any methods. 
+
+This method parses the DTD. ParseDTD() seems less important than average because it is not called by any methods. 
+
+This method processes the ignore section. ProcessIgnoreSection() seems far more important than average because it is not called by any methods. 
+
+This method processes the conditional section. ProcessConditionalSection() seems far more important than average because it is not called by any methods. 
+
+This method processes the entity. ProcessEntity() seems less important than average because it is not called by any methods. 
+
+This method processes the att list. ProcessAttList() seems far more important than average because it is not called by any methods. 
+
+This method handles the element ended. ElementEnded() seems less important than average because it is not called by any methods. 
+
+This method handles the element started. ElementStarted() seems far more important than average because it is not called by any methods. 
+
+This method handles the attribute added. AttributeAdded() seems far more important than average because it is not called by any methods. 
+
+This method handles the element attributes processed. ElementAttributesProcessed() seems far more important than average because it is not called by any methods. 
+
+This method handles the data added. PCDataAdded() seems less important than average because it is not called by any methods. 
+
+This method finalizes the PI reader. Finalize() seems less important than average because it is not called by any methods. 
+
+This method creates the PI reader and returns a pireader. PIReader() seems less important than average because it is not called by any methods. 
+
+This method equals the EQUIV[XML element IXML element and returns a boolean. EqualsXMLElement() seems far more important than average because it is not called by any methods. 
+
+This method creates the non validator and returns a nonvalidator. NonValidator() seems less important than average because it is not called by any methods. 
+
+This method finalizes the non validator. Finalize() seems less important than average because it is not called by any methods. 
+
+This method sets the parameter entity resolver. SetParameterEntityResolver() seems less important than average because it is not called by any methods. 
+
+This method gets the parameter entity resolver and returns an IXMLEntityResolver. GetParameterEntityResolver() seems less important than average because it is not called by any methods. 
+
+This method finalizes the XML writer. Finalize() seems less important than average because it is not called by any methods. 
+
+This method writes the (NM) xml. Write() seems far more important than average because it is not called by any methods. 
+
+This method creates the XML writer and returns a xmlwriter. XMLWriter() seems less important than average because it is not called by any methods. 
+
+This method creates the XML writer and returns a xmlwriter. XMLWriter() seems less important than average because it is not called by any methods. 
+
+This method reads the char and returns an int. Read() seems less important than average because it is not called by any methods. 
+
+This method closes the PI reader. Close() seems less important than average because it is not called by any methods. 
+
+This method writes the (NM) xml. Write() seems far more important than average because it is not called by any methods. 
+
+This method writes the encoded. WriteEncoded() seems less important than average because it is not called by any methods. 
+
+This method writes the (NM) xml. Write() seems far more important than average because it is not called by any methods. 
+
+This method writes the (NM) xml. Write() seems far more important than average because it is not called by any methods. 
+
+This method gets the validator and returns an IXMLValidator. GetValidator() seems less important than average because it is not called by any methods. 
+
+This method sets the validator. SetValidator() seems less important than average because it is not called by any methods. 
+
+This method gets the resolver and returns an IXMLEntityResolver. GetResolver() seems less important than average because it is not called by any methods. 
+
+This method sets the resolver. SetResolver() seems less important than average because it is not called by any methods. 
+
+This method finalizes the std XML parser. Finalize() seems less important than average because it is not called by any methods. 
+
+This method creates the std XML parser and returns a stdxmlparser. StdXMLParser() seems less important than average because it is not called by any methods. 
+
+This method gets the builder and returns an IXMLBuilder. GetBuilder() seems less important than average because it is not called by any methods. 
+
+This method sets the builder. SetBuilder() seems less important than average because it is not called by any methods. 
+
+This method processes the PI. ProcessPI() seems far more important than average because it is not called by any methods. 
+
+This method scans the tag. ScanSomeTag() seems less important than average because it is not called by any methods. 
+
+This method processes the CDATA. ProcessCDATA() seems far more important than average because it is not called by any methods. 
+
+This method processes the special tag. ProcessSpecialTag() seems less important than average because it is not called by any methods. 
+
+This method gets the reader and returns an IXMLReader. GetReader() seems less important than average because it is not called by any methods. 
+
+This method sets the reader. SetReader() seems less important than average because it is not called by any methods. 
+
+This method scans the data. ScanData() seems far more important than average because it is not called by any methods. 
+
+This method parses the std XML parser and returns an Object. Parse() seems less important than average because it is not called by any methods. 
+
+This method creates the content reader and returns a contentreader. ContentReader() seems less important than average because it is not called by any methods. 
+
+This method finalizes the content reader. Finalize() seems less important than average because it is not called by any methods. 
+
+This method reads the char and returns an int. Read() seems far more important than average because it is not called by any methods. 
+
+This method closes the content reader. Close() seems far more important than average because it is not called by any methods. 
+
+This method prints the stack trace. PrintStackTrace() seems far more important than average because it is not called by any methods. 
+
+This method converts the string and returns a String. ToString() seems less important than average because it is not called by any methods. 
+
+This method reads the IXML reader and returns a char. Read() seems less important than average because it is not called by any methods. 
+
+This method nulls the (NM) and returns a boolean. AtEOFOfCurrentStream() seems less important than average because it is not called by any methods. 
+
+This method finalizes the XML exception. Finalize() seems less important than average because it is not called by any methods. 
+
+This method gets the system ID and returns a String. GetSystemID() seems less important than average because it is not called by any methods. 
+
+This method creates the XML exception and returns a xmlexception. XMLException() seems less important than average because it is not called by any methods. 
+
+This method prints the stack trace. PrintStackTrace() seems far more important than average because it is not called by any methods. 
+
+This method prints the stack trace. PrintStackTrace() seems far more important than average because it is not called by any methods. 
+
+This method gets the line nr and returns an int. GetLineNr() seems less important than average because it is not called by any methods. 
+
+This method gets the exception and returns an Exception. GetException() seems less important than average because it is not called by any methods. 
+
+This method creates the XML exception and returns a xmlexception. XMLException() seems less important than average because it is not called by any methods. 
+
+This method creates the XML exception and returns a xmlexception. XMLException() seems less important than average because it is not called by any methods. 
+
+This method creates the XML exception and returns a xmlexception. XMLException() seems less important than average because it is not called by any methods. 
+
+This method creates the XML exception and returns a xmlexception. XMLException() seems less important than average because it is not called by any methods. 
+
+This method processes the attribute. ProcessAttribute() seems far more important than average because it is not called by any methods. 
+
+This method processes the element. ProcessElement() seems far more important than average because it is not called by any methods. 
+
+This method processes the doc type. ProcessDocType() seems far more important than average because it is not called by any methods. 
+
+This method enumerates the attribute names and returns an Enumeration. EnumerateAttributeNames() seems far more important than average because it is not called by any methods. 
+
+This method enumerates the children and returns an Enumeration. EnumerateChildren() seems less important than average because it is not called by any methods. 
+
+This method gets the children and returns a Vector. GetChildren() seems less important than average because it is not called by any methods. 
+
+This method gets the content and returns a String. GetContent() seems less important than average because it is not called by any methods. 
+
+This method gets the line nr and returns an int. GetLineNr() seems less important than average because it is not called by any methods. 
+
+This method gets the system ID and returns a String. GetSystemID() seems less important than average because it is not called by any methods. 
+
+This method sets the public ID. SetPublicID() seems less important than average because it is not called by any methods. 
+
+This method creates the XML element and returns a xmlelement. XMLElement() seems less important than average because it is not called by any methods. 
+
+This method gets the public ID and returns a String. GetPublicID() seems less important than average because it is not called by any methods. 
+
+This method handles the unread. Unread() seems less important than average because it is not called by any methods. 
+
+This method nulls the null and returns a boolean. AtEOF() seems less important than average because it is not called by any methods. 
+
+This method opens the stream and returns a Reader. OpenStream() seems less important than average because it is not called by any methods. 
+
+This method gets the line nr and returns an int. GetLineNr() seems less important than average because it is not called by any methods. 
+
+This method starts the new stream. StartNewStream() seems less important than average because it is not called by any methods. 
+
+This method starts the new stream. StartNewStream() seems less important than average because it is not called by any methods. 
+
+This method sets the system ID. SetSystemID() seems less important than average because it is not called by any methods. 
+
+This method gets the stream level and returns an int. GetStreamLevel() seems less important than average because it is not called by any methods. 
+
+This method gets the name and returns a String. GetName() seems less important than average because it is not called by any methods. 
+
+This method sets the name. SetName() seems less important than average because it is not called by any methods. 
+
+This method sets the content. SetContent() seems less important than average because it is not called by any methods. 
+
+This method removes the attribute. RemoveAttribute() seems far more important than average because it is not called by any methods. 
+
+
