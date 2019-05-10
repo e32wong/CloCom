@@ -1,0 +1,3498 @@
+Match Group 3 of size 6+44
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/util/ToGo.java: 327-329
+Length: 3
+*             File dir = new File(path);
+*             if (!dir.exists()) {
+*                 dir.mkdirs();
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/web/WebSite.java: 193-195
+Length: 3
+*             File dir = new File(cachedDir);
+*             if (!dir.exists()) {
+*                 dir.mkdirs();
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/util/ToGoList.java: 187-189
+Length: 3
+*             File dir = new File(path);
+*             if (!dir.exists()) {
+*                 dir.mkdirs();
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/organizer/OrganizerCache.java: 135-137
+Length: 3
+*             File dir = new File(path);
+*             if (!dir.exists()) {
+*                 dir.mkdirs();
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/imageOrganizer/OrganizerCache.java: 123-125
+Length: 3
+*             File dir = new File(path);
+*             if (!dir.exists()) {
+*                 dir.mkdirs();
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/nntp/NntpContainer.java: 79-81
+Length: 3
+*             File dir = new File(path);
+*             if (!dir.exists()) {
+*                 dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/sensei/sensei-core/src/main/java/com/senseidb/indexing/activity/CompositeActivityStorage.java: 62-64
+Length: 3
+Sim terms: []
+<       File dir = new File(indexDir);
+<       if (!dir.exists()) {
+<         dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/libgdx/extensions/gdx-tools/src/com/badlogic/gdx/tools/texturepacker/TextureUnpacker.java: 75-77
+Length: 3
+Sim terms: []
+< 		File outputDirFile = new File(outputDir);
+< 		if (!outputDirFile.exists()) {
+< 			outputDirFile.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jzmq/jzmq-core/src/main/java/org/zeromq/ZCertStore.java: 108-111
+Length: 3
+Sim terms: []
+< 		File f = new File(directory);
+< 		if (!f.exists()) {
+< 			// create folder if not existant
+< 			f.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/weiciyuan/src/org/qii/weiciyuan/support/file/FileManager.java: 228-230
+Length: 3
+Sim terms: []
+<             File file = new File(path);
+<             if (!file.exists()) {
+<                 file.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/io/org.openhab.io.dropbox/src/main/java/org/openhab/io/dropbox/internal/DropboxSynchronizer.java: 538-540
+Length: 3
+Sim terms: []
+<         File folder = new File(DBX_FOLDER);
+<         if (!folder.exists()) {
+<             folder.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/block-storage/src/main/java/com/eucalyptus/blockstorage/DASManager.java: 134-136
+Length: 3
+Sim terms: []
+<     File varDir = new File(EUCA_VAR_RUN_PATH);
+<     if (!varDir.exists()) {
+<       varDir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jfinal/src/main/java/com/jfinal/plugin/activerecord/generator/ModelGenerator.java: 127-129
+Length: 3
+Sim terms: []
+< 		File dir = new File(modelOutputDir);
+< 		if (!dir.exists()) {
+< 			dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/net/lingala/zip4j/unzip/Unzip.java: 146-148
+Length: 3
+Sim terms: []
+< 					File file = new File(completePath);
+< 					if (!file.exists()) {
+< 						file.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jodd/jodd-upload/src/main/java/jodd/upload/impl/DiskFileUploadFactory.java: 64-66
+Length: 3
+Sim terms: []
+< 		File destination = new File(destFolder);
+< 		if (!destination.exists()) {
+< 			destination.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/schema/action/Function.java: 404-406
+Length: 3
+Sim terms: [[exchang]]
+< 			final File dir = new File(exchangeDir);
+< 			if (!dir.exists()) {
+< 				dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/pad/infrastructure/rhino1_7R1/toolsrc/org/mozilla/javascript/tools/jsc/Main.java: 334-336
+Length: 3
+Sim terms: []
+<             File dir = new File(dirPath);
+<             if (!dir.exists()) {
+<                 dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/webmagic/webmagic-extension/src/main/java/us/codecraft/webmagic/scheduler/FileCacheQueueScheduler.java: 66-68
+Length: 3
+Sim terms: []
+<         File file = new File(filePath);
+<         if (!file.exists()) {
+<             file.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jstorm/jstorm-core/src/main/java/com/alibaba/jstorm/daemon/worker/hearbeat/SyncContainerHb.java: 256-258
+Length: 3
+Sim terms: []
+<         File file = new File(writeDir);
+<         if (!file.exists()) {
+<             file.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/test/net/java/sip/communicator/slick/runner/SipCommunicatorSlickRunner.java: 138-141
+Length: 3
+Sim terms: []
+<             File outputDir = new File(outputDirName);
+<             if (!outputDir.exists())
+<             {
+<                 outputDir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/baasbox/app/com/baasbox/configuration/IosCertificateHandler.java: 45-47
+Length: 3
+Sim terms: []
+< 		File f = new File(folder);
+< 		if(!f.exists()){
+< 			f.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/liquibase/liquibase-core/src/main/java/liquibase/diff/output/changelog/core/MissingDataExternalFileChangeGenerator.java: 76-78
+Length: 3
+Sim terms: []
+<                 File parentDir = new File(dataDir);
+<                 if (!parentDir.exists()) {
+<                     parentDir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/Pydev/plugins/org.python.pydev.core/src/org/python/pydev/core/cache/DiskCache.java: 394-396
+Length: 3
+Sim terms: []
+<             File file = new File(folderToPersist);
+<             if (!file.exists()) {
+<                 file.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jitwatch/core/src/main/java/org/adoptopenjdk/jitwatch/util/FileUtil.java: 94-98
+Length: 3
+Sim terms: []
+< 			File dir = new File(dirPart);
+< 
+< 			if (!dir.exists())
+< 			{
+< 				dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/block-storage/src/main/java/com/eucalyptus/blockstorage/DASManager.java: 1262-1264
+Length: 3
+Sim terms: []
+<     File varDir = new File(EUCA_VAR_RUN_PATH);
+<     if (!varDir.exists()) {
+<       varDir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/rhino/toolsrc/org/mozilla/javascript/tools/jsc/Main.java: 301-303
+Length: 3
+Sim terms: []
+<             File dir = new File(dirPath);
+<             if (!dir.exists()) {
+<                 dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/testng/src/main/java/org/testng/internal/Utils.java: 227-229
+Length: 3
+Sim terms: []
+<     File outDir= new File(outDirPath);
+<     if (!outDir.exists()) {
+<       outDir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/net/lingala/zip4j/unzip/Unzip.java: 200-202
+Length: 3
+Sim terms: []
+< 			File parentDirFile = new File(parentDir);
+< 			if (!parentDirFile.exists()) {
+< 				parentDirFile.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/android/webkit/WebIconDatabase.java: 202-204
+Length: 3
+Sim terms: [[exist]]
+C - Make the directories and parents if they don't exist
+<             File db = new File(path);
+<             if (!db.exists()) {
+<                 db.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations-testutils/src/main/java/org/androidannotations/testutils/ProcessorTestHelper.java: 343-345
+Length: 3
+Sim terms: []
+< 		File outputDir = new File(OUTPUT_DIRECTORY);
+< 		if (!outputDir.exists()) {
+< 			outputDir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/dsl/src/test/java/org/cloudifysource/dsl/download/ResourceDownloaderTest.java: 80-82
+Length: 3
+Sim terms: []
+< 		final File destinationFolder = new File(DESTINATION_FOLDER);
+< 		if (!destinationFolder.exists()) {
+< 			destinationFolder.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jfinal/src/main/java/com/jfinal/plugin/activerecord/generator/BaseModelGenerator.java: 152-154
+Length: 3
+Sim terms: []
+< 		File dir = new File(baseModelOutputDir);
+< 		if (!dir.exists()) {
+< 			dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/ie/machinereading/BasicRelationExtractor.java: 86-88
+Length: 3
+Sim terms: []
+<       File f = new File(path);
+<       if (! f.exists()) {
+<         f.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/baasbox/app/com/baasbox/configuration/IosCertificateHandler.java: 105-107
+Length: 3
+Sim terms: []
+< 			File f = new File(folder);
+< 			if(!f.exists()){
+< 				f.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/voldemort/src/java/voldemort/store/bdb/dataconversion/AbstractBdbConversion.java: 57-59
+Length: 3
+Sim terms: [[dest, environ]]
+<         File newEnvDir = new File(destEnvPath);
+<         if(!newEnvDir.exists()) {
+<             newEnvDir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/persistence/org.openhab.persistence.rrd4j/src/main/java/org/openhab/persistence/rrd4j/internal/RRD4jService.java: 260-262
+Length: 3
+Sim terms: []
+<                 File folder = new File(DB_FOLDER);
+<                 if (!folder.exists()) {
+<                     folder.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jfinal/src/main/java/com/jfinal/plugin/activerecord/generator/DataDictionaryGenerator.java: 220-222
+Length: 3
+Sim terms: []
+< 			File dir = new File(dataDictionaryOutputDir);
+< 			if (!dir.exists()) {
+< 				dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/RoboCoP/src/main/java/com/rain/utils/android/robocop/generator/ContentProviderWriter.java: 126-128
+Length: 3
+Sim terms: []
+<         File temp = new File(outputFilePath);
+<         if (!temp.exists()) {
+<             temp.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/gast-lib/libraryLuceneExt/src/root/gast/speech/lucene/LuceneIndexBuilder.java: 171-174
+Length: 3
+Sim terms: []
+<         File dirFile = new File(dir);
+<         if (!dirFile.exists())
+<         {
+<             dirFile.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jodd/jodd-proxetta/src/main/java/jodd/proxetta/ProxettaBuilder.java: 326-328
+Length: 3
+Sim terms: []
+< 		File folder = new File(debugFolder);
+< 		if (!folder.exists()) {
+< 			folder.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/jfinal/src/main/java/com/jfinal/plugin/activerecord/generator/MappingKitGenerator.java: 125-127
+Length: 3
+Sim terms: []
+< 			File dir = new File(mappingKitOutputDir);
+< 			if (!dir.exists()) {
+< 				dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/webmagic/webmagic-core/src/main/java/us/codecraft/webmagic/utils/FilePersistentBase.java: 40-42
+Length: 3
+Sim terms: []
+<             File file = new File(path);
+<             if (!file.exists()) {
+<                 file.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/28268499-28268621-0.autocom: 4-6
+Length: 3
+Sim terms: []
+< File dirPath = new File(path);
+< if (!dirPath.exists()) {
+<         dirPath.mkdirs();     
+----
+/home/edmund/crawledFiles/clocomProjects/jstorm/jstorm-core/src/main/java/com/alibaba/jstorm/utils/JStormServerUtils.java: 119-122
+Length: 3
+Sim terms: []
+<         File file = new File(dir);
+< 
+<         if (!file.exists()) {
+<             file.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/zeus/schedule/src/main/java/com/taobao/zeus/util/Environment.java: 27-29
+Length: 3
+Sim terms: []
+< 		File file=new File(downloadPath);
+< 		if(!file.exists()){
+< 			file.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/KJFrameForAndroid/KJFrame/app/src/main/java/org/kymjs/blog/ui/widget/RecordButton.java: 232-234
+Length: 3
+Sim terms: []
+<         File file = new File(mAudioFile);
+<         if (!file.exists()) {
+<             file.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/chart/servlet/ServletUtilities.java: 287-289
+Length: 3
+Sim terms: [[exist, creat]]
+<         File tempDir = new File(tempDirName);
+<         if (!tempDir.exists()) {
+<             tempDir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/lwjgl/src/java/org/lwjgl/util/applet/AppletLoader.java: 848-852
+Length: 3
+Sim terms: []
+< 			File dir = new File(path);
+< 
+< 			// create directory
+< 			if (!dir.exists()) {
+< 				dir.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/persistence/org.openhab.persistence.db4o/src/main/java/org/openhab/persistence/db4o/internal/Db4oPersistenceService.java: 81-83
+Length: 3
+Sim terms: []
+<         File folder = new File(DB_FOLDER);
+<         if (!folder.exists()) {
+<             folder.mkdirs();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-rest/src/main/java/org/structr/rest/service/HttpService.java: 198-200
+Length: 3
+Sim terms: []
+< 		final File baseDir = new File(basePath);
+< 		if (!baseDir.exists()) {
+< 			baseDir.mkdirs();
+----
+Comments (size 1):
+1.
+Make the directories and parents if they don't exist
+----
+Ranked result (sim terms):
+1.
+Make the directories and parents if they don't exist
+----
+
+Match Group 21 of size 3+19
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/movies/MovieItem.java: 113-115
+Length: 3
+*                 int currentYear = calendar.get(Calendar.YEAR);
+*                 int currentMonth = calendar.get(Calendar.MONTH);
+*                 int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/movies/MovieItem.java: 82-84
+Length: 3
+*                 int currentYear = calendar.get(Calendar.YEAR);
+*                 int currentMonth = calendar.get(Calendar.MONTH);
+*                 int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/movies/MovieContainer.java: 362-364
+Length: 3
+*             int currentYear = calendar.get(Calendar.YEAR);
+*             int currentMonth = calendar.get(Calendar.MONTH);
+*             int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/widget/CalendarViewMaterialDelegate.java: 116-118
+Length: 3
+Sim terms: []
+<                 final int year = day.get(Calendar.YEAR);
+<                 final int month = day.get(Calendar.MONTH);
+<                 final int dayOfMonth = day.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/holoaccent/HoloAccentExample/src/com/negusoft/holoaccent/example/activity/TabbedActivity.java: 165-167
+Length: 3
+Sim terms: []
+<         int year = calendar.get(Calendar.YEAR);
+<         int month = calendar.get(Calendar.MONTH);
+<         int day = calendar.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/9278780-30137307-0.autocom: 4-6
+Length: 3
+Sim terms: [[]]
+<     int year = c.get(Calendar.YEAR);  
+<     int month = c.get(Calendar.MONTH);  
+<     int day = c.get(Calendar.DAY_OF_MONTH);  
+----
+/home/edmund/crawledFiles/clocomProjects/jstorm/jstorm-core/src/main/java/com/alibaba/jstorm/utils/TimeUtils.java: 86-88
+Length: 3
+Sim terms: []
+<             int year = cal.get(Calendar.YEAR);
+<             int month = cal.get(Calendar.MONTH);
+<             int day = cal.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/gnucash-android/app/src/main/java/org/gnucash/android/ui/budget/BudgetFormFragment.java: 291-293
+Length: 3
+Sim terms: []
+<         int year = calendar.get(Calendar.YEAR);
+<         int monthOfYear = calendar.get(Calendar.MONTH);
+<         int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/api/variables/VariablesTest.java: 529-531
+Length: 3
+Sim terms: []
+<     int todayYear = todayCal.get(Calendar.YEAR);
+<     int todayMonth = todayCal.get(Calendar.MONTH);
+<     int todayDate = todayCal.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/gh4a/app/src/main/java/com/gh4a/activities/IssueMilestoneEditActivity.java: 396-398
+Length: 3
+Sim terms: []
+<             int year = c.get(Calendar.YEAR);
+<             int month = c.get(Calendar.MONTH);
+<             int day = c.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/5369682-41980829-0.autocom: 4-6
+Length: 3
+Sim terms: [[date, get], [date]]
+C - Get current time and date on Android.
+C - Need current date.
+< int year=cc.get(Calendar.YEAR);
+< int month=cc.get(Calendar.MONTH);
+< int mDay = cc.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/gnucash-android/app/src/main/java/org/gnucash/android/ui/transaction/TransactionFormFragment.java: 642-644
+Length: 3
+Sim terms: []
+<                 int year = calendar.get(Calendar.YEAR);
+<                 int monthOfYear = calendar.get(Calendar.MONTH);
+<                 int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/16645127-16646796-0.autocom: 5-7
+Length: 3
+Sim terms: [[date, get], [date, calendar, month]]
+C - Get the selected Date in a PropertyChangeListener, as shown here.
+C - Once you have the date, you can get the year, month and day from a Calendar.
+< int y = c.get(Calendar.YEAR);
+< int m = c.get(Calendar.MONTH);
+< int d = c.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/gnucash-android/app/src/main/java/org/gnucash/android/ui/export/ExportFormFragment.java: 400-402
+Length: 3
+Sim terms: []
+< 				int year = calendar.get(Calendar.YEAR);
+< 				int monthOfYear = calendar.get(Calendar.MONTH);
+< 				int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/9243578-12273692-0.autocom: 5-7
+Length: 3
+Sim terms: []
+< int year = date.get(Calendar.YEAR);  // 2012
+< int month = date.get(Calendar.MONTH);  // 9 - October!!!
+< int day = date.get(Calendar.DAY_OF_MONTH);  // 5
+----
+/home/edmund/crawledFiles/clocomProjects/coursera-android/Examples/UIDatePickerFragment/src/course/examples/ui/datepicker/DatePickerFragmentActivity.java: 70-72
+Length: 3
+Sim terms: []
+< 			int year = c.get(Calendar.YEAR);
+< 			int month = c.get(Calendar.MONTH);
+< 			int day = c.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/widget/DatePickerCalendarDelegate.java: 541-543
+Length: 3
+Sim terms: []
+<         final int year = mCurrentDate.get(Calendar.YEAR);
+<         final int month = mCurrentDate.get(Calendar.MONTH);
+<         final int day = mCurrentDate.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/cgeo/main/src/cgeo/geocaching/ui/dialog/DateDialog.java: 35-37
+Length: 3
+Sim terms: []
+<         final int year = date.get(Calendar.YEAR);
+<         final int month = date.get(Calendar.MONTH);
+<         final int day = date.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/mobileorg-android/MobileOrg/src/main/java/com/matburt/mobileorg/EditNodeFragment.java: 347-349
+Length: 3
+Sim terms: []
+<             int year = c.get(Calendar.YEAR);
+<             int month = c.get(Calendar.MONTH);
+<             int day = c.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/api/variables/VariablesTest.java: 495-497
+Length: 3
+Sim terms: []
+<     int todayYear = todayCal.get(Calendar.YEAR);
+<     int todayMonth = todayCal.get(Calendar.MONTH);
+<     int todayDate = todayCal.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/android-validation-komensky/demo/src/main/java/eu/inmite/demo/validation/DemoActivity.java: 167-169
+Length: 3
+Sim terms: []
+< 			int year = c.get(Calendar.YEAR);
+< 			int month = c.get(Calendar.MONTH);
+< 			int day = c.get(Calendar.DAY_OF_MONTH);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/33031764-33031861-1.autocom: 5-7
+Length: 3
+Sim terms: [[month]]
+C - Access day / month / year using (see this thread).
+< int year = cal.get(Calendar.YEAR);
+< int month = cal.get(Calendar.MONTH);
+< int day = cal.get(Calendar.DAY_OF_MONTH);
+----
+Comments (size 5):
+1.
+Get current time and date on Android.
+2.
+Need current date.
+3.
+Once you have the date, you can get the year, month and day from a Calendar.
+4.
+Get the selected Date in a PropertyChangeListener, as shown here.
+5.
+Access day / month / year using (see this thread).
+----
+Ranked result (sim terms):
+1.
+Get current time and date on Android.
+2.
+Get the selected Date in a PropertyChangeListener, as shown here.
+3.
+Access day / month / year using (see this thread).
+4.
+Need current date.
+5.
+Once you have the date, you can get the year, month and day from a Calendar.
+----
+
+Match Group 24 of size 6+1
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/stocks/StocksItem.java: 148-150
+Length: 3
+*                 } else {
+*                     int backgroundImageWidth = backGroundImage.getWidth(null);
+*                     int backgroundImageHeight = backGroundImage.getHeight(null);
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/weather/WeatherItem.java: 147-149
+Length: 3
+*                     } else {
+*                         int backgroundImageWidth = backGroundImage.getWidth(null);
+*                         int backgroundImageHeight = backGroundImage.getHeight(null);
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/movies/MovieItem.java: 235-237
+Length: 3
+*                 {
+*                     int backgroundImageWidth = backGroundImage.getWidth(null);
+*                     int backgroundImageHeight = backGroundImage.getHeight(null);
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/email/EmailItem.java: 141-143
+Length: 3
+*                 } else {
+*                     int backgroundImageWidth = backGroundImage.getWidth(null);
+*                     int backgroundImageHeight = backGroundImage.getHeight(null);
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/rss/RssItem.java: 147-149
+Length: 3
+*                 } else {
+*                     int backgroundImageWidth = backGroundImage.getWidth(null);
+*                     int backgroundImageHeight = backGroundImage.getHeight(null);
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/weather/WeatherItem.java: 310-312
+Length: 3
+*                     } else {
+*                         int backgroundImageWidth = backGroundImage.getWidth(null);
+*                         int backgroundImageHeight = backGroundImage.getHeight(null);
+----
+/home/edmund/crawledFiles/clocomProjects/flyingsaucer/flying-saucer-examples/nomaven/misc/src/main/java/Review.java: 277-280
+Length: 3
+Sim terms: [[imag, draw]]
+C - draw the image
+<                 } else {
+<                     // draw the image
+<                     int imw = currentImage.getWidth(null);
+<                     int imh = currentImage.getHeight(null);
+----
+Comments (size 1):
+1.
+draw the image
+----
+Ranked result (sim terms):
+1.
+draw the image
+----
+
+Match Group 25 of size 2+14
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/imageOrganizer/OrganizerContainer.java: 350-353
+Length: 3
+*         Pattern pattern = Pattern.compile(mask);
+*         Matcher matcher = pattern.matcher(key);
+* 
+*         if (matcher.find()) {
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/organizer/OrganizerContainer.java: 402-405
+Length: 3
+*         Pattern pattern = Pattern.compile(mask);
+*         Matcher matcher = pattern.matcher(key);
+* 
+*         if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/modules/test/poshi-runner/poshi-runner/src/main/java/com/liferay/poshi/runner/selenium/BaseWebDriverImpl.java: 1502-1506
+Length: 3
+Sim terms: []
+< 			Pattern pattern = Pattern.compile(value);
+< 
+< 			Matcher matcher = pattern.matcher(line);
+< 
+< 			if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/WordPress-Android/libs/utils/WordPressUtils/src/main/java/org/wordpress/android/util/ShortcodeUtils.java: 21-24
+Length: 3
+Sim terms: []
+<             Pattern pattern = Pattern.compile(videoPressShortcodeRegex);
+<             Matcher matcher = pattern.matcher(shortcode);
+< 
+<             if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/modules/test/poshi-runner/poshi-runner/src/main/java/com/liferay/poshi/runner/util/RegexUtil.java: 27-31
+Length: 3
+Sim terms: []
+< 		Pattern pattern = Pattern.compile(regex);
+< 
+< 		Matcher matcher = pattern.matcher(content);
+< 
+< 		if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/gocd/domain/src/com/thoughtworks/go/domain/materials/perforce/P4OutputParser.java: 105-107
+Length: 3
+Sim terms: []
+<         Pattern pattern = Pattern.compile(FIRST_LINE_PATTERN);
+<         Matcher matcher = pattern.matcher(line);
+<         if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/modules/test/poshi-runner/poshi-runner/src/main/java/com/liferay/poshi/runner/util/RuntimeVariables.java: 190-194
+Length: 3
+Sim terms: []
+< 		Pattern pattern = Pattern.compile(regex);
+< 
+< 		Matcher matcher = pattern.matcher(content);
+< 
+< 		if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/modules/test/poshi-runner/poshi-runner/src/main/java/com/liferay/poshi/runner/selenium/LiferaySeleniumHelper.java: 479-483
+Length: 3
+Sim terms: []
+< 			Pattern pattern = Pattern.compile(text);
+< 
+< 			Matcher matcher = pattern.matcher(messageText);
+< 
+< 			if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/11557476-11557774-0.autocom: 3-5
+Length: 3
+Sim terms: [[string, find, match, tri]]
+C - The difference between the tools is, that in one case it tries to find a match in the other it tries to match the whole string.
+< Pattern p = Pattern.compile(regex);
+< Matcher matcher = p.matcher(text);
+< if(matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/selendroid/selendroid-standalone/src/main/java/io/selendroid/standalone/android/impl/DefaultAndroidApp.java: 48-50
+Length: 3
+Sim terms: []
+<     Pattern pattern = Pattern.compile(regex);
+<     Matcher matcher = pattern.matcher(output);
+<     if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/j2objc/translator/src/main/java/com/google/devtools/j2objc/util/PackageInfoLookup.java: 146-148
+Length: 3
+Sim terms: []
+<       Pattern p = Pattern.compile(importRegex);
+<       Matcher m = p.matcher(pkgInfo);
+<       if (m.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/j2objc/translator/src/main/java/com/google/devtools/j2objc/util/PackageInfoLookup.java: 183-185
+Length: 3
+Sim terms: []
+<       Pattern p = Pattern.compile(REFLECTION_SUPPORT_REGEX);
+<       Matcher m = p.matcher(pkgInfo);
+<       if (m.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/gocd/domain/src/com/thoughtworks/go/domain/materials/perforce/P4OutputParser.java: 97-99
+Length: 3
+Sim terms: []
+<         Pattern pattern = Pattern.compile(FILE_LINE_PATTERN);
+<         Matcher matcher = pattern.matcher(line);
+<         if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/server/src/main/java/com/orientechnologies/orient/server/network/protocol/http/OHttpNetworkCommandManager.java: 109-111
+Length: 3
+Sim terms: []
+<     Pattern pattern = Pattern.compile(matcherUrl);
+<     Matcher matcher = pattern.matcher(requestUrl);
+<     if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/gocd/base/src/com/thoughtworks/go/util/StringUtil.java: 95-97
+Length: 3
+Sim terms: []
+<         Pattern pattern = Pattern.compile(regEx);
+<         Matcher matcher = pattern.matcher(s);
+<         if (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/rest.li/d2-int-test/src/test/java/com/linkedin/d2/D2BaseTest.java: 111-113
+Length: 3
+Sim terms: []
+<       Pattern pattern = Pattern.compile(possibleResult);
+<       Matcher matcher = pattern.matcher(result);
+<       if (matcher.find())
+----
+Comments (size 1):
+1.
+The difference between the tools is, that in one case it tries to find a match in the other it tries to match the whole string.
+----
+Ranked result (sim terms):
+1.
+The difference between the tools is, that in one case it tries to find a match in the other it tries to match the whole string.
+----
+
+Match Group 32 of size 1+4
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/util/BufferedStream.java: 69-73
+Length: 4
+C - Flush the internal buffer 
+*     /** Flush the internal buffer */
+*     private void flushBuffer() throws IOException {
+*         if (count > 0) {
+*             out.write(buf, 0, count);
+*             count = 0;
+----
+/home/edmund/crawledFiles/clocomProjects/j2objc/jre_emul/android/platform/libcore/ojluni/src/main/java/java/io/BufferedOutputStream.java: 79-83
+Length: 4
+Sim terms: [[flush, buffer]]
+<     /** Flush the internal buffer */
+<     private void flushBuffer() throws IOException {
+<         if (count > 0) {
+<             out.write(buf, 0, count);
+<             count = 0;
+----
+/home/edmund/crawledFiles/clocomProjects/j2objc/xalan/third_party/android/platform/external/apache-xml/src/main/java/org/apache/xml/serializer/WriterToUTF8Buffered.java: 437-449
+Length: 4
+Sim terms: [[flush, buffer, ioexcept]]
+C - Flush the internal buffer @throws IOException 
+<   /**
+<    * Flush the internal buffer
+<    *
+<    * @throws IOException
+<    */
+<   public void flushBuffer() throws IOException
+<   {
+< 
+<     if (count > 0)
+<     {
+<       m_os.write(m_outputBytes, 0, count);
+< 
+<       count = 0;
+----
+/home/edmund/crawledFiles/clocomProjects/docx4j/src/main/java/org/docx4j/org/apache/xml/serializer/WriterToUTF8Buffered.java: 437-449
+Length: 4
+Sim terms: [[flush, buffer, ioexcept]]
+C - Flush the internal buffer @throws IOException 
+<   /**
+<    * Flush the internal buffer
+<    *
+<    * @throws IOException
+<    */
+<   public void flushBuffer() throws IOException
+<   {
+< 
+<     if (count > 0)
+<     {
+<       m_os.write(m_outputBytes, 0, count);
+< 
+<       count = 0;
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/rt/external/apache-xml/src/main/java/org/apache/xml/serializer/WriterToUTF8Buffered.java: 437-449
+Length: 4
+Sim terms: [[flush, buffer, ioexcept]]
+C - Flush the internal buffer @throws IOException 
+<   /**
+<    * Flush the internal buffer
+<    *
+<    * @throws IOException
+<    */
+<   public void flushBuffer() throws IOException
+<   {
+< 
+<     if (count > 0)
+<     {
+<       m_os.write(m_outputBytes, 0, count);
+< 
+<       count = 0;
+----
+Comments (size 1):
+1.
+Flush the internal buffer @throws IOException 
+----
+Ranked result (sim terms):
+1.
+Flush the internal buffer @throws IOException 
+----
+
+Match Group 40 of size 2+26
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/imageOrganizer/OrganizerContainer.java: 519-522
+Length: 3
+*         try {
+*             int month = Integer.parseInt(number);
+*             return getMonthText(month);
+*         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/imageOrganizer/OrganizerContainer.java: 539-542
+Length: 3
+*         try {
+*             int day = Integer.parseInt(number);
+*             return getDayText(day);
+*         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Pydev/plugins/org.python.pydev.debug/src_console/org/python/pydev/debug/newconsole/prefs/ColorManager.java: 121-185
+Length: 3
+Sim terms: []
+<             try {
+<                 int parsed = Integer.parseInt(string);
+<                 switch (parsed) {
+<                     case 0:
+<                         bright = false;
+<                         break;
+< 
+<                     case 1:
+<                         bright = true;
+<                         break;
+< 
+<                     case 30://  Black
+<                         foreground = getColor(bright ? brightBlack : dimBlack);
+<                         break;
+<                     case 31://  Red
+<                         foreground = getColor(bright ? brightRed : dimRed);
+<                         break;
+<                     case 32://  Green
+<                         foreground = getColor(bright ? brightGreen : dimGreen);
+<                         break;
+<                     case 33://  Yellow
+<                         foreground = getColor(bright ? brightYellow : dimYellow);
+<                         break;
+<                     case 34://  Blue
+<                         foreground = getColor(bright ? brightBlue : dimBlue);
+<                         break;
+<                     case 35://  Magenta
+<                         foreground = getColor(bright ? brightMagenta : dimMagenta);
+<                         break;
+<                     case 36://  Cyan
+<                         foreground = getColor(bright ? brightCyan : dimCyan);
+<                         break;
+<                     case 37://  White
+<                         foreground = getColor(bright ? brightWhite : dimWhite);
+<                         break;
+< 
+<                     case 40://  Black
+<                         background = getColor(bright ? brightBlack : dimBlack);
+<                         break;
+<                     case 41://  Red
+<                         background = getColor(bright ? brightRed : dimRed);
+<                         break;
+<                     case 42://  Green
+<                         background = getColor(bright ? brightGreen : dimGreen);
+<                         break;
+<                     case 43://  Yellow
+<                         background = getColor(bright ? brightYellow : dimYellow);
+<                         break;
+<                     case 44://  Blue
+<                         background = getColor(bright ? brightBlue : dimBlue);
+<                         break;
+<                     case 45://  Magenta
+<                         background = getColor(bright ? brightMagenta : dimMagenta);
+<                         break;
+<                     case 46://  Cyan
+<                         background = getColor(bright ? brightCyan : dimCyan);
+<                         break;
+<                     case 47://  White
+<                         background = getColor(bright ? brightWhite : dimWhite);
+<                         break;
+< 
+<                     default:
+<                         break;
+<                 }
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/core/net/i2p/crypto/SU3File.java: 530-533
+Length: 3
+Sim terms: []
+<             try {
+<                 int code = Integer.parseInt(stype);
+<                 return SigType.getByCode(code);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/core/net/i2p/stat/PersistenceHelper.java: 83-86
+Length: 3
+Sim terms: []
+<             try {
+<                 int rv = Integer.parseInt(val);
+<                 return rv >= 0 ? rv : 0;
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/timeseries/core/CustomPeriodicTest.java: 869-872
+Length: 3
+Sim terms: [[number, pars]]
+C - try parsing as a number
+<     try {
+<       int result = Integer.parseInt(day);
+<       return result;
+<     } catch (NumberFormatException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/gov/nist/javax/sip/parser/StatusLineParser.java: 54-57
+Length: 3
+Sim terms: []
+<         try {
+<             int retval = Integer.parseInt(scode);
+<             return retval;
+<         } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/fitnesse/src/eg/bowling/fixtures/ScoreGame.java: 53-57
+Length: 3
+Sim terms: []
+<       try {
+<         int pins = Integer.parseInt(rollText);
+<         return pins;
+<       }
+<       catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hudson/core/src/main/java/hudson/model/Job.java: 627-630
+Length: 3
+Sim terms: []
+<             try {
+<                 int k = Integer.parseInt(key);
+<                 return record.getNumber() - k;
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/rt/external/bouncycastle/bcprov/src/main/java/org/bouncycastle/util/IPAddress.java: 101-107
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             int value = Integer.parseInt(component);
+< 
+<             return value >= 0 && value <= size;
+<         }
+<         catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/Essentials/Essentials/src/com/earth2me/essentials/signs/EssentialsSign.java: 396-402
+Length: 3
+Sim terms: []
+< 		try
+< 		{
+< 			final int quantity = Integer.parseInt(line);
+< 
+< 			return quantity;
+< 		}
+< 		catch (NumberFormatException ex)
+----
+/home/edmund/crawledFiles/clocomProjects/hudson/core/src/main/java/hudson/model/Job.java: 644-647
+Length: 3
+Sim terms: []
+<             try {
+<                 int k = Integer.parseInt(key);
+<                 return String.valueOf(k + 1);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/legacy-jclouds/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/AsyncJob.java: 57-67
+Length: 3
+Sim terms: []
+<          try {
+<             int resultCode = Integer.parseInt(value);
+<             switch (resultCode) {
+<                case 0:
+<                   return SUCCESS;
+<                case 530:
+<                   return FAIL;
+<                default:
+<                   return UNKNOWN;
+<             }
+<          } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jetty.project/jetty-util/src/main/java/org/eclipse/jetty/util/IPAddressMap.java: 338-343
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 int number = Integer.parseInt(value);
+<                 return match(number);
+<             }
+<             catch (NumberFormatException ex)
+----
+/home/edmund/crawledFiles/clocomProjects/fastjson/src/main/java/com/alibaba/fastjson/JSONPath.java: 1250-1253
+Length: 3
+Sim terms: []
+<                     try {
+<                         int index = Integer.parseInt(indexText);
+<                         return new ArrayAccessSegement(index);
+<                     }catch (NumberFormatException ex){
+----
+/home/edmund/crawledFiles/clocomProjects/AntennaPod/app/src/androidTest/java/de/test/antennapod/util/service/download/HTTPBin.java: 112-115
+Length: 3
+Sim terms: []
+<             try {
+<                 int code = Integer.parseInt(param);
+<                 return getStatus(code);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jsonschema2pojo/jsonschema2pojo-core/src/main/java/org/jsonschema2pojo/FragmentResolver.java: 43-46
+Length: 3
+Sim terms: []
+<                 try {
+<                     int index = Integer.parseInt(part);
+<                     return resolve(tree.get(index), path);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/org/bouncycastle/util/IPAddress.java: 101-107
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             int value = Integer.parseInt(component);
+< 
+<             return value >= 0 && value <= size;
+<         }
+<         catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/utils/src/com/cloud/utils/net/NetUtils.java: 867-870
+Length: 3
+Sim terms: []
+<         try {
+<             int port = Integer.parseInt(p);
+<             return !(port > 65535 || port < 1);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/utils/src/com/cloud/utils/net/NetUtils.java: 880-883
+Length: 3
+Sim terms: []
+<         try {
+<             int port = Integer.parseInt(p);
+<             return !(port > 65535 || port < 1);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/legacy-jclouds/apis/cloudstack/src/main/java/org/jclouds/cloudstack/domain/AsyncJob.java: 93-105
+Length: 3
+Sim terms: []
+<          try {
+<             int statusCode = Integer.parseInt(value);
+<             switch (statusCode) {
+<                case 0:
+<                   return IN_PROGRESS;
+<                case 1:
+<                   return SUCCEEDED;
+<                case 2:
+<                   return FAILED;
+<                default:
+<                   return UNKNOWN;
+<             }
+<          } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/timeseries/core/CustomPeriodicTest.java: 913-916
+Length: 3
+Sim terms: [[number, pars]]
+C - try parsing as a number
+<     try {
+<       int result = Integer.parseInt(month);
+<       return result;
+<     } catch (NumberFormatException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/core/net/i2p/crypto/SU3File.java: 547-550
+Length: 3
+Sim terms: []
+<             try {
+<                 int code = Integer.parseInt(ctype);
+<                 return ContentType.getByCode(code);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/Osmand/OsmAnd/src/net/osmand/plus/download/DownloadOsmandIndexesHelper.java: 102-105
+Length: 3
+Sim terms: []
+< 			try {
+< 				int mapVersionInList = Integer.parseInt(mapversion);
+< 				return IndexConstants.BINARY_MAP_VERSION < mapVersionInList;
+< 			} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/MinecraftForge/src/test/java/net/minecraftforge/debug/CustomEntitySelectorTest.java: 54-72
+Length: 3
+Sim terms: [[select, list, predic]]
+<                 try
+<                 {
+<                     final int value = Integer.parseInt(health);
+< 
+<                     //Return a list of predicates. All these predicates have to apply for any entity to be selected.
+<                     return Collections.<Predicate<Entity>>singletonList(new Predicate<Entity>()
+<                     {
+<                         @Override
+<                         public boolean apply(@Nullable Entity input)
+<                         {
+<                             if (!(input instanceof EntityLivingBase))
+<                             {
+<                                 return false;
+<                             }
+<                             return (((EntityLivingBase) input).getHealth() >= value) != invert;
+<                         }
+<                     });
+<                 }
+<                 catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/vrapper/net.sourceforge.vrapper.core/src/net/sourceforge/vrapper/vim/modes/commandline/CommandLineParser.java: 667-670
+Length: 3
+Sim terms: []
+<         try {
+<             int line = Integer.parseInt(command);
+<             return new MotionCommand(GoToLineMotion.FIRST_LINE.withCount(line));
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/USM/src/main/java/org/cloudifysource/usm/USMLifecycleBean.java: 676-679
+Length: 3
+Sim terms: []
+< 			try {
+< 				final int limit = Integer.parseInt(limitString);
+< 				return limit;
+< 			} catch (final NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/plugins/git4idea/src/git4idea/config/GitConfigUtil.java: 155-159
+Length: 3
+Sim terms: []
+<     try {
+<       int i = Integer.parseInt(value);
+<       return i != 0;
+<     }
+<     catch (NumberFormatException ex) {
+----
+Comments (size 1):
+1.
+try parsing as a number
+----
+Ranked result (sim terms):
+1.
+try parsing as a number
+----
+
+Match Group 42 of size 1+10
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/plugins/weather/WeatherContainer.java: 665-669
+Length: 3
+C - factory.setValidating(true); factory.setNamespaceAware(true);
+*         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+*         //factory.setValidating(true);
+*         //factory.setNamespaceAware(true);
+*         try {
+*             DocumentBuilder builder = factory.newDocumentBuilder();
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/platform/lang-impl/src/com/intellij/help/impl/InspectionDump.java: 52-54
+Length: 3
+Sim terms: []
+<     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+<     try {
+<       DocumentBuilder builder = factory.newDocumentBuilder();
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.rwesmarthome/src/main/java/org/openhab/binding/rwesmarthome/internal/communicator/xmlresponse/GetEntitiesXMLResponse.java: 49-53
+Length: 3
+Sim terms: [[document, builder, instanc]]
+C - Using factory get an instance of document builder
+<         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+< 
+<         try {
+<             // Using factory get an instance of document builder
+<             DocumentBuilder db = dbf.newDocumentBuilder();
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/core/JreMemoryLeakPreventionListener.java: 322-324
+Length: 3
+Sim terms: []
+<                     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+<                     try {
+<                         DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+----
+/home/edmund/crawledFiles/clocomProjects/idea-php-symfony2-plugin/src/fr/adrienbrault/idea/symfony2plugin/util/service/AbstractServiceParser.java: 24-27
+Length: 3
+Sim terms: []
+<         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+< 
+<         try {
+<             DocumentBuilder documentBuilder = dbFactory.newDocumentBuilder();
+----
+/home/edmund/crawledFiles/clocomProjects/bigbluebutton/bbb-lti/src/java/org/imsglobal/pox/IMSPOXRequest.java: 253-255
+Length: 3
+Sim terms: []
+< 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+< 		try {
+< 			DocumentBuilder db = dbf.newDocumentBuilder();
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/platform/lang-impl/src/com/intellij/help/impl/IntentionDump.java: 56-58
+Length: 3
+Sim terms: []
+<     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+<     try {
+<       DocumentBuilder builder = factory.newDocumentBuilder();
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/ie/machinereading/common/DomReader.java: 130-135
+Length: 3
+Sim terms: []
+< 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+< 		// factory.setValidating(true);
+< 		// factory.setNamespaceAware(true);
+< 
+< 		try {
+< 			DocumentBuilder builder = factory.newDocumentBuilder();
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/test/unit/com/liferay/portal/log/assertor/PortalLogAssertorTest.java: 116-120
+Length: 3
+Sim terms: []
+< 		DocumentBuilderFactory documentBuilderFactory =
+< 			DocumentBuilderFactory.newInstance();
+< 
+< 		try {
+< 			DocumentBuilder documentBuilder =
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.rwesmarthome/src/main/java/org/openhab/binding/rwesmarthome/internal/communicator/xmlresponse/NotificationsXMLResponse.java: 45-49
+Length: 3
+Sim terms: [[document, builder, instanc]]
+C - Using factory get an instance of document builder
+<         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+< 
+<         try {
+<             // Using factory get an instance of document builder
+<             DocumentBuilder db = dbf.newDocumentBuilder();
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.rwesmarthome/src/main/java/org/openhab/binding/rwesmarthome/internal/communicator/xmlresponse/GetAllLogicalDeviceStatesXMLResponse.java: 57-61
+Length: 3
+Sim terms: [[document, builder, instanc]]
+C - Using factory get an instance of document builder
+<         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+< 
+<         try {
+<             // Using factory get an instance of document builder
+<             DocumentBuilder db = dbf.newDocumentBuilder();
+----
+Comments (size 1):
+1.
+Using factory get an instance of document builder
+----
+Ranked result (sim terms):
+1.
+Using factory get an instance of document builder
+----
+
+Match Group 49 of size 1+303
+/home/edmund/crawledFiles/autocommentProjects/javahmo/src/org/lnicholls/javahmo/media/Mp3Proxy.java: 207-209
+Length: 3
+*                     try {
+*                         track = Integer.parseInt(trk);
+*                     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/webapps/examples/WEB-INF/classes/num/NumberGuessBean.java: 77-79
+Length: 3
+Sim terms: []
+<         try {
+<             g = Integer.parseInt(guess);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/kotlin/plugins/lint/lint-api/src/com/android/tools/klint/detector/api/Project.java: 277-279
+Length: 3
+Sim terms: []
+<                             try {
+<                                 mBuildSdk = Integer.parseInt(versionString);
+<                             } catch (NumberFormatException nufe) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/os/UserHandle.java: 293-295
+Length: 3
+Sim terms: []
+<             try {
+<                 userId = Integer.parseInt(arg);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/druid/src/main/java/com/alibaba/druid/pool/DruidDataSourceFactory.java: 181-183
+Length: 3
+Sim terms: []
+<                 try {
+<                     level = Integer.parseInt(value);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/server/src/com/cloud/servlet/ConsoleProxyServlet.java: 194-196
+Length: 3
+Sim terms: []
+< 		try {
+< 			h = Integer.parseInt(value);
+< 		} catch(NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus-core/databus-core-impl/src/main/java/com/linkedin/databus/core/util/PropertiesHelper.java: 54-58
+Length: 3
+Sim terms: []
+<       try
+<       {
+<         result = Integer.parseInt(paramStr);
+<       }
+<       catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.powermax/src/main/java/org/openhab/binding/powermax/internal/PowerMaxBinding.java: 475-477
+Length: 3
+Sim terms: []
+<                     try {
+<                         tcpPort = Integer.parseInt(tcpPortString);
+<                     } catch (NumberFormatException numberFormatException) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/content/SyncStorageEngine.java: 1627-1629
+Length: 3
+Sim terms: []
+<         try {
+<             userId = Integer.parseInt(user);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/cmds/wm/src/com/android/commands/wm/Wm.java: 190-192
+Length: 3
+Sim terms: []
+<             try {
+<                 density = Integer.parseInt(densityStr);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/k-9/k9mail-library/src/main/java/com/fsck/k9/mail/transport/smtp/SmtpTransport.java: 461-463
+Length: 3
+Sim terms: []
+<                 try {
+<                     mLargestAcceptableMessage = Integer.parseInt(optionalsizeValue);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/location/GnssLocationProvider.java: 641-643
+Length: 3
+Sim terms: []
+<             try {
+<                 mC2KServerPort = Integer.parseInt(portString);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/junit/src/main/java/junit/runner/BaseTestRunner.java: 259-261
+Length: 3
+Sim terms: []
+<         try {
+<             intValue = Integer.parseInt(value);
+<         } catch (NumberFormatException ne) {
+----
+/home/edmund/crawledFiles/clocomProjects/guacamole-client/guacamole/src/main/java/org/apache/guacamole/tunnel/InputStreamInterceptingFilter.java: 171-176
+Length: 3
+Sim terms: []
+<             try {
+<                 code = Integer.parseInt(status);
+<             }
+< 
+<             // Assume internal error if parsing fails
+<             catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/exhibitor/exhibitor-core/src/main/java/com/netflix/exhibitor/core/index/EntryTypes.java: 49-53
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             intId = Integer.parseInt(id);
+<         }
+<         catch ( NumberFormatException ignore )
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/android/util/JsonReader.java: 516-518
+Length: 3
+Sim terms: []
+<         try {
+<             result = Integer.parseInt(value);
+<         } catch (NumberFormatException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/mct/nonTimePlots/src/main/java/gov/nasa/arc/mct/plot/settings/PlotLineGlobalConfiguration.java: 64-66
+Length: 3
+Sim terms: []
+< 				try {	
+< 					fontSize = Integer.parseInt(size);
+< 				} catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/zookeeper/src/contrib/rest/src/java/org/apache/zookeeper/server/jersey/resources/ZNodeResource.java: 230-232
+Length: 3
+Sim terms: []
+<         try {
+<             version = Integer.parseInt(versionParam);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/OpenRefine/main/src/com/google/refine/expr/util/CalendarParser.java: 1700-1702
+Length: 3
+Sim terms: []
+<             try {
+<                 val = Integer.parseInt(token);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/manager/ManagerServlet.java: 1268-1270
+Length: 3
+Sim terms: []
+<             try {
+<                 idle = Integer.parseInt(idleParam);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/facebook-android-sdk/facebook/src/main/java/com/facebook/login/CustomTabLoginMethodHandler.java: 180-182
+Length: 3
+Sim terms: []
+<                 try {
+<                     errorCode = Integer.parseInt(errorCodeString);
+<                 } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/am/CompatModePackages.java: 116-118
+Length: 3
+Sim terms: []
+<                                         try {
+<                                             modeInt = Integer.parseInt(mode);
+<                                         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.sapp/src/main/java/org/openhab/binding/sapp/internal/SappBinding.java: 133-135
+Length: 3
+Sim terms: []
+<                         try {
+<                             port = Integer.parseInt(portString);
+<                         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/WebWorks/framework/src/blackberry/web/widget/caching/CacheItem.java: 145-147
+Length: 3
+Sim terms: []
+<         try {
+<             size = Integer.parseInt( lineSize );
+<         } catch( NumberFormatException ignore ) {
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/main/java/org/multibit/viewsystem/swing/view/components/FontSizer.java: 43-45
+Length: 3
+Sim terms: []
+<             try {
+<                 unadjustedFontSize = Integer.parseInt(fontSizeString);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 97-99
+Length: 3
+Sim terms: []
+<             try {
+<                 sDiscoverableIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/rt/external/apache-xml/src/main/java/org/apache/xml/utils/URI.java: 720-724
+Length: 3
+Sim terms: []
+<           try
+<           {
+<             port = Integer.parseInt(portStr);
+<           }
+<           catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/opentsdb/src/query/expression/HighestMax.java: 61-63
+Length: 3
+Sim terms: []
+<       try {
+<         topn = Integer.parseInt(param);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/android/net/Proxy.java: 270-272
+Length: 3
+Sim terms: []
+<             try {
+<                 portVal = Integer.parseInt(port);
+<             } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/core/org/apache/hadoop/metrics/jmx/JMXContext.java: 53-55
+Length: 3
+Sim terms: []
+<       try {
+<         period = Integer.parseInt(periodStr);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/yaxim/src/org/yaxim/androidclient/util/XMPPHelper.java: 53-55
+Length: 3
+Sim terms: []
+< 		try {
+< 			ret = Integer.parseInt(value);
+< 		} catch (NumberFormatException ne) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/plugins/junit_rt/src/com/intellij/junit4/ExpectedPatterns.java: 92-95
+Length: 3
+Sim terms: []
+<         try {
+<           threshold = Integer.parseInt(property);
+<         }
+<         catch (NumberFormatException ignore) {}
+----
+/home/edmund/crawledFiles/clocomProjects/async-http-client/client/src/test/java/org/asynchttpclient/netty/RetryNonBlockingIssue.java: 166-168
+Length: 3
+Sim terms: []
+<             try {
+<                 max = Integer.parseInt(maxRequests);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/phonegap-facebook-plugin/platforms/android/FacebookLib/src/com/facebook/internal/Utility.java: 181-183
+Length: 3
+Sim terms: []
+<                             try {
+<                                 version = Integer.parseInt(versionString);
+<                             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/core/org/apache/hadoop/metrics/spi/AbstractMetricsContext.java: 445-447
+Length: 3
+Sim terms: []
+<       try {
+<         period = Integer.parseInt(periodStr);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/pm/Settings.java: 3598-3600
+Length: 3
+Sim terms: []
+<                     try {
+<                         pkgFlags = Integer.parseInt(systemStr);
+<                     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/TouchDB-Android/TouchDB-Android/src/com/couchbase/touchdb/router/TDRouter.java: 110-112
+Length: 3
+Sim terms: []
+<             try {
+<                 result = Integer.parseInt(value);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/main/java/org/multibit/viewsystem/swing/action/UndoPreferencesChangesSubmitAction.java: 70-72
+Length: 3
+Sim terms: []
+<         try {
+<             previousFontSizeAsInt = Integer.parseInt(previousFontSize);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/j2objc/jre_emul/android/platform/libcore/ojluni/src/main/java/java/util/Formatter.java: 2664-2666
+Length: 3
+Sim terms: []
+<                 try {
+<                     index = Integer.parseInt(s);
+<                 } catch (NumberFormatException x) {
+----
+/home/edmund/crawledFiles/clocomProjects/FBReaderJ/fbreader/app/src/main/java/org/geometerplus/zlibrary/core/options/ZLIntegerOption.java: 34-36
+Length: 3
+Sim terms: []
+< 			try {
+< 				myValue = Integer.parseInt(stringValue);
+< 			} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ambrose/common/src/main/java/com/twitter/ambrose/server/APIHandler.java: 83-85
+Length: 3
+Sim terms: []
+<       try {
+<         out = Integer.parseInt(value);
+<       } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/fabric8/components/fabric8-utils/src/main/java/io/fabric8/utils/Ports.java: 154-156
+Length: 3
+Sim terms: []
+<             try {
+<                 max = Integer.parseInt(maximumPort);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.fritzboxtr064/src/main/java/org/openhab/binding/fritzboxtr064/internal/FritzboxTr064Binding.java: 182-184
+Length: 3
+Sim terms: []
+<                     try {
+<                         val = Integer.parseInt(tr064result);
+<                     } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/Resteasy/resteasy-jaxrs/src/main/java/org/jboss/resteasy/plugins/interceptors/GZIPDecodingInterceptor.java: 141-145
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                size = Integer.parseInt(s);
+<             }
+<             catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/jitwatch/core/src/main/java/org/adoptopenjdk/jitwatch/loader/BytecodeLoader.java: 620-624
+Length: 3
+Sim terms: []
+< 			try
+< 			{
+< 				version = Integer.parseInt(versionPart);
+< 			}
+< 			catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/changeloglib/ChangeLogLibrary/src/main/java/it/gmariotti/changelibs/library/parser/XmlParser.java: 254-256
+Length: 3
+Sim terms: []
+<             try {
+<                 versionCode = Integer.parseInt(versionCodeStr);
+<             }catch (NumberFormatException ne){
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/tagger/maxent/MaxentTaggerServer.java: 267-269
+Length: 3
+Sim terms: []
+<     try {
+<       port = Integer.parseInt(portStr);
+<     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/lucene/core/src/java/org/apache/lucene/util/Version.java: 216-218
+Length: 3
+Sim terms: []
+<         try {
+<           prerelease = Integer.parseInt(token);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/java/util/logging/SocketHandler.java: 110-112
+Length: 3
+Sim terms: []
+<         try {
+<             p = Integer.parseInt(port);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/main/java/org/multibit/viewsystem/swing/view/panels/ShowPreferencesPanel.java: 236-238
+Length: 3
+Sim terms: []
+<       try {
+<         fontSize = Integer.parseInt(fontSizeString);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus/container/request/RegisterRequestProcessor.java: 88-92
+Length: 3
+Sim terms: []
+<         try
+<         {
+<           registerRequestProtocolVersion = Integer.parseInt(registerRequestProtocolVersionStr);
+<         }
+<         catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/org/apache/http/impl/cookie/BasicMaxAgeHandler.java: 53-55
+Length: 3
+Sim terms: []
+<         try {
+<             age = Integer.parseInt(value);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Resteasy/resteasy-jaxrs/src/main/java/org/jboss/resteasy/core/AsynchronousDispatcher.java: 104-108
+Length: 3
+Sim terms: []
+<                try
+<                {
+<                   maxUses = Integer.parseInt(s);
+<                }
+<                catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/tomcat/dbcp/dbcp2/BasicDataSourceFactory.java: 371-373
+Length: 3
+Sim terms: []
+<                 try {
+<                     level = Integer.parseInt(value);
+<                 } catch (final NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/encog-java-core/src/main/java/org/encog/app/analyst/script/normalize/AnalystField.java: 359-361
+Length: 3
+Sim terms: []
+< 			try {
+< 				classNumber = Integer.parseInt(str);
+< 			} catch (final NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/android/app/src/main/java/com/github/pockethub/android/core/issue/IssueUriMatcher.java: 68-70
+Length: 3
+Sim terms: []
+<         try {
+<             issueNumber = Integer.parseInt(number);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/s3proxy/src/main/java/org/gaul/s3proxy/S3ProxyHandler.java: 2215-2217
+Length: 3
+Sim terms: []
+<         try {
+<             partNumber = Integer.parseInt(partNumberString);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/flume/flume-core/src/main/java/com/cloudera/flume/util/FlumeShell.java: 458-460
+Length: 3
+Sim terms: []
+<     try {
+<       port = Integer.parseInt(inp);
+<     } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/presto/presto-main/src/main/java/com/facebook/presto/operator/scalar/JsonExtract.java: 353-356
+Length: 3
+Sim terms: []
+<         try {
+<             index = Integer.parseInt(fieldName);
+<         }
+<         catch (NumberFormatException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/encoders/FFmpegVideo.java: 346-348
+Length: 3
+Sim terms: []
+< 			try {
+< 				iMaxVideoBitrate = Integer.parseInt(sMaxVideoBitrate);
+< 			} catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/oozie/core/src/main/java/org/apache/oozie/util/ParamChecker.java: 177-180
+Length: 3
+Sim terms: []
+<         try {
+<             ret = Integer.parseInt(val);
+<         }
+<         catch (NumberFormatException nex) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/gov/nist/javax/sip/stack/HopImpl.java: 113-115
+Length: 3
+Sim terms: []
+<             try {
+<                 port = Integer.parseInt(portstr);
+<             } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/Bukkit/src/main/java/org/bukkit/command/defaults/ScoreboardCommand.java: 196-198
+Length: 3
+Sim terms: []
+<                 try {
+<                     value = Integer.parseInt(valueString);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/rstudio/src/gwt/src/org/rstudio/studio/client/workbench/views/vcs/svn/dialog/SVNHistoryStrategy.java: 178-182
+Length: 3
+Sim terms: []
+<       try
+<       {
+<          rev = Integer.parseInt(revision);
+<       }
+<       catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 160-162
+Length: 3
+Sim terms: []
+<             try {
+<                 sConnectPanIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/lucene/core/src/java/org/apache/lucene/util/Version.java: 179-181
+Length: 3
+Sim terms: []
+<     try {
+<       major = Integer.parseInt(token);
+<     } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/core/net/i2p/util/NativeBigInteger.java: 655-657
+Length: 3
+Sim terms: []
+<                     try {
+<                         ver = Integer.parseInt(sver);
+<                     } catch (NumberFormatException nfe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/gh4a/app/src/main/java/com/gh4a/BrowseFilter.java: 198-200
+Length: 3
+Sim terms: []
+<                 try {
+<                     pullRequestNumber = Integer.parseInt(id);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/service/protocol/AccountID.java: 325-329
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 intValue = Integer.parseInt(stringValue);
+<             }
+<             catch (NumberFormatException ex)
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/net/Proxy.java: 226-228
+Length: 3
+Sim terms: []
+<             try {
+<                 portVal = Integer.parseInt(port);
+<             } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/valves/RemoteIpValve.java: 709-711
+Length: 3
+Sim terms: []
+<                 try {
+<                     port = Integer.parseInt(portHeaderValue);
+<                 } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/opentsdb/src/tsd/SuggestRpc.java: 69-71
+Length: 3
+Sim terms: []
+<       try {
+<         max_results = Integer.parseInt(max);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/lucene/core/src/java/org/apache/lucene/util/Version.java: 193-195
+Length: 3
+Sim terms: []
+<     try {
+<       minor = Integer.parseInt(token);
+<     } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/sonarqube/tests/projects/struts-1.3.9-diet/taglib/src/main/java/org/apache/struts/taglib/logic/IterateTag.java: 286-288
+Length: 3
+Sim terms: []
+<             try {
+<                 offsetValue = Integer.parseInt(offset);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/bigbluebutton/bbb-screenshare/jws/webstart/src/main/java/org/bigbluebutton/screenshare/client/javacv/FfmpegScreenshare.java: 136-138
+Length: 3
+Sim terms: []
+<     try {
+<       fr = Integer.parseInt(value);
+<     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/vrapper/net.sourceforge.vrapper.core/src/net/sourceforge/vrapper/utils/LineAddressParser.java: 212-214
+Length: 3
+Sim terms: []
+<     	try {
+<     		modifierCount = Integer.parseInt(modifierDef);
+<     	} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/maven-android-plugin/src/main/java/com/simpligility/maven/plugins/android/standalonemojos/RunMojo.java: 424-428
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 debugPort = Integer.parseInt( parsedDebug );
+<             }
+<             catch ( NumberFormatException ex )
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/apps/org/klomp/snark/Snark.java: 255-257
+Length: 3
+Sim terms: []
+<         try {
+<              port = Integer.parseInt(s);
+<         } catch (NumberFormatException nfe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/jasper/compiler/ErrorDispatcher.java: 349-351
+Length: 3
+Sim terms: []
+<                 try {
+<                     lineNum = Integer.parseInt(lineNumStr);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/firewall/PortFilter.java: 96-98
+Length: 3
+Sim terms: []
+<                     try {
+<                         upperBound = Integer.parseInt(upperBoundString);
+<                     } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/third_party/java/src/com/google_voltpatches/common/net/HostAndPort.java: 204-206
+Length: 3
+Sim terms: []
+<       try {
+<         port = Integer.parseInt(portString);
+<       } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/util/FTPUtils.java: 174-178
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             fileSize = Integer.parseInt(fileSizeStr);
+<         }
+<         catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/jitwatch/core/src/main/java/org/adoptopenjdk/jitwatch/parser/j9/J9Line.java: 127-131
+Length: 3
+Sim terms: []
+< 			try
+< 			{
+< 				result = Integer.parseInt(bcszAttr);
+< 			}
+< 			catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/jadx/jadx-core/src/test/java/jadx/tests/integration/others/TestIssue13b.java: 41-43
+Length: 3
+Sim terms: []
+< 					try {
+< 						mSuplServerPort = Integer.parseInt(portString);
+< 					} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/rt/external/apache-xml/src/main/java/org/apache/xml/serializer/utils/URI.java: 700-704
+Length: 3
+Sim terms: []
+<           try
+<           {
+<             port = Integer.parseInt(portStr);
+<           }
+<           catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/Catacomb-Snatch/src/main/java/com/mojang/mojam/InputHandler.java: 54-56
+Length: 3
+Sim terms: []
+< 			try {
+< 				keyCode = Integer.parseInt(property);
+< 			} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitwatch/core/src/main/java/org/adoptopenjdk/jitwatch/model/Compilation.java: 329-333
+Length: 3
+Sim terms: []
+< 				try
+< 				{
+< 					result = Integer.parseInt(level);
+< 				}
+< 				catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus-bootstrap-utils/databus-bootstrap-utils-impl/src/main/java/com/linkedin/databus/bootstrap/utils/BootstrapMetadata.java: 333-337
+Length: 3
+Sim terms: []
+<       try
+<       {
+<         srcid = Integer.parseInt(mysrc);
+<       }
+<       catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/console-proxy/src/com/cloud/consoleproxy/ConsoleProxyAjaxImageHandler.java: 73-75
+Length: 3
+Sim terms: []
+< 		try {
+< 			port = Integer.parseInt(portStr);
+< 		} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/platform/platform-api/src/com/intellij/execution/process/ColoredOutputTypeRegistry.java: 166-169
+Length: 3
+Sim terms: []
+<       try {
+<         value = Integer.parseInt(string);
+<       }
+<       catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/platform/util/src/com/intellij/openapi/util/DefaultJDOMExternalizer.java: 309-312
+Length: 3
+Sim terms: []
+<     try {
+<       i = Integer.parseInt(value);
+<     }
+<     catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/dmix/JMPDComm/src/main/java/org/a0z/mpd/subsystem/Sticker.java: 337-340
+Length: 3
+Sim terms: []
+<         try {
+<             /** This will not throw an NullPointerException, only a NumberFormatException. */
+<             resultRating = Integer.parseInt(rating);
+<         } catch (final NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/plugin/globalproxyconfig/GlobalProxyPluginActivator.java: 146-151
+Length: 3
+Sim terms: []
+<                 try
+<                 {
+<                     globalProxyPort = Integer.parseInt(
+<                         globalProxyPortStr);
+<                 }
+<                 catch(NumberFormatException ex)
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/profiler/src/com/jetbrains/actionscript/profiler/model/ActionScriptProfileSettings.java: 94-97
+Length: 3
+Sim terms: []
+<       try {
+<         port = Integer.parseInt(s);
+<       }
+<       catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/ambrose/cascading3/src/main/java/com/twitter/ambrose/cascading3/EmbeddedAmbroseCascadingNotifier.java: 68-70
+Length: 3
+Sim terms: []
+<     try {
+<       sleepTimeSeconds = Integer.parseInt(sleepTimeParam);
+<     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/cmds/pm/src/com/android/commands/pm/Pm.java: 998-1000
+Length: 3
+Sim terms: []
+<         try {
+<             userId = Integer.parseInt(arg);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/pm/Settings.java: 3589-3591
+Length: 3
+Sim terms: []
+<                     try {
+<                         pkgPrivateFlags = Integer.parseInt(systemStr);
+<                     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 106-108
+Length: 3
+Sim terms: []
+<             try {
+<                 sScanIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/java/execution/openapi/src/com/intellij/execution/configurations/RemoteConnection.java: 89-92
+Length: 3
+Sim terms: []
+<       try {
+<         p = Integer.parseInt(address);
+<       }
+<       catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/j2objc/xalan/third_party/android/platform/external/apache-xml/src/main/java/org/apache/xml/utils/URI.java: 720-724
+Length: 3
+Sim terms: []
+<           try
+<           {
+<             port = Integer.parseInt(portStr);
+<           }
+<           catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/WebWorks/framework/src/blackberry/web/widget/caching/CacheItem.java: 130-132
+Length: 3
+Sim terms: []
+<         try {
+<             compressed = Integer.parseInt( lineCompressFlag );
+<         } catch( NumberFormatException ignore ) {
+----
+/home/edmund/crawledFiles/clocomProjects/glide/library/src/main/java/com/bumptech/glide/util/ContentLengthInputStream.java: 31-33
+Length: 3
+Sim terms: []
+<       try {
+<         result = Integer.parseInt(contentLengthHeader);
+<       } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/firewall/PortFilter.java: 86-88
+Length: 3
+Sim terms: []
+<                     try {
+<                         lowerBound = Integer.parseInt(lowerBoundString);
+<                     } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/ie/NERServer.java: 327-329
+Length: 3
+Sim terms: []
+<     try {
+<       port = Integer.parseInt(portStr);
+<     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/netty/codec-haproxy/src/main/java/io/netty/handler/codec/haproxy/HAProxyMessage.java: 398-400
+Length: 3
+Sim terms: []
+<         try {
+<             port = Integer.parseInt(value);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/java/debugger/impl/src/com/intellij/debugger/settings/RendererConfiguration.java: 82-85
+Length: 3
+Sim terms: []
+<       try {
+<         configurationVersion = Integer.parseInt(versionAttrib);
+<       }
+<       catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jodd/jodd-db/src/main/java/jodd/db/DbQueryParser.java: 161-163
+Length: 3
+Sim terms: []
+< 					try {
+< 						batchSize = Integer.parseInt(numberValue);
+< 					} catch (NumberFormatException nfex) {
+----
+/home/edmund/crawledFiles/clocomProjects/maven-android-plugin/src/test/projects/apidemos-android-16/apidemos-application/src/main/java/com/example/android/apis/app/DeviceAdminSample.java: 434-436
+Length: 3
+Sim terms: []
+<             try {
+<                 value = Integer.parseInt(valueString);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator.java: 735-737
+Length: 3
+Sim terms: []
+<         try {
+<           annotateGroup = Integer.parseInt(context);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/astrid/astrid/src/com/todoroo/astrid/adapter/FilterAdapter.java: 170-172
+Length: 3
+Sim terms: []
+<                         try {
+<                             size = Integer.parseInt(countString);
+<                         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jadx/jadx-core/src/test/java/jadx/tests/integration/others/TestIssue13b.java: 51-53
+Length: 3
+Sim terms: []
+< 					try {
+< 						mC2KServerPort = Integer.parseInt(portString);
+< 					} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.intertechno/src/main/java/org/openhab/binding/intertechno/internal/CULIntertechnoBinding.java: 156-159
+Length: 3
+Sim terms: []
+<             try {
+<                 value = Integer.parseInt(valueString);
+<                 return value;
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hindex/src/main/java/org/apache/hadoop/hbase/regionserver/KeyPrefixRegionSplitPolicy.java: 60-62
+Length: 3
+Sim terms: []
+<       try {
+<         prefixLength = Integer.parseInt(prefixLengthString);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/io/retry/RetryPolicies.java: 415-417
+Length: 3
+Sim terms: []
+<       try {
+<         n = Integer.parseInt(s);
+<       } catch(NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/impl/netaddr/NetworkAddressManagerServiceImpl.java: 420-424
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 bindRetries = Integer.parseInt(bindRetriesStr);
+<             }
+<             catch (NumberFormatException ex)
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/servlets/CGIServlet.java: 1658-1660
+Length: 3
+Sim terms: []
+<             try {
+<                 statusCode = Integer.parseInt(status);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/ambrose/cascading/src/main/java/com/twitter/ambrose/cascading/EmbeddedAmbroseCascadingNotifier.java: 68-70
+Length: 3
+Sim terms: []
+<     try {
+<       sleepTimeSeconds = Integer.parseInt(sleepTimeParam);
+<     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 133-135
+Length: 3
+Sim terms: []
+<             try {
+<                 sConnectA2dpIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/FSNamesystem.java: 6967-6969
+Length: 3
+Sim terms: []
+<       try{
+<         c = Integer.parseInt(cookie);
+<       }catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/plugin/generalconfig/autoaway/Preferences.java: 89-93
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 timerDefault = Integer.parseInt(timerDefaultStr);
+<             }
+<             catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/main/java/org/multibit/viewsystem/swing/action/UndoPreferencesChangesSubmitAction.java: 63-65
+Length: 3
+Sim terms: []
+<         try {
+<             previousFontStyleAsInt = Integer.parseInt(previousFontStyle);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/s3proxy/src/main/java/org/gaul/s3proxy/S3ProxyHandler.java: 1241-1243
+Length: 3
+Sim terms: []
+<             try {
+<                 maxKeys = Integer.parseInt(maxKeysString);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/router/net/i2p/router/RouterContext.java: 437-439
+Length: 3
+Sim terms: []
+<                 try {
+<                     ival = Integer.parseInt(val);
+<                 } catch (NumberFormatException nfe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 88-90
+Length: 3
+Sim terms: []
+<             try {
+<                 sEnableIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/elasticsearch/core/src/main/java/org/elasticsearch/action/support/ActiveShardCount.java: 114-116
+Length: 3
+Sim terms: []
+<             try {
+<                 val = Integer.parseInt(str);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/server/src/com/cloud/network/guru/ExternalGuestNetworkGuru.java: 108-110
+Length: 3
+Sim terms: []
+<             try {
+<                 vlanTag = Integer.parseInt(vnet);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/main/src/main/java/org/geoserver/filters/GZIPResponseWrapper.java: 70-72
+Length: 3
+Sim terms: []
+<              try {
+<                  contentLength = Integer.parseInt(value);
+<              } catch(NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/nutch/src/plugin/index-replace/src/java/org/apache/nutch/indexer/replace/ReplaceIndexer.java: 197-199
+Length: 3
+Sim terms: []
+<                 try {
+<                   flags = Integer.parseInt(value);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/util/launchutils/SipCommunicatorLock.java: 422-426
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             port = Integer.parseInt(lockPort);
+<         }
+<         catch (NumberFormatException exc)
+----
+/home/edmund/crawledFiles/clocomProjects/k-9/k9mail/src/main/java/com/fsck/k9/preferences/SettingsImporter.java: 730-732
+Length: 3
+Sim terms: []
+<         try {
+<             version = Integer.parseInt(versionString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/location/GnssLocationProvider.java: 1081-1083
+Length: 3
+Sim terms: []
+<             try {
+<                 mSuplServerPort = Integer.parseInt(portString);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 142-144
+Length: 3
+Sim terms: []
+<             try {
+<                 sConnectHeadsetIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitwatch/core/src/main/java/org/adoptopenjdk/jitwatch/model/bytecode/BytecodeAnnotationBuilder.java: 298-302
+Length: 3
+Sim terms: []
+< 						try
+< 						{
+< 							bciValue = Integer.parseInt(attrBCI);
+< 						}
+< 						catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/presto/presto-spi/src/main/java/com/facebook/presto/spi/HostAddress.java: 196-199
+Length: 3
+Sim terms: []
+<             try {
+<                 port = Integer.parseInt(portString);
+<             }
+<             catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/rt/external/apache-http/src/org/apache/http/impl/cookie/BasicMaxAgeHandler.java: 53-55
+Length: 3
+Sim terms: []
+<         try {
+<             age = Integer.parseInt(value);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/BuildCraft/src_old_license/buildcraft/core/lib/utils/ConfigUtils.java: 89-91
+Length: 3
+Sim terms: []
+<         try {
+<             parsed = Integer.parseInt(value);
+<         } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/cmds/pm/src/com/android/commands/pm/Pm.java: 876-878
+Length: 3
+Sim terms: []
+<         try {
+<             loc = Integer.parseInt(arg);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Bukkit/src/main/java/org/bukkit/command/defaults/DefaultGameModeCommand.java: 36-38
+Length: 3
+Sim terms: []
+<         try {
+<             value = Integer.parseInt(modeArg);
+<         } catch (NumberFormatException ex) {}
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java: 2901-2903
+Length: 3
+Sim terms: []
+<                         try {
+<                             version = Integer.parseInt(attributeValue);
+<                         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/cmds/wm/src/com/android/commands/wm/Wm.java: 111-113
+Length: 3
+Sim terms: []
+<         try {
+<             userId = Integer.parseInt(userIdStr);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.xbmc/src/main/java/org/openhab/binding/xbmc/rpc/calls/PlayerGetLabels.java: 97-99
+Length: 3
+Sim terms: [[pars, index]]
+C - attempt to parse the property index
+<                 try {
+<                     propertyIndex = Integer.parseInt(paramPropertyIndex);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/contrib/dataimporthandler/src/java/org/apache/solr/handler/dataimport/BinURLDataSource.java: 68-70
+Length: 3
+Sim terms: []
+<       try {
+<         readTimeout = Integer.parseInt(rTimeout);
+<       } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/impl/protocol/sip/sdp/SdpUtils.java: 272-276
+Length: 3
+Sim terms: []
+<                 try
+<                 {
+<                     numChannels = Integer.parseInt(nChansStr);
+<                 }
+<                 catch(NumberFormatException exc)
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/location/GnssLocationProvider.java: 1108-1110
+Length: 3
+Sim terms: []
+<                 try {
+<                     suplMode = Integer.parseInt(modeString);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/main/java/com/orientechnologies/orient/core/metadata/schema/OSchemaShared.java: 1418-1420
+Length: 3
+Sim terms: []
+<     try {
+<       clId = Integer.parseInt(stringValue);
+<     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/f8DeveloperConferenceApp/facebook-android-sdk/facebook/src/com/facebook/widget/WebDialog.java: 378-380
+Length: 3
+Sim terms: []
+<                     try {
+<                         errorCode = Integer.parseInt(errorCodeString);
+<                     } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/Resteasy/resteasy-jaxrs/src/main/java/org/jboss/resteasy/util/PortProvider.java: 66-70
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                port = Integer.parseInt(property);
+<             }
+<             catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/pig/src/org/apache/pig/backend/hadoop/executionengine/mapReduceLayer/JobControlCompiler.java: 308-310
+Length: 3
+Sim terms: []
+<         try {
+<             timeToSleep = Integer.parseInt(pigJobControlSleep);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/wildfly/testsuite/shared/src/main/java/org/jboss/as/test/integration/logging/syslogserver/Rfc5424SyslogEvent.java: 115-117
+Length: 3
+Sim terms: []
+<         try {
+<             priority = Integer.parseInt(priorityStr);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/yobi/app/playRepository/SVNRepository.java: 153-155
+Length: 3
+Sim terms: []
+<         try {
+<             revisionNumber = Integer.parseInt(revision);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/OpenGrok/src/org/opensolaris/opengrok/analysis/Ctags.java: 555-557
+Length: 3
+Sim terms: []
+<         try {
+<             lineno = Integer.parseInt(lnum);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/core/src/java/org/apache/solr/update/processor/DistributedUpdateProcessor.java: 724-726
+Length: 3
+Sim terms: []
+<           try {
+<             minRf = Integer.parseInt(minRepFact);
+<           } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/netty/transport/src/main/java/io/netty/channel/DefaultChannelId.java: 140-142
+Length: 3
+Sim terms: []
+<         try {
+<             pid = Integer.parseInt(value);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/docx4j/src/main/java/org/docx4j/org/apache/xml/serializer/utils/URI.java: 700-704
+Length: 3
+Sim terms: []
+<           try
+<           {
+<             port = Integer.parseInt(portStr);
+<           }
+<           catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/rt/external/apache-http/src/org/apache/http/impl/cookie/RFC2965VersionAttributeHandler.java: 64-66
+Length: 3
+Sim terms: []
+<         try {
+<             version = Integer.parseInt(value);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/rundeck/core/src/main/java/com/dtolabs/rundeck/core/execution/impl/jsch/NodeSSHConnectionInfo.java: 219-221
+Length: 3
+Sim terms: []
+<             try {
+<                 timeout = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/fitnesse/src/fitnesse/fixtures/TableFixture.java: 57-60
+Length: 3
+Sim terms: []
+<     try {
+<       i = Integer.parseInt(text);
+<     }
+<     catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/WordPress-Android/WordPress/src/main/java/org/wordpress/android/ui/reader/ReaderPostPagerActivity.java: 465-467
+Length: 3
+Sim terms: []
+<                 try {
+<                     mCommentId = Integer.parseInt(replyToCommentId);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/configuration/FormatConfiguration.java: 132-134
+Length: 3
+Sim terms: []
+< 				try {
+< 					iMaxNbChannels = Integer.parseInt(maxNbChannels);
+< 				} catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/jetty.project/jetty-servlets/src/main/java/org/eclipse/jetty/servlets/CrossOriginFilter.java: 194-198
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             preflightMaxAge = Integer.parseInt(preflightMaxAgeConfig);
+<         }
+<         catch (NumberFormatException x)
+----
+/home/edmund/crawledFiles/clocomProjects/maven-android-plugin/src/test/projects/apidemos-android-16/apidemos-application/src/main/java/com/example/android/apis/app/DeviceAdminSample.java: 671-673
+Length: 3
+Sim terms: []
+<             try {
+<                 value = Integer.parseInt(valueString);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/hdfs/org/apache/hadoop/hdfs/server/namenode/FSNamesystem.java: 9402-9404
+Length: 3
+Sim terms: []
+<       try{
+<         c = Integer.parseInt(cookie);
+<       }catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/util/Version.java: 124-126
+Length: 3
+Sim terms: []
+< 		try {
+< 			msd = Integer.parseInt(msdString);
+< 		} catch (NumberFormatException e) { }
+----
+/home/edmund/crawledFiles/clocomProjects/PretendYoureXyzzy/src/main/java/net/socialgamer/cah/servlets/CahServlet.java: 78-80
+Length: 3
+Sim terms: []
+<       try {
+<         serial = Integer.parseInt(serialString);
+<       } catch (final NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/core/WekaPackageManager.java: 682-684
+Length: 3
+Sim terms: []
+<       try {
+<         numPackages = Integer.parseInt(n);
+<       } catch (NumberFormatException ne) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 115-117
+Length: 3
+Sim terms: []
+<             try {
+<                 sEnablePanIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/restful/src/main/java/org/cloudifysource/rest/command/CommandUtils.java: 66-68
+Length: 3
+Sim terms: []
+< 		try{
+< 			arrayIndex = Integer.parseInt(index);
+< 		}catch (NumberFormatException e){
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/util/UriRetriever.java: 99-101
+Length: 3
+Sim terms: []
+< 			try {
+< 				totalBytes = Integer.parseInt(value);
+< 			} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Catacomb-Snatch/src/main/java/com/mojang/mojam/Options.java: 48-50
+Length: 3
+Sim terms: []
+< 		try {
+< 			id = Integer.parseInt(value);
+< 		} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/manager/HTMLManagerServlet.java: 767-769
+Length: 3
+Sim terms: []
+<             try {
+<                 idle = Integer.parseInt(idleParam);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/loadbalancing/src/main/java/com/eucalyptus/loadbalancing/LoadBalancingServiceProperties.java: 81-83
+Length: 3
+Sim terms: []
+<     try{
+<       numVm = Integer.parseInt(VM_PER_ZONE);
+<     }catch(NumberFormatException ex){
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/hardware/camera2/CameraManager.java: 307-309
+Length: 3
+Sim terms: []
+<             try {
+<                 id = Integer.parseInt(cameraId);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/net/WebAddress.java: 94-96
+Length: 3
+Sim terms: []
+<                 try {
+<                     mPort = Integer.parseInt(t);
+<                 } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/router/net/i2p/router/client/ClientConnectionRunner.java: 289-289
+Length: 3
+Sim terms: []
+<                     try { thresh = Integer.parseInt(pthresh); } catch (NumberFormatException nfe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/kotlin/plugins/lint/lint-api/src/com/android/tools/klint/detector/api/Project.java: 1252-1254
+Length: 3
+Sim terms: []
+<                         try {
+<                             sdkVersion = Integer.parseInt(version);
+<                         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/graphhopper/core/src/main/java/com/graphhopper/routing/util/BikeCommonFlagEncoder.java: 493-495
+Length: 3
+Sim terms: []
+<         try {
+<             classvalue = Integer.parseInt(tagvalue);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/service/protocol/media/ConferenceInfoDocument.java: 322-326
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             version = Integer.parseInt(versionString);
+<         }
+<         catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/platform_dalvik/dx/src/com/android/dx/command/dexer/Main.java: 1574-1576
+Length: 3
+Sim terms: []
+<                     try {
+<                         value = Integer.parseInt(arg);
+<                     } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/s3proxy/src/main/java/org/gaul/s3proxy/S3ProxyHandler.java: 2387-2389
+Length: 3
+Sim terms: []
+<         try {
+<             partNumber = Integer.parseInt(partNumberString);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/impl/protocol/icq/ProtocolProviderServiceIcqImpl.java: 345-349
+Length: 3
+Sim terms: []
+<                 try
+<                 {
+<                     proxyPort = Integer.parseInt(globalProxyPortStr);
+<                 }
+<                 catch (NumberFormatException ex)
+----
+/home/edmund/crawledFiles/clocomProjects/dmix/JMPDComm/src/main/java/org/a0z/mpd/exception/MPDException.java: 199-201
+Length: 3
+Sim terms: []
+<             try {
+<                 queuePosition = Integer.parseInt(parsed);
+<             } catch (final NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus-client/databus-client-http/src/main/java/com/linkedin/databus/client/netty/NettyHttpDatabusRelayConnection.java: 735-739
+Length: 3
+Sim terms: []
+<           try
+<           {
+<             registerResponseVersion = Integer.parseInt(_registerResponseVersionHdr);
+<           }
+<           catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/Resteasy/resteasy-jaxrs/src/main/java/org/jboss/resteasy/util/PortProvider.java: 52-56
+Length: 3
+Sim terms: []
+<          try
+<          {
+<             port = Integer.parseInt(property);
+<          }
+<          catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/jvm-serializers/tpc/src/serializers/WriteResultsToJavascript.java: 244-247
+Length: 3
+Sim terms: []
+<                 try {
+<                     v = Integer.parseInt(c);
+<                 }
+<                 catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/astrid/facebook/facebook/src/com/facebook/widget/WebDialog.java: 302-304
+Length: 3
+Sim terms: []
+<                     try {
+<                         errorCode = Integer.parseInt(errorCodeString);
+<                     } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/pm/Settings.java: 3572-3574
+Length: 3
+Sim terms: []
+<                 try {
+<                     versionCode = Integer.parseInt(version);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/impl/protocol/irc/ProtocolProviderServiceIrcImpl.java: 395-399
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             globalProxyPort = Integer.parseInt(globalProxyPortStr);
+<         }
+<         catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/console-proxy/src/com/cloud/consoleproxy/ConsoleProxyAjaxImageHandler.java: 80-82
+Length: 3
+Sim terms: []
+< 		try {
+< 			key = Integer.parseInt(keyStr);
+< 		} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/android-saripaar/saripaar-tests/src/main/java/com/mobsandgeeks/saripaar/tests/ui/CustomMultipleViewDataAdaptersActivity.java: 145-147
+Length: 3
+Sim terms: []
+<             try {
+<                 number = Integer.parseInt(numberText);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/connectbot/app/src/main/java/org/connectbot/HostEditorFragment.java: 734-736
+Length: 3
+Sim terms: []
+< 				try {
+< 					fontSize = Integer.parseInt(text);
+< 				} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/apps/org/klomp/snark/SnarkManager.java: 610-610
+Length: 3
+Sim terms: []
+<                 try { port = Integer.parseInt(i2cpPort); } catch (NumberFormatException nfe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/android-saripaar/saripaar/src/main/java/commons/validator/routines/InetAddressValidator.java: 91-93
+Length: 3
+Sim terms: []
+<             try {
+<                 iIpSegment = Integer.parseInt(ipSegment);
+<             } catch(NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jamendo-android/src/com/teleca/jamendo/activity/RadioActivity.java: 283-285
+Length: 3
+Sim terms: []
+< 			try {
+< 				id = Integer.parseInt(input); // search by id
+< 			} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hudson/core/src/main/java/hudson/model/RunMap.java: 199-201
+Length: 3
+Sim terms: []
+<         try {
+<             n = Integer.parseInt(id);
+<         } catch (NumberFormatException x) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/lucene/core/src/java/org/apache/lucene/util/Version.java: 206-208
+Length: 3
+Sim terms: []
+<       try {
+<         bugfix = Integer.parseInt(token);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/Bukkit/src/main/java/org/bukkit/command/defaults/GameModeCommand.java: 47-49
+Length: 3
+Sim terms: []
+<             try {
+<                 value = Integer.parseInt(modeArg);
+<             } catch (NumberFormatException ex) {}
+----
+/home/edmund/crawledFiles/clocomProjects/jitwatch/core/src/main/java/org/adoptopenjdk/jitwatch/model/bytecode/BytecodeAnnotationBuilder.java: 413-417
+Length: 3
+Sim terms: []
+< 					try
+< 					{
+< 						bciValue = Integer.parseInt(attrBCI);
+< 					}
+< 					catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/j2objc/xalan/third_party/android/platform/external/apache-xml/src/main/java/org/apache/xml/serializer/utils/URI.java: 700-704
+Length: 3
+Sim terms: []
+<           try
+<           {
+<             port = Integer.parseInt(portStr);
+<           }
+<           catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/astrid/astrid/src/com/todoroo/astrid/utility/TitleParser.java: 438-440
+Length: 3
+Sim terms: []
+<                 try {
+<                     interval = Integer.parseInt(intervalStr);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/selendroid/selendroid-server/src/main/java/io/selendroid/server/DefaultServerInstrumentation.java: 457-459
+Length: 3
+Sim terms: []
+<         try {
+<                 parsedServerPort = Integer.parseInt(port);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/rundeck/core/src/main/java/com/dtolabs/rundeck/core/execution/utils/ResolverUtil.java: 65-67
+Length: 3
+Sim terms: []
+<             try {
+<                 value = Integer.parseInt(string);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/impl/protocol/jabber/ProtocolProviderServiceJabberImpl.java: 1065-1070
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 globalProxyPort = Integer.parseInt(
+<                     globalProxyPortStr);
+<             }
+<             catch(NumberFormatException ex)
+----
+/home/edmund/crawledFiles/clocomProjects/hudson/core/src/main/java/hudson/ProxyConfiguration.java: 326-328
+Length: 3
+Sim terms: []
+<             try {
+<                 port = Integer.parseInt(value);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/nutch/src/java/org/apache/nutch/parse/ParsePluginsReader.java: 156-158
+Length: 3
+Sim terms: []
+<           try {
+<             order = Integer.parseInt(orderStr);
+<           } catch (NumberFormatException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/kilim/src/kilim/http/HttpRequest.java: 203-205
+Length: 3
+Sim terms: []
+<             try {
+<                 contentLength = Integer.parseInt(cl);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/sonarqube/tests/projects/struts-1.3.9-diet/taglib/src/main/java/org/apache/struts/taglib/logic/IterateTag.java: 309-311
+Length: 3
+Sim terms: []
+<             try {
+<                 lengthValue = Integer.parseInt(length);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/zookeeper/src/contrib/rest/src/java/org/apache/zookeeper/server/jersey/resources/SessionsResource.java: 91-93
+Length: 3
+Sim terms: []
+<         try {
+<             expireInSeconds = Integer.parseInt(expire);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/configuration/FormatConfiguration.java: 150-152
+Length: 3
+Sim terms: []
+< 				try {
+< 					iMaxBitrate = Integer.parseInt(maxBitrate);
+< 				} catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/console-proxy/src/com/cloud/consoleproxy/ConsoleProxyAjaxHandler.java: 88-90
+Length: 3
+Sim terms: []
+< 		try {
+< 			port = Integer.parseInt(portStr);
+< 		} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/main/src/main/java/org/geoserver/filters/GZIPResponseWrapper.java: 54-56
+Length: 3
+Sim terms: []
+<             try {
+<                 contentLength = Integer.parseInt(value);
+<             } catch(NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/oozie/core/src/main/java/org/apache/oozie/service/LiteWorkflowStoreService.java: 126-129
+Length: 3
+Sim terms: []
+<             try {
+<                 ret = Integer.parseInt(userRetryInterval);
+<             }
+<             catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/persistence/org.openhab.persistence.caldav/src/main/java/org/openhab/persistence/caldav/internal/CaldavConfiguration.java: 49-51
+Length: 3
+Sim terms: []
+<                 try {
+<                     duration = Integer.parseInt(durationString);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 151-153
+Length: 3
+Sim terms: []
+<             try {
+<                 sConnectInputIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hudson/core/src/main/java/jenkins/model/Jenkins.java: 2240-2242
+Length: 3
+Sim terms: []
+<             try {
+<                 port = Integer.parseInt(forwardedPort);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/YCSB/nosqldb/src/main/java/com/yahoo/ycsb/db/NoSqlDbClient.java: 59-61
+Length: 3
+Sim terms: []
+<       try {
+<         i = Integer.parseInt(p);
+<       } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/vaadin/server/src/main/java/com/vaadin/server/communication/AtmospherePushConnection.java: 76-78
+Length: 3
+Sim terms: []
+<             try {
+<                 messageLength = Integer.parseInt(length);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/OpenRefine/main/src/com/google/refine/expr/util/CalendarParser.java: 1804-1806
+Length: 3
+Sim terms: []
+<             try {
+<                 val = Integer.parseInt(token);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/docx4j/src/xlsx4j/java/org/xlsx4j/org/apache/poi/ss/usermodel/DateUtil.java: 687-689
+Length: 3
+Sim terms: []
+<         try {
+<             result = Integer.parseInt(strVal);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/maven-android-plugin/src/test/projects/apidemos-android-16/apidemos-application/src/main/java/com/example/android/apis/app/DeviceAdminSample.java: 536-538
+Length: 3
+Sim terms: []
+<             try {
+<                 value = Integer.parseInt(valueString);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/commons/src/java/com/twitter/common/net/http/handlers/HttpServletRequestParams.java: 21-23
+Length: 3
+Sim terms: []
+<       try {
+<         result = Integer.parseInt(value);
+<       } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/android/net/WebAddress.java: 88-90
+Length: 3
+Sim terms: []
+<                 try {
+<                     mPort = Integer.parseInt(t);
+<                 } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/opentsdb/src/query/expression/HighestCurrent.java: 60-62
+Length: 3
+Sim terms: []
+<       try {
+<         topn = Integer.parseInt(param);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/pm/Settings.java: 3583-3585
+Length: 3
+Sim terms: []
+<                 try {
+<                     pkgFlags = Integer.parseInt(systemStr);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/logback/logback-classic/src/main/java/ch/qos/logback/classic/pattern/ThrowableProxyConverter.java: 59-61
+Length: 3
+Sim terms: []
+<                 try {
+<                     lengthOption = Integer.parseInt(lengthStr);
+<                 } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/crash/connectors/ssh/src/main/java/org/crsh/ssh/term/SSHContext.java: 109-112
+Length: 3
+Sim terms: []
+<       try {
+<         height = Integer.parseInt(s);
+<       }
+<       catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/main/java/org/multibit/viewsystem/swing/view/components/FontSizer.java: 53-55
+Length: 3
+Sim terms: []
+<         try {
+<             fontStyle = Integer.parseInt(fontStyleString);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.modbus/src/main/java/net/wimpi/modbus/util/SerialParameters.java: 194-196
+Length: 3
+Sim terms: []
+<         try {
+<             intBaudRate = Integer.parseInt(rate);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-beans/src/main/java/org/springframework/beans/factory/xml/SimpleConstructorNamespaceHandler.java: 107-110
+Length: 3
+Sim terms: []
+< 					try {
+< 						index = Integer.parseInt(arg);
+< 					}
+< 					catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/zookeeper/src/contrib/rest/src/java/org/apache/zookeeper/server/jersey/resources/ZNodeResource.java: 392-394
+Length: 3
+Sim terms: []
+<         try {
+<             version = Integer.parseInt(versionParam);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/configuration/FormatConfiguration.java: 141-143
+Length: 3
+Sim terms: []
+< 				try {
+< 					iMaxFrequency = Integer.parseInt(maxFrequency);
+< 				} catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/Kundera/test/benchmark/ycsb/src/main/java/com/impetus/kundera/ycsb/benchmark/OracleNosqlClient.java: 52-56
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 i = Integer.parseInt(p);
+<             }
+<             catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/apps/net/i2p/client/streaming/I2PSocketManagerFactory.java: 251-253
+Length: 3
+Sim terms: []
+<             try {
+<                 i2cpPort = Integer.parseInt(i2cpPortStr);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/Essentials/Essentials/src/com/earth2me/essentials/textreader/TextPager.java: 63-67
+Length: 3
+Sim terms: []
+< 				try
+< 				{
+< 					page = Integer.parseInt(pageStr);
+< 				}
+< 				catch (NumberFormatException ex)
+----
+/home/edmund/crawledFiles/clocomProjects/facebook-android-sdk/facebook/src/main/java/com/facebook/internal/FetchedAppSettings.java: 170-172
+Length: 3
+Sim terms: []
+<                             try {
+<                                 version = Integer.parseInt(versionString);
+<                             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/contrib/dataimporthandler/src/java/org/apache/solr/handler/dataimport/URLDataSource.java: 79-81
+Length: 3
+Sim terms: []
+<       try {
+<         readTimeout = Integer.parseInt(rTimeout);
+<       } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/filters/ExpiresFilter.java: 1586-1588
+Length: 3
+Sim terms: []
+<             try {
+<                 amount = Integer.parseInt(currentToken);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/java/java-runtime/src/com/intellij/rt/execution/junit/ComparisonFailureData.java: 149-152
+Length: 3
+Sim terms: []
+<     try {
+<       threshold = Integer.parseInt(property);
+<     }
+<     catch (NumberFormatException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/fabric8/components/fabric8-utils/src/main/java/io/fabric8/utils/Ports.java: 146-148
+Length: 3
+Sim terms: []
+<             try {
+<                 min = Integer.parseInt(minimumPort);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/main/java/org/multibit/utils/VersionComparator.java: 61-63
+Length: 3
+Sim terms: []
+<         try {
+<             toReturn = Integer.parseInt(intString);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/date/SerialDate.java: 447-450
+Length: 3
+Sim terms: []
+<         try {
+<             result = Integer.parseInt(s);
+<         }
+<         catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/pm/Settings.java: 3436-3438
+Length: 3
+Sim terms: []
+<             try {
+<                 versionCode = Integer.parseInt(version);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/server/src/com/cloud/servlet/ConsoleProxyServlet.java: 188-190
+Length: 3
+Sim terms: []
+< 		try {
+< 			w = Integer.parseInt(value);
+< 		} catch(NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus2-relay/databus2-event-producer-or/src/main/java/com/linkedin/databus2/producers/OpenReplicatorEventProducer.java: 215-219
+Length: 3
+Sim terms: []
+<     try
+<     {
+<       serverId = Integer.parseInt(serverIdStr);
+<     }
+<     catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/vaadin/client/src/main/java/com/vaadin/client/componentlocator/LegacyLocatorStrategy.java: 550-552
+Length: 3
+Sim terms: []
+<                 try {
+<                     widgetPosition = Integer.parseInt(indexString);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus-client/databus-client-api/src/main/java/com/linkedin/databus/client/pub/FileSystemCheckpointPersistenceProvider.java: 527-532
+Length: 3
+Sim terms: []
+<       try
+<       {
+<         index = Integer.parseInt(suffix);
+<         return (index < 0) ? null : new HistoryEntry(index, file);
+<       }
+<       catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/modules/jdbc-pool/src/main/java/org/apache/tomcat/jdbc/pool/DataSourceFactory.java: 275-277
+Length: 3
+Sim terms: []
+<                 try {
+<                     level = Integer.parseInt(value);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mct/fastPlotViews/src/main/java/gov/nasa/arc/mct/fastplot/bridge/PlotLineGlobalConfiguration.java: 66-68
+Length: 3
+Sim terms: []
+< 				try {	
+< 					fontSize = Integer.parseInt(size);
+< 				} catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/core/src/java/org/apache/solr/schema/SchemaManager.java: 199-201
+Length: 3
+Sim terms: []
+<           try {
+<             maxChars = Integer.parseInt(maxCharsStr);
+<           } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/buck/third-party/java/aosp/src/com/android/common/sdklib/AndroidVersion.java: 106-108
+Length: 3
+Sim terms: []
+<         try {
+<             apiLevel = Integer.parseInt(apiOrCodename);
+<         } catch (NumberFormatException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/crash/connectors/ssh/src/main/java/org/crsh/ssh/term/SSHContext.java: 95-98
+Length: 3
+Sim terms: []
+<       try {
+<         width = Integer.parseInt(s);
+<       }
+<       catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/keepassdroid/app/src/main/java/com/keepassdroid/database/load/ImporterV4.java: 998-1000
+Length: 3
+Sim terms: []
+< 		try {
+< 			u = Integer.parseInt(str);
+< 		} catch( NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/metrics/spi/AbstractMetricsContext.java: 481-483
+Length: 3
+Sim terms: []
+<       try {
+<         period = Integer.parseInt(periodStr);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/configuration/FormatConfiguration.java: 168-170
+Length: 3
+Sim terms: []
+< 				try {
+< 					iMaxVideoHeight = Integer.parseInt(maxVideoHeight);
+< 				} catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/servlet/SyndicationServlet.java: 186-188
+Length: 3
+Sim terms: []
+< 			try {
+< 				length = Integer.parseInt(l);
+< 			} catch (NumberFormatException x) {
+----
+/home/edmund/crawledFiles/clocomProjects/k-9/k9mail/src/main/java/com/fsck/k9/preferences/SettingsImporter.java: 749-751
+Length: 3
+Sim terms: []
+<         try {
+<             version = Integer.parseInt(versionString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/platform/lang-impl/src/com/intellij/codeInsight/folding/impl/PsiNamesElementSignatureProvider.java: 95-98
+Length: 3
+Sim terms: []
+<         try {
+<           index = Integer.parseInt(indexStr);
+<         }
+<         catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/platform/smRunner/src/com/intellij/execution/testframework/sm/runner/OutputToGeneralTestEventsConverter.java: 567-570
+Length: 3
+Sim terms: []
+<       try {
+<         count = Integer.parseInt(countStr);
+<       }
+<       catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/wildfly/iiop-openjdk/src/main/java/org/wildfly/iiop/openjdk/naming/jndi/CNBindingEnumeration.java: 72-74
+Length: 3
+Sim terms: []
+<             try {
+<                 batchsize = Integer.parseInt(batch);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/AntennaPod/core/src/main/java/de/danoeh/antennapod/core/service/download/HttpDownloader.java: 161-163
+Length: 3
+Sim terms: []
+<                     try {
+<                         contentLength = Integer.parseInt(contentLen);
+<                     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Kundera/src/jpa-engine/core/src/main/java/com/impetus/kundera/cache/ElementCollectionCacheManager.java: 191-195
+Length: 3
+Sim terms: []
+<                 try
+<                 {
+<                     elementCollectionCount = Integer.parseInt(elementCollectionCountStr);
+<                 }
+<                 catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/OpenRefine/main/src/com/google/refine/importers/ImporterUtilities.java: 84-86
+Length: 3
+Sim terms: []
+<                 try {
+<                     value = Integer.parseInt(s);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/core/net/i2p/client/naming/BlockfileNamingService.java: 836-838
+Length: 3
+Sim terms: []
+<             try {
+<                 limit = Integer.parseInt(lim);
+<             } catch (NumberFormatException nfe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/servlets/WebdavServlet.java: 934-936
+Length: 3
+Sim terms: []
+<                     try {
+<                         lockDuration = Integer.parseInt(lockDurationStr);
+<                     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/hsqldb19b3/org/hsqldb_voltpatches/persist/HsqlProperties.java: 157-159
+Length: 3
+Sim terms: []
+<         try {
+<             defaultValue = Integer.parseInt(prop);
+<         } catch (NumberFormatException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/core/net/i2p/I2PAppContext.java: 477-479
+Length: 3
+Sim terms: []
+<             try {
+<                 ival = Integer.parseInt(val);
+<             } catch (NumberFormatException nfe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/PushTalk/server-java/src/org/pushtalk/server/JettyServer.java: 33-35
+Length: 3
+Sim terms: []
+< 			try {
+< 				port = Integer.parseInt(sPort);
+< 			} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/main/java/org/multibit/viewsystem/swing/view/panels/ShowPreferencesPanel.java: 225-227
+Length: 3
+Sim terms: []
+<       try {
+<         fontStyle = Integer.parseInt(fontStyleString);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/dmix/JMPDComm/src/main/java/org/a0z/mpd/exception/MPDException.java: 221-223
+Length: 3
+Sim terms: []
+<             try {
+<                 errorCode = Integer.parseInt(parsed);
+<             } catch (final NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/rundeck/rundeck-launcher/rundeck-jetty-server/src/main/java/com/dtolabs/rundeck/jetty/jaas/JettyCachingLdapLoginModule.java: 873-875
+Length: 3
+Sim terms: []
+<             try {
+<                 _cacheDuration = Integer.parseInt(cacheDurationSetting);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/router/net/i2p/router/client/ClientConnectionRunner.java: 285-285
+Length: 3
+Sim terms: []
+<                     try { tags = Integer.parseInt(ptags); } catch (NumberFormatException nfe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/flyingsaucer/flying-saucer-core/src/main/java/org/xhtmlrenderer/simple/xhtml/controls/AbstractControl.java: 189-191
+Length: 3
+Sim terms: []
+<             try {
+<                 result = Integer.parseInt(str);
+<             } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/jitwatch/core/src/main/java/org/adoptopenjdk/jitwatch/jarscan/JarScan.java: 228-232
+Length: 3
+Sim terms: []
+< 				try
+< 				{
+< 					result = Integer.parseInt(argValue);
+< 				}
+< 				catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/servlets/CGIServlet.java: 1687-1689
+Length: 3
+Sim terms: []
+<             try {
+<                 statusCode = Integer.parseInt(status);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/AndroidSocialNetworks/third_party/facebook/src/com/facebook/widget/WebDialog.java: 380-382
+Length: 3
+Sim terms: []
+<                     try {
+<                         errorCode = Integer.parseInt(errorCodeString);
+<                     } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/h2o/src/main/java/water/api/RequestArguments.java: 1748-1750
+Length: 3
+Sim terms: []
+<         try {
+<           cidx = Integer.parseInt(input);
+<         } catch( NumberFormatException e ) { cidx = -1; }
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.xbmc/src/main/java/org/openhab/binding/xbmc/rpc/calls/PlayerGetItem.java: 101-103
+Length: 3
+Sim terms: [[pars, index]]
+C - attempt to parse the property index
+<                 try {
+<                     propertyIndex = Integer.parseInt(paramPropertyIndex);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/phonegap-facebook-plugin/platforms/android/FacebookLib/src/com/facebook/widget/WebDialog.java: 420-422
+Length: 3
+Sim terms: []
+<                     try {
+<                         errorCode = Integer.parseInt(errorCodeString);
+<                     } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/core/net/i2p/client/naming/BlockfileNamingService.java: 840-842
+Length: 3
+Sim terms: []
+<             try {
+<                 skip = Integer.parseInt(sk);
+<             } catch (NumberFormatException nfe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/org/apache/http/impl/cookie/RFC2965VersionAttributeHandler.java: 64-66
+Length: 3
+Sim terms: []
+<         try {
+<             version = Integer.parseInt(value);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/formats/v2/AudioProperties.java: 188-190
+Length: 3
+Sim terms: []
+< 			try {
+< 				result = Integer.parseInt(matchResult);
+< 			} catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/hector/core/src/main/java/me/prettyprint/cassandra/connection/client/HThriftClient.java: 229-231
+Length: 3
+Sim terms: []
+<         try {
+<           timeoutVar = Integer.parseInt(timeoutStr);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/filters/RemoteIpFilter.java: 864-866
+Length: 3
+Sim terms: []
+<                 try {
+<                     port = Integer.parseInt(portHeaderValue);
+<                 } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/rest-client/src/main/java/org/cloudifysource/restclient/RestClient.java: 941-943
+Length: 3
+Sim terms: []
+< 			try {
+< 				restClientSocketTimeout = Integer.parseInt(restClientSocketTimeoutSysProp);
+< 			} catch (final NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/console-proxy/src/com/cloud/consoleproxy/ConsoleProxyAjaxHandler.java: 105-107
+Length: 3
+Sim terms: []
+< 			try {
+< 				event = Integer.parseInt(eventStr);
+< 			} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-game-server/jetserver/src/main/java/org/menacheri/jetserver/concurrent/Lanes.java: 24-28
+Length: 3
+Sim terms: []
+< 			try
+< 			{
+< 				cores = Integer.parseInt(serverCores);
+< 			}
+< 			catch (NumberFormatException e)
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/plugins/svn4idea/src/org/jetbrains/idea/svn/SvnNativeLogParser.java: 32-34
+Length: 3
+Sim terms: []
+<     try {
+<       returnVal = Integer.parseInt(returnValStr);
+<     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/firewall/PortFilter.java: 66-68
+Length: 3
+Sim terms: []
+<                 try {
+<                     value = Integer.parseInt(equalsValue);
+<                 } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 191-193
+Length: 3
+Sim terms: []
+<             try {
+<                 sDevicePairPasskey = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.xbmc/src/main/java/org/openhab/binding/xbmc/rpc/calls/PlayerGetProperties.java: 97-99
+Length: 3
+Sim terms: [[pars, index]]
+C - attempt to parse the property index
+<                 try {
+<                     propertyIndex = Integer.parseInt(paramPropertyIndex);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hydra/hydra-main/src/main/java/com/addthis/hydra/minion/MinionWorkItem.java: 182-184
+Length: 3
+Sim terms: []
+<         try {
+<             exit = Integer.parseInt(exitString);
+<         } catch (NumberFormatException ne) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/contrib/dataimporthandler/src/java/org/apache/solr/handler/dataimport/BinURLDataSource.java: 61-63
+Length: 3
+Sim terms: []
+<       try {
+<         connectionTimeout = Integer.parseInt(cTimeout);
+<       } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 124-126
+Length: 3
+Sim terms: []
+<             try {
+<                 sPairIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hbc/hbc-core/src/main/java/com/twitter/hbc/core/processor/StringDelimitedProcessor.java: 60-62
+Length: 3
+Sim terms: []
+<       try {
+<         delimitedCount = Integer.parseInt(line);
+<       } catch (NumberFormatException n) {
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/main/java/org/multibit/viewsystem/swing/view/components/JFontChooser.java: 261-263
+Length: 3
+Sim terms: []
+<         try {
+<             fontSize = Integer.parseInt(fontSizeString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/facebook-android-sdk/facebook/src/main/java/com/facebook/internal/WebDialog.java: 502-504
+Length: 3
+Sim terms: []
+<                     try {
+<                         errorCode = Integer.parseInt(errorCodeString);
+<                     } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/contrib/dataimporthandler/src/java/org/apache/solr/handler/dataimport/URLDataSource.java: 72-74
+Length: 3
+Sim terms: []
+<       try {
+<         connectionTimeout = Integer.parseInt(cTimeout);
+<       } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/bluetoothtests/src/android/bluetooth/BluetoothTestRunner.java: 169-171
+Length: 3
+Sim terms: []
+<             try {
+<                 sStartStopScoIterations = Integer.parseInt(val);
+<             } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Pydev/plugins/org.python.pydev.refactoring/tests/org/python/pydev/refactoring/tests/codegenerator/overridemethods/MockupOverrideMethodsRequestProcessor.java: 53-55
+Length: 3
+Sim terms: []
+<         try {
+<             parsedInt = Integer.parseInt(classSelection);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/astrid/astrid/src/com/todoroo/astrid/adapter/FilterAdapter.java: 531-533
+Length: 3
+Sim terms: []
+<                 try {
+<                     countInt = Integer.parseInt(count);
+<                 } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/rt/libcore/luni/src/main/java/java/util/logging/SocketHandler.java: 110-112
+Length: 3
+Sim terms: []
+<         try {
+<             p = Integer.parseInt(port);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/util/JsonReader.java: 516-518
+Length: 3
+Sim terms: []
+<         try {
+<             result = Integer.parseInt(value);
+<         } catch (NumberFormatException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.modbus/src/main/java/net/wimpi/modbus/util/SerialParameters.java: 349-351
+Length: 3
+Sim terms: []
+<         try {
+<             intDataBits = Integer.parseInt(databits);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/cgeo/main/src/cgeo/geocaching/connector/gc/GCLogin.java: 460-462
+Length: 3
+Sim terms: []
+<                 try {
+<                     no = Integer.parseInt(sno);
+<                 } catch (final NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/zookeeper/src/contrib/rest/src/java/org/apache/zookeeper/server/jersey/resources/ZNodeResource.java: 267-269
+Length: 3
+Sim terms: []
+<         try {
+<             version = Integer.parseInt(versionParam);
+<         } catch (NumberFormatException e) {
+----
+Comments (size 1):
+1.
+attempt to parse the property index
+----
+Ranked result (sim terms):
+1.
+attempt to parse the property index
+----
+

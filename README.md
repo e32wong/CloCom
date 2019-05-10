@@ -113,11 +113,12 @@ It was generated using the newer Match 2017 StackOverflow database with the foll
 - no NLP parse tree editing other than basic sentence refinements (see reason below as to why it isn't being applied in this tar file)
 - each mapping is named as "[questionID]-[answerID]-[codeSegmentNumber].autocom"
 
-## Evaluation Configuration and Results
+## User Study
 
-Below are two links contains the full digital questionnaire that we presented to the users:
+Below are two links that contains the full digital questionnaire that we presented to the users:
 
 [Google Form - Group 1](https://docs.google.com/forms/d/e/1FAIpQLSf4pBKisdtIcbgW3MxDpH4XLeiCUmNYc9N64srnW__MH0_8uQ/viewform?usp=sf_link)
+
 [Google Form - Group 2](https://docs.google.com/forms/d/e/1FAIpQLSddELKFj0yzc88VeY__O6G08yyTHdhF_NR50Vnpe-Wtjj-g8w/viewform?usp=sf_link)
 
 Raw CSV Dump of the results are located under the ```research``` folder.

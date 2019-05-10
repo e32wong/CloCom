@@ -1,0 +1,476 @@
+Match Group 1 of size 2+7
+/home/edmund/crawledFiles/autocommentProjects/jhotdraw/JHotDraw 7.0.6/src/org/jhotdraw/gui/JSheet.java: 289-291
+Length: 3
+*                     long now = System.currentTimeMillis();
+*                     if (startTime == 0) {
+*                         startTime = now;
+----
+/home/edmund/crawledFiles/autocommentProjects/jhotdraw/JHotDraw 7.0.6/src/org/jhotdraw/gui/JSheet.java: 342-344
+Length: 3
+*                     long now = System.currentTimeMillis();
+*                     if (startTime == 0) {
+*                         startTime = now;
+----
+/home/edmund/crawledFiles/clocomProjects/webcam-capture/webcam-capture-examples/webcam-capture-live-streaming/src/main/java/us/sosia/video/stream/handler/H264StreamEncoder.java: 97-99
+Length: 3
+Sim terms: [[frame]]
+< 		long now = System.currentTimeMillis();
+< 		if (startTime == 0) {
+< 				startTime = now;
+----
+/home/edmund/crawledFiles/clocomProjects/GraphView/src/main/java/com/jjoe64/graphview/series/LineGraphSeries.java: 355-358
+Length: 3
+Sim terms: []
+<                             long currentTime = System.currentTimeMillis();
+<                             if (mAnimationStart == 0) {
+<                                 // start animation
+<                                 mAnimationStart = currentTime;
+----
+/home/edmund/crawledFiles/clocomProjects/GraphView/src/main/java/com/jjoe64/graphview/series/BarGraphSeries.java: 290-293
+Length: 3
+Sim terms: [[start, anim]]
+C - start animation
+<                     long currentTime = System.currentTimeMillis();
+<                     if (mAnimationStart == 0) {
+<                         // start animation
+<                         mAnimationStart = currentTime;
+----
+/home/edmund/crawledFiles/clocomProjects/android-betterpickers/library/src/main/java/com/codetroopers/betterpickers/timezonepicker/TimeZoneData.java: 72-75
+Length: 3
+Sim terms: []
+<         long now = System.currentTimeMillis();
+< 
+<         if (timeMillis == 0) {
+<             mTimeMillis = now;
+----
+/home/edmund/crawledFiles/clocomProjects/camel/camel-core/src/main/java/org/apache/camel/processor/ThroughputLogger.java: 260-262
+Length: 3
+Sim terms: []
+<         long time = System.currentTimeMillis();
+<         if (groupStartTime == 0) {
+<             groupStartTime = startTime;
+----
+/home/edmund/crawledFiles/clocomProjects/camel/camel-core/src/main/java/org/apache/camel/processor/ThroughputLogger.java: 214-216
+Length: 3
+Sim terms: []
+<         long time = System.currentTimeMillis();
+<         if (groupStartTime == 0) {
+<             groupStartTime = startTime;
+----
+/home/edmund/crawledFiles/clocomProjects/GraphView/src/main/java/com/jjoe64/graphview/series/LineGraphSeries.java: 457-460
+Length: 3
+Sim terms: [[start, anim]]
+C - start animation
+<                         long currentTime = System.currentTimeMillis();
+<                         if (mAnimationStart == 0) {
+<                             // start animation
+<                             mAnimationStart = currentTime;
+----
+Comments (size 1):
+1.
+start animation
+----
+Ranked result (sim terms):
+1.
+start animation
+----
+
+Match Group 4 of size 1+1
+/home/edmund/crawledFiles/autocommentProjects/jhotdraw/JHotDraw 7.0.6/src/org/jhotdraw/draw/action/VerticalGridLayout.java: 208-229
+Length: 4
+C - Determines the preferred size of the container argument using this grid layout. <p> The preferred width of a grid layout is the largest preferred width of any of the components in the container times the number of columns, plus the horizontal padding times the number of columns plus one, plus the left and right insets of the target container. <p> The preferred height of a grid layout is the largest preferred height of any of the components in the container times the number of rows, plus the vertical padding times the number of rows plus one, plus the top and bottom insets of the target container. @param parent the container in which to do the layout @return the preferred dimensions to lay out the subcomponents of the specified container 
+*     /**
+*      * Determines the preferred size of the container argument using
+*      * this grid layout.
+*      * <p>
+*      * The preferred width of a grid layout is the largest preferred
+*      * width of any of the components in the container times the number of
+*      * columns, plus the horizontal padding times the number of columns
+*      * plus one, plus the left and right insets of the target container.
+*      * <p>
+*      * The preferred height of a grid layout is the largest preferred
+*      * height of any of the components in the container times the number of
+*      * rows, plus the vertical padding times the number of rows plus one,
+*      * plus the top and bottom insets of the target container.
+*      *
+*      * @param     parent   the container in which to do the layout
+*      * @return    the preferred dimensions to lay out the
+*      *                      subcomponents of the specified container
+*      */
+*     public Dimension preferredLayoutSize(Container parent) {
+*         synchronized (parent.getTreeLock()) {
+*             Insets insets = parent.getInsets();
+*             int ncomponents = parent.getComponentCount();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/layout/LCBLayout.java: 93-104
+Length: 4
+Sim terms: [[layout, parent, size, prefer]]
+C - Returns the preferred size using this layout manager. @param parent the parent. @return the preferred size using this layout manager. 
+<     /**
+<      * Returns the preferred size using this layout manager.
+<      *
+<      * @param parent  the parent.
+<      *
+<      * @return the preferred size using this layout manager.
+<     */
+<     public Dimension preferredLayoutSize(final Container parent) {
+< 
+<         synchronized (parent.getTreeLock()) {
+<             final Insets insets = parent.getInsets();
+<             final int ncomponents = parent.getComponentCount();
+----
+Comments (size 1):
+1.
+Returns the preferred size using this layout manager. @param parent the parent. @return the preferred size using this layout manager. 
+----
+Ranked result (sim terms):
+1.
+Returns the preferred size using this layout manager. @param parent the parent. @return the preferred size using this layout manager. 
+----
+
+Match Group 5 of size 1+1
+/home/edmund/crawledFiles/autocommentProjects/jhotdraw/JHotDraw 7.0.6/src/org/jhotdraw/draw/action/VerticalGridLayout.java: 255-276
+Length: 4
+C - Determines the minimum size of the container argument using this grid layout. <p> The minimum width of a grid layout is the largest minimum width of any of the components in the container times the number of columns, plus the horizontal padding times the number of columns plus one, plus the left and right insets of the target container. <p> The minimum height of a grid layout is the largest minimum height of any of the components in the container times the number of rows, plus the vertical padding times the number of rows plus one, plus the top and bottom insets of the target container. @param parent the container in which to do the layout @return the minimum dimensions needed to lay out the subcomponents of the specified container 
+*     /**
+*      * Determines the minimum size of the container argument using this
+*      * grid layout.
+*      * <p>
+*      * The minimum width of a grid layout is the largest minimum width
+*      * of any of the components in the container times the number of columns,
+*      * plus the horizontal padding times the number of columns plus one,
+*      * plus the left and right insets of the target container.
+*      * <p>
+*      * The minimum height of a grid layout is the largest minimum height
+*      * of any of the components in the container times the number of rows,
+*      * plus the vertical padding times the number of rows plus one, plus
+*      * the top and bottom insets of the target container.
+*      *
+*      * @param       parent   the container in which to do the layout
+*      * @return      the minimum dimensions needed to lay out the
+*      *                      subcomponents of the specified container
+*      */
+*     public Dimension minimumLayoutSize(Container parent) {
+*         synchronized (parent.getTreeLock()) {
+*             Insets insets = parent.getInsets();
+*             int ncomponents = parent.getComponentCount();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/layout/LCBLayout.java: 134-145
+Length: 4
+Sim terms: [[layout, parent, size, minimum]]
+C - Returns the minimum size using this layout manager. @param parent the parent. @return the minimum size using this layout manager. 
+<     /**
+<      * Returns the minimum size using this layout manager.
+<      *
+<      * @param parent  the parent.
+<      *
+<      * @return the minimum size using this layout manager.
+<      */
+<     public Dimension minimumLayoutSize(final Container parent) {
+< 
+<         synchronized (parent.getTreeLock()) {
+<             final Insets insets = parent.getInsets();
+<             final int ncomponents = parent.getComponentCount();
+----
+Comments (size 1):
+1.
+Returns the minimum size using this layout manager. @param parent the parent. @return the minimum size using this layout manager. 
+----
+Ranked result (sim terms):
+1.
+Returns the minimum size using this layout manager. @param parent the parent. @return the minimum size using this layout manager. 
+----
+
+Match Group 17 of size 1+1
+/home/edmund/crawledFiles/autocommentProjects/jhotdraw/JHotDraw 7.0.6/src/org/jhotdraw/draw/action/VerticalGridLayout.java: 302-323
+Length: 4
+C - Lays out the specified container using this layout. <p> This method reshapes the components in the specified target container in order to satisfy the constraints of the <code>VerticalGridLayout</code> object. <p> The grid layout manager determines the size of individual components by dividing the free space in the container into equal-sized portions according to the number of rows and columns in the layout. The container's free space equals the container's size minus any insets and any specified horizontal or vertical gap. All components in a grid layout are given the same size. @param parent the container in which to do the layout @see java.awt.Container @see java.awt.Container#doLayout 
+*     /**
+*      * Lays out the specified container using this layout.
+*      * <p>
+*      * This method reshapes the components in the specified target
+*      * container in order to satisfy the constraints of the
+*      * <code>VerticalGridLayout</code> object.
+*      * <p>
+*      * The grid layout manager determines the size of individual
+*      * components by dividing the free space in the container into
+*      * equal-sized portions according to the number of rows and columns
+*      * in the layout. The container's free space equals the container's
+*      * size minus any insets and any specified horizontal or vertical
+*      * gap. All components in a grid layout are given the same size.
+*      *
+*      * @param      parent   the container in which to do the layout
+*      * @see        java.awt.Container
+*      * @see        java.awt.Container#doLayout
+*      */
+*     public void layoutContainer(Container parent) {
+*         synchronized (parent.getTreeLock()) {
+*             Insets insets = parent.getInsets();
+*             int ncomponents = parent.getComponentCount();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/layout/LCBLayout.java: 175-184
+Length: 4
+Sim terms: [[parent, compon]]
+C - Lays out the components. @param parent the parent. 
+<     /**
+<      * Lays out the components.
+<      *
+<      * @param parent  the parent.
+<      */
+<     public void layoutContainer(final Container parent) {
+< 
+<         synchronized (parent.getTreeLock()) {
+<             final Insets insets = parent.getInsets();
+<             final int ncomponents = parent.getComponentCount();
+----
+Comments (size 1):
+1.
+Lays out the components. @param parent the parent. 
+----
+Ranked result (sim terms):
+1.
+Lays out the components. @param parent the parent. 
+----
+
+Match Group 19 of size 1+3
+/home/edmund/crawledFiles/autocommentProjects/jhotdraw/JHotDraw 7.0.6/src/org/jhotdraw/draw/action/VerticalGridLayout.java: 208-228
+Length: 3
+C - Determines the preferred size of the container argument using this grid layout. <p> The preferred width of a grid layout is the largest preferred width of any of the components in the container times the number of columns, plus the horizontal padding times the number of columns plus one, plus the left and right insets of the target container. <p> The preferred height of a grid layout is the largest preferred height of any of the components in the container times the number of rows, plus the vertical padding times the number of rows plus one, plus the top and bottom insets of the target container. @param parent the container in which to do the layout @return the preferred dimensions to lay out the subcomponents of the specified container 
+*     /**
+*      * Determines the preferred size of the container argument using
+*      * this grid layout.
+*      * <p>
+*      * The preferred width of a grid layout is the largest preferred
+*      * width of any of the components in the container times the number of
+*      * columns, plus the horizontal padding times the number of columns
+*      * plus one, plus the left and right insets of the target container.
+*      * <p>
+*      * The preferred height of a grid layout is the largest preferred
+*      * height of any of the components in the container times the number of
+*      * rows, plus the vertical padding times the number of rows plus one,
+*      * plus the top and bottom insets of the target container.
+*      *
+*      * @param     parent   the container in which to do the layout
+*      * @return    the preferred dimensions to lay out the
+*      *                      subcomponents of the specified container
+*      */
+*     public Dimension preferredLayoutSize(Container parent) {
+*         synchronized (parent.getTreeLock()) {
+*             Insets insets = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/layout/CenterLayout.java: 70-80
+Length: 3
+Sim terms: [[parent, size, prefer]]
+C - Returns the preferred size. @param parent the parent. @return the preferred size. 
+<     /**
+<      * Returns the preferred size.
+<      *
+<      * @param parent  the parent.
+<      *
+<      * @return the preferred size.
+<      */
+<     public Dimension preferredLayoutSize(final Container parent) {
+< 
+<         synchronized (parent.getTreeLock()) {
+<             final Insets insets = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/ui/OverlayLayout.java: 161-171
+Length: 3
+Sim terms: [[parent, compon, contain, prefer, size, dimens]]
+C - Calculates the preferred size dimensions for the specified container, given the components it contains. @param parent the container to be laid out @return the preferred size computed for the parent. @see #minimumLayoutSize 
+<     /**
+<      * Calculates the preferred size dimensions for the specified
+<      * container, given the components it contains.
+<      *
+<      * @param parent the container to be laid out
+<      * @return the preferred size computed for the parent.
+<      * @see #minimumLayoutSize
+<      */
+<     public Dimension preferredLayoutSize(final Container parent) {
+<         synchronized (parent.getTreeLock()) {
+<             final Insets ins = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/ui/tabbedui/VerticalLayout.java: 104-114
+Length: 3
+Sim terms: []
+<     /**
+<      * Calculates the preferred size dimensions for the specified
+<      * panel given the components in the specified parent container.
+<      *
+<      * @param parent the component to be laid out
+<      * @return the preferred layout size
+<      * @see #minimumLayoutSize
+<      */
+<     public Dimension preferredLayoutSize(final Container parent) {
+<         synchronized (parent.getTreeLock()) {
+<             final Insets ins = parent.getInsets();
+----
+Comments (size 2):
+1.
+Calculates the preferred size dimensions for the specified container, given the components it contains. @param parent the container to be laid out @return the preferred size computed for the parent. @see #minimumLayoutSize 
+2.
+Returns the preferred size. @param parent the parent. @return the preferred size. 
+----
+Ranked result (sim terms):
+1.
+Calculates the preferred size dimensions for the specified container, given the components it contains. @param parent the container to be laid out @return the preferred size computed for the parent. @see #minimumLayoutSize 
+2.
+Returns the preferred size. @param parent the parent. @return the preferred size. 
+----
+
+Match Group 22 of size 1+3
+/home/edmund/crawledFiles/autocommentProjects/jhotdraw/JHotDraw 7.0.6/src/org/jhotdraw/draw/action/VerticalGridLayout.java: 255-275
+Length: 3
+C - Determines the minimum size of the container argument using this grid layout. <p> The minimum width of a grid layout is the largest minimum width of any of the components in the container times the number of columns, plus the horizontal padding times the number of columns plus one, plus the left and right insets of the target container. <p> The minimum height of a grid layout is the largest minimum height of any of the components in the container times the number of rows, plus the vertical padding times the number of rows plus one, plus the top and bottom insets of the target container. @param parent the container in which to do the layout @return the minimum dimensions needed to lay out the subcomponents of the specified container 
+*     /**
+*      * Determines the minimum size of the container argument using this
+*      * grid layout.
+*      * <p>
+*      * The minimum width of a grid layout is the largest minimum width
+*      * of any of the components in the container times the number of columns,
+*      * plus the horizontal padding times the number of columns plus one,
+*      * plus the left and right insets of the target container.
+*      * <p>
+*      * The minimum height of a grid layout is the largest minimum height
+*      * of any of the components in the container times the number of rows,
+*      * plus the vertical padding times the number of rows plus one, plus
+*      * the top and bottom insets of the target container.
+*      *
+*      * @param       parent   the container in which to do the layout
+*      * @return      the minimum dimensions needed to lay out the
+*      *                      subcomponents of the specified container
+*      */
+*     public Dimension minimumLayoutSize(Container parent) {
+*         synchronized (parent.getTreeLock()) {
+*             Insets insets = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/layout/CenterLayout.java: 98-108
+Length: 3
+Sim terms: [[parent, size, minimum]]
+C - Returns the minimum size. @param parent the parent. @return the minimum size. 
+<     /**
+<      * Returns the minimum size.
+<      *
+<      * @param parent  the parent.
+<      *
+<      * @return the minimum size.
+<      */
+<     public Dimension minimumLayoutSize(final Container parent) {
+< 
+<         synchronized (parent.getTreeLock()) {
+<             final Insets insets = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/ui/tabbedui/VerticalLayout.java: 134-144
+Length: 3
+Sim terms: [[parent, compon, contain, size, layouts, minimum, dimens]]
+C - Calculates the minimum size dimensions for the specified panel given the components in the specified parent container. @param parent the component to be laid out @return the minimul layoutsize @see #preferredLayoutSize 
+<     /**
+<      * Calculates the minimum size dimensions for the specified
+<      * panel given the components in the specified parent container.
+<      *
+<      * @param parent the component to be laid out
+<      * @return the minimul layoutsize
+<      * @see #preferredLayoutSize
+<      */
+<     public Dimension minimumLayoutSize(final Container parent) {
+<         synchronized (parent.getTreeLock()) {
+<             final Insets ins = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/ui/OverlayLayout.java: 129-139
+Length: 3
+Sim terms: [[parent, compon, contain, size, minimum, dimens]]
+C - Calculates the minimum size dimensions for the specified container, given the components it contains. @param parent the component to be laid out @return the minimum size computed for the parent. @see #preferredLayoutSize 
+<     /**
+<      * Calculates the minimum size dimensions for the specified
+<      * container, given the components it contains.
+<      *
+<      * @param parent the component to be laid out
+<      * @return the minimum size computed for the parent.
+<      * @see #preferredLayoutSize
+<      */
+<     public Dimension minimumLayoutSize(final Container parent) {
+<         synchronized (parent.getTreeLock()) {
+<             final Insets ins = parent.getInsets();
+----
+Comments (size 3):
+1.
+Returns the minimum size. @param parent the parent. @return the minimum size. 
+2.
+Calculates the minimum size dimensions for the specified panel given the components in the specified parent container. @param parent the component to be laid out @return the minimul layoutsize @see #preferredLayoutSize 
+3.
+Calculates the minimum size dimensions for the specified container, given the components it contains. @param parent the component to be laid out @return the minimum size computed for the parent. @see #preferredLayoutSize 
+----
+Ranked result (sim terms):
+1.
+Returns the minimum size. @param parent the parent. @return the minimum size. 
+2.
+Calculates the minimum size dimensions for the specified panel given the components in the specified parent container. @param parent the component to be laid out @return the minimul layoutsize @see #preferredLayoutSize 
+3.
+Calculates the minimum size dimensions for the specified container, given the components it contains. @param parent the component to be laid out @return the minimum size computed for the parent. @see #preferredLayoutSize 
+----
+
+Match Group 39 of size 1+2
+/home/edmund/crawledFiles/autocommentProjects/jhotdraw/JHotDraw 7.0.6/src/org/jhotdraw/draw/action/VerticalGridLayout.java: 302-322
+Length: 3
+C - Lays out the specified container using this layout. <p> This method reshapes the components in the specified target container in order to satisfy the constraints of the <code>VerticalGridLayout</code> object. <p> The grid layout manager determines the size of individual components by dividing the free space in the container into equal-sized portions according to the number of rows and columns in the layout. The container's free space equals the container's size minus any insets and any specified horizontal or vertical gap. All components in a grid layout are given the same size. @param parent the container in which to do the layout @see java.awt.Container @see java.awt.Container#doLayout 
+*     /**
+*      * Lays out the specified container using this layout.
+*      * <p>
+*      * This method reshapes the components in the specified target
+*      * container in order to satisfy the constraints of the
+*      * <code>VerticalGridLayout</code> object.
+*      * <p>
+*      * The grid layout manager determines the size of individual
+*      * components by dividing the free space in the container into
+*      * equal-sized portions according to the number of rows and columns
+*      * in the layout. The container's free space equals the container's
+*      * size minus any insets and any specified horizontal or vertical
+*      * gap. All components in a grid layout are given the same size.
+*      *
+*      * @param      parent   the container in which to do the layout
+*      * @see        java.awt.Container
+*      * @see        java.awt.Container#doLayout
+*      */
+*     public void layoutContainer(Container parent) {
+*         synchronized (parent.getTreeLock()) {
+*             Insets insets = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/ui/tabbedui/VerticalLayout.java: 173-180
+Length: 3
+Sim terms: [[parent, compon, contain]]
+C - Lays out the container in the specified panel. @param parent the component which needs to be laid out 
+<     /**
+<      * Lays out the container in the specified panel.
+<      *
+<      * @param parent the component which needs to be laid out
+<      */
+<     public void layoutContainer(final Container parent) {
+<         synchronized (parent.getTreeLock()) {
+<             final Insets ins = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/ui/OverlayLayout.java: 104-111
+Length: 3
+Sim terms: [[parent, contain]]
+C - Lays out the specified container. @param parent the container to be laid out 
+<     /**
+<      * Lays out the specified container.
+<      *
+<      * @param parent the container to be laid out
+<      */
+<     public void layoutContainer(final Container parent) {
+<         synchronized (parent.getTreeLock()) {
+<             final Insets ins = parent.getInsets();
+----
+Comments (size 2):
+1.
+Lays out the specified container. @param parent the container to be laid out 
+2.
+Lays out the container in the specified panel. @param parent the component which needs to be laid out 
+----
+Ranked result (sim terms):
+1.
+Lays out the specified container. @param parent the container to be laid out 
+2.
+Lays out the container in the specified panel. @param parent the component which needs to be laid out 
+----
+

@@ -1,0 +1,1811 @@
+Match Group 12 of size 1+1
+/home/edmund/crawledFiles/autocommentProjects/gantt/ganttproject/ganttproject-builder/src/com/googlecode/ant_deb_task/GZipOutputStream.java: 175-178
+Length: 3
+*     private static void writeInt (int i, byte[] buf, int offset) throws IOException
+*     {
+*         writeShort (i & 0xffff, buf, offset);
+*         writeShort ((i >> 16) & 0xffff, buf, offset + 2);
+----
+/home/edmund/crawledFiles/clocomProjects/j2objc/jre_emul/android/platform/libcore/ojluni/src/main/java/java/util/zip/GZIPOutputStream.java: 210-212
+Length: 3
+Sim terms: [[offset, write]]
+C - Writes integer in Intel byte order to a byte array, starting at a given offset. 
+<     private void writeInt(int i, byte[] buf, int offset) throws IOException {
+<         writeShort(i & 0xffff, buf, offset);
+<         writeShort((i >> 16) & 0xffff, buf, offset + 2);
+----
+Comments (size 1):
+1.
+Writes integer in Intel byte order to a byte array, starting at a given offset. 
+----
+Ranked result (sim terms):
+1.
+Writes integer in Intel byte order to a byte array, starting at a given offset. 
+----
+
+Match Group 18 of size 1+9
+/home/edmund/crawledFiles/autocommentProjects/gantt/ganttproject/ganttproject/src/net/sourceforge/ganttproject/GanttPreviousState.java: 102-104
+Length: 3
+*     SAXParserFactory factory = SAXParserFactory.newInstance();
+*     try {
+*       SAXParser saxParser = factory.newSAXParser();
+----
+/home/edmund/crawledFiles/clocomProjects/curso-android-src/android-xml-sax/src/net/sgoliver/android/xml/RssParserSax.java: 30-34
+Length: 3
+Sim terms: []
+<         SAXParserFactory factory = SAXParserFactory.newInstance();
+<         
+<         try 
+<         {
+<             SAXParser parser = factory.newSAXParser();
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-fcsh-fix/common/src/flex2/compiler/config/FileConfigurator.java: 85-89
+Length: 3
+Sim terms: []
+<         SAXParserFactory factory = SAXParserFactory.newInstance();
+< 
+<         try
+<         {
+<             SAXParser parser = factory.newSAXParser();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/data/xml/DatasetReader.java: 89-91
+Length: 3
+Sim terms: []
+<         SAXParserFactory factory = SAXParserFactory.newInstance();
+<         try {
+<             SAXParser parser = factory.newSAXParser();
+----
+/home/edmund/crawledFiles/clocomProjects/bigbluebutton/akka-bbb-fsesl/src/main/java/org/bigbluebutton/freeswitch/voice/freeswitch/actions/GetAllUsersCommand.java: 69-73
+Length: 3
+Sim terms: [[], [parser, instanc]]
+C - get a new instance of parser
+<         SAXParserFactory spf = SAXParserFactory.newInstance();
+<         try {
+< 
+<             //get a new instance of parser
+<             SAXParser sp = spf.newSAXParser();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/data/xml/DatasetReader.java: 135-137
+Length: 3
+Sim terms: []
+<         SAXParserFactory factory = SAXParserFactory.newInstance();
+<         try {
+<             SAXParser parser = factory.newSAXParser();
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-fcsh-fix/common/src/flex2/compiler/config/FileConfigurator.java: 118-122
+Length: 3
+Sim terms: []
+<         SAXParserFactory factory = SAXParserFactory.newInstance();
+< 
+<         try
+<         {
+<             SAXParser parser = factory.newSAXParser();
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-flex-compiler-fix/src/flex2/compiler/config/FileConfigurator.java: 118-122
+Length: 3
+Sim terms: []
+<         SAXParserFactory factory = SAXParserFactory.newInstance();
+< 
+<         try
+<         {
+<             SAXParser parser = factory.newSAXParser();
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/dom/src/test/java/org/w3c/domts/BatikTestDocumentBuilderFactory.java: 60-62
+Length: 3
+Sim terms: [[parser, name, sax, class]]
+<     SAXParserFactory saxFactory = SAXParserFactory.newInstance();
+<     try {
+<       SAXParser saxParser = saxFactory.newSAXParser();
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-flex-compiler-fix/src/flex2/compiler/config/FileConfigurator.java: 85-89
+Length: 3
+Sim terms: []
+<         SAXParserFactory factory = SAXParserFactory.newInstance();
+< 
+<         try
+<         {
+<             SAXParser parser = factory.newSAXParser();
+----
+Comments (size 1):
+1.
+get a new instance of parser
+----
+Ranked result (sim terms):
+1.
+get a new instance of parser
+----
+
+Match Group 21 of size 1+108
+/home/edmund/crawledFiles/autocommentProjects/gantt/ganttproject/biz.ganttproject.core/src/org/w3c/util/DateParser.java: 69-72
+Length: 4
+*                 calendar.set(Calendar.HOUR_OF_DAY, 0);
+*                 calendar.set(Calendar.MINUTE, 0);
+*                 calendar.set(Calendar.SECOND, 0);
+*                 calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/lucene/queryparser/src/java/org/apache/lucene/queryparser/flexible/standard/processors/TermRangeQueryNodeProcessor.java: 125-128
+Length: 4
+Sim terms: []
+<             cal.set(Calendar.HOUR_OF_DAY, 23);
+<             cal.set(Calendar.MINUTE, 59);
+<             cal.set(Calendar.SECOND, 59);
+<             cal.set(Calendar.MILLISECOND, 999);
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/test/unit/com/liferay/portal/util/PortalSimpleDateFormatTest.java: 71-74
+Length: 4
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 22);
+< 		calendar.set(Calendar.MINUTE, 40);
+< 		calendar.set(Calendar.SECOND, 0);
+< 		calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/examples/bank-offers/client/bankoffers/PersonGenerator.java: 134-137
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY,0);
+<         cal.set(Calendar.MINUTE,0);
+<         cal.set(Calendar.SECOND,0);
+<         cal.set(Calendar.MILLISECOND,0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 987-990
+Length: 4
+Sim terms: []
+<         cal1.set(Calendar.HOUR_OF_DAY, 12);
+<         cal1.set(Calendar.MINUTE, 35);
+<         cal1.set(Calendar.SECOND, 45);
+<         cal1.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/32215979-32217090-0.autocom: 4-7
+Length: 4
+Sim terms: [[calendar]]
+C - Build this value in java using Calendar.
+< calendar.set(Calendar.HOUR_OF_DAY, 0);
+< calendar.set(Calendar.MINUTE, 0);
+< calendar.set(Calendar.SECOND, 0);
+< calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/portal/src/main/java/com/eucalyptus/portal/monthlyreport/MonthlyReportWorkflowStarter.java: 40-43
+Length: 4
+Sim terms: []
+<       yesterday.set(Calendar.HOUR_OF_DAY, 23);
+<       yesterday.set(Calendar.MINUTE, 59);
+<       yesterday.set(Calendar.SECOND, 59);
+<       yesterday.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DateSerializerTest.java: 126-129
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 0);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/object-storage/src/main/java/com/eucalyptus/objectstorage/jobs/LifecycleReaperJob.java: 183-186
+Length: 4
+Sim terms: []
+<     queryCal.set(Calendar.HOUR_OF_DAY, 0);
+<     queryCal.set(Calendar.MINUTE, 0);
+<     queryCal.set(Calendar.SECOND, 0);
+<     queryCal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/android-times-square/sample/src/main/java/com/squareup/timessquare/sample/SampleTimesSquareActivity.java: 261-264
+Length: 4
+Sim terms: []
+<     cal.set(Calendar.HOUR_OF_DAY, 0);
+<     cal.set(Calendar.MINUTE, 0);
+<     cal.set(Calendar.SECOND, 0);
+<     cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/authority/GitblitAuthority.java: 412-415
+Length: 4
+Sim terms: []
+< 				c.set(Calendar.HOUR_OF_DAY, 0);
+< 				c.set(Calendar.MINUTE, 0);
+< 				c.set(Calendar.SECOND, 0);
+< 				c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/api/runtime/RuntimeServiceTest.java: 1006-1009
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 12);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/SeriesGuide/SeriesGuide/src/main/java/com/battlelancer/seriesguide/adapters/SectionedHistoryAdapter.java: 161-164
+Length: 4
+Sim terms: []
+<         mCalendar.set(Calendar.HOUR_OF_DAY, 0);
+<         mCalendar.set(Calendar.MINUTE, 0);
+<         mCalendar.set(Calendar.SECOND, 0);
+<         mCalendar.set(Calendar.MILLISECOND, 1);
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/src/com/liferay/social/kernel/util/SocialCounterPeriodUtil.java: 132-135
+Length: 4
+Sim terms: []
+< 			calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 			calendar.set(Calendar.MINUTE, 0);
+< 			calendar.set(Calendar.SECOND, 0);
+< 			calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/main/java/com/orientechnologies/common/serialization/types/ODateSerializer.java: 75-78
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 0);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/legacy-jclouds/apis/cloudstack/src/test/java/org/jclouds/cloudstack/parse/ListUsageRecordsResponseTest.java: 56-59
+Length: 4
+Sim terms: []
+<       c.set(Calendar.HOUR_OF_DAY, 0);
+<       c.set(Calendar.MINUTE, 0);
+<       c.set(Calendar.SECOND, 0);
+<       c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/plugin/addrbook/msoutlook/calendar/RecurringPattern.java: 707-710
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/logback/logback-core/src/main/java/ch/qos/logback/core/util/TimeUtil.java: 78-81
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/wildfly/ejb3/src/test/java/org/jboss/as/ejb3/timer/schedule/CalendarBasedTimeoutWithDifferentTimeZoneTestCase.java: 102-105
+Length: 4
+Sim terms: []
+<         expectedCal.set(Calendar.HOUR_OF_DAY, 1);
+<         expectedCal.set(Calendar.MINUTE, 2);
+<         expectedCal.set(Calendar.SECOND, 0);
+<         expectedCal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/src/com/liferay/social/kernel/util/SocialCounterPeriodUtil.java: 181-184
+Length: 4
+Sim terms: []
+< 			calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 			calendar.set(Calendar.MINUTE, 0);
+< 			calendar.set(Calendar.SECOND, 0);
+< 			calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1351-1354
+Length: 4
+Sim terms: []
+<         cal2.set(Calendar.HOUR_OF_DAY, 14);
+<         cal2.set(Calendar.MINUTE, 28);
+<         cal2.set(Calendar.SECOND, 02);
+<         cal2.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/android-times-square/sample/src/main/java/com/squareup/timessquare/sample/SampleTimesSquareActivity.java: 248-251
+Length: 4
+Sim terms: []
+<     cal.set(Calendar.HOUR_OF_DAY, 0);
+<     cal.set(Calendar.MINUTE, 0);
+<     cal.set(Calendar.SECOND, 0);
+<     cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/main/java/com/orientechnologies/common/serialization/types/ODateSerializer.java: 103-106
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 0);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1072-1075
+Length: 4
+Sim terms: []
+<         cal2.set(Calendar.HOUR_OF_DAY, 14);
+<         cal2.set(Calendar.MINUTE, 28);
+<         cal2.set(Calendar.SECOND, 02);
+<         cal2.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/wicket/wicket-util/src/main/java/org/apache/wicket/util/time/Time.java: 162-165
+Length: 4
+Sim terms: []
+< 			calendar.set(Calendar.HOUR_OF_DAY, 0); // ﻿WICKET-2349
+< 			calendar.set(Calendar.MINUTE, 0);
+< 			calendar.set(Calendar.SECOND, 0);
+< 			calendar.set(Calendar.MILLISECOND, 0); // WICKET-1670
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/dedupe/src/com/procedures/RecordHitMulti.java: 59-62
+Length: 4
+Sim terms: []
+<         calTemp.set(Calendar.HOUR_OF_DAY, 0);
+<         calTemp.set(Calendar.MINUTE, 0);
+<         calTemp.set(Calendar.SECOND, 0);
+<         calTemp.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/tests/src/test/java/com/orientechnologies/orient/test/java/lang/DateConversionSpeedTest.java: 59-62
+Length: 4
+Sim terms: []
+< 		c.set(Calendar.HOUR_OF_DAY, 0);
+< 		c.set(Calendar.MINUTE, 0);
+< 		c.set(Calendar.SECOND, 0);
+< 		c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/main/java/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializerNetworkV0.java: 832-835
+Length: 4
+Sim terms: []
+<     toCalendar.set(Calendar.HOUR_OF_DAY, 0);
+<     toCalendar.set(Calendar.MINUTE, 0);
+<     toCalendar.set(Calendar.SECOND, 0);
+<     toCalendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/extension/importer/core/src/test/java/org/geoserver/importer/mosaic/ImporterMosaicTest.java: 251-254
+Length: 4
+Sim terms: []
+<         c.set(Calendar.HOUR_OF_DAY, 0);
+<         c.set(Calendar.MINUTE, 0);
+<         c.set(Calendar.SECOND, 0);
+<         c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/api/runtime/ExecutionQueryTest.java: 1579-1582
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 12);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1052-1055
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 12);
+<         cal.set(Calendar.MINUTE, 35);
+<         cal.set(Calendar.SECOND, 45);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/4365631-4399338-1.autocom: 4-7
+Length: 4
+Sim terms: [[calendar, instanc]]
+<   cal.set(Calendar.HOUR_OF_DAY, 0);
+<   cal.set(Calendar.MINUTE, 0);
+<   cal.set(Calendar.SECOND, 0);
+<   cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java: 472-475
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/src/com/liferay/social/kernel/util/SocialCounterPeriodUtil.java: 96-99
+Length: 4
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+< 		calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/hsqldb19b3/org/hsqldb_voltpatches/HsqlDateTime.java: 175-178
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1124-1127
+Length: 4
+Sim terms: []
+<         cal2.set(Calendar.HOUR_OF_DAY, 14);
+<         cal2.set(Calendar.MINUTE, 28);
+<         cal2.set(Calendar.SECOND, 02);
+<         cal2.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/tests/src/test/java/com/orientechnologies/orient/test/database/auto/CRUDObjectPhysicalTestSchemaFull.java: 1600-1603
+Length: 4
+Sim terms: []
+<     cal.set(Calendar.HOUR_OF_DAY, 0);
+<     cal.set(Calendar.MINUTE, 0);
+<     cal.set(Calendar.SECOND, 0);
+<     cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/jetty.project/tests/test-integration/src/test/java/org/eclipse/jetty/test/rfcs/RFC2616BaseTest.java: 130-133
+Length: 4
+Sim terms: []
+<         expected.set(Calendar.HOUR_OF_DAY,8);
+<         expected.set(Calendar.MINUTE,49);
+<         expected.set(Calendar.SECOND,37);
+<         expected.set(Calendar.MILLISECOND,0); // Milliseconds is not compared
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/api/runtime/ProcessInstanceQueryTest.java: 1907-1910
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 12);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/TProfiler/src/main/java/com/taobao/profile/utils/DailyRollingFileWriter.java: 224-227
+Length: 4
+Sim terms: []
+< 			cal.set(Calendar.HOUR_OF_DAY, 0);
+< 			cal.set(Calendar.MINUTE, 0);
+< 			cal.set(Calendar.SECOND, 0);
+< 			cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/phoenix/phoenix-core/src/test/java/com/salesforce/phoenix/expression/DescColumnSortOrderExpressionTest.java: 325-328
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/14171329-14173073-0.autocom: 4-7
+Length: 4
+Sim terms: [[start]]
+< c.set( Calendar.HOUR_OF_DAY, 0 );
+< c.set( Calendar.MINUTE, 0 );
+< c.set( Calendar.SECOND, 0 );
+< c.set( Calendar.MILLISECOND, 0 );
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1304-1307
+Length: 4
+Sim terms: []
+<          cal3.set(Calendar.HOUR_OF_DAY, 10);
+<          cal3.set(Calendar.MINUTE, 11);
+<          cal3.set(Calendar.SECOND, 55);
+<          cal3.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 999-1002
+Length: 4
+Sim terms: []
+<         cal2.set(Calendar.HOUR_OF_DAY, 14);
+<         cal2.set(Calendar.MINUTE, 28);
+<         cal2.set(Calendar.SECOND, 02);
+<         cal2.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/src/com/liferay/social/kernel/util/SocialCounterPeriodUtil.java: 159-162
+Length: 4
+Sim terms: []
+< 			calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 			calendar.set(Calendar.MINUTE, 0);
+< 			calendar.set(Calendar.SECOND, 0);
+< 			calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/main/java/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializerBinaryV0.java: 1005-1008
+Length: 4
+Sim terms: []
+<     toCalendar.set(Calendar.HOUR_OF_DAY, 0);
+<     toCalendar.set(Calendar.MINUTE, 0);
+<     toCalendar.set(Calendar.SECOND, 0);
+<     toCalendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/AlarmManagerService.java: 2702-2705
+Length: 4
+Sim terms: []
+<             calendar.set(Calendar.HOUR_OF_DAY, 0);
+<             calendar.set(Calendar.MINUTE, 0);
+<             calendar.set(Calendar.SECOND, 0);
+<             calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/infinispan/query/src/test/java/org/infinispan/query/queries/ranges/QueryRangesTest.java: 413-416
+Length: 4
+Sim terms: []
+<          neutralCalendar.set(Calendar.HOUR_OF_DAY, 0);
+<          neutralCalendar.set(Calendar.MINUTE, 0);
+<          neutralCalendar.set(Calendar.SECOND, 0);
+<          neutralCalendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/java-driver/driver-core/src/main/java/com/datastax/driver/core/utils/UUIDs.java: 96-99
+Length: 4
+Sim terms: []
+<         c.set(Calendar.HOUR_OF_DAY, 0);
+<         c.set(Calendar.MINUTE, 0);
+<         c.set(Calendar.SECOND, 0);
+<         c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/phoenix/phoenix-core/src/test/java/com/salesforce/phoenix/end2end/DescColumnSortOrderTest.java: 421-424
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 10);
+<         cal.set(Calendar.MINUTE, 2);
+<         cal.set(Calendar.SECOND, 5);
+<         cal.set(Calendar.MILLISECOND, 101);
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/plugin/addrbook/msoutlook/calendar/RecurringPattern.java: 806-809
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 942-945
+Length: 4
+Sim terms: []
+<         cal2.set(Calendar.HOUR_OF_DAY, 14);
+<         cal2.set(Calendar.MINUTE, 28);
+<         cal2.set(Calendar.SECOND, 02);
+<         cal2.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.astro/src/main/java/org/openhab/binding/astro/internal/util/DateTimeUtils.java: 49-52
+Length: 4
+Sim terms: []
+<         end.set(Calendar.HOUR_OF_DAY, 23);
+<         end.set(Calendar.MINUTE, 59);
+<         end.set(Calendar.SECOND, 59);
+<         end.set(Calendar.MILLISECOND, 999);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/MountServiceIdler.java: 110-113
+Length: 4
+Sim terms: []
+<         calendar.set(Calendar.HOUR_OF_DAY, 3);
+<         calendar.set(Calendar.MINUTE, 0);
+<         calendar.set(Calendar.SECOND, 0);
+<         calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/examples/metrocard/client/metrocard/MetroBenchmark.java: 170-173
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/dedupe/src/com/procedures/RecordHit.java: 67-70
+Length: 4
+Sim terms: []
+<         calTemp.set(Calendar.HOUR_OF_DAY, 23);
+<         calTemp.set(Calendar.MINUTE, 59);
+<         calTemp.set(Calendar.SECOND, 59);
+<         calTemp.set(Calendar.MILLISECOND, 999);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/widget/DateTimeView.java: 298-301
+Length: 4
+Sim terms: []
+<         c.set(Calendar.HOUR_OF_DAY, 0);
+<         c.set(Calendar.MINUTE, 0);
+<         c.set(Calendar.SECOND, 0);
+<         c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/history/HistoricProcessInstanceTest.java: 49-52
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 12);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/logback/logback-core/src/main/java/ch/qos/logback/core/util/TimeUtil.java: 65-68
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/SeriesGuide/SeriesGuide/src/main/java/com/battlelancer/seriesguide/adapters/CalendarAdapter.java: 167-170
+Length: 4
+Sim terms: []
+<         calendar.set(Calendar.HOUR_OF_DAY, 1);
+<         calendar.set(Calendar.MINUTE, 0);
+<         calendar.set(Calendar.SECOND, 0);
+<         calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/fastjson/src/test/java/com/alibaba/json/bvt/bug/Bug_for_issue_447.java: 25-28
+Length: 4
+Sim terms: []
+<         calendar.set(Calendar.HOUR_OF_DAY, 0);
+<         calendar.set(Calendar.MINUTE, 0);
+<         calendar.set(Calendar.SECOND, 0);
+<         calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/core/serializer-common/src/test/java/org/wicketstuff/pageserializer/common/analyze/report/io/TimeStampKeyGeneratorTest.java: 46-49
+Length: 4
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 6);
+< 		calendar.set(Calendar.MINUTE, 7);
+< 		calendar.set(Calendar.SECOND, 3);
+< 		calendar.set(Calendar.MILLISECOND, 168);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/tests/src/test/java/com/orientechnologies/orient/test/database/auto/CRUDObjectPhysicalTest.java: 1602-1605
+Length: 4
+Sim terms: []
+<     cal.set(Calendar.HOUR_OF_DAY, 0);
+<     cal.set(Calendar.MINUTE, 0);
+<     cal.set(Calendar.SECOND, 0);
+<     cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DateSerializerTest.java: 76-79
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 0);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1112-1115
+Length: 4
+Sim terms: []
+<         cal1.set(Calendar.HOUR_OF_DAY, 12);
+<         cal1.set(Calendar.MINUTE, 35);
+<         cal1.set(Calendar.SECOND, 45);
+<         cal1.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/src/com/liferay/portal/kernel/util/CalendarUtil.java: 197-200
+Length: 4
+Sim terms: []
+< 		gtCal.set(Calendar.HOUR_OF_DAY, 0);
+< 		gtCal.set(Calendar.MINUTE, 0);
+< 		gtCal.set(Calendar.SECOND, 0);
+< 		gtCal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/test/java/com/orientechnologies/common/io/OIOUtilsTest.java: 34-37
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 5);
+<     calendar.set(Calendar.MINUTE, 10);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/wicket/pages/TicketPage.java: 221-224
+Length: 4
+Sim terms: []
+<         	cal.set(Calendar.HOUR_OF_DAY, 0);
+<         	cal.set(Calendar.MINUTE, 0);
+<         	cal.set(Calendar.SECOND, 0);
+<         	cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/main/java/com/orientechnologies/common/serialization/types/ODateSerializer.java: 47-50
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 0);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/main/java/com/orientechnologies/common/serialization/types/ODateSerializer.java: 118-121
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 0);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/src/com/liferay/social/kernel/util/SocialCounterPeriodUtil.java: 68-71
+Length: 4
+Sim terms: []
+< 			calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 			calendar.set(Calendar.MINUTE, 0);
+< 			calendar.set(Calendar.SECOND, 0);
+< 			calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DateSerializerTest.java: 96-99
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 0);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1241-1244
+Length: 4
+Sim terms: []
+<          cal3.set(Calendar.HOUR_OF_DAY, 10);
+<          cal3.set(Calendar.MINUTE, 11);
+<          cal3.set(Calendar.SECOND, 55);
+<          cal3.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/thymeleaf/src/main/java/org/thymeleaf/util/DateUtils.java: 210-213
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-community/platform/platform-impl/src/com/intellij/featureStatistics/CumulativeStatistics.java: 30-33
+Length: 4
+Sim terms: []
+<     cal.set(Calendar.HOUR_OF_DAY, 0);
+<     cal.set(Calendar.MINUTE, 0);
+<     cal.set(Calendar.SECOND, 0);
+<     cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1228-1231
+Length: 4
+Sim terms: []
+<         cal2.set(Calendar.HOUR_OF_DAY, 14);
+<         cal2.set(Calendar.MINUTE, 28);
+<         cal2.set(Calendar.SECOND, 02);
+<         cal2.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1184-1187
+Length: 4
+Sim terms: []
+<         cal3.set(Calendar.HOUR_OF_DAY, 10);
+<         cal3.set(Calendar.MINUTE, 11);
+<         cal3.set(Calendar.SECOND, 55);
+<         cal3.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/dedupe/src/com/procedures/RecordHit.java: 60-63
+Length: 4
+Sim terms: []
+<         calTemp.set(Calendar.HOUR_OF_DAY, 0);
+<         calTemp.set(Calendar.MINUTE, 0);
+<         calTemp.set(Calendar.SECOND, 0);
+<         calTemp.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/5137706-5137768-0.autocom: 5-8
+Length: 4
+Sim terms: [[calendar], []]
+C - Convert both to Calendar.
+< calendar.set(Calendar.HOUR_OF_DAY, 0);
+< calendar.set(Calendar.MINUTE, 0);
+< calendar.set(Calendar.SECOND, 0);
+< calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/wildfly/ejb3/src/test/java/org/jboss/as/ejb3/timer/schedule/CalendarBasedTimeoutWithDifferentTimeZoneTestCase.java: 85-88
+Length: 4
+Sim terms: []
+<         currentCal.set(Calendar.HOUR_OF_DAY, 1);
+<         currentCal.set(Calendar.MINUTE, 1);
+<         currentCal.set(Calendar.SECOND, 1);
+<         currentCal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/service/GarbageCollectorService.java: 182-185
+Length: 4
+Sim terms: []
+< 				cal.set(Calendar.HOUR_OF_DAY, 0);
+< 				cal.set(Calendar.MINUTE, 0);
+< 				cal.set(Calendar.SECOND, 0);
+< 				cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/webkit/DateSorter.java: 126-129
+Length: 4
+Sim terms: []
+<         c.set(Calendar.HOUR_OF_DAY, 0);
+<         c.set(Calendar.MINUTE, 0);
+<         c.set(Calendar.SECOND, 0);
+<         c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DateSerializerTest.java: 54-57
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 0);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/twilight/TwilightService.java: 293-296
+Length: 4
+Sim terms: []
+<         noon.set(Calendar.HOUR_OF_DAY, 12);
+<         noon.set(Calendar.MINUTE, 0);
+<         noon.set(Calendar.SECOND, 0);
+<         noon.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/16515776-16515878-0.autocom: 4-7
+Length: 4
+Sim terms: [[unix, timestamp], [unix, timestamp]]
+< c.set(Calendar.HOUR_OF_DAY, 0);
+< c.set(Calendar.MINUTE, 0);
+< c.set(Calendar.SECOND, 0);
+< c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/nutz/src/org/nutz/lang/Times.java: 575-578
+Length: 4
+Sim terms: []
+<         c.set(Calendar.HOUR_OF_DAY, 0);
+<         c.set(Calendar.MINUTE, 0);
+<         c.set(Calendar.SECOND, 0);
+<         c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/utils/CommitCache.java: 73-76
+Length: 4
+Sim terms: []
+< 		cal.set(Calendar.HOUR_OF_DAY, 0);
+< 		cal.set(Calendar.MINUTE, 0);
+< 		cal.set(Calendar.SECOND, 0);
+< 		cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/wicket/pages/BasePage.java: 427-430
+Length: 4
+Sim terms: []
+< 			cal.set(Calendar.HOUR_OF_DAY, 0);
+< 			cal.set(Calendar.MINUTE, 0);
+< 			cal.set(Calendar.SECOND, 0);
+< 			cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/packages/SystemUI/src/com/android/systemui/volume/ZenModePanel.java: 559-562
+Length: 4
+Sim terms: []
+<         calendar.set(Calendar.HOUR_OF_DAY, 0);
+<         calendar.set(Calendar.MINUTE, 0);
+<         calendar.set(Calendar.SECOND, 0);
+<         calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 928-931
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 12);
+<         cal.set(Calendar.MINUTE, 35);
+<         cal.set(Calendar.SECOND, 45);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1171-1174
+Length: 4
+Sim terms: []
+<         cal2.set(Calendar.HOUR_OF_DAY, 14);
+<         cal2.set(Calendar.MINUTE, 28);
+<         cal2.set(Calendar.SECOND, 02);
+<         cal2.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DateSerializerTest.java: 65-68
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 0);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/src/com/liferay/portal/kernel/util/CalendarUtil.java: 233-236
+Length: 4
+Sim terms: []
+< 		ltCal.set(Calendar.HOUR_OF_DAY, 23);
+< 		ltCal.set(Calendar.MINUTE, 59);
+< 		ltCal.set(Calendar.SECOND, 59);
+< 		ltCal.set(Calendar.MILLISECOND, 990);
+----
+/home/edmund/crawledFiles/clocomProjects/zoie/zoie-core/src/main/java/proj/zoie/api/indexing/DefaultOptimizeScheduler.java: 46-49
+Length: 4
+Sim terms: []
+<     cal.set(Calendar.HOUR_OF_DAY, 1);
+<     cal.set(Calendar.MINUTE, 0);
+<     cal.set(Calendar.SECOND, 0);
+<     cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1364-1367
+Length: 4
+Sim terms: []
+<          cal3.set(Calendar.HOUR_OF_DAY, 10);
+<          cal3.set(Calendar.MINUTE, 11);
+<          cal3.set(Calendar.SECOND, 55);
+<          cal3.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/api/runtime/ExecutionQueryTest.java: 1603-1606
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 12);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/lucene/queryparser/src/java/org/apache/lucene/queryparser/classic/QueryParserBase.java: 539-542
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 23);
+<         cal.set(Calendar.MINUTE, 59);
+<         cal.set(Calendar.SECOND, 59);
+<         cal.set(Calendar.MILLISECOND, 999);
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/portal-kernel/src/com/liferay/social/kernel/util/SocialCounterPeriodUtil.java: 204-207
+Length: 4
+Sim terms: []
+< 			calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 			calendar.set(Calendar.MINUTE, 0);
+< 			calendar.set(Calendar.SECOND, 0);
+< 			calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/utils/ActivityUtils.java: 138-141
+Length: 4
+Sim terms: []
+< 							cal.set(Calendar.HOUR_OF_DAY, 0);
+< 							cal.set(Calendar.MINUTE, 0);
+< 							cal.set(Calendar.SECOND, 0);
+< 							cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/android-betterpickers/library/src/main/java/com/codetroopers/betterpickers/datepicker/DatePicker.java: 832-835
+Length: 4
+Sim terms: []
+<         date.set(Calendar.HOUR_OF_DAY, 0);
+<         date.set(Calendar.MINUTE, 0);
+<         date.set(Calendar.SECOND, 0);
+<         date.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/libcore/java/sql/OldResultSetGetterTests.java: 1291-1294
+Length: 4
+Sim terms: []
+<         cal2.set(Calendar.HOUR_OF_DAY, 14);
+<         cal2.set(Calendar.MINUTE, 28);
+<         cal2.set(Calendar.SECOND, 02);
+<         cal2.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/docx4j/src/xlsx4j/java/org/xlsx4j/org/apache/poi/ss/usermodel/DateUtil.java: 598-601
+Length: 4
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+<         cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/android/webkit/DateSorter.java: 119-122
+Length: 4
+Sim terms: []
+<         c.set(Calendar.HOUR_OF_DAY, 0);
+<         c.set(Calendar.MINUTE, 0);
+<         c.set(Calendar.SECOND, 0);
+<         c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/13343524-13343568-0.autocom: 5-8
+Length: 4
+Sim terms: [[set], [sec, minut, hour, get], [calendar], [calendar], [calendar]]
+C - The correct way to set.
+C - Get hour, minutes, sec.
+C - Using the java.util@@Calendar.
+C - Using the java.util.Calendar.
+C - Using the java.util.Calendar.
+< c.set(Calendar.HOUR_OF_DAY, 1);
+< c.set(Calendar.MINUTE, 0);
+< c.set(Calendar.SECOND, 0);
+< c.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/api/runtime/ProcessInstanceQueryTest.java: 1883-1886
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 12);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/dedupe/src/com/procedures/DeleteVisits.java: 51-54
+Length: 4
+Sim terms: []
+<         calBegin.set(Calendar.HOUR_OF_DAY, 0);
+<         calBegin.set(Calendar.MINUTE, 0);
+<         calBegin.set(Calendar.SECOND, 0);
+<         calBegin.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti5-test/src/test/java/org/activiti5/engine/test/history/HistoricProcessInstanceTest.java: 53-56
+Length: 4
+Sim terms: []
+<     calendar.set(Calendar.HOUR_OF_DAY, 12);
+<     calendar.set(Calendar.MINUTE, 0);
+<     calendar.set(Calendar.SECOND, 0);
+<     calendar.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/wicket/panels/ReflogPanel.java: 155-158
+Length: 4
+Sim terms: []
+<                 	cal.set(Calendar.HOUR_OF_DAY, 0);
+<                 	cal.set(Calendar.MINUTE, 0);
+<                 	cal.set(Calendar.SECOND, 0);
+<                 	cal.set(Calendar.MILLISECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/dedupe/src/com/procedures/RecordHitMulti.java: 66-69
+Length: 4
+Sim terms: []
+<         calTemp.set(Calendar.HOUR_OF_DAY, 23);
+<         calTemp.set(Calendar.MINUTE, 59);
+<         calTemp.set(Calendar.SECOND, 59);
+<         calTemp.set(Calendar.MILLISECOND, 999);
+----
+Comments (size 6):
+1.
+Build this value in java using Calendar.
+2.
+Get hour, minutes, sec.
+3.
+The correct way to set.
+4.
+Using the java.util@@Calendar.
+5.
+Convert both to Calendar.
+6.
+Using the java.util.Calendar.
+----
+Ranked result (sim terms):
+1.
+Build this value in java using Calendar.
+2.
+Get hour, minutes, sec.
+3.
+The correct way to set.
+4.
+Using the java.util@@Calendar.
+5.
+Convert both to Calendar.
+6.
+Using the java.util.Calendar.
+----
+
+Match Group 24 of size 1+41
+/home/edmund/crawledFiles/autocommentProjects/gantt/ganttproject/biz.ganttproject.core/src/org/w3c/util/DateParser.java: 69-71
+Length: 3
+*                 calendar.set(Calendar.HOUR_OF_DAY, 0);
+*                 calendar.set(Calendar.MINUTE, 0);
+*                 calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 358-360
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/exhibitor/exhibitor-core/src/main/java/com/netflix/exhibitor/core/rest/IndexResource.java: 328-330
+Length: 3
+Sim terms: []
+<                 endOfDayEndDate.set(Calendar.HOUR_OF_DAY, 23);
+<                 endOfDayEndDate.set(Calendar.MINUTE, 59);
+<                 endOfDayEndDate.set(Calendar.SECOND, 59);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/util/MonthDisplayHelper.java: 57-59
+Length: 3
+Sim terms: []
+<         mCalendar.set(Calendar.HOUR_OF_DAY, 0);
+<         mCalendar.set(Calendar.MINUTE, 0);
+<         mCalendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/sonarqube/sonar-plugin-api/src/test/java/org/sonar/api/config/LicenseTest.java: 143-145
+Length: 3
+Sim terms: []
+<     sameDay.set(Calendar.HOUR_OF_DAY, 23);
+<     sameDay.set(Calendar.MINUTE, 59);
+<     sameDay.set(Calendar.SECOND, 59);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 339-341
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 400-402
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 182-184
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 11);
+< 		calendar.set(Calendar.MINUTE, 1);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 252-254
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/android/util/MonthDisplayHelper.java: 57-59
+Length: 3
+Sim terms: []
+<         mCalendar.set(Calendar.HOUR_OF_DAY, 0);
+<         mCalendar.set(Calendar.MINUTE, 0);
+<         mCalendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 373-375
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/hive/ql/src/test/org/apache/hadoop/hive/ql/io/parquet/timestamp/TestParquetTimestampConverter.java: 176-178
+Length: 3
+Sim terms: []
+<     cal.set(Calendar.HOUR_OF_DAY, 17);
+<     cal.set(Calendar.MINUTE, 1);
+<     cal.set(Calendar.SECOND, 1);
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/ows/src/test/java/org/geoserver/ows/kvp/TimeKvpParserTest.java: 142-144
+Length: 3
+Sim terms: []
+<         c.set(Calendar.HOUR_OF_DAY, 23);
+<         c.set(Calendar.MINUTE, 59);
+<         c.set(Calendar.SECOND, 60);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 464-466
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 55);
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/extension/monitor/core/src/main/java/org/geoserver/monitor/web/DailyActivityPanel.java: 30-32
+Length: 3
+Sim terms: []
+<         then.set(Calendar.HOUR_OF_DAY, 0);
+<         then.set(Calendar.MINUTE, 0);
+<         then.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/extension/monitor/core/src/main/java/org/geoserver/monitor/web/MonthlyActivityPanel.java: 29-31
+Length: 3
+Sim terms: []
+<         then.set(Calendar.HOUR_OF_DAY, 0);
+<         then.set(Calendar.MINUTE, 0);
+<         then.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/plugin/addrbook/msoutlook/calendar/RecurringPattern.java: 459-461
+Length: 3
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE,0);
+<         cal.set(Calendar.SECOND,0);
+----
+/home/edmund/crawledFiles/clocomProjects/hive/ql/src/test/org/apache/hadoop/hive/ql/io/parquet/timestamp/TestParquetTimestampConverter.java: 110-112
+Length: 3
+Sim terms: []
+<     cal.set(Calendar.HOUR_OF_DAY, 1);
+<     cal.set(Calendar.MINUTE, 1);
+<     cal.set(Calendar.SECOND, 1);
+----
+/home/edmund/crawledFiles/clocomProjects/gh4a/app/src/main/java/com/gh4a/activities/IssueMilestoneEditActivity.java: 249-251
+Length: 3
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/hive/ql/src/test/org/apache/hadoop/hive/ql/io/parquet/timestamp/TestParquetTimestampConverter.java: 142-144
+Length: 3
+Sim terms: []
+<     cal2.set(Calendar.HOUR_OF_DAY, 0);
+<     cal2.set(Calendar.MINUTE, 10);
+<     cal2.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/legacy-jclouds/apis/cloudstack/src/test/java/org/jclouds/cloudstack/parse/ListStoragePoolsResponseTest.java: 56-58
+Length: 3
+Sim terms: []
+<       c.set(Calendar.HOUR_OF_DAY, 23);
+<       c.set(Calendar.MINUTE, 33);
+<       c.set(Calendar.SECOND, 6);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 220-222
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 320-322
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 529-531
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 7);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/astrid/astrid/src/com/todoroo/astrid/utility/TitleParser.java: 451-453
+Length: 3
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 301-303
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/net/NetworkPolicyManager.java: 303-305
+Length: 3
+Sim terms: []
+<             cal.set(Calendar.HOUR_OF_DAY, 0);
+<             cal.set(Calendar.MINUTE, 0);
+<             cal.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/hive/ql/src/test/org/apache/hadoop/hive/ql/io/parquet/timestamp/TestParquetTimestampConverter.java: 126-128
+Length: 3
+Sim terms: []
+<     cal.set(Calendar.HOUR_OF_DAY, 23);
+<     cal.set(Calendar.MINUTE, 59);
+<     cal.set(Calendar.SECOND, 59);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 386-388
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/net/NetworkPolicyManager.java: 297-299
+Length: 3
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/legacy-jclouds/apis/cloudstack/src/test/java/org/jclouds/cloudstack/parse/ListAlertsResponseTest.java: 68-70
+Length: 3
+Sim terms: []
+<       c.set(Calendar.HOUR_OF_DAY, 10);
+<       c.set(Calendar.MINUTE, 5);
+<       c.set(Calendar.SECOND, 2);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/29542067-29606697-0.autocom: 4-6
+Length: 3
+Sim terms: [[]]
+< calendar.set(Calendar.HOUR_OF_DAY, 4); // trigger at 4am in the morning
+< calendar.set(Calendar.MINUTE, 0);
+< calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/JSCover/src/test/java/jscover/util/IoServiceTest.java: 379-381
+Length: 3
+Sim terms: []
+<         calendar.set(Calendar.HOUR_OF_DAY, 15);
+<         calendar.set(Calendar.MINUTE, 12);
+<         calendar.set(Calendar.SECOND, 55);
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/14542336-14542387-0.autocom: 4-6
+Length: 3
+Sim terms: [[], [calendar]]
+C - Eg, if you were using Calendar and the current day.
+<          calendar.set(Calendar.HOUR_OF_DAY, 12);
+<          calendar.set(Calendar.MINUTE, 00);
+<          calendar.set(Calendar.SECOND, 00);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 283-285
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 681-683
+Length: 3
+Sim terms: [[next, set, trigger]]
+< 		calendar.set(Calendar.HOUR_OF_DAY, 23);
+< 		calendar.set(Calendar.MINUTE, 30);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/tests/api/java/util/DateTest.java: 450-452
+Length: 3
+Sim terms: []
+<         cal.set(Calendar.HOUR_OF_DAY, 0);
+<         cal.set(Calendar.MINUTE, 0);
+<         cal.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/hive/ql/src/test/org/apache/hadoop/hive/ql/io/parquet/timestamp/TestParquetTimestampConverter.java: 153-155
+Length: 3
+Sim terms: []
+<     cal1.set(Calendar.HOUR_OF_DAY, 0);
+<     cal1.set(Calendar.MINUTE, 0);
+<     cal1.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 266-268
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 513-515
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 200-202
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 23);
+< 		calendar.set(Calendar.MINUTE, 1);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/support/CronTriggerTests.java: 238-240
+Length: 3
+Sim terms: []
+< 		calendar.set(Calendar.HOUR_OF_DAY, 0);
+< 		calendar.set(Calendar.MINUTE, 0);
+< 		calendar.set(Calendar.SECOND, 0);
+----
+Comments (size 1):
+1.
+Eg, if you were using Calendar and the current day.
+----
+Ranked result (sim terms):
+1.
+Eg, if you were using Calendar and the current day.
+----
+
+Match Group 30 of size 1+32
+/home/edmund/crawledFiles/autocommentProjects/gantt/ganttproject/ganttproject/src/net/sourceforge/ganttproject/task/CustomColumnsValues.java: 97-99
+Length: 3
+*     for (Entry<String, Object> entry : mapCustomColumnValue.entrySet()) {
+*       String id = entry.getKey();
+*       Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/core/property/PropertyMap.java: 481-484
+Length: 3
+Sim terms: []
+< 			for (Entry<String, Object> entry : source.entrySet()) {
+< 
+< 				String key   = entry.getKey();
+< 				Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/core/graph/CypherQueryCommand.java: 81-84
+Length: 3
+Sim terms: []
+< 					for (Entry<String, Object> entry : row.entrySet()) {
+< 
+< 						String key   = entry.getKey();
+< 						Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/jstorm/jstorm-core/src/main/java/com/alibaba/jstorm/cache/RocksDBCache.java: 247-249
+Length: 3
+Sim terms: []
+<             for (Entry<String, Object> entry : map.entrySet()) {
+<                 String key = entry.getKey();
+<                 Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/dsl/src/main/java/org/cloudifysource/dsl/internal/DSLReader.java: 424-426
+Length: 3
+Sim terms: []
+< 		for (final Entry<String, Object> entry : overrideProperties.entrySet()) {
+< 			final String key = entry.getKey();
+< 			final Object propertyValue = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/jstorm/jstorm-core/src/main/java/com/alibaba/jstorm/cache/RocksTTLDBCache.java: 311-313
+Length: 3
+Sim terms: []
+<             for (Entry<String, Object> entry : map.entrySet()) {
+<                 String key = entry.getKey();
+<                 Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/schema/export/StructrTypeDefinition.java: 702-705
+Length: 3
+Sim terms: []
+< 			for (final Entry<String, Object> entry : methods.entrySet()) {
+< 
+< 				final String methodName = entry.getKey();
+< 				final Object value      = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/core/property/PropertyMap.java: 274-277
+Length: 3
+Sim terms: []
+< 			for (Entry<String, Object> entry : source.entrySet()) {
+< 
+< 				String key   = entry.getKey();
+< 				Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/mongo-hadoop/core/src/main/java/com/mongodb/hadoop/util/MongoConfigUtil.java: 1082-1084
+Length: 3
+Sim terms: []
+<         for (Entry<String, Object> entry : data.entrySet()) {
+<             String key = entry.getKey();
+<             Object val = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/spring-integration/spring-integration-core/src/main/java/org/springframework/integration/dsl/HeaderEnricherSpec.java: 180-182
+Length: 3
+Sim terms: []
+< 		for (Entry<String, Object> entry : headers.entrySet()) {
+< 			String name = entry.getKey();
+< 			Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/core/property/PropertyMap.java: 196-199
+Length: 3
+Sim terms: []
+< 			for (Entry<String, Object> entry : source.entrySet()) {
+< 
+< 				String key   = entry.getKey();
+< 				Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/presto/presto-bytecode/src/main/java/com/facebook/presto/bytecode/AnnotationDefinition.java: 196-198
+Length: 3
+Sim terms: []
+<         for (Entry<String, Object> entry : values.entrySet()) {
+<             String name = entry.getKey();
+<             Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/core/graph/CypherQueryCommand.java: 148-151
+Length: 3
+Sim terms: []
+< 			for (final Entry<String, Object> valueEntry : valueMap.entrySet()) {
+< 
+< 				final String valueKey   = valueEntry.getKey();
+< 				final Object valueValue = valueEntry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.mios/src/main/java/org/openhab/binding/mios/internal/MiosUnitConnector.java: 635-637
+Length: 3
+Sim terms: [[scene]]
+<                 for (Entry<String, Object> da : scene.entrySet()) {
+<                     String key = da.getKey();
+<                     Object value = da.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/spring-boot/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/endpoint/MetricsEndpointMetricReader.java: 59-61
+Length: 3
+Sim terms: []
+< 		for (Entry<String, Object> entry : values.entrySet()) {
+< 			String name = entry.getKey();
+< 			Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.mios/src/main/java/org/openhab/binding/mios/internal/MiosUnitConnector.java: 541-543
+Length: 3
+Sim terms: [[devic]]
+<                 for (Entry<String, Object> da : device.entrySet()) {
+<                     String key = da.getKey();
+<                     Object value = da.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/jstorm/jstorm-core/src/main/java/com/alibaba/jstorm/schedule/default_assign/DefaultTopologyAssignContext.java: 53-55
+Length: 3
+Sim terms: []
+<         for (Entry<String, Object> entry : components.entrySet()) {
+<             String componentName = entry.getKey();
+<             Object component = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/spring-integration/spring-integration-core/src/main/java/org/springframework/integration/mapping/AbstractHeaderMapper.java: 215-217
+Length: 3
+Sim terms: []
+< 		for (Entry<String, Object> entry : headers.entrySet()) {
+< 			String headerName = entry.getKey();
+< 			Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/spring-batch/spring-batch-samples/src/main/java/org/springframework/batch/sample/quartz/JobLauncherDetails.java: 89-91
+Length: 3
+Sim terms: []
+< 		for (Entry<String, Object> entry : jobDataMap.entrySet()) {
+< 			String key = entry.getKey();
+< 			Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/nutz/src/org/nutz/dao/impl/sql/SqlTemplate.java: 489-491
+Length: 3
+Sim terms: []
+<         for (Entry<String, Object> entry : params.entrySet()) {
+<             String paramName = entry.getKey();
+<             Object paramObj = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/schema/export/StructrTypeDefinition.java: 683-686
+Length: 3
+Sim terms: []
+< 			for (final Entry<String, Object> entry : views.entrySet()) {
+< 
+< 				final String viewName = entry.getKey();
+< 				final Object value    = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/core/property/PropertyMap.java: 338-341
+Length: 3
+Sim terms: []
+< 			for (Entry<String, Object> entry : source.entrySet()) {
+< 
+< 				String key   = entry.getKey();
+< 				Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/nutz/src/org/nutz/dao/impl/sql/SqlTemplate.java: 522-524
+Length: 3
+Sim terms: []
+<         for (Entry<String, Object> entry : params.entrySet()) {
+<             String paramName = entry.getKey();
+<             Object paramObj = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/community/wps-remote/src/main/java/org/geoserver/wps/remote/plugin/XMPPClient.java: 542-544
+Length: 3
+Sim terms: []
+<         for (Entry<String, Object> entry : input.entrySet()) {
+<             final String key = entry.getKey();
+<             final Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/k-9/k9mail/src/main/java/com/fsck/k9/preferences/Settings.java: 199-201
+Length: 3
+Sim terms: []
+<         for (Entry<String, Object> setting : settings.entrySet()) {
+<             String settingName = setting.getKey();
+<             Object internalValue = setting.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-ui/src/main/java/org/structr/web/maintenance/DeployCommand.java: 1096-1099
+Length: 3
+Sim terms: []
+< 			for (final Entry<String, Object> entry : data.entrySet()) {
+< 
+< 				final String key = entry.getKey();
+< 				final Object val = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/main/java/com/orientechnologies/orient/core/sql/ORuntimeResult.java: 105-108
+Length: 3
+Sim terms: []
+<       for (Entry<String, Object> projection : iProjections.entrySet()) {
+<         final String prjName = projection.getKey();
+< 
+<         final Object v = projection.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/schema/export/StructrTypeDefinition.java: 643-646
+Length: 3
+Sim terms: []
+< 			for (final Entry<String, Object> entry : properties.entrySet()) {
+< 
+< 				final String propertyName = entry.getKey();
+< 				final Object value        = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-rest/src/test/java/org/structr/rest/common/EntityMatcher.java: 69-72
+Length: 3
+Sim terms: [[valu]]
+C - check for values (if present)
+< 				for (Entry<String, Object> entry : entityValues.entrySet()) {
+< 
+< 					String key   = entry.getKey();
+< 					Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/phoenix/phoenix-core/src/main/java/com/salesforce/phoenix/query/ConnectionQueryServicesImpl.java: 441-443
+Length: 3
+Sim terms: []
+<         for (Entry<String,Object> entry : tableProps.entrySet()) {
+<             String key = entry.getKey();
+<             Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/schema/export/StructrTypeDefinitions.java: 131-134
+Length: 3
+Sim terms: []
+< 		for (final Entry<String, Object> entry : source.entrySet()) {
+< 
+< 			final String name  = entry.getKey();
+< 			final Object value = entry.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/nutz/src/org/nutz/http/Request.java: 110-112
+Length: 3
+Sim terms: []
+<             for (Entry<String, Object> en : params.entrySet()) {
+<                 final String key = en.getKey();
+<                 Object val = en.getValue();
+----
+/home/edmund/crawledFiles/clocomProjects/structr/structr-core/src/main/java/org/structr/core/property/PropertyMap.java: 236-239
+Length: 3
+Sim terms: []
+< 			for (Entry<String, Object> entry : source.entrySet()) {
+< 
+< 				String key   = entry.getKey();
+< 				Object value = entry.getValue();
+----
+Comments (size 1):
+1.
+check for values (if present)
+----
+Ranked result (sim terms):
+1.
+check for values (if present)
+----
+
+Match Group 31 of size 1+1
+/home/edmund/crawledFiles/autocommentProjects/gantt/ganttproject/ganttproject/src/net/sourceforge/ganttproject/GPLogger.java: 96-98
+Length: 3
+*     Logger logger = ourLoggers.get(name);
+*     if (logger == null) {
+*       logger = Logger.getLogger(name);
+----
+/home/edmund/crawledFiles/clocomProjects/blitz4j/src/main/java/com/netflix/blitz4j/LoggerCache.java: 54-57
+Length: 3
+Sim terms: [[put]]
+C - If multiple threads do the puts, that is fine as it is a one time thing
+<       Logger logger = appenderLoggerMap.get(clazz);
+<       if (logger == null) {
+<           // If multiple threads do the puts, that is fine as it is a one time thing
+<           logger = Logger.getLogger(clazz);
+----
+Comments (size 1):
+1.
+If multiple threads do the puts, that is fine as it is a one time thing
+----
+Ranked result (sim terms):
+1.
+If multiple threads do the puts, that is fine as it is a one time thing
+----
+
+Match Group 45 of size 1+1
+/home/edmund/crawledFiles/autocommentProjects/gantt/ganttproject/ganttproject/src/net/sourceforge/ganttproject/io/SaverBase.java: 38-40
+Length: 3
+*     serializer.setOutputProperty(OutputKeys.INDENT, "yes");
+*     serializer.setOutputProperty(OutputKeys.METHOD, "xml");
+*     serializer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/13925608-13925622-0.autocom: 4-6
+Length: 3
+Sim terms: [[xml]]
+C - Creating XML only printing to one line.
+< tf.setOutputProperty(OutputKeys.INDENT, "yes");
+< tf.setOutputProperty(OutputKeys.METHOD, "xml");
+< tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+----
+Comments (size 1):
+1.
+Creating XML only printing to one line.
+----
+Ranked result (sim terms):
+1.
+Creating XML only printing to one line.
+----
+
+Match Group 56 of size 1+20
+/home/edmund/crawledFiles/autocommentProjects/gantt/ganttproject/ganttproject/src/net/sourceforge/ganttproject/GanttOptions.java: 549-553
+Length: 3
+C - Attribute name 
+C - Value of attribute 
+*         for (int i = 0; i < attrs.getLength(); i++) {
+*           /** Attribute name */
+*           String aName = attrs.getQName(i);
+*           /** Value of attribute */
+*           String value = attrs.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/epubcheck/src/main/java/com/adobe/epubcheck/ctc/xml/AnchorTagHandler.java: 52-55
+Length: 3
+Sim terms: []
+<       for (int i = 0; i < attributes.getLength(); i++)
+<       {
+<         String attrName = attributes.getQName(i);
+<         String attrValue = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/epubcheck/src/main/java/com/adobe/epubcheck/ctc/xml/AnchorTagHandler.java: 83-86
+Length: 3
+Sim terms: []
+<       for (int i = 0; i < attributes.getLength(); i++)
+<       {
+<         String attrName = attributes.getQName(i);
+<         String attrValue = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/plugins/vcs-core/core/source_gen/jetbrains/mps/smodel/persistence/def/v6/ModelReader6Handler.java: 103-105
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/epubcheck/src/main/java/com/adobe/epubcheck/ctc/xml/AnchorTagHandler.java: 101-104
+Length: 3
+Sim terms: []
+<       for (int i = 0; i < attributes.getLength(); i++)
+<       {
+<         String attrName = attributes.getQName(i);
+<         String attrValue = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/core/persistence/source/jetbrains/mps/smodel/persistence/def/ModelPersistence.java: 388-390
+Length: 3
+Sim terms: []
+<         for (int idx = 0; idx < attributes.getLength(); idx++) {
+<           String name = attributes.getQName(idx);
+<           String value = attributes.getValue(idx);
+----
+/home/edmund/crawledFiles/clocomProjects/epubcheck/src/main/java/com/adobe/epubcheck/ctc/xml/LinkTagHandler.java: 87-90
+Length: 3
+Sim terms: []
+<       for (int i = 0; i < attributes.getLength(); i++)
+<       {
+<         String attrName = attributes.getQName(i);
+<         String attrValue = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/plugins/vcs-core/core/source_gen/jetbrains/mps/smodel/persistence/def/v5/LineToContentMapReader5Handler.java: 82-84
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/plugins/vcs-core/core/source_gen/jetbrains/mps/smodel/persistence/def/v7/LineToContentMapReader7Handler.java: 85-87
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/epubcheck/src/main/java/com/adobe/epubcheck/ctc/xml/ScriptTagHandler.java: 87-90
+Length: 3
+Sim terms: []
+<       for (int i = 0; i < attributes.getLength(); i++)
+<       {
+<         String attrName = attributes.getQName(i);
+<         String attrValue = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/plugins/vcs-core/core/source_gen/jetbrains/mps/smodel/persistence/def/v7/ModelReader7Handler.java: 105-107
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/plugins/vcs-core/core/source_gen/jetbrains/mps/smodel/persistence/def/v5/ModelReader5Handler.java: 105-107
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/core/persistence/source_gen/jetbrains/mps/smodel/persistence/def/v9/ModelReader9Handler.java: 120-122
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/core/persistence/source_gen/jetbrains/mps/smodel/persistence/def/v9/AnnotationInfoReader9Handler.java: 88-90
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/plugins/vcs-core/core/source_gen/jetbrains/mps/smodel/persistence/def/v8/ModelReader8Handler.java: 114-116
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/core/kernel/source_gen/jetbrains/mps/make/java/BLDependenciesHandler.java: 75-77
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/plugins/vcs-core/core/source_gen/jetbrains/mps/smodel/persistence/def/v6/LineToContentMapReader6Handler.java: 83-85
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/plugins/vcs-core/core/source_gen/jetbrains/mps/smodel/persistence/def/v8/LineToContentMapReader8Handler.java: 83-85
+Length: 3
+Sim terms: [[attribut, handl]]
+C - handle attributes 
+<     for (int i = 0; i < attributes.getLength(); i++) {
+<       String name = attributes.getQName(i);
+<       String value = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/plugins/vcs-core/core/source_gen/jetbrains/mps/vcspersistence/VCSPersistenceSupport.java: 371-373
+Length: 3
+Sim terms: []
+<         for (int idx = 0; idx < attributes.getLength(); idx++) {
+<           String name = attributes.getQName(idx);
+<           String value = attributes.getValue(idx);
+----
+/home/edmund/crawledFiles/clocomProjects/epubcheck/src/main/java/com/adobe/epubcheck/ctc/xml/AnchorTagHandler.java: 65-68
+Length: 3
+Sim terms: []
+<       for (int i = 0; i < attributes.getLength(); i++)
+<       {
+<         String attrName = attributes.getQName(i);
+<         String attrValue = attributes.getValue(i);
+----
+/home/edmund/crawledFiles/clocomProjects/epubcheck/src/main/java/com/adobe/epubcheck/ctc/xml/LangAttributeHandler.java: 31-34
+Length: 3
+Sim terms: []
+<       for (int i = 0; i < attributes.getLength(); i++)
+<       {
+<         String attrName = attributes.getQName(i);
+<         String attrValue = attributes.getValue(i);
+----
+Comments (size 1):
+1.
+handle attributes 
+----
+Ranked result (sim terms):
+1.
+handle attributes 
+----
+

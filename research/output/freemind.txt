@@ -1,0 +1,567 @@
+Match Group 6 of size 1+1
+/home/edmund/crawledFiles/autocommentProjects/freemind/freemind/freemind/preferences/layout/VariableSizeCardLayout.java: 42-56
+Length: 4
+C - Determines the preferred size of the container argument using this card layout. @param parent the parent container in which to do the layout @return the preferred dimensions to lay out the subcomponents of the specified container @see java.awt.Container#getPreferredSize @see java.awt.CardLayout#minimumLayoutSize 
+* 	/**
+* 	 * Determines the preferred size of the container argument using this card
+* 	 * layout.
+* 	 * 
+* 	 * @param parent
+* 	 *            the parent container in which to do the layout
+* 	 * @return the preferred dimensions to lay out the subcomponents of the
+* 	 *         specified container
+* 	 * @see java.awt.Container#getPreferredSize
+* 	 * @see java.awt.CardLayout#minimumLayoutSize
+* 	 */
+* 	public Dimension preferredLayoutSize(Container parent) {
+* 		synchronized (parent.getTreeLock()) {
+* 			Insets insets = parent.getInsets();
+* 			int ncomponents = parent.getComponentCount();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/layout/LCBLayout.java: 93-104
+Length: 4
+Sim terms: [[layout, parent, size, prefer]]
+C - Returns the preferred size using this layout manager. @param parent the parent. @return the preferred size using this layout manager. 
+<     /**
+<      * Returns the preferred size using this layout manager.
+<      *
+<      * @param parent  the parent.
+<      *
+<      * @return the preferred size using this layout manager.
+<     */
+<     public Dimension preferredLayoutSize(final Container parent) {
+< 
+<         synchronized (parent.getTreeLock()) {
+<             final Insets insets = parent.getInsets();
+<             final int ncomponents = parent.getComponentCount();
+----
+Comments (size 1):
+1.
+Returns the preferred size using this layout manager. @param parent the parent. @return the preferred size using this layout manager. 
+----
+Ranked result (sim terms):
+1.
+Returns the preferred size using this layout manager. @param parent the parent. @return the preferred size using this layout manager. 
+----
+
+Match Group 20 of size 1+1
+/home/edmund/crawledFiles/autocommentProjects/freemind/freemind/freemind/main/ExampleFileFilter.java: 178-185
+Length: 4
+C - Return the extension portion of the file's name . 
+* 	/**
+* 	 * Return the extension portion of the file's name .
+* 	 * 
+* 	 */
+* 	public String getExtension(File f) {
+* 		if (f != null) {
+* 			String filename = f.getName();
+* 			int i = filename.lastIndexOf('.');
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/plugin/whiteboard/gui/WhiteboardFileFilter.java: 90-98
+Length: 4
+Sim terms: [[extens, file]]
+C - The extension of the file" @param f File @return file extension 
+<     /**
+<      * The extension of the file"
+<      * @param f File
+<      * @return file extension
+<      */
+<     public String getExtension (File f) {
+<         if (f != null) {
+<             String filename = f.getName ();
+<             int i = filename.lastIndexOf ('.');
+----
+Comments (size 1):
+1.
+The extension of the file" @param f File @return file extension 
+----
+Ranked result (sim terms):
+1.
+The extension of the file" @param f File @return file extension 
+----
+
+Match Group 41 of size 1+25
+/home/edmund/crawledFiles/autocommentProjects/freemind/freemind/freemind/controller/filter/condition/CompareConditionAdapter.java: 52-54
+Length: 3
+* 		try {
+* 			d2 = Double.parseDouble(conditionValue);
+* 		} catch (NumberFormatException fne) {
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus-core/databus-core-impl/src/main/java/com/linkedin/databus/core/util/PropertiesHelper.java: 159-163
+Length: 3
+Sim terms: []
+<       try
+<       {
+<         result = Double.parseDouble(paramStr);
+<       }
+<       catch (NumberFormatException nfe)
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/pmml/consumer/SupportVectorMachineModel.java: 399-401
+Length: 3
+Sim terms: []
+<         try {
+<           m_coef0 = Double.parseDouble(coefString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/platform/src/main/java/org/geoserver/util/ReaderUtils.java: 622-624
+Length: 3
+Sim terms: []
+<             try {
+<                 d = Double.parseDouble(value);
+<             } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/wms/src/main/java/org/geoserver/wms/legendgraphic/BufferedImageLegendGraphicBuilder.java: 349-351
+Length: 3
+Sim terms: []
+<                     try {
+<                         minimumSymbolSize = Double.parseDouble(minSymbolSizeOpt);
+<                     } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/pmml/consumer/TreeModel.java: 846-848
+Length: 3
+Sim terms: []
+<           try {
+<             m_scoreNumeric = Double.parseDouble(scoreS);
+<           } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/pmml/consumer/SupportVectorMachineModel.java: 306-308
+Length: 3
+Sim terms: []
+<         try {
+<           m_gamma = Double.parseDouble(gammaString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/opentsdb/src/query/expression/Scale.java: 46-48
+Length: 3
+Sim terms: []
+<       try {
+<         scale_factor = Double.parseDouble(factor);
+<       } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/classify/ColumnDataClassifier.java: 998-1000
+Length: 3
+Sim terms: []
+<         try {
+<           val = Double.parseDouble(cWord);
+<         } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/core/converters/ArffLoader.java: 344-346
+Length: 3
+Sim terms: [[doubl, pars, weight]]
+<         try {
+<           weight = Double.parseDouble(weightS);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/pmml/consumer/TreeModel.java: 1575-1577
+Length: 3
+Sim terms: [[number, pars]]
+C - try to parse as a number
+<       try {
+<         m_missingValuePenalty = Double.parseDouble(missingP);
+<       } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/pmml/consumer/SupportVectorMachineModel.java: 384-386
+Length: 3
+Sim terms: []
+<         try {
+<           m_gamma = Double.parseDouble(gammaString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/pmml/consumer/SupportVectorMachineModel.java: 234-236
+Length: 3
+Sim terms: []
+<         try {
+<           m_degree = Double.parseDouble(degreeString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/core/pmml/Discretize.java: 364-366
+Length: 3
+Sim terms: []
+<             try {
+<               result = Double.parseDouble(m_defaultValue);
+<             } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/geoserver/src/main/src/main/java/org/geoserver/catalog/util/ReaderUtils.java: 674-676
+Length: 3
+Sim terms: []
+<             try {
+<                 d = Double.parseDouble(value);
+<             } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/rhino/src/org/mozilla/javascript/TokenStream.java: 680-684
+Length: 3
+Sim terms: [[number, java, string, us]]
+<                     try {
+<                         // Use Java conversion to number from string...
+<                         dval = Double.parseDouble(numString);
+<                     }
+<                     catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/pmml/consumer/SupportVectorMachineModel.java: 219-221
+Length: 3
+Sim terms: []
+<         try {
+<           m_coef0 = Double.parseDouble(coefString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/classifiers/pmml/consumer/SupportVectorMachineModel.java: 204-206
+Length: 3
+Sim terms: []
+<         try {
+<           m_gamma = Double.parseDouble(gammaString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/core/pmml/Discretize.java: 336-338
+Length: 3
+Sim terms: []
+<           try {
+<             result = Double.parseDouble(m_mapMissingTo);
+<           } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/Osmand/OsmAnd-java/src/net/osmand/osm/io/OsmBaseStorage.java: 161-163
+Length: 3
+Sim terms: []
+< 		try {
+< 			ret = Double.parseDouble(value);
+< 		} catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/BuildCraft/common/buildcraft/lib/config/DetailedConfigOption.java: 100-102
+Length: 3
+Sim terms: []
+<             try {
+<                 cacheDouble = Double.parseDouble(cache);
+<             } catch (NumberFormatException nfe) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/core/pmml/Discretize.java: 82-84
+Length: 3
+Sim terms: []
+<         try {
+<           m_numericBinValue = Double.parseDouble(m_binValue);
+<         } catch (NumberFormatException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/rt/libcore/luni/src/main/java/java/util/Scanner.java: 1208-1210
+Length: 3
+Sim terms: []
+<         try {
+<             doubleValue = Double.parseDouble(floatString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.modbus/src/main/java/net/wimpi/modbus/util/SerialParameters.java: 416-418
+Length: 3
+Sim terms: []
+<         try {
+<             doubleStopBits = Double.parseDouble(stopbits);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/java/util/Scanner.java: 1256-1258
+Length: 3
+Sim terms: []
+<         try {
+<             doubleValue = Double.parseDouble(floatString);
+<         } catch (NumberFormatException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/SimianArmy/src/main/java/com/netflix/simianarmy/basic/BasicConfiguration.java: 68-70
+Length: 3
+Sim terms: []
+<             try {
+<                 result = Double.parseDouble(val);
+<             } catch (NumberFormatException e) {
+----
+Comments (size 1):
+1.
+try to parse as a number
+----
+Ranked result (sim terms):
+1.
+try to parse as a number
+----
+
+Match Group 75 of size 1+3
+/home/edmund/crawledFiles/autocommentProjects/freemind/freemind/freemind/preferences/layout/VariableSizeCardLayout.java: 42-55
+Length: 3
+C - Determines the preferred size of the container argument using this card layout. @param parent the parent container in which to do the layout @return the preferred dimensions to lay out the subcomponents of the specified container @see java.awt.Container#getPreferredSize @see java.awt.CardLayout#minimumLayoutSize 
+* 	/**
+* 	 * Determines the preferred size of the container argument using this card
+* 	 * layout.
+* 	 * 
+* 	 * @param parent
+* 	 *            the parent container in which to do the layout
+* 	 * @return the preferred dimensions to lay out the subcomponents of the
+* 	 *         specified container
+* 	 * @see java.awt.Container#getPreferredSize
+* 	 * @see java.awt.CardLayout#minimumLayoutSize
+* 	 */
+* 	public Dimension preferredLayoutSize(Container parent) {
+* 		synchronized (parent.getTreeLock()) {
+* 			Insets insets = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/layout/CenterLayout.java: 70-80
+Length: 3
+Sim terms: [[parent, size, prefer]]
+C - Returns the preferred size. @param parent the parent. @return the preferred size. 
+<     /**
+<      * Returns the preferred size.
+<      *
+<      * @param parent  the parent.
+<      *
+<      * @return the preferred size.
+<      */
+<     public Dimension preferredLayoutSize(final Container parent) {
+< 
+<         synchronized (parent.getTreeLock()) {
+<             final Insets insets = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/ui/OverlayLayout.java: 161-171
+Length: 3
+Sim terms: [[parent, compon, contain, prefer, size, dimens]]
+C - Calculates the preferred size dimensions for the specified container, given the components it contains. @param parent the container to be laid out @return the preferred size computed for the parent. @see #minimumLayoutSize 
+<     /**
+<      * Calculates the preferred size dimensions for the specified
+<      * container, given the components it contains.
+<      *
+<      * @param parent the container to be laid out
+<      * @return the preferred size computed for the parent.
+<      * @see #minimumLayoutSize
+<      */
+<     public Dimension preferredLayoutSize(final Container parent) {
+<         synchronized (parent.getTreeLock()) {
+<             final Insets ins = parent.getInsets();
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/org/jfree/ui/tabbedui/VerticalLayout.java: 104-114
+Length: 3
+Sim terms: []
+<     /**
+<      * Calculates the preferred size dimensions for the specified
+<      * panel given the components in the specified parent container.
+<      *
+<      * @param parent the component to be laid out
+<      * @return the preferred layout size
+<      * @see #minimumLayoutSize
+<      */
+<     public Dimension preferredLayoutSize(final Container parent) {
+<         synchronized (parent.getTreeLock()) {
+<             final Insets ins = parent.getInsets();
+----
+Comments (size 2):
+1.
+Calculates the preferred size dimensions for the specified container, given the components it contains. @param parent the container to be laid out @return the preferred size computed for the parent. @see #minimumLayoutSize 
+2.
+Returns the preferred size. @param parent the parent. @return the preferred size. 
+----
+Ranked result (sim terms):
+1.
+Calculates the preferred size dimensions for the specified container, given the components it contains. @param parent the container to be laid out @return the preferred size computed for the parent. @see #minimumLayoutSize 
+2.
+Returns the preferred size. @param parent the parent. @return the preferred size. 
+----
+
+Match Group 79 of size 1+2
+/home/edmund/crawledFiles/autocommentProjects/freemind/freemind/freemind/controller/color/JColorCombo.java: 78-81
+Length: 4
+* 		public ComboBoxRenderer() {
+* 			setOpaque(true);
+* 	        setHorizontalAlignment(LEFT);
+* 	        setVerticalAlignment(CENTER);
+----
+/home/edmund/crawledFiles/clocomProjects/jitsi/src/net/java/sip/communicator/impl/gui/main/chatroomslist/joinforms/JoinChatRoomWindow.java: 329-336
+Length: 4
+Sim terms: [[render]]
+C - The renderer. 
+<         /**
+<          * The renderer.
+<          */
+<         public ComboBoxRenderer()
+<         {
+<             setOpaque(true);
+<             setHorizontalAlignment(LEFT);
+<             setVerticalAlignment(CENTER);
+----
+/home/edmund/crawledFiles/clocomProjects/FBReaderJ/obsolete/swing/src/org/geometerplus/zlibrary/ui/swing/dialogs/ZLColorOptionView.java: 129-132
+Length: 4
+Sim terms: []
+< 		public ComboBoxRenderer() {
+< 			setOpaque(true);
+< 			setHorizontalAlignment(LEFT);
+< 			setVerticalAlignment(CENTER);
+----
+Comments (size 1):
+1.
+The renderer. 
+----
+Ranked result (sim terms):
+1.
+The renderer. 
+----
+
+Match Group 98 of size 1+20
+/home/edmund/crawledFiles/autocommentProjects/freemind/freemind/freemind/main/HtmlTools.java: 173-175
+Length: 3
+* 			Matcher matcher = FIND_TAGS_PATTERN.matcher(text);
+* 			int lastMatchEnd = 0;
+* 			while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/ie/machinereading/domains/ace/reader/RobustTokenizer.java: 474-480
+Length: 3
+Sim terms: [[abbrevi, token]]
+<     Matcher match = wordPattern.matcher(buffer);
+<     int previousEndMatch = 0;
+< 
+<     //
+<     // Straight tokenization, ignoring known abbreviations
+<     //
+<     while(match.find()){
+----
+/home/edmund/crawledFiles/clocomProjects/MinecraftForge/src/main/java/net/minecraftforge/common/ForgeHooks.java: 685-689
+Length: 3
+Sim terms: []
+<         Matcher matcher = URL_PATTERN.matcher(string);
+<         int lastEnd = 0;
+< 
+<         // Find all urls
+<         while (matcher.find())
+----
+/home/edmund/crawledFiles/clocomProjects/Argo/core/src/main/java/com/bj58/argo/thirdparty/AntPathStringMatcher.java: 57-59
+Length: 3
+Sim terms: []
+<          Matcher m = GLOB_PATTERN.matcher(pattern);
+<          int end = 0;
+<          while (m.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/jade4j/src/main/java/de/neuland/jade4j/compiler/Utils.java: 23-25
+Length: 3
+Sim terms: []
+< 		Matcher matcher = interpolationPattern.matcher(string);
+< 		int start = 0;
+< 		while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-android/spring-android-rest-template/src/main/java/org/springframework/web/util/UriTemplate.java: 180-182
+Length: 3
+Sim terms: []
+< 			Matcher matcher = NAMES_PATTERN.matcher(uriTemplate);
+< 			int end = 0;
+< 			while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/drools/drools-templates/src/main/java/org/drools/template/parser/RuleTemplate.java: 105-107
+Length: 3
+Sim terms: []
+<                 final Matcher matcher = pattern.matcher(line);
+<                 int optCols = 0;
+<                 while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/pipeline/ChunkAnnotationUtils.java: 915-917
+Length: 3
+Sim terms: []
+<     Matcher m = p.matcher(text);
+<     int index = 0;
+<     while (m.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-roo/runtime/shell-jline/src/main/java/org/springframework/roo/shell/jline/JLineLogHandler.java: 115-117
+Length: 3
+Sim terms: []
+<             final Matcher matcher = pattern.matcher(message);
+<             int i = 0;
+<             while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-core/src/main/java/org/springframework/util/AntPathMatcher.java: 640-642
+Length: 3
+Sim terms: []
+< 			Matcher matcher = GLOB_PATTERN.matcher(pattern);
+< 			int end = 0;
+< 			while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-data-mongodb/spring-data-mongodb/src/main/java/org/springframework/data/mongodb/gridfs/AntPath.java: 71-74
+Length: 3
+Sim terms: []
+< 		Matcher m = WILDCARD_PATTERN.matcher(path);
+< 		int end = 0;
+< 
+< 		while (m.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/clojure/src/jvm/clojure/lang/Compiler.java: 2912-2914
+Length: 3
+Sim terms: []
+< 	Matcher m = DEMUNGE_PATTERN.matcher(mungedName);
+< 	int lastMatchEnd = 0;
+< 	while (m.find())
+----
+/home/edmund/crawledFiles/clocomProjects/spring-batch/spring-batch-core/src/test/java/org/springframework/batch/core/jsr/configuration/xml/PartitionParserTests.java: 166-169
+Length: 3
+Sim terms: []
+< 		Matcher matcher = pattern.matcher(string);
+< 
+< 		int count = 0;
+< 		while(matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/compiler/src/main/java/org/robovm/compiler/plugin/objc/ObjCBlockPlugin.java: 215-217
+Length: 3
+Sim terms: []
+<         Matcher matcher = BLOCK_ANNOTATION_PATTERN.matcher(value);
+<         int pos = 0;
+<         while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/sharpen/sharpen.core/src/sharpen/core/csharp/CSharpPrinter.java: 99-101
+Length: 3
+Sim terms: []
+< 		final Matcher matcher = META_VARIABLE_PATTERN.matcher(template);
+< 		int last = 0;
+< 		while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/citrus/common/util/src/main/java/com/alibaba/citrus/util/StringUtil.java: 3466-3469
+Length: 3
+Sim terms: []
+<         Matcher matcher = CRLF_PATTERN.matcher(str);
+<         int index = 0;
+< 
+<         while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/guacamole-client/guacamole-ext/src/main/java/org/apache/guacamole/token/TokenFilter.java: 155-161
+Length: 3
+Sim terms: [[last, match], [token]]
+C - Track last regex match
+<         Matcher tokenMatcher = tokenPattern.matcher(input);
+< 
+<         // Track last regex match
+<         int endOfLastMatch = 0;
+< 
+<         // For each possible token
+<         while (tokenMatcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/util/XMLUtils.java: 413-415
+Length: 3
+Sim terms: []
+<     Matcher m = xmlEscapingPattern.matcher(s);
+<     int end = 0;
+<     while (m.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/OpenTripPlanner/src/main/java/org/opentripplanner/graph_builder/module/osm/TemplateLibrary.java: 69-72
+Length: 3
+Sim terms: []
+<         Matcher matcher = patternMatcher.matcher(pattern);
+< 
+<         int lastEnd = 0;
+<         while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-web/src/main/java/org/springframework/web/util/pattern/RegexPathElement.java: 67-70
+Length: 3
+Sim terms: []
+< 		Matcher matcher = GLOB_PATTERN.matcher(text);
+< 		int end = 0;
+< 
+< 		while (matcher.find()) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-erlang/src/org/intellij/erlang/documentation/ErlangSdkDocProviderBase.java: 154-156
+Length: 3
+Sim terms: []
+<     Matcher matcher = PATTERN_HREF.matcher(line);
+<     int lastCopiedChar = 0;
+<     while (matcher.find()) {
+----
+Comments (size 1):
+1.
+Track last regex match
+----
+Ranked result (sim terms):
+1.
+Track last regex match
+----
+

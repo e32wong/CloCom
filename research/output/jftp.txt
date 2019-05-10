@@ -1,0 +1,1696 @@
+Match Group 29 of size 1+9
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/src/java/net/sf/jftp/gui/base/DownloadQueue.java: 516-523
+Length: 3
+*                     Thread.sleep(100);
+*                 }
+*             }
+*             catch(InterruptedException e)
+*             {
+*             }
+* 
+*             if(connected)
+----
+/home/edmund/crawledFiles/clocomProjects/async-http-client/client/src/test/java/org/asynchttpclient/handler/BodyDeferringAsyncHandlerTest.java: 68-74
+Length: 3
+Sim terms: []
+<                         Thread.sleep(300);
+<                     } catch (InterruptedException ex) {
+<                         // nuku
+<                     }
+<                 }
+< 
+<                 if (wantFailure) {
+----
+/home/edmund/crawledFiles/clocomProjects/MPS/core/vfs/source/jetbrains/mps/util/FileUtil.java: 319-325
+Length: 3
+Sim terms: []
+<         Thread.sleep(100);
+<       } catch (InterruptedException ie) {
+<         //ok
+<       }
+<     }
+< 
+<     if (fileCreated) {
+----
+/home/edmund/crawledFiles/clocomProjects/logback/logback-core/src/test/java/ch/qos/logback/core/issue/LockingInJava.java: 75-78
+Length: 3
+Sim terms: []
+<                     Thread.sleep(10);
+<                 } catch (InterruptedException ex) {
+<                 }
+<                 if (done) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/mapred/org/apache/hadoop/mapred/TaskTracker.java: 1676-1680
+Length: 3
+Sim terms: []
+<           Thread.sleep(1000);
+<         } catch (InterruptedException e) {
+<         }
+<       }
+<       if (forceExit) {
+----
+/home/edmund/crawledFiles/clocomProjects/GeoGig/src/web/api/src/main/java/org/locationtech/geogig/rest/TaskStatusResource.java: 96-100
+Length: 3
+Sim terms: []
+<                 Thread.sleep(200);
+<             } catch (InterruptedException e) {
+<                 // ignore
+<             }
+<             if (prune) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/frontend/org/voltdb/rejoin/StreamSnapshotDataReceiver.java: 150-152
+Length: 3
+Sim terms: []
+<                 Thread.sleep(300);
+<             } catch (InterruptedException e2) {}
+<             if (m_closed) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/highavailability/src/java/org/apache/hadoop/hdfs/server/namenode/Ingest.java: 436-448
+Length: 3
+Sim terms: [[interrupt]]
+C - break out of waiting if we receive an interrupt.
+<             Thread.sleep(100); // sleep for a second
+<           } catch (InterruptedException e) {
+<             // break out of waiting if we receive an interrupt.
+<           }
+<         }
+<       }
+<     } //end outer while(running)
+<     
+<     ///////////////////// FINAL ACTIONS /////////////////////
+<     
+<     // This was the last scan of the file but we could not read a full
+<     // transaction from disk. If we proceed this will corrupt the image
+<     if (error) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/frontend/org/voltdb/TestImportStatistics.java: 484-487
+Length: 3
+Sim terms: []
+<                     Thread.sleep(1000);
+<                 } catch(InterruptedException e) { }
+<             }
+<             if (found) {
+----
+/home/edmund/crawledFiles/clocomProjects/jstorm/jstorm-core/src/main/java/com/alibaba/jstorm/transactional/bolt/TransactionStatefulBolt.java: 100-103
+Length: 3
+Sim terms: []
+<                         Thread.sleep(100);
+<                     }
+<                 } catch (InterruptedException e) {
+<                     if (isActive) {
+----
+Comments (size 1):
+1.
+break out of waiting if we receive an interrupt.
+----
+Ranked result (sim terms):
+1.
+break out of waiting if we receive an interrupt.
+----
+
+Match Group 36 of size 9+223
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/src/java/net/sf/jftp/gui/base/DownloadQueue.java: 479-483
+Length: 3
+*                         try
+*                         {
+*                             Thread.sleep(10);
+*                         }
+*                         catch(Exception ex)
+----
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/src/java/net/sf/jftp/net/FtpConnection.java: 1211-1214
+Length: 3
+* 				try
+* 				{
+* 					Thread.sleep(100);
+* 				} catch(Exception ex) {}
+----
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/src/java/net/sf/jftp/tools/Shell.java: 204-208
+Length: 3
+*                 try
+*                 {
+*                     Thread.sleep(100);
+*                 }
+*                 catch(Exception ex)
+----
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/doc/FtpDownload.java: 61-62
+Length: 3
+* 		try { Thread.sleep(10); }
+* 		catch(Exception ex) { ex.printStackTrace(); }
+----
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/src/java/net/sf/jftp/net/FtpConnection.java: 1221-1225
+Length: 3
+* 			try
+* 			{
+* 				Thread.sleep(400);
+* 			}
+* 			catch(Exception ex)
+----
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/doc/FtpUpload.java: 36-37
+Length: 3
+* 		try { Thread.sleep(10); }
+* 		catch(Exception ex) { ex.printStackTrace(); }
+----
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/src/java/net/sf/jftp/net/FtpConnection.java: 1606-1610
+Length: 3
+* 		try
+* 		{
+* 			Thread.sleep(500);
+* 		}
+* 		catch(Exception ex)
+----
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/src/java/net/sf/jftp/net/FtpConnection.java: 1594-1598
+Length: 3
+* 			try
+* 			{
+* 				Thread.sleep(100);
+* 			}
+* 			catch(Exception ex)
+----
+/home/edmund/crawledFiles/autocommentProjects/jftp/j-ftp/src/java/net/sf/jftp/gui/hostchooser/HostChooser.java: 545-549
+Length: 3
+*                     try
+*                     {
+*                         Thread.sleep(1000);
+*                     }
+*                     catch(Exception ex)
+----
+/home/edmund/crawledFiles/clocomProjects/AndroidAsync/AndroidAsync/test/src/com/koushikdutta/async/test/FutureTests.java: 251-254
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(1000);
+<                 }
+<                 catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jersey/security/oauth1-server/src/test/java/org/glassfish/jersey/server/oauth1/NonceManagerTest.java: 141-143
+Length: 3
+Sim terms: [[sleep, nonc]]
+<         try {
+<             Thread.sleep(1100);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/fanout/FanoutService.java: 265-267
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(100);
+< 			} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/ipc/Server.java: 888-888
+Length: 3
+Sim terms: []
+<           try { Thread.sleep(60000); } catch (Exception ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/paragraphvectors/ParagraphVectors.java: 332-334
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(50);
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/blueflood/blueflood-core/src/test/java/com/rackspacecloud/blueflood/service/ScheduleContextTest.java: 393-393
+Length: 3
+Sim terms: [[expir, wait]]
+<         try { Thread.sleep(2100); } catch (Exception ex) {}
+----
+/home/edmund/crawledFiles/clocomProjects/h2o/src/embedded/java/ScoreMain.java: 133-133
+Length: 3
+Sim terms: []
+<     try { Thread.sleep(1000); } catch( Exception e ) { }
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/fuse-dfs/src/test/TestFuseDFS.java: 378-378
+Length: 3
+Sim terms: []
+<       try { Thread.sleep(1000); } catch(Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/TestDeleteBlockPool.java: 110-112
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(3000);
+<         } catch (Exception ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/core/org/apache/hadoop/ipc/Server.java: 744-744
+Length: 3
+Sim terms: []
+<           try { Thread.sleep(60000); } catch (Exception ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/lwjgl/src/java/org/lwjgl/test/input/TestControllers.java: 170-170
+Length: 3
+Sim terms: []
+< 			try { Thread.sleep(100); } catch (Exception e) {};
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/ClientThread.java: 101-101
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(3000); } catch (Exception e2) {}
+----
+/home/edmund/crawledFiles/clocomProjects/rhino/testsrc/tests/src/com/netscape/javascript/qa/drivers/TestDriver.java: 868-870
+Length: 3
+Sim terms: []
+<         try {
+<             THREAD.sleep( 5000 );
+<         } catch ( Exception e ) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/fuse-dfs/src/test/TestFuseDFS.java: 85-85
+Length: 3
+Sim terms: [[df]]
+<     try { Thread.sleep(3000); } catch(Exception e) { }
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/ipc/Server.java: 692-692
+Length: 3
+Sim terms: []
+<           try { Thread.sleep(60000); } catch (Exception ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/jstorm/jstorm-on-yarn/src/main/java/com/alibaba/jstorm/yarn/utils/Exec.java: 125-127
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(1000);
+<                 } catch (Exception ee) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/sequencevectors/SequenceVectors.java: 1069-1071
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(50);
+<                     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/rexster/rexster-protocol/src/main/java/com/tinkerpop/rexster/protocol/EngineController.java: 150-152
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(100);
+<             } catch (Exception ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/AdHocMayhemThread.java: 146-146
+Length: 3
+Sim terms: []
+<                     try { Thread.sleep(3000); } catch (Exception e) {} // sleep for 3s
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/word2vec/wordstore/VocabConstructor.java: 230-232
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(1);
+<                     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/kilim/bench/kilim/bench/Sleep.java: 89-89
+Length: 3
+Sim terms: []
+<         try {Thread.sleep(1);}catch(Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/core/org/apache/hadoop/ipc/Server.java: 549-549
+Length: 3
+Sim terms: []
+<           try { Thread.sleep(60000); } catch (Exception ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/word2vec/wordstore/VocabConstructor.java: 363-365
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(1000);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/solrj/src/test/org/apache/solr/client/solrj/io/stream/StreamExpressionTest.java: 4737-4739
+Length: 3
+Sim terms: []
+<               try {
+<                 Thread.sleep(1000);
+<               } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/couchbase-lite-android/src/androidTest/java/com/couchbase/lite/LiteTestCaseWithDB.java: 208-210
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(1000);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Android-IMSI-Catcher-Detector/AIMSICD/src/androidTest/java/com/secupwn/aimsicd/test/GetProp.java: 26-28
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(1000);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/solrj/src/test/org/apache/solr/client/solrj/io/stream/StreamExpressionTest.java: 1544-1546
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(1000);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/kilim/bench/kilim/bench/Chain.java: 62-62
+Length: 3
+Sim terms: []
+<         try {Thread.sleep(500);}catch (Exception ignore) {}
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/fanout/FanoutNioService.java: 316-318
+Length: 3
+Sim terms: []
+< 					try {
+< 						Thread.sleep(10);
+< 					} catch (Exception x) {
+----
+/home/edmund/crawledFiles/clocomProjects/bigbluebutton/bbb-voice/src/main/java/org/bigbluebutton/voiceconf/sip/CallAgent.java: 259-261
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(100);
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/word2vec/wordstore/VocabConstructor.java: 318-320
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(1000);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/bigbluebutton/bbb-voice/src/main/java/local/ua/CommandLineUA.java: 203-203
+Length: 3
+Sim terms: []
+<    {  try {  Thread.sleep(1000);  } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/lwjgl/src/java/org/lwjgl/test/WindowCreationTest.java: 139-141
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(100);
+< 			} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/TestReceiverProject/src/it/gmariotti/android/examples/receiver/FreezingUIReceiver.java: 35-37
+Length: 3
+Sim terms: []
+< 		try{
+< 			Thread.sleep(15000);
+< 		}catch(Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/voldemort/test/unit/voldemort/tools/admin/SetMetadataTest.java: 146-148
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(10000);
+<         } catch(Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast/src/test/java/com/hazelcast/mapreduce/MapReduceTest.java: 1287-1289
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(1000);
+<             } catch (Exception ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/test/org/apache/hadoop/mapred/jobcontrol/TestJobControl.java: 117-119
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(5000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/blueflood/blueflood-rollupTools/src/main/java/com/rackspacecloud/blueflood/CloudFilesBackfiller/download/DownloadService.java: 117-117
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(100); } catch (Exception ex) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/fuse-dfs/src/test/TestFuseDFS.java: 384-384
+Length: 3
+Sim terms: []
+<       try { Thread.sleep(1000); } catch(Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/BigTableLoader.java: 163-163
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(3000); } catch (Exception e2) {}
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/scheduling/config/LazyScheduledTasksBeanDefinitionParserTests.java: 42-45
+Length: 3
+Sim terms: [[]]
+< 			try {
+< 				Thread.sleep(10);
+< 			}
+< 			catch (Exception ex) { /* Do Nothing */ }
+----
+/home/edmund/crawledFiles/clocomProjects/kilim/bench/kilim/bench/Sleep.java: 39-39
+Length: 3
+Sim terms: []
+<         try {Thread.sleep(100);}catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/modules/jdbc-pool/src/test/java/org/apache/tomcat/jdbc/test/TestSlowQueryReport.java: 326-328
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(200);
+<                 }catch (Exception x) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/TruncateTableLoader.java: 297-299
+Length: 3
+Sim terms: []
+<                             try {
+<                                 Thread.sleep(3000);
+<                             } catch (Exception e2) {
+----
+/home/edmund/crawledFiles/clocomProjects/gephi/modules/UIComponents/src/main/java/org/gephi/ui/components/gradientslider/MultiThumbSliderUI.java: 261-263
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(10);
+<                     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/nutch/src/java/org/apache/nutch/fetcher/FetcherThread.java: 244-246
+Length: 3
+Sim terms: []
+<             try {
+<               Thread.sleep(500);
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-tools/hadoop-gridmix/src/test/java/org/apache/hadoop/mapred/gridmix/TestResourceUsageEmulators.java: 93-95
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(1000); // sleep for 1s
+<       } catch (Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/hindex/src/main/java/org/apache/hadoop/hbase/ipc/HBaseServer.java: 883-883
+Length: 3
+Sim terms: []
+<             try { Thread.sleep(60000); } catch (Exception ignored) {}
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/AntiPatternExamples/src/it/gmariotti/android/examples/antipattern/IntentServiceFreezy.java: 38-40
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(7500);
+< 		} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-ui-parent/deeplearning4j-ui-remote-iterationlisteners/src/main/java/org/deeplearning4j/ui/WebReporter.java: 75-77
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(100);
+<                     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-ui-parent/deeplearning4j-ui/src/main/java/org/deeplearning4j/ui/WebReporter.java: 76-78
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(100);
+<                     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jna/contrib/w32keyhook/com/sun/jna/contrib/demo/KeyHook.java: 75-75
+Length: 3
+Sim terms: []
+<                     try { Thread.sleep(10); } catch(Exception e) { }
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/test/java/org/apache/hadoop/mapreduce/v2/app/launcher/TestContainerLauncher.java: 421-424
+Length: 3
+Sim terms: []
+<       try {
+<         // make the thread sleep to look like its not going to respond
+<         Thread.sleep(15000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/BigTableLoader.java: 151-151
+Length: 3
+Sim terms: []
+<                         try { Thread.sleep(1000); } catch (Exception e2) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/lib/jobcontrol/JobControl.java: 259-262
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(5000);
+<         }
+<         catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/crunch/crunch/src/main/java/org/apache/hadoop/mapreduce/lib/jobcontrol/CrunchJobControl.java: 267-269
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(5000);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/ha/session/DeltaManager.java: 819-821
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(100);
+<                 } catch (Exception sleep) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/test/src/com/cloud/test/stress/TestClientWithAPI.java: 1424-1426
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(120000);
+<         } catch (Exception ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/mapred/org/apache/hadoop/mapred/jobcontrol/JobControl.java: 284-287
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(5000);
+<       }
+<       catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/eclim/org.eclim.pdt/java/org/eclim/plugin/pdt/util/PhpUtils.java: 53-55
+Length: 3
+Sim terms: []
+<         try{
+<           Thread.sleep(100);
+<         }catch(Exception ignore){
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/core/src/com/cloud/hypervisor/xen/resource/CitrixResourceBase.java: 2472-2474
+Length: 3
+Sim terms: []
+<             try{
+<                 Thread.sleep(5000);
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-hdfs/src/test/hdfs/org/apache/hadoop/hdfs/TestDatanodeReport.java: 67-69
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(500);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/camel/camel-core/src/test/java/org/apache/camel/processor/RecipeientListWithSimpleExpressionTest.java: 115-117
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(5);
+<                         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/blueflood/blueflood-rollupTools/src/main/java/com/rackspacecloud/blueflood/CloudFilesBackfiller/download/DownloadService.java: 138-138
+Length: 3
+Sim terms: []
+<             try { Thread.sleep(60000); } catch (Exception ex) {}
+----
+/home/edmund/crawledFiles/clocomProjects/RxJava/src/test/java/io/reactivex/internal/operators/observable/ObservableTakeTest.java: 306-308
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(100);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Fling/src/com/entertailion/java/fling/RampClient.java: 241-243
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(1000);
+< 				} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapred/jobcontrol/TestJobControl.java: 126-128
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(5000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jmxtrans/jmxtrans-core/src/main/java/com/googlecode/jmxtrans/JmxTransformer.java: 164-166
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(5);
+< 			} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tools/preload2/src/com/android/preload/actions/RunMonkeyAction.java: 93-95
+Length: 3
+Sim terms: [[]]
+<                         try {
+<                             Thread.sleep(1000);
+<                         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Memcached-Java-Client/src/com/meetup/memcached/test/TestMemcached.java: 54-54
+Length: 3
+Sim terms: []
+< 		try { Thread.sleep( 10000 ); } catch ( Exception ex ) { }
+----
+/home/edmund/crawledFiles/clocomProjects/Memcached-Java-Client/src/com/meetup/memcached/test/UnitTests.java: 110-110
+Length: 3
+Sim terms: []
+<         try { Thread.sleep( 1000 ); } catch ( Exception ex ) { }
+----
+/home/edmund/crawledFiles/clocomProjects/camel/camel-core/src/test/java/org/apache/camel/component/mock/MockEndpointTimeClauseTest.java: 81-83
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(1000);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/InvokeDroppedProcedureThread.java: 72-72
+Length: 3
+Sim terms: []
+<                     try { Thread.sleep(3000); } catch (Exception e) {} // sleep for 3s
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/test/org/apache/hadoop/hdfs/MiniDFSCluster.java: 1515-1517
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(100);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/camel/components/camel-cxf/src/test/java/org/apache/camel/component/cxf/GreeterImplWithSleep.java: 26-28
+Length: 3
+Sim terms: []
+<         try {            
+<             Thread.sleep(2000);
+<         } catch (Exception ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/AntiPatternExamples/src/it/gmariotti/android/examples/antipattern/ServiceFreezy.java: 37-39
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(7500);
+< 		} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast-client/src/test/java/com/hazelcast/client/mapreduce/ClientMultiMapReduceTest.java: 595-597
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(1000);
+<             } catch (Exception ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast-client/src/test/java/com/hazelcast/client/mapreduce/ClientMapReduceTest.java: 595-597
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(1000);
+<             } catch (Exception ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/ClientThread.java: 248-248
+Length: 3
+Sim terms: []
+<                     try { Thread.sleep(3000); } catch (Exception e2) {} // sleep for 3s
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-tools/hadoop-gridmix/src/main/java/org/apache/hadoop/mapred/gridmix/LoadJob.java: 255-257
+Length: 3
+Sim terms: [[sleep]]
+C - sleep for some time
+<           try {
+<             Thread.sleep(100); // sleep for 100ms
+<           } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/simpleworkflow-common/src/main/java/com/eucalyptus/simpleworkflow/common/client/WorkflowClientStandalone.java: 439-441
+Length: 3
+Sim terms: []
+<       try{
+<         Thread.sleep(1000);
+<       }catch(final Exception ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/test/org/apache/hadoop/hdfs/server/namenode/TestPendingReplication.java: 79-81
+Length: 3
+Sim terms: [[wait, second]]
+<     try {
+<       Thread.sleep(1000);
+<     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/fuse-dfs/src/test/TestFuseDFS.java: 537-539
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(1000);
+<       } catch(Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck/src/txnIdSelfCheck/AsyncBenchmark.java: 358-358
+Length: 3
+Sim terms: []
+<             try { Thread.sleep(1000); } catch (Exception e) {} // sleep for 1s
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/AntiPatternExamples/src/it/gmariotti/android/examples/antipattern/ServiceFreezy.java: 63-66
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(10000);
+< 
+< 			} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voldemort/test/unit/voldemort/client/EndToEndRebootstrapTest.java: 196-198
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(15000);
+<             } catch(Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tools/lbd_lock_test/LBDLockPatternTest_variant.java: 70-72
+Length: 3
+Sim terms: []
+<                     try { 
+<                         Thread.sleep(100); 
+<                     } catch (Exception e) { 
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/security/token/delegation/TestDelegationToken.java: 436-438
+Length: 3
+Sim terms: []
+<             try {
+<               Thread.sleep(250); 
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-examples/src/main/java/com/netflix/hystrix/examples/demo/HystrixCommandDemo.java: 119-121
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(5000);
+<                     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/AntiPatternExamples/src/it/gmariotti/android/examples/antipattern/AsyncFreezyTask.java: 57-59
+Length: 3
+Sim terms: []
+< 		try{
+< 			Thread.sleep(5000);
+< 		}catch(Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/oozie/core/src/main/java/org/apache/oozie/command/coord/CoordActionMaterializeCommand.java: 326-329
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(60000);
+<             }
+<             catch (Exception ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/text/sentenceiterator/PrefetchingSentenceIterator.java: 159-161
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(10);
+<                         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/suro/suro-client/src/test/java/com/netflix/suro/SuroServer4Test.java: 173-173
+Length: 3
+Sim terms: []
+<         try {Thread.sleep(1000);} catch (Exception e) { e.printStackTrace(); }
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-examples/src/main/java/com/netflix/hystrix/examples/demo/HystrixCommandAsyncDemo.java: 190-192
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(5000);
+<                     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/highavailability/src/test/org/apache/hadoop/hdfs/server/datanode/TestAvatarRefreshNamenodes.java: 57-59
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(100);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/lib/jobcontrol/JobControl.java: 221-224
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(5000);
+<           }
+<           catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/test/org/apache/hadoop/hdfs/MiniDFSCluster.java: 1555-1557
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(100);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/stackOverflow/30729657-30730244-0.autocom: 5-7
+Length: 3
+Sim terms: [[]]
+< try {
+<     Thread.sleep(10000);
+< }catch(Exception e){  }
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/dalvik/071-dexfile/src/Main.java: 62-64
+Length: 3
+Sim terms: [[thread]]
+C - let the ProcessManager's daemon thread finish before we shut down  (avoids the occasional segmentation fault)
+<             try {
+<                 Thread.sleep(500);
+<             } catch (Exception ex) {}
+----
+/home/edmund/crawledFiles/clocomProjects/kilim/bench/kilim/bench/Unwind.java: 37-37
+Length: 3
+Sim terms: []
+<         try {Thread.sleep(100);}catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/spring-loaded/testdata/src/main/java/data/Runner.java: 21-23
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(10000);
+< 			} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/test/org/apache/hadoop/hdfs/TestDatanodeReport.java: 65-67
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(500);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/core/src/test/org/apache/solr/cloud/HttpPartitionTest.java: 656-658
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(200L);
+<         } catch (Exception ignoreMe) {}
+----
+/home/edmund/crawledFiles/clocomProjects/zoie/zoie-core/src/test/java/proj/zoie/test/ZoieTestCaseBase.java: 77-79
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(50);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/drools/drools-core/src/test/java/org/drools/core/util/FileManager.java: 148-150
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep( 1000 );
+<             } catch ( Exception e ) {
+----
+/home/edmund/crawledFiles/clocomProjects/couchbase-lite-android/src/androidTest/java/com/couchbase/lite/replicator/ReplicationMockWebServerTest.java: 160-162
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(1000); // 1 sec
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/main/java/org/deeplearning4j/parallelism/main/ParallelWrapperMain.java: 75-77
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(500);
+<             } catch (Exception e2) {
+----
+/home/edmund/crawledFiles/clocomProjects/RxJava/src/test/java/io/reactivex/internal/operators/flowable/FlowableTakeTest.java: 360-362
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(100);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/lib/jobcontrol/TestMapReduceJobControl.java: 118-120
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(100);
+<       } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/sikuli/sikuli-ide/src/main/java/org/sikuli/ide/PatternWindow.java: 74-77
+Length: 3
+Sim terms: []
+<       try{
+<          Thread.sleep(500);
+<       }
+<       catch(Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/core/src/test/org/apache/solr/cloud/ChaosMonkeyShardSplitTest.java: 185-187
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(100);
+<           } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jetty.project/jetty-util/src/test/java/org/eclipse/jetty/util/component/LifeCycleListenerTest.java: 200-204
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 Thread.sleep(1);
+<             }
+<             catch (Exception e)
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestDatanodeReport.java: 75-77
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(500);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/aws-sdk-java/aws-java-sdk-core/src/test/java/com/amazonaws/auth/profile/ProfileCredentialsProviderTest.java: 183-185
+Length: 3
+Sim terms: [[sleep, modifi, file, write]]
+<         try {
+<             Thread.sleep(2000);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tools/lbd_lock_test/LBDLockPatternTest.java: 30-32
+Length: 3
+Sim terms: []
+<                     try { 
+<                         Thread.sleep(100); 
+<                     } catch (Exception e) { 
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-hdfs/src/test/hdfs/org/apache/hadoop/hdfs/server/datanode/TestDeleteBlockPool.java: 105-107
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(3000);
+<         } catch (Exception ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/nutch/src/java/org/apache/nutch/fetcher/QueueFeeder.java: 77-79
+Length: 3
+Sim terms: [[queue]]
+<         try {
+<           Thread.sleep(1000);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/webbit/src/test/java/org/webbitserver/ChunkedResponseTest.java: 38-40
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(10);
+<                         } catch (Exception ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/jmonkeyengine/jme3-vr/src/main/java/com/jme3/input/vr/OSVR.java: 169-171
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(5);
+<                 } catch(Exception e) { }
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/solrj/src/test/org/apache/solr/client/solrj/io/stream/StreamExpressionTest.java: 4246-4248
+Length: 3
+Sim terms: []
+<               try {
+<                 Thread.sleep(1000);
+<               } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/database-common/src/main/java/com/eucalyptus/database/activities/EventHandlerChainEnableVmDatabase.java: 209-211
+Length: 3
+Sim terms: []
+<         try{
+<           Thread.sleep(1000);
+<         }catch(final Exception ex){
+----
+/home/edmund/crawledFiles/clocomProjects/cloudhopper-smpp/src/test/java/com/cloudhopper/smpp/impl/DefaultSmppServerTest.java: 481-483
+Length: 3
+Sim terms: [[process]]
+<             try {
+<                 Thread.sleep(10000);
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-tools/hadoop-gridmix/src/test/java/org/apache/hadoop/mapred/gridmix/TestResourceUsageEmulators.java: 64-66
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(1000); // sleep for 1s
+<       } catch (Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/prey-android-client/app/src/main/java/com/prey/actions/fileretrieval/FileretrievalController.java: 49-49
+Length: 3
+Sim terms: []
+<                 try{Thread.sleep(2000);}catch(Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/paragraphvectors/ParagraphVectors.java: 372-374
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(1);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/fanout/FanoutClient.java: 404-406
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(10);
+< 				} catch (Exception x) {
+----
+/home/edmund/crawledFiles/clocomProjects/RxJava/src/test/java/io/reactivex/flowable/FlowableBackpressureTests.java: 492-494
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(10);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/tribes/membership/McastServiceImpl.java: 567-567
+Length: 3
+Sim terms: []
+<                         try { Thread.sleep(500); } catch ( Exception ignore ){}
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/modules/test/poshi-runner/poshi-runner/src/main/java/com/liferay/poshi/runner/selenium/BaseWebDriverImpl.java: 3168-3171
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(1000);
+< 				}
+< 				catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/eclim/org.eclim.core/java/org/eclim/plugin/core/command/problems/ProblemsCommand.java: 192-194
+Length: 3
+Sim terms: []
+<       try{
+<         Thread.sleep(100);
+<       }catch(Exception ignore){
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/ClientThread.java: 226-226
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(3000); } catch (Exception e2) {} // sleep for 3s
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/frontend/org/voltdb/TableHelper.java: 1386-1386
+Length: 3
+Sim terms: []
+<                     try { Thread.sleep(2000); } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/ice/src/java/com/netflix/ice/common/AwsUtils.java: 372-372
+Length: 3
+Sim terms: []
+<             try {Thread.sleep(2000L);}catch (Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/database-common/src/main/java/com/eucalyptus/database/activities/EventHandlerChainEnableVmDatabase.java: 143-145
+Length: 3
+Sim terms: []
+<         try{
+<           Thread.sleep(1000);
+<         }catch(final Exception ex){
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/TruncateTableLoader.java: 377-377
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(3000); } catch (Exception e2) {}
+----
+/home/edmund/crawledFiles/clocomProjects/liferay-portal/modules/test/poshi-runner/poshi-runner/src/main/java/com/liferay/poshi/runner/selenium/BaseWebDriverImpl.java: 3195-3198
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(1000);
+< 				}
+< 				catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jna/test/com/sun/jna/NativeTest.java: 525-525
+Length: 3
+Sim terms: []
+<             try { Thread.sleep(300000); } catch(Exception e) { }
+----
+/home/edmund/crawledFiles/clocomProjects/jackson-databind/src/test/java/com/fasterxml/jackson/databind/deser/TestConcurrency.java: 57-59
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(100L);
+<             } catch (Exception e) { }
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/AntiPatternExamples/src/it/gmariotti/android/examples/antipattern/IntentServiceFreezy.java: 66-69
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(1000);
+< 
+< 		} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/AntiPatternExamples/src/it/gmariotti/android/examples/antipattern/FreezingUIReceiver.java: 35-37
+Length: 3
+Sim terms: []
+< 		try{
+< 			Thread.sleep(15000);
+< 		}catch(Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/camel/camel-core/src/test/java/org/apache/camel/processor/RecipeientListWithSimpleExpressionTest.java: 63-65
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(5);
+<                         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/rest.li/data/src/test/java/com/linkedin/data/schema/generator/TestAbstractGenerator.java: 236-240
+Length: 3
+Sim terms: []
+<       try
+<       {
+<         Thread.sleep(1000);
+<       }
+<       catch (Exception e)
+----
+/home/edmund/crawledFiles/clocomProjects/jersey/containers/simple-http/src/test/java/org/glassfish/jersey/simple/TraceTest.java: 111-113
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(50);
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/loadbalancing/src/main/java/com/eucalyptus/loadbalancing/workflow/LoadBalancingWorkflows.java: 358-360
+Length: 3
+Sim terms: []
+<       try{
+<         Thread.sleep(500);
+<       }catch(final Exception ex){
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/catalina/ha/session/DeltaManager.java: 831-833
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(100);
+<                     } catch (Exception sleep) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-loaded/springloaded/src/test/java/org/springsource/loaded/test/SpringLoadedTestsInSeparateJVM.java: 468-471
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(2000);
+< 		}
+< 		catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/camus/camus-etl-kafka/src/test/java/com/linkedin/camus/etl/kafka/common/EmailClientTest.java: 48-50
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(1000);
+<     } catch(Exception e){
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/examples/contentionmark/ContentionMark.java: 259-259
+Length: 3
+Sim terms: []
+<             try { Thread.sleep(50); } catch (Exception e2) {}
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/hsqldb19b3/org/hsqldb_voltpatches/persist/LockFile.java: 1827-1843
+Length: 3
+Sim terms: [[]]
+<             try {
+< 
+<                 // Hack Alert:
+<                 //
+<                 // Even without the presence of concurrent locking attempts,
+<                 // the delete or exists invocations below occasionally return
+<                 // false otherwise, perhaps due to a race condition with the
+<                 // heartbeat timestamp writer task or some nio file lock release
+<                 // timing issue?
+<                 //
+<                 // TODO:
+<                 //
+<                 // determine if this is an external constraint or if we can
+<                 // solve it instead by waiting for any in-progress
+<                 // writeHeartbeat operation to conclude.
+<                 Thread.sleep(100);
+<             } catch (Exception ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/test/java/org/apache/hadoop/yarn/server/nodemanager/containermanager/application/TestApplication.java: 291-293
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(1000);
+<       } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/blueflood/blueflood-core/src/integration-test/java/com/rackspacecloud/blueflood/io/astyanax/ACassandraUtilsIO.java: 55-55
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(1000L); } catch (Exception ewww) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestBalancerBandwidth.java: 66-68
+Length: 3
+Sim terms: [[datanod]]
+<       try {
+<         Thread.sleep(5000);
+<       } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/blockmanagement/TestPendingReplication.java: 113-115
+Length: 3
+Sim terms: [[wait, second]]
+<     try {
+<       Thread.sleep(1000);
+<     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/rootbeer1/src/org/trifort/rootbeer/util/CmdRunner.java: 93-95
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(10);
+<         } catch(Exception ex){
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/TestReceiverProject/src/it/gmariotti/android/examples/receiver/ReceiverTestService.java: 31-33
+Length: 3
+Sim terms: []
+< 		try{
+< 			Thread.sleep(2000);
+< 		}catch (Exception e){e.printStackTrace();}
+----
+/home/edmund/crawledFiles/clocomProjects/cassandra/test/unit/org/apache/cassandra/db/SecondaryIndexTest.java: 403-403
+Length: 3
+Sim terms: []
+<         try { Thread.sleep(1000); } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-hdfs/src/test/hdfs/org/apache/hadoop/hdfs/server/namenode/TestPendingReplication.java: 80-82
+Length: 3
+Sim terms: [[wait, second]]
+<     try {
+<       Thread.sleep(1000);
+<     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-loaded/springloaded/src/test/java/org/springsource/loaded/test/ReloadingJVM.java: 199-202
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(100);
+< 				}
+< 				catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/CappedTableLoader.java: 146-146
+Length: 3
+Sim terms: []
+<                         try { Thread.sleep(1000); } catch (Exception e2) {}
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/word2vec/wordstore/VocabConstructor.java: 288-290
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(2);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/sikuli/sikuli-ide/src/main/java/org/sikuli/ide/CaptureButton.java: 191-194
+Length: 3
+Sim terms: []
+<             try{
+<                Thread.sleep(500);
+<             }
+<             catch(Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/h2o/src/main/java/water/persist/PersistHdfs.java: 131-133
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(1000);
+<       } catch( Exception ex ) {}
+----
+/home/edmund/crawledFiles/clocomProjects/cassandra/test/unit/org/apache/cassandra/db/SecondaryIndexTest.java: 426-426
+Length: 3
+Sim terms: []
+<         try { Thread.sleep(1000); } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/highavailability/src/test/org/apache/hadoop/hdfs/MiniAvatarCluster.java: 1735-1737
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(100);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/aws-sdk-java/aws-java-sdk-core/src/test/java/com/amazonaws/auth/profile/CredentialProfilesTest.java: 198-200
+Length: 3
+Sim terms: [[sleep, modifi, file, write]]
+<         try {
+<             Thread.sleep(2000);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/blueflood/blueflood-rollupTools/src/main/java/com/rackspacecloud/blueflood/CloudFilesBackfiller/download/DownloadService.java: 152-154
+Length: 3
+Sim terms: []
+<                     try {
+<                         thread.sleep(60000);
+<                     } catch (Exception ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/test/java/org/apache/hadoop/yarn/TestContainerLaunchRPC.java: 141-144
+Length: 3
+Sim terms: []
+<       try {
+<         // make the thread sleep to look like its not going to respond
+<         Thread.sleep(10000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jetty.project/jetty-server/src/test/java/org/eclipse/jetty/server/ConnectorTimeoutTest.java: 789-789
+Length: 3
+Sim terms: []
+<             try{Thread.sleep(2000);}catch(Exception e){e.printStackTrace();}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/fuse-dfs/src/test/TestFuseDFS.java: 173-175
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(1000);
+<       } catch(Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-internal/src/main/java/weka/gui/boundaryvisualizer/BoundaryPanel.java: 936-938
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(300);
+<     } catch (Exception ex) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/test/org/apache/hadoop/hdfs/server/datanode/TestRefreshNamenodes.java: 41-43
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(100);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/TestReceiverProject/src/it/gmariotti/android/examples/receiver/LocalBroadcastReceiverTestService.java: 32-34
+Length: 3
+Sim terms: []
+< 		try{
+< 			Thread.sleep(2000);
+< 		}catch (Exception e){e.printStackTrace();}
+----
+/home/edmund/crawledFiles/clocomProjects/h2o/src/embedded/java/ScoreRandom.java: 136-136
+Length: 3
+Sim terms: []
+<     try { Thread.sleep(1000); } catch( Exception e ) { }
+----
+/home/edmund/crawledFiles/clocomProjects/mct/fastPlotViews/src/test/java/gov/nasa/arc/mct/fastplot/bridge/TestPlotDataManager.java: 389-391
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(1000);
+< 		} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jersey/security/oauth1-server/src/test/java/org/glassfish/jersey/server/oauth1/NonceManagerTest.java: 116-118
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(1000);
+<         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/ReadThread.java: 105-105
+Length: 3
+Sim terms: []
+<                     try { Thread.sleep(3000); } catch (Exception e) {} // sleep for 3s
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/fanout/FanoutClient.java: 197-199
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(100);
+< 			} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/prey-android-client/app/src/main/java/com/prey/net/offline/OfflineController.java: 56-56
+Length: 3
+Sim terms: []
+<                 try{Thread.sleep(2000);}catch(Exception e){}
+----
+/home/edmund/crawledFiles/clocomProjects/hindex/src/main/java/org/apache/hadoop/hbase/ipc/HBaseServer.java: 665-665
+Length: 3
+Sim terms: []
+<             try { Thread.sleep(60000); } catch (Exception ignored) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/TestBalancerBandwidth.java: 78-80
+Length: 3
+Sim terms: [[datanod]]
+<       try {
+<         Thread.sleep(5000);
+<       } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/modules/jdbc-pool/src/test/java/org/apache/tomcat/jdbc/test/TestSlowQueryReport.java: 301-303
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(200);
+<                 }catch (Exception x) {
+----
+/home/edmund/crawledFiles/clocomProjects/crunch/crunch/src/main/java/org/apache/hadoop/mapreduce/lib/jobcontrol/CrunchJobControl.java: 284-286
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(5000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/blueflood/blueflood-core/src/integration-test/java/com/rackspacecloud/blueflood/io/datastax/DCassandraUtilsIO.java: 59-59
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(1000L); } catch (Exception ewww) {}
+----
+/home/edmund/crawledFiles/clocomProjects/gocd/agent-bootstrapper/src/com/thoughtworks/go/agent/bootstrapper/osx/AgentMacWindow.java: 131-133
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(500);
+<             } catch (Exception ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/AndroidAsync/AndroidAsync/test/src/com/koushikdutta/async/test/FutureTests.java: 305-308
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(1000);
+<                 }
+<                 catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voldemort/test/unit/voldemort/client/EndToEndRebootstrapTest.java: 244-246
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(15000);
+<             } catch(Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.dmx/src/main/java/org/openhab/binding/dmx/internal/core/DmxController.java: 220-222
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(10);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/text/sentenceiterator/PrefetchingSentenceIterator.java: 137-139
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(50);
+<                     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/InvokeDroppedProcedureThread.java: 81-81
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(1); } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/jedis/src/test/java/redis/clients/jedis/tests/commands/PublishSubscribeCommandsTest.java: 373-379
+Length: 3
+Sim terms: []
+<           try {
+<             // wait 0.5 secs to slow down subscribe and
+<             // client-output-buffer exceed
+<             // System.out.println("channel - " + channel +
+<             // " / message - " + message);
+<             Thread.sleep(100);
+<           } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/BuildCraft/src_old_license/buildcraft/core/tablet/manager/TabletThread.java: 36-38
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(1);
+<                 } catch (Exception e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/loadbalancing/src/main/java/com/eucalyptus/loadbalancing/workflow/LoadBalancingWorkflows.java: 371-373
+Length: 3
+Sim terms: []
+<       try{
+<         Thread.sleep(500);
+<       }catch(final Exception ex){
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/TruncateTableLoader.java: 421-421
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(3000); } catch (Exception e2) {}
+----
+/home/edmund/crawledFiles/clocomProjects/Memcached-Java-Client/src/com/meetup/memcached/SockIOPool.java: 1231-1231
+Length: 3
+Sim terms: []
+< 					try { Thread.sleep( 500 ); } catch ( Exception ex ) { }
+----
+/home/edmund/crawledFiles/clocomProjects/spring-loaded/springloaded/src/test/java/org/springsource/loaded/test/ReloadingJVMCommandProcess.java: 115-118
+Length: 3
+Sim terms: []
+< 					try {
+< 						Thread.sleep(750);
+< 					}
+< 					catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-core/src/main/java/com/netflix/hystrix/util/HystrixRollingNumber.java: 340-342
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(5);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/paragraphvectors/ParagraphVectors.java: 302-304
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(50);
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/flyingsaucer/flying-saucer-examples/src/main/java/org/xhtmlrenderer/demo/aboutbox/AboutBox.java: 153-155
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(100);
+<             } catch (Exception ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-core/src/main/java/com/netflix/hystrix/util/HystrixRollingPercentile.java: 291-293
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(5);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/msgs/src/main/java/com/eucalyptus/component/auth/SystemCredentials.java: 330-332
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep( 2000 );
+<         } catch ( Exception e ) {
+----
+/home/edmund/crawledFiles/clocomProjects/h2o/src/test/java/hex/gbm/GBMTest.java: 308-308
+Length: 3
+Sim terms: []
+<       try { Thread.sleep(100); } catch( Exception ignore ) { }
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/tests/servicestests/src/com/android/server/CountryDetectorServiceTest.java: 99-101
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(500);
+<             } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/glove/AbstractCoOccurrences.java: 435-445
+Length: 3
+Sim terms: []
+<                     try {
+<                         /*
+<                                commented and left here for future debugging purposes, if needed
+<                         
+<                                 //lock.readLock().lock();
+<                                 //int size = coOccurrenceCounts.size();
+<                                 //lock.readLock().unlock();
+<                                 //logger.info("Current memory situation: {size: [" +size+ "], footprint: [" + getMemoryFootprint()+"], threshold: ["+ getMemoryThreshold() +"]}");
+<                          */
+<                         Thread.sleep(1000);
+<                     } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jetty.project/jetty-server/src/test/java/org/eclipse/jetty/server/ConnectorTimeoutTest.java: 754-754
+Length: 3
+Sim terms: []
+<                 try{Thread.sleep(50);}catch(Exception e){e.printStackTrace();}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/test/org/apache/hadoop/hdfs/server/namenode/TestPendingReplication.java: 96-98
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(1000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-hdfs/src/test/hdfs/org/apache/hadoop/hdfs/server/namenode/TestPendingReplication.java: 96-98
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(1000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/solrj/src/test/org/apache/solr/client/solrj/io/stream/StreamExpressionTest.java: 4196-4198
+Length: 3
+Sim terms: []
+<               try {
+<                 Thread.sleep(1000);
+<               } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/blockmanagement/TestPendingReplication.java: 131-133
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(1000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-deeplearning/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/word2vec/wordstore/VocabConstructor.java: 269-271
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(2);
+<                         } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/mapred/org/apache/hadoop/mapred/jobcontrol/JobControl.java: 270-273
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(5000);
+<         }
+<         catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jetty.project/jetty-util/src/test/java/org/eclipse/jetty/util/component/LifeCycleListenerTest.java: 223-227
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 Thread.sleep(1);
+<             }
+<             catch (Exception e)
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/CappedTableLoader.java: 156-156
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(3000); } catch (Exception e2) { }
+----
+/home/edmund/crawledFiles/clocomProjects/blueflood/blueflood-rollupTools/src/main/java/com/rackspacecloud/blueflood/CloudFilesBackfiller/download/CloudFilesManager.java: 155-155
+Length: 3
+Sim terms: []
+<                         try { Thread.sleep(100); } catch (Exception ex) {}
+----
+/home/edmund/crawledFiles/clocomProjects/antlr4/runtime-testsuite/test/org/antlr/v4/test/runtime/BaseRuntimeTest.java: 65-68
+Length: 3
+Sim terms: []
+< 					try {
+< 						Thread.sleep(5000);
+< 					}
+< 					catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/zookeeper/src/java/test/org/apache/zookeeper/test/FLETest.java: 394-396
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(250);
+<                 } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jadx/jadx-core/src/test/java/jadx/tests/integration/trycatch/TestTryCatch7.java: 16-18
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(50);
+< 			} catch (Exception ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/androiddev/AntiPatternExamples/src/it/gmariotti/android/examples/antipattern/IntentServiceFreezy.java: 54-56
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(2500);
+< 		} catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/rest.li/r2-int-test/src/test/java/test/r2/integ/TestClientTimeout.java: 199-203
+Length: 3
+Sim terms: []
+<             try
+<             {
+<               Thread.sleep(3500);
+<             }
+<             catch (Exception ex)
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/solrj/src/test/org/apache/solr/client/solrj/io/stream/StreamExpressionTest.java: 4690-4692
+Length: 3
+Sim terms: []
+<               try {
+<                 Thread.sleep(1000);
+<               } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/test/org/apache/hadoop/mapred/jobcontrol/TestLocalJobControl.java: 124-126
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(5000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapred/jobcontrol/TestLocalJobControl.java: 124-126
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(5000);
+<       } catch (Exception e) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/modules/jdbc-pool/src/test/java/org/apache/tomcat/jdbc/test/TestSlowQueryReport.java: 315-317
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(200);
+<                 }catch (Exception x) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/test_apps/txnid-selfcheck2/src/txnIdSelfCheck/TruncateTableLoader.java: 313-313
+Length: 3
+Sim terms: []
+<                         try { Thread.sleep(1000); } catch (Exception e2) {}
+----
+Comments (size 2):
+1.
+sleep for some time
+2.
+let the ProcessManager's daemon thread finish before we shut down  (avoids the occasional segmentation fault)
+----
+Ranked result (sim terms):
+1.
+sleep for some time
+2.
+let the ProcessManager's daemon thread finish before we shut down  (avoids the occasional segmentation fault)
+----
+

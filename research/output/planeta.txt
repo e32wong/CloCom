@@ -1,0 +1,2399 @@
+Match Group 2 of size 1+335
+/home/edmund/crawledFiles/autocommentProjects/planeta/planetamessenger/src/org/planetamessenger/ui/JPopupWindow.java: 260-262
+Length: 3
+C - Wait for time to show dialog
+*     try  {
+*       Thread.sleep( nShowTimeout );
+*     } catch( InterruptedException e )  {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.enocean.test/src/test/java/org/openhab/binding/enocean/internal/bus/RockerSwitchInDimmerProfileTest.java: 105-107
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(i);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast/src/main/java/com/hazelcast/internal/util/InvocationUtil.java: 112-114
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(WARMUP_SLEEPING_TIME_MILLIS);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/test/java/org/apache/hadoop/yarn/client/api/impl/TestNMClient.java: 366-368
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(sleepTime);
+<     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/server/src/com/cloud/network/security/dao/VmRulesetLogDaoImpl.java: 99-101
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(delayMs);
+<                     } catch(InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/fanout/FanoutClient.java: 240-242
+Length: 3
+Sim terms: []
+< 					try {
+< 						Thread.sleep(reconnectTimeout);
+< 					} catch (InterruptedException x) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.iec6205621meter/src/main/java/org/openmuc/j62056/Connection.java: 351-353
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SLEEP_INTERVAL);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/harmony-tests/src/test/java/org/apache/harmony/nio/tests/java/nio/channels/SelectorTest.java: 328-330
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(WAIT_TIME);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Solandra/src/lucandra/CassandraUtils.java: 615-619
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 Thread.sleep(retryAttemptSleep);
+<             }
+<             catch (InterruptedException e)
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/android/os/Debug.java: 284-285
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(SPIN_DELAY); }
+<                 catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/io/BufferedOutputFileImpl.java: 318-320
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(CHECK_INTERVAL);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/ContainerExecutor.java: 177-179
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(sleepMsec);
+<       } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/greenDAO/tests/DaoTest/src/androidTest/java/org/greenrobot/greendao/daotest/DaoSessionConcurrentTest.java: 351-353
+Length: 3
+Sim terms: [[thread]]
+C - Give the concurrent thread time so it will try to acquire locks
+<                 try {
+<                     Thread.sleep(TIME_TO_WAIT_FOR_THREAD);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/io/BufferedOutputFileImpl.java: 672-674
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(CHECK_INTERVAL);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hindex/src/main/java/org/apache/hadoop/hbase/util/FSHDFSUtils.java: 128-130
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(waitingPeriod);
+<       } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/fitnesse/test/fitnesse/socketservice/SocketServiceTest.java: 103-106
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(ms);
+<     }
+<     catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/solrj/src/java/org/apache/solr/common/cloud/ClusterStateUtil.java: 206-208
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(TIMEOUT_POLL_MS);
+<           } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ThinkAndroid/ThinkAndroid/src/com/ta/util/db/TASQLiteDatabasePool.java: 528-531
+Length: 3
+Sim terms: []
+< 		try
+< 		{
+< 			Thread.sleep(mSeconds);
+< 		} catch (InterruptedException e)
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.anel/src/main/java/org/openhab/binding/anel/internal/AnelBinding.java: 275-277
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(THREAD_INITIALIZATION_DELAY);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jersey/examples/server-async/src/main/java/org/glassfish/jersey/examples/server/async/LongRunningAsyncOperationResource.java: 95-97
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SLEEP_TIME_IN_MILLIS);
+<                 } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/wildfly/testsuite/integration/basic/src/test/java/org/jboss/as/test/integration/security/loginmodules/negotiation/GSSTestServer.java: 87-89
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(ADJUSTED_SECOND);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/dalvik/079-phantom/src/Main.java: 21-23
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(ms);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/luni/src/test/java/org/apache/harmony/security/tests/java/security/KeyFactory2Test.java: 63-65
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(sleepTime);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/com/android/internal/telephony/RIL.java: 531-533
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(SOCKET_OPEN_RETRY_MILLIS);
+<                     } catch (InterruptedException er) {
+----
+/home/edmund/crawledFiles/clocomProjects/jeromq/src/test/java/guide/ppworker.java: 138-141
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(interval);
+<                 }
+<                 catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/fitnesse/src/fitnesse/testsystems/slim/SlimCommandRunningClient.java: 102-104
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(sleepStep);
+<           } catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/ThinkAndroid/ThinkAndroid/src/com/ta/util/http/FileHttpResponseHandler.java: 93-96
+Length: 3
+Sim terms: []
+< 					try
+< 					{
+< 						Thread.sleep(TIMERSLEEPTIME);
+< 					} catch (InterruptedException e)
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/mapred/org/apache/hadoop/mapred/Task.java: 702-705
+Length: 3
+Sim terms: [[sleep]]
+C - sleep for a bit
+<           try {
+<             Thread.sleep(PROGRESS_INTERVAL);
+<           } 
+<           catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/util/ProcessUtil.java: 124-127
+Length: 3
+Sim terms: []
+< 								try {
+< 									// This is a last resort, so let's not be too eager
+< 									Thread.sleep(ALRM_TIMEOUT);
+< 								} catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/DFSInputStream.java: 261-263
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(waitTime);
+<     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/com/android/internal/app/ShutdownThread.java: 411-413
+Length: 3
+Sim terms: [[shut, vibrat, down]]
+<             try {
+<                 Thread.sleep(SHUTDOWN_VIBRATE_MS);
+<             } catch (InterruptedException unused) {
+----
+/home/edmund/crawledFiles/clocomProjects/selendroid/selendroid-standalone/src/main/java/io/selendroid/standalone/android/impl/AbstractDevice.java: 651-653
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(millis);
+<     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus-client/databus-client-http/src/test/java/com/linkedin/databus/client/netty/TestClientChannelClose.java: 380-383
+Length: 3
+Sim terms: []
+< 		  		    try
+< 		  		    {
+< 		  		    	Thread.sleep(_timeout);
+< 		  		    } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/tests/frontend/org/voltdb/MockStatsSource.java: 76-78
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(delay);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/coursera-android/Examples/ThreadingNoThreading/src/course/examples/threading/nothreading/NoThreadingExample.java: 46-48
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(mDelay);
+< 		} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hindex/src/main/java/org/apache/hadoop/hbase/util/FSUtils.java: 586-588
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(wait);
+<           } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/dalvik/036-finalizer/src/Main.java: 13-15
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(ms);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/coursera-android/Examples/ThreadingRunOnUiThread/src/course/examples/threading/threadingrunonuithread/SimpleThreadingExample.java: 47-49
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(mDelay);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/maven-android-plugin/src/main/java/com/simpligility/maven/plugins/android/AbstractEmulatorMojo.java: 433-437
+Length: 3
+Sim terms: []
+<                     try
+<                     {
+<                         Thread.sleep( MILLIS_TO_SLEEP_BETWEEN_SYS_BOOTED_CHECKS );
+<                     }
+<                     catch ( InterruptedException e )
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/router/net/i2p/router/client/ClientListenerRunner.java: 128-128
+Length: 3
+Sim terms: []
+<             try { Thread.sleep(curDelay); } catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/jzmq/jzmq-core/src/main/java/org/zeromq/ZCertStore.java: 238-240
+Length: 3
+Sim terms: []
+< 					try {
+< 						Thread.sleep(checkTime);
+< 					} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-dashboard/src/main/java/com/netflix/hystrix/dashboard/stream/MockStreamServlet.java: 93-96
+Length: 3
+Sim terms: [[batch], []]
+<                         try {
+<                             // simulate the delays we get from the real feed
+<                             Thread.sleep(delay);
+<                         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti5-test/src/test/java/org/activiti5/engine/test/concurrency/ConcurrentEngineUsageTest.java: 113-115
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(timeout);
+<         } catch (InterruptedException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/wildfly/testsuite/integration/basic/src/test/java/org/jboss/as/test/integration/batch/transaction/TransactedService.java: 40-42
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(timeout);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/giraph/giraph-core/src/test/java/org/apache/giraph/utils/TestProgressableUtils.java: 46-48
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(sleepTime);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/HwAccelerationTest/src/com/android/test/hwui/RevealActivity.java: 110-112
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(DURATION);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Osmand/OsmAnd/src/net/osmand/plus/views/AnimateDraggingMapThread.java: 58-60
+Length: 3
+Sim terms: []
+< 					try {
+< 						Thread.sleep(DEFAULT_SLEEP_TO_REDRAW);
+< 					} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jna/contrib/platform/src/com/sun/jna/platform/win32/W32Service.java: 301-303
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep( dwWaitTime );
+< 			} catch (InterruptedException e){
+----
+/home/edmund/crawledFiles/clocomProjects/cardslib/demo/stock/src/main/java/it/gmariotti/cardslib/demo/fragment/nativeview/NativeMaterialCardFragment.java: 227-229
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(mRefresh_lenght);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/frontend/org/voltdb/utils/VoltSampler.java: 277-279
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(intersampleMillis);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-fdb-fix/idea_fdb_3_fix/src/flex/tools/debugger/cli/DebugCLI.java: 6194-6194
+Length: 3
+Sim terms: []
+< 			try { Thread.sleep(period); } catch(InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus-client/databus-client-http/src/test/java/com/linkedin/databus/client/pub/TestDatabusClientNode.java: 426-430
+Length: 3
+Sim terms: []
+<         try
+<         {
+<           Thread.sleep(_delayMs);
+<         }
+<         catch (InterruptedException e)
+----
+/home/edmund/crawledFiles/clocomProjects/core/datastores-parent/datastore-common/src/test/java/org/wicketstuff/datastores/common/BaseDataStoreTest.java: 245-247
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(WAIT_TIME);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-security/itest/misc/src/integration-test/java/org/springframework/security/concurrent/SessionRegistryImplMTTests.java: 209-211
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(length);
+< 		} catch (InterruptedException ignore) {}
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/HystrixCircuitBreakerTest.java: 634-636
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(waitMillis);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/restlet-framework-java/modules/org.restlet.ext.sdc/src/org/restlet/ext/sdc/SdcClientHelper.java: 156-158
+Length: 3
+Sim terms: []
+<                             try {
+<                                 Thread.sleep(retryDelay);
+<                             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/coretests/src/android/database/DatabaseLockTest.java: 133-135
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(SLEEP_TIME); 
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jersey/examples/server-async-standalone/webapp/src/main/java/org/glassfish/jersey/examples/server/async/LongRunningEchoResource.java: 97-99
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SLEEP_TIME_IN_MILLIS);
+<                 } catch (final InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/cardslib/demo/extras/src/main/java/it/gmariotti/cardslib/demo/extras/fragment/ActionbarpullFragment.java: 141-143
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SIMULATED_REFRESH_LENGTH);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/test/java/de/akquinet/devops/test/ui/view/GitblitPageView.java: 39-41
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(miliseconds);
+< 		} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/HystrixCommandTest.java: 5792-5795
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(latency);
+<                 return true;
+<             } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/USM/src/main/java/org/cloudifysource/usm/shutdown/DefaultProcessKiller.java: 61-64
+Length: 3
+Sim terms: [[sleep, process]]
+< 			try {
+< 				// sleep for a short period so process table get cleaned up
+< 				Thread.sleep(POST_KILL_SLEEP_INTERVAL);
+< 			} catch (final InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/frontend/org/voltdb/importclient/kafka/KafkaTopicPartitionImporter.java: 737-739
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(attemptIntervalMs);
+<                 } catch (InterruptedException unexpected) {
+----
+/home/edmund/crawledFiles/clocomProjects/hbc/hbc-core/src/main/java/com/twitter/hbc/BasicReconnectionManager.java: 75-77
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(millis);
+<     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/gradle/subprojects/internal-performance-testing/src/main/groovy/org/gradle/performance/fixture/WaitingReader.java: 68-70
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(clockTick);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/maven-android-plugin/src/main/java/com/simpligility/maven/plugins/android/AbstractEmulatorMojo.java: 331-335
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 Thread.sleep( MILLIS_TO_SLEEP_BETWEEN_DEVICE_ONLINE_CHECKS );
+<             }
+<             catch ( InterruptedException e )
+----
+/home/edmund/crawledFiles/clocomProjects/dubbo/dubbo-remoting/dubbo-remoting-api/src/test/java/com/alibaba/dubbo/remoting/handler/WrappedChannelHandlerTest.java: 73-75
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(ms);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/core/net/i2p/crypto/YKGenerator.java: 196-198
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(CALC_DELAY);
+<                         } catch (InterruptedException ie) { // nop
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/client/src/main/java/com/orientechnologies/orient/client/remote/OStorageRemote.java: 309-311
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(connectionRetryDelay);
+<       } catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-fdb-fix/idea_fdb_4.0.0.14159_fix/src/flex/tools/debugger/cli/DebugCLI.java: 6381-6381
+Length: 3
+Sim terms: []
+< 			try { Thread.sleep(period); } catch(InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/webmagic/webmagic-core/src/main/java/us/codecraft/webmagic/Spider.java: 452-454
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(time);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/esc/src/main/java/org/cloudifysource/esc/driver/provisioning/storage/openstack/OpenstackStorageDriver.java: 443-445
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(VOLUME_POLLING_INTERVAL_MILLIS);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/test/org/apache/hadoop/fs/TestFileSystem.java: 507-509
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(delayMS);
+<       } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hive/llap-server/src/java/org/apache/hadoop/hive/llap/io/encoded/VectorDeserializeOrcWriter.java: 241-243
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(fallbackMs);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/selendroid/selendroid-server/src/main/java/io/selendroid/server/handler/Actions.java: 74-76
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(longestPause);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/coursera-android/Examples/ThreadingHandlerRunnable/src/course/examples/threading/threadinghandlerrunnable/HandlerRunnableActivity.java: 97-99
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(mDelay);
+< 		} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/utiltests/src/com/android/internal/util/StateMachineTest.java: 59-61
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch(InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/h2o/src/main/java/water/HeartBeatThread.java: 61-62
+Length: 3
+Sim terms: [[cloud, node, cast, form, per, multi]]
+<       try { Thread.sleep(SLEEP); } // Only once-sec per entire Cloud
+<       catch( InterruptedException ignore ) { }
+----
+/home/edmund/crawledFiles/clocomProjects/logback/logback-classic/src/test/java/ch/qos/logback/classic/joran/ReconfigureOnChangeTaskTest.java: 425-427
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(sleepBetweenUpdates);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.ipx800/src/main/java/org/openhab/binding/ipx800/internal/Ipx800DeviceConnector.java: 454-456
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(reconnectTimeout);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/webmagic/webmagic-selenium/src/main/java/us/codecraft/webmagic/downloader/selenium/SeleniumDownloader.java: 83-85
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(sleepTime);
+< 		} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/JDBM3/src/test/java/org/apache/jdbm/BTreeTest.java: 605-607
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(THREAD_RUNTIME);
+<         } catch (InterruptedException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/Compatibility/src/com/android/compatibilitytest/AppCompatibility.java: 198-200
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(mAppLaunchTimeout);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/metric/CommandStreamTest.java: 163-165
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(fallbackExecutionLatency);
+<             } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast/src/main/java/com/hazelcast/internal/networking/nio/NioThread.java: 279-281
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(SELECT_FAILURE_PAUSE_MILLIS);
+<         } catch (InterruptedException i) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/hsqldb19b3/org/hsqldb_voltpatches/util/DatabaseManagerSwing.java: 1543-1545
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(BUTTON_CHECK_PERIOD);
+<                 } catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.enocean.test/src/test/java/org/openhab/binding/enocean/internal/bus/RockerSwitchInRollershutterProfileTest.java: 169-171
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(i);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/dubbo/dubbo-rpc/dubbo-rpc-hessian/src/test/java/com/alibaba/dubbo/rpc/protocol/hessian/HessianServiceImpl.java: 37-39
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Glowstone/src/main/java/net/glowstone/util/ShutdownMonitorThread.java: 26-28
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(DELAY);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/frontend/org/voltdb/importclient/kafka/KafkaTopicPartitionImporter.java: 499-501
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(m_waitSleepMs);
+<                         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.modbus/src/main/java/net/wimpi/modbus/io/ModbusSerialTransaction.java: 184-186
+Length: 3
+Sim terms: []
+<                             try {
+<                                 Thread.sleep(m_TransDelayMS);
+<                             } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/core/src/com/cloud/agent/resource/virtualnetwork/VirtualRoutingResource.java: 904-906
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(_sleep);
+<             } catch (final InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/wildfly/testsuite/integration/basic/src/test/java/org/jboss/as/test/integration/ejb/timerservice/overlap/ScheduleRetryFailSingletonBean.java: 93-95
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(wait);
+<         } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/android-xbmcremote/src/org/xbmc/eventclient/EventClient.java: 397-399
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(mSleepTime);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/twitter4j/twitter4j-stream/src/main/java/twitter4j/TwitterStreamImpl.java: 642-644
+Length: 3
+Sim terms: []
+<                             try {
+<                                 Thread.sleep(timeToSleep);
+<                             } catch (InterruptedException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/router/net/i2p/router/tunnel/pool/BuildExecutor.java: 410-410
+Length: 3
+Sim terms: []
+<                     try { Thread.sleep(LOOP_TIME); } catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/blitz4j/src/main/java/com/netflix/logging/messaging/MessageBatcher.java: 446-448
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(SLEEP_TIME_MS);
+<                     } catch (InterruptedException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/cardslib/demo/extras/src/main/java/it/gmariotti/cardslib/demo/extras/fragment/nativeview/GoogleProgressFragment.java: 124-126
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(SIMULATED_REFRESH_LENGTH);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/aws-sdk-java/aws-java-sdk-core/src/test/java/com/amazonaws/http/timers/ClientExecutionAndRequestTimerTestUtils.java: 236-238
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(WAIT_BEFORE_ASSERT_ON_EXECUTOR);
+<         } catch (InterruptedException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/dalvik/030-bad-finalizer/src/BadFinalizer.java: 8-10
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(ms);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/io/BufferedOutputFileImpl.java: 742-744
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(CHECK_INTERVAL);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/FileExplorer/src/net/micode/fileexplorer/FTPServerService.java: 403-407
+Length: 3
+Sim terms: []
+<             try {
+<                 // todo: think about using ServerSocket, and just closing
+<                 // the main socket to send an exit signal
+<                 Thread.sleep(WAKE_INTERVAL_MS);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-apns/src/test/java/com/notnoop/apns/utils/ApnsServerStub.java: 317-319
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(wait);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jna/contrib/platform/test/com/sun/jna/platform/win32/User32WindowMessagesTest.java: 410-412
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(durationMs);
+< 		} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus-core/databus-core-impl/src/test/java/com/linkedin/databus/core/TestDbusEventBuffer.java: 3715-3719
+Length: 3
+Sim terms: []
+<     try
+<     {
+<       Thread.sleep(msec);
+<     }
+<     catch (InterruptedException ie)
+----
+/home/edmund/crawledFiles/clocomProjects/pig/test/org/apache/pig/test/TestMonitoredUDF.java: 126-128
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(wait);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/src/edu/stanford/nlp/util/MemoryMonitor.java: 273-275
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(pollFrequency);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voldemort/src/java/voldemort/server/gossip/Gossiper.java: 97-99
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(gossipInterval);
+<             } catch(InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/RxJava/src/main/java/io/reactivex/observers/BaseTestConsumer.java: 850-852
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(millis);
+<             } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/languagetool/languagetool-wikipedia/src/main/java/org/languagetool/dev/index/Searcher.java: 196-198
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(waitMillis);
+<           } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/cordova-android/test/app/src/androidTest/java/org/apache/cordova/unittests/MessageChannelMultipageTest.java: 124-126
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(timeout);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast/src/main/java/com/hazelcast/internal/partition/impl/InternalPartitionServiceImpl.java: 218-220
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(PARTITION_OWNERSHIP_WAIT_MILLIS);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Fling/src/com/entertailion/java/fling/BroadcastDiscoveryClient.java: 107-109
+Length: 3
+Sim terms: []
+< 							try {
+< 								Thread.sleep(mBroadcastInterval);
+< 							} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/gocd/agent-bootstrapper/src/com/thoughtworks/go/agent/bootstrapper/DefaultAgentLauncherCreatorImpl.java: 112-114
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(oneSec);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/io/BufferedOutputFileImpl.java: 414-417
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(CHECK_INTERVAL);
+< 				//logger.trace("BufferedOutputFile Full");
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/solrj/src/java/org/apache/solr/common/cloud/ClusterStateUtil.java: 94-96
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(TIMEOUT_POLL_MS);
+<           } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/dalvik/074-gc-thrash/src/Main.java: 138-140
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(ms);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/databus/databus-client/databus-client-http/src/main/java/com/linkedin/databus/client/DatabusSourcesConnection.java: 701-703
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(SLEEP_DURATION_MS);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/core/src/test/java/com/orientechnologies/common/test/SpeedTestData.java: 90-92
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(TIME_WAIT);
+<     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/libgdx/backends/gdx-backend-android/src/com/badlogic/gdx/backends/android/AndroidInput.java: 436-438
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(sleepTime);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/canal/client/src/main/java/com/alibaba/otter/canal/client/impl/ClusterCanalConnector.java: 270-272
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(retryInterval);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/apps/org/klomp/snark/TrackerClient.java: 548-548
+Length: 3
+Sim terms: []
+<                             try { Thread.sleep(delay); } catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/spring-framework/spring-context/src/test/java/org/springframework/context/support/DefaultLifecycleProcessorTests.java: 668-671
+Length: 3
+Sim terms: []
+< 					try {
+< 						Thread.sleep(delay);
+< 					}
+< 					catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/main/java/org/multibit/viewsystem/swing/action/CloseWalletAction.java: 144-146
+Length: 3
+Sim terms: []
+<             try {
+<               Thread.sleep(RECREATE_ALL_VIEWS_WAIT_TIME);
+<             } catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/core/src/com/cloud/hypervisor/xen/resource/CitrixResourceBase.java: 3428-3430
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(_sleep);
+<             } catch (final InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-fdb-fix/idea_fdb_4.5.0.20967_fix/src/flex/tools/debugger/cli/DebugCLI.java: 6426-6426
+Length: 3
+Sim terms: []
+< 			try { Thread.sleep(period); } catch(InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/test/java/org/apache/hadoop/yarn/client/api/impl/TestAMRMClient.java: 854-856
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(sleepTime);
+<     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java: 1644-1646
+Length: 3
+Sim terms: [[wait, data]]
+<             try {
+<                 Thread.sleep(TIME_WAIT);
+<             } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/rsense/src/org/cx4a/rsense/Main.java: 55-57
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(interval);
+<                     } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/h2o/src/test/java/water/TestUtil.java: 280-280
+Length: 3
+Sim terms: []
+<     try { Thread.sleep(msec); } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/kairosdb/src/main/java/org/kairosdb/datastore/cassandra/WriteBuffer.java: 245-249
+Length: 3
+Sim terms: []
+< 			try
+< 			{
+< 				Thread.sleep(m_writeDelay);
+< 			}
+< 			catch (InterruptedException ignored) {}
+----
+/home/edmund/crawledFiles/clocomProjects/twitter_nlp/mallet-2.0.6/src/cc/mallet/fst/semi_supervised/GECriteria.java: 329-331
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(SLEEP_TIME);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/eucalyptus/clc/modules/block-storage/src/main/java/com/eucalyptus/blockstorage/async/SnapshotCreator.java: 343-345
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(pollPeriodMillis);
+<           } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/coursera-android/Examples/ThreadingViewPost/src/course/examples/threading/threadingviewpost/SimpleThreadingViewPostActivity.java: 47-49
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(mDelay);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/MemoryUsage/src/com/android/tests/memoryusage/MemoryUsageTest.java: 256-258
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(time);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/dynamicclouds/src/java/org/apache/hadoop/mapred/DynamicCloudsDaemon.java: 237-239
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(POLL_WAIT_TIME);
+<       } catch (InterruptedException iex) {
+----
+/home/edmund/crawledFiles/clocomProjects/slf4j/slf4j-ext/src/test/java/org/slf4j/profiler/BasicProfilerDemo.java: 82-84
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/astyanax/astyanax-thrift/src/main/java/com/netflix/astyanax/thrift/ThriftClusterImpl.java: 152-155
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SCHEMA_DISAGREEMENT_BACKOFF);
+<                 }
+<                 catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/multibit/src/test/java/org/multibit/controller/BitcoinControllerTest.java: 58-60
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(SLEEP_TIME);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/hosttests/test-apps/MultiDexLegacyTestServices/src/com/android/framework/multidexlegacytestservices/ReflectIntermediateClass.java: 37-39
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(sleepMillis);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/PretendYoureXyzzy/src/main/java/net/socialgamer/cah/servlets/LongPollServlet.java: 111-116
+Length: 3
+Sim terms: []
+<       try {
+<         // Delay for a short while in case there will be other messages queued to be delivered.
+<         // This will certainly happen in some game states. We want to deliver as much to the client
+<         // in as few round-trips as possible while not waiting too long.
+<         Thread.sleep(WAIT_FOR_MORE_DELAY);
+<       } catch (final InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.iec6205621meter/src/main/java/org/openmuc/j62056/Connection.java: 370-372
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(baudRateChangeDelay);
+<             } catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/otter/shared/common/src/main/java/com/alibaba/otter/shared/common/utils/NioUtils.java: 428-430
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(wait);
+<                     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-hdfs/src/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java: 1653-1655
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(sleepMs);
+<           } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast/src/test/java/com/hazelcast/spi/impl/operationexecutor/impl/OperationExecutorImpl_AbstractTest.java: 161-163
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(durationMs);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hindex/src/test/java/org/apache/hadoop/hbase/regionserver/wal/TestHLogSplit.java: 780-782
+Length: 3
+Sim terms: []
+<               try {
+<                 Thread.sleep(writerSlowness);
+<               } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/giraph/giraph-core/src/main/java/org/apache/giraph/yarn/GiraphYarnClient.java: 276-278
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(JOB_STATUS_INTERVAL_MSECS);
+<         } catch (InterruptedException ir) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-tools/hadoop-openstack/src/main/java/org/apache/hadoop/fs/swift/snative/SwiftNativeFileSystemStore.java: 855-857
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(throttleDelay);
+<       } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/giraph/giraph-core/src/main/java/org/apache/giraph/zk/ZooKeeperManager.java: 386-388
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(pollMsecs);
+<       } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/spring-integration/spring-integration-test-support/src/main/java/org/springframework/integration/test/matcher/EventuallyMatcher.java: 76-79
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(pause);
+< 			}
+< 			catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/RxJava/src/test/java/io/reactivex/subscribers/SerializedSubscriberTest.java: 578-580
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(waitTime);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Osmand/OsmAnd/src/net/osmand/plus/views/AnimateDraggingMapThread.java: 389-391
+Length: 3
+Sim terms: []
+< 					try {
+< 						Thread.sleep(DEFAULT_SLEEP_TO_REDRAW);
+< 					} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/logback/logback-core/src/test/java/ch/qos/logback/core/testUtil/DelayingListAppender.java: 29-31
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(delay);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/hdfs/org/apache/hadoop/hdfs/server/hightidenode/FileFixer.java: 186-189
+Length: 3
+Sim terms: []
+<       try {
+<         // Sleep before proceeding to fix more files.
+<         Thread.sleep(blockFixInterval);
+<       } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/util/AbstractLivelinessMonitor.java: 124-126
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(monitorInterval);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jeromq/src/test/java/guide/mdwrkapi.java: 166-169
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(reconnect);
+<                 }
+<                 catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/core/datastores-parent/datastore-common/src/test/java/org/wicketstuff/datastores/common/BaseDataStoreTest.java: 219-221
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(WAIT_TIME);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/eureka/eureka-client/src/test/java/com/netflix/discovery/MockRemoteEurekaServer.java: 323-325
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(seconds);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/lucene/core/src/test/org/apache/lucene/index/TestIndexWriterOnJRECrash.java: 81-83
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(crashTime);
+<           } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/jersey/examples/server-async-managed/src/main/java/org/glassfish/jersey/examples/server/async/managed/SimpleJerseyExecutorManagedLongRunningResource.java: 72-74
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(SLEEP_TIME_IN_MILLIS);
+<         } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/os/Debug.java: 782-783
+Length: 3
+Sim terms: []
+<             try { Thread.sleep(SPIN_DELAY); }
+<             catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/titan/titan-test/src/main/java/com/thinkaurelius/titan/graphdb/TitanOperationCountingTest.java: 503-505
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(readSleepTime);
+<                     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/AcDisplay/project/app/src/main/java/com/achep/acdisplay/services/KeyguardService.java: 210-212
+Length: 3
+Sim terms: [[]]
+<                 try {
+<                     Thread.sleep(delay);
+<                 } catch (InterruptedException e) { /* totally fine */ }
+----
+/home/edmund/crawledFiles/clocomProjects/gocd/common/test/unit/com/thoughtworks/go/remote/work/ConsoleOutputTransmitterPerformanceTest.java: 79-81
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-realtime/src/main/java/com/alimama/mdrillImport/ImportSpoutLocalForParseTest.java: 111-113
+Length: 3
+Sim terms: []
+< 	    	try {
+< 				Thread.sleep(i);
+< 			} catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/hive/ql/src/test/org/apache/hadoop/hive/ql/TestTxnCommands.java: 483-486
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(timeMillis);
+<     }
+<     catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/solutions-mobile-backend-starter-java/src/com/google/cloud/backend/pushnotification/WorkerServlet.java: 65-67
+Length: 3
+Sim terms: [[wait, task, leas]]
+<         try {
+<           Thread.sleep(MILLISECONDS_TO_WAIT_WHEN_NO_TASKS_LEASED);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/USM/src/main/java/org/cloudifysource/usm/liveness/FileLivenessDetector.java: 107-109
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(TIMEOUT_BETWEEN_FILE_QUERYING);
+< 				} catch (final InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/CoreNLP/test/src/edu/stanford/nlp/util/concurrent/MulticoreWrapperTest.java: 90-92
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(sleepTime);
+<       } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast/src/test/java/com/hazelcast/durableexecutor/DurableExecutorServiceTest.java: 592-594
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(executionTime);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/java/org/apache/tomcat/util/net/Acceptor.java: 157-159
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(currentErrorDelay);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/OpenTripPlanner/src/main/java/org/opentripplanner/visualizer/VisualTraverseVisitor.java: 48-50
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(SLEEP_LEN);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.iec6205621meter/src/main/java/org/openmuc/j62056/Connection.java: 409-411
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(SLEEP_INTERVAL);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/concurrency/ConcurrentEngineUsageTest.java: 111-113
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(timeout);
+<         } catch (InterruptedException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/notification/src/com/android/frameworks/tests/notification/NotificationTests.java: 231-233
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(ms);
+<         } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/ImfTest/tests/src/com/android/imftest/samples/ImfBaseTestCase.java: 143-145
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast/src/main/java/com/hazelcast/instance/Node.java: 526-528
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(THREAD_SLEEP_DURATION_MS);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/com/android/internal/telephony/PhoneFactory.java: 91-93
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(SOCKET_OPEN_RETRY_MILLIS);
+<                         } catch (InterruptedException er) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/USM/src/main/java/org/cloudifysource/usm/launcher/DefaultProcessLauncher.java: 771-773
+Length: 3
+Sim terms: [[sleep, tabl, process, sure, interv]]
+< 		try {
+< 			Thread.sleep(POST_SYNC_PROCESS_SLEEP_INTERVAL);
+< 		} catch (final InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/railo/railo-java/railo-core/src/railo/commons/io/SystemUtil.java: 570-572
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(time);
+< 		} catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/indextank-engine/cojen-2.2.1-sources/org/cojen/util/BelatedCreator.java: 426-428
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(mMinRetryDelayMillis);
+<                     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/sonarqube/server/sonar-ce/src/main/java/org/sonar/ce/app/CeServer.java: 171-173
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(CHECK_FOR_STOP_DELAY);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/camel/components/camel-http4/src/test/java/org/apache/camel/component/http4/handler/DelayValidationHandler.java: 42-44
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(delay);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/camel/camel-core/src/main/java/org/apache/camel/util/FileUtil.java: 442-444
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(RETRY_SLEEP_MILLIS);
+<             } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/YCSB/riak/src/main/java/com/yahoo/ycsb/db/riak/RiakKVClient.java: 384-386
+Length: 3
+Sim terms: [[sleep, befor]]
+<         try {
+<           Thread.sleep(waitTimeBeforeRetry);
+<         } catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-fdb-fix/idea_fdb_4.0.0.14159_fix/src/flex/tools/debugger/cli/DebugCLI.java: 2512-2512
+Length: 3
+Sim terms: [[sleep, process, event]]
+< 			try { Thread.sleep(update); } catch(InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/servo/servo-core/src/test/java/com/netflix/servo/monitor/TimedInterfaceTest.java: 47-49
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(ms);
+<       } catch (InterruptedException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/router/net/i2p/router/transport/udp/UDPTransport.java: 1486-1488
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(toSleep);
+<                 } catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/lwjgl/src/java/org/lwjgl/opengl/AWTSurfaceLock.java: 68-70
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(WAIT_DELAY_MILLIS);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/maven-android-plugin/src/main/java/com/simpligility/maven/plugins/android/AbstractAndroidMojo.java: 646-650
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 Thread.sleep( connectionWaitTime );
+<             }
+<             catch ( InterruptedException e )
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/dalvik/097-suspend-check/src/Main.java: 43-45
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(ms);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/vaadin/uitest/src/main/java/com/vaadin/v7/tests/components/grid/basicfeatures/GridBasicFeatures.java: 261-263
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(containerDelay);
+<                     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/USM/src/main/java/org/cloudifysource/usm/UniversalServiceManagerBean.java: 342-344
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(PRE_SHUTDOWN_TIMEOUT_MILLIS);
+< 		} catch (final InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jersey/examples/server-async-standalone/webapp/src/main/java/org/glassfish/jersey/examples/server/async/LongRunningEchoResource.java: 76-78
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(SLEEP_TIME_IN_MILLIS);
+<         } catch (final InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/eureka/eureka-client/src/main/java/com/netflix/appinfo/AmazonInfo.java: 218-220
+Length: 3
+Sim terms: []
+<                             try {
+<                                 Thread.sleep(SLEEP_TIME_MS);
+<                             } catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/sikuli/sikuli-script/src/main/java/org/sikuli/script/CapturePrompt.java: 275-278
+Length: 3
+Sim terms: []
+<       try{
+<          Thread.sleep(delayMS);
+<       }
+<       catch(InterruptedException ie){
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/dlna/DLNAResource.java: 1844-1846
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(STOP_PLAYING_DELAY);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/pig/src/org/apache/pig/tools/grunt/GruntParser.java: 1146-1148
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(MS_TO_SLEEP_WHILE_WAITING_FOR_FILE_DELETION);
+<                         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/io/UnusedInputStream.java: 51-53
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(timeout);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/core/src/java/org/apache/solr/client/solrj/embedded/JettySolrRunner.java: 156-158
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(delayMs);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java: 2812-2814
+Length: 3
+Sim terms: []
+<               try {
+<                 Thread.sleep(checkDiskErrorInterval);
+<               } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/andlytics/src/com/github/andlyticsproject/MainListAdapter.java: 838-840
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(SLEEP_TIME);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/HwAccelerationTest/src/com/android/test/hwui/MultiProducerActivity.java: 268-270
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(DURATION);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-fdb-fix/idea_fdb_4.5.0.20967_fix/src/flex/tools/debugger/cli/DebugCLI.java: 2521-2521
+Length: 3
+Sim terms: [[sleep, process, event]]
+< 			try { Thread.sleep(update); } catch(InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/jersey/examples/server-async/src/main/java/org/glassfish/jersey/examples/server/async/SimpleLongRunningResource.java: 81-83
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SLEEP_TIME_IN_MILLIS);
+<                 } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/robotium/robotium-solo/src/main/java/com/robotium/solo/ScreenshotTaker.java: 319-321
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(frameDelay);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/neo4j/enterprise/cluster/src/test/java/org/neo4j/cluster/Goal.java: 73-77
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             Thread.sleep( millis );
+<         }
+<         catch ( InterruptedException e )
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataBlockScanner.java: 114-116
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(SLEEP_PERIOD_MS);
+<       } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/rexster/rexster-protocol/src/main/java/com/tinkerpop/rexster/client/RemoteRexsterSession.java: 141-143
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(waitMsBetweenTries);
+<                 } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/BPServiceActor.java: 800-802
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(millis);
+<     } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/CloudStack-archive/vmware-base/src/com/cloud/hypervisor/vmware/util/VmwareContext.java: 581-583
+Length: 3
+Sim terms: []
+< 	            try {
+< 	                Thread.sleep(CONNECT_RETRY_INTERVAL);
+< 	            } catch(InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/HugeCollections/collections/src/test/java/net/openhft/collections/ReplicationCheckingMap.java: 101-103
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(i);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/USM/src/main/java/org/cloudifysource/usm/shutdown/DefaultProcessKiller.java: 74-76
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(PROCESS_STATUS_CHECK_INTERVAL);
+< 				} catch (final InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast/src/main/java/com/hazelcast/multimap/impl/MultiMapService.java: 374-376
+Length: 3
+Sim terms: []
+<                             try {
+<                                 Thread.sleep(REPLICA_ADDRESS_SLEEP_WAIT_MILLIS);
+<                             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/service/TestServiceLifecycle.java: 412-414
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(timeout);
+<       } catch (InterruptedException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/EffectiveAndroidUI/app/src/main/java/com/github/pedrovgs/effectiveandroidui/domain/GetTvShowsInteractor.java: 83-85
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(WAIT_TIME);
+<     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/network/UPNPHelper.java: 281-283
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(delay);
+< 		} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/tomcat/test/org/apache/coyote/http2/Http2TestBase.java: 397-399
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(delayms);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/blitz4j/src/main/java/com/netflix/blitz4j/AsyncAppender.java: 180-182
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SLEEP_TIME_MS);
+<                 } catch (InterruptedException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.iec6205621meter/src/main/java/org/openmuc/j62056/Connection.java: 254-256
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(SLEEP_INTERVAL);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/groundy/examples/src/com/groundy/example/tasks/AnimalTask.java: 15-18
+Length: 3
+Sim terms: [[]]
+<     try {
+<       // let's fake some work ^_^
+<       Thread.sleep(time);
+<     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/oozie/core/src/test/java/org/apache/oozie/command/coord/TestCoordKillXCommand.java: 219-222
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(wait);
+<             }
+<             catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/flume/flume-core/src/main/java/com/cloudera/flume/handlers/debug/ChokeManager.java: 142-144
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(timeQuanta);
+<       } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/intellij-plugins/flex/tools/idea-fdb-fix/idea_fdb_3_fix/src/flex/tools/debugger/cli/DebugCLI.java: 2477-2477
+Length: 3
+Sim terms: [[sleep, process, event]]
+< 			try { Thread.sleep(update); } catch(InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/gauges-android/app/src/main/java/com/github/mobile/gauges/ui/airtraffic/GaugesPusher.java: 69-71
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(AUTH_SLEEP);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Osmand/OsmAnd/src/net/osmand/plus/views/AnimateDraggingMapThread.java: 289-291
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(DEFAULT_SLEEP_TO_REDRAW);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/core/datastores-parent/datastore-common/src/test/java/org/wicketstuff/datastores/common/BaseDataStoreTest.java: 191-193
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(WAIT_TIME);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/coursera-android/Examples/ThreadingHandlerMessages/src/course/examples/threading/threadinghandlermessages/HandlerMessagesActivity.java: 120-122
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(mDelay);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/RxJava/src/test/java/io/reactivex/observers/SerializedObserverTest.java: 577-579
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(waitTime);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/springside4/modules/utils/src/test/java/org/springside/modules/utils/concurrent/threadpool/ThreadPoolUtilTest.java: 156-158
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(sleepTime);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/otter/shared/common/src/main/java/com/alibaba/otter/shared/common/utils/NioUtils.java: 492-494
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(wait);
+<                     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti-engine/src/test/java/org/activiti/engine/test/concurrency/ConcurrentEngineUsageTest.java: 88-90
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(timeout);
+<         } catch (InterruptedException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/otter/shared/common/src/main/java/com/alibaba/otter/shared/common/utils/NioUtils.java: 322-324
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(wait);
+<                     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/wildfly/testsuite/integration/clustering/src/test/java/org/jboss/as/test/clustering/single/web/SimpleServlet.java: 77-79
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(duration);
+<             } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast/src/main/java/com/hazelcast/spi/discovery/multicast/impl/MulticastDiscoverySender.java: 69-71
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(SLEEP_DURATION);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/test-runner/src/android/test/InstrumentationTestRunner.java: 874-876
+Length: 3
+Sim terms: []
+<             try { // Sleep after every test, if specified
+<                 Thread.sleep(mDelayMsec);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/gocd/agent-bootstrapper/src/com/thoughtworks/go/agent/bootstrapper/LauncherTempFileHandler.java: 93-95
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(TEN_MINS);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/processing/core/src/processing/core/PApplet.java: 3324-3326
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(napTime);
+<     } catch (InterruptedException e) { }
+----
+/home/edmund/crawledFiles/clocomProjects/Solandra/src/lucandra/CassandraUtils.java: 578-582
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 Thread.sleep(retryAttemptSleep);
+<             }
+<             catch (InterruptedException e)
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-realtime/src/main/java/com/alimama/mdrillImport/ImportSpout.java: 165-167
+Length: 3
+Sim terms: []
+<     	try {
+< 			Thread.sleep(i);
+< 		} catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/highavailability/src/java/org/apache/hadoop/hdfs/AvatarZooKeeperClient.java: 292-294
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(failoverCheckPeriod);
+<           } catch (InterruptedException iex) {
+----
+/home/edmund/crawledFiles/clocomProjects/java-apns/src/main/java/com/notnoop/apns/internal/Utilities.java: 219-221
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(delay);
+<         } catch (final InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/metric/CommandStreamTest.java: 143-155
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(executionLatency);
+<                 switch (executionResult) {
+<                     case SUCCESS:
+<                         return 1;
+<                     case FAILURE:
+<                         throw new RuntimeException("induced failure");
+<                     case BAD_REQUEST:
+<                         throw new HystrixBadRequestException("induced bad request");
+<                     default:
+<                         throw new RuntimeException("unhandled HystrixEventType : " + executionResult);
+<                 }
+<             } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/ThinkAndroid/ThinkAndroid/src/com/ta/util/http/FileHttpResponseHandler.java: 329-332
+Length: 3
+Sim terms: []
+< 		try
+< 		{
+< 			Thread.sleep(TIMERSLEEPTIME);
+< 		} catch (InterruptedException e)
+----
+/home/edmund/crawledFiles/clocomProjects/logback/logback-examples/src/main/java/chapters/mdc/NumberCruncherServer.java: 118-120
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/twitter_nlp/mallet-2.0.6/src/cc/mallet/fst/semi_supervised/CRFOptimizableByGECriteria.java: 336-338
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(SLEEP_TIME);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/dynamicclouds/src/java/org/apache/hadoop/mapred/ClustersBalancer.java: 233-235
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(sleepInterval);
+<         } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/Osmand/OsmAnd/src/net/osmand/plus/views/AnimateDraggingMapThread.java: 259-261
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(DEFAULT_SLEEP_TO_REDRAW);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/wildfly/testsuite/integration/clustering/src/test/java/org/jboss/as/test/clustering/ClusterTestUtil.java: 51-53
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch (InterruptedException iex) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/core/src/java/org/apache/solr/cloud/RecoveryStrategy.java: 573-575
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(waitForUpdatesWithStaleStatePauseMilliSeconds);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/namespace-notifier/src/java/org/apache/hadoop/hdfs/notifier/NamespaceNotifierClient.java: 936-938
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(connectRetryTime);
+<       } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/gitblit/src/main/java/com/gitblit/fanout/FanoutService.java: 311-313
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(serviceTimeout);
+< 				} catch (InterruptedException x) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-realtime/src/main/java/com/alimama/mdrillImport/ImportSpoutLocal.java: 195-197
+Length: 3
+Sim terms: []
+< 	    	try {
+< 				Thread.sleep(i);
+< 			} catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/java/android/os/Debug.java: 807-808
+Length: 3
+Sim terms: []
+<                 try { Thread.sleep(SPIN_DELAY); }
+<                 catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/vaadin/testbench-api/src/main/java/com/vaadin/testbench/elements/ComboBoxElement.java: 256-258
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(delay);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/cloudify/USM/src/main/java/org/cloudifysource/usm/UniversalServiceManagerBean.java: 937-939
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(WAIT_FOR_DEPENDENCIES_INTERVAL_MILLIS);
+< 			} catch (final InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/coursera-android/Examples/ThreadingSimple/src/course/examples/threading/threadingsimple/SimpleThreadingExample.java: 56-58
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(mDelay);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/libcore/harmony-tests/src/test/java/org/apache/harmony/nio/tests/java/nio/channels/SelectorTest.java: 313-315
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(WAIT_TIME);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/services/core/java/com/android/server/power/ShutdownThread.java: 660-662
+Length: 3
+Sim terms: [[shut, vibrat, down]]
+<             try {
+<                 Thread.sleep(SHUTDOWN_VIBRATE_MS);
+<             } catch (InterruptedException unused) {
+----
+/home/edmund/crawledFiles/clocomProjects/oozie/core/src/test/java/org/apache/oozie/command/coord/TestCoordActionInputCheckXCommand.java: 82-85
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(wait);
+<             }
+<             catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/util/ProcessUtil.java: 113-115
+Length: 3
+Sim terms: []
+< 						try {
+< 							Thread.sleep(TERM_TIMEOUT);
+< 						} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataBlockScanner.java: 77-79
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(SLEEP_PERIOD_MS);
+<         } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/metrics2/impl/MetricsSinkAdapter.java: 143-144
+Length: 3
+Sim terms: []
+<           try { Thread.sleep(awhile); }
+<           catch (InterruptedException e2) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapreduce/v2/app/TaskHeartbeatHandler.java: 156-158
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(taskTimeOutCheckInterval);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/astrid/facebook/facebook/tests/src/com/facebook/SessionTestsBase.java: 64-66
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(stallMsec);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/apps/org/klomp/snark/TrackerClient.java: 675-675
+Length: 3
+Sim terms: []
+<                             try { Thread.sleep(delay); } catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/jetty.project/tests/test-sessions/test-sessions-common/src/main/java/org/eclipse/jetty/server/session/AbstractProxySerializationTest.java: 58-62
+Length: 3
+Sim terms: []
+<         try
+<         {
+<             Thread.sleep(msec);
+<         }
+<         catch (InterruptedException e)
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/media/java/android/media/tv/TvInputService.java: 1494-1496
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(DETACH_OVERLAY_VIEW_TIMEOUT_MS);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robovm/tests/dalvik/084-class-init/src/Main.java: 24-26
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(msec);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/storm-yarn/src/test/java/com/yahoo/storm/yarn/TestIntegration.java: 112-114
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(i);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/solrj/src/java/org/apache/solr/common/cloud/ClusterStateUtil.java: 244-246
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(TIMEOUT_POLL_MS);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/com/android/internal/telephony/WapPushOverSms.java: 100-102
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(BIND_RETRY_INTERVAL);
+<                         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/titan/titan-test/src/test/java/com/thinkaurelius/titan/graphdb/idmanagement/MockIDAuthority.java: 57-59
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(delayAcquisitionMS);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Osmand/OsmAnd/src/net/osmand/plus/views/AnimateDraggingMapThread.java: 331-333
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(DEFAULT_SLEEP_TO_REDRAW);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/ps3mediaserver/src/main/java/net/pms/io/BufferedOutputFileImpl.java: 797-799
+Length: 3
+Sim terms: []
+< 				try {
+< 					Thread.sleep(CHECK_END_OF_PROCESS);
+< 				} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/ipc/TestIPC.java: 300-302
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(WRITABLE_FAULTS_SLEEP);
+<       } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/coretests/src/android/database/DatabaseLockTest.java: 160-162
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SLEEP_TIME);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/HwAccelerationTest/src/com/android/test/hwui/CirclePropActivity.java: 142-144
+Length: 3
+Sim terms: []
+<                         try {
+<                             Thread.sleep(DURATION);
+<                         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/utils/testutils/java/android/os/test/TestLooper.java: 222-224
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(LOOP_SLEEP_TIME_MS);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/core/org/apache/hadoop/net/InetSocketAddressFactory.java: 63-65
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(delayMillis);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/gocd/test-utils/src/com/thoughtworks/go/util/TestUtils.java: 197-199
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/robotium/robotium-solo/src/main/java/com/robotium/solo/Sleeper.java: 49-51
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(time);
+< 		} catch (InterruptedException ignored) {}
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.enocean.test/src/test/java/org/openhab/binding/enocean/internal/bus/RockerSwitchInDimmerOnOffProfileTest.java: 111-113
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(i);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/contrib/highavailability/src/java/org/apache/hadoop/hdfs/server/namenode/AvatarNode.java: 989-991
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(INVALIDATES_CLEANUP_INTERVAL);
+<         } catch (InterruptedException iex) {
+----
+/home/edmund/crawledFiles/clocomProjects/galaxy/src/test/java/co/paralleluniverse/galaxy/netty/UDPCommTest.java: 447-449
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/jersey/examples/server-async/src/main/java/org/glassfish/jersey/examples/server/async/LongRunningAsyncOperationResource.java: 80-82
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(SLEEP_TIME_IN_MILLIS);
+<         } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/fitnesse/src/util/StreamReader.java: 143-145
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(sleepStep);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Activiti/modules/activiti5-test/src/test/java/org/activiti5/engine/test/concurrency/ConcurrentEngineUsageTest.java: 90-92
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(timeout);
+<         } catch (InterruptedException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/lucene/facet/src/test/org/apache/lucene/facet/SlowRAMDirectory.java: 70-72
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(sTime);
+<     } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/mdrill/trunk/adhoc-solr/src/main/java/org/apache/lucene/index/SegmentInfos.java: 747-749
+Length: 3
+Sim terms: []
+<             try {
+<               Thread.sleep(defaultGenFileRetryPauseMsec);
+<             } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/okhttp/benchmarks/src/main/java/okhttp3/benchmarks/Benchmark.java: 152-154
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(millis);
+<     } catch (InterruptedException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/cordova-android/test/app/src/androidTest/java/org/apache/cordova/unittests/IFrameTest.java: 107-109
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(timeout);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/epublib/epublib-tools/src/main/java/nl/siegmann/epublib/viewer/HTMLDocumentFactory.java: 198-200
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(DOCUMENT_CACHE_INDEXER_WAIT_TIME);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/neo4j/community/neo4j/src/test/java/visibility/TestPropertyReadOnNewEntityBeforeLockRelease.java: 170-174
+Length: 3
+Sim terms: []
+<             try
+<             {
+<                 Thread.sleep( delay );
+<             }
+<             catch ( InterruptedException e )
+----
+/home/edmund/crawledFiles/clocomProjects/hindex/src/main/java/org/apache/hadoop/hbase/regionserver/Store.java: 807-809
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(pauseTime);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/giraph/giraph-core/src/main/java/org/apache/giraph/zk/ZooKeeperManager.java: 519-521
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(pollMsecs);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/distributed/src/test/java/com/orientechnologies/orient/server/distributed/asynch/BareBoneBase2ClientTest.java: 49-51
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(i);
+<     } catch (InterruptedException xcpt) {
+----
+/home/edmund/crawledFiles/clocomProjects/sikuli/extensions/android-robot/src/main/java/org/sikuli/script/android/AndroidRobot.java: 238-241
+Length: 3
+Sim terms: []
+<       try{
+<          Thread.sleep(ms);
+<       }
+<       catch(InterruptedException e){
+----
+/home/edmund/crawledFiles/clocomProjects/logback/logback-classic/src/test/java/ch/qos/logback/classic/turbo/ReconfigureOnChangeTest.java: 385-387
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(sleepBetweenUpdates);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/gocd/agent-bootstrapper/src/com/thoughtworks/go/agent/bootstrapper/AgentBootstrapper.java: 115-117
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(waitTimeBeforeRelaunch);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/lucene-solr/solr/solrj/src/java/org/apache/solr/common/cloud/ClusterStateUtil.java: 153-155
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(TIMEOUT_POLL_MS);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/vaadin/uitest/src/test/java/com/vaadin/tests/tb3/CustomTestBenchCommandExecutor.java: 147-149
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(delay);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/astyanax/astyanax-core/src/main/java/com/netflix/astyanax/test/TestHostType.java: 486-488
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(time);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/coursera-android/Examples/ThreadingAsyncTask/src/course/examples/threading/threadingasynctask/AsyncTaskActivity.java: 81-83
+Length: 3
+Sim terms: []
+< 			try {
+< 				Thread.sleep(mDelay);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/vaadin/compatibility-server-gae/src/main/java/com/vaadin/server/GAEVaadinServlet.java: 227-229
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(RETRY_AFTER_MILLISECONDS);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java: 1457-1459
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(sleepMs);
+<         } catch (InterruptedException e) {}
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.enocean.test/src/test/java/org/openhab/binding/enocean/internal/bus/RockerSwitchInDimmerSteppingProfileTest.java: 122-124
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(i);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/XposedInstaller/app/src/main/java/de/robv/android/xposed/installer/installation/InstallationActivity.java: 209-211
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(LONG_ANIM_TIME);
+<             } catch (InterruptedException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/hindex/src/main/java/org/apache/hadoop/hbase/util/FSUtils.java: 520-522
+Length: 3
+Sim terms: []
+<           try {
+<             Thread.sleep(wait);
+<           } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/zoie/zoie-jms/src/main/java/proj/zoie/dataprovider/jms/JMSStreamDataProvider.java: 124-126
+Length: 3
+Sim terms: []
+< 		try {
+< 			Thread.sleep(JMSErrorBackOffTime);
+< 		} catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.insteonplm/src/main/java/org/openhab/binding/insteonplm/internal/driver/hub/HubIOStream.java: 230-232
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(m_pollTime);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/Job.java: 1321-1323
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(completionPollIntervalMillis);
+<         } catch (InterruptedException ie) {
+----
+/home/edmund/crawledFiles/clocomProjects/slf4j/slf4j-ext/src/test/java/org/slf4j/profiler/ProfilerTest.java: 135-137
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(millis);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/Compatibility/src/com/android/compatibilitytest/AppCompatibility.java: 161-163
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(mWorkspaceLaunchTimeout);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/buck/src/com/facebook/buck/rules/SQLiteBuildInfoStore.java: 71-73
+Length: 3
+Sim terms: []
+<               try {
+<                 Thread.sleep(retries);
+<               } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/orientdb/tests/src/test/java/com/orientechnologies/orient/test/database/auto/DatabaseConflictStrategyAutoMergeTest.java: 180-182
+Length: 3
+Sim terms: []
+<     try {
+<       Thread.sleep(i);
+<     } catch (InterruptedException xcpt) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-common/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/ha/ActiveStandbyElector.java: 704-706
+Length: 3
+Sim terms: []
+<       try {
+<         Thread.sleep(sleepMs);
+<       } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hadoop-20/src/mapred/org/apache/hadoop/mapred/Task.java: 582-584
+Length: 3
+Sim terms: []
+<         try {
+<           Thread.sleep(PROGRESS_INTERVAL);
+<         } catch (InterruptedException iex) {
+----
+/home/edmund/crawledFiles/clocomProjects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/HystrixCommandTest.java: 5250-5252
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(sleepTime);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/apps/org/klomp/snark/TrackerClient.java: 618-618
+Length: 3
+Sim terms: []
+<                             try { Thread.sleep(delay); } catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/coretests/src/android/database/DatabaseLockTest.java: 103-105
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SLEEP_TIME);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/core/tests/ConnectivityManagerTest/src/com/android/connectivitymanagertest/unit/WifiSoftAPTest.java: 68-70
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(DURATION);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/hazelcast/hazelcast-client/src/main/java/com/hazelcast/client/spi/impl/ClientPartitionServiceImpl.java: 90-92
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(PARTITION_WAIT_TIME);
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/platform_frameworks_base/tests/AppLaunch/src/com/android/tests/applaunch/AppLaunch.java: 512-514
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(time);
+<         } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/blitz4j/src/main/java/com/netflix/blitz4j/AsyncAppender.java: 167-169
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(SLEEP_TIME_MS);
+<                 } catch (InterruptedException ignore) {
+----
+/home/edmund/crawledFiles/clocomProjects/eureka/eureka-core/src/main/java/com/netflix/eureka/registry/PeerAwareInstanceRegistryImpl.java: 315-317
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(PRIME_PEER_NODES_RETRY_MS);
+<                 } catch (InterruptedException e1) {
+----
+/home/edmund/crawledFiles/clocomProjects/JDBM3/src/test/java/org/apache/jdbm/BTreeTest.java: 743-745
+Length: 3
+Sim terms: []
+<                     try {
+<                         Thread.sleep(THREAD_SLEEP_TIME);
+<                     } catch (InterruptedException except) {
+----
+/home/edmund/crawledFiles/clocomProjects/vaadin/uitest/src/main/java/com/vaadin/tests/components/window/SubWindowPositionUpdate.java: 16-18
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(delay);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/voltdb/src/frontend/org/voltcore/utils/EstTimeUpdater.java: 41-43
+Length: 3
+Sim terms: []
+<                 try {
+<                     Thread.sleep(ESTIMATED_TIME_UPDATE_FREQUENCY);
+<                 } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/kryonet/test/com/esotericsoftware/kryonet/MultipleThreadTest.java: 83-85
+Length: 3
+Sim terms: []
+< 						try {
+< 							Thread.sleep(sleepMillis);
+< 						} catch (InterruptedException ignored) {
+----
+/home/edmund/crawledFiles/clocomProjects/XobotOS/android/upstream/android/os/Debug.java: 259-260
+Length: 3
+Sim terms: []
+<             try { Thread.sleep(SPIN_DELAY); }
+<             catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/Nightweb/common/java/router/net/i2p/router/transport/udp/UDPTransport.java: 1493-1495
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(toSleep);
+<             } catch (InterruptedException ie) {}
+----
+/home/edmund/crawledFiles/clocomProjects/gradle/subprojects/core/src/main/java/org/gradle/api/internal/file/delete/Deleter.java: 102-104
+Length: 3
+Sim terms: []
+<         try {
+<             Thread.sleep(DELETE_RETRY_SLEEP_MILLIS);
+<         } catch (InterruptedException ex) {
+----
+/home/edmund/crawledFiles/clocomProjects/coursera-android/Examples/AudioVideoCamera/src/course/examples/audiovideo/camera/AudioVideoCameraActivity.java: 239-242
+Length: 3
+Sim terms: []
+< 			try {
+< 				// Give the user some time to view the image
+< 				Thread.sleep(PREVIEW_PAUSE);
+< 			} catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/openhab/bundles/binding/org.openhab.binding.insteonplm/src/main/java/org/openhab/binding/insteonplm/internal/device/ModemDBBuilder.java: 69-71
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(m_timeoutMillis); // wait for download to complete
+<             } catch (InterruptedException e) {
+----
+/home/edmund/crawledFiles/clocomProjects/slf4j/slf4j-log4j12/src/test/java/org/slf4j/log4j12/testHarness/RecursiveAppender.java: 68-70
+Length: 3
+Sim terms: []
+<             try {
+<                 Thread.sleep(activationDelay);
+<             } catch (InterruptedException e) {
+----
+Comments (size 2):
+1.
+Give the concurrent thread time so it will try to acquire locks
+2.
+sleep for a bit
+----
+Ranked result (sim terms):
+1.
+Give the concurrent thread time so it will try to acquire locks
+2.
+sleep for a bit
+----
+
