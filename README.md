@@ -30,18 +30,18 @@ are required to run the tool.
 ## Running the Tool
 
 The configuration is done using an XML file.
-Configure "config.xml"'s <database> and <project> tag
+Configure "config.xml"'s ```database``` and ```project``` tag
 with the appropriate folder path.
 The folders should contain Java source code files.
 The 'database' can be a StackOverflow database
 and the 'project' can be any Java project's source code.
 
-Code inside the <project> tag represents the target project
+Code inside the ```project``` tag represents the target project
 that you want to generate comments for.
 
-Code inside the <database> tag represents the database.
+Code inside the ```database``` tag represents the database.
 CloCom will extract code comments from this folder for
-the code inside the <project> folder.
+the code inside the ```project``` folder.
 
 See the "config" folder for xml examples and 
 modify the parameters to suit your needs.
