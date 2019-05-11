@@ -15,14 +15,14 @@ by mining (1) StackOverflow and (2) open source projects.
 
 ## Dependencies
 
-sudo apt-get install openjdk-8-jdk
+```sudo apt-get install openjdk-8-jdk```
 
 Place the following tars under the folder, lib2,
 which can be obtained from Stanford's website
 (https://stanfordnlp.github.io/CoreNLP/): 
 
-stanford-corenlp-3.8.0.jar  
-stanford-corenlp-3.8.0-models.jar
+```stanford-corenlp-3.8.0.jar```
+```stanford-corenlp-3.8.0-models.jar```
 
 ```lib``` and ```lib2``` contains all the library dependencies that
 are required to run the tool.
@@ -43,12 +43,12 @@ Code inside the ```database``` tag represents the database.
 CloCom will extract code comments from this folder for
 the code inside the ```project``` folder.
 
-See the "config" folder for xml examples and 
+See the ```config``` folder for xml examples and 
 modify the parameters to suit your needs.
 
 ### Compilation
 
-Type 'make' to compile.
+Type ```make``` to compile.
 
 ### Execute
 
@@ -106,7 +106,7 @@ their website's public data.
 Please refer to the Stack Overflow Creative Commons Data Dump for 
 further details on how to obtain the data.
 We utilized the data dump that was published on Match 2017.
-You will have to download "stackoverflow.com-Posts.7z" to obtain "Posts.xml"
+You will have to download ```stackoverflow.com-Posts.7z``` to obtain ```Posts.xml```
 if you would like to build a mapping database.
 
 ## Mapping Database
@@ -120,8 +120,8 @@ It was generated using the newer Match 2017 StackOverflow database with the foll
 - Must have the ```java``` tag
 - Code mappings are only extracted from the answer of the post
 - Question and answer must have a score larger than 0
-- No NLP parse tree editing other than basic sentence refinements. The reason that the NLP is not processed in this database is because we recently moved the NLP component into the code clone detection tool. You can run it yourself using the Java class (NLP.java).
-- Each mapping is named as "[questionID]-[answerID]-[codeSegmentNumber].autocom"
+- No NLP parse tree editing other than basic sentence refinements. The reason that the NLP is not processed in this database is because we recently moved the NLP component into the code clone detection tool. You can run it yourself using the Java class (```NLP.java```).
+- Each mapping is named as ```[questionID]-[answerID]-[codeSegmentNumber].autocom```
 
 ## User Study
 
@@ -187,10 +187,10 @@ from Breno Dantas Cruz, Paul "Will" McBurney, and Collin McMillan from TSE 2015.
 SumSlice's output and intermediate files on the evaluated Java project, NanoXML,
 are placed under the ```research/output``` folder.
 
-- Comments (nanoXML.txt)
-- SWUM (NanoXML.out)
-- PageRank (ND_PageRankFormatter.txt)
-- XML SumGen (nd_xmlsumgen.xml)
+- Comments (```nanoXML.txt```)
+- SWUM (```NanoXML.out```)
+- PageRank (```ND_PageRankFormatter.txt```)
+- XML SumGen (```nd_xmlsumgen.xml```)
 
 ### Study of Developer Written Comments
 
