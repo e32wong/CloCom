@@ -112,12 +112,12 @@ if you would like to build a mapping database.
 ## Mapping Database
 
 We provide a code-comment mapping
- data for the Java and Android tag under the ```database``` folder ```javaAndroidDB.tar.gz```.
+data for the Java and Android tag under the ```database``` folder ```javaAndroidDB.tar.gz```.
 
 It was generated using the newer Match 2017 StackOverflow database with the following criteria:
 
 - Must have a least 3 lines in the code segment
-- Must have the ```java``` tag
+- Must have the ```java``` or ```android``` tag
 - Code mappings are only extracted from the answer of the post
 - Question and answer must have a score larger than 0
 - No NLP parse tree editing other than basic sentence refinements. The reason that the NLP is not processed in this database is because we recently moved the NLP component into the code clone detection tool. You can run it yourself using the Java class (```NLP.java```).
