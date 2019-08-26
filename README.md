@@ -11,6 +11,8 @@ to describe the other similar code segments.
 It is a hybrid technique that can generate code comments
 by mining (1) StackOverflow and (2) open source projects.
 
+The paper is included in this repo as ```clocom-saner15.pdf```.
+
 # Installation
 
 ## Dependencies
